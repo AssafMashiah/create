@@ -1,0 +1,23 @@
+{
+
+   "cid" : "69bb10b0-26a6-11e2-81c1-0800200c9a61" ,
+   "header":{
+
+    "last-modified": null
+
+   },
+
+
+    "somethingsA":{
+        "t1":"st1",
+        "t2":"st2"
+    },
+
+
+	"somethingsB":{
+        "t1":"st1",
+        "t2":"st2"
+    },
+
+	"learningObjects":{"lo1":"yyyyyy","lo2":"xxxxxxxx"}
+}

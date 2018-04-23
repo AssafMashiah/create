@@ -1,0 +1,21 @@
+{{#updatedCourses.length}}
+<div>
+    <b>((dialog.updateepub.progress.updatedCourses))</b>
+    <ul>
+        {{#updatedCourses}}
+        <li>{{.}}</li>
+        {{/updatedCourses}}
+    </ul>
+</div>
+{{/updatedCourses.length}}
+{{#failedToUpdateCourses.length}}
+<div>
+    <b>((dialog.updateepub.progress.failedToUpdateCourses))</b>
+    <ul>
+        {{#failedToUpdateCourses}}
+        <li>{{.}}</li>
+        {{/failedToUpdateCourses}}
+    </ul>
+</div>
+{{/failedToUpdateCourses.length}}
+

@@ -1,0 +1,11 @@
+<li class="publish-tree-expendable">
+    <div  class="tree-node node-collapse {{^items}} no-collapse {{/items}}" >
+        <input id="checkbox_{{id}}" type="checkbox" data-content-type="{{type}}" class="publish-item checkbox" />
+        <label for="checkbox_{{id}}" title="{{name}}" class="{{extraClass}}">{{name}}</label>
+    </div>
+    <ul>
+		{{#items}}
+			{{>treeTemaplate}}
+		{{/items}}
+    </ul>
+</li>

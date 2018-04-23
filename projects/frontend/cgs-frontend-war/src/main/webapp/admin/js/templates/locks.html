@@ -1,0 +1,36 @@
+<!-- <table class="table table-striped table-bordered table-condensed"> -->
+<% if(model.getLocks().length > 0) { %>
+<table class="table table-striped table-condensed">
+	<thead id="table_header">
+		<tr>
+			<th> <a columnName="entityType" href="#" class="btn-link">entityType<i class="<%= (model.getSortBy() == "entityType")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="entityId" href="#" class="btn-link">entityId<i class="<%= (model.getSortBy() == "entityId")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="userName" href="#" class="btn-link">userName<i class="<%= (model.getSortBy() == "userName")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="userEmail" href="#" class="btn-link">userEmail<i class="<%= (model.getSortBy() == "userEmail")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="aquireDate" href="#" class="btn-link">aquireDate<i class="<%= (model.getSortBy() == "aquireDate")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="courseName" href="#" class="btn-link">courseName<i class="<%= (model.getSortBy() == "entityName")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="lessonName" href="#" class="btn-link">lessonName<i class="<%= (model.getSortBy() == "entityName")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+
+			<th></th>
+		</tr>
+	</thead>
+	<tbody id="table_body">
+		<% _.each(model.getLocks(), function (lockModel, index) { %>
+		<tr>
+				<td><%= lockModel.getEntityType() %> </td>
+				<td><%= lockModel.getEntityId() %> </td>
+				<td><%= lockModel.getUserName() %> </td>
+				<td><%= lockModel.getUserEmail() %> </td>
+				<td><%= lockModel.getFormattedAquireDate() %> </td>
+				<td><%= lockModel.getCourseName() %> </td>
+				<td><%= lockModel.getLessonName() %> </td>
+				<td><a entityType="<%= lockModel.getEntityType() %>" entityId="<%= lockModel.getEntityId() %>" class="btn btn-small"><i class="icon-lock"></a></td>
+		</tr>
+		<% }); %>
+	</tbody>
+</table>
+<% } else { %>
+
+<h2 class="muted" >No locks found</h2>
+
+<% } %>

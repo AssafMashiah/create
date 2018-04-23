@@ -1,0 +1,30 @@
+<div class="editor-wrapper convert_mc_editor props_editor">
+	<div class="control-group">
+		<div class="state_line">
+			<div class="col">
+				<label for="field_type_{{controller.record.id}}">
+					((Type:))&nbsp;
+				</label>
+				<select id="field_type_{{controller.record.id}}" data-value="obj.type_{{controller.record.id}}">
+					<option value="text">((Text))</option>
+				</select>
+			</div>
+			<div class="col">
+				<label for="field_mode_{{controller.record.id}}">
+					((Size:))&nbsp;
+				</label>
+				<select id="field_size_{{controller.record.id}}" data-value="obj.size_{{controller.record.id}}">
+                    <option value="Line">((Line))</option>
+                    <option value="Paragraph">((Paragraph))</option>
+                    <option value="FullText">((Full Text))</option>
+				</select>
+			</div>
+			<div>
+				<div class="col">
+					<input type="checkbox" data-checked="obj.toolbar_{{controller.record.id}}" id="field_toolbar_{{controller.record.id}}" />
+					<label for="field_toolbar_{{controller.record.id}}">((Show Toolbar))</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

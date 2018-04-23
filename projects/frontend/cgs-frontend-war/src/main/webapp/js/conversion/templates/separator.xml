@@ -1,0 +1,23 @@
+<sequence type="{{sequenceType}}" id="{{id}}" >
+    <creative>
+        <group>
+            {{#showImage}}
+                {{{separatorImage}}}
+            {{/showImage}}
+        </group>
+    </creative>
+    <text>
+        <group>
+            
+	
+			    {{#showTitle}}
+				    {{{separatorTitle}}}
+			    {{/showTitle}}
+			    
+			    {{#showSubTitle}}
+			        {{{separatorSubTitle}}}
+			    {{/showSubTitle}}
+			
+        </group>
+    </text>
+</sequence>

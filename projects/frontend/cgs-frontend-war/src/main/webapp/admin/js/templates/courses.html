@@ -1,0 +1,35 @@
+<!-- <table class="table table-striped table-bordered table-condensed"> -->
+<% if(model.getCourses().length > 0) { %>
+<table class="table table-striped table-condensed">
+	<thead id="table_header">
+		<tr>
+			<th> <a columnName="cId" href="#" class="btn-link">cid<i class="<%= (model.getSortBy() == "cid")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="Name" href="#" class="btn-link">courseName<i class="<%= (model.getSortBy() == "courseName")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="Version" href="#" class="btn-link">version<i class="<%= (model.getSortBy() == "version")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="Author" href="#" class="btn-link">author<i class="<%= (model.getSortBy() == "author")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="LastModified" href="#" class="btn-link">lastModified<i class="<%= (model.getSortBy() == "lastModified")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+			<th> <a columnName="cgs-Version" href="#" class="btn-link">cgsVersion<i class="<%= (model.getSortBy() == "cgsVersion")?((model.isAscending())?("icon-chevron-down"):("icon-chevron-up")):("icon-chevron-down icon-white") %>" /></a></th>
+
+			<th></th>
+		</tr>
+	</thead>
+	<tbody id="table_body">
+		<% _.each(model.getCourses(), function (courseModel, index) { %>
+		<tr>
+				<td><%= courseModel.getCid() %> </td>
+				<td><%= courseModel.getCourseName() %> </td>
+				<td><%= courseModel.getVersion() %> </td>
+				<td><%= courseModel.getAuthor() %> </td>
+				<td><%= courseModel.getLastModified() %> </td>
+				<td><%= courseModel.getCgsVersion() %> </td>
+				<td id="delButton"><a cid="<%= courseModel.getCid() %>" class="btn btn-small" style="
+				<%= (model.get('showDeleteButtons'))?(""):("visibility: hidden;") %>" ><i class="icon-remove"></a></td>
+		</tr>
+		<% }); %>
+	</tbody>
+</table>
+<% } else { %>
+
+<h2 class="muted" >No courses found</h2>
+
+<% } %>

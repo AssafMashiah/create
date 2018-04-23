@@ -1,0 +1,68 @@
+{
+    "cid": "1720d87c-2543-4e2f-8248-44ca8646a5eb",
+    "type": "lesson",
+    "version": "1.0.3",
+    "format": "NATIVE",
+    "data": {
+        "contentLocales": [
+            "en_US"
+        ],
+        "pedagogicalLessonType": "Custom",
+        "standardPackages": [],
+        "keywords": [
+            "TosterOven",
+            "PizzaPeppers"
+        ],
+        "learningObjects": [
+            {
+                "cid": "00df9b93-99a9-4dc5-ab37-7e0716d5c096",
+                "typicalLearningTime": "PT0H33M0S",
+                "title": "New Learning Object",
+                "type": "lo",
+                "standards": [],
+                "pages": [
+                    {
+                        "cid": "cba60144-f321-4715-9bd3-83bb1943a524",
+                        "type": "page",
+                        "overlayElements": [
+                            {
+                                "cid": "8d5f44aa-5835-4e3b-85b8-146951561d46",
+                                "presentation": {
+                                    "displayType": "EMBEDDED"
+                                },
+                                "content": {
+                                    "type": "DL_SEQUENCE",
+                                    "data": {
+                                        "cid": "054766e5-b396-41f7-b8b1-fe6c26d845eb",
+                                        "version": "1.0.3",
+                                        "type": "sequence",
+                                        "title": "New Sequence"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "header": {
+            "last-modified": {
+                "$date": "2014-12-02T09:32:38.546Z"
+            }
+        },
+        "schema": "course_v4",
+        "customizationPackResourceBaseDir": "customizationPack/en_US/1.8",
+        "title": "Main Lesson Name",
+        "description": "description in english",
+        "assetRootHRef": ""
+    },
+    "metadata": {
+        "lastModified": 1417512770281,
+        "created": 1417512770281
+    },
+    "original": {
+        "courseCid": "a5756721-bc1c-400e-9d7a-972d4ac66f7a",
+        "lessonCid": "1720d87c-2543-4e2f-8248-44ca8646a5eb",
+        "version": "1.0.3"
+    }
+}

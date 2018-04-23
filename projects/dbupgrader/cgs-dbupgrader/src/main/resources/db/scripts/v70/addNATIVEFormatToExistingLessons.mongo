@@ -1,0 +1,5 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.getCollection('lessons').update({"contentData.format":{$exists:false}}, {$set:{"contentData.format":"NATIVE"}}, {multi: true});
+    db.getCollection('assessments').update({"contentData.format":{$exists:false}}, {$set:{"contentData.format":"NATIVE"}}, {multi: true});
+}

@@ -1,0 +1,86 @@
+<div class="ebook-import-new">
+	<div class="import-book-area">
+		<div class="icon-uploadEbook"></div>
+		<div class="ebook-import-new-title">((ebook.uploadFile.dialog.icon.uploadNew))</div>
+	</div>
+    {{#enableConversionLibrarySelection}}
+	<div class="ebook-separator-line"></div>
+	<div class="ebook-select-vendor">
+		<span>((ebook.upload.select.pdfConverter)):</span>
+		<select id="ebook-conversion-select">
+            {{#pdfConversionLibreries}}
+			<option value="{{key}}">{{value}}</option>
+            {{/pdfConversionLibreries}}
+		</select>
+	</div>
+    {{/enableConversionLibrarySelection}}
+</div>
+
+<div class="upload-failed-message-wrapper">
+	<div class="upload-failed-message">
+		<div class="failure-title-wrapper">
+			<div class="failed-sign"></div>
+			<div class="failed-title">
+				<a id="ebook-error-details-toggle">((ebook.addOverlay.dialog.error.details.button))</a>
+			</div>
+		</div>
+
+		<div class="failed-text" id="ebook-error-failure-text"></div>
+	</div>
+</div>
+
+<ul class="nav nav-tabs" id="ebooks-tabs">
+	<li class="active"><a href="#all-resources">((ebook.addOverlay.dialog.tab.resources.all))</a></li>
+	<li><a href="#resouces-in-use">((ebook.addOverlay.dialog.tab.resources.in.use))</a></li>
+</ul>
+
+<div class="tab-content">
+	<div class="tab-pane active" id="all-resources">
+		<div class="import-ebook-container">
+			{{#allEbooks}}
+			<div class="ebook-external-frame import-existing" data-ebook-id="{{eBookId}}" title="{{title}}">
+				<div class="ebook-internal-frame">
+					{{#coverImage}}
+					<img src="{{coverImage}}" alt="coverImage" />
+					{{/coverImage}}
+					{{^coverImage}}
+					<div class="icon-eBook_Iconfont-01"></div>
+					{{/coverImage}}
+				</div>
+				<div class="ebookTitle">{{title}}</div>
+                <div class="lastModified">
+                {{#lastModified}}
+                    {{lastModified}}
+                {{/lastModified}}
+                </div>
+                <div class="pdfConversionLibrary">{{conversionLibrary}}</div>
+			</div>
+			{{/allEbooks}}
+		</div>
+	</div>
+	<div class="tab-pane" id="resouces-in-use">
+		<div class="import-ebook-container">
+			{{#recentEbooks}}
+			<div class="ebook-external-frame import-existing" data-ebook-id="{{eBookId}}" title="{{title}}">
+				<div class="ebook-internal-frame">
+					{{#coverImage}}
+					<img src="{{coverImage}}" alt="coverImage" />
+					{{/coverImage}}
+					{{^coverImage}}
+					<div class="icon-eBook_Iconfont-01"></div>
+					{{/coverImage}}
+				</div>
+				<div class="ebookTitle">{{title}}</div>
+                <div class="lastModified">
+                    {{#lastModified}}
+                    {{lastModified}}
+                    {{/lastModified}}
+                </div>
+                <div class="pdfConversionLibrary">{{conversionLibrary}}</div>
+			</div>
+			{{/recentEbooks}}
+		</div>
+	</div>
+</div>
+
+<input id="ebookfileUpload" type="file" accept="application/epub+zip,application/pdf,.epub,.pdf" class="hide-file-upload" />

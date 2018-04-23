@@ -1,0 +1,39 @@
+{{#model}}
+    {{#hasData}}
+      <div class="styleEffectsTitle {{#isDefault}}default{{/isDefault}}">{{title}}</div>
+    {{/hasData}}
+    {{#data}}
+        {{^hide}}
+            <div id="{{key}}" class='style_and_effect_row'>
+                <div class="titleArea {{#isSystem}}system {{/isSystem}}">
+                    <div class="styleAndEffectTitle">(({{name}}))</div>
+                  <!--   {{^isSystem}}
+                        <div class="delete" title="Delete">
+                            <span class="base-icon icon-trash"></span>
+                        </div>
+                    {{/isSystem}} -->
+                    <div class="edit">((course.props_area.tab_design.edit.button))</div>
+                </div>
+                {{^isStyle}}
+                    <div class="sampleText" style='{{defaultStyleCss}}'>
+                        <span >
+                            {{lorem_Ipsum_part1}}
+                        </span>
+                        <span class="example" style='{{cssString}}'>{{name}}</span>
+                        <span >
+                            {{lorem_Ipsum_part2}}
+                        </span>
+                    </div>
+                {{/isStyle}}
+                {{#isStyle}}
+                    <div class='sampleText example' style='{{cssString}}'>
+                        {{lorem_Ipsum}}
+                    </div>
+                {{/isStyle}}
+            </div>
+        {{/hide}}
+    {{/data}}
+{{/model}}
+<button class="btn new_style_effect">
+    <i class=" base-icon icon-plus"></i>
+</button>

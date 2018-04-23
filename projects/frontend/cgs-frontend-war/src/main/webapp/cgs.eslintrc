@@ -1,0 +1,29 @@
+root:
+  true
+env:
+  browser: true
+  node: true
+globals:
+  # STATIC GLOBALS
+  "$": false
+  "_": false
+  "lodash": false
+rules:
+  # ERRORS
+  comma-dangle: 2
+  no-cond-assign: 2
+  dot-notation: 1
+  no-debugger: 2
+  no-undef-init: 2
+  no-constant-condition: 2
+  no-use-before-define: 2
+  no-unreachable: 2
+  no-label-var: 2
+  no-delete-var: 2
+  dot-location: [2, property]
+  consistent-return: 2
+  no-func-assign: 2
+  no-unreachable: 2
+  complexity: [2, 10]
+  no-unused-vars: [2, args: none]
+  no-use-before-define: [2, "nofunc"]

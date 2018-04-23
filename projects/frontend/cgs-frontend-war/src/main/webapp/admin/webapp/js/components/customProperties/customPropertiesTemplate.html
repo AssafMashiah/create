@@ -1,0 +1,28 @@
+<div id="customProperties">
+	<h4 class="title">Course Properties:</h4>
+	<div class="custom-properties-table">
+		<div class="custom-properties-table-body">
+			{{#options.data}}
+			<div class="custom-properties-table-row">
+				<div class="field-name">{{name}}</div>
+				<div class="field-locales-area">
+					{{#value}}
+					<div class="field-value">
+						<div class="locale">
+							{{locale}}
+						</div>
+						<div class="property-value">
+							<ul locale="{{locale}}" dataType="{{dataType}}" class="tagsinput">
+								{{#value}}
+								<li>{{{id}}}</li>
+								{{/value}}
+							</ul>
+						</div>
+					</div>
+					{{/value}}
+				</div>
+			</div>
+			{{/options.data}}
+		</div>
+	</table>
+</div>

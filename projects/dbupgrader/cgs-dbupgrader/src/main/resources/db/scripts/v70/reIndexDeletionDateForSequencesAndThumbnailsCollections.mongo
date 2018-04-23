@@ -1,0 +1,2 @@
+sequences.ensureIndex({date:1});;
+thumbnails.ensureIndex({date:1});;

@@ -1,0 +1,275 @@
+#btn_notifications {
+    position: relative;
+}
+
+#btn_notifications .notificationsButtonView {
+    background-image: url('../media/CGS_icons.png?ver=32');
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+#btn_notifications .notificationsButtonView.disabled {
+    background: none;
+    display: none;
+}
+
+#btn_notifications .notificationsButtonView.inProgress {
+    background-position: -32px -192px;
+}
+
+#btn_notifications:hover .notificationsButtonView.inProgress {
+    background-position: -96px -160px;
+}
+
+#btn_notifications .notificationsButtonView.success {
+    background-position: -128px -192px;
+}
+
+#btn_notifications:hover .notificationsButtonView.success {
+    background-position: 0px -229px;
+}
+
+#btn_notifications .notificationsButtonView.error {
+    background-position: -96px -192px;
+}
+#btn_notifications:hover .notificationsButtonView.error {
+    background-position: -70px -265px;
+}
+
+
+#btn_notifications .badge {
+    top: 0;
+    position: absolute;
+    padding: 1px 4px 1px;
+    font-size: 11px;
+}
+
+#notificationsFlyoutView {
+    position: absolute;
+    right: -112px;
+    background-color: white;
+    width: 330px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.3);
+    z-index: 2;
+}
+
+#notificationsFlyoutView .notification {
+    padding: 8px 0 18px 0;
+    border: 1px solid #E5E9ED;
+    height: 48px;
+}
+
+#notificationsFlyoutView .notificationImageWrapper,
+#notificationsFlyoutView .notificationImage,
+#notificationsFlyoutView .notificationDetails,
+#notificationsFlyoutView .notificationStatusText,
+#notificationsFlyoutView .notificationStatusPercent,
+#notificationsFlyoutView .notificationActions,
+#notificationsFlyoutView .notificationAction,
+#notificationsFlyoutView .notificationAction:before,
+#notificationDetailsView .notificationImageWrapper,
+#notificationDetailsView .notificationImage,
+#notificationsFlyoutView .notificationProgress,
+#notificationDetailsView .notificationStatusText {
+    display: inline-block;
+}
+
+#notificationDetailsView {
+    padding: 0 20px;
+}
+
+#notificationsFlyoutView .notificationProgress {
+    padding-top: 12px;
+}
+
+#notificationsFlyoutView .notificationProgress.inProgress {
+    padding-top: 8px;
+}
+
+#notificationsFlyoutView .notificationImageWrapper,
+#notificationsFlyoutView .notificationProgress {
+    width: 68px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#notificationDetailsView .notificationImage,
+#notificationsFlyoutView .notificationImage {
+    background-image: url('../media/CGS_icons.png?ver=32');
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+}
+
+#notificationsFlyoutView .notificationImage.success {
+    background-position: 0px -228px;
+}
+
+#notificationDetailsView .notificationImage.cancelled,
+#notificationsFlyoutView .notificationImage.cancelled {
+    background-position: 0px -265px;
+}
+
+#notificationDetailsView .notificationImage.error,
+#notificationsFlyoutView .notificationImage.error {
+    background-position: -36px -266px;
+}
+
+#notificationsFlyoutView .notificationImage.pending,
+#notificationsFlyoutView .notificationImage.inProgress {
+    background-image: none;
+}
+
+#notificationsFlyoutView .notificationDetails {
+    width: 244px;
+}
+
+#notificationsFlyoutView .notificationName {
+    width: 180px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #333333;
+}
+
+#notificationsFlyoutView .notificationStatus {
+    display: inline-block;
+}
+
+#notificationsFlyoutView .notificationName,
+#notificationsFlyoutView .notificationVersion,
+#notificationsFlyoutView .notificationStatus,
+#notificationsFlyoutView .notificationAction {
+    font-size: 12px;
+    font-family: 'open_sans';
+    line-height: 20px;
+}
+
+#notificationsFlyoutView .notificationVersion,
+#notificationsFlyoutView .notificationStatus {
+    color: #666;
+}
+
+#notificationsFlyoutView .notificationStatusPercent {
+    color: #fff;
+}
+
+#notificationsFlyoutView .notificationName,
+#notificationsFlyoutView .notificationStatusPercent {
+    font-weight: bold;
+}
+
+#notificationsFlyoutView .notificationHide,
+#notificationsFlyoutView .notificationAction {
+    color: #0099FF;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+#notificationsFlyoutView .notificationAction.disabled {
+    color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+#notificationsFlyoutView .notificationAction:before {
+    content: "|"
+}
+
+#notificationsFlyoutView .notificationAction:first-child:before {
+    content: ""
+}
+
+#notificationsFlyoutView .notificationHide {
+    float: right;
+}
+
+#notificationDetailsView .notificationStatusText {
+    vertical-align: -webkit-baseline-middle
+}
+
+#notificationsFlyoutView .notificationStatusPercentContainer {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 23px;
+    background-color: #4AC1F0;
+    color: #fff;
+    border-radius: 6px !important;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+#notificationsFlyoutView .arrow-down {
+    position: absolute;
+    top: 23px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #4AC1F0;
+    left: 13px;
+}
+/************************************/
+/*       inProgress Animation
+/************************************/
+
+.inProgress i {
+    -webkit-animation-name: counter-pop;
+    -webkit-animation-duration: 3.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    width: 7px;
+    height: 7px;
+    background: #4AC1F0;
+    display: inline-block;
+    font-size: 14px;
+    opacity: 0.85;
+    border-radius: 50% !important;
+    -webkit-transform: scale(0.6, 0.6);
+}
+
+.inProgress i:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+}
+
+.inProgress i:nth-child(2) {
+    -webkit-animation-delay: 0.4s;
+}
+
+.inProgress i:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+}
+
+@-webkit-keyframes counter-pop {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+    45% {
+        -webkit-transform: scale(0.5, 0.5);
+    }
+    48% {
+        -webkit-transform: scale(1, 1);
+    }
+    95% {
+        -webkit-transform: scale(0.5, 0.5);
+    }
+}
+/*open sans font pre-load*/
+
+.fontTest {
+    font-family: 'open_sans';
+    position: absolute;
+    top: 9999px;
+    right: 9999px;
+}
+
+.fontTest .regular {
+    font-weight: normal;
+}
+
+.fontTest .bold {
+    font-weight: bold;
+}

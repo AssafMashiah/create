@@ -1,0 +1,69 @@
+####################
+# Define Publisher #
+####################
+createCollection("publishers");;
+publishers.ensureIndex({"publisherId":1} , {name : "publisher_publisherIdx"});;
+
+##################
+# Define Courses #
+##################
+createCollection("courses");;
+courses.ensureIndex({"cgsData.publisherId":1} , {name : "courses_publisherIdx"});;
+courses.ensureIndex({"contentData.header.lastModified":1});;
+
+##################
+# Define Lessons #
+##################
+createCollection("lessons");;
+lessons.ensureIndex({"cgsData.publisherId":1} , {name : "lessons_publisherIdx"});;
+lessons.ensureIndex({"cgsData.courseId":1} , {name : "lessons_courseIdx"});;
+lessons.ensureIndex({"contentDate.cid":1} , {name : "lessons_cIdx"});;
+lessons.ensureIndex({"contentData.header.lastModified":1});;
+
+
+#####################
+# Define Thumbnails #
+#####################
+createCollection("thumbnails");;
+thumbnails.ensureIndex({"lessonCId":1,"courseId":1,"seqId":1,} , {name : "thumbnails_lessonCid_course_seq_idx",unique: true});;
+
+####################
+# Define Sequences #
+####################
+createCollection("sequences");;
+sequences.ensureIndex({"lessonCId":1,"courseId":1,"seqId":1,} , {name : "sequences_lessonCid_course_seq_idx",unique: true});;
+
+
+##################
+# Define Applets #
+##################
+createCollection("applets");;
+applets.ensureIndex({"courseId": 1}, {unique: true});;
+
+####################
+# Define Standards #
+####################
+createCollection("standards");;
+standards.ensureIndex({"name":1,"subjectArea":1,"version":1} , {name : "standards_name_subjectArea_Idx",unique: true});;
+
+#################
+# Define Skills #
+#################
+createCollection("skills");;
+publishers.ensureIndex({"publisherId":1,"name":1} , {name : "skills_publisher_name_Idx"});;
+
+###################
+# Define Packages #
+###################
+createCollection("packages");;
+packages.ensureIndex({"courseId":1} , {name : "packages_courseIdx"});;
+packages.ensureIndex({"publisherId":1},{name : "packages_publisherIdIdx"});;
+packages.ensureIndex({"packagePhase":1},{name : "packages_packagePhaseIdx"});;
+packages.ensureIndex({"packEndDate":1},{name : "packages_packEndDateIdx"});;
+
+###################
+# Define Locks #
+###################
+createCollection("locks");;
+locks.ensureIndex({"entityId":1} , {name : "locks_entityIdIdx", unique: true});;
+

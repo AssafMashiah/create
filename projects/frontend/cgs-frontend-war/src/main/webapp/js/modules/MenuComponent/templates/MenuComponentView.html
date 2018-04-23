@@ -1,0 +1,30 @@
+<!-- {{constructor.type}} -->
+<div {{#controller.router.activeScreen.hide_menu}}style="display:none;"{{/controller.router.activeScreen.hide_menu}} class="menu_right_panel" id="menu_right_panel">
+    	<div id="userName_button_wrapper" class="menu_right_button_wrapper">
+		<a href="javascript:void(0)" class="btn" id="btn_userName" canBeDisabled="false" data-toggle="dropdown">
+			<label class="menu-publisher-name">{{publisherName}}&nbsp;/&nbsp;</label><label title="{{userName}}">{{userName}}</label>
+			<b class="caret white-caret"></b>
+		</a>
+		<ul class="dropdown-menu" role="menu" id="userFirstName_btn_menu">
+			<!--li><a id="userFirstName_menu_Settings">((Settings))</a></li-->
+			<li><a id="userFirstName_menu_help"><i class="base-icon icon-help"></i>((Help))</a></li>
+			<li><a id="userFirstName_menu_about"><i class="base-icon icon-help"></i>((About))</a></li>
+			<li><a id="userFirstName_menu_Logout"><i class="base-icon icon-logout"></i>((Logout))</a></li>
+		</ul>
+	</div>
+	<div id="preview_button_wrapper" class="menu_right_button_wrapper">
+		<a href="javascript:void(0)" class="btn" id="btn_Preview" canBeDisabled="false">
+			<label class="previewTitle" title="((Preview))">
+			((Preview))</label>
+			<!-- <i class="base-icon icon-star-half"></i> -->
+		</a>
+	</div>
+    <div id="btn_notifications_wrapper" class="menu_right_button_wrapper">
+        <a href="javascript:void(0)" class="btn disabled" id="btn_notifications" canBeDisabled="false">
+        </a>
+        <div id="notificationsFlyoutWrapper"></div>
+    </div>
+    {{#showTrial}}
+    <div id="img-trial-account-wrapper" class="menu_right_button_wrapper">((Trial))</div>
+    {{/showTrial}}
+</div>

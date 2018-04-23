@@ -1,0 +1,64 @@
+.icon_correct {
+    background-image: url('../media/icons_sprite.png') ;
+    background-position: 0px 0;
+    width: 22px;
+    height: 22px;
+}
+
+.icon_partially_correct {
+    background-image: url('../media/icons_sprite.png');
+    background-position: 0px -40px;
+    width: 22px;
+    height: 22px;
+}
+
+.icon_incorrect {
+    background-image: url('../media/icons_sprite.png');
+    background-position: 0px -80px;
+    width: 22px;
+    height: 22px;
+}
+
+#feedbacks_table thead {
+    background-color: #EEE;
+}
+
+#feedbacks_table thead th {
+    margin: 1px;
+}
+
+#feedbacks_table tbody tr:hover {
+    background-color: #DFE8E5;
+}
+
+#specific_feedbacks_table thead {
+    background-color: #EEE;
+}
+
+#specific_feedbacks_table thead th {
+    margin: 1px;
+}
+
+#specific_feedbacks_table tbody tr:hover {
+    background-color: #DFE8E5;
+}
+#feedbacks_table .element_preview_wrapper.view_mode_normal .textViewer_content {
+    width: 292px;
+}
+.span9 #td_p_all_correct .textViewer_content,
+.span9 #td_p_all_incorrect .textViewer_content,
+.span9 #td_f_all_correct .textViewer_content,
+.span9 #td_f_all_incorrect .textViewer_content{
+    width: 292px;
+}
+.span9 #td_p_all_incorrect .element_preview_wrapper,
+.span9 #td_p_all_correct .element_preview_wrapper,
+.span9 #td_f_all_incorrect .element_preview_wrapper,
+.span9 #td_f_all_correct .element_preview_wrapper
+{
+    width: 292px;
+}
+
+#specific_feedbacks_table .defaultFeedback{
+    font-weight: bold;
+}

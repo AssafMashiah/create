@@ -1,0 +1,22 @@
+#########################################################
+#  add sequenceExposureDefault property to all accounts #
+#########################################################
+
+publishers.update(
+    {},
+    {
+        $set: {
+            sequenceExposureDefault: {
+                "options" : [
+                    "one_by_one",
+                    "all_exposed"
+                ],
+                "selected" : "one_by_one"
+            }
+        }
+    },
+    {
+        upsert: false,
+        multi: true
+    }
+);

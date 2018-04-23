@@ -1,0 +1,27 @@
+#dialog.importEpub {
+  width: 480px; }
+  #dialog.importEpub #dialogContent {
+    height: 100%;
+    display: block; }
+    #dialog.importEpub #dialogContent .content-box {
+      padding: 15px; }
+      #dialog.importEpub #dialogContent .content-box .content-row {
+        margin-bottom: 10px; }
+      #dialog.importEpub #dialogContent .content-box .tocinfo {
+        list-style: none; }
+        #dialog.importEpub #dialogContent .content-box .tocinfo .tocinfo-label {
+          width: 100px; }
+      #dialog.importEpub #dialogContent .content-box #button_row {
+        padding-bottom: 15px;
+        position: absolute;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        left: 0;
+        bottom: 0; }
+        #dialog.importEpub #dialogContent .content-box #button_row button {
+          display: block;
+          margin: 0 auto;
+          height: 35px;
+          padding-left: 10px;
+          padding-right: 10px; }

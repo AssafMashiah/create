@@ -1,0 +1,19 @@
+<fieldset class="{{elementType}}_content ConvertEditor ConvertPedagogicalEditor">
+	<legend>((Pedagogical))</legend>
+	<div class="control-group">
+		<div class="content-area question_content">
+			<div dropable-content="text" dropable-limit="1" 
+			data-placeholder='((Enter title...))'  
+			dropable-limit="1"
+			dropable-content-id="question_instruction_content" 
+			dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_instruction_content}}}</div>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="content-area">
+			<div dropable-content="image,text" dropable-content-id="question_content" 
+			data-placeholder='((Enter content ...))' 
+			dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_content}}}</div>
+		</div>
+	</div>
+</fieldset>

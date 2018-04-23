@@ -1,0 +1,12 @@
+<h5>((Add another narration language))</h5>
+<div class="multiNarrationWrapper">
+	<ul>
+		{{#selected_locales}}
+			<li data-value="{{locale}}">
+				<span>{{language}}-{{country}} ({{locale}})</span>
+				<button class="btn btn-link x-button-container"><span class="base-icon icon-remove"></span></button>
+			</li>
+		{{/selected_locales}}
+	</ul>
+	<button id="add_narration_locale" class="btn base-icon icon-plus"></button>
+</div>

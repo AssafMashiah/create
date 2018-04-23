@@ -1,0 +1,175 @@
+{"10":{
+    "type":"toc",
+    "parent":"80bd293a-02bf-150b-9bde-bbeda1716115",
+    "children":["100", "200", "1010", "1011"],
+    "data":{
+        "title":"Level 1 - Math",
+        "desc":"Level 1 Description",
+        "keywords":"Level 1 Keywords"
+    },
+    "id":"10"
+}, "20":{
+    "type":"toc",
+    "parent":"80bd293a-02bf-150b-9bde-bbeda1716115",
+    "children":["300", "400"],
+    "data":{
+        "title":"Level 1 - English"
+    },
+    "id":"20"
+}, "30":{
+    "type":"toc",
+    "parent":"80bd293a-02bf-150b-9bde-bbeda1716115",
+    "children":[],
+    "data":{
+        "title":"Level 1 - Science"
+    },
+    "id":"30"
+}, "100":{
+    "type":"toc",
+    "parent":"10",
+    "children":[],
+    "data":{
+        "title":"Level 2 - Math 2.1"
+    },
+    "id":"100"
+}, "200":{
+    "type":"toc",
+    "parent":"10",
+    "children":[],
+    "data":{
+        "title":"Level 2 - Math 2.2 1ellipsis 2ellipsis 3ellipsis 4ellipsis 5ellipsis "
+    },
+    "id":"200"
+}, "300":{
+    "type":"toc",
+    "parent":"20",
+    "children":[],
+    "data":{
+        "title":"Level 2 - English 2.3"
+    },
+    "id":"300"
+}, "400":{
+    "type":"toc",
+    "parent":"20",
+    "children":["2000", "3000"],
+    "data":{
+        "title":"Level 2 - English 2.4"
+    },
+    "id":"400"
+}, "1010":{
+    "type":"lesson",
+    "parent":"10",
+    "children":["b720b2f3-fc29-46fe-939a-20361cdd6ad3"],
+    "data":{
+        "title":"Lesson 1",
+        "pedagogicalLessonType":"Core",
+        "overview":"an extremely long text (about xxx bytes)",
+        "objective":"free text objective",
+        "typicalLearningTime":"15",
+        "standards":["7", "8"],
+        "keywords":["tag1", "tag2", "tag3", "tag4", "tag5"],
+        "guide":""
+    },
+    "id":"1010",
+    "course":false,
+    "ReadOnly":false,
+    "index":1
+}, "1011":{
+    "type":"lesson",
+    "parent":"10",
+    "children":[],
+    "data":{
+        "title":"Lesson 2",
+        "type":"",
+        "standards":["111"],
+        "overview":"Additional info about the lesson 2"
+    },
+    "id":"1011",
+    "index":2
+}, "2000":{
+    "type":"toc",
+    "parent":"400",
+    "children":[],
+    "data":{
+        "title":"Level 3 - English 2.4.3"
+    },
+    "id":"2000"
+}, "3000":{
+    "type":"toc",
+    "parent":"400",
+    "children":[],
+    "data":{
+        "title":"Level 3 - English 2.4.4"
+    },
+    "id":"3000"
+}, "80bd293a-02bf-150b-9bde-bbeda1716115":{
+    "type":"course",
+    "parent":null,
+    "children":["10", "20", "30"],
+    "data":{
+        "title":"Test course",
+        "author":"Nir Krevner",
+        "edition":"1.0",
+        "created":"2011",
+        "updated":"4 March 2012",
+        "maxLevels":"3",
+        "cover":"",
+        "references":["blblblblbl/blblb.gif", "aaaaaaaaa/aa.avi"]
+    },
+    "id":"80bd293a-02bf-150b-9bde-bbeda1716115",
+    "course":true,
+    "ReadOnly":false
+}, "b720b2f3-fc29-46fe-939a-20361cdd6ad3":{
+    "type":"lo",
+    "parent":"1010",
+    "children":["b610ddf3-31da-4947-b607-882e6841df70"],
+    "data":{
+        "title":"New lo"
+    },
+    "id":"b720b2f3-fc29-46fe-939a-20361cdd6ad3"
+}, "b610ddf3-31da-4947-b607-882e6841df70":{
+    "type":"sequence",
+    "parent":"b720b2f3-fc29-46fe-939a-20361cdd6ad3",
+    "children":["22e7ccc5-f959-4275-b145-0e848928cae8"],
+    "data":{
+        "title":"New sequence 1"
+    },
+    "id":"b610ddf3-31da-4947-b607-882e6841df70",
+    "course":true,
+    "ReadOnly":false
+}, "22e7ccc5-f959-4275-b145-0e848928cae8":{
+    "id":"22e7ccc5-f959-4275-b145-0e848928cae8",
+    "type":"questionOnly",
+    "parent":"b610ddf3-31da-4947-b607-882e6841df70",
+    "children":["9af67d3f-9e4f-4fe6-8f91-449f93e7e4c0", "884d5c28-1493-4de8-bebf-37a315073e35"],
+    "data":{
+        "title":"New Question Only",
+        "difficulty":4
+    },
+    "course":true,
+    "ReadOnly":false
+}, "9af67d3f-9e4f-4fe6-8f91-449f93e7e4c0":{
+    "id":"9af67d3f-9e4f-4fe6-8f91-449f93e7e4c0",
+    "type":"instruction",
+    "parent":"22e7ccc5-f959-4275-b145-0e848928cae8",
+    "children":["2687d533-e206-4aa2-b2bf-55d1d1762578"],
+    "data":{
+        "title":"Instruction"
+    }
+}, "884d5c28-1493-4de8-bebf-37a315073e35":{
+    "id":"884d5c28-1493-4de8-bebf-37a315073e35",
+    "type":"question",
+    "parent":"22e7ccc5-f959-4275-b145-0e848928cae8",
+    "children":[],
+    "data":{
+        "title":"Question"
+    }
+}, "2687d533-e206-4aa2-b2bf-55d1d1762578":{
+    "id":"2687d533-e206-4aa2-b2bf-55d1d1762578",
+    "type":"textViewer",
+    "parent":"9af67d3f-9e4f-4fe6-8f91-449f93e7e4c0",
+    "children":[],
+    "data":{
+        "title":"textViewer"
+    }
+}}

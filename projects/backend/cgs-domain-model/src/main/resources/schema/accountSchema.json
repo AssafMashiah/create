@@ -1,0 +1,546 @@
+{
+  "accountType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "_class": {
+        "type": "string",
+        "required": false
+      },
+      "contentLocales": {
+        "$ref": "#/contentLocalesType"
+      },
+      "interfaceLocales": {
+        "$ref": "#/interfaceLocalesType"
+      },
+      "sequenceExposureDefault": {
+        "$ref": "#/sequenceExposureDefaultType"
+      },
+      "fileSizeLimits": {
+        "$ref": "#/fileSizeLimitsType"
+      },
+      "elementsLimit": {
+        "$ref": "#/elementsLimitType"
+      },
+      "gradeLevels": {
+        "$ref": "#/gradeLevelsType"
+      },
+      "loTypes": {
+        "$ref": "#/loTypesType"
+      },
+      "name": {
+        "$ref": "#/nameType"
+      },
+      "accountId": {
+        "$ref": "#/accountIdType",
+        "required": false
+      },
+      "accountMode": {
+        "$ref": "#/accountModeType"
+      },
+      "relatesTo": {
+        "$ref": "#/relatesToType",
+        "required": true
+      },
+      "skills": {
+        "$ref": "#/skillsType"
+      },
+      "subjectAreas": {
+        "$ref": "#/subjectAreasType"
+      },
+      "ttsProviders": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "customMetadata": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "customMetadataPackages": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "packageId": {
+              "type": "string",
+              "required": true
+            },
+            "packageName": {
+              "type": "string",
+              "required": true
+            },
+            "packageDescription": {
+              "type": "string",
+              "required": false
+            },
+            "customMetadata": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "customization": {
+        "$ref": "#/customizationType"
+      },
+      "externalPartnersSettings": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    }
+  },
+  "fileSizeLimitType": {
+    "additionalProperties": false,
+    "properties": {
+      "type": {
+        "type": "string"
+      },
+      "mimeTypes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "size": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  },
+  "fileSizeLimitsType": {
+    "type": "array",
+    "items": {
+      "$ref": "#/fileSizeLimitType"
+    }
+  },
+  "elementsLimitType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "maxEBookPages": {
+        "type": "integer"
+      },
+      "maxEmbeddedInteractionsOnPage": {
+        "type": "integer"
+      }
+    }
+  },
+  "interfaceLocalesOptionType": {
+    "type": "string"
+  },
+  "sequenceExposureDefaultOptionType": {
+    "type": "string"
+  },
+  "contentLocalesOptionType": {
+    "type": "string"
+  },
+  "enableHiddenLessonsType": {
+    "type": "boolean"
+  },
+  "enableLearningObjectsType": {
+    "type": "boolean"
+  },
+  "enableStandardsType": {
+    "type": "boolean"
+  },
+  "enableReferencesType": {
+    "type": "boolean"
+  },
+  "enableCourseMiscSettingsType": {
+    "type": "boolean"
+  },
+  "enableReviewTabType": {
+    "type": "boolean"
+  },
+  "enableTextToSpeachType": {
+    "type": "boolean"
+  },
+  "enableNarrationAdditionalLanguagesType": {
+    "type": "boolean"
+  },
+  "enableAssetOrderingType": {
+    "type": "boolean"
+  },
+  "enableDiffLevelsType": {
+    "type": "boolean"
+  },
+  "enableAssessment": {
+    "type": "boolean"
+  },
+  "enableBookAlive": {
+    "type": "boolean"
+  },
+  "enableBornDigital": {
+    "type": "boolean"
+  },
+  "ePubConversionConfDelayType": {
+    "type": "integer"
+  },
+  "enableCoachMarksType": {
+    "type": "boolean"
+  },
+  "enableHintsType": {
+    "type": "boolean"
+  },
+  "enableLivePageType": {
+    "type": "boolean"
+  },
+  "enablePdf2t2kType": {
+    "type": "boolean"
+  },
+  "enableQuizType": {
+    "type": "boolean"
+  },
+  "publishSelectedLessonType": {
+    "type": "boolean"
+  },
+  "enableSsoType": {
+    "type": "boolean"
+  },
+  "enableCourseLevelsCustomizationForScormType": {
+    "type": "boolean"
+  },
+  "enableIndependentAssessmentType": {
+    "type": "boolean"
+  },
+  "enablePlacementAssessmentType": {
+    "type": "boolean"
+  },
+  "logLevel": {
+    "type": "string",
+    "enum": [
+      "DEBUG",
+      "INFO",
+      "WARN",
+      "ERROR",
+      "AUDIT"
+    ]
+  },
+  "enableFullSpellCheckerType": {
+    "type": "boolean"
+  },
+  "contentLocalesType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "options": {
+        "type": "array",
+        "items": {
+          "$ref": "#/contentLocalesOptionType"
+        }
+      },
+      "selected": {
+        "type": "string"
+      }
+    }
+  },
+  "interfaceLocalesType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "options": {
+        "type": "array",
+        "items": {
+          "$ref": "#/interfaceLocalesOptionType"
+        }
+      },
+      "selected": {
+        "type": "string"
+      }
+    }
+  },
+  "sequenceExposureDefaultType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "options": {
+        "type": "array",
+        "items": {
+          "$ref": "#/sequenceExposureDefaultOptionType"
+        }
+      },
+      "selected": {
+        "type": "string"
+      }
+    }
+  },
+  "gradeLevelType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "locale": {
+        "type": "string"
+      },
+      "value": {
+        "type": "array",
+        "items": {
+          "$ref": "#/gradeLevelItem"
+        }
+      }
+    }
+  },
+  "gradeLevelItem": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string"
+      }
+    }
+  },
+  "gradeLevelsType": {
+    "type": "array",
+    "items": {
+      "$ref": "#/gradeLevelType"
+    }
+  },
+  "loTypeType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "display": {
+        "type": "string"
+      }
+    }
+  },
+  "relatesToType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "_id": {
+        "type": "integer"
+      },
+      "type": {
+        "type": "string"
+      }
+    }
+  },
+  "loTypesType": {
+    "type": "array",
+    "items": {
+      "$ref": "#/loTypeType"
+    }
+  },
+  "nameType": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 50
+  },
+  "accountIdType": {
+    "type": "integer",
+    "minimum": 1
+  },
+  "accountModeType": {
+    "type": "string",
+    "enum": [
+      "TRIAL",
+      "PRODUCTION"
+    ]
+  },
+  "refType": {
+    "type": "string"
+  },
+  "skillsType": {
+    "type": "object",
+    "properties": {
+      "ref": {
+        "$ref": "#/refType"
+      }
+    }
+  },
+  "subjectAreaType": {
+    "locale": {
+      "type": "string"
+    },
+    "value": {
+      "type": "array",
+      "items": {
+        "$ref": "#subjectAreaItem"
+      }
+    }
+  },
+  "subjectAreaItem": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string"
+      }
+    }
+  },
+  "subjectAreasType": {
+    "type": "array",
+    "items": {
+      "$ref": "#/subjectAreaType"
+    }
+  },
+  "customizationType": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enableMediaEncoding": {
+        "type": "boolean"
+      },
+      "enableHiddenLessons": {
+        "$ref": "#/enableHiddenLessonsType"
+      },
+      "publishSettings": {
+        "$ref": "#/publishSettingsType"
+      },
+      "enableHints": {
+        "$ref": "#/enableHintsType"
+      },
+      "enableCoachMarks": {
+        "$ref": "#/enableCoachMarksType"
+      },
+      "enableLivePage": {
+        "$ref": "#/enableLivePageType"
+      },
+      "enablePdf2t2k": {
+        "$ref": "#/enablePdf2t2kType"
+      },
+      "enableLearningObjects": {
+        "$ref": "#/enableLearningObjectsType"
+      },
+      "enableStandards": {
+        "$ref": "#/enableStandardsType"
+      },
+      "enableReferences": {
+        "$ref": "#/enableReferencesType"
+      },
+      "enableCourseMiscSettings": {
+        "$ref": "#/enableCourseMiscSettingsType"
+      },
+      "enableReviewTab": {
+        "$ref": "#/enableReviewTabType"
+      },
+      "enableTextToSpeach": {
+        "$ref": "#/enableTextToSpeachType"
+      },
+      "enableNarrationAdditionalLanguages": {
+        "$ref": "#/enableNarrationAdditionalLanguagesType"
+      },
+      "enableAssetOrdering": {
+        "$ref": "#/enableAssetOrderingType"
+      },
+      "enableDiffLevels": {
+        "$ref": "#/enableDiffLevelsType"
+      },
+      "enableAssessment": {
+        "$ref": "#/enableDiffLevelsType"
+      },
+      "enableBookAlive": {
+        "$ref": "#/enableDiffLevelsType"
+      },
+      "enableBornDigital": {
+        "$ref": "#/enableDiffLevelsType"
+      },
+      "enableQuiz": {
+        "$ref": "#/enableQuizType"
+      },
+      "enableSso": {
+        "$ref": "#/enableSsoType"
+      },
+      "enableFullSpellChecker": {
+        "$ref": "#/enableFullSpellCheckerType"
+      },
+      "isSecured": {
+        "type": "boolean"
+      },
+      "logLevel": {
+        "$ref": "#/logLevel"
+      },
+      "pdfConversionLibrary": {
+        "type": "string"
+      },
+      "enablePdfConversionLibrarySelection": {
+        "type": "boolean"
+      },
+      "enableDemoPublishView":{
+        "type":"boolean"
+      },
+      "enableSampleCourse": {
+        "type": "boolean"
+      },
+      "enableEpubConversion":{
+        "type":"boolean"
+      },
+      "ePubConversionConfDelay":{
+        "$ref": "#/ePubConversionConfDelayType"
+      },
+      "enableIndependentAssessment":{
+        "$ref": "#/enableIndependentAssessmentType"
+      },
+      "enablePlacementAssessment":{
+        "$ref": "#/enablePlacementAssessmentType"
+      },
+      "customIconsPacks":{
+        "type": "array"
+      }
+    }
+  },
+  "publishSettingsType": {
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "courses": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enablePublishToFile": {
+            "type": "boolean"
+          },
+          "enablePublishToCatalog": {
+            "type": "boolean"
+          },
+          "enablePublishToUrl": {
+            "type": "boolean"
+          }
+        }
+      },
+      "lessons": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enablePublishToFile": {
+            "type": "boolean"
+          },
+          "enablePublishToCatalog": {
+            "type": "boolean"
+          },
+          "enablePublishToUrl": {
+            "type": "boolean"
+          },
+          "enableCourseLevelsCustomizationForScorm": {
+            "type": "boolean"
+          }
+        }
+      },
+      "publishPlayServerUrl": {
+        "type":"string"
+      },
+      "publishUploadServerUrl": {
+        "type":"string"
+      }
+
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# remove "externalPartnersSettings" from accounts that have that field
+publishers.update({"externalPartnersSettings":{$exists:true}},{$unset:{"externalPartnersSettings":""}},{multi:true})

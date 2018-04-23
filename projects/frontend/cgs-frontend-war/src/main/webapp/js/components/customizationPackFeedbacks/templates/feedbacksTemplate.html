@@ -1,0 +1,31 @@
+ <div class="warningMessage">
+    <div class="base-icon icon-info"></div>
+    <i>
+        ((Changes affect new content only))
+    </i>
+</div>
+<div class="toolbar">
+    ((Task)):
+    <select id="feedbackTypesDropDown">
+        {{#feedbackTypes}}
+            <option value="{{.}}">(({{.}}))</option>
+        {{/feedbackTypes}}
+    </select>
+    <div id="addInlineImage"></div>
+    <div id="narrationIndication"></div>
+    <div id="toolbar_tts"></div>
+    <div id="toolbar_addNarration"></div>
+</div>
+    <table id="feedbacks_table" class="table table-bordered" style="width: 99%">
+    <thead>
+    <tr>
+        <th class="th_icon" >((Icon))</th>
+        <th class="th_condition" >((Condition))</th>
+        <th class="th_preliminary" >((Preliminary Attempts))</th>
+        <th class="th_final" >((Final attempts))</th>
+    </tr>
+    </thead>
+     <tbody id="feedbacks_table_body">
+        {{>feedbacksTable}}
+     </tbody>
+</table>

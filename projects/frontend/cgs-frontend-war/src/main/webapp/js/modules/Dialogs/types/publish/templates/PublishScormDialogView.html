@@ -1,0 +1,22 @@
+{{^children}}
+<li class="scorm-tree-static">
+    {{#lesson}}
+    <label id="scormId_{{id}}" title="{{tocIndex}} {{title}}">{{tocIndex}} {{title}}</label>
+    {{/lesson}}
+    {{#emptyCourse}}
+    ((publish.scorm.empty_course.title))
+    {{/emptyCourse}}
+</li>
+{{/children}}
+{{#children}}
+<li class="scorm-tree-expendable">
+            <span id="scormId_{{id}}" class="node-collapse" title="{{tocIndex}} {{title}}">
+                {{tocIndexString}} {{title}}
+            </span>
+    {{#html}}
+    <ul class='scorm-tree-list'>
+        {{{html}}}
+    </ul>
+    {{/html}}
+</li>
+{{/children}}

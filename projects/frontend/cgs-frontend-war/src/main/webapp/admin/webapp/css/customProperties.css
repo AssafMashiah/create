@@ -1,0 +1,50 @@
+#customProperties {
+	color: #333333;
+	font-family: Arial;
+	margin: 50px 0;
+}
+#customProperties .title{
+	margin-bottom: 20px;
+}
+#customProperties .custom-properties-table{
+	font-size: 13px;
+}
+#customProperties .custom-properties-table-row{
+	border-bottom: 1px solid #e1e1e1;
+}
+#customProperties .field-name{
+	padding: 10px;
+	width: 10%;
+	vertical-align: top;
+}
+
+#customProperties .field-locales-area{
+	height: 100%;
+	width: 85%;
+	border-left: 1px solid #e1e1e1;
+}
+#customProperties .field-locales-area .field-value{
+	padding: 10px 10px 0 10px;
+}
+#customProperties .field-locales-area .field-value:not(:last-child){
+	border-bottom: 1px solid #e1e1e1;
+}
+#customProperties .property-value{
+	width: 630px;
+}
+#customProperties .locale{
+	vertical-align: top;
+	margin-right: 15px;
+	width: 40px;
+}
+#customProperties .field-name,
+#customProperties .field-locales-area,
+#customProperties .field-value,
+#customProperties .locale,
+#customProperties .property-value{
+	display: inline-block;
+}
+
+.form-horizontal .control-label{
+	width: 450px;
+}

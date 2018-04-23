@@ -1,0 +1,28 @@
+{
+    "plugin_data":{"title":"my Question"},
+    "plugin_children":
+            [
+                {
+                    "type": "instruction",
+                    "children": [{"type": "textViewer",
+                                  "data": {
+                                  "title": "Instructions TextViewer",
+                                  "disableDelete":true}}
+                                ],
+                    "data": {"title": "Instruction",
+                             "show":"true",
+                             "disableDelete":true}
+                },
+                {
+                    "type": "question",
+                    "children": [{"type": "textViewer",
+                        "data": {
+                            "title": "question TextViewer",
+                            "disableDelete":true}}
+                    ],
+                    "data": {"title": "Question",
+                        "show":"true",
+                        "disableDelete":true}
+                }
+            ]
+}

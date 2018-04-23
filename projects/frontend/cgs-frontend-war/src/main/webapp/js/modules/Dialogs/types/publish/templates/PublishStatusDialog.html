@@ -1,0 +1,18 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<!--suppress ALL -->
+<div>
+	<div class="control-group horizontal publish-progress-title">
+		<label class="control-label">((Course)): {{courseTitle}}</label>
+	</div>
+
+	{{#phases}}
+		<div class="control-group horizontal publish-phase-{{type}}" id="{{type}}">
+			<label class="control-label">(({{index}})).
+			((course.pop_up.publish.phase.label.{{type}}))</label>
+			<div class="progress-area">
+				<div class="percents-area hide-progress"><div class="percents-progress"></div></div>
+				<i class="base-icon icon-ok-publish base-icon icon-large"/>
+			</div>
+		</div>
+	{{/phases}}
+</div>

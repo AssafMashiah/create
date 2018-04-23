@@ -1,0 +1,118 @@
+{
+"_class" : "com.mongodb.BasicDBObject",
+"cgsData" : {
+"courseId" : "43f7a05a-2d56-4b6e-af7b-6db49d0ae99d",
+"publisherId" : 1
+},
+"contentData" : {
+"cid" : "cc4b562c-19f5-428c-9101-5782d115df58",
+"header" : {
+"last-modified" : {"$date": "2014-06-16T08:37:15.564Z"}
+},
+"schema" : "course_v4",
+"pedagogicalLessonType" : "Custom",
+"contentLocales" : [
+"en_US"
+],
+"standards" : [],
+"standardPackages" : [],
+"resources" : [
+{
+"baseDir" : "applets/6aa8392e-524e-4fc4-bb2e-ecc050c2dc0b/1.079",
+"hrefs" : [
+"data/resources/fonts/icomoon/fonts/icomoon.ttf",
+"data/resources/fonts/ttk/ttk-bol-webfont.woff",
+"data/css/style.css",
+"data/partials/overlayAudio.html",
+"data/lib/ckeditor/skins/moono/icons_hidpi.png",
+"data/i18n/iw_il.json",
+"data/resources/fonts/icomoon/fonts/icomoon.eot",
+"data/partials/specfeeddisplay.html",
+"data/lib/ckeditor/skins/moono/images/hidpi/lock-open.png",
+"data/resources/fonts/ttk/ttk-reg-webfont.woff",
+"data/lib/perfect-scrollbar/perfect-scrollbar-mousewheel.min.js",
+"data/lib/ckeditor/skins/moono/images/lock-open.png",
+"data/lib/ckeditor/lang/he.js",
+"data/resources/fonts/sasson/ttk-medium-webfont.woff",
+"data/media/icon.png",
+"data/js/live-text-applet-v1.0.0.js",
+"data/lib/ckeditor/skins/moono/images/refresh.png",
+"data/resources/fonts/icomoon/style.css",
+"data/resources/fonts/ttk/ttk-italic-webfont.woff",
+"data/resources/fonts/ttk/ttk-italic-webfont.ttf",
+"images/icon.png",
+"data/lib/ckeditor/styles.js",
+"data/lib/ckeditor/ckeditor.js",
+"data/lib/ckeditor/skins/moono/images/hidpi/close.png",
+"data/i18n/en_us.json",
+"data/lib/ckeditor/adapters/jquery.js",
+"data/resources/fonts/ttk/ttk-reg-webfont.ttf",
+"data/lib/perfect-scrollbar/perfect-scrollbar.min.css",
+"data/lib/ckeditor/skins/moono/editor_gecko.css",
+"data/resources/fonts/ttk/ttk-bol-webfont.ttf",
+"data/lib/ckeditor/skins/moono/editor.css",
+"data/lib/ckeditor/skins/moono/dialog.css",
+"data/resources/fonts/sasson/ttk-medium-webfont.ttf",
+"data/lib/ckeditor/skins/moono/images/hidpi/refresh.png",
+"data/lib/ckeditor/skins/moono/images/hidpi/lock.png",
+"data/lib/ckeditor/config.js",
+"data/lib/ckeditor/skins/moono/images/lock.png",
+"data/resources/fonts/icomoon/fonts/icomoon.svg",
+"data/lib/ckeditor/lang/fr.js",
+"data/partials/editor.html",
+"data/partials/play.html",
+"data/lib/ckeditor/skins/moono/icons.png",
+"data/lib/ckeditor/lang/en.js",
+"data/resources/fonts/icomoon/fonts/icomoon.woff",
+"data/lib/ckeditor/skins/moono/images/arrow.png",
+"data/lib/ckeditor/skins/moono/images/close.png",
+"data/lib/ckeditor/contents.css",
+"manifest.json",
+"data/index.html",
+"data/lib/perfect-scrollbar/perfect-scrollbar.min.js"
+],
+"type" : "lib",
+"resId" : "resource_1"
+},
+{
+"type" : "sequence",
+"href" : "sequences/mockSeq1",
+"resId" : "resource_2"
+}
+],
+"overview" : " ",
+"title" : "New Lesson",
+"type" : "lesson",
+"learningObjects" : [
+{
+"cid" : "85f3bfce-57ff-4311-b66f-ca01b0ac8e83",
+"title" : "New Learning Object",
+"type" : "lo",
+"sequences" : [
+{
+"cid" : "e3eb3e8a-a630-43f7-bc45-600d7f680301",
+"mimeType" : "DL",
+"tasks" : [
+{
+"cid" : "e4fd3325-356d-4587-ae26-2d419ef15ff3",
+"type" : "task",
+"title" : "New applet task",
+"allowedAttempts" : 2,
+"checkingType" : "auto",
+"standards" : []
+}
+],
+"contentRef" : "resource_2",
+"resourceRefId" : [
+"resource_1",
+"resource_2"
+],
+"standards" : [],
+"title" : "New Sequence 1",
+"type" : "sequence"
+}
+]
+}
+]
+}
+}

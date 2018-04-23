@@ -1,0 +1,107 @@
+<!-- Alex Burdusel: Configuration was moved to spring-boot java annotations config-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:s="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <!--
+       Basic security settings like:
+       1. url for login/logout
+       2. permissions to login page + permissions to DL
+       3. login processing/errors settings
+       See also LoginController for functionality
+    -->
+    <s:http use-expressions="true" entry-point-ref="delegatingAuthenticationEntryPoint">
+        <s:csrf disabled="true"/> <!-- TODO will need to be removed. Using it currently for compatibility when migrating from spring security 3 to 4 http://docs.spring.io/spring-security/site/migrate/current/3-to-4/html5/migrate-3-to-4-xml.html#m3to4-xmlnamespace-csrf !-->
+        <s:headers disabled="true"/>
+        <!--<s:headers>-->
+            <!--<s:frame-options policy="SAMEORIGIN"/>-->
+        <!--</s:headers>-->
+        <s:anonymous username="Annonymous"/>
+        <s:intercept-url pattern="/websocket/**" access="isAuthenticated()"/>
+        <s:intercept-url pattern="/auth/login-secure" access="permitAll" requires-channel="https"/>
+        <s:intercept-url pattern="/auth/login-oauth2" access="permitAll" requires-channel="https"/>
+        <s:intercept-url pattern="/auth/login" access="permitAll" requires-channel="http"/>
+        <s:intercept-url pattern="/auth/external-logout" />
+        <s:intercept-url pattern="/index.jsp" access="permitAll" requires-channel="http"/>
+        <s:intercept-url pattern="/defaultEntry" access="isAuthenticated()" requires-channel="http"/>
+        <s:intercept-url pattern="/admin/**/*" access="isAuthenticated() and hasRole('T2K_ADMIN')" requires-channel="http"/>
+        <s:intercept-url pattern="/client/**/*" access="isAuthenticated()" requires-channel="http"/>
+        <s:form-login login-page="/auth/login"
+                      login-processing-url="/auth/j_spring_security_check"
+                      authentication-failure-url="/auth/login-secure?loginFailed=true"
+                      default-target-url="/auth/defaultEntry"/>
+        <s:logout logout-url="/auth/logout" logout-success-url="/auth/logout-success" delete-cookies="jsessionid"/>
+
+        <!-- Prevent separate sessions between http and https -->
+        <s:session-management session-fixation-protection="none"/>
+    </s:http>
+
+    <!--
+        We use a delegatingAuthenticationEntryPoint to have different behaviour in 2 cases:
+        1. REST API - we want a 403 (Forbidden) response
+        2. Application web pages - we want automatic redirection to login page
+    -->
+    <bean name="delegatingAuthenticationEntryPoint"
+          class="org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint">
+        <constructor-arg index="0">
+            <map>
+                <entry>
+                    <key>
+                        <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
+                            <constructor-arg index="0" value="/rest/**"/>
+                        </bean>
+                    </key>
+                    <bean name="forbiddenEntryPoint"
+                          class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+                </entry>
+            </map>
+        </constructor-arg>
+        <property name="defaultEntryPoint">
+            <bean class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+                <constructor-arg index="0" value="/auth/login"/>
+            </bean>
+        </property>
+    </bean>
+
+    <s:authentication-manager erase-credentials="true" alias="authenticationManager">
+        <s:authentication-provider user-service-ref="applicationUsersService"/>
+    </s:authentication-manager>
+
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:config/t2k.properties"/>
+
+    <!-- Test Users service -->
+    <bean id="testUsersService" class="org.t2k.cgs.security.CGSTestUserDetailsService">
+        <property name="userNameRegex" value="^t\d+$"/>
+        <property name="password" value="1"/>
+    </bean>
+
+    <!-- User service of users managed by the application -->
+    <bean id="applicationUsersService" class="org.t2k.cgs.security.ApplicationUserDetailsService">
+        <property name="usersDao" ref="usersDao"/>
+    </bean>
+
+    <bean id="userDetailsMapper" class="org.t2k.cgs.security.CGSUserDetailsMapper">
+        <property name="decoratedMapper">
+            <bean class="org.springframework.security.ldap.userdetails.LdapUserDetailsMapper"/>
+        </property>
+        <property name="firstNameAttribute" value="givenname"/>
+        <property name="lastNameAttribute" value="sn"/>
+        <property name="emailAttribute" value="mail"/>
+    </bean>
+
+    <bean name="oAuthSecurityService" class="org.t2k.cgs.security.OAuthSecurityServiceImpl">
+        <property name="authenticationManager"  ref="authenticationManager"/>
+    </bean>
+
+    <bean name="oAuthValidator" class="org.t2k.cgs.security.OAuthValidator" init-method="initVariables" />
+</beans>

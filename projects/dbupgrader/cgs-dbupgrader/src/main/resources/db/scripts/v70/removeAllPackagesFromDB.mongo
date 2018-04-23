@@ -1,0 +1,2 @@
+#removes all packages from DB
+packages.remove({});;

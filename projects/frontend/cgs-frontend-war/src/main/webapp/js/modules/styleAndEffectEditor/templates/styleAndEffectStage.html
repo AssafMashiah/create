@@ -1,0 +1,52 @@
+<div class="styleAndEffectDialogScreenStage" id="exampleTextArea">
+	{{#controller.data.isStyle}}
+		<div class="editableTextExample example" style="{{controller.data.currentItem.cssString}}">
+			{{lorem_Ipsum}}
+		</div>
+	{{/controller.data.isStyle}}
+	{{^controller.data.isStyle}}
+		<div class="editableTextExample effect">
+			
+			<span class="example" style="{{controller.data.currentItem.cssString}}">{{controller.data.currentItem.name}}</span>
+			
+		</div>
+
+	{{/controller.data.isStyle}}
+	<div class="referenceRow">
+		{{#controller.data.isStyle}}
+			<span>((course.props_area.tab_design.style_editor.reference)):</span>
+		{{/controller.data.isStyle}}
+		{{^controller.data.isStyle}}
+			<span>((See the effect applied on the style)):</span>
+		{{/controller.data.isStyle}}
+		<select id="referanceSelectBox" class="span4">
+			{{#controller.data.additionalStyles}}
+			<option value='{{key}}'>{{name}}</option>
+			{{/controller.data.additionalStyles}}
+		</select>
+	</div>
+	<div class="referance">
+		{{#controller.data.isStyle}}
+			<div class="referanceExampleText" style="{{controller.data.currentReferance.cssString}}">
+				{{lorem_Ipsum}}
+			</div>
+		{{/controller.data.isStyle}}
+
+		{{^controller.data.isStyle}}
+			<div class="referanceExampleText" style="{{controller.data.currentReferance.cssString}}">
+				<span>
+					{{lorem_Ipsum_part1}}
+				</span>
+				<span class="example" style="{{controller.data.currentItem.cssString}}">{{controller.data.currentItem.name}}</span>
+				<span>
+					{{lorem_Ipsum_part2}}
+				</span>
+			</div>
+		{{/controller.data.isStyle}}
+	
+		<div class="details">
+			{{>details}}
+		</div>
+	</div>
+</div>
+<input id="colorPicker" style="position:absolute; left:-9999px; top:-9999px;" type="color"></input>

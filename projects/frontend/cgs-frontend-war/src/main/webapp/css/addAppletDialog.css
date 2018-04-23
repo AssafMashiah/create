@@ -1,0 +1,42 @@
+#dialog.addApplet {
+	max-height: 630px;
+	min-height: 630px;
+	width: 800px;
+	margin: -325px 0 0 -400px;
+}
+
+#dialog.addApplet #dialogContent {
+	min-height: 480px;
+	max-height: 480px;
+	overflow: auto;
+}
+
+#dialog.addApplet #dialogContent .appletThumb {
+	margin-left: 10px;
+	margin-bottom: 20px;
+	width: 110px;
+	cursor: pointer;
+}
+
+#dialog.addApplet #dialogContent .appletThumb:hover .caption,
+#dialog.addApplet #dialogContent .appletThumb.active .caption {
+	color: rgb(38, 158, 216);
+}
+
+#dialog.addApplet #dialogContent .appletThumb.active {
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#dialog.addApplet #dialogContent img.thumbnail {
+	height: 110px;
+}
+
+#dialog.addApplet #dialogContent .caption {
+	line-height: 20px;
+	width: 100%;
+	color:#333;
+	padding: 0 3%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}

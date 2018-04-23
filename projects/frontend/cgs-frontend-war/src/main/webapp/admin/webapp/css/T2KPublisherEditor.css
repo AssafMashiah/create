@@ -1,0 +1,70 @@
+#T2KSettings .language-select {
+    margin-left: 20px;
+}
+
+#T2KSettings .language-label {
+    margin-left: 35px;
+    text-align: left;
+}
+
+#T2KSettings .flagRow input[type='checkbox'] {
+	float: left;
+	margin: 8px 0 0 35px;
+}
+
+#T2KSettings .flagRow label {
+	text-align: left;
+	margin: 0 10px;
+	width: 400px;
+}
+
+#T2KSettings .flagRow label.disabled {
+	color: #B8B8B8;
+}
+
+#T2KSettings .settingsGroup {
+	border-bottom: 1px solid #e1e1e1;
+}
+
+#T2KSettings .font-upload-area {
+    margin-left: 35px;	
+}
+
+#T2KSettings .font-upload-area .left-side {
+	vertical-align: top;
+    display: inline-block;
+}
+
+#T2KSettings .font-upload-area .item {
+	margin-left: 10px;
+	min-width: 300px;
+    padding: 10px;
+    position: relative;
+}
+
+#T2KSettings .font-upload-area .item .upload-btn {
+	font-size: 20px;
+    position: absolute;
+    right: 0;
+    background-color: #f5f5f5;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #a5a5a5;
+}
+
+#T2KSettings .font-upload-area .item .uploaded {
+    margin-top: 16px;
+    margin-left: 16px;
+    font-style: italic;
+}
+
+#T2KSettings .font-upload-area .right-side {
+    max-width: 350px;
+    margin-top: 10px;
+    display: inline-block; 
+}
+
+@media screen and (min-width: 1015px ) {
+  #T2KSettings .font-upload-area .right-side { margin-left: 40px; margin-top: 0; }   
+}

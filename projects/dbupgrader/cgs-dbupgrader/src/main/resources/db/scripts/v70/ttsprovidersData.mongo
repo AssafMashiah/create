@@ -1,0 +1,142 @@
+ttsproviders.insert(
+ {
+     "id" : 1,
+     "name" : "ReadSpeaker",
+     "locales" : [
+         "de_de",
+         "en_au",
+         "en_uk",
+         "en_us",
+         "es_es",
+         "fr_fr",
+         "nl_nl",
+         "sv_se"
+     ],
+     "configurations" : {
+         "admin" : [
+             {
+                 "key" : "key",
+                 "type" : "text",
+                 "attributes" : {
+                     "required" : true
+                 },
+                 "validation" : {
+                     "required" : true
+                 }
+             }
+         ],
+         "course" : [
+             {
+                 "key" : "volume",
+                 "type" : "number",
+                 "attributes" : {
+                     "min" : 0,
+                     "max" : 200
+                 },
+                 "default" : 100
+             },
+             {
+                 "key" : "pitch",
+                 "type" : "number",
+                 "attributes" : {
+                     "min" : 0,
+                     "max" : 200
+                 },
+                 "default" : 100
+             },
+             {
+                 "key" : "speed",
+                 "type" : "number",
+                 "attributes" : {
+                     "min" : 0,
+                     "max" : 200
+                 },
+                 "default" : 100
+             },
+             {
+                 "key" : "voice",
+                 "type" : "multiselection",
+                 "filterOptionsByLocale" : true,
+                 "options" : {
+                     "de_de" : [
+                         "Male01",
+                         "Female01"
+                     ],
+                     "en_au" : [
+                         "Male01",
+                         "Female01"
+                     ],
+                     "en_uk" : [
+                         "Male01",
+                         "Female01"
+                     ],
+                     "en_us" : [
+                         "Male01",
+                         "Male02",
+                         "Female01"
+                     ],
+                     "es_es" : [
+                         "Female01"
+                     ],
+                     "fr_fr" : [
+                         "Male01",
+                         "Female01"
+                     ],
+                     "nl_nl" : [
+                         "Male01",
+                         "Female01"
+                     ],
+                     "sv_se" : [
+                         "Female01"
+                     ]
+                 },
+                 "default" : {
+                     "key" : "en_us",
+                     "index" : 0,
+                     "indexValue" : "Male01"
+                 }
+             },
+             {
+                 "key" : "mp3bitrate",
+                 "type" : "number",
+                 "attributes" : {
+                     "min" : 16,
+                     "max" : 128,
+                     "step" : 8
+                 },
+                 "default" : 128
+             },
+             {
+                 "key" : "dictionary",
+                 "type" : "array",
+                 "options" : [
+                     "on",
+                     "off"
+                 ],
+                 "default" : {
+                     "default" : 0,
+                     "indexValue" : "on"
+                 }
+             }
+         ],
+         "api" : {
+             "template" : {
+                 "data" : {
+                     "base_url" : "http://tts.readspeaker.com/a/speak",
+                     "appId" : 1,
+                     "command" : "produce",
+                     "charset" : "UTF-8",
+                     "textformat" : "plain",
+                     "audioformat" : "mp3",
+                     "container" : "wave"
+                 },
+                 "path" : "{{base_url}}?key={{key}}&command={{command}}&appId={{appId}}&charset={{charset}}&textformat={{textformat}}&text={{text}}&volume={{volume}}&pitch={{pitch}}&speed={{speed}}&audioformat={{audioformat}}&container={{container}}&samplerate={{samplerate}}&sampledepth={{sampledepth}}&mp3bitrate={{mp3bitrate}}&dictionary={{dictionary}}&lang={{lang}}&voice={{voice}}"
+             },
+             "method" : "POST"
+         }
+     }
+ }
+
+
+
+)

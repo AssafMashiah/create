@@ -1,0 +1,165 @@
+ function f(dbName) {
+     db=db.getSiblingDB(dbName);
+     var gradeLevels = [
+                              {'locale':'en_US',
+                              'value' :[
+                                  {"id": "First"},
+                                  {"id": "Second"},
+                                  {"id": "Third"},
+                                  {"id": "Fourth"},
+                                  {"id": "Fifth"},
+                                  {"id": "Sixth"},
+                                  {"id": "Seventh"},
+                                  {"id": "Eighth"},
+                                  {"id": "Ninth"},
+                                  {"id": "Tenth"},
+                                  {"id": "Eleventh"}
+                              ]},
+                              {'locale':'fr_FR',
+                              'value':[
+                                  {"id":  "CM1"},
+                                  {"id":  "CM2"},
+                                  {"id":  "6ème"},
+                                  {"id":  "5ème"},
+                                  {"id":  "4ème"},
+                                  {"id":  "3ème"},
+                                  {"id":  "2nde"},
+                                  {"id":  "Première ES"},
+                                  {"id":  "Première L"},
+                                  {"id":  "Première S"},
+                                  {"id":  "Première ST2S"},
+                                  {"id":  "Première STL / STI2D / STI2A"},
+                                  {"id":  "Première STMG"},
+                                  {"id":  "Terminale ES"},
+                                  {"id":  "Terminale L"},
+                                  {"id":  "Terminale S"},
+                                  {"id":  "Terminales S - AP Approfondissement"},
+                                  {"id":  "Terminales S - AP Soutien"},
+                                  {"id":  "Terminale ST2S"},
+                                  {"id":  "Terminale STMG"},
+                                  {"id":  "Terminale STI2D"},
+                                  {"id":  "Terminale STL"}
+                              ]},
+                              {'locale':'iw_IL',
+                              'value':[
+                                  {"id": "כיתה א"},
+                                  {"id": "כיתה ב"},
+                                  {"id": "כיתה ג"},
+                                  {"id": "כיתה ד"},
+                                  {"id": "כיתה ה"},
+                                  {"id": "כיתה ו"},
+                                  {"id": "כיתה ז"},
+                                  {"id": "כיתה ח"},
+                                  {"id": "כיתה ט"},
+                                  {"id": "כיתה י"},
+                                  {"id": "כיתה יא"},
+                                  {"id": "כיתה יב"}
+                              ]},
+                              {'locale':'nl_NL',
+                              'value':[
+                                  {"id": "Groep 1"},
+                                  {"id": "Groep 2"},
+                                  {"id": "Groep 3"},
+                                  {"id": "Groep 4"},
+                                  {"id": "Groep 5"},
+                                  {"id": "Groep 6"},
+                                  {"id": "Groep 7"},
+                                  {"id": "Groep 8"},
+                                  {"id": "Klas 1"},
+                                  {"id": "Klas 2"},
+                                  {"id": "Klas 3"},
+                                  {"id": "Klas 4"},
+                                  {"id": "Klas 5"},
+                                  {"id": "Klas 6"}
+                              ]},
+                              {'locale':'pt_BR',
+                              'value':[
+                                  {"id": "Primeiro"},
+                                  {"id": "Segundo"},
+                                  {"id": "Terceiro"},
+                                  {"id": "Quarto"},
+                                  {"id": "Quinto"},
+                                  {"id": "Sexto"},
+                                  {"id": "Sétimo"},
+                                  {"id": "Oitavo"},
+                                  {"id": "Nono"},
+                                  {"id": "Décimo"},
+                                  {"id": "Décimo Primeiro"}
+                              ]}
+                          ];
+
+            var subjectAreas = [
+                               {'locale': 'en_US',
+                               'value':[
+                                   {"id": "Math"},
+                                   {"id": "Hebrew"},
+                                   {"id": "English"},
+                                   {"id": "LanguageArts"},
+                                   {"id": "ESL"},
+                                   {"id": "Science"},
+                                   {"id": "RoadSafety"},
+                                   {"id": "Reading"},
+                                   {"id": "Theology"}
+                               ]},
+                               {'locale':'fr_FR',
+                               'value':[
+                                   {"id": "Français"},
+                                   {"id": "Mathématiques"},
+                                   {"id": "Géographie"},
+                                   {"id": "Histoire"},
+                                   {"id": "Histoire-Géographie"},
+                                   {"id": "Economie"},
+                                   {"id": "Physique-Chimie"}
+                               ]},
+                               {'locale':'iw_IL',
+                               'value':[
+                                   {"id": "אזרחות"},
+                                   {"id": "ביולוגיה"},
+                                   {"id": "גאוגרפיה"},
+                                   {"id": "גיאומטריה"},
+                                   {"id": "היסטוריה"},
+                                   {"id": "הנדסה"},
+                                   {"id": "חינוך לשוני"},
+                                   {"id": "חשבון"},
+                                   {"id": "טבע"},
+                                   {"id": "כימיה"},
+                                   {"id": "לימודי ארץ-ישראל"},
+                                   {"id": "לימודי יהדות"},
+                                   {"id": "מדע וטכנולוגיה"},
+                                   {"id": "מדעים"},
+                                   {"id": "מתמטיקה"},
+                                   {"id": "ספרות"},
+                                   {"id": "פיזיקה"},
+                                   {"id": "תורה"},
+                                   {"id": "תנ\"ך"}
+                               ]},
+                               {'locale':'nl_NL',
+                               'value':[
+                                   {"id": "Rekenen"},
+                                   {"id": "Taal"},
+                                   {"id": "spelling"},
+                                   {"id": "lezen"},
+                                   {"id": "Engels"},
+                                   {"id": "Wereldorientatie"},
+                                   {"id": "Aardrijkskunde"},
+                                   {"id": "Geschiedenis"},
+                                   {"id": "Biologie"},
+                                   {"id": "Godsdienst"}
+                               ]},
+                               {'locale':'pt_BR',
+                               'value':[
+                                   {"id": "Matemática"},
+                                   {"id": "Hebraico"},
+                                   {"id": "Inglês"},
+                                  {"id": "Língua Portuguesa e Literatura"},
+                                   {"id": "Inglês como segunda língua"},
+                                   {"id": "Ciências"},
+                                   {"id": "Segurança Rodoviária"},
+                                   {"id": "Leitura"},
+                                   {"id": "Teologia"}
+                               ]}
+                           ];
+
+        db.publishers.update({}, {$set:{"gradeLevels": gradeLevels, "subjectAreas":subjectAreas}},{multi: true}) ;
+        print("updated gradle levels and subject areas for "+db.publishers.count()+" publishers");
+}

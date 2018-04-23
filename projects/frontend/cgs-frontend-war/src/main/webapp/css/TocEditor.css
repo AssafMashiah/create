@@ -1,0 +1,10 @@
+.editor-wrapper.toc-editor .nav-tabs > li > a {
+    font-weight: bold;
+}
+.editor-wrapper.toc-editor .nav-tabs > .active > a {
+    font-weight: normal;
+}
+
+.editor-wrapper.toc-editor {
+    padding-top: 15px;
+}

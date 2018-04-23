@@ -1,0 +1,15 @@
+{{#message}}
+		<message {{#name}}name="{{name}}"{{/name}} attempt="{{attempt}}" type="{{feedback_type}}">
+	{{/message}}
+<!-- {{#invalidMessage.report}} -->
+    <textViewer id="{{id}}" >
+        <p>
+        	<span class="invalid" style="color:red;font-size:16px;">
+        		<!-- {{{msg}}} -->
+        	</span>
+        </p>
+    </textViewer>  
+<!-- {{/invalidMessage.report}} -->
+{{#message}}
+		</message>
+{{/message}}

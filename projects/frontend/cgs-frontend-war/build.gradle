@@ -1,0 +1,172 @@
+defaultTasks 'clean', 'build'
+
+apply plugin: 'jetty'
+
+apply from: '../../../cgs-common.gradle'
+
+configurations {
+    players
+}
+
+dependencies {
+    players player.dl
+    players scplayer.scplayer
+}
+
+war {
+    println("Excluding node modules folder");
+
+    exclude("**/node_modules/**");
+    manifest {
+        attributes 'Implementation-Title': 'Time To Know CGS Frontend', 'Implementation-Version': version
+    }
+    println("Done excluding node modules folder");
+}
+
+
+war.doFirst {
+    updatePlayer
+    updateLocales
+}
+
+task updateLocales() {
+    String localesPath = "../../backend/cgs-service/src/main/resources/locales"
+    if (new File("${projectDir}/src/main/webapp/locales/versions.json").exists()) {
+        ant.checksum(file: localesPath + "/versions.json", property: "newLocalesVersionChecksum")
+        ant.checksum(file: "${projectDir}/src/main/webapp/locales/versions.json", property: "existingLocalesVersionChecksum")
+        if ("${ant.properties["newLocalesVersionChecksum"]}" == "${ant.properties["existingLocalesVersionChecksum"]}") {
+            println("No need to update locales, no changes from latest installation.");
+            return
+        }
+    }
+    println("There are new locales available. Updating...");
+    println "Copy locales directory from backend project into frontend war file"
+    project.delete() {
+        "${projectDir}/src/main/webapp/locales"
+    }
+
+    copy() {
+        from(localesPath)
+        into "${projectDir}/src/main/webapp/locales"
+    }
+}
+
+task updatePlayer() {
+    def scplayerFile = configurations.players.resolvedConfiguration.resolvedArtifacts.find {
+        it.name == "scplayer"
+    }.getFile()
+    if (new File("${projectDir}/src/main/webapp/player/scp/version.properties").exists()) {
+        def newVersion = zipTree(scplayerFile).getFiles()
+        Iterator filesIterator = newVersion.iterator()
+        while (filesIterator.hasNext()) {
+            File file = filesIterator.next()
+            if (file.getAbsolutePath().endsWith("scp/version.properties")) {
+                ant.checksum(file: file.getAbsolutePath(), property: "newPlayerVersionChecksum")
+                ant.checksum(file: "${projectDir}/src/main/webapp/player/scp/version.properties", property: "existingPlayerVersionChecksum")
+                if ("${ant.properties["newPlayerVersionChecksum"]}" == "${ant.properties["existingPlayerVersionChecksum"]}") {
+                    println("No need to update player, no changes from latest installation.");
+                    return
+                } else {
+                    println("There is a new player version available. Updating it...");
+                    break
+                }
+            }
+        }
+    }
+    println "Copy SCP into frontend war file"
+    project.delete() {
+        "${projectDir}/src/main/webapp/player"
+    }
+    copy() {
+        from(zipTree(scplayerFile)) {
+            exclude '**/WEB-INF/**'
+        }
+        into "${projectDir}/src/main/webapp/player"
+    }
+}
+
+def checkOS() {
+    def systemProps = System.properties['os.name'].toLowerCase()
+
+    if (systemProps.contains('win')) {
+        return 'windows'
+    } else if (systemProps.contains('nux')) {
+        return 'linux'
+    } else if (systemProps.contains('mac') || systemProps.contains('darwin')) {
+        return 'macOs'
+    } else {
+        return "other os: " + systemProps
+    }
+}
+
+war.doLast {
+    println("unzipping WAR: " + war.archivePath + " into " + "$buildDir/exploded/cgs-frontend-war");
+    ant.unzip(src: war.archivePath, dest: "$buildDir/exploded/cgs-frontend-war")
+}
+
+war.doLast {
+    println "war.doLast start"
+
+    def builddirname = "$buildDir/exploded/cgs-frontend-war"
+    new File(builddirname + "/cgs.appcache").withWriter { out ->
+        out.println "CACHE MANIFEST"
+        out.println "# VERSION: " + "@fullVersion@\n"
+        out.println "CACHE:"
+        out.println "NETWORK:"
+        out.println "*"
+        out.println "FALLBACK:"
+    }
+    println "war.doLast end"
+}
+
+war.doLast {
+    def nodeJsPath = "$buildDir/../src/main/resources/nodejs"
+    def production = project.hasProperty('production');
+    if (checkOS() == 'windows') {
+        println "it's Windows"
+        nodeJsPath += "/windows/node-v0.10.20-windows/node"
+    } else if (checkOS() == 'macOs') {
+        println "it's osx"
+        nodeJsPath += "/osx/node-v0.10.20-darwin-x64/bin/node"
+    } else {
+        if (checkOS() == 'linux') {
+            println "it's linux"
+        }
+        nodeJsPath += "/linux/node-v0.10.20-linux-x64/bin/node"
+    }
+
+    if (production) {
+        println 'Concatenating (minifying) application using r.js';
+        def command = nodeJsPath + " $buildDir/../src/main/resources/requirejs/dist/r.js " + '-o' + " $buildDir/../src/main/resources/requirejs/app.build.js"
+        def proc = command.execute()
+        proc.in.eachLine { line -> println line }
+        int status = proc.waitFor();
+        if (status == 1) {
+            println 'r.js failed!!!!!  status code: ' + status;
+            exit 1;
+        }
+    }
+}
+
+war.doLast {
+    def builddirname = "$buildDir/exploded/cgs-frontend-war"
+    def productiondirname = "$buildDir/exploded/production"
+    def production = project.hasProperty('production');
+
+    if (production) {
+        println 'Copying concatenated main.js file into ' + builddirname;
+        delete builddirname
+        ant.move(file: productiondirname, toFile: builddirname)
+        File initialize = file(builddirname + '/js/initialize.js')
+        File main = file(builddirname + '/js/main.js')
+
+        ant.replace(file: initialize, token: "@MAIN_SIZE_PLACEHOLDER@", value: main.size())
+    }
+}
+
+[jettyRun, jettyRunWar]*.with {
+    contextPath = 'lms'
+    httpPort = 8090
+    stopPort = 8089
+//	jettyConfig = file('src/test/resources/jetty-config.xml')
+}

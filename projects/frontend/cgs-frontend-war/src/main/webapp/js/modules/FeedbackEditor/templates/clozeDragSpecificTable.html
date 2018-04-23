@@ -1,0 +1,52 @@
+<h5>((Specific Feedbacks))</h5>
+{{#defaultFeedbacks}}
+<table class="table table-bordered" id="specific_feedbacks_table">
+    <thead>
+    <tr>
+        <td style="width: 5%">((Icon))</td>
+        <td style="width: 95%">((Answer))</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><div class="icon_correct"></div></td>
+        <td id="td_default_correct"></td>
+    </tr>
+    <tr>
+        <td><div class="icon_incorrect"></div></td>
+        <td id="td_default_incorrect"></td>
+    </tr>
+    </tbody>
+</table>
+{{/defaultFeedbacks}}
+{{#arr_options}}
+<table class="table table-bordered" id="specific_feedbacks_table">
+    <thead>
+    <tr>
+        <td style="width: 5%">((Icon))</td>
+        <td style="width: 48%">((Answer))</td>
+        <td style="width: 47%">((Feedback))</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><div class="icon_correct"></div></td>
+        <td class="preview_{{id}}"></td>
+        <td id="td_c_{{id}}"></td>
+    </tr>
+    {{#children}}
+    <tr>
+        <td>
+            {{#isCorrect}}<div class="icon_correct"></div>{{/isCorrect}}
+            {{^isCorrect}}
+                {{#isPartial}}<div class="icon_partially_correct"></div>{{/isPartial}}
+                {{^isPartial}}<div class="icon_incorrect"></div>{{/isPartial}}
+            {{/isCorrect}}
+        </td>
+        <td class="preview_{{id}}"></td>
+        <td id="td_{{parentId}}_{{id}}"></td>
+    </tr>
+    {{/children}}
+    </tbody>
+</table>
+{{/arr_options}}

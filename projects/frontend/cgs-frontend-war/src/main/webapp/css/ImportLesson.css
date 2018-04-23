@@ -1,0 +1,349 @@
+#dialog.importLesson {
+	width: 60%;
+	height: 70%;
+	max-height: 70%;
+	min-height: 70%;
+	left: 20%;
+	top: 15%;
+	margin: 0;
+}
+
+#dialog.importLesson #dialogContent {
+	max-height: calc(100% - 140px);
+	min-height: calc(100% - 140px);
+    height: calc(100% - 140px);
+    width: 100%;
+}
+
+#import_lesson_container {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#import_lesson_container ul {
+	list-style: none;
+}
+
+#import_lesson_container .warning {
+	color: red;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+#import_lesson_container div.course-list {
+	cursor: pointer;
+}
+
+#import_lesson_container div.course-list.treeNode {
+	padding: 3px;
+}
+
+#import_lesson_container div.course-list.treeNode.opened {
+	background-color: #d8e8fc;
+}
+
+div.tree-view.closed  {
+    max-height: 26px;
+    height: 26px;
+    -webkit-transition: max-height 0.8s ease-in-out;
+    -moz-transition: max-height 0.8s ease-in-out;
+    -o-transition: max-height 0.8s ease-in-out;
+    -ms-transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
+}
+
+div.tree-view.opened {
+    -webkit-transition: max-height 2.2s ease-in-out;
+    -moz-transition: max-height 2.2s ease-in-out;
+    -o-transition: max-height 2.2s ease-in-out;
+    -ms-transition: max-height 2.2s ease-in-out;
+    transition: max-height 2.2s ease-in-out;
+    max-height: 8000px;
+}
+
+#import_lesson_container div.course-list.treeNode:before,
+#import_lesson_container li.toc-item.treeNode:before{
+	content: '\0000a0';
+	width: 20px;
+	height: 15px;
+	background: url(../media/CGS_icons.png?ver=35) -46px -37px no-repeat;
+	display: inline-block;
+}
+
+#import_lesson_container div.course-list.treeNode.opened:before,
+#import_lesson_container li.toc-item.treeNode.opened:before {
+	background: url(../media/CGS_icons.png?ver=35) -46px -7px no-repeat;
+}
+
+#import_lesson_container {
+    width: 95%;
+    font-family:"open_sans";
+}
+
+#import_lesson_container ul.lessons-list {
+	display: none;
+}
+
+#import_lesson_container a.lesson-link {
+	cursor: pointer;
+	color: #333;
+	font-size: 17px;
+	font-weight: normal;
+}
+
+#import_lesson_container a.lesson-link:before {
+	content: '\0000a0';
+	background: url(../media/CGS_icons.png?ver=35) no-repeat;
+	width: 26px;
+	height: 20px;
+	display: inline-block;
+}
+
+#import_lesson_container a[lessontype="bookalive"].lesson-link:before {
+	background-position: -46px -101px;
+}
+
+#import_lesson_container a[lessontype="assessment"].lesson-link:before {
+	background-position: -3px -25px;
+	background-size: 150px 229px;
+}
+
+#import_lesson_container a[lessontype="borndigital"].lesson-link:before {
+	background-position: -75px -101px;
+}
+
+#import_lesson_container a.lesson-link:hover,
+#import_lesson_container a.lesson-link.selected {
+	color: #276CC7;
+	text-decoration: none;
+}
+
+.importLesson #dialogContent {
+	padding-top: 20px;
+	overflow:auto;
+}
+
+.toc-list {
+    display:none;
+    margin-top: 3px;
+}
+
+li.toc-item {
+    cursor:pointer;
+}
+
+.courses-list li {
+    margin-top: 5px;
+}
+
+ul.courses-list{
+	margin-left: 10px;
+}
+
+.importLesson  ::-webkit-scrollbar {
+    width: 6px;
+}
+
+#dialog.importLessonLevels {
+	max-height: 400px;
+	min-height: 400px;
+	margin-right: -200px;
+}
+
+#dialog.importLessonLevels #dialogContent {
+	min-height: 280px;
+	max-height: 280px;
+}
+
+#dialog.importLessonLevels table select {
+	margin-bottom: 2px;
+}
+
+#dialog.importLessonLevels .import-note {
+	font-size: 11px;
+}
+
+/*#dialog.importLesson .inProgress {*/
+	/*display: none;*/
+/*}*/
+
+#dialog.importLesson ul.lessons-list li.disabled {
+	color: #b0b0b0;
+	cursor: default;
+}
+
+
+#dialog.importLesson .search-filter-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding-bottom: 2px;
+    margin-left: 5px;
+}
+
+#dialog.importLesson .search-container {
+    position: relative; 
+}
+
+#dialog.importLesson .search-container .search-bar {
+	background-color: #fff;
+	padding: 3px 22px 3px 10px;
+	border: 1px solid #d9e9fd;
+	width: 290px;
+	font-size: 14px;
+	color: #000;
+    direction: ltr;
+}
+
+#dialog.importLesson .search-container .search-bar:focus {
+	border-color: #4391f7;
+}
+
+#dialog.importLesson .search-container .magnifying-glass {
+	background-image: url("../media/landingPopup/search icon.png");
+	width: 17px;
+    height: 14px;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+}
+
+.tree-view_item.lesson-link {
+    cursor: pointer;
+    color: #333;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+div.tree-view_item.lesson-link input, span {
+    vertical-align: middle;
+}
+
+div.tree-view_item.lesson-link span.item-text, div.tree-view_parent span.parent-text {
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+div.tree-view_item.lesson-link.red span.item-text {
+    color: #9c0d00;
+}
+
+div.tree-view_item.lesson-link.yellow span.item-text {
+    color: #c5bf51;
+}
+
+span.item-text>span.text-match {
+    vertical-align: bottom;
+    background-color: yellow;
+    color: black;
+}
+
+div.tree-view_item.lesson-link span.item-icon:before {
+    content: '\0000a0';
+    background: url(../media/CGS_icons.png?ver=35) no-repeat;
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+div.tree-view_item.lesson-link.type-lesson-EBOOK span.item-icon:before {
+    background-position: -46px -101px;
+}
+
+div.tree-view_item.lesson-link.type-assessment- span.item-icon:before {
+    background-position: -3px -25px;
+    background-size: 150px 229px;
+}
+
+div.tree-view_item.lesson-link.type-lesson-NATIVE span.item-icon:before {
+    background-position: -75px -101px;
+}
+
+div.tree-view_item.lesson-link.type-lesson-hidden span.item-icon:before {
+    background-position: -5px -5px;
+}
+
+.block {
+    display: block !important;
+}
+
+td.current_course_level {
+    font-size: 16px;
+}
+
+td.imported_course_level {
+    padding-top: 14px !important;
+}
+
+#dialog.importLesson #dialogTitle h3 {
+    margin: 0;
+}
+
+#dialog.importLesson .search-container .inProgress {
+    position: absolute;
+    right: 30px;
+    top: 3px;
+}
+
+#dialog.importLesson .all-courses-tree {
+    overflow-y: scroll;
+    height: calc(100% - 40px);
+    margin-top: 40px;
+}
+
+#dialog.importLesson .all-courses-tree .inProgress{
+    margin: 10px;
+    text-align: center;
+}
+
+#dialog.importLesson .import-lesson-tree {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#dialog.importLesson .selected-items {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bolder;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+#dialog.importLesson .focused-item {
+    color: red;
+    font-weight: bolder;
+    font-size: 14px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    margin-top: 5px;
+}
+
+#dialog.importLesson div.select-all {
+    margin-top: 5px;
+}
+
+#dialog.importLesson div.select-all > a {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#dialog.importLesson div.search-error {
+    position: absolute;
+    left: 337px;
+    top: 4px;
+    color: red;
+    font-weight: bolder;
+    font-size: 14px;
+}

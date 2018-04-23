@@ -1,0 +1,30 @@
+<div class="enable-rubric">
+	<div class="control-group">
+		<input type="checkbox" id="rubrics_enabled" name="rubrics_enabled" data-checked="obj.rubrics_enabled" />
+		<label class="control-label" for="rubrics_enabled">((Enable Rubric))</label>
+	</div>
+</div>
+<div style="height: 20px;">
+	<button id="edit-rubrics" class="btn btn-small base-icon icon-cog edit {{^model.attributes.rubrics_enabled}}hidden{{/model.attributes.rubrics_enabled}}">
+	</button>
+</div>
+<div class="table-preview {{^model.attributes.rubrics_enabled}}hidden{{/model.attributes.rubrics_enabled}}">
+	<table class="rubric-table">
+		<tr>
+			<th></th>
+			{{#model.attributes.rubrics.columnsHeaders}}
+				<th><span>{{.}}</span></th>
+			{{/model.attributes.rubrics.columnsHeaders}}
+			<th><span>((Total Score))</span></th>
+		</tr>
+		{{#model.attributes.rubrics.rows}}
+			<tr>
+				<td><span>{{name}}</span></td>
+				{{#cells}}
+					<td><span>{{explanation}}</span></td>
+				{{/cells}}
+				<td><span>{{totalScore}}</span></td>
+			</tr>
+		{{/model.attributes.rubrics.rows}}
+	</table>
+</div>

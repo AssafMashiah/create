@@ -1,0 +1,36 @@
+<div id="diff-level-title">((Define the differentiation levels from low to high:))</div>
+<label id="diffLevel_error"></label>
+    <div id="diff-level-container">
+        <table id="diff-level-table" class="">
+            <thead>
+            <th class="idHeader" >((#))</th>
+            <th class="nameHeader">((Name))</th>
+            <th class="acryHeader">((Acronym))</th>
+            <th class="defaultHeader" >((Default))</th>
+            </thead>
+            <tbody>
+             {{#options.config.diffLevels}}
+            <tr class="diffData">
+                <td class="diffId">
+                     {{id}}
+                </td>
+                <td class="name">
+                     <input type="text"  value="{{name}}"/>
+                </td>
+                <td class="acronym">
+                    <input type="text" maxlength="3" value="{{acronym}}"/>
+                </td>
+                <td class="default">
+                    <input type="radio" name="default-diff" {{#isDefault}} checked  {{/isDefault}}/>
+                </td>
+                <td class="deleteDiff">
+                    <button class="remove-diff base-icon icon-trash"></button>
+                </td>
+            </tr>
+             {{/options.config.diffLevels}}
+
+            </tbody>
+        </table>
+
+    </div>
+<button id="button_add_diffLevel" class="btn btn-small base-icon icon-plus"></button>

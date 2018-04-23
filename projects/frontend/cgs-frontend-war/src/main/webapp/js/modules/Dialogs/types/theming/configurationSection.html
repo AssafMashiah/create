@@ -1,0 +1,26 @@
+{{#currectSection}}
+	<div class='properties-row' id="{{label}}">
+		<div class="property-name">((course.props_area.tab_design.players_table.edit.pop_up.property.label.{{label}})):</div>
+		{{#isDropDown}}
+			<select class='data property'>
+				{{#mappedValues}}
+					<option {{#selected}}selected{{/selected}} value="{{value}}">(({{name}}))</option>
+				{{/mappedValues}}
+			</select>
+		{{/isDropDown}}
+		{{#isNumber}}
+			<input class='data property' type="number" min="{{values.min}}" max="{{values.max}}" value="{{value}}" step="any"></input>
+		{{/isNumber}}
+		{{#isColor}}
+			<input  class='data property' type="color" value="{{value}}"></input>
+		{{/isColor}}
+		{{#isRange}}
+			<div>
+				<div class="rangeLabel">((course.props_area.tab_design.players_table.edit.pop_up.property.range.{{values.startLabel}}))</div>
+				<input class='data property' type="range" min="{{values.min}}" max="{{values.max}}" value="{{value}}" {{#values.step}}step="{{values.step}}"{{/values.step}}></input>
+				<div class="rangeLabel">((course.props_area.tab_design.players_table.edit.pop_up.property.range.{{values.endLabel}}))</div>
+			</div>
+
+		{{/isRange}}
+	</div>
+{{/currectSection}}

@@ -1,0 +1,73 @@
+//  Add to existing publishers Korean locales if doesn't exist
+
+function f(dbName) {
+   db = db.getSiblingDB(dbName);
+   myCursor = db.publishers.find();
+
+   gradeLevel = {
+       'locale': 'ko_KR',
+       'value': [
+           {"id": "첫번째"},
+           {"id": "두번째"},
+           {"id": "세번째"},
+           {"id": "네번째"},
+           {"id": "다섯번째"},
+           {"id": "여섯번째"},
+           {"id": "일곱번째"},
+           {"id": "여덟번째"},
+           {"id": "아홉번째"},
+           {"id": "열번째"},
+           {"id": "열한번째"}
+       ]
+   };
+   subjectArea = {
+       "locale" : "ko_KR",
+       'value': [
+           {"id": "수학"},
+           {"id": "히브리어"},
+           {"id": "영어"},
+           {"id": "언어"},
+           {"id": "과학"},
+           {"id": "과학"},
+           {"id": "교통 안전"},
+           {"id": "읽기"},
+           {"id": "신학"}
+       ]
+   };
+
+
+   myCursor.forEach( function (myDoc) {
+   	hasModifications = false;
+   	if(myDoc.contentLocales.options.indexOf("ko_KR") <= -1) {
+   		myDoc.contentLocales.options.push("ko_KR");
+   		hasModifications = true;
+   	}
+   	if(myDoc.interfaceLocales.options.indexOf("ko_KR") <= -1) {
+   		myDoc.interfaceLocales.options.push("ko_KR");
+   		hasModifications = true;
+   	}
+   	hasGradeLevel = false;
+   	myDoc.gradeLevels.forEach(function(gradeLevel) {
+   		if(gradeLevel.locale == "ko_KR") {
+   			hasGradeLevel = true;
+   		}
+   	});
+   	if (!hasGradeLevel) {
+   		myDoc.gradeLevels.push(gradeLevel);
+   		hasModifications = true;
+   	}
+   	hasSubjectArea = false;
+   	myDoc.subjectAreas.forEach(function(subjectAreas) {
+   		if(subjectAreas.locale == "ko_KR") {
+   			hasSubjectArea = true;
+   		}
+   	});
+   	if (!hasSubjectArea) {
+   		myDoc.subjectAreas.push(subjectArea);
+   		hasModifications = true;
+   	}
+   	if (hasModifications) {
+   		db.publishers.save(myDoc);
+   	}
+   });
+}

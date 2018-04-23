@@ -1,0 +1,14 @@
+<div>
+    <div>((dialog.updateepub.updating)) {{viewData.fileName}}.</div>
+    {{#viewData.isUpload}}
+    <div style="margin-top: 20px; margin-bottom: 20px">
+        <span> ((dialog.updateepub.updateAll)) </span>
+        <input type="checkbox" id="updateOnAllCourses" name="updateOnAllCourses">
+    </div>
+    {{/viewData.isUpload}}
+</div>
+{{#viewData.isUpload}}
+<div id="dialogControls" class="modal-footer" style="position: absolute; bottom: 0">
+    <div id="submitBtn" class="btn">((Update))</div>
+</div>
+{{/viewData.isUpload}}

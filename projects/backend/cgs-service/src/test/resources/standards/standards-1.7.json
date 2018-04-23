@@ -1,0 +1,28 @@
+{
+    "name":"nysls",
+    "subjectArea":"math",
+    "country":"USA",
+    "state":"NY",
+    "version":"1.3",
+    "created":"25/04/2013 05:28:57",
+    "isLatest":true,
+    "standards" :{
+        "pedagogicalId":"M",
+        "description":"",
+        "children":[
+            {
+                "pedagogicalId":"M.1",
+                "gradeLevel":"first",
+                "description":"New York State Learning Standards - Mathematics, Grade 1",
+                "children":[
+                    {
+                        "pedagogicalId":"M.1.2",
+                        "gradeLevel":"first",
+                        "description":"Problem Solving Strand 2"
+                    }
+                ]
+            }
+        ]
+    }
+
+}

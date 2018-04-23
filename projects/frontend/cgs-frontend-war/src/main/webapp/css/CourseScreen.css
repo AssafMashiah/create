@@ -1,0 +1,15 @@
+.menu {
+    margin-bottom: 1px;
+    height: 70px
+}
+
+.menu-item {
+	margin-right: 10px;
+	min-width: 40px;
+}
+
+.menu-item label {
+	cursor: pointer;
+	margin-bottom: 0;
+	white-space: nowrap;
+}

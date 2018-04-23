@@ -1,0 +1,18 @@
+<div id="notificationDetailsView">
+	<div class="notificationStatus">
+		<div class="notificationImage {{status}}"></div>
+		<div class="notificationStatusText">(({{statusText}}))</div>
+	</div>
+	<div class="notificationDetails">
+	{{#details.length}}
+	<ol>
+	{{#details}}
+		<li>{{message}}</li>
+	{{/details}}
+	</ol>
+	{{/details.length}}
+	{{^details.length}}
+		{{message}}
+	{{/details.length}}
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div class="publishWrapper">
+	<div class="control-group horizontal">
+		<label class="control-label" for="field_publishMode" style="display: inline-block">((Purpose:))</label>
+		<select id="field_publishMode" style="display: inline-block">
+			<option value="pre-production">((Quality Assurance))</option>
+            <option value="production">((Publish))</option>
+        </select>
+	</div>
+	<div class="control-group sample-course" style="display: none">
+		<input type="checkbox" id="sample-course" data-checked="obj.isSample">
+		<label class="control-label" for="sample-course">((courseSample))</label>
+	</div>
+	<div class="control-group">
+		<label class="control-label required-field" for="field_overview">((Description:))</label>
+		<textarea id="field_overview" placeholder="((Describe the Course so the Teacher and Students will be able to understand what it is about and decide whether or not to use it.))">{{controller.view.config.overview}}</textarea>
+	</div>
+	<div class="control-group">
+		<label class="control-label required-field" for="field_releaseNotes">((Release Notes:))</label>
+		<textarea id="field_releaseNotes" placeholder="((Describe the bugs fixes and other changes applied to this version so the QA will know what to focus on))"></textarea>
+	</div>
+</div>
+<!-- <div id="frame"></div> -->

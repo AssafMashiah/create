@@ -1,0 +1,675 @@
+{
+  "_class": "com.mongodb.BasicDBObject",
+  "customMetadata": [],
+  "customMetadataPackages": [],
+  "customization": {
+    "enableCoachMarks": false,
+    "enableFullSpellChecker": true,
+    "enableHiddenLessons": true,
+    "enableHints": true,
+    "enablePdf2t2k": true,
+    "enableQuiz": true,
+    "isSecured": false,
+    "logLevel": "DEBUG",
+    "publishSettings": {
+      "courses": {
+        "enablePublishToFile": true,
+        "enablePublishToCatalog": true
+      },
+      "lessons": {
+        "enablePublishToFile": true,
+        "enablePublishToCatalog": false,
+        "enableCourseLevelsCustomizationForScorm": true
+      }
+    }
+  },
+  "fileSizeLimits": [
+    {
+      "type": "image",
+      "size": 1048576,
+      "mimeTypes": [
+        "image/jpeg",
+        "image/png",
+        "image/gif",
+        "image/bmp"
+      ]
+    },
+    {
+      "type": "audio",
+      "size": 15728640,
+      "mimeTypes": [
+        "audio/wav",
+        "audio/x-wav",
+        "audio/mpeg3",
+        "audio/x-mpeg-3"
+      ]
+    },
+    {
+      "type": "video",
+      "size": 15728640,
+      "mimeTypes": [
+        "video/mpeg",
+        "video/x-mpeg",
+        "video/mp4"
+      ]
+    },
+    {
+      "type": "HTML",
+      "size": 15728640,
+      "mimeTypes": [
+        "text/plain",
+        "text/html",
+        "text/css",
+        "text/css",
+        "application/x-javascript",
+        "application/json",
+        "application/xml"
+      ]
+    },
+    {
+      "type": "PDF",
+      "size": 15728640,
+      "mimeTypes": [
+        "application/pdf"
+      ]
+    },
+    {
+      "type": "attachment",
+      "size": 15728640,
+      "mimeTypes": []
+    },
+    {
+      "type": "default",
+      "size": 15728640,
+      "mimeTypes": []
+    }
+  ],
+  "gradeLevels": [
+    {
+      "locale": "en_US",
+      "value": [
+        {
+          "id": "First"
+        },
+        {
+          "id": "Second"
+        },
+        {
+          "id": "Third"
+        },
+        {
+          "id": "Fourth"
+        },
+        {
+          "id": "Fifth"
+        },
+        {
+          "id": "Sixth"
+        },
+        {
+          "id": "Seventh"
+        },
+        {
+          "id": "Eighth"
+        },
+        {
+          "id": "Ninth"
+        },
+        {
+          "id": "Tenth"
+        },
+        {
+          "id": "Eleventh"
+        }
+      ]
+    },
+    {
+      "locale": "fr_FR",
+      "value": [
+        {
+          "id": "CM1"
+        },
+        {
+          "id": "CM2"
+        },
+        {
+          "id": "6ème"
+        },
+        {
+          "id": "5ème"
+        },
+        {
+          "id": "4ème"
+        },
+        {
+          "id": "3ème"
+        },
+        {
+          "id": "2nde"
+        },
+        {
+          "id": "Première ES"
+        },
+        {
+          "id": "Première L"
+        },
+        {
+          "id": "Première S"
+        },
+        {
+          "id": "Première ST2S"
+        },
+        {
+          "id": "Première STL / STI2D / STI2A"
+        },
+        {
+          "id": "Première STMG"
+        },
+        {
+          "id": "Terminale ES"
+        },
+        {
+          "id": "Terminale L"
+        },
+        {
+          "id": "Terminale S"
+        },
+        {
+          "id": "Terminales S - AP Approfondissement"
+        },
+        {
+          "id": "Terminales S - AP Soutien"
+        },
+        {
+          "id": "Terminale ST2S"
+        },
+        {
+          "id": "Terminale STMG"
+        },
+        {
+          "id": "Terminale STI2D"
+        },
+        {
+          "id": "Terminale STL"
+        }
+      ]
+    },
+    {
+      "locale": "iw_IL",
+      "value": [
+        {
+          "id": "כיתה א"
+        },
+        {
+          "id": "כיתה ב"
+        },
+        {
+          "id": "כיתה ג"
+        },
+        {
+          "id": "כיתה ד"
+        },
+        {
+          "id": "כיתה ה"
+        },
+        {
+          "id": "כיתה ו"
+        },
+        {
+          "id": "כיתה ז"
+        },
+        {
+          "id": "כיתה ח"
+        },
+        {
+          "id": "כיתה ט"
+        },
+        {
+          "id": "כיתה י"
+        },
+        {
+          "id": "כיתה יא"
+        },
+        {
+          "id": "כיתה יב"
+        }
+      ]
+    },
+    {
+      "locale": "nl_NL",
+      "value": [
+        {
+          "id": "Groep 1"
+        },
+        {
+          "id": "Groep 2"
+        },
+        {
+          "id": "Groep 3"
+        },
+        {
+          "id": "Groep 4"
+        },
+        {
+          "id": "Groep 5"
+        },
+        {
+          "id": "Groep 6"
+        },
+        {
+          "id": "Groep 7"
+        },
+        {
+          "id": "Groep 8"
+        },
+        {
+          "id": "Klas 1"
+        },
+        {
+          "id": "Klas 2"
+        },
+        {
+          "id": "Klas 3"
+        },
+        {
+          "id": "Klas 4"
+        },
+        {
+          "id": "Klas 5"
+        },
+        {
+          "id": "Klas 6"
+        }
+      ]
+    },
+    {
+      "locale": "pt_BR",
+      "value": [
+        {
+          "id": "Primeiro"
+        },
+        {
+          "id": "Segundo"
+        },
+        {
+          "id": "Terceiro"
+        },
+        {
+          "id": "Quarto"
+        },
+        {
+          "id": "Quinto"
+        },
+        {
+          "id": "Sexto"
+        },
+        {
+          "id": "Sétimo"
+        },
+        {
+          "id": "Oitavo"
+        },
+        {
+          "id": "Nono"
+        },
+        {
+          "id": "Décimo"
+        },
+        {
+          "id": "Décimo Primeiro"
+        }
+      ]
+    }
+  ],
+  "contentLocales": {
+    "options": ["en_US", "fr_FR", "iw_IL", "nl_NL", "pt_BR", "ar_IL"],
+    "selected": "pt_BR"
+  },
+  "interfaceLocales": {
+    "options": [
+      "en_US",
+      "fr_FR",
+      "pt_BR"
+    ],
+    "selected": "en_US"
+  },
+  "loTypes": [
+    {
+      "id": "warmUp",
+      "display": "Warm up"
+    },
+    {
+      "id": "engage",
+      "display": "Engage"
+    },
+    {
+      "id": "explore",
+      "display": "Explore"
+    },
+    {
+      "id": "summary",
+      "display": "Summarize"
+    },
+    {
+      "id": "practice",
+      "display": "Practice"
+    },
+    {
+      "id": "reconnect",
+      "display": "Reconnect"
+    },
+    {
+      "id": "reflect",
+      "display": "Reflect"
+    },
+    {
+      "id": "homework",
+      "display": "Homework"
+    }
+  ],
+  "name": "mock_up_publisher",
+  "relatesTo": {
+    "_id": -1,
+    "type": "SUPER_USER"
+  },
+  "skills": {
+    "ref": "/publishers/1/skills/skills_us"
+  },
+  "subjectAreas": [
+    {
+      "locale": "en_US",
+      "value": [
+        {
+          "id": "Math"
+        },
+        {
+          "id": "Hebrew"
+        },
+        {
+          "id": "English"
+        },
+        {
+          "id": "LanguageArts"
+        },
+        {
+          "id": "ESL"
+        },
+        {
+          "id": "Science"
+        },
+        {
+          "id": "RoadSafety"
+        },
+        {
+          "id": "Reading"
+        },
+        {
+          "id": "Theology"
+        }
+      ]
+    },
+    {
+      "locale": "fr_FR",
+      "value": [
+        {
+          "id": "Français"
+        },
+        {
+          "id": "Mathématiques"
+        },
+        {
+          "id": "Géographie"
+        },
+        {
+          "id": "Histoire"
+        },
+        {
+          "id": "Histoire-Géographie"
+        },
+        {
+          "id": "Economie"
+        },
+        {
+          "id": "Physique-Chimie"
+        }
+      ]
+    },
+    {
+      "locale": "iw_IL",
+      "value": [
+        {
+          "id": "אזרחות"
+        },
+        {
+          "id": "ביולוגיה"
+        },
+        {
+          "id": "גאוגרפיה"
+        },
+        {
+          "id": "גיאומטריה"
+        },
+        {
+          "id": "היסטוריה"
+        },
+        {
+          "id": "הנדסה"
+        },
+        {
+          "id": "חינוך לשוני"
+        },
+        {
+          "id": "חשבון"
+        },
+        {
+          "id": "טבע"
+        },
+        {
+          "id": "כימיה"
+        },
+        {
+          "id": "לימודי ארץ-ישראל"
+        },
+        {
+          "id": "לימודי יהדות"
+        },
+        {
+          "id": "מדע וטכנולוגיה"
+        },
+        {
+          "id": "מדעים"
+        },
+        {
+          "id": "מתמטיקה"
+        },
+        {
+          "id": "ספרות"
+        },
+        {
+          "id": "פיזיקה"
+        },
+        {
+          "id": "תורה"
+        },
+        {
+          "id": "תנ\"ך"
+        }
+      ]
+    },
+    {
+      "locale": "nl_NL",
+      "value": [
+        {
+          "id": "Rekenen"
+        },
+        {
+          "id": "Taal"
+        },
+        {
+          "id": "spelling"
+        },
+        {
+          "id": "lezen"
+        },
+        {
+          "id": "Engels"
+        },
+        {
+          "id": "Wereldorientatie"
+        },
+        {
+          "id": "Aardrijkskunde"
+        },
+        {
+          "id": "Geschiedenis"
+        },
+        {
+          "id": "Biologie"
+        },
+        {
+          "id": "Godsdienst"
+        }
+      ]
+    },
+    {
+      "locale": "pt_BR",
+      "value": [
+        {
+          "id": "Matemática"
+        },
+        {
+          "id": "Hebraico"
+        },
+        {
+          "id": "Inglês"
+        },
+        {
+          "id": "Língua Portuguesa e Literatura"
+        },
+        {
+          "id": "Inglês como segunda língua"
+        },
+        {
+          "id": "Ciências"
+        },
+        {
+          "id": "Segurança Rodoviária"
+        },
+        {
+          "id": "Leitura"
+        },
+        {
+          "id": "Teologia"
+        }
+      ]
+    }
+  ],
+  "ttsProviders": [
+    {
+      "id": 1,
+      "name": "ReadSpeaker",
+      "locales": [
+        "en_us"
+      ],
+      "configurations": {
+        "admin": [
+          {
+            "key": "key",
+            "type": "text",
+            "attributes": {
+              "required": true
+            },
+            "validation": {
+              "required": true
+            },
+            "is_input": true,
+            "attributes_str": "required=true",
+            "selected": "שדג"
+          }
+        ],
+        "course": [
+          {
+            "key": "volume",
+            "type": "number",
+            "attributes": {
+              "min": 0,
+              "max": 200
+            },
+            "default": 100
+          },
+          {
+            "key": "pitch",
+            "type": "number",
+            "attributes": {
+              "min": 0,
+              "max": 200
+            },
+            "default": 100
+          },
+          {
+            "key": "speed",
+            "type": "number",
+            "attributes": {
+              "min": 0,
+              "max": 200
+            },
+            "default": 100
+          },
+          {
+            "key": "voice",
+            "type": "multiselection",
+            "filterOptionsByLocale": true,
+            "options": {
+              "en_us": [
+                "Kate",
+                "Paul"
+              ]
+            },
+            "default": {
+              "key": "en_us",
+              "index": 0,
+              "indexValue": "Paul"
+            }
+          },
+          {
+            "key": "mp3bitrate",
+            "type": "number",
+            "attributes": {
+              "min": 16,
+              "max": 128,
+              "step": 8
+            },
+            "default": 128
+          },
+          {
+            "key": "dictionary",
+            "type": "array",
+            "options": [
+              "on",
+              "off"
+            ],
+            "default": {
+              "default": 0,
+              "indexValue": "on"
+            }
+          }
+        ],
+        "api": {
+          "template": {
+            "data": {
+              "base_url": "http://tts.readspeaker.com/a/speak",
+              "appId": 1,
+              "command": "produce",
+              "charset": "UTF-8",
+              "textformat": "plain",
+              "audioformat": "mp3",
+              "container": "wave"
+            },
+            "path": "{{base_url}}?key={{key}}&command={{command}}&appId={{appId}}&charset={{charset}}&textformat={{textformat}}&text={{text}}&volume={{volume}}&pitch={{pitch}}&speed={{speed}}&audioformat={{audioformat}}&container={{container}}&samplerate={{samplerate}}&sampledepth={{sampledepth}}&mp3bitrate={{mp3bitrate}}&dictionary={{dictionary}}&lang={{lang}}&voice={{voice}}"
+          },
+          "method": "POST"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper {{controller.elementType}}_editor props_editor">
+    <ul class="nav nav-tabs" id="LivePageElementEditorTabs">
+       <li class="active" >
+        	<a href="#properties" data-toggle="tab">((props.tab.element.displayName.{{controller.elementType}}))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+        	<div class="control-group">
+        		<label class="control-label">((Button Type)):</label>
+        		<div class="layout-type">
+	        		<select data-value="obj.layoutStyle">
+	        			<option value="layoutIcon">((Icon))</option>
+	        			<option value="layoutText">((Text))</option>
+	        		</select>
+        		</div>
+                {{#controller.showShape}}
+                <label class="control-label">((bookView.props.shape)):</label>
+                <div class="layout-shape">
+                    <select data-value="obj.layoutShape">
+                        <option value="rectangle">((bookView.props.shape.rectangle))</option>
+                        <option value="ellipse">((bookView.props.shape.circle))</option>
+                    </select>
+                </div>
+                {{/controller.showShape}}
+                <div class="props-{{controller.record.data.layoutStyle}}">
+                    <div class="icons">
+                    {{#controller.typeIcons}}
+                        <img src="{{src}}" iconId={{id}} class="{{controller.record.data.layoutShape}} {{#isReadOnly}}disabled{{/isReadOnly}} {{#selected}}current{{/selected}}" />
+                    {{/controller.typeIcons}}
+                    </div>
+                    <div class="text">
+                        <label for="btn-text">((Label)):</label>
+                        <input type="text" id="btn-text" data-value="obj.labelText" />
+                    </div>
+                </div>
+                <label class="control-label">((bookView.props.colorPicker)):</label>
+                <input type="color" class='span3 colorPicker' data-value="obj.color" value="{{controller.record.data.color}}"></input>
+                <div class="resetColor btn">((bookView.props.resetColor))</div>
+                </div>
+                {{#controller.showLocation}}
+                    <div class="iconLocation">
+                        <label>((bookView.props.buttonLocation))</label>
+                        <div>
+                            <select class="row-location span3">
+                                <option value="">((bookView.props.buttonLocation.defaultRowValue))</option>
+                                {{#controller.locationMatrix}}
+                                    {{#row}}
+                                        <option value="{{value}}">{{key}}</option>
+                                    {{/row}}
+                                {{/controller.locationMatrix}}
+                            </select>
+                            <select class="column-location span3">
+                                <option value="">((bookView.props.buttonLocation.defaultcolumnValue))</option>
+                                {{#controller.locationMatrix}}
+                                    {{#column}}
+                                        <option value="{{value}}">{{key}}</option>
+                                    {{/column}}
+                                {{/controller.locationMatrix}}
+                            </select>
+                        </div>
+                    </div>
+                {{/controller.showLocation}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+publishers.update({},{$unset:{"customization.publishSettings.enableEbookPublishForTeach": ""}},{upsert: false, multi: true});

@@ -1,0 +1,121 @@
+#dialog.newCourse, #dialog.importEpub {
+  max-width: 88%;
+  max-height: 88%;
+  min-width: 480px;
+  min-height: 380px;
+  width: auto;
+  height: auto;
+  padding: 0px;
+  border: solid 1px #E4DFDF; }
+  #dialog.newCourse #dialogTitle, #dialog.importEpub #dialogTitle {
+    padding: 0px;
+    box-shadow: none;
+    background-color: #f4f8fa;
+    border-bottom: solid 1px #E4DFDF;
+    height: 50px; }
+    #dialog.newCourse #dialogTitle h3, #dialog.importEpub #dialogTitle h3 {
+      color: #2D3033;
+      font-weight: bold;
+      font-size: 18px;
+      padding-left: 20px;
+      line-height: 40px;
+      padding-top: 7px; }
+  #dialog.newCourse #dialogContent, #dialog.importEpub #dialogContent {
+    padding: 0;
+    max-width: none;
+    max-height: none;
+    min-width: 0;
+    min-height: 0;
+    width: 100%; }
+    #dialog.newCourse #dialogContent form, #dialog.importEpub #dialogContent form {
+      padding-top: 0px; }
+      #dialog.newCourse #dialogContent form button, #dialog.importEpub #dialogContent form button {
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 10px; }
+      #dialog.newCourse #dialogContent form .form-control, #dialog.importEpub #dialogContent form .form-control {
+        font-size: 14px;
+        color: #2D3033; }
+        #dialog.newCourse #dialogContent form .form-control:disabled, #dialog.importEpub #dialogContent form .form-control:disabled {
+          color: #c2c2c2; }
+        #dialog.newCourse #dialogContent form .form-control.input-xlarge, #dialog.importEpub #dialogContent form .form-control.input-xlarge {
+          width: 95%; }
+        #dialog.newCourse #dialogContent form .form-control#newCourseName, #dialog.importEpub #dialogContent form .form-control#newCourseName {
+          direction: ltr !important; }
+          #dialog.newCourse #dialogContent form .form-control#newCourseName.rtl, #dialog.importEpub #dialogContent form .form-control#newCourseName.rtl {
+            direction: rtl !important; }
+      #dialog.newCourse #dialogContent form select.form-control, #dialog.importEpub #dialogContent form select.form-control {
+        color: #999999; }
+        #dialog.newCourse #dialogContent form select.form-control.has-value, #dialog.importEpub #dialogContent form select.form-control.has-value {
+          color: #2D3033; }
+      #dialog.newCourse #dialogContent form #last-row, #dialog.importEpub #dialogContent form #last-row {
+        margin-top: 60px;
+        margin-bottom: 0px;
+        position: relative; }
+        #dialog.newCourse #dialogContent form #last-row label, #dialog.importEpub #dialogContent form #last-row label {
+          color: #939091;
+          font-size: 12px;
+          font-weight: 500; }
+        #dialog.newCourse #dialogContent form #last-row:after, #dialog.importEpub #dialogContent form #last-row:after {
+          border-top: 1px solid #E4DFDF;
+          content: "";
+          margin: 0 auto;
+          position: absolute;
+          top: -18%;
+          left: -40px;
+          right: 0;
+          bottom: 0;
+          width: 478px; }
+      #dialog.newCourse #dialogContent form #button_row, #dialog.importEpub #dialogContent form #button_row {
+        padding-top: 17px; }
+        #dialog.newCourse #dialogContent form #button_row button, #dialog.importEpub #dialogContent form #button_row button {
+          display: block;
+          margin: 0 auto;
+          border: 1px solid #4391f7;
+          border-radius: 3px;
+          width: 240px;
+          height: 34px;
+          background-color: #4391f7;
+          color: #fff;
+          font-size: 16px; }
+          #dialog.newCourse #dialogContent form #button_row button:disabled, #dialog.importEpub #dialogContent form #button_row button:disabled {
+            opacity: 0.7; }
+  #dialog.newCourse #dialogControls, #dialog.importEpub #dialogControls {
+    display: none; }
+  #dialog.newCourse .form-group, #dialog.importEpub .form-group {
+    margin: 30px 30px 30px 40px; }
+    #dialog.newCourse .form-group label, #dialog.importEpub .form-group label {
+      font-size: 12px;
+      font-weight: bold;
+      color: #2D3033;
+      margin: 0px;
+      position: relative; }
+    #dialog.newCourse .form-group.required label:before, #dialog.importEpub .form-group.required label:before {
+      content: "*";
+      color: #4391f7;
+      font-size: 14px;
+      font-weight: 600;
+      position: absolute;
+      left: -11px;
+      top: 0px; }
+
+#dialog.importEpub {
+  width: 480px; }
+  #dialog.importEpub #file_name, #dialog.importEpub #courseName {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    white-space: nowrap; }
+  #dialog.importEpub #courseName {
+    width: 100%; }
+  #dialog.importEpub .dropoutline {
+    pointer-events: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  #dialog.importEpub #dropzone.dropping .dropoutline {
+    outline: 2px dashed black;
+    outline-offset: -10px; }

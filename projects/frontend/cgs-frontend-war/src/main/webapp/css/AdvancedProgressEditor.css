@@ -1,0 +1,145 @@
+.element_preview_wrapper #advancedProgress_content {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #F2F2F2;
+    color: #4B4B4B;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.element_preview_wrapper .advancedProgress_content {
+    min-width: 700px;
+}
+
+.element_preview_wrapper #advancedProgress_content .content_wrapper {
+    height: 43px;
+}
+
+.element_preview_wrapper #advancedProgress_feedback {
+    padding-left: 5px;
+    white-space: nowrap;
+    float: left;
+    position: relative;
+    
+}
+
+.element_preview_wrapper #advancedProgress_hint {
+    padding-left: 25px;
+    white-space: nowrap;
+    float: left;
+    position: relative;
+
+}
+
+.element_preview_wrapper #advancedProgress_attempts {
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 15px;
+    color: #A6A6A6;
+    float: right;
+    line-height: 43px;
+}
+
+.element_preview_wrapper #advancedProgress_check {
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+    float: right;
+}
+
+.icon {
+    display: block;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-image: url(../media/icons_sprite.png);
+}
+
+.element_preview_wrapper #advancedProgress_content #feedback_icon_container .icon-foo {
+    background-position: 0px -845px;
+}
+
+.element_preview_wrapper #advancedProgress_content #feedback_icon_container .icon-foo.empty {
+    background-position: -155px -845px;
+}
+
+.element_preview_wrapper #advancedProgress_content #hint_icon_container .icon-foo {
+    background-position: -97px -845px;
+}
+
+.element_preview_wrapper #advancedProgress_content #hint_icon_container .icon-foo.empty {
+    background-position: -200px -845px;
+}
+
+.element_preview_wrapper #advancedProgress_content #check_icon_container .icon-foo {
+    background-position: -47px -845px;
+}
+
+.element_preview_wrapper #advancedProgress_content #check_icon_container {
+    border-left: solid 1px #d9d9d9;
+    margin-right: 15px;
+}
+
+.element_preview_wrapper #advancedProgress_content .icon-with-text {
+    line-height: 40px;
+}
+
+/*.notValid .element_preview_wrapper #advancedProgress_content span.this-icon {
+    display: none;
+}*/
+
+.element_preview_wrapper #advancedProgress_content span.this-icon {
+    float: left;
+}
+
+.element_preview_wrapper .advancedProgress_content .text {
+    color: #4B4B4B;
+}
+
+.element_preview_wrapper .advancedProgress_content #check_icon_container .text {
+    margin-left: 5px;
+    color: #A6A6A6;
+}
+
+.element_preview_wrapper .advancedProgress_content_small #check_icon_container .text {
+    margin-left: 5px;
+    color: #A6A6A6;
+}
+
+.element_preview_wrapper .advancedProgress_content #advancedProgress_attempts .text {
+    color: #A6A6A6;
+}
+/*compare and share in sequence*/
+
+.share-content .advancedProgress_content_small .text,
+.compare_content .advancedProgress_content_small .text{
+    display: none;
+}
+.share-content #advancedProgress_attempts,
+.compare_content #advancedProgress_attempts{
+    float: left;
+    margin-bottom: 10px;
+}
+.share-content .element_preview_wrapper #advancedProgress_hint,
+.compare_content .element_preview_wrapper #advancedProgress_hint {
+    padding-left: 0;
+}
+.share-content .element_preview_wrapper #advancedProgress_attempts,
+.compare_content .element_preview_wrapper #advancedProgress_attempts{
+    padding-right: 5px;
+}
+.share-content .element_preview_wrapper #advancedProgress_check,
+.compare_content .element_preview_wrapper #advancedProgress_check{
+    padding-left: 0;
+    border-left: 1px solid #cccccc;
+}
+.share-content #advancedProgress_attempts .text,
+.compare_content #advancedProgress_attempts .text{
+    display: block;}
+
+#assessmentTotalScore{
+    float: right;
+    line-height: 40px;
+}

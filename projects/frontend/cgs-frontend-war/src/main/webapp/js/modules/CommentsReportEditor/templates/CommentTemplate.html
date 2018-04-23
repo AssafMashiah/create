@@ -1,0 +1,14 @@
+<li id="comment_{{obj.id}}">
+	<div class="comment-title">{{obj.title}}</div>
+	<div class="comment-content">
+		<div class="comment">
+			{{{obj.comment}}}
+			{{#obj.isEmpty}}
+				<span class="empty-comment">((Empty Comment))</span>
+			{{/obj.isEmpty}}
+		</div>
+		{{#obj.children}}
+		<ul id="subcomments_{{obj.id}}" type="{{obj.type}}"></ul>
+		{{/obj.children}}
+	</div>
+</li>

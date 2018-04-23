@@ -1,0 +1,19 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<form class="form-horizontal">
+    <div class="form-group required">
+        <label for="newCourseName">((Title)):</label>
+        <input type="text" placeholder="New Course" id="newCourseName" autocomplete="off"
+               class="form-control input-xlarge" required />
+    </div>
+    <div class="form-group required">
+        <label for="contentLocales">((Content language:))</label>
+        <select class="form-control input-xlarge" id="contentLocales" required >
+            <option disabled selected value="">((Content language:))</option>
+        {{#locales}}<option value="{{.}}">{{.}}</option>{{/locales}}
+        </select>
+    </div>
+    <div class="form-group required" id="last-row"><label>((Required))</label></div>
+    <div id="button_row">
+        <button id="newCourseBtn" type="submit" disabled>((Create Course))</button>
+    </div>
+</form>

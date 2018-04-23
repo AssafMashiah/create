@@ -1,0 +1,19 @@
+{{#clozeTable}}
+<clozeArea>
+{{/clozeTable}}
+	<tableComp id="{{id}}" borders="fullGrid" tableText="true" direction="{{direction}}" mainContainer="{{tableContainer}}">
+	    {{#showTitle}}
+	    <row type="title">
+	        <textViewer direction="{{direction}}">{{table_title}}</textViewer>
+	    </row>
+	    {{/showTitle}}
+	    {{{content}}}
+	    {{#showCopyrights}}
+	    <row type="copyrights">
+	        <textViewer direction="{{direction}}">{{txtTableCopyrights}}</textViewer>
+	    </row>
+	    {{/showCopyrights}}
+	</tableComp>
+{{#clozeTable}}
+</clozeArea>
+{{/clozeTable}}

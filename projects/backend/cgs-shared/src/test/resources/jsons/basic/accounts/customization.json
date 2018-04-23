@@ -1,0 +1,8 @@
+{
+        "enableFullSpellChecker": false,
+        "isSecured": false,
+        "publishSelectedLesson": true,
+        "enablePdf2t2k": false,
+        "enableQuiz": false,
+        "enableHiddenLessons": true
+ }

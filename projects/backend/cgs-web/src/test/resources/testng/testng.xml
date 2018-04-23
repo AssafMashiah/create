@@ -1,0 +1,8 @@
+<suite name="Web Module Test Suite">
+    <test name="tests">
+        <classes>
+            <class name="org.t2k.cgs.rest.ProxyControllerTest" />
+        </classes>
+    </test>
+
+</suite>

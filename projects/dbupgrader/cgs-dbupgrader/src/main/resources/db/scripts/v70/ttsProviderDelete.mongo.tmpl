@@ -1,0 +1,10 @@
+
+#removes provider from providers collection
+ttsproviders.remove({'id' : <Enter id without quotes>});;
+
+#removes provider from providers from all publishers
+publishers.update( {},  { $pull: { 'ttsProviders' : { 'id': <Enter id without quotes> } } },  false, true);;
+
+#removes provider from providers from all courses
+courses.update( {},  { $pull: { 'contentData.ttsServices' : { 'id': <Enter id without quotes> } } },  false, true);;
+

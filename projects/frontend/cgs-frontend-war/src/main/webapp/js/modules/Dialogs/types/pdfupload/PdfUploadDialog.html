@@ -1,0 +1,37 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div class="pdf_upload_wrapper modal-body">
+	<p>
+		<button id="pdf_upload_btn" class="btn btn-primary">((Upload File...))</button>
+		<span class="display-pdf-file-name"></span>
+		<!-- <a  class="upload-file">((click to just upload without process))</a>
+		<a  class="process-file">((click to process the file))</a> -->
+	</p>
+	<p id="message"></p>
+	<p>
+		<fieldset id="settings_form">
+			<div class="control-group">
+				<label for="ranges">((Ranges))</label>
+				<input type="text" id="ranges" />
+			</div>
+		</fieldset>
+	</p> 
+	{{#is_course_pdf}}
+	<p class='locals_settings'>
+		<label for="courses_language">((Content language:))</label>
+		<select id='courses_language'>
+			<option value='null'>((select from list))</option>
+			{{#locales}}
+				<option value="{{.}}">{{.}}</option>
+			{{/locales}}
+		</select>
+	</p>
+	{{/is_course_pdf}}
+	<p class="pdf_loading_title">((Conversion progression:))</p>
+	<div class="progress progress-striped active">
+		<div class="bar pdf_loading" id="pdf_loading"></div>
+	</div>
+	<p><small id="pdf_remaining"></small></p>
+	<button class="btn disabled" id="convert_upload">((Convert))</button>
+	<button class="btn" id="cancel_upload">((Cancel))</button>
+</div>
+<iframe style="display: none;" id="processPdf" src="js/modules/Dialogs/types/pdfupload/process.html"></iframe>

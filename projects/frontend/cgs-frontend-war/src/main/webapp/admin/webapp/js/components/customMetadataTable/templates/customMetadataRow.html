@@ -1,0 +1,32 @@
+
+<td>
+	<input class="inline" type="text" rv-value="obj:name"></input>
+</td>
+
+<td>
+	<select id="metadataType" rv-value="obj:type">
+		<option value="text">Text</option>
+		<option value="integer">Integer</option>
+		<option value="freeText">Free Text</option>
+		<option value="tags">Tags</option>
+		<option value="url">URL</option>
+		<option value="date">Date</option>
+		<option value="time">Time</option>
+		<option value="list">List</option>
+		<option value="boolean">True/False</option>
+    </select>
+</td>
+
+<td>
+	{{>properties}}
+	
+</td>
+<td class="text-center">
+    <input type="checkbox" rv-checked="obj:required">
+</td>
+
+<td>
+	<button class="remove_row btn">
+		<a href="javascript:void(0)" class="icon-trash"></a>
+	</button>
+</td>

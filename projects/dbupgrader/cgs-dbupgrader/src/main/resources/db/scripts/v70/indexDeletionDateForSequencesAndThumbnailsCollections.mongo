@@ -1,0 +1,2 @@
+db.sequences.ensureIndex({date:1});;
+db.thumbnails.ensureIndex({date:1});;

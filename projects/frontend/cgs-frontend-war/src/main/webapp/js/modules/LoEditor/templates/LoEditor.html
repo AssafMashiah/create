@@ -1,0 +1,61 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper lo_editor props_editor">
+    <ul class="nav nav-tabs" id="LoEditorTabs">
+        <li class="active"><a href="#properties" data-toggle="tab">((Properties))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((lo)) ((name:))</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" class="input-large">
+                    <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_pedType">((Type:))</label>
+                <div class="controls">
+                    <select id="field_pedType" data-value="obj.pedagogicalLoType">
+                        <option value="">((Select from list))</option>
+                        {{#controller.pedagogicalLoTypeCollection}}
+                        <option value="{{display}}">{{display}}</option>
+                        {{/controller.pedagogicalLoTypeCollection}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_modality">((Modality)):</label>
+                <div class="controls">
+                    <select id="field_modality" data-value="obj.modality">
+                        <option value="">((select from list))</option>
+                        <option value="Class">((Class))</option>
+                        <option value="Group">((Group))</option>
+                        <option value="Partner">((Partner))</option>
+                        <option value="Individual">((Individual))</option>
+                    </select>                  
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_typicalLearningTime">((Recommended Duration:))</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.typicalLearningTime" id="field_typicalLearningTime" class="span2" maxlength="3">&nbsp;((Minutes))
+                    <span class="help-inline error" id="field_typicalLearningTime_err" style="display:none">((Please enter a valid 3 digit number))</span>
+                </div>
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <!-- standards tab -->
+        <div class="tab-pane" id="standards">
+            <h5>((standards.lo_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>
+

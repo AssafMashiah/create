@@ -1,0 +1,218 @@
+{
+    "customFields": [
+        {
+            "cid": "893a2316-68c0-4b87-aeb5-ef727f9cc99c",
+            "type": "text",
+            "name": "text",
+            "maxLength": "9",
+            "value": "val"
+        },
+        {
+            "cid": "461d7556-1055-416a-bdf8-8d91cd7d3d16",
+            "type": "integer",
+            "minValue": 1,
+            "maxValue": 10,
+            "name": "int",
+            "value": "2"
+        },
+        {
+            "cid": "b913c6e6-8ce5-4c50-9b59-c3edac8fa844",
+            "type": "freeText",
+            "maxLines": "3",
+            "name": "free text",
+            "value": "free val"
+        },
+        {
+            "cid": "51711392-bfda-44d2-945c-355683fca903",
+            "type": "tags",
+            "separator": "space",
+            "name": "tags space",
+            "tags": "a b c d"
+        },
+        {
+            "cid": "32a7de77-b59d-418a-8f18-e4534d73c89b",
+            "type": "tags",
+            "separator": "comma",
+            "name": "tags comma",
+            "tags": "a,b,c,d"
+        },
+        {
+            "cid": "60005d08-ce12-4a78-85a2-b67891530f94",
+            "type": "tags",
+            "separator": "semicolon",
+            "name": "tags semicolon",
+            "tags": "a;b;c;d"
+        },
+        {
+            "cid": "7325e4c8-8646-4cdc-9a84-c9a0e9a3c305",
+            "type": "url",
+            "name": "url",
+            "value": "http:\\\\\\\\www.walla.com"
+        },
+        {
+            "cid": "94aa0aec-a125-469a-8c8a-d5fc9f90ec53",
+            "type": "date",
+            "format": "mm/dd/yy",
+            "name": "date1",
+            "timestamp": "09/04/2014"
+        },
+        {
+            "cid": "9ac1ce77-9489-42fd-87e4-9da03d9e2979",
+            "type": "date",
+            "format": "dd/mm/yy",
+            "name": "date2",
+            "timestamp": "04/09/2014"
+        },
+        {
+            "cid": "20385bd2-851b-46b3-bd7a-9448afcf3a23",
+            "type": "date",
+            "format": "M. dd, yy",
+            "name": "date3",
+            "timestamp": "Sep. 04, 2014"
+        },
+        {
+            "cid": "9cda0be6-487a-4b30-9ae2-0bfb5c6de3f5",
+            "type": "date",
+            "format": "D, M. dd,yy",
+            "name": "date4",
+            "timestamp": "Thu, Sep. 04,2014"
+        },
+        {
+            "cid": "1967c308-9cab-4b92-abe6-02076679390b",
+            "type": "time",
+            "format": "24hours",
+            "includeSeconds": false,
+            "name": "time1",
+            "timestamp": "1:00"
+        },
+        {
+            "cid": "169cdea5-f8ef-44e4-8d93-5011a8aea132",
+            "type": "time",
+            "format": "24hours",
+            "includeSeconds": true,
+            "name": "time2",
+            "timestamp": "1:00:00"
+        },
+        {
+            "cid": "eb152bee-b177-4d6b-98ad-49e14f1ac466",
+            "type": "time",
+            "format": "12hours",
+            "includeSeconds": false,
+            "name": "time3",
+            "timestamp": "1:00 AM"
+        },
+        {
+            "cid": "62851349-9774-432e-9773-fc7e9c932dfb",
+            "type": "time",
+            "format": "12hours",
+            "includeSeconds": true,
+            "name": "time4",
+            "timestamp": "1:00:00 AM"
+        },
+        {
+            "cid": "50ae5258-1817-495f-b0ed-776fa166f8b4",
+            "type": "list",
+            "values": "a,b,c,d",
+            "name": "list",
+            "selectedValue": "a"
+        },
+        {
+            "cid": "394a60ce-9af9-4837-ac1e-1e1fac727760",
+            "type": "boolean",
+            "name": "bool",
+            "value": true
+        },
+        {
+            "cid": "course_4",
+            "name": "topics",
+            "type": "multiselect_large",
+            "values": [
+                {
+                    "key": 5,
+                    "name": "Letters of the alphabetˌ beginning reading and sound combination"
+                },
+                {
+                    "key": 6,
+                    "name": "Clothes"
+                }
+            ],
+            "selectedValue": [
+                5
+            ]
+        },
+        {
+            "cid": "course_5",
+            "name": "class",
+            "type": "multiselect",
+            "values": [
+                {
+                    "key": 1,
+                    "name": "א",
+                    "id": "id_1",
+                    "checked": false
+                },
+                {
+                    "key": 2,
+                    "name": "ב",
+                    "id": "id_2",
+                    "checked": false
+                }
+            ],
+            "selectedValue": [
+                1
+            ]
+        },
+        {
+            "cid": "course_6",
+            "name": "class",
+            "type": "multiselect",
+            "values": [
+                {
+                    "key": 1,
+                    "name": "a",
+                    "id": "id_1",
+                    "checked": false
+                },
+                {
+                    "key": 2,
+                    "name": "b",
+                    "id": "id_2",
+                    "checked": false
+                }
+            ],
+            "selectedValue": []
+        },
+        {
+            "cid": "1967c308-9cab-4b92-abe6-02076679390b",
+            "type": "time",
+            "format": "24hours",
+            "includeSeconds": false,
+            "name": "time1",
+            "timestamp": "12:59"
+        },
+        {
+            "cid": "169cdea5-f8ef-44e4-8d93-5011a8aea132",
+            "type": "time",
+            "format": "24hours",
+            "includeSeconds": true,
+            "name": "time2",
+            "timestamp": "12:59:00"
+        },
+        {
+            "cid": "eb152bee-b177-4d6b-98ad-49e14f1ac466",
+            "type": "time",
+            "format": "12hours",
+            "includeSeconds": false,
+            "name": "time3",
+            "timestamp": "12:59 PM"
+        },
+        {
+            "cid": "62851349-9774-432e-9773-fc7e9c932dfb",
+            "type": "time",
+            "format": "12hours",
+            "includeSeconds": true,
+            "name": "time4",
+            "timestamp": "12:59:00 PM"
+        }
+    ]
+}

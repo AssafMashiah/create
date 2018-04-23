@@ -1,0 +1,26 @@
+{
+  "id" : "987654321",
+  "eBookId" : "ee83e151-7834-4c0a-a7c2-786e36c6223b",
+  "originalFileName" : "dorbit-timetokknow-disclosure.pdf",
+  "username" : "tali",
+  "sha1" : "acfe83e9f429387d73ae9aaafaaa0417588d18b4",
+  "publisherId" : 2,
+  "creationDate" : "2015-12-14T06:00:54.328Z",
+  "conversionLibrary":"IDR",
+  "conversionLibraryVersion":"1.0",
+  "structure" : {
+    "title" : "dorbit-timetokknow-disclosure",
+    "coverImage" : "ebooks/ee83e151-7834-4c0a-a7c2-786e36c6223b/converted/thumbnails/1.jpg",
+    "pages" : [
+      {
+        "id" : "page-1",
+        "eBookId" : "ee83e151-7834-4c0a-a7c2-786e36c6223b",
+        "title" : "Page 1",
+        "href" : "ebooks/ee83e151-7834-4c0a-a7c2-786e36c6223b/converted/1.html",
+        "thumbnailHref" : "ebooks/ee83e151-7834-4c0a-a7c2-786e36c6223b/converted/thumbnails/1.jpg",
+        "originalIndex" : 1
+      }
+    ],
+    "eBookStructures" : []
+  }
+}

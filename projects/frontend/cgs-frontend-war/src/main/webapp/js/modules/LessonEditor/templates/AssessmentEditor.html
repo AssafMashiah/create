@@ -1,0 +1,157 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper lesson_editor props_editor">
+    <ul class="nav nav-tabs" id="LessonEditorTabs">
+        <li class="active"><a href="#properties" data-toggle="tab">((Props.))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+        <li><a href="#guide" data-toggle="tab">((Teacher's Guide))</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((assessment)) ((name:))</label>
+
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" maxlength="200" class="input-large">
+                    <span class="help-inline error" id="field_title_err"
+                          style="display:none">((This field is required))</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_keywords">((Additional information)):</label>
+                <div class="controls">
+                    <textarea rows="2" data-value="obj.overview" id="field_overview" class="input-large" placeholder="((Enter text))"/>
+                </div>
+            </div>
+
+            {{#controller.enablePlacementAssessment}}
+
+             <div class="control-group" id="fields_placement">
+                <label  class="control-label" for="field_placement">((Type)):</label>
+                <select id="field_placement" class="input-large lesson_type">
+                    <option value="false" selected>((assessment.props.type.regular))</option>
+                    <option value="true">((assessment.props.type.placement))</option>
+                </select>
+                 <span id="show_all_assessments" style="cursor: pointer" rel="tooltip" title="((View all assessments from course.))">
+                    <div style="font-size: 33px; color: #276CC7" class="base-icon icon-info"></div>
+                 </span>
+            </div>
+
+            <div class="control-group" id="fields_learningPath">
+                <input type="checkbox" id="field_learningPathCheck">
+                       <span>((assessment.props.button.learningpath))</span>
+                <br/>
+                <button id="setlearningpath"  canBeDisabled="false">((Edit))</button>
+            </div>
+
+
+            {{/controller.enablePlacementAssessment}}
+
+
+            {{#controller.enableIndependentAssessment}}
+            <div class="control-group">
+                <label  class="control-label" for="field_startByType">((Start by)):</label>
+                <select id="field_startByType" data-value="obj.startByType" class="input-large lesson_type">
+                    <option value="teacher" selected>((Teacher))</option>
+                    <option value="student">((Student))</option>
+                </select>
+            </div>
+            {{/controller.enableIndependentAssessment}}
+
+            <div class="control-group">
+                <label  class="control-label" for="field_pedagogicalLessonType">((Check)):</label>
+                <select id="field_pedagogicalLessonType" data-value="obj.pedagogicalLessonType" class="input-large lesson_type">
+                    <option value="auto" selected>((Automate Checking))</option>
+                    <option value="mixed">((Mixed Checking))</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_description">((Description:))</label>
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.description" id="field_description" class="input-large" placeholder="((Type Something...))"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_objective">((Objectives:))</label>
+
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.objective" id="field_objective" class="input-large"
+                              placeholder="((Type Something...))"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_typicalLearningTime">((Recommended Duration:))</label>
+
+                <div class="controls">
+                    <input type="text" data-value="obj.typicalLearningTime" id="field_typicalLearningTime" class="span2"
+                           maxlength="3">&nbsp;((Minutes))
+                    <span class="help-inline error" id="field_typicalLearningTime_err" style="display:none">((Please enter a valid 3 digit number))</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_overallscore">((Overall Score:))</label>
+                <div class="controls">
+                    <span  id="field_overallscore">{{totalScore}}</span> ((points))
+                </div>
+            </div>
+
+            <div class="control-group structure-group">
+                <label class="control-label">((Structure:))</label>
+
+                <div class="controls">
+                    <div class="structure-row">
+                        <input data-checked="obj.includeOverview" type="checkbox">
+                        <span>((Include assessment overview))</span>
+                        <br/>
+                        <button  data-enabled="obj.includeOverview" id="edit-overview">((Edit))</button>
+                    </div>
+
+                    <div class="structure-row">
+                        <input checked type="checkbox" disabled cantBeEnabled="true">
+                        <span>((Include assessment ending))</span>
+                        <br/>
+                        <button id="edit-ending" canBeDisabled="false">((Edit))</button>
+                    </div >
+
+<!--                    <div class="structure-row">
+                        <input data-checked="obj.diffLevelRecommendation" type="checkbox">
+                        <span>((Use for differentiation level recommendation))</span>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_keywords">((Keywords:))</label>
+                <div class="controls">
+                    <textarea rows="2" data-value="obj.keywords" id="field_keywords" class="input-large" placeholder="((Type Something...))"/>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane" id="guide">
+            <div class="control-group">
+                <div class="teacherGuide-placeholder">
+
+                </div>
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <div class="tab-pane" id="standards">
+            <h5>((standards.lesson_editor.props.title))</h5>
+            <div class="control-group">
+                <div style="margin-bottom: 10px;">((These are the standards that you selected in the Course Editor. Click the button to add more standards.))</div>
+                <div class="controls">
+                    <div id="standards_list"></div>
+                </div>
+            </div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>

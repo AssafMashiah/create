@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('../media/fonts/ArchitectsDaughter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Delius';
+    src: url('../media/fonts/Delius-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

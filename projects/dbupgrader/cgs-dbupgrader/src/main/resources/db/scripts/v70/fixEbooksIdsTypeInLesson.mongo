@@ -1,0 +1,14 @@
+//  Change ebooksIds field type from Object to Array
+function f(dbName) {
+   db = db.getSiblingDB(dbName);
+   myCursor = db.lessons.find({"contentData.format": "EBOOK", "contentData.eBooksIds": {$type: 3}});
+   myCursor.forEach( function (myDoc) {
+    var newEBooksIds = [];
+    var eBooksIds = myDoc.contentData.eBooksIds;
+    for (var i in eBooksIds) {
+        newEBooksIds[i] = eBooksIds[i];
+    }
+    myDoc.contentData.eBooksIds = newEBooksIds;
+    db.lessons.save(myDoc);
+   });
+}

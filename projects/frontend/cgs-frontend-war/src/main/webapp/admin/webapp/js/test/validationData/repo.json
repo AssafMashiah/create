@@ -1,0 +1,386 @@
+{"3bae9fb4-cdac-47f4-8ade-d7acf5d97f27": {
+    "type": "course",
+    "parent": null,
+    "children":
+            [
+                "990c5530-9885-47b1-9184-3ed92cba5453"
+            ],
+    "data": {
+        "toc":{
+            "cid": "c6346926-d7ce-4943-95f3-57d986202f16",
+            "type": "tocItem"
+        },
+        "title": "1 Course",
+        "maxDepth": 3,
+        "references":
+                [
+                ],
+        "author": "t1 t1",
+        "cgsVersion": "7.0.199",
+        "publisher": "T2K",
+        "version": "1.0",
+        "includeLo": true,
+        "cover": "/media/bb/e7/b03086cf267f5291416be8df2c23a1dd4a77.jpg",
+        "coverRefId": "/media/bb/e7/b03086cf267f5291416be8df2c23a1dd4a77.jpg",
+        "coverUrl": "/media/bb/e7/b03086cf267f5291416be8df2c23a1dd4a77.jpg",
+        "header": {
+            "last-modified": {
+                "$date": "2013-04-18T08:16:34.467Z"
+            }
+        }
+    },
+    "id": "3bae9fb4-cdac-47f4-8ade-d7acf5d97f27"
+},
+
+"990c5530-9885-47b1-9184-3ed92cba5453": {
+    "id": "990c5530-9885-47b1-9184-3ed92cba5453",
+    "type": "lesson",
+    "parent": "3bae9fb4-cdac-47f4-8ade-d7acf5d97f27",
+    "children":
+            [
+                "0d0db137-61cc-4ce5-9e7a-b1054811cab6"
+            ],
+    "data": {
+        "title": "C. lesson",
+        "pedagogicalLessonType": "Custom",
+        "header": {
+            "last-modified": {
+                "$date": "2013-04-18T08:18:08.740Z"
+            }
+        }
+    }
+},
+
+"0d0db137-61cc-4ce5-9e7a-b1054811cab6": {
+    "type": "lo",
+    "parent": "990c5530-9885-47b1-9184-3ed92cba5453",
+    "children":
+            [
+                "ab865811-820b-4833-97bb-3c8d165558b5",
+                "2cb9f6f6-0ee9-468e-91fd-022908f2fbd0",
+                "1f11b357-0cef-4a97-a53a-e5bd02934d56",
+                "adf1f432-aed5-44ac-9f2f-957016602951"
+            ],
+    "data": {
+        "title": "New lo",
+        "pedagogicalLoType": "warmUp"
+    },
+    "id": "0d0db137-61cc-4ce5-9e7a-b1054811cab6"
+}, "ab865811-820b-4833-97bb-3c8d165558b5": {
+    "type": "sequence",
+    "parent": "0d0db137-61cc-4ce5-9e7a-b1054811cab6",
+    "children":
+            [
+                "bf688466-eb7b-46c3-aca2-e19774d715f6"
+            ],
+    "data": {
+        "title": "New sequence 1",
+        "type": "simple",
+        "exposure": "all_exposed",
+        "thumbnail": "data:image/png;base64,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",
+        "isThumbnailUpdated": true
+    },
+    "id": "ab865811-820b-4833-97bb-3c8d165558b5",
+    "isCourse": false,
+    "convertedData": "<sequence type=\"simple\" id=\"ab865811-820b-4833-97bb-3c8d165558b5\">\n\t\n\n    \n<task exposureid=\"1\" type=\"questionOnly\" id=\"bf688466-eb7b-46c3-aca2-e19774d715f6\">\n     \n<question id=\"6d365e74-93c3-4166-98aa-79828cf531e2\" auto_tag=\"auto_tag\">\n\t\n\n<textviewer id=\"684a8493-22e1-47b4-b56f-d2e03823f0ce\" style=\"texteditor\">\n    <p>fgdghdthg</p>\n\n\n    \n</textviewer>\n\n\n</question>\n<progress id=\"9d5d7306-0054-4809-8566-d85257057779\">\n\t<attempts></attempts>\n\n    \n\n<instruction id=\"a1d2945f-80f0-40e7-959e-18661f7c1972\">\n    \n\n<textviewer id=\"a43372ad-ae07-4b77-8b53-d287b89472de\" style=\"texteditor\">\n    <p>iiiiiiiiiiiiiiiiiiiii</p>\n\n\n    \n</textviewer>\n\n\n</instruction>\n\n</progress>\n\n</task>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</sequence>"
+}, "bf688466-eb7b-46c3-aca2-e19774d715f6": {
+    "id": "bf688466-eb7b-46c3-aca2-e19774d715f6",
+    "type": "questionOnly",
+    "parent": "ab865811-820b-4833-97bb-3c8d165558b5",
+    "children":
+            [
+                "a1d2945f-80f0-40e7-959e-18661f7c1972",
+                "6d365e74-93c3-4166-98aa-79828cf531e2",
+                "9d5d7306-0054-4809-8566-d85257057779"
+            ],
+    "data": {
+        "title": "New Question Only"
+    },
+    "isCourse": false,
+    "showTaskSettingsButton": true,
+    "displayTaskDropdown": true,
+    "typesDropDown":
+            [
+                {
+                    "name": "matching",
+                    "fullName": "Matching",
+                    "screen": "TaskScreen",
+                    "editor": "MTQEditor",
+                    "group": "task",
+                    "useSpecificTemplate": true,
+                    "templateName": "MatchingTemplate",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "mc",
+                    "fullName": "Multiple choice",
+                    "screen": "TaskScreen",
+                    "editor": "MCEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "narrative",
+                    "fullName": "Context",
+                    "screen": "TaskScreen",
+                    "editor": "NarrativeEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "FreeWriting",
+                    "fullName": "Free Writing",
+                    "screen": "TaskScreen",
+                    "editor": "FreeWritingEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "pedagogicalStatement",
+                    "fullName": "Pedagogical",
+                    "screen": "TaskScreen",
+                    "editor": "PedagogicalStatementEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "questionOnly",
+                    "fullName": "Question Only",
+                    "screen": "TaskScreen",
+                    "editor": "QuestionOnlyEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "selfCheck",
+                    "fullName": "Self-Check",
+                    "screen": "TaskScreen",
+                    "editor": "SelfCheckEditor",
+                    "group": "task",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "sequencing",
+                    "fullName": "Sequencing",
+                    "screen": "TaskScreen",
+                    "editor": "MTQEditor",
+                    "group": "task",
+                    "useSpecificTemplate": true,
+                    "templateName": "SequencingTemplate",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                },
+                {
+                    "name": "sorting",
+                    "fullName": "Sorting",
+                    "screen": "TaskScreen",
+                    "editor": "MTQEditor",
+                    "group": "task",
+                    "useSpecificTemplate": true,
+                    "templateName": "SortingTemplate",
+                    "selectTaskType": true,
+                    "showpreview": true,
+                    "clipboard": {
+                        "canCopy": true,
+                        "insert": "next",
+                        "childrenTypes":
+                                [
+                                ]
+                    }
+                }
+            ],
+    "toggleButton": true
+}, "a1d2945f-80f0-40e7-959e-18661f7c1972": {
+    "id": "a1d2945f-80f0-40e7-959e-18661f7c1972",
+    "type": "instruction",
+    "parent": "bf688466-eb7b-46c3-aca2-e19774d715f6",
+    "children":
+            [
+                "a43372ad-ae07-4b77-8b53-d287b89472de"
+            ],
+    "data": {
+        "title": "Instruction",
+        "show": "true",
+        "disableDelete": true
+    }
+}, "6d365e74-93c3-4166-98aa-79828cf531e2": {
+    "id": "6d365e74-93c3-4166-98aa-79828cf531e2",
+    "type": "question",
+    "parent": "bf688466-eb7b-46c3-aca2-e19774d715f6",
+    "children":
+            [
+                "684a8493-22e1-47b4-b56f-d2e03823f0ce"
+            ],
+    "data": {
+        "title": "Question",
+        "disableDelete": true
+    }
+}, "a43372ad-ae07-4b77-8b53-d287b89472de": {
+    "id": "a43372ad-ae07-4b77-8b53-d287b89472de",
+    "type": "textViewer",
+    "parent": "a1d2945f-80f0-40e7-959e-18661f7c1972",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "iiiiiiiiiiiiiiiiiiiii",
+        "disableDelete": true,
+        "stageReadOnlyMode": false,
+        "width": "100%",
+        "showNarrationType": true,
+        "textEditorStyle": "texteditor",
+        "mathfieldArray": {}
+    }
+}, "9d5d7306-0054-4809-8566-d85257057779": {
+    "id": "9d5d7306-0054-4809-8566-d85257057779",
+    "type": "progress",
+    "parent": "bf688466-eb7b-46c3-aca2-e19774d715f6",
+    "children":
+            [
+                "db6299c0-6ae3-4c50-844e-389e14d7d583"
+            ],
+    "data": {
+        "title": "Progress",
+        "show_hint": false,
+        "hint_timing": "1",
+        "feedback_type": "none",
+        "button_label": "Continue",
+        "disableDelete": true
+    }
+}, "db6299c0-6ae3-4c50-844e-389e14d7d583": {
+    "id": "db6299c0-6ae3-4c50-844e-389e14d7d583",
+    "type": "hint",
+    "parent": "9d5d7306-0054-4809-8566-d85257057779",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "Hint"
+    }
+}, "684a8493-22e1-47b4-b56f-d2e03823f0ce": {
+    "type": "textViewer",
+    "parent": "6d365e74-93c3-4166-98aa-79828cf531e2",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "fgdghdthg",
+        "width": "100%",
+        "showNarrationType": true,
+        "textEditorStyle": "texteditor",
+        "mathfieldArray": {}
+    },
+    "id": "684a8493-22e1-47b4-b56f-d2e03823f0ce"
+}, "2cb9f6f6-0ee9-468e-91fd-022908f2fbd0": {
+    "type": "pdf_sequence",
+    "parent": "0d0db137-61cc-4ce5-9e7a-b1054811cab6",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "New pdf_sequence 1",
+        "type": "simple",
+        "exposure": "all_exposed",
+        "pdf_student_url": "/media/29/1c/00e47fec9639de21926ced1ec8700274d6a4.pdf",
+        "pdf_teacher_url": "/media/40/2e/f6a2af40df63e5bffd3426cb277a2bdb3123.pdf",
+        "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAAAAAAv7ke5AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAACWAAAAyADdzhURAAACF0lEQVR42u3V4W3DIBCG4W53I9wKrMAKjMAKrMAK3qnAAWkrJXIkWzmp7/fDkcPFPAEMX4fLfH0aAAsWLFiwYDkJLFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYP0PlojUcZV+l1Q0/Wjq37ZL7Ldx1hx1/GQkt/o4f7+ecQlLRdK4qvWsE2FNqrttfx5ZJFtFGvVWcy3LhquOJxaRYpfVVGdFGY2z17jktTfUOdyllotZabLi6C7u4Xqw0hiZ2auq6hysuKrGf4vxRH/nWVKNFcbkZAl/WWMudS+tEK0hrMncpVeyVJKxdExfmUvoByt0eJisLCmZR/d038FqS9iWhT277iWyWalL0vw+Sik2z709tBldr6Ke6O48q6rE16wiIcha0do3DV3tunaYxgsnunuDlee7/XQSa5vAMLm1C6zF6veSv3gS7S8fL5Z8bRM419+RbYfKu/4+VpbXG0R/U+fb2prT2hri7w3iSOlEf2+wDn29nbbx1LXm1PZWXfX3bKd2eOQ1Es8On1qPfcw8DqT7Dp+92sfdk6NaHpW/v7vtqP5EYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWhzhlfQO4P91mlbbsOgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMy0wMy0xNVQxMToyMzozMiswMTowME/GKe0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTMtMDMtMTVUMTE6MjM6MzIrMDE6MDA+m5FRAAAAAElFTkSuQmCC"
+    },
+    "id": "2cb9f6f6-0ee9-468e-91fd-022908f2fbd0",
+    "convertedData": null
+}, "1f11b357-0cef-4a97-a53a-e5bd02934d56": {
+    "type": "url_sequence",
+    "parent": "0d0db137-61cc-4ce5-9e7a-b1054811cab6",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "New url_sequence 1",
+        "type": "simple",
+        "exposure": "all_exposed",
+        "url": "http://avisa.co.il",
+        "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAAAAAAv7ke5AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAACWAAAAyADdzhURAAACF0lEQVR42u3V4W3DIBCG4W53I9wKrMAKjMAKrMAK3qnAAWkrJXIkWzmp7/fDkcPFPAEMX4fLfH0aAAsWLFiwYDkJLFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYP0PlojUcZV+l1Q0/Wjq37ZL7Ldx1hx1/GQkt/o4f7+ecQlLRdK4qvWsE2FNqrttfx5ZJFtFGvVWcy3LhquOJxaRYpfVVGdFGY2z17jktTfUOdyllotZabLi6C7u4Xqw0hiZ2auq6hysuKrGf4vxRH/nWVKNFcbkZAl/WWMudS+tEK0hrMncpVeyVJKxdExfmUvoByt0eJisLCmZR/d038FqS9iWhT277iWyWalL0vw+Sik2z709tBldr6Ke6O48q6rE16wiIcha0do3DV3tunaYxgsnunuDlee7/XQSa5vAMLm1C6zF6veSv3gS7S8fL5Z8bRM419+RbYfKu/4+VpbXG0R/U+fb2prT2hri7w3iSOlEf2+wDn29nbbx1LXm1PZWXfX3bKd2eOQ1Es8On1qPfcw8DqT7Dp+92sfdk6NaHpW/v7vtqP5EYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWh8CCBctDYMGC5SGwYMHyEFiwYHkILFiwPAQWLFgeAgsWLA+BBQuWhzhlfQO4P91mlbbsOgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMy0wMy0xNVQxMToyMzozMiswMTowME/GKe0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTMtMDMtMTVUMTE6MjM6MzIrMDE6MDA+m5FRAAAAAElFTkSuQmCC"
+    },
+    "id": "1f11b357-0cef-4a97-a53a-e5bd02934d56"
+}, "adf1f432-aed5-44ac-9f2f-957016602951": {
+    "type": "separator",
+    "parent": "0d0db137-61cc-4ce5-9e7a-b1054811cab6",
+    "children":
+            [
+            ],
+    "data": {
+        "title": "New separator 1",
+        "type": "separator",
+        "thumbnail": "data:image/png;base64,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",
+        "separatorImage": "/media/2a/f1/87c10719115aeab07fbe0b2ddfabbef0e548.jpg",
+        "isThumbnailUpdated": true,
+        "separatorTitle": "gfujfj",
+        "separatorSubTitle": "ssssssssssssssssssssssssssssss",
+        "separatorSubTitleNarration": "/media/8b/3d/2f7e1f98557562e845b3ea71b5b9167c616e.mp3"
+    },
+    "id": "adf1f432-aed5-44ac-9f2f-957016602951",
+    "separatorImage": "/media/2a/f1/87c10719115aeab07fbe0b2ddfabbef0e548.jpg",
+    "convertedData": "<sequence type=\"buffer\" id=\"adf1f432-aed5-44ac-9f2f-957016602951\">\n    <creative>\n        <group>\n            <imageviewer src=\"/media/2a/f1/87c10719115aeab07fbe0b2ddfabbef0e548.jpg\"></imageviewer>\n        </group>\n    </creative>\n    <text>\n        <group>\n            <textviewer>\n\t\n\t\t\t    <p class=\"Title\">\n\t\t\t        <span>gfujfj</span>\n\t\t\t    </p>\n\t\t\t    \n\t\t\t    <p class=\"Subtitle\">\n\t\t\t        <span>ssssssssssssssssssssssssssssss</span>\n\t\t\t        <inlinenarration src=\"/media/8b/3d/2f7e1f98557562e845b3ea71b5b9167c616e.mp3\"></inlinenarration>\n\t\t\t    </p>\n\t    \n\t\t\t</textviewer>\n        </group>\n    </text>\n\n\n    \n</sequence>"
+}}

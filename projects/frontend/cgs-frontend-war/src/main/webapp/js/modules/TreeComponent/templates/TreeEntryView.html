@@ -1,0 +1,17 @@
+<!-- {{obj.type}} -->
+<li class="entry {{#obj.data.nosort}}nosort{{/obj.data.nosort}}" data-id="{{obj.id}}" data-type="{{obj.type}}">
+	<a rel="tooltip"  class="node-collapse {{#showCommentIndication}}has-comment{{/showCommentIndication}}" href="#load/{{obj.id}}">
+		<i class="{{^hasChildren}}base-icon-no-width hide-icon{{/hasChildren}} {{^collapsed}}icon-caret-down{{/collapsed}}{{#collapsed}}icon-caret-right{{/collapsed}}"></i>
+	    {{^valid}}
+	    <div class="validTip type_sequence" title="((tree_entry.rel_sequence.validationMark))">
+	        &#xe601
+	    </div>
+	    {{/valid}}
+		<span class="node-index">{{index}}</span>
+	    <span class="node-label" rel="{{obj.type}}" title="{{obj.data.title}}">{{obj.data.title}}</span>
+	</a>
+	{{#showCommentIndication}}
+	<div class="comment-indication base-icon icon-th-large"></div>
+	{{/showCommentIndication}}
+	<ul class="nav node-tree {{#collapsed}}collapsed-tree{{/collapsed}}">{{{children}}}</ul>
+</li>

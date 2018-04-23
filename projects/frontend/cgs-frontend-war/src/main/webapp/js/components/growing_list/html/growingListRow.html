@@ -1,0 +1,15 @@
+<div class="growinglist-row js-growing-row" data-item-id={{id}}>
+    {{#notValid}}<div class='validTip' title='{{message}}'>&#xe601</div>{{/notValid}}
+	<div class="index column" >{{index}}</div>
+	{{#columns}}
+		<div class="content column ">
+            <input class="description" type="text" value="(({{#item}}{{item}}{{/item}}{{^item}}{{name}}{{/item}}))" />
+        </div>
+	{{/columns}}
+	<div class="column base-icon icon-display">
+        {{#options.enable_edit}}
+        <button class="js-growing-edit base-icon icon-cog" href="#load/{{id}}" canBeDisabled="false"></button>
+        {{/options.enable_edit}}
+        <button class="js-growing-remove base-icon icon-trash" canBeDisabled="true"></button>
+    </div>
+</div>

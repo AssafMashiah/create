@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>((Comments on ))"{{lessonName}}"</title>
+		<style>
+
+			body {
+				margin: 30px 30px;
+				font-family: Arial;
+			}
+
+			#lesson-comments-title {
+				color: #333;
+				font-size: 14px;
+				font-weight: bold;
+				margin-bottom: 40px;
+				border-bottom: 2px solid #CCC;
+				padding-bottom: 2px;
+			}
+
+			#lesson-comments {
+			    margin-left: 10px;
+				font-size: 14px;
+				line-height: 20px;
+				padding: 0;
+			}
+
+			#lesson-comments li {
+			    list-style: none;
+			    margin-top: 20px;
+			}
+
+			#lesson-comments > li {
+				margin-bottom: 40px;
+			}
+
+			#lesson-comments > li > .comment-title {
+				font-size: 12px;
+				font-weight: bold;
+			    color: #333;
+			}
+
+			#lesson-comments .comment-title {
+			    font-weight: bold;
+			    font-size: 11px;
+			    color: #333;
+			}
+
+			#lesson-comments .comment-content {
+			    font-size: 11px;
+			    color: #333;
+			    margin: 12px 0 24px;
+			}
+
+			#lesson-comments .comment-content ul {
+			    margin: 24px 0 48px 20px;
+			    padding: 0;
+			}
+
+
+			body.rtl {
+				direction: rtl;
+			}
+
+			body.rtl #lesson-comments {
+				margin-left: 0;
+				margin-right: 10px;
+			}
+
+			body.rtl #lesson-comments .comment-content ul {
+			    margin: 24px 20px 48px 0;
+			}
+
+		</style>
+	</head>
+	<body {{#isRtl}}class="rtl"{{/isRtl}} {{#print}}onload="window.print();"{{/print}}>
+		<div id="lesson-comments-title">((Comments on ))"{{lessonName}}"</div>
+		{{{content}}}
+	</body>
+</html>

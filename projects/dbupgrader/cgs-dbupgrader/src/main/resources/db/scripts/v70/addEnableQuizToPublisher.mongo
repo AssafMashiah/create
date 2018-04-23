@@ -1,0 +1,4 @@
+######################################
+#  add Enable Quiz To Publisher #
+######################################
+publishers.update({},{$set:{enableQuiz: false}},{upsert: false, multi: true});

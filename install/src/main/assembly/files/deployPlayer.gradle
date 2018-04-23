@@ -1,0 +1,109 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+ant.property(file: "t2k.properties")
+
+ext {
+	playerPath = null
+	playerType = null
+	fullVersion = null
+	playerInstallDir = null
+	playerInstallBase = null
+}
+
+def checkProperties() {
+	println 'checkProperties'
+	if (hasProperty('player')) {
+		playerPath = player
+		println 'playerPath		: ' + playerPath
+	}
+	if (hasProperty('type')) {
+		playerType = type
+		println 'playerType		: ' + playerType
+	}
+	playerInstallBase = ant.installDir + '/tomcat/webapps/cgs/player/scp/players/'
+	playerInstallDir = playerInstallBase + playerType
+}
+
+task deletePreviosVersion() << {
+	checkProperties()
+	File previosVersion = new File(playerInstallDir)
+	if (previosVersion.exists()) {
+		println 'deleting previous ver of ' + playerType
+		project.delete() {
+			previosVersion
+		}
+	} else {
+		println 'no previous ver'
+	}		
+}
+
+task copyPlayer(dependsOn: deletePreviosVersion) << {
+	String tmpInstallDir = playerInstallDir + '/tmp'
+	if (playerPath != null) {
+		copy() {
+			from tarTree("${projectDir}/${playerPath}")
+			into tmpInstallDir
+		}
+
+		// copy tar file
+		copy() {
+			from "${projectDir}/${playerPath}"
+			into tmpInstallDir
+		}
+
+		def props = new Properties()
+		new File(tmpInstallDir + '/version.properties').withInputStream { stream ->
+			props.load(stream)
+		}
+
+		project.ext.fullVersion = "${props.versionMajor}.${props.versionMinor}.${props.versionMilestone}.${props.versionBuild}"
+
+		file(tmpInstallDir).renameTo(new File(playerInstallDir + '/' + project.ext.fullVersion))
+
+	}
+	else {
+		println 'ERROR: Player source location does not defined'
+	}
+}
+
+task updatePlayerPathToConfigurations(dependsOn: copyPlayer) << {
+	def version
+	String jsonFile = playerInstallBase + 'config.json'
+	try {
+		def inputFile = file(jsonFile)
+		version = new JsonSlurper().parseText(inputFile.text)
+	}
+	catch (Exception e) {
+		println "did not find config.json, creating new config.json"
+		version = new HashMap();
+	}
+	version.put(playerType + "Version",project.ext.fullVersion);
+	OutputStream os = new FileOutputStream(jsonFile);
+	os.write(JsonOutput.toJson(version).getBytes());
+}
+
+task deployPlayerToCgs() {
+	dependsOn deletePreviosVersion, copyPlayer, updatePlayerPathToConfigurations
+}
+task deployPlayerToCms(dependsOn: deployPlayerToCgs) << {
+	String CmsPlayerPath = '/mnt/snapshot/var/t2k/cgs/cms/scp/players'
+	File previosVersion = new File(CmsPlayerPath)
+	if (previosVersion.exists()) {
+		println 'deleting previous ver of CmsPlayers'
+		project.delete() {
+			previosVersion
+		}
+	} else {
+		println 'no previous verof CmsPlayers'
+	}
+	copy{
+		println 'copying ver of CmsPlayers'	
+		from playerInstallBase
+		into CmsPlayerPath
+		
+	}
+}
+task deployPlayer() {
+	dependsOn deployPlayerToCgs, deployPlayerToCms
+}

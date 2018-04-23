@@ -1,0 +1,62 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper cloze_answer_editor props_editor">
+    <ul class="nav nav-tabs" id="textViewereEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">(({{controller.elementRenderName}} Properties))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_answerType">((Type:))</label>
+                <select id="field_answerType" data-value="obj.answerType">
+                    <option value="cloze_text_viewer">((Text))</option>
+                    <option value="table">((Table))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_interaction">((Interaction:))</label>
+                <select id="field_interaction" data-value="obj.interaction">
+                    <option value="write">((Writing))</option>
+                    <option value="dd">((Drag and Drop))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_fieldsNum">((Number of fields:))</label>
+                <select id="field_fieldsNum" data-value="obj.fieldsNum" {{#controller.isDDMode}}disabled cantBeEnabled="true"{{/controller.isDDMode}}>
+                    <option value="single">((Single))</option>
+                    <option value="multiple">((Multiple))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_fieldsWidth">((Answer field width)):</label>
+                <select id="field_fieldsWidth" data-value="obj.fieldsWidth" {{#disableFieldWidth}}disabled cantBeEnabled="true"{{/disableFieldWidth}}>
+                    <option value="longest">((By Longest Answer))</option>
+                    <option value="each">((By Each Field Answer))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" id="field_FractionOverFraction"{{#fractionOverFraction}}checked{{/fractionOverFraction}} >
+                <label class="control-label" for="field_FractionOverFraction">((task.clozeAnswer.properties.FractionOverFraction))</label>
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.useBank" id="field_useBank"  {{#controller.isDDMode}}disabled cantBeEnabled="true"{{/controller.isDDMode}}>
+                <label class="control-label" for="field_useBank">((use Bank))</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.reuseItems" id="field_reuseItems" >
+                <label class="control-label" for="field_reuseItems">((task.fill_in_gaps.props.cb.identical_answers))</label>
+            </div>
+            <div class="control-group" id="bankItemsTypeWrapper">
+                <label class="control-label" for="field_bankItemsType">Bank items</label>
+                <select id="field_bankItemsType" data-value="obj.bankItemsType">
+                    <option value="disabled">Items disabled</option>
+                    <option value="disappear">Items disappear</option>
+                </select>
+            </div>
+        </div>      
+    </div>
+</div>
+

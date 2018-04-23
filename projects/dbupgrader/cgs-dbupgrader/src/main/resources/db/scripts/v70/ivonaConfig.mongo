@@ -1,0 +1,215 @@
+ttsproviders.insert(
+
+     {
+         "id" : 13,
+         "name" : "Ivona",
+         "locales" : [
+             "en_us",
+             "en_au",
+             "en_gb",
+             "en_in",
+             "es_us",
+             "pt_br",
+             "en_wls",
+             "cy_cy",
+             "de_de",
+             "fr_fr",
+             "fr_ca",
+             "it_it",
+             "es_es",
+             "ru_ru",
+             "pt_pt",
+             "nl_nl",
+             "da_da",
+             "sv_se",
+             "is_is",
+             "pl_pl",
+             "ro_ro",
+             "tr_tr"
+         ],
+         "configurations" : {
+             "admin" : [
+                 {
+                     "key" : "email",
+                     "type" : "text",
+                     "attributes" : {
+                         "required" : true
+                     },
+                     "validation" : {
+                         "required" : true
+                     }
+                 },
+                 {
+                     "key" : "apiKey",
+                     "type" : "text",
+                     "attributes" : {
+                         "required" : true
+                     },
+                     "validation" : {
+                         "required" : true
+                     }
+                 }
+             ],
+             "course" : [
+                 {
+                     "key" : "voiceId",
+                     "type" : "multiselection",
+                     "filterOptionsByLocale" : true,
+                     "options" : {
+                         "en_us" : [
+                             "en_us_salli",
+                             "en_us_ivy",
+                             "en_us_kimberly",
+                             "en_us_kendra",
+                             "en_us_jennifer",
+                             "en_us_joey",
+                             "en_us_eric",
+                             "en_us_chipmunk"
+                         ],
+                         "en_au" : [
+                             "en_au_nicole",
+                             "en_au_russell"
+                         ],
+                         "en_gb" : [
+                             "en_gb_emma",
+                             "en_gb_amy",
+                             "en_gb_brian"
+                         ],
+                         "en_in" : [
+                             "en_in_raveena"
+                         ],
+                         "es_us" : [
+                             "es_us_penelope",
+                             "es_us_miguel"
+                         ],
+                         "pt_br" : [
+                             "pt_br_ricardo",
+                             "pt_br_vitoria"
+                         ],
+                         "en_wls" : [
+                             "en_wls_geraint",
+                             "en_wls_gwyneth"
+                         ],
+                         "cy_cy" : [
+                             "cy_geraint",
+                             "cy_gwyneth"
+                         ],
+                         "de_de" : [
+                             "de_marlene",
+                             "de_hans"
+                         ],
+                         "fr_fr" : [
+                             "fr_celine",
+                             "fr_mathieu"
+                         ],
+                         "fr_ca" : [
+                             "fr_ca_chantal"
+                         ],
+                         "it_it" : [
+                             "it_giorgio",
+                             "it_carla"
+                         ],
+                         "es_es" : [
+                             "es_conchita",
+                             "es_enrique"
+                         ],
+                         "ru_ru" : [
+                             "ru_tatyana"
+                         ],
+                         "pt_pt" : [
+                             "pt_pt_cristiano"
+                         ],
+                         "nl_nl" : [
+                             "nl_lotte",
+                             "nl_ruben"
+                         ],
+                         "da_da" : [
+                             "da_naja",
+                             "da_mads"
+                         ],
+                         "sv_se" : [
+                             "sv_se_astrid"
+                         ],
+                         "is_is" : [
+                             "is_dora",
+                             "is_karl"
+                         ],
+                         "pl_pl" : [
+                             "pl_agnieszka",
+                             "pl_maja",
+                             "pl_ewa",
+                             "pl_jacek",
+                             "pl_jan"
+                         ],
+                         "ro_ro" : [
+                             "ro_carmen"
+                         ],
+                         "tr_tr" : [
+                             "tr_filiz"
+                         ]
+                     },
+                     "default" : {
+                         "key" : "en_us",
+                         "index" : 0,
+                         "indexValue" : "en_us_salli"
+                     }
+                 },
+                 {
+                     "key" : "Prosody-Volume",
+                     "type" : "number",
+                     "attributes" : {
+                         "min" : 0,
+                         "max" : 100
+                     },
+                     "default" : 100,
+                     "appendTo" : "params"
+                 },
+                 {
+                     "key" : "Prosody-Rate",
+                     "type" : "number",
+                     "attributes" : {
+                         "min" : 50,
+                         "max" : 200
+                     },
+                     "default" : 100,
+                     "appendTo" : "params"
+                 },
+                 {
+                     "key" : "Sentence-Break",
+                     "type" : "number",
+                     "attributes" : {
+                         "min" : 0,
+                         "max" : 3000
+                     },
+                     "default" : 400,
+                     "appendTo" : "params"
+                 },
+                 {
+                     "key" : "Paragraph-Break",
+                     "type" : "number",
+                     "attributes" : {
+                         "min" : 0,
+                         "max" : 5000
+                     },
+                     "default" : 400,
+                     "appendTo" : "params"
+                 }
+             ],
+             "api" : {
+                 "excludeLanguage" : true,
+                 "template" : {
+                     "data" : {
+                         "base_url" : "narrationService/ivonaService",
+                         "codecId" : "mp3/22050",
+                         "contentType" : "text/plain"
+                     }
+                 },
+                 "method" : "POST",
+                 "isInternalAPI" : true
+             }
+         }
+     }
+
+
+
+)

@@ -1,0 +1,72 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    //remove thumbnail references from lessons collection
+    db.getCollection('lessons').find({"contentData.resources.href": /thumb/}).forEach(function(lesson){
+
+        //remove any resource in the lesson that contains the prefix "thumbnail"
+        if(lesson.contentData.resources){
+            for(var i = lesson.contentData.resources.length -1; i >= 0 ; i--){
+                if(lesson.contentData.resources[i].href && lesson.contentData.resources[i].href.indexOf("thumbnail") >-1){
+                    lesson.contentData.resources.splice(i, 1);
+                }
+            }
+        }
+
+        if(lesson.contentData.learningObjects){
+            //remove the property "thumbnailRef" from the sequence, and its reference in the resourceRefId array
+            lesson.contentData.learningObjects.forEach(function(lo){
+
+                //iterate over sequences, sometimes they are directly under lo, and sometimes under item.lo
+                var iterateElement = lo.sequences ? lo.sequences : (lo.item && lo.item.sequences ? lo.item.sequences : []);
+                iterateElement.forEach(function(sequence){
+                    if(sequence.thumbnailRef){
+                        var thumbnailResourceToDelete = sequence.thumbnailRef;
+                        delete sequence.thumbnailRef;
+                        if(sequence.resourceRefId){
+                            for(var i = sequence.resourceRefId.length -1; i >= 0 ; i--){
+                                if(sequence.resourceRefId[i] == thumbnailResourceToDelete){
+                                    sequence.resourceRefId.splice(i, 1);
+                                    break;
+                                }
+                            }
+                        }
+                     }
+                });
+            });
+        }
+        db.lessons.save(lesson);
+    });
+
+    //remove thumbnail references from assessments collection
+    db.getCollection('assessments').find({"contentData.resources.href": /thumb/}).forEach(function(assessment){
+
+
+        //remove any resource in the assessment that contains the prefix "thumbnail"
+        if(assessment.contentData.resources){
+            for(var i = assessment.contentData.resources.length -1; i >= 0 ; i--){
+                if(assessment.contentData.resources[i].href && assessment.contentData.resources[i].href.indexOf("thumbnail") >-1){
+                    assessment.contentData.resources.splice(i, 1);
+                }
+            }
+        }
+        if(assessment.contentData.sequences){
+            //remove the property "thumbnailRef" from the sequence, and its reference in the resourceRefId array
+            assessment.contentData.sequences.forEach(function(sequence){
+                if(sequence.thumbnailRef){
+                    var thumbnailResourceToDelete = sequence.thumbnailRef;
+                    delete sequence.thumbnailRef;
+                    for(var i = sequence.resourceRefId.length -1; i >= 0 ; i--){
+                        if(sequence.resourceRefId[i] == thumbnailResourceToDelete){
+                            sequence.resourceRefId.splice(i, 1);
+                            break;
+                        }
+                    }
+                 }
+            });
+        }
+        db.assessments.save(assessment);
+    });
+
+    //remove the thumbnails collection
+    db.thumbnails.drop();
+}

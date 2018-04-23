@@ -1,0 +1,66 @@
+defaultTasks 'clean', 'build'
+
+apply from: '../../../cgs-common.gradle'
+
+if (hasProperty('findBugs')) {
+    apply plugin: 'findbugs'
+
+    findbugs {
+        ignoreFailures = true
+    }
+}
+
+dependencies {
+	compile database.mongodb
+    compile html
+    compile apacheCommons
+
+    compile libraries.log4j
+    compile libraries.log4jExtras
+    compile libraries.http
+    compile libraries.jsonTagLib
+    compile libraries.jacksonMapper
+    compile libraries.jsonValidator
+    compile xml.dom4j
+    compile xml.jaxen
+
+
+    compile t2klibraries.t2kconfig
+    compile t2klibraries.commonUtils
+    compile t2klibraries.commonMongoFactory
+    compile t2klibraries.gcrCommonModel
+}
+
+build.doLast {
+    configurations.compile.each {
+        File file ->
+        copy {
+            from file
+            into "$buildDir/dependencies-libs"
+        }
+    }
+}
+
+task createDevEnv() << {
+    try {
+        File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../../t2k.properties')
+        String resourceDir =  'src/test/resources'
+        if (t2kPropFile.exists()) {
+            project.copy {
+                from t2kPropFile.getAbsolutePath()
+                into  resourceDir
+            }
+        }
+        else {
+            project.copy {
+                from (t2kPropFile.getAbsolutePath() + ".tmpl") {
+                    rename '(.*).tmpl', '$1'
+                }
+                into resourceDir
+            }
+        }
+    }
+    catch (Exception e) {
+        println e
+    }
+}

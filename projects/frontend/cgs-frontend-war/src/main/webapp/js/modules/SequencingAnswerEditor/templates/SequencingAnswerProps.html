@@ -1,0 +1,32 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper sequencingAnswer_editor props_editor">
+    <ul class="nav nav-tabs" id="sequencingAnswerEditorTabs">
+       <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_definitionType">((Definitions Type)):</label>
+                <select id="field_definitionType" data-value="obj.definitionType">
+                    <option value="textViewer">((Text))</option>
+                    <option value="imageViewer">((Image))</option>
+                    <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_answerType">((Answer Type)):</label>
+                <select id="field_answerType" data-value="obj.answerType">
+                    <option value="textViewer">((Text))</option>
+                    <option value="imageViewer">((Image))</option>
+                    <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.useBank" id="field_useBank" >
+                <label class="control-label" for="field_useBank">((use Bank))</label>
+            </div>
+        </div>    
+    </div>
+</div>

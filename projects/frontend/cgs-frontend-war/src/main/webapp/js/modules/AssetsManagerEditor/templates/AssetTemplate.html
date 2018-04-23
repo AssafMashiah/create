@@ -1,0 +1,19 @@
+<td class="assetId">
+	<div class="assetId_wrapper">{{obj.assetId}}</div>
+</td>
+<td data='fileMymTypeDisplay'>
+	(({{obj.fileMymTypeDisplay}}))
+</td>
+<td>
+	<a href="#load/{{obj.location.link}}" class='location-link'>{{{obj.location.name}}}</a>
+</td>
+<td>{{{obj.notes}}}</td>
+<td data='status'>
+	<select class='state-list' {{#obj.readonly}}disabled{{/obj.readonly}}>
+		<option value="done" {{#obj.status}}selected{{/obj.status}}>((Done))</option>
+		<option value="not-done" {{^obj.status}}selected{{/obj.status}}>((Not Done))</option>
+	</select>
+</td>
+<td>
+	<button class='upload-btn btn btn-small btn-position' {{#obj.readonly}}disabled{{/obj.readonly}}>((...))</button>
+</td>

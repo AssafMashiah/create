@@ -1,0 +1,6 @@
+// Create EBooks collection and create indexes
+
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db.ebooks.ensureIndex({eBookId:1});
+}

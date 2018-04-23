@@ -1,0 +1,139 @@
+{
+	"cid": "f7ca35db-eed9-4068-bb22-72eacfa9df45",
+	"header": {
+		"last-modified": {
+			"$date": "2013-08-05T13:48:27.939Z"
+		}
+	},
+	"schema": "course_v3",
+	"pedagogicalLessonType": "Custom",
+	"standards": [],
+	"standardPackages": [],
+	"resources": [{
+		"type": "sequence",
+		"href": "sequences/fc655eed-95f2-4950-b6b2-37389f3b4ba2",
+		"resId": "resource_7"
+	},
+	{
+		"type": "media",
+		"href": "thumbnails/fc655eed-95f2-4950-b6b2-37389f3b4ba2",
+		"resId": "resource_8"
+	},
+	{
+		"type": "sequence",
+		"href": "sequences/c8c48583-bca2-452c-831b-e9487b575a63",
+		"resId": "resource_5"
+	},
+	{
+		"type": "media",
+		"href": "thumbnails/c8c48583-bca2-452c-831b-e9487b575a63",
+		"resId": "resource_6"
+	},
+	{
+		"type": "sequence",
+		"href": "sequences/360d6193-f1b5-4846-89ed-3abd88fbb85d",
+		"resId": "resource_1"
+	},
+	{
+		"type": "media",
+		"href": "thumbnails/360d6193-f1b5-4846-89ed-3abd88fbb85d",
+		"resId": "resource_2"
+	},
+	{
+		"type": "sequence",
+		"href": "sequences/7d252033-22a5-4cd0-84c2-2c865932a34f",
+		"resId": "resource_3"
+	},
+	{
+		"type": "media",
+		"href": "thumbnails/7d252033-22a5-4cd0-84c2-2c865932a34f",
+		"resId": "resource_4"
+	}],
+	"teacherGuide": {
+		"resourceRefId": [],
+		"attachments": [],
+		"data": "Lesson%20TG%3A%3Cdiv%3E%3Cbr%3E%3C/div%3E%3Cdiv%3E%3Cb%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EJohn%20Roderick%3C/b%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Bis%20an%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/United_States%22%20title%3D%22United%20States%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EAmerican%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Bmusician%2C%20writer%2C%20and%20podcaster.%20Born%20in%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Seattle%22%20title%3D%22Seattle%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3ESeattle%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Washington_%28U.S._state%29%22%20title%3D%22Washington%20%28U.S.%20state%29%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EWashington%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%20he%20grew%20up%20in%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Anchorage%2C_Alaska%22%20title%3D%22Anchorage%2C%20Alaska%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EAnchorage%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Alaska%22%20title%3D%22Alaska%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EAlaska%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%20where%20as%20a%20young%20man%20he%20worked%20as%20a%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Sluice%22%20title%3D%22Sluice%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3Esluice%20box%20mucker%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Bfor%20a%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Gold_mining%22%20title%3D%22Gold%20mining%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3Egold%20mining%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Boperation%20in%20the%20area.%20He%20is%20currently%20the%20lead%20singer%20and%20guitarist%20in%20the%20band%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/The_Long_Winters%22%20title%3D%22The%20Long%20Winters%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EThe%20Long%20Winters%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Band%20was%20formerly%20a%20touring%20member%20of%20the%20band%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Harvey_Danger%22%20title%3D%22Harvey%20Danger%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EHarvey%20Danger%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E.%20He%20is%20also%20a%20frequent%20guest%20musician%20on%20recordings%20by%20other%20bands%2C%20appearing%20on%20the%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Death_Cab_for_Cutie%22%20title%3D%22Death%20Cab%20for%20Cutie%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EDeath%20Cab%20for%20Cutie%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Balbum%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Transatlanticism%22%20title%3D%22Transatlanticism%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ETransatlanticism%3C/a%3E%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%20the%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Nada_Surf%22%20title%3D%22Nada%20Surf%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3ENada%20Surf%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Balbum%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/The_Weight_Is_a_Gift%22%20title%3D%22The%20Weight%20Is%20a%20Gift%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EThe%20Weight%20Is%20a%20Gift%3C/a%3E%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/The_Decemberists%22%20title%3D%22The%20Decemberists%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EThe%20Decemberists%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Balbum%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Picaresque_%28album%29%22%20title%3D%22Picaresque%20%28album%29%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EPicaresque%3C/a%3E%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%20and%20the%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/David_Bazan%22%20title%3D%22David%20Bazan%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EDavid%20Bazan%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Balbum%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Curse_Your_Branches%22%20title%3D%22Curse%20Your%20Branches%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ECurse%20Your%20Branches%3C/a%3E%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%20as%20well%20as%20recordings%20by%20BOAT%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Visqueen%22%20title%3D%22Visqueen%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EVisqueen%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Say_Hi%22%20title%3D%22Say%20Hi%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3ESay%20Hi%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Denver_Dalley%22%20title%3D%22Denver%20Dalley%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EDenver%20Dalley%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%2C%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Shelby_Earl%22%20title%3D%22Shelby%20Earl%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EShelby%20Earl%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Band%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Ken_Stringfellow%22%20title%3D%22Ken%20Stringfellow%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EKen%20Stringfellow%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E.%20He%20collaborated%20with%26nbsp%3B%3C/span%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Jonathan_Coulton%22%20title%3D%22Jonathan%20Coulton%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EJonathan%20Coulton%3C/a%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Bfor%20Coulton%27s%20album%2C%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Artificial_Heart_%28album%29%22%20title%3D%22Artificial%20Heart%20%28album%29%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EArtificial%20Heart%3C/a%3E%2C%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Breleased%20in%20September%2C%202011%3C/span%3E%3Csup%20id%3D%22cite_ref-1%22%20class%3D%22reference%22%20style%3D%22line-height%3A%201em%3B%20unicode-bidi%3A%20-webkit-isolate%3B%20color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/John_Roderick_%28musician%29%23cite_note-1%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%20white-space%3A%20nowrap%3B%22%3E%5B1%5D%3C/a%3E%3C/sup%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Band%20a%20duo%20album%20called%26nbsp%3B%3C/span%3E%3Ci%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3EOne%20Christmas%20at%20a%20Time%3C/i%3E%3Cspan%20style%3D%22color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%20line-height%3A%2019.1875px%3B%22%3E%26nbsp%3Bin%20November%202012.%3C/span%3E%3Cbr%3E%3C/div%3E",
+		"mimeType": "text/html-template"
+	},
+	"title": "New lesson",
+	"type": "lesson",
+	"learningObjects": [{
+		"cid": "ce055d3f-23e5-4460-8d41-0fd67373c376",
+		"title": "New lo",
+		"type": "lo",
+		"sequences": [{
+			"cid": "fc655eed-95f2-4950-b6b2-37389f3b4ba2",
+			"mimeType": "DL",
+			"tasks": [],
+			"contentRef": "resource_7",
+			"thumbnailRef": "resource_8",
+			"resourceRefId": ["resource_7",
+			"resource_8"],
+			"teacherGuide": {
+				"resourceRefId": [],
+				"attachments": [],
+				"data": "Lesson%20sequence%20TG%3A%3Cdiv%3E%3Cbr%3E%3C/div%3E%3Cdiv%3E%3Ctable%20class%3D%22infobox%20vcard%20plainlist%22%20cellspacing%3D%223%22%20style%3D%22font-size%3A%2011px%3B%20border%3A%201px%20solid%20rgb%28170%2C%20170%2C%20170%29%3B%20background-color%3A%20rgb%28249%2C%20249%2C%20249%29%3B%20color%3A%20rgb%280%2C%200%2C%200%29%3B%20margin%3A%200.5em%200px%200.5em%201em%3B%20padding%3A%200.2em%3B%20float%3A%20right%3B%20clear%3A%20right%3B%20line-height%3A%201.5em%3B%20font-family%3A%20sans-serif%3B%20border-spacing%3A%203px%3B%20width%3A%2022em%3B%22%3E%3Ctbody%3E%3Ctr%3E%3Cth%20colspan%3D%222%22%20class%3D%22fn%20org%22%20style%3D%22vertical-align%3A%20top%3B%20text-align%3A%20center%3B%20font-size%3A%2014px%3B%20background-color%3A%20rgb%28176%2C%20196%2C%20222%29%3B%22%3ENow%20Soldiers%3C/th%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3EOrigin%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Clearwater%2C_Florida%22%20title%3D%22Clearwater%2C%20Florida%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EClearwater%2C%20Florida%3C/a%3E%2C%20United%20States%3C/td%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Music_genre%22%20title%3D%22Music%20genre%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EGenres%3C/a%3E%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Hardcore_punk%22%20title%3D%22Hardcore%20punk%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EHardcore%3C/a%3E%2C%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Punk_rock%22%20title%3D%22Punk%20rock%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Epunk%3C/a%3E%3C/td%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3EYears%20active%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E2002%u20132008%3C/td%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Record_label%22%20title%3D%22Record%20label%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ELabels%3C/a%3E%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DSignificant_Records%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Significant%20Records%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3ESignificant%20Records%3C/a%3E%3C/td%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3EAssociated%20acts%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Can%2527t_Stand_It%22%20title%3D%22Can%27t%20Stand%20It%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ECan%27t%20Stand%20It%3C/a%3E%2C%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DBig_Rats%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Big%20Rats%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3EBig%20Rats%3C/a%3E%2C%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DBible_Dinosaurs%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Bible%20Dinosaurs%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3EBible%20Dinosaurs%3C/a%3E%2C%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Endurance%22%20title%3D%22Endurance%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EEndurance%3C/a%3E%2C%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Five_Suns%22%20title%3D%22Five%20Suns%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EFive%20Suns%3C/a%3E%2C%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DHello_Alaska%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Hello%20Alaska%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3EHello%20Alaska%3C/a%3E%3C/td%3E%3C/tr%3E%3Ctr%3E%3Cth%20colspan%3D%222%22%20style%3D%22vertical-align%3A%20top%3B%20text-align%3A%20center%3B%20background-color%3A%20rgb%28176%2C%20196%2C%20222%29%3B%22%3E%3C/th%3E%3C/tr%3E%3Ctr%3E%3Cth%20scope%3D%22row%22%20style%3D%22vertical-align%3A%20top%3B%22%3EMembers%3C/th%3E%3Ctd%20style%3D%22vertical-align%3A%20top%3B%22%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DVincent_Caffiero%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Vincent%20Caffiero%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3EVincent%20Caffiero%3C/a%3E%3Cbr%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Austin_Thomas%22%20title%3D%22Austin%20Thomas%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EAustin%20Thomas%3C/a%3E%3Cbr%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Joseph_Gordon%22%20title%3D%22Joseph%20Gordon%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EJoseph%20Gordon%3C/a%3E%3Cbr%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/w/index.php%3Ftitle%3DTyler_Toth%26amp%3Baction%3Dedit%26amp%3Bredlink%3D1%22%20class%3D%22new%22%20title%3D%22Tyler%20Toth%20%28page%20does%20not%20exist%29%22%20style%3D%22color%3A%20rgb%28165%2C%2088%2C%2088%29%3B%20background-image%3A%20none%3B%22%3ETyler%20Toth%3C/a%3E%3Cbr%3E%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Ben_Sharp%22%20title%3D%22Ben%20Sharp%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3EBen%20Sharp%3C/a%3E%3C/td%3E%3C/tr%3E%3C/tbody%3E%3C/table%3E%3C/div%3E",
+				"mimeType": "text/html-template"
+			},
+			"standards": [],
+			"title": "New sequence 1",
+			"type": "sequence"
+		},
+		{
+			"cid": "f31e4cdc-b8a2-4f89-85fb-594786524193",
+			"levels": [{
+				"levelId": 1,
+				"sequence": {
+					"cid": "c8c48583-bca2-452c-831b-e9487b575a63",
+					"mimeType": "DL",
+					"tasks": [],
+					"contentRef": "resource_5",
+					"thumbnailRef": "resource_6",
+					"resourceRefId": ["resource_5",
+					"resource_6"],
+					"teacherGuide": {
+						"resourceRefId": [],
+						"attachments": [],
+						"data": "Differentieted%20level%20TG%3A%3Cdiv%3E%3Cbr%3E%3C/div%3E%3Cdiv%3E%3Cp%20style%3D%22margin-top%3A%200.4em%3B%20margin-bottom%3A%200.5em%3B%20line-height%3A%2019.1875px%3B%20color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%22%3E%3Cb%3EAugmented%20Lagrangian%20methods%3C/b%3E%26nbsp%3Bare%20a%20certain%20class%20of%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Algorithm%22%20title%3D%22Algorithm%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Ealgorithms%3C/a%3E%26nbsp%3Bfor%20solving%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Constraint_%28mathematics%29%22%20title%3D%22Constraint%20%28mathematics%29%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Econstrained%3C/a%3E%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Optimization_%28mathematics%29%22%20title%3D%22Optimization%20%28mathematics%29%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Eoptimization%3C/a%3E%26nbsp%3Bproblems.%20They%20have%20similarities%20to%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Penalty_method%22%20title%3D%22Penalty%20method%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Epenalty%20methods%3C/a%3E%26nbsp%3Bin%20that%20they%20replace%20a%20constrained%20optimization%20problem%20by%20a%20series%20of%20unconstrained%20problems%3B%20the%20difference%20is%20that%20the%20augmented%20Lagrangian%20method%20adds%20an%20additional%20term%20to%20the%20unconstrained%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Objective_function%22%20title%3D%22Objective%20function%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Eobjective%3C/a%3E.%20This%20additional%20term%20is%20designed%20to%20mimic%20a%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Lagrange_multiplier%22%20title%3D%22Lagrange%20multiplier%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ELagrange%20multiplier%3C/a%3E.%20The%20augmented%20Lagrangian%20is%20not%20the%20same%20as%20the%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Lagrange_multiplier%22%20title%3D%22Lagrange%20multiplier%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3Emethod%20of%20Lagrange%20multipliers%3C/a%3E.%3C/p%3E%3Cp%20style%3D%22margin-top%3A%200.4em%3B%20margin-bottom%3A%200.5em%3B%20line-height%3A%2019.1875px%3B%20color%3A%20rgb%280%2C%200%2C%200%29%3B%20font-family%3A%20sans-serif%3B%20font-size%3A%2013px%3B%22%3EViewed%20differently%2C%20the%20unconstrained%20objective%20is%20the%26nbsp%3B%3Ca%20href%3D%22http%3A//en.wikipedia.org/wiki/Lagrange_multipliers%23The_strong_Lagrangian_principle%3A_Lagrange_duality%22%20title%3D%22Lagrange%20multipliers%22%20class%3D%22mw-redirect%22%20style%3D%22color%3A%20rgb%2811%2C%200%2C%20128%29%3B%20background-image%3A%20none%3B%22%3ELagrangian%3C/a%3E%26nbsp%3Bof%20the%20constrained%20problem%2C%20with%20an%20additional%20penalty%20term%20%28the%26nbsp%3B%3Cb%3Eaugmentation%3C/b%3E%29.%3C/p%3E%3C/div%3E",
+						"mimeType": "text/html-template"
+					},
+					"standards": [],
+					"title": "1",
+					"type": "sequence"
+				}
+			},
+			{
+				"levelId": 2,
+				"sequence": {
+					"cid": "360d6193-f1b5-4846-89ed-3abd88fbb85d",
+					"mimeType": "DL",
+					"tasks": [],
+					"contentRef": "resource_1",
+					"thumbnailRef": "resource_2",
+					"resourceRefId": ["resource_1",
+					"resource_2"],
+					"standards": [],
+					"title": "2",
+					"type": "sequence"
+				}
+			},
+			{
+				"levelId": 3,
+				"sequence": {
+					"cid": "7d252033-22a5-4cd0-84c2-2c865932a34f",
+					"mimeType": "DL",
+					"tasks": [],
+					"contentRef": "resource_3",
+					"thumbnailRef": "resource_4",
+					"resourceRefId": ["resource_3",
+					"resource_4"],
+					"standards": [],
+					"title": "3",
+					"type": "sequence"
+				}
+			}],
+			"title": "New differentiatedSequenceParent 1",
+			"type": "differentiatedSequenceParent"
+		}]
+	}]
+}

@@ -1,0 +1,16 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+
+    db.publishers.find().forEach(function createExternalPartnerDataForPublisher(doc) {
+        var publisherId = doc.accountId;
+        var baseExternalPartnersSettings = {
+            "externalAccountId": "Create-" + publisherId,
+            "secretKey": Math.random().toString(36).slice(2),
+            "accountId": new NumberInt(publisherId)
+        }
+
+        db.externalPartners.insert(baseExternalPartnersSettings);
+
+    });
+}
+

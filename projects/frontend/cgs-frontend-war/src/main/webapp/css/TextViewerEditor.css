@@ -1,0 +1,56 @@
+.element_preview_wrapper .textViewer_content {
+	width: 100%;
+}
+
+.textViewer_content img:not(.textViewer-placeholder){
+	height: 20px;
+}
+
+.small iframe,
+.small .textViewer-placeholder{
+	border: none;
+}
+
+.textViewerEditor {
+	height: 35px;
+    min-height: 35px;
+    display:block;
+}
+
+.thinTextViewerEditor {
+	padding: 5px;
+	background-color: white;
+}
+
+.texteditor.Letter:not([mode=thin]):not(.cloze_text_viewer_content){
+    width: 35px;
+ 
+}
+.texteditor.Word:not([mode=thin]):not(.cloze_text_viewer_content){
+    width: 244px;
+}
+.texteditor.Line:not([mode=thin]):not(.cloze_text_viewer_content){
+    width: 680px;
+}
+
+.textViewer_editor.props_editor #multiNarrationArea input[type=checkbox]{
+	float: left;
+}
+
+.textViewer_editor.props_editor #multiNarrationArea label {
+	margin-left: 20px;
+}
+.textViewer_editor.props_editor .multiLingualNarrationWrapper{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}
+#multiNarrationArea {
+	margin-top: 10px;
+}
+#multiNarrationArea label {
+ 	display: inline-block;
+ }
+
+.AnswerFieldTypeText_content iframe.non-checkable {
+	background-color: #ddd;
+}

@@ -1,0 +1,22 @@
+<div id="themingDialog">
+	<div id="header">
+		<span>
+		 ((course.props_area.tab_design.players_table.edit.pop_up.menu.section)):
+		</span>
+		<select id="sectionSelection">
+		    {{#sections}}
+		    <option value="{{value}}" {{#selected}}selected{{/selected}}>(({{name}}))</option>
+		    {{/sections}}
+		</select>
+		<button class="btn" id="reset">((course.props_area.tab_design.players_table.edit.pop_up.menu.button.reset))</button>
+		<button class="btn" id="applyPlayerPreview">((course.props_area.tab_design.players_table.edit.pop_up.menu.button.apply))</button>
+	</div>
+	<div id="content">
+		<div id="configurationSection">
+			{{>currectSection}}
+		</div>
+		
+		<div id="previewSection">
+		</div>
+	</div>
+</div>

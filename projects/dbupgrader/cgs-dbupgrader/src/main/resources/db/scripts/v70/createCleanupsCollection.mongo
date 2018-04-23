@@ -1,0 +1,7 @@
+// Create cleanups collection and create indexes
+
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db.cleanups.ensureIndex({publisherId:1,courseId:1,tocItemId:1,cleanupType:1, status:1});
+    db.cleanups.ensureIndex({created:1,lastModified:1});
+}

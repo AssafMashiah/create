@@ -1,0 +1,316 @@
+/*ebook upload dialog*/
+#ebook-upload-dialog #dialog.ebookUpload {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  top: 10%;
+  min-height: 50%;
+  max-height: 80%;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  #ebook-upload-dialog #dialog.ebookUpload #dialogContent {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 140px);
+    max-height: calc(100% - 140px);
+    width: 100%;
+    padding: 0;
+    overflow-y: hidden; }
+    #ebook-upload-dialog #dialog.ebookUpload #dialogContent .tab-content {
+      flex: 1 0 calc(100% - 110px);
+      overflow-y: scroll; }
+  #ebook-upload-dialog #dialog.ebookUpload #dialogControls #back {
+    float: left; }
+
+#ebook-upload-dialog #ebooks-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 0; }
+  #ebook-upload-dialog #ebooks-tabs li:hover > a, #ebook-upload-dialog #ebooks-tabs li.active > a {
+    border-bottom: 2px solid #276CC7; }
+  #ebook-upload-dialog #ebooks-tabs li:first-child {
+    margin-right: 40px; }
+  #ebook-upload-dialog #ebooks-tabs li > a {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif; }
+
+#ebook-upload-dialog .ebook-import-new {
+  height: 75px;
+  display: flex;
+  position: fixed;
+  z-index: 800;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-top: 1px solid #c9d1d1;
+  border-bottom: 1px solid #c9d1d1; }
+  #ebook-upload-dialog .ebook-import-new:hover .icon-uploadEbook, #ebook-upload-dialog .ebook-import-new:hover .ebook-import-new-title {
+    color: #4f8Bdd; }
+  #ebook-upload-dialog .ebook-import-new .import-book-area {
+    cursor: pointer; }
+  #ebook-upload-dialog .ebook-import-new .icon-uploadEbook {
+    font-size: 60px;
+    color: #346cb4;
+    width: 60px;
+    cursor: pointer;
+    display: inline-block; }
+    #ebook-upload-dialog .ebook-import-new .icon-uploadEbook:hover {
+      color: #4f8Bdd; }
+  #ebook-upload-dialog .ebook-import-new .ebook-import-new-title {
+    font-size: 18px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    color: #346cb4;
+    font-weight: 800;
+    display: inline-block; }
+  #ebook-upload-dialog .ebook-import-new .ebook-separator-line {
+    width: 1px;
+    background: #DDDDDD;
+    height: 50px;
+    margin: 0 30px; }
+  #ebook-upload-dialog .ebook-import-new .ebook-select-vendor {
+    z-index: 9000; }
+    #ebook-upload-dialog .ebook-import-new .ebook-select-vendor span {
+      font-size: 12px;
+      color: #346cb4;
+      font-weight: 700; }
+    #ebook-upload-dialog .ebook-import-new .ebook-select-vendor select {
+      font-size: 14px;
+      color: #666666;
+      margin: 0 0 0 8px;
+      max-width: 160px; }
+
+#ebook-upload-dialog .import-ebook-container {
+  margin: 30px 40px 40px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #ebook-upload-dialog .import-ebook-container .ebook-external-frame {
+    border: 1px solid #aaa;
+    cursor: pointer;
+    margin: 0 30px 30px 0;
+    width: 132px;
+    height: 206px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame .ebookTitle {
+      color: #666;
+      font-size: 12px;
+      margin: 6px;
+      height: 100%;
+      line-height: 16px;
+      text-align: center;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: pre-line;
+      max-height: 31px; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame .lastModified {
+      font-size: 11px;
+      text-align: center;
+      height: 20px; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame .pdfConversionLibrary {
+      font-weight: 600;
+      font-size: 12px;
+      font-family: 'open_sans';
+      color: #666666;
+      background-color: #F5F5F5;
+      text-align: center;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: pre-line;
+      max-height: 20px; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame:hover .ebook-internal-frame {
+      background-color: #fff; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame:hover .ebookTitle {
+      color: #4f8Bdd; }
+    #ebook-upload-dialog .import-ebook-container .ebook-external-frame .ebook-internal-frame {
+      width: 110px;
+      height: 110px;
+      border: 1px solid #aaa;
+      background-color: #ffffff;
+      margin: 10px 10px 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 110px; }
+      #ebook-upload-dialog .import-ebook-container .ebook-external-frame .ebook-internal-frame img {
+        max-height: 100%; }
+      #ebook-upload-dialog .import-ebook-container .ebook-external-frame .ebook-internal-frame .icon-uploadEbook {
+        color: #276cc7;
+        flex-grow: 1;
+        font-size: 120px;
+        margin-right: 103px;
+        margin-top: 39px; }
+      #ebook-upload-dialog .import-ebook-container .ebook-external-frame .ebook-internal-frame .icon-eBook_Iconfont-01 {
+        transform: scale(8);
+        color: #aaaaaa; }
+
+#ebook-upload-dialog .progress-phase {
+  font-family: 'Arial', serif;
+  font-size: 18px;
+  color: #356cb5;
+  padding-bottom: 10px; }
+
+#ebook-upload-dialog .progress-wrapper {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #aaa;
+  background-color: #f7f7f7; }
+
+#ebook-upload-dialog .progress-indication {
+  height: 100%;
+  width: 0;
+  background-color: #356cb5; }
+
+#ebook-upload-dialog .upload-failed-message-wrapper {
+  margin-left: 40px;
+  margin-top: 80px; }
+
+#ebook-upload-dialog .upload-failed-message {
+  display: none;
+  color: #ff0000;
+  margin: 18px 0 24px 0;
+  flex-flow: column; }
+  #ebook-upload-dialog .upload-failed-message .failure-title-wrapper {
+    display: flex; }
+    #ebook-upload-dialog .upload-failed-message .failure-title-wrapper .failed-sign:before {
+      font-family: 'ebook-icons';
+      content: '\e800';
+      font-size: 36px;
+      vertical-align: bottom; }
+    #ebook-upload-dialog .upload-failed-message .failure-title-wrapper .failed-title {
+      font-size: 16px;
+      line-height: 24px;
+      max-height: 60px;
+      overflow: auto; }
+      #ebook-upload-dialog .upload-failed-message .failure-title-wrapper .failed-title #ebook-error-details-toggle {
+        color: #336CB3;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 11px;
+        padding-left: 18px; }
+  #ebook-upload-dialog .upload-failed-message .failed-text {
+    font-size: 14px;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 600;
+    vertical-align: bottom;
+    line-height: 14px;
+    display: none;
+    color: #999;
+    padding-top: 12px;
+    max-height: 150px;
+    overflow: auto; }
+
+#ebook-upload-dialog .ebook-upload-step-2-wrapper {
+  display: flex;
+  position: absolute;
+  height: calc(100% - 150px);
+  width: 100%; }
+  #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-upload-progress-wrapper {
+    flex: 5;
+    height: 100%;
+    flex-direction: column;
+    display: flex; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-upload-progress-wrapper .ebook-upload-resource {
+      font-size: 14px;
+      color: #666666; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-upload-progress-wrapper #ebook-resource-preview {
+      height: inherit; }
+      #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-upload-progress-wrapper #ebook-resource-preview #ebook-preview-player {
+        height: 100%; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-upload-progress-wrapper .ebook-upload-progress {
+      background: #F7F7F7;
+      border: 1px solid #AAAAAA;
+      height: 100%;
+      padding: 56px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column; }
+  #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper {
+    flex: 4;
+    height: 100%;
+    padding: 40px 0 0 40px;
+    overflow: auto; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form {
+      position: relative;
+      padding-right: 90px; }
+      #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form label {
+        color: #336CB3; }
+      #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-select-all-pages-label {
+        color: #666; }
+      #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-page-selection {
+        border-color: #666;
+        color: #666; }
+        #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-page-selection:focus {
+          border-color: #336CB3; }
+        #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-page-selection:disabled {
+          border-color: #ccc !important;
+          color: #ccc !important; }
+        #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-page-selection::-webkit-input-placeholder {
+          font-style: italic;
+          color: #ccc; }
+        #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-form #ebook-page-selection.input-error {
+          border-color: red; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-page-selection-input-error-message {
+      color: red;
+      display: none;
+      position: absolute;
+      top: 108%;
+      padding-right: 90px; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper .ebook-upload-warning {
+      margin-top: 56px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      font-family: Arial;
+      color: #666666;
+      width: 490px;
+      min-height: 100px;
+      border: solid 1px #FFFFD5;
+      border-radius: 8px;
+      background-color: #FFFFD5;
+      padding: 15px 7px 15px; }
+    #ebook-upload-dialog .ebook-upload-step-2-wrapper .ebook-page-selection-form-wrapper #conversionLibrary {
+      color: #666666;
+      font-size: 14px;
+      position: absolute;
+      bottom: 10px;
+      padding: 5px 5px 5px 0;
+      background: rgba(255, 255, 255, 0.8); }
+
+/*ebook upload dialog*/
+/** ebook stage view **/
+#dynamic-book-limiter-bar-wrapper {
+  height: 100%; }
+  #dynamic-book-limiter-bar-wrapper .dynamic-book-limiter-bar {
+    height: 24px;
+    background: #CDE8F6;
+    color: #5183AB;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    justify-content: center; }
+    #dynamic-book-limiter-bar-wrapper .dynamic-book-limiter-bar .icon-ebook-info {
+      font-size: 24px;
+      line-height: 24px;
+      margin-right: 14px; }
+    #dynamic-book-limiter-bar-wrapper .dynamic-book-limiter-bar.limit-reached {
+      background: #e1e1d9;
+      color: #666666; }
+      #dynamic-book-limiter-bar-wrapper .dynamic-book-limiter-bar.limit-reached .icon-ebook-cancel {
+        font-size: 24px;
+        line-height: 24px;
+        margin-right: 14px; }
+  #dynamic-book-limiter-bar-wrapper #dynamic-book-player-holder {
+    height: calc(100% - 24px); }

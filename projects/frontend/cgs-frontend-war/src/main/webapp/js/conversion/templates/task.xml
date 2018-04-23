@@ -1,0 +1,52 @@
+<task exposureId="{{exposureId}}" type="{{entityType}}" id="{{id}}" check_type="{{task_check_type}}">
+    {{#mode}}
+        <mode>{{mode}}</mode>
+    {{/mode}}
+    
+    {{#fieldsSize}}
+    <!-- in cloze task -->
+    <fields_size>{{fieldsSize}}</fields_size>
+    {{/fieldsSize}}
+
+    {{#isMtq}}
+    <!-- in mtq task -->
+		
+		<placeholders>{{placeholders}}</placeholders>		
+		<bank>{{useBank}}</bank>
+		<bankRandom>{{bankRandom}}</bankRandom>
+		<!--dragAndCopy - reusable bank, dragAndDisable - not reusable -->
+		<bankMode>{{bankMode}}</bankMode>
+		<mistakeFactor>{{mistakeFactor}}</mistakeFactor>
+		
+    {{/isMtq}}
+    {{{content}}}
+</task>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

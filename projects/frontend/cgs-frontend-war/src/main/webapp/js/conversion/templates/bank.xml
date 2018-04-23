@@ -1,0 +1,5 @@
+{{#useBank}}
+	<mtqBank>
+		{{{content}}}
+	</mtqBank>
+{{/useBank}}

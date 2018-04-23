@@ -1,0 +1,12 @@
+<!-- {{constructor.type}} -->
+<td><img src="{{#obj.thumbnail}}{{{obj.thumbnail}}}{{/obj.thumbnail}}"/></td>
+<td>{{obj.title}}</td>
+<td>{{obj.lastModified}}</td>
+<td class="update-col">
+    {{#obj.updatedEBookId}}
+    <button id="button_ebook_update" class="btn btn-md">((Update))</button>
+    <div> or </div>
+    {{/obj.updatedEBookId}}
+	<button id="button_ebook_upload_and_update" class="btn btn-md">((...))</button>
+    <input id="ebook_file_upload" type="file" accept="application/epub+zip,application/pdf,.epub,.pdf" class="hide-file-upload">
+</td>

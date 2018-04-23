@@ -1,0 +1,16 @@
+<fieldset class="{{elementType}}_content ConvertEditor ConvertHeaderEditor">
+	<legend>((Header Editor))</legend>
+	<div class="control-group instruction">
+		<div id="instruction_icon" class="instruction_icon">/</div>
+		<span class="placeholder">((Enter Title))</span>
+		<div dropable-content="text" dropable-limit="1" dropable-content-id="question_instruction" 
+		dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_instruction}}}</div>
+	</div>
+	<div class="control-group">
+		<div class="content-area">
+			<span class="placeholder">((Enter Content))</span>
+			<div dropable-content="text" dropable-content-id="question_content" 
+			dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_content}}}</div>
+		</div>
+	</div>
+</fieldset>

@@ -1,0 +1,274 @@
+{
+  "_id": "fa759175-7deb-441c-8e66-ee23ef53a438",
+  "_class": "com.mongodb.BasicDBObject",
+  "name": "T2K",
+  "locales": [
+    "en_US"
+  ],
+  "interfaceLocales": {
+    "options": [
+      "en_US",
+      "fr_FR",
+      "pt_BR"
+    ],
+    "selected": "en_US"
+  },
+  "customMetadata": [
+    {
+      "id": "80745f10-09c9-4a2e-8852-4bf55eaf083b",
+      "type": "date",
+      "name": "date with missing \"dd/mm/yy\" format",
+      "value": "dd/mm/yy",
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null,
+      "required": false
+    },
+    {
+      "id": "7f6f4307-2ca3-4a5c-bd45-723eacd023ff",
+      "type": "date",
+      "name": "date with missing \"mm/dd/yyyy\" format",
+      "value": "mm/dd/yyyy",
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null,
+      "required": false
+    },
+    {
+      "id": "e770eafc-c5b7-490a-b2ac-e97748027a43",
+      "type": "tags",
+      "name": "tags with missing \"space\" separator",
+      "value": "space",
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null
+    },
+    {
+      "id": "fa98fee6-1474-4a24-b8b9-312e3f09d9be",
+      "type": "tags",
+      "name": "tags with missing \"comma\" separator",
+      "value": "comma",
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null
+    },
+    {
+      "id": "3db9bd3f-24a4-4b17-9155-e9ef8020290e",
+      "type": "tags",
+      "name": "tags with missing \"semicolon\" separator",
+      "value": "semicolon",
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null
+    },
+    {
+      "id": "4f0b6f09-651b-4b6f-99cc-d587efa9a6b3",
+      "type": "boolean",
+      "name": "boolean",
+      "value": null,
+      "value_from": null,
+      "value_to": null,
+      "value_format": null,
+      "value_includeSeconds": null
+    }
+  ],
+  "customMetadataPackages": [],
+  "customization": {
+    "isSecured": false,
+    "enableHiddenLessons": true,
+    "enableCoachMarks": true,
+    "enableHints": true,
+    "enableQuiz": false,
+    "publishSelectedLesson": true,
+    "enableLivePage": false,
+    "enablePdf2t2k": false,
+    "enableFullSpellChecker": false,
+    "enableCourseLevelsCustomizationForScorm": true,
+    "logLevel": "DEBUG",
+    "enablePdfConversionLibrarySelection": false,
+    "enableDemoPublishView":false,
+    "pdfConversionLibrary":"IDR"
+  },
+  "gradeLevels": [
+    {
+      "locale": "en_US",
+      "value": [
+        {
+          "id": "First"
+        },
+        {
+          "id": "Second"
+        },
+        {
+          "id": "Third"
+        },
+        {
+          "id": "Fourth"
+        },
+        {
+          "id": "Fifth"
+        },
+        {
+          "id": "Sixth"
+        },
+        {
+          "id": "Seventh"
+        },
+        {
+          "id": "Eighth"
+        },
+        {
+          "id": "Ninth"
+        },
+        {
+          "id": "Tenth"
+        },
+        {
+          "id": "Eleventh"
+        }
+      ]
+    }
+  ],
+  "subjectAreas": [
+    {
+      "locale": "en_US",
+      "value": [
+        {
+          "id": "Math"
+        },
+        {
+          "id": "Hebrew"
+        },
+        {
+          "id": "English"
+        },
+        {
+          "id": "LanguageArts"
+        },
+        {
+          "id": "ESL"
+        },
+        {
+          "id": "Science"
+        },
+        {
+          "id": "RoadSafety"
+        },
+        {
+          "id": "Reading"
+        },
+        {
+          "id": "Theology"
+        }
+      ]
+    }
+  ],
+  "loTypes": [
+    {
+      "id": "warmUp",
+      "display": "Warm up"
+    },
+    {
+      "id": "engage",
+      "display": "Engage"
+    },
+    {
+      "id": "explore",
+      "display": "Explore"
+    },
+    {
+      "id": "summary",
+      "display": "Summarize"
+    },
+    {
+      "id": "practice",
+      "display": "Practice"
+    },
+    {
+      "id": "reconnect",
+      "display": "Reconnect"
+    },
+    {
+      "id": "reflect",
+      "display": "Reflect"
+    },
+    {
+      "id": "homework",
+      "display": "Homework"
+    }
+  ],
+  "fileSizeLimits": [
+    {
+      "type": "image",
+      "size": 1048576,
+      "mimeTypes": [
+        "image/jpeg",
+        "image/png",
+        "image/gif",
+        "image/bmp"
+      ]
+    },
+    {
+      "type": "audio",
+      "size": 15728640,
+      "mimeTypes": [
+        "audio/wav",
+        "audio/x-wav",
+        "audio/mpeg3",
+        "audio/x-mpeg-3"
+      ]
+    },
+    {
+      "type": "video",
+      "size": 15728640,
+      "mimeTypes": [
+        "video/mpeg",
+        "video/x-mpeg",
+        "video/mp4"
+      ]
+    },
+    {
+      "type": "HTML",
+      "size": 15728640,
+      "mimeTypes": [
+        "text/plain",
+        "text/html",
+        "text/css",
+        "text/css",
+        "application/x-javascript",
+        "application/json",
+        "application/xml"
+      ]
+    },
+    {
+      "type": "PDF",
+      "size": 15728640,
+      "mimeTypes": [
+        "application/pdf"
+      ]
+    },
+    {
+      "type": "attachment",
+      "size": 15728640,
+      "mimeTypes": []
+    },
+    {
+      "type": "default",
+      "size": 15728640,
+      "mimeTypes": []
+    }
+  ],
+  "skills": {
+    "ref": "/publishers/1/skills/skills_us"
+  },
+  "relatesTo": {
+    "_id": -1,
+    "type": "SUPER_USER"
+  },
+  "accountId": 6
+}

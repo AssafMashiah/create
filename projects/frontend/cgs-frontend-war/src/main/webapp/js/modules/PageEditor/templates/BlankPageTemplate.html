@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body {
+			width: {{width}};
+			height: {{height}};
+		}
+		#background-holder {
+			width:100%;
+			height: 100%;
+			position: relative;
+			background-color: {{background-color}};
+		{{#background-image}}
+			background-image: url({{{background-image}}});
+			background-repeat: {{background-repeat}};
+			background-position: {{background-position}};
+			background-size: {{background-size}};
+		{{/background-image}}
+		}
+	</style>
+</head>
+<body>
+	<div id="background-holder"></div>
+</body>
+</html>

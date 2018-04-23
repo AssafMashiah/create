@@ -1,0 +1,4 @@
+############################################################################
+#  removing empty field eBookStructures from all ebooks                    #
+############################################################################
+ebooks.update({},{$unset: {"structure.eBookStructures":1}},{upsert: false, multi: true});

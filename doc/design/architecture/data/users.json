@@ -1,0 +1,20 @@
+[{
+	"userId": 4,
+	"publisherAccountId": 1,
+	"firstName": "pub",
+	"lastName": "admin",
+	"email": "fsd",
+	"username": "pa1",
+	"password": "fdsa",
+    "roles": ["PUBLISHER_ADMIN"]
+},
+{
+	"userId": 5,
+	"publisherAccountId": 1,
+	"firstName": "Roni",
+	"lastName": "Darwish",
+	"email": "fsd",
+	"username": "rd1",
+	"password": "fdsa",
+    "roles": ["PUBLISHER_ADMIN"]
+}]

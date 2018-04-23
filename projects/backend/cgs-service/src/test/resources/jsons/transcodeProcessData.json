@@ -1,0 +1,10 @@
+{
+    "id": "d4f53171-86e1-4f01-b5a9-1ffefe09722f",
+    "nameFormat": "SHA1",
+    "progressPercentage": 22,
+    "status": "TRANSCODING",
+    "creationDate": "2015-01-25T15:37:17.102Z",
+    "finishedDate": "2015-01-25T15:38:17.102Z",
+    "convertedFilePath": "C:\\t2kdev\\cgs\\projects\\backend\\cgs-service\\src\\test\\resources\\dummy.mp4",
+    "errors": []
+}

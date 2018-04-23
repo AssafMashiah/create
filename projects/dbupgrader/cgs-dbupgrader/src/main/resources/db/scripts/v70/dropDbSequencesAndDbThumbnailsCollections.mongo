@@ -1,0 +1,8 @@
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db['db.sequences'].drop();;
+    db['db.thumbnails'].drop();;
+}
+
+
+

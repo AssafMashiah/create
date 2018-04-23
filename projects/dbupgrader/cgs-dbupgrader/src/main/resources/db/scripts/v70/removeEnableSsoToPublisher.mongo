@@ -1,0 +1,4 @@
+######################################
+#  remove enableSso from publisher   #
+######################################
+publishers.update({},{$unset:{"enableSso":1}},false,true);

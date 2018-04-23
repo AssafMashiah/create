@@ -1,0 +1,5 @@
+#############################################################################
+#  add enable Course sample default false in publishers collection          #
+#############################################################################
+
+publishers.update({},{$set:{"customization.enableSampleCourse": false}},{upsert: false, multi: true});

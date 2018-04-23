@@ -1,0 +1,192 @@
+{"course": {
+    "cid": "3bae9fb4-cdac-47f4-8ade-d7acf5d97f27",
+    "type": "course",
+    "toc": {
+        "type": "tocItem",
+        "title": "1 Course",
+        "overview": "",
+        "keywords": [],
+        "tocItemRefs":
+                [
+                    {
+                        "cid": "990c5530-9885-47b1-9184-3ed92cba5453",
+                        "type": "lesson"
+                    }
+                ],
+        "cid": "c6346926-d7ce-4943-95f3-57d986202f16"
+    },
+    "header": {
+        "last-modified": {
+            "$date": "2013-04-18T08:16:34.467Z"
+        }
+    },
+    "coverRefId": "resource_1",
+    "title": "1 Course",
+    "maxDepth": 3,
+    "author": "t1 t1",
+    "cgsVersion": "7.0.199",
+    "publisher": "T2K",
+    "version": "1.0",
+    "includeLo": true,
+    "resources":
+            [
+                {
+                    "resId": "resource_1",
+                    "href": "media/bb/e7/b03086cf267f5291416be8df2c23a1dd4a77.jpg",
+                    "type": "media"
+                }
+            ]
+},
+
+
+"lessonsData": {
+    "990c5530-9885-47b1-9184-3ed92cba5453": {
+        "cid": "990c5530-9885-47b1-9184-3ed92cba5453",
+        "type": "lesson",
+        "title": "C. lesson",
+        "pedagogicalLessonType": "Custom",
+        "displayOddPages": "right",
+        "header": {
+            "last-modified": {
+                "$date": "2013-04-18T08:18:08.740Z"
+            }
+        },
+        "learningObjects":
+                [
+                    {
+                        "cid": "0d0db137-61cc-4ce5-9e7a-b1054811cab6",
+                        "type": "lo",
+                        "pedagogicalLoType": "warmUp",
+                        "sequences":
+                                [
+                                    {
+                                        "cid": "ab865811-820b-4833-97bb-3c8d165558b5",
+                                        "type": "sequence",
+                                        "title": "New sequence 1",
+                                        "mimeType": "DL",
+                                        "contentRef": "resource_2",
+                                        "thumbnailRef": "resource_1",
+                                        "resourceRefId":
+                                                [
+                                                    "resource_2",
+                                                    "resource_1"
+                                                ],
+                                        "tasks":
+                                                [
+                                                    {
+                                                        "cid": "bf688466-eb7b-46c3-aca2-e19774d715f6",
+                                                        "type": "questionOnly",
+                                                        "allowedAttempts": 0,
+                                                        "checkingType": "none",
+                                                        "title": "New Question Only"
+                                                    }
+                                                ]
+                                    },
+                                    {
+                                        "cid": "2cb9f6f6-0ee9-468e-91fd-022908f2fbd0",
+                                        "type": "sequence",
+                                        "title": "New pdf_sequence 1",
+                                        "mimeType": "DL",
+                                        "contentRef": "resource_3",
+                                        "thumbnailRef": "resource_4",
+                                        "resourceRefId":
+                                                [
+                                                    "resource_3",
+                                                    "resource_4"
+                                                ]
+                                    },
+                                    {
+                                        "cid": "1f11b357-0cef-4a97-a53a-e5bd02934d56",
+                                        "type": "sequence",
+                                        "title": "New url_sequence 1",
+                                        "mimeType": "DL",
+                                        "contentRef": "resource_7",
+                                        "thumbnailRef": "resource_8",
+                                        "resourceRefId":
+                                                [
+                                                    "resource_7",
+                                                    "resource_8"
+                                                ]
+                                    },
+                                    {
+                                        "cid": "adf1f432-aed5-44ac-9f2f-957016602951",
+                                        "type": "sequence",
+                                        "title": "New separator 1",
+                                        "mimeType": "DL",
+                                        "contentRef": "resource_9",
+                                        "thumbnailRef": "resource_10",
+                                        "resourceRefId":
+                                                [
+                                                    "resource_9",
+                                                    "resource_10"
+                                                ]
+                                    }
+                                ],
+                        "title": "New lo"
+                    }
+                ],
+        "resources":
+                [
+                    {
+                        "resId": "resource_1",
+                        "href": "thumbnails/ab865811-820b-4833-97bb-3c8d165558b5",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_2",
+                        "href": "sequences/ab865811-820b-4833-97bb-3c8d165558b5",
+                        "type": "attachment"
+                    },
+                    {
+                        "resId": "resource_3",
+                        "href": "sequences/2cb9f6f6-0ee9-468e-91fd-022908f2fbd0",
+                        "type": "attachment"
+                    },
+                    {
+                        "resId": "resource_4",
+                        "href": "thumbnails/2cb9f6f6-0ee9-468e-91fd-022908f2fbd0",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_5",
+                        "href": "media/40/2e/f6a2af40df63e5bffd3426cb277a2bdb3123.pdf",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_6",
+                        "href": "media/29/1c/00e47fec9639de21926ced1ec8700274d6a4.pdf",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_7",
+                        "href": "sequences/1f11b357-0cef-4a97-a53a-e5bd02934d56",
+                        "type": "attachment"
+                    },
+                    {
+                        "resId": "resource_8",
+                        "href": "thumbnails/1f11b357-0cef-4a97-a53a-e5bd02934d56",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_9",
+                        "href": "sequences/adf1f432-aed5-44ac-9f2f-957016602951",
+                        "type": "attachment"
+                    },
+                    {
+                        "resId": "resource_10",
+                        "href": "thumbnails/adf1f432-aed5-44ac-9f2f-957016602951",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_11",
+                        "href": "media/2a/f1/87c10719115aeab07fbe0b2ddfabbef0e548.jpg",
+                        "type": "media"
+                    },
+                    {
+                        "resId": "resource_12",
+                        "href": "media/8b/3d/2f7e1f98557562e845b3ea71b5b9167c616e.mp3",
+                        "type": "media"
+                    }
+                ]
+    }
+}}

@@ -1,0 +1,25 @@
+<div class="props_text_container">
+	<div class="visibleOnHover">
+		<div class='contentEditableTve' {{^readOnly}} contenteditable="true" {{/readOnly}}>{{{data.value}}}</div>
+		{{^options.plainMode}}
+		<div class="narration_icon {{^hasFile}}disabled{{/hasFile}}">
+			<div class="btn disabled remove-narration"><span class="icon-trash base-icon"></span></div>
+		</div>
+		{{/options.plainMode}}
+	</div>
+	{{^options.plainMode}}
+		<div class="hiddenOnHover">
+			<div id="addNarration" class="btn btn-small uploadNarration disabled" >((...))</div>
+			<input type="file" accept='audio/mp3' class="hide-file-upload fileUpload"> 
+	        {{#options.isTTSEnabled}}
+			  <div class="btn btn-small upload_tts disabled">((TTS))</div>
+	        {{/options.isTTSEnabled}}
+			{{#options.displayInlineImage}}
+			<div class="btn btn-small uploadInlineImage disabled base-icon icon-picture"></div>
+			<input type="file" accept="image/png", "image/svg+xml" class="hide-file-upload imgUpload"> 
+			{{/options.displayInlineImage}}
+		</div>
+	{{/options.plainMode}}
+
+</div>
+

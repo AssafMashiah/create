@@ -1,0 +1,12 @@
+<!-- {{constructor.type}} -->
+<div id="predefined_feedbacks_wrapper">
+    ((Select a predefined scenario:))
+    <select id="predefined_feedbacks">
+        {{#feedbacks_predefined_list}}
+        <option value="{{.}}">(({{.}}))</option>
+        {{/feedbacks_predefined_list}}
+    </select>
+</div>
+<div class="{{elementType}}_content"></div>
+
+

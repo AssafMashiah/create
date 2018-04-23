@@ -1,0 +1,13 @@
+<div id="font_Selection">
+	<label>((course.props_area.tab_design.style_editor.toolbar.font_size.msg_prompt)):</label>
+	{{#options.config.isStyle}}
+		<input min="12" max="72" type='number' id="fontSizeInput" class="span1"></input>
+		<span for="upload-pwd">px</span>
+	{{/options.config.isStyle}}
+	{{^options.config.isStyle}}
+		<input min="75" max="130" type='number' id="fontSizeInput" class="span1"></input>
+		<span for="upload-pwd">%</span>
+	{{/options.config.isStyle}}
+
+
+</div>

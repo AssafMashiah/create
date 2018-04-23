@@ -1,0 +1,37 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<form class="form-horizontal" id="dropzone">
+    <div class="dropoutline"></div>
+    <div class="form-group required">
+        <label for="selectedFile">((dialog.importepub.epubfield.label)):</label>
+        <div class="form-control input-xlarge">
+            <span id="file_name">((dialog.importepub.epubfield.placeholder))</span>
+            <button id="button_upload" class="btn btn-small pull-right">...</button>
+        </div>
+    </div>
+    <div class="form-group required">
+        <label for="courseName">((dialog.importepub.coursename.label)):</label>
+        <input type="text" placeholder="((dialog.importepub.coursename.placeholder))" id="courseName" autocomplete="off"
+               class="form-control input-xlarge" required />
+    </div>
+    <div class="form-group required">
+        <label for="contentLocales">((dialog.importepub.contentlanguage.label)):</label>
+        <select class="form-control input-xlarge" id="contentLocales" required >
+            <option disabled selected value="">((dialog.importepub.contentlanguage.placeholder))</option>
+        {{#locales}}<option value="{{.}}">{{.}}</option>{{/locales}}
+        </select>
+    </div>
+    <div class="form-group required">
+        <label for="learningObject">((dialog.importepub.learningobject.label)):</label>
+        <select class="form-control input-xlarge" id="learningObject" required >
+            <option disabled selected value="">((dialog.importepub.learningobject.placeholder))</option>
+            <option value="true">((form.options.yes))</option>
+            <option value="false">((form.options.no))</option>
+        </select>
+    </div>
+    <div class="form-group required" id="last-row"><label>((form.required))</label></div>
+    <div id="button_row">
+        <button id="submitBtn" disabled>((dialog.importepub.importbutton))</button>
+    </div>
+</form>
+
+<input id="fileUpload" type="file" accept="application/epub+zip,.epub" class="hide-file-upload" />

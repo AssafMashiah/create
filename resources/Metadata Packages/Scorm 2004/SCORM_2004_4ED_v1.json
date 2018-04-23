@@ -1,0 +1,189 @@
+{
+    "packageName": "SCORM 2004 4th Edition",
+    "packageDescription": "describes the components used in a learning experience, how to package those components for exchange from system to system, how to describe those components to enable search and discovery and how to define sequencing information for the components",
+    "target": "lesson",
+    "id": "t2k_scorm2004_E4",
+    "requiredTargetFields": {
+
+    },
+
+    "customMetadata": [
+        {
+            "id": "t2k_scorm2004_v4_lom_general_identifier_catalog",
+            "name": "General catalog identifier",
+            "type": "list",
+            "value": "Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_general_identifier_entry",
+            "name": "General catalog entry",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_identifier_catalog",
+            "name": "MetaMetadata catalog identifier",
+            "type": "list",
+            "value": "none,T2KStore,T2KTeach,Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_identifier_entry",
+            "name": "MetaMetadata catalog entry",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_role",
+            "name": "MetaMetadata contributor role",
+            "type": "list",
+            "value": "creator,validator"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_title",
+            "name": "MetaMetadata contributor entity title",
+            "type": "list",
+            "value": "Mr.,Ms.,Mrs.,Dr."
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_name",
+            "name": "MetaMetadata contributor entity name",
+            "type": "text",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_familyName",
+            "name": "MetaMetadata contributor entity family name",
+            "type": "text",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_email",
+            "name": "MetaMetadata contributor entity family email",
+            "type": "text",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_phone",
+            "name": "MetaMetadata contributor entity family phone #",
+            "type": "text",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_date",
+            "name": "MetaMetadata contribute date",
+            "type": "date",
+            "value": "mm/dd/yy"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_date_time",
+            "name": "MetaMetadata contribute date time",
+            "type": "time",
+            "value_format": "24hours",
+            "value_includeSeconds": false
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_contribute_date_description",
+            "name": "MetaMetadata contribute date description",
+            "type": "freeText",
+            "value": ""
+        }, {
+            "id": "t2k_scorm2004_v4_lom_metaMetadata_language",
+            "name": "MetaMetadata language",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_technical_location",
+            "name": "Technical location",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_technical_requirement_orComposite_minimumVersion",
+            "name": "Technical requirement minimum version",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_technical_requirement_orComposite_maximumVersion",
+            "name": "Technical requirement maximum version",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_technical_installationRemarks",
+            "name": "Technical installation remarks",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_technical_otherPlatformRequirements",
+            "name": "Technical other platform requirements",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_learningResourceType",
+            "name": "Educational learning resource type",
+            "type": "list",
+            "value": "exercise,simulation,questionnaire,diagram,figure,graph,index,slide,table,narrative text,exam,experiment,problem statement,self assessment,lecture"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_interactivityLevel",
+            "name": "Educational interactivity level",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_semanticDensity",
+            "name": "Educational semantic density",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_intendedEndUserRole",
+            "name": "Educational indended end user",
+            "type": "list",
+            "value": "teacher,author,learner,manager"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_context",
+            "name": "Educational context",
+            "type": "list",
+            "value": "school,higher education,training,other"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_typicalAgeRange",
+            "name": "Educational typical age range",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_difficulty",
+            "name": "Educational difficulty",
+            "type": "list",
+            "value": "very easy,easy,medium,difficult,very difficult"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_educational_description",
+            "name": "Educational description",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_rights_cost",
+            "name": "Rights cost",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_rights_cost_description",
+            "name": "Rights cost description",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_rights_copyrightAndOtherRestrictions",
+            "name": "Rights copyright and other restrictions",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_rights_description",
+            "name": "Rights description",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_relation_kind",
+            "name": "Relation kind",
+            "type": "list",
+            "value": "ispartof,haspart,isversionof,hasversion,isformatof,hasformat,references,isreferencedby,isbasedon,isbasisfor,requires,isrequiredby"
+        }, {
+            "id": "t2k_scorm2004_v4_lom_relation_resource_identifier_catalog",
+            "name": "Relation resource catalog identifier",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_relation_resource_identifier_entry",
+            "name": "Relation resource entry identifier",
+            "type": "freeText",
+            "value": 3
+        }, {
+            "id": "t2k_scorm2004_v4_lom_relation_resource_description",
+            "name": "Relation resource description",
+            "type": "freeText",
+            "value": 3
+        }
+    ]
+}

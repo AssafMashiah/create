@@ -1,0 +1,15 @@
+{
+    "customization": {
+        "cgsHintsShowMode": "hideAll"
+    },
+    "username": "dummy",
+    "password": "123456",
+    "email": "dummy@dummy.com",
+    "firstName": "dummy",
+    "lastName": "dummy",
+    "relatesTo": {
+        "id": 1,
+        "type": "PUBLISHER"
+    },
+    "userId": 3
+}

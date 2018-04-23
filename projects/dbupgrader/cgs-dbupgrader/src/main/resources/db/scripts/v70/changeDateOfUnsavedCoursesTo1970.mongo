@@ -1,0 +1,21 @@
+// Find all courses that are created by hitting on "new course" button, but were not saved explicitly by user,
+// and change their date to 1970
+
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db.courses.update({
+        "contentData.maxDepth":3,
+        $or:[
+            {"contentData.resources":{$size:0}},
+            {"contentData.customizationPack.version":{$regex: /^\d\.\d$/},"contentData.resources":{$size:1}}
+           ],
+        "contentData.standardPackages":{$size:0},
+        "contentData.title":{$in:["New Course","Nouveau cours","Novo Curso"]},
+    	$or:[{"contentData.contentLocales":{$size:1},"contentData.contentLocales.0":"en_US"},{"contentData.contentLocales":{$exists:false}}],
+        "contentData.toc.overview":"",
+        "contentData.toc.keywords": {$size:0},
+        "contentData.toc.tocItemRefs": {$size:0},
+        "contentData.toc.tocItems" : {$size:0},
+        "contentData.version" : "1.0.0"}, {$set:{"contentData.header.last-modified" : ISODate("1970-01-01T00:00:00.000Z")}},{multi:true}
+    )
+}

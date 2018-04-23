@@ -1,0 +1,8 @@
+<applet id="{{id}}" path="{{appletPath}}" {{#hasDimensions}}minWidth="{{playSize.minSize.width}}" minHeight="{{playSize.minSize.height}}" optimumWidth="{{playSize.optimumSize.width}}" optimumHeight="{{playSize.optimumSize.height}}"{{/hasDimensions}}>
+	<data>{{{appletData}}}</data>
+	<files>
+		{{#files}}
+		<appletFile assetId="{{assetId}}" path="{{path}}" />
+		{{/files}}
+	</files>
+</applet>

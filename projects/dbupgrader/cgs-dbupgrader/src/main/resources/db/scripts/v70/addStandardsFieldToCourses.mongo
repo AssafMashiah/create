@@ -1,0 +1,4 @@
+###################################################################################
+#  add empty standards array field to courses' contentData that has no such field #
+###################################################################################
+courses.update({"contentData.standards":null}, {$set:{"contentData.standards": []}}, {upsert:false, multi:true});

@@ -1,0 +1,14 @@
+<div class="filesUploaded">{{numberFilesUploaded}} ((fonts were embedded successfully from)) {{zipName}}</div>
+{{#hasInvalidFiles}}
+	((fileWithSpaceMessage))
+<ul class="filesNotUploaded">
+
+	{{#filesList}}
+		<li class="font_row">
+			{{.}}
+		</li>
+	{{/filesList}}
+</ul>
+((Rename the files and upload them again for embedding)).
+{{/hasInvalidFiles}}
+

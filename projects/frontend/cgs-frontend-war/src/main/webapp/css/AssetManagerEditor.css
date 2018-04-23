@@ -1,0 +1,121 @@
+#stage_base .assets-title {
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#stage_base #assets-table td{
+	vertical-align: top;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    word-break: break-word;
+}
+
+#stage_base #assets-table th.can-order,
+#stage_base #assets-table th {
+	cursor: pointer;
+	background-color: rgb(245, 245, 245);
+	border-radius: 0;
+	white-space: nowrap;
+}
+
+#stage_base #assets-table .icon-filter {
+	vertical-align: middle;
+}
+
+#stage_base #assets-table .filter.active .icon-filter {
+	color: #0099E5;
+}
+
+#stage_base #assets-table .filter-option-all,
+#stage_base #assets-table .filter-option {
+	white-space: nowrap;
+}
+
+#stage_base #assets-table .filter-option-all label,
+#stage_base #assets-table .filter-option label {
+	display: inline;
+}
+
+#stage_base #assets-table .filter-option-all {
+	padding: 1px 7px;
+}
+
+#stage_base #assets-table .filter-option {
+	padding: 1px 20px;
+}
+
+#stage_base #assets-table .filter-option-all input,
+#stage_base #assets-table .filter-option input {
+	margin-top: -2px;
+}
+
+#stage_base #assets-table th.can-order:hover {
+	background-color: #EEE;
+}
+
+#stage_base #assets-table th.order-asc:after {
+	content: "";
+	float: right;
+	border: 8px rgba(0, 0, 0, 0) solid;
+	border-bottom: 8px #CCC solid;
+}
+
+#stage_base #assets-table th.order-desc:after {
+	content: "";
+	float: right;
+	border: 8px rgba(0, 0, 0, 0) solid;
+	border-top: 8px #CCC solid;
+	margin-top: 5px;
+}
+
+#stage_base #assets-table .no-select {
+	padding-left: 8px;
+	white-space: nowrap;
+}
+
+#stage_base #assets-table .upload-btn {
+	margin-top: -2px;
+}
+
+#stage_base #assets-table select.state-list {
+	outline: none;
+	border: none;
+	padding-left: 4px;
+	margin-bottom: 2px;
+	-webkit-appearance: none;
+	width: auto;
+}
+
+#stage_base #assets-table input[type=checkbox] {
+	margin-top: -2px;
+}
+
+#stage_base #assets-table textarea {
+	width: 80%;
+}
+
+#stage_base #assets-table select.state-list:hover:not([disabled]) {
+	border: 1px solid #CCC;
+	padding-left: 3px;
+	-webkit-appearance: menulist-button;
+}
+
+#stage_base #assets-table .original-text {
+	padding: 0;
+}
+
+#stage_base #assets-table iframe {
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 90px;
+}
+
+div.assetId_wrapper{
+    word-wrap:break-word;
+    margin:0;
+}

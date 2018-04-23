@@ -1,0 +1,18 @@
+{{#showBar}}
+<div class="form-inline span9" id="task_types_nav_bar" focusCapture="navbar">
+    <div class="tasksTypes">
+        {{#displayTaskDropdown}}
+        <label class="selectTaskTypeLabel" for="select_TaskType">((Task type)):</label>
+        <select id="select_TaskType" class="span3">
+            {{#typesDropDown}}
+                <option data-funcName="{{editor}}" value="{{name}}">(({{fullName}}))</option>
+            {{/typesDropDown}}
+        </select>
+        {{/displayTaskDropdown}}
+        {{#displayTaskName}}
+            <label class="selectTaskTypeLabel" for="select_TaskType">((Task type)):</label>
+            <label class="control-label taskLabel">(({{setScreenLabel}}))</label>
+        {{/displayTaskName}}
+    </div>
+</div>
+{{/showBar}}

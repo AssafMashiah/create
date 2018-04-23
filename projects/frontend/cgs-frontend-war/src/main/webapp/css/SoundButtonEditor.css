@@ -1,0 +1,16 @@
+.soundButton{
+	width:126px;
+	height: 92px;
+	background-image: url('../media/icons_sprite.png');
+    background-position:  -272px -560px;
+}
+
+.soundButton.disabled{
+    background-position:  0px -560px;
+}
+
+.soundButton.ordered{
+ 	background-position: -136px -560px;
+}
+
+

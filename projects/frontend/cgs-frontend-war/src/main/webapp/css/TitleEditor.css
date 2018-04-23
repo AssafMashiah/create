@@ -1,0 +1,23 @@
+.title_content.title_dontShow {
+	background-color: #FAFAFA;
+}
+
+.title_content.title_dontShow h3 {	
+	color: #6CB6A5;
+}
+
+.screen-content.task_screen .title_content.title_dontShow > .element_preview_wrapper,
+.screen-content.task_screen .title_content > div.title_message,
+.title_content.title_dontShow > .element_preview_wrapper,
+.title_content > div.title_message  {
+	display: none;
+}
+
+.screen-content.task_screen .title_content.title_dontShow > div.title_message,
+.title_content.title_dontShow > div.title_message {
+	display: inline-block;
+}
+.titleEditor {
+	padding: 10px;
+	background-color: #FAFAFA;
+}

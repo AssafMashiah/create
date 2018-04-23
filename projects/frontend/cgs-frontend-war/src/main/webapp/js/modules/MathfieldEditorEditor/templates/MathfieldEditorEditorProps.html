@@ -1,0 +1,36 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper mathfield_editor_editor props_editor">
+    <ul class="nav nav-tabs" id="mathfieldEditorEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+     		 
+             {{#controller.record.data.displayFieldSize}}
+                <div class="control-group">
+                    <label class="control-label" for="field_answer_size">((Size))</label>
+                    <select id="field_answer_size" data-value="obj.answer_size">
+                        {{#controller.record.data.allowedSizes}}
+                            <option value="{{value}}">(({{text}}))</option>
+                        {{/controller.record.data.allowedSizes}}
+                    </select>
+                    <label class="control-label" for="field_AnswerType">((Max. number of characters))</label>                   
+                    <input type="text" {{#controller.record.data.disabledMaxChars}} disabled="disabled" cantBeEnabled="true" {{/controller.record.data.disabledMaxChars}} data-value="obj.MaxChars" class="textEditorInput" id="MaxChars" maxlength="4" />
+                </div>
+            {{/controller.record.data.displayFieldSize}}
+            
+
+        <div class="control-group">
+        <label class="control-label" for="completionType">((task.answer_field_type_mathfield.props.activeKeyOnKeyboard)):</label>
+            <select id="completionType" data-value="obj.completionType">
+     			{{#controller.constants.completionTypes}}
+     				<option value="{{key}}">{{label}}</option>
+     			{{/controller.constants.completionTypes}}
+     		</select>
+        </div>
+
+        </div>
+    </div>
+</div>

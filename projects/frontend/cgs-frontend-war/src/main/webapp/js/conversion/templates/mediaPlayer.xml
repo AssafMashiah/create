@@ -1,0 +1,1 @@
+<mediaPlayer {{#autoPlay}} auto_play="{{autoPlay}}" {{/autoPlay}} {{^ignoreSize}}height="{{height}}" width="{{width}}"{{/ignoreSize}} src="{{src}}" type="{{contentType}}" id="{{id}}" />

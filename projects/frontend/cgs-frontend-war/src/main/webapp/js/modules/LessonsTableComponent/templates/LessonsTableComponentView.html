@@ -1,0 +1,31 @@
+<div class="span12">
+    <div class="lessonTableTitle" for="lessons_table">
+        <h3>{{controller.showTitle}}</h3>
+    </div>
+    <div id="lessons_table" class="{{#options.readOnlyMode}}readOnlyMode{{/options.readOnlyMode}}">
+        <div id="lessons_list">
+            <div class="empty-placeholder"><img src="media/empty_folder.png"><br/>((course.lessons.table.empty.placeholder))</div>
+        </div>
+    </div>
+    <div id="new_lesson_component" class="{{#options.readOnlyMode}}readOnlyMode{{/options.readOnlyMode}}">
+        
+        {{#controller.enableBornDigital}}
+        <div class="addNew new_lesson">
+            <div class="newIcon"></div>
+            <div class="newText">((course.lessons.table.new.lesson))</div>
+        </div>
+        {{/controller.enableBornDigital}}
+        {{#controller.enableBookAlive}}
+        <div class="addNew new_ebook">
+            <div class="newIcon"></div>
+            <div class="newText">((course.lessons.table.new.ebook))</div>
+        </div>
+        {{/controller.enableBookAlive}}
+        {{#controller.enableAssessment}}
+        <div class="addNew new_assessment">
+            <div class="newIcon "></div>
+            <div class="newText">((course.lessons.table.new.assessment))</div>
+        </div>
+        {{/controller.enableAssessment}}
+    </div>
+</div>

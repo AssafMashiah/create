@@ -1,0 +1,17 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content scroll_enabled texteditor 
+{{#record.data.answer_size}} {{record.data.answer_size}} {{/record.data.answer_size}} " mode="{{record.data.mode}}">
+	{{#record.data.isNoncheckable}}
+	<iframe id="textViewerEditor_{{elementId}}" class="textViewerEditor non-checkable"></iframe>
+	{{/record.data.isNoncheckable}}
+
+	{{^record.data.isNoncheckable}}
+		{{^record.data.tvPlaceholder}}
+		<iframe id="textViewerEditor_{{elementId}}" class="textViewerEditor"></iframe>
+		{{/record.data.tvPlaceholder}}
+
+		{{#record.data.tvPlaceholder}}
+		<img class="textViewer-placeholder" src="{{record.data.tvPlaceholder}}">
+		{{/record.data.tvPlaceholder}}
+	{{/record.data.isNoncheckable}}
+</div>

@@ -1,0 +1,3 @@
+<{{lowerName}} id='{{id}}' {{{attr}}} auto_tag='auto_tag' >
+	{{{content}}}
+</{{lowerName}}>

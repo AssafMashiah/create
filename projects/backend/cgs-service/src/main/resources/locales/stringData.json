@@ -1,0 +1,431 @@
+{
+	"feedbacks": {
+		"mc_single_answer_generic": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"mc_single_answer_generic_specific": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"mc_multiple_answer_basic": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"mc_multiple_answer_advanced": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"fill_the_gaps_single": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"fill_the_gaps_multiple": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"short_answer_single": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"short_answer_multiple": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"Applet_Task": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"matching": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"sequencing": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"misplaced_sequence_part": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		},
+		"sorting": {
+			"all_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_missing_item": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_more_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"partly_correct_less_80": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_correct_and_wrong": {
+				"preliminary": "",
+				"final": ""
+			},
+			"all_incorrect": {
+				"preliminary": "",
+				"final": ""
+			}
+		}
+	},
+	"repo": {
+		"mcInstruction": "",
+		"mcMultiInstruction": "",
+		"freeWritingInstruction": "",
+		"shortAnswerInstruction": "",
+		"appletInstruction": "",
+		"clozeInstruction": "",
+		"matchingInstruction": "",
+		"matchingInstructionOneToMany": "",
+		"sequencingInstruction": "",
+		"sequencingInstructionWithBank": "",
+		"sortingInstruction": "",
+		"linkingInstruction": "",
+		"linkingOneToManyInstruction":""
+	}
+}

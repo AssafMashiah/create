@@ -1,0 +1,9 @@
+ function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    var contentLocalesJson = {
+        options:[ "en_US","fr_FR","iw_IL","nl_NL","pt_BR","ar_IL" ],
+        selected : "en_US"
+    };
+    db.publishers.update({},{$unset:{locales:1}},{ multi:true}); //removing "locales" field
+    db.publishers.update({},{$set:{"contentLocales":contentLocalesJson}},{multi: true});  // adding contentLocales
+}

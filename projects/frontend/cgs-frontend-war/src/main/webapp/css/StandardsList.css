@@ -1,0 +1,90 @@
+#standards_list ul {
+    list-style:none;
+}
+
+
+#standards_list input[type=checkbox] {
+    margin-right: 0.5em;
+    bottom: 3px;
+    position: relative;
+}
+
+
+#standards_list  .list_container  li:hover {
+    background-color: #DFE8E5;
+}
+ #standards_list  .list_container  li:hover .removeStd {
+     visibility: visible;
+ }
+
+#standards_list  .list_container li {
+    position:relative;
+    padding:1px;
+}
+#standards_list  .list_container  li .removeStd:hover  {
+    color:#0088cc;
+}
+
+#standards_list .list_container ul {
+    margin: 5px 17px;
+    width: 80%;
+    font-size: 12px;
+}
+
+.removeStd {
+    position:absolute;
+    right:5px;
+    cursor: pointer;
+    visibility: hidden;
+    line-height: 22px;
+}
+
+.removeStd.disabled {
+    display:none;
+}
+
+.selected-top-container .list_container .list_title {
+    font-size: 14px;
+    text-decoration: none;
+}
+.selected-top-container .list_container .list_title:empty {
+    display: none;
+}
+.selected-top-container .list_container .list_title::before {
+    content: "";
+    width: 15px;
+    margin: 0 4px 0 0;
+    background: url(../../media/icons.png) 0 0 no-repeat;
+    display: inline-block;
+    min-height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.selected-top-container .list_container li:hover {
+    background-color: #C2D5DD;
+}
+.selected-top-container .list_container li:hover .removeStd {
+    visibility: visible;
+}
+
+.selected-top-container .list_container li {
+    background-color: #D8E2E7;
+    position: relative;
+    padding: 4px;
+    margin: 5px 20px;
+    font-size: 12px;
+}
+
+.selected-top-container .list_container li .removeStd:hover  {
+    color:#0088cc;
+}
+
+#selectedScroller #selectedContainer {
+    margin-top: 13px;
+}
+
+#addStandards {
+    margin-bottom: 15px;
+}
+

@@ -1,0 +1,25 @@
+#applets-toolbox {
+  margin: 40px 0; }
+  #applets-toolbox .toolbox-title__subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+  #applets-toolbox .toolbox-title__description {
+    flex: 1 1 0; }
+  #applets-toolbox thead {
+    background-color: #eee; }
+  #applets-toolbox .toolbox-delete-cell {
+    vertical-align: middle;
+    text-align: center; }
+  #applets-toolbox .toolbox-row__delete {
+    padding: 0;
+    width: 50px;
+    height: 30px;
+    line-height: 30px; }
+    #applets-toolbox .toolbox-row__delete i {
+      font-style: normal;
+      position: relative;
+      display: inline;
+      font-size: 2em;
+      line-height: 30px;
+      vertical-align: initial; }

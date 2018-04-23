@@ -1,0 +1,21 @@
+{
+    "name": "blossom",
+    "dataType": "scorm",
+    "ssoSettings": {
+        "enable": true,
+        "authenticationMethod": "oauth2",
+        "httpMethod": null,
+        "urlTemplate": null,
+        "authPrincipal": null,
+        "secretKey": " NXNv2r3JBGmrPmN"
+    },
+    "fileUploadSettings": {
+        "enable": true,
+        "authenticationMethod": "digest",
+        "httpMethod": "POST",
+        "urlTemplate": " http://lms-brazil.timetoknow.com/WebServices/content",
+        "authPrincipal": " t2k_cgs_in",
+        "secretKey": "93G5Ym0k6BUXQC9"
+    }
+}
+

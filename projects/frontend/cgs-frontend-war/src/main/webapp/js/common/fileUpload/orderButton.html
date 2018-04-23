@@ -1,0 +1,10 @@
+{{#enableAssetManager}}
+    {{#isOrder}}
+	<button class='btn btn-small btn-position order-button' {{^isOrderEnabled}}canBeDisabled='false' disabled{{/isOrderEnabled}}>
+		((Order))
+	</button>{{/isOrder}}
+	{{#isNarration}}
+		<button class='btn btn-small btn-position tts-button' {{#disableTTS}}canBeDisabled='false' disabled{{/disableTTS}}>
+			((TTS))
+		</button>{{/isNarration}}
+{{/enableAssetManager}}

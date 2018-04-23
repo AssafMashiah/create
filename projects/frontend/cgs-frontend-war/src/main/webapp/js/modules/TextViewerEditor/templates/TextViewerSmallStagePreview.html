@@ -1,0 +1,9 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content small">
+	{{^record.data.tvPlaceholder}}
+	<iframe id="textViewerEditor_{{elementId}}" class="textViewerEditor"  scrolling="no" ></iframe>
+	{{/record.data.tvPlaceholder}}
+	{{#record.data.tvPlaceholder}}
+	<img class="textViewer-placeholder" src="{{record.data.tvPlaceholder}}">
+	{{/record.data.tvPlaceholder}}
+</div>

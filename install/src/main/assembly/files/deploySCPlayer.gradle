@@ -1,0 +1,34 @@
+ant.property(file: "t2k.properties")
+
+project.ext.playerPath = null
+project.ext.fullVersion = null
+
+
+def checkProperties() {
+    if (hasProperty('player')) {
+        playerPath = $ { projectDir } / $ { player }
+    } else {
+        playerPath = new File("${projectDir}/scplayer").listFiles()[0].getPath()
+    }
+}
+
+task removePreviousScpFolder() {
+    String scpDir = ant.cmsHome + "/scp"
+    delete scpDir
+}
+
+task copySCP(dependsOn: removePreviousScpFolder) << {
+    checkProperties()
+    String playerInstallDir = ant.cmsHome
+
+    //'scp' will be added
+    println "${playerPath}"
+    copy() {
+        from zipTree("${playerPath}")
+        into playerInstallDir
+    }
+}
+
+task deploySCPlayer() {
+    dependsOn copySCP
+}

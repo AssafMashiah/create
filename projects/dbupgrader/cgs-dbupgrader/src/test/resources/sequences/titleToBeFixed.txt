@@ -1,0 +1,1 @@
+<div class="cgs instruction" style="min-width: 28px;min-height: 28px;margin: 0 10px 0px 0px;padding: 0;outline: none;white-space:pre-wrap;clear:both; -webkit-user-select: auto" contenteditable="false" customstyle="instruction">Click to edit the instruction</div>

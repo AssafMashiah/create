@@ -1,0 +1,45 @@
+.inline-block{
+	display: inline-block;
+}
+.sound_icon{
+	width: 126px;
+	height: 92px;
+	background-image: url('../media/icons_sprite.png');
+    background-position: -272px -560px;
+}
+.sound_icon.disabled{
+    background-position: 0 -560px;
+}
+.sound_icon.ordered{
+    background-position: -136px -560px;
+}
+
+.narration_icon{
+	width: 32px;
+	height: 32px;
+	background-position: -178px -660px;
+	background-image: url('../media/icons_sprite.png');
+}
+.narration_icon.ordered{
+	background-position: -136px -660px;
+
+}
+.narration_icon.disabled{
+	background-position: -220px -660px;
+
+}
+.video_icon{
+	width : 153px;
+	height: 122px;
+	background-image: url('../media/icons_sprite.png');
+	background-position: -692px -167px;
+}
+.video_icon.disabled{
+	background-position: -348px -167px;
+}
+.video_icon.ordered{
+	background-position: -520px -167px;
+}
+.btn-position{
+	margin: -17px 0 0 0;
+}

@@ -1,0 +1,39 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper props_editor">
+    <ul class="nav nav-tabs">
+        <li class="active" ><a href="#properties" data-toggle="tab">((Properties))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+        <li><a href="#guide" data-toggle="tab">((Teacher's Guide))</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_title">((html_sequence)) ((name)):</label>
+                <div class="controls">
+                    <input type="text" id="field_title" data-value="obj.title" />
+                </div>
+            </div>
+            <div class="help_placeholder">
+
+            </div>
+            <!--<div class="control-group">
+                <div class="controls" >
+                    <img  src="{{controller.record.data.thumbnail}}" width="200" height="150" style="border:1px solid #dedede">
+                </div>
+            </div>!-->
+        </div>
+        <div class="tab-pane" id="guide">
+            <div class="control-group">
+                <div class="teacherGuide-placeholder"></div>
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <div class="tab-pane" id="standards">
+            <h5>((standards.sequence_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>

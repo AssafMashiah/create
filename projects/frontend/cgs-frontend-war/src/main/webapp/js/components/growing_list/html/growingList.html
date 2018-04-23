@@ -1,0 +1,26 @@
+<div class="growinglist-component control-group {{options.class}}">
+	<label class="control-label">(({{options.title}}))</label>
+	<div class="controls">
+		<div class="growinglist">
+			<!-- <div class="growinglist-row growinglist-header">
+				<div class="index column">((#))</div>
+				{{#columns}}
+					<div class="content column">{{name}}</div>
+				{{/columns}}
+			</div> -->
+  		{{#has_data}}
+  			{{#data}}
+                {{> row}}
+  			{{/data}}
+  		{{/has_data}}
+		</div>
+    {{#has_predefined_fields}}
+      <div class="growinglist-component__predefined-fields">
+        {{#predefinedFields}}
+          {{> predefinedRow }}
+        {{/predefinedFields}}
+      </div>
+    {{/has_predefined_fields}}
+		<button class="js-growing-add base-icon icon-plus" canBeDisabled="true"></button>
+	</div>
+</div>

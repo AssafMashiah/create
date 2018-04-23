@@ -1,0 +1,803 @@
+{
+    "name": "ccss",
+    "description": "Common Core State Standards for Mathematics",
+    "subjectArea": "math",
+    "country": "USA",
+    "version": "1.0",
+    "created": "29/05/2013 04:14:22",
+    "standards": {
+        "pedagogicalId": "CM",
+        "taggable": "false",
+        "description": "",
+        "children": [
+            {
+                "pedagogicalId": "6",
+                "gradeLevel": "sixth",
+                "taggable": "false",
+                "description": "Common Core State Standards for Mathematics, Grade 6",
+                "children": [
+                    {
+                        "pedagogicalId": "6.EE",
+                        "gradeLevel": "sixth",
+                        "taggable": "false",
+                        "description": "Expressions and Equations",
+                        "children": [
+                            {
+                                "pedagogicalId": "6.EE.A",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Apply and extend previous understandings of arithmetic to algebraic expressions.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.EE.A.1",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Write and evaluate numerical expressions involving whole-number exponents."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.A.2",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Write, read, and evaluate expressions in which letters stand for numbers.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "6.EE.A.2a",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Write expressions that record operations with numbers and with letters standing for numbers."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.EE.A.2b",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Identify parts of an expression using mathematical terms (sum, term, product, factor, quotient, coefficient); view one or more parts of an expression as a single entity."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.EE.A.2c",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Evaluate expressions at specific values of their variables. Include expressions that arise from formulas used in real-world problems. Perform arithmetic operations, including those involving whole-number exponents, in the conventional order when there are no parentheses to specify a particular order (Order of Operations)."
+                                            }
+                                        ]
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.A.3",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Apply the properties of operations to generate equivalent expressions."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.A.4",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Identify when two expressions are equivalent (i.e., when the two expressions name the same number regardless of which value is substituted into them)."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "6.EE.B",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Reason about and solve one-variable equations and inequalities.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.EE.B.5",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Understand solving an equation or inequality as a process of answering a question: which values from a specified set, if any, make the equation or inequality true? Use substitution to determine whether a given number in a specified set makes an equation or inequality true."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.B.6",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Use variables to represent numbers and write expressions when solving a real-world or mathematical problem; understand that a variable can represent an unknown number, or, depending on the purpose at hand, any number in a specified set."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.B.7",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Solve real-world and mathematical problems by writing and solving equations of the form x + p = q and px = q for cases in which p, q and x are all nonnegative rational numbers."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.EE.B.8",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Write an inequality of the form x > c or x < c to represent a constraint or condition in a real-world or mathematical problem. Recognize that inequalities of the form x > c or x < c have infinitely many solutions; represent solutions of such inequalities on number line diagrams."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "6.EE.C",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Represent and analyze quantitative relationships between dependent and independent variables.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.EE.C.9",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Use variables to represent two quantities in a real-world problem that change in relationship to one another; write an equation to express one quantity, thought of as the dependent variable, in terms of the other quantity, thought of as the independent variable. Analyze the relationship between the dependent and independent variables using graphs and tables, and relate these to the equation."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "6.G",
+                        "gradeLevel": "sixth",
+                        "taggable": "false",
+                        "description": "Geometry",
+                        "children": [
+                            {
+                                "pedagogicalId": "6.G.A",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Solve real-world and mathematical problems involving area, surface area, and volume.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.G.A.1",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Find the area of right triangles, other triangles, special quadrilaterals, and polygons by composing into rectangles or decomposing into triangles and other shapes; apply these techniques in the context of solving real-world and mathematical problems."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.G.A.2",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Find the volume of a right rectangular prism with fractional edge lengths by packing it with unit cubes of the appropriate unit fraction edge lengths, and show that the volume is the same as would be found by multiplying the edge lengths of the prism. Apply the formulas V = l w h and V = b h to find volumes of right rectangular prisms with fractional edge lengths in the context of solving real-world and mathematical problems."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.G.A.3",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Draw polygons in the coordinate plane given coordinates for the vertices; use coordinates to find the length of a side joining points with the same first coordinate or the same second coordinate. Apply these techniques in the context of solving real-world and mathematical problems."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.G.A.4",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Represent three-dimensional figures using nets made up of rectangles and triangles, and use the nets to find the surface area of these figures. Apply these techniques in the context of solving real-world and mathematical problems."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "6.NS",
+                        "gradeLevel": "sixth",
+                        "taggable": "false",
+                        "description": "The Number System",
+                        "children": [
+                            {
+                                "pedagogicalId": "6.NS.A",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Apply and extend previous understandings of multiplication and division to divide fractions by fractions.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.NS.A.1",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Interpret and compute quotients of fractions, and solve word problems involving division of fractions by fractions, e.g., by using visual fraction models and equations to represent the problem."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "6.NS.B",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Compute fluently with multi-digit numbers and find common factors and multiples.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.NS.B.2",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Fluently divide multi-digit numbers using the standard algorithm."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.NS.B.3",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Fluently add, subtract, multiply, and divide multi-digit decimals using the standard algorithm for each operation."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.NS.B.4",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Find the greatest common factor of two whole numbers less than or equal to 100 and the least common multiple of two whole numbers less than or equal to 12. Use the distributive property to express a sum of two whole numbers 1–100 with a common factor as a multiple of a sum of two hole numbers with no common factor."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "6.RP",
+                        "gradeLevel": "sixth",
+                        "taggable": "false",
+                        "description": "Ratios and Proportional Relationships",
+                        "children": [
+                            {
+                                "pedagogicalId": "6.RP.A",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Understand ratio concepts and use ratio reasoning to solve problems.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.RP.A.1",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Understand the concept of a ratio and use ratio language to describe a ratio relationship between two quantities."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.RP.A.2",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Understand the concept of a unit rate a/b associated with a ratio a:b with b not equal 0, and use rate language in the context of a ratio relationship."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.RP.A.3",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Use ratio and rate reasoning to solve real-world and mathematical problems, e.g., by reasoning about tables of equivalent ratios, tape diagrams, double number line diagrams, or equations.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "6.RP.A.3a",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Make tables of equivalent ratios relating quantities with whole number measurements, find missing values in the tables, and plot the pairs of values on the coordinate plane. Use tables to compare ratios."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.RP.A.3b",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Solve unit rate problems including those involving unit pricing and constant speed."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.RP.A.3c",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Find a percent of a quantity as a rate per 100 (e.g., 30% of a quantity means 30/100 times the quantity); solve problems involving finding the whole, given a part and the percent."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.RP.A.3d",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Use ratio reasoning to convert measurement units; manipulate and transform units appropriately when multiplying or dividing quantities."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "6.SP",
+                        "gradeLevel": "sixth",
+                        "taggable": "false",
+                        "description": "Statistics and Probability",
+                        "children": [
+                            {
+                                "pedagogicalId": "6.SP.A",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Develop understanding of statistical variability.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.SP.A.1",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Recognize a statistical question as one that anticipates variability in the data related to the question and accounts for it in the answers."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.SP.A.2",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Understand that a set of data collected to answer a statistical question has a distribution which can be described by its center, spread, and overall shape."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.SP.A.3",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Recognize that a measure of center for a numerical data set summarizes all of its values with a single number, while a measure of variation describes how its values vary with a single number."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "6.SP.B",
+                                "gradeLevel": "sixth",
+                                "taggable": "false",
+                                "description": "Summarize and describe distributions.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "6.SP.B.4",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Display numerical data in plots on a number line, including dot plots, histograms, and box plots."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "6.SP.B.5",
+                                        "gradeLevel": "sixth",
+                                        "taggable": "true",
+                                        "description": "Summarize numerical data sets in relation to their context, such as by:",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "6.SP.B.5a",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Reporting the number of observations."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.SP.B.5b",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Describing the nature of the attribute under investigation, including how it was measured and its units of measurement."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.SP.B.5c",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Giving quantitative measures of center (median and/or mean) and variability (interquartile range and/or mean absolute deviation), as well as describing any overall pattern and any striking deviations from the overall pattern with reference to the context in which the data were gathered."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "6.SP.B.5d",
+                                                "gradeLevel": "sixth",
+                                                "taggable": "true",
+                                                "description": "Relating the choice of measures of center and variability to the shape of the data distribution and the context in which the data were gathered."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            } ,
+            {
+                "pedagogicalId": "7",
+                "gradeLevel": "seventh",
+                "taggable": "false",
+                "description": "Common Core State Standards for Mathematics, Grade 7",
+                "children": [
+                    {
+                        "pedagogicalId": "7.EE",
+                        "gradeLevel": "seventh",
+                        "taggable": "false",
+                        "description": "Expressions and Equations",
+                        "children": [
+                            {
+                                "pedagogicalId": "7.EE.A",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Use properties of operations to generate equivalent expressions.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.EE.A.1",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Apply properties of operations as strategies to add, subtract, factor, and expand linear expressions with rational coefficients."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.EE.A.2",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Understand that rewriting an expression in different forms in a problem context can shed light on the problem and how the quantities in it are related."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "7.EE.B",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Solve real-life and mathematical problems using numerical and algebraic expressions and equations.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.EE.B.3",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Solve multi-step real-life and mathematical problems posed with positive and negative rational numbers in any form (whole numbers, fractions, and decimals), using tools strategically. Apply properties of operations to calculate with numbers in any form; convert between forms as appropriate; and assess the reasonableness of answers using mental computation and estimation strategies."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.EE.B.4",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Use variables to represent quantities in a real-world or mathematical problem, and construct simple equations and inequalities to solve problems by reasoning about the quantities.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.EE.B.4a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Solve word problems leading to equations of the form px + q = r and p(x + q) = r, where p, q, and r are specific rational numbers. Solve equations of these forms fluently. Compare an algebraic solution to an arithmetic solution, identifying the sequence of the operations used in each approach."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.EE.B.4b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Solve word problems leading to inequalities of the form px + q > r or px + q < r, where p, q, and r are specific rational numbers. Graph the solution set of the inequality and interpret it in the context of the problem."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "7.G",
+                        "gradeLevel": "seventh",
+                        "taggable": "false",
+                        "description": "Geometry",
+                        "children": [
+                            {
+                                "pedagogicalId": "7.G.A",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Draw construct, and describe geometrical figures and describe the relationships between them.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.G.A.1",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Solve problems involving scale drawings of geometric figures, including computing actual lengths and areas from a scale drawing and reproducing a scale drawing at a different scale."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.G.A.2",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Draw (freehand, with ruler and protractor, and with technology) geometric shapes with given conditions. Focus on constructing triangles from three measures of angles or sides, noticing when the conditions determine a unique triangle, more than one triangle, or no triangle."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.G.A.3",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Describe the two-dimensional figures that result from slicing three-dimensional figures, as in plane sections of right rectangular prisms and right rectangular pyramids."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "7.G.B",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.G.B.4",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Know the formulas for the area and circumference of a circle and use them to solve problems; give an informal derivation of the relationship between the circumference and area of a circle."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.G.B.5",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Use facts about supplementary, complementary, vertical, and adjacent angles in a multi-step problem to write and solve simple equations for an unknown angle in a figure."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.G.B.6",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Solve real-world and mathematical problems involving area, volume and surface area of two- and three-dimensional objects composed of triangles, quadrilaterals, polygons, cubes, and right prisms."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "7.NS",
+                        "gradeLevel": "seventh",
+                        "taggable": "false",
+                        "description": "The Number System",
+                        "children": [
+                            {
+                                "pedagogicalId": "7.NS.A",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Apply and extend previous understandings of operations with fractions.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.NS.A.1",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Apply and extend previous understandings of addition and subtraction to add and subtract rational numbers; represent addition and subtraction on a horizontal or vertical number line diagram.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.NS.A.1a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Describe situations in which opposite quantities combine to make 0."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.1b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Understand p + q as the number located a distance |q| from p, in the positive or negative direction depending on whether q is positive or negative. Show that a number and its opposite have a sum of 0 (are additive inverses). Interpret sums of rational numbers by describing real-world contexts."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.1c",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Understand subtraction of rational numbers as adding the additive inverse, p – q = p + (–q). Show that the distance between two rational numbers on the number line is the absolute value of their difference, and apply this principle in real-world contexts."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.1d",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Apply properties of operations as strategies to add and subtract rational numbers."
+                                            }
+                                        ]
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.NS.A.2",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Apply and extend previous understandings of multiplication and division and of fractions to multiply and divide rational numbers.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.NS.A.2a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Understand that multiplication is extended from fractions to rational numbers by requiring that operations continue to satisfy the properties of operations, particularly the distributive property, leading to products such as (–1)(–1) = 1 and the rules for multiplying signed numbers. Interpret products of rational numbers by describing real-world contexts."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.2b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Understand that integers can be divided, provided that the divisor is not zero, and every quotient of integers (with non-zero divisor) is a rational number. If p and q are integers, then –(p/q) = (–p)/q = p/(–q). Interpret quotients of rational numbers by describing real-world contexts."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.2c",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Apply properties of operations as strategies to multiply and divide rational numbers."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.NS.A.2d",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Convert a rational number to a decimal using long division; know that the decimal form of a rational number terminates in 0s or eventually repeats."
+                                            }
+                                        ]
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.NS.A.3",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Solve real-world and mathematical problems involving the four operations with rational numbers."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "7.RP",
+                        "gradeLevel": "seventh",
+                        "taggable": "false",
+                        "description": "Ratios and Proportional Relationships",
+                        "children": [
+                            {
+                                "pedagogicalId": "7.RP.A",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Analyze proportional relationships and use them to solve real-world and mathematical problems.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.RP.A.1",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Compute unit rates associated with ratios of fractions, including ratios of lengths, areas and other quantities measured in like or different units."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.RP.A.2",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Recognize and represent proportional relationships between quantities.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.RP.A.2a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Decide whether two quantities are in a proportional relationship, e.g., by testing for equivalent ratios in a table or graphing on a coordinate plane and observing whether the graph is a straight line through the origin."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.RP.A.2b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Identify the constant of proportionality (unit rate) in tables, graphs, equations, diagrams, and verbal descriptions of proportional relationships."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.RP.A.2c",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Represent proportional relationships by equations."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.RP.A.2d",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Explain what a point (x, y) on the graph of a proportional relationship means in terms of the situation, with special attention to the points (0, 0) and (1, r) where r is the unit rate."
+                                            }
+                                        ]
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.RP.A.3",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Use proportional relationships to solve multistep ratio and percent problems. Examples: simple interest, tax, markups and markdowns, gratuities and commissions, fees, percent increase and decrease, percent error."
+                                    }
+                                ]
+                            }
+                        ]
+                    } ,
+                    {
+                        "pedagogicalId": "7.SP",
+                        "gradeLevel": "seventh",
+                        "taggable": "false",
+                        "description": "Statistics and Probability",
+                        "children": [
+                            {
+                                "pedagogicalId": "7.SP.A",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Use random sampling to draw inferences about a population.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.SP.A.1",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Understand that statistics can be used to gain information about a population by examining a sample of the population; generalizations about a population from a sample are valid only if the sample is representative of that population. Understand that random sampling tends to produce representative samples and support valid inferences."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.SP.A.2",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Use data from a random sample to draw inferences about a population with an unknown characteristic of interest. Generate multiple samples (or simulated samples) of the same size to gauge the variation in estimates or predictions."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "7.SP.B",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Draw informal comparative inferences about two populations.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.SP.B.3",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Informally assess the degree of visual overlap of two numerical data distributions with similar variabilities, measuring the difference between the centers by expressing it as a multiple of a measure of variability."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.SP.B.4",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Use measures of center and measures of variability for numerical data from random samples to draw informal comparative inferences about two populations."
+                                    }
+                                ]
+                            } ,
+                            {
+                                "pedagogicalId": "7.SP.C",
+                                "gradeLevel": "seventh",
+                                "taggable": "false",
+                                "description": "Investigate chance processes and develop, use, and evaluate probability models.",
+                                "children": [
+                                    {
+                                        "pedagogicalId": "7.SP.C.5",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Understand that the probability of a chance event is a number between 0 and 1 that expresses the likelihood of the event occurring. Larger numbers indicate greater likelihood. A probability near 0 indicates an unlikely event, a probability around 1/2 indicates an event that is neither unlikely nor likely, and a probability near 1 indicates a likely event."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.SP.C.6",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Approximate the probability of a chance event by collecting data on the chance process that produces it and observing its long-run relative frequency, and predict the approximate relative frequency given the probability."
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.SP.C.7",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Develop a probability model and use it to find probabilities of events. Compare probabilities from a model to observed frequencies; if the agreement is not good, explain possible sources of the discrepancy.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.SP.C.7a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Develop a uniform probability model by assigning equal probability to all outcomes, and use the model to determine probabilities of events."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.SP.C.7b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Develop a probability model (which may not be uniform) by observing frequencies in data generated from a chance process."
+                                            }
+                                        ]
+                                    } ,
+                                    {
+                                        "pedagogicalId": "7.SP.C.8",
+                                        "gradeLevel": "seventh",
+                                        "taggable": "true",
+                                        "description": "Find probabilities of compound events using organized lists, tables, tree diagrams, and simulation.",
+                                        "children": [
+                                            {
+                                                "pedagogicalId": "7.SP.C.8a",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Understand that, just as with simple events, the probability of a compound event is the fraction of outcomes in the sample space for which the compound event occurs."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.SP.C.8b",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Represent sample spaces for compound events using methods such as organized lists, tables and tree diagrams. For an event described in everyday language (e.g., ''rolling double sixes''), identify the outcomes in the sample space which compose the event."
+                                            } ,
+                                            {
+                                                "pedagogicalId": "7.SP.C.8c",
+                                                "gradeLevel": "seventh",
+                                                "taggable": "true",
+                                                "description": "Design and use a simulation to generate frequencies for compound events."
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            } ,
+            {
+                "pedagogicalId": "MP",
+                "gradeLevel": "mathematical practice",
+                "taggable": "false",
+                "description": "Mathematical Practices",
+                "children": [
+                    {
+                        "pedagogicalId": "MP.1",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Make sense of problems and persevere in solving them."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.2",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Reason abstractly and quantitatively."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.3",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Construct viable arguments and critique the reasoning of others."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.4",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Model with mathematics."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.5",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Use appropriate tools strategically."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.6",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Attend to precision."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.7",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Look for and make use of structure."
+                    } ,
+                    {
+                        "pedagogicalId": "MP.8",
+                        "gradeLevel": "mathematical practice",
+                        "taggable": "true",
+                        "description": "Look for and express regularity in repeated reasoning."
+                    }
+                ]
+            }
+        ]
+    }
+}

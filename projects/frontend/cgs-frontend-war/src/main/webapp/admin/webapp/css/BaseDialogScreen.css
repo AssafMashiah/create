@@ -1,0 +1,84 @@
+body.dialog_screen {
+    background-image: url('../media/dialog_screen_bg.png?ver=30');
+    background-repeat: no-repeat;
+}
+
+.dialog_screen_wrapper {
+    height: -webkit-calc(100% - 60px);
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border: solid 1px #848484;
+    background-color: white;
+    -webkit-box-shadow:  0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+    box-shadow:  0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dialog_screen #stage_base > div.element_preview_wrapper {
+    width: 97%;
+}
+
+.dialog_screen #dialog_bottom_row {
+    background-color: #F5F5F5;
+    height: 50px;
+    position: relative;
+    border-top: solid 1px #E6E6E6;
+}
+
+.screen-content.dialog_screen #stage_base > div {
+    margin-left: 14px;
+    margin-top: 14px;
+}
+
+.screen-content.dialog_screen .element_preview_wrapper {
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+/*.screen-content.dialog_screen .element_preview_wrapper > div {
+    padding: 10px;
+}*/
+
+.screen-content.dialog_screen .element_preview_wrapper.over {
+    background-color: #E4E6E5;
+    cursor: pointer;
+}
+
+.screen-content.dialog_screen .element_preview_wrapper.selected  {
+    outline: solid 1px #FF9900;
+    outline-offset: -2px;
+    cursor: pointer;
+}
+
+.screen-content.dialog_screen .element_preview_wrapper #previewImage {
+    margin: 0;
+}
+.deleteBtn, .screen-content.dialog_screen .instruction_content .element_preview_wrapper .deleteBtn,
+.instruction_content .deleteBtn,
+.deleteBtn, .screen-content.dialog_screen .title_content .element_preview_wrapper .deleteBtn,
+.title_content .deleteBtn
+{
+    display: none;
+}
+.screen-content.dialog_screen .element_preview_wrapper .over > .deleteBtn,
+.screen-content.dialog_screen .element_preview_wrapper .selected > .deleteBtn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.closeButton{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.cancelButton{
+    position: absolute;
+    bottom: 10px;
+    right: 95px;
+}
+

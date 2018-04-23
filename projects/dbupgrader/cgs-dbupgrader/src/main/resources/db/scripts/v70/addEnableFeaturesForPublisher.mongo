@@ -1,0 +1,15 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+
+    db.publishers.update({},{$set:{
+                                   "customization.enableStandards": true,
+                                   "customization.enableReferences": true,
+                                   "customization.enableCourseMiscSettings": true,
+                                   "customization.enableReviewTab": true,
+                                   "customization.enableTextToSpeach": true,
+                                   "customization.enableNarrationAdditionalLanguages": true,
+                                   "customization.enableAssetOrdering": true,
+                                   "customization.enableDiffLevels": true
+                                   }},
+                                   {upsert: false, multi:true});
+}

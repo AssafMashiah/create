@@ -1,0 +1,171 @@
+{
+    "packageName": "SCORM 2004 4th Edition",
+    "packageDescription": "describes the components used in a learning experience, how to package those components for exchange from system to system, how to describe those components to enable search and discovery and how to define sequencing information for the components",
+    "target": "lesson",
+    "id": "t2k_lesson_scorm2004_E4",
+    "requiredTargetFields": {
+
+    },
+
+    "customMetadata": [
+        {
+            "id": "t2k_lesson_scorm2004_v4_package",
+            "type": "packageName",
+            "name": "Métadonnées SCORM 2004 4e Edition"
+        },
+        {
+            "id": "t2k_lesson_scorm2004_v4_lom_general_identifier_catalog",
+            "name": "Type d'identifiant de la ressource pédagogique",
+            "type": "list",
+            "value": "Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_general_identifier_entry",
+            "name": "Valeur d'identifiant de la ressource pédagogique",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_identifier_catalog",
+            "name": "Type d'identifiant de la fiche de catalogage",
+            "type": "list",
+            "value": "none,T2KStore,T2KTeach,Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_identifier_entry",
+            "name": "Valeur d'identifiant de la fiche de catalogage",
+            "type": "text",
+            "maxLength":1000,
+            "value": 1000
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_role",
+            "name": "Rôle du contributeur à la fiche de catalogage",
+            "type": "list",
+            "value": "creator,validator"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_title",
+            "name": "Civilité/titre du contributeur à la fiche de catalogage",
+            "type": "list",
+            "value": "Mr.,Ms.,Mrs.,Dr."
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_name",
+            "name": "Prénom du contributeur à la fiche de catalogage",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_familyName",
+            "name": "Patronyme du contributeur à la fiche de catalogage",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_email",
+            "name": "Adresse électronique du contributeur à la fiche de catalogage",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_phone",
+            "name": "Adresse électronique du contributeur à la fiche de catalogag",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_date",
+            "name": "Date de contribution à la fiche de catalogage",
+            "type": "date",
+            "value": "mm/dd/yy"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_date_description",
+            "name": "Description de la date de contribution à la fiche de catalogage",
+            "type": "freeText",
+            "maxLength":1000,
+            "value":3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_metaMetadata_language",
+            "name": "Langue de la fiche de catalogage",
+            "type": "list",
+            "value":"en,fr,iw,nl, pt, ar"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_technical_installationRemarks",
+            "name": "Remarques d'installation technique",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_learningResourceType",
+            "name": "Type de ressource pédagogique",
+            "type": "list",
+            "value": "exercise,simulation,questionnaire,diagram,figure,graph,index,slide,table,narrative text,exam,experiment,problem statement,self assessment,lecture"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_interactivityLevel",
+            "name": "Niveau d'interaction de la ressource pédagogique",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_semanticDensity",
+            "name": "Densité sémantique",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_intendedEndUserRole",
+            "name": "Public visé",
+            "type": "list",
+            "value": "teacher,author,learner,manager"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_context",
+            "name": "Cadre d'enseignement",
+            "type": "list",
+            "value": "school,higher education,training,other"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_typicalAgeRange",
+            "name": "Tranche d'âge cible",
+            "type": "text",
+            "maxLength":1000,
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_difficulty",
+            "name": "Difficulté",
+            "type": "list",
+            "value": "very easy,easy,medium,difficult,very difficult"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_educational_description",
+            "name": "Description de la ressource pédagogique",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_rights_cost",
+            "name": "Ressource pédagogique payante",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_rights_copyrightAndOtherRestrictions",
+            "name": "Ressource pédagogique sous droit",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_rights_description",
+            "name": "Coût(s) de la ressource pédagogique",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_relation_kind",
+            "name": "Type de relation entre ressources pédagogiques source et cible",
+            "type": "list",
+            "value": "ispartof,haspart,isversionof,hasversion,isformatof,hasformat,references,isreferencedby,isbasedon,isbasisfor,requires,isrequiredby"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_relation_resource_identifier_catalog",
+            "name": "Type de l'identifiant de ressource pédagoqique utilisé dans la relation",
+            "type": "list",
+            "value": "Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_relation_resource_identifier_entry",
+            "name": "Valeur de l'identifiant de la ressource pédagoqique ciblée la relation",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_lesson_scorm2004_v4_lom_relation_resource_description",
+            "name": "Descriptif de la ressource pédagogique ciblée par la relation",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }
+    ]
+}

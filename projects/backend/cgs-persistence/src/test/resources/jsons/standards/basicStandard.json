@@ -1,0 +1,23 @@
+{
+    "_id": "mockId",
+    "name": "mockyMocky",
+    "description": "Mock Common Core State Standards for Mathematics",
+    "subjectArea": "mathMock",
+    "country": "USA",
+    "version": "1.0",
+    "created": "29/05/2013 04:14:22",
+    "isLatest": true,
+    "standards": {
+        "pedagogicalId": "CM",
+        "taggable": "false",
+        "description": "",
+        "children": [
+            {
+                "pedagogicalId": "6",
+                "gradeLevel": "sixth",
+                "taggable": "false",
+                "description": "Common Core State Standards for Mathematics, Grade 6"
+            }
+        ]
+    }
+}

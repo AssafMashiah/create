@@ -1,0 +1,9 @@
+<header id="{{id}}">
+    {{#showGenericTitle}}
+    	{{{genericTitle}}}
+    {{/showGenericTitle}}
+</header>
+
+{{#showGenericSubTitle}}
+	<instruction show="true">{{{genericSubTitle}}}}</instruction>
+{{/showGenericSubTitle}}

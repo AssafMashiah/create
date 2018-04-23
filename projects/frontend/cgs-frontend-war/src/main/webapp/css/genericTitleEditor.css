@@ -1,0 +1,8 @@
+.genericTitle_content.dontShow,
+.genericSubTitle_content.dontShow {
+	display: none;
+}
+.genericTitle_content , 
+.genericSubTitle_content{
+	margin: 2px;
+}

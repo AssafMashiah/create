@@ -1,0 +1,22 @@
+<h5>((Specific Feedbacks))</h5>
+<table class="table table-bordered" id="specific_feedbacks_table">
+    <thead>
+    <tr>
+        <td style="width: 5%">((Icon))</td>
+        <td style="width: 48%">((Answer))</td>
+        <td style="width: 47%">((Feedback))</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#arr_options}}
+    <tr>
+        <td>
+            {{#isCorrect}}<div class="icon_correct"></div>{{/isCorrect}}
+            {{^isCorrect}}<div class="icon_incorrect"></div>{{/isCorrect}}
+        </td>
+        <td class="preview_{{id}}"></td>
+        <td id="td_{{#isCorrect}}c{{/isCorrect}}{{^isCorrect}}w{{/isCorrect}}_{{id}}"></td>
+    </tr>
+    {{/arr_options}}
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+<subAnswer answerId="{{subAnswerId}}" originalId="{{originalId}}">
+	{{^dragAndDrop}}
+	<textEditor mode="{{mode}}" maxChar="{{maxChar}}" enableToolbar="{{ShowToolbar}}">
+	</textEditor>
+	{{/dragAndDrop}}
+	{{#hint}}<hint>{{hint}}</hint>{{/hint}}
+	{{^isNoncheckable}}
+	<check>
+		<caseSensitive>false</caseSensitive>
+		<punctuationMarks>false</punctuationMarks>
+
+		<correct>
+			{{#correctAnswers}}
+				<ans_option {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{{item}}}</ans_option>
+			{{/correctAnswers}}
+		</correct>
+
+		<partiallyCorrect>
+			{{#partiallyCorrect}}
+				<ans_option {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{item}}</ans_option>
+			{{/partiallyCorrect}}
+		</partiallyCorrect>
+
+		<incorrectPredicted>
+			{{#incorrectPredicted}}
+				<ans_option {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{item}}</ans_option>
+			{{/incorrectPredicted}}
+		</incorrectPredicted>
+
+	</check>
+	{{/isNoncheckable}}
+</subAnswer>

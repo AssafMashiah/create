@@ -1,0 +1,4 @@
+####################################################################
+#  add debug log level to all publishers    #
+####################################################################
+publishers.update({},{$set:{"customization.logLevel": "DEBUG"}},{upsert: false, multi: true});

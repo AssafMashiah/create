@@ -1,0 +1,82 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content">
+	{{#prevPage}}<a href="{{.}}" class="tts-prev">((Previous Page))</a>{{/prevPage}}
+	{{#nextPage}}<a href="{{.}}" class="tts-next">((Next Page))</a>{{/nextPage}}
+	<div class="narrationReportHeader">
+		<div id="numberOfItemsSelected"></div>
+		<div class="paging-div">
+			<select class="paging-select">
+			{{#getPages}}
+			<option value="{{value}}" {{#selected}}selected{{/selected}}>((Page)) {{value}}</option>
+			{{/getPages}}
+			</select>
+		</div>
+	</div>
+	<table id="narrations-table" class="table table-bordered">
+	    <thead>
+		    <tr>
+		        <th style="width: 5%"><input type="checkbox" class="select-all-check" {{#isSelectAll}}checked{{/isSelectAll}} {{#isReadOnlyMode}}disabled{{/isReadOnlyMode}}/></th>
+		        <th style="width: 35%" data="asIs">((Original Text))</th>
+		        <th style="width: 10%" data="narrationType">((Narration Type))
+		        	<div class="btn-group filter" data="narrationType">
+					  <a class="btn btn-mini">
+					    <span class="base-icon icon-filter"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+					  	<li class="filter-option-all">
+					  		<input type="checkbox" id="filter-narrationType-all" checked /> 
+					  		<label for="filter-narrationType-all">((All))</label>
+					  	</li>
+					  </ul>
+					</div>
+		        </th>
+		        <th style="width: 5%" data="asIs">((As Is))
+		        	<div class="btn-group filter" data="asIs">
+					  <a class="btn btn-mini">
+					    <span class="base-icon icon-filter"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+					  	<li class="filter-option-all">
+					  		<input type="checkbox" id="filter-asIs-all" checked /> 
+					  		<label for="filter-asIs-all">((All))</label>
+					  	</li>
+					  </ul>
+					</div>
+		        </th>
+		        <th style="width: 30%" data="narrationText">((Text to Narrate))</th>
+		        <th style="width: 15%" data="status">((Status))
+		        	<div class="btn-group filter" data="status">
+					  <a class="btn btn-mini">
+					    <span class="base-icon icon-filter"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+					  	<li class="filter-option-all">
+					  		<input type="checkbox" id="filter-status-all" checked /> 
+					  		<label for="filter-status-all">((All))</label>
+					  	</li>
+					  </ul>
+					</div>
+		        </th>
+		    </tr>
+	    </thead>
+	    <tbody>
+	        <tr id="empty-placeholder">
+	            <td colspan="6">
+	                <div class="alert alert-info">((This list is empty.))</div>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+	{{#prevPage}}<a href="{{.}}" class="tts-prev">((Previous Page))</a>{{/prevPage}}
+	{{#nextPage}}<a href="{{.}}" class="tts-next">((Next Page))</a>{{/nextPage}}
+	<div class="narrationReportFooter">
+	  	<div class="emptyDiv"></div>
+		<div class="paging-div">
+			<select class="paging-select">
+			{{#getPages}}
+			<option value="{{value}}" {{#selected}}selected{{/selected}}>((Page)) {{value}}</option>
+			{{/getPages}}
+			</select>
+		</div>
+	</div>
+</div>

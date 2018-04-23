@@ -1,0 +1,210 @@
+#dialog.openAndNewCourse {
+  width: 70%;
+  height: 70%;
+  max-height: 70%;
+  min-height: 70%;
+  left: 15%;
+  top: 15%;
+  margin: 0;
+  overflow-y: hidden;
+  background-color: #f4f8fa;
+  border-color: #DDD;
+  .landing-popoup {
+    display: flex;
+    padding: 30px 40px;
+    height: 100%;
+    .section-title-container {
+      .section-title {
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .underline-seperator {
+        height: 2px;
+        border-bottom: 2px solid #E9EEF0;
+        margin: 6px 0 20px 0;
+      }
+    }
+    .action-button {
+      width: 120px;
+      display: inline-block;
+      cursor: pointer;
+      &:hover {
+        background-color: #e9f0f3;
+      }
+      .image-button {
+        width: 75px;
+        height: 75px;
+        margin: 10px 20px;
+        background-color: transparent;
+      }
+      .bornDigital {
+        background-image: url('../media/landingPopup/bornDigital.png');
+      }
+      .dynamicBook {
+        background-image: url('../media/landingPopup/epub_pdf.png');
+      }
+      .button-description {
+        color: #000;
+        font-size: 13px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+    }
+    .new-course-container {
+      flex: 1;
+      margin-right: 70px;
+      overflow-y: auto;
+      .create-new-course {
+        margin-bottom: 50%;
+      }
+    }
+
+    .open-course-container {
+      flex: 3;
+      height: 100%;
+      .open-course-template {
+        position: relative;
+        height: 100%;
+
+        .courses-container {
+          height: calc(100% - 90px);
+          overflow-y: auto;
+
+          .courses-thumbnails-container {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            direction: ltr;
+            margin-top: 15px;
+            .course-thumbnail {
+              margin: 0 22px 22px 0;
+              cursor: pointer;
+              &:hover {
+                opacity: 0.7;
+              }
+              .course-thumbnail-image {
+                width: 148px;
+                height: 148px;
+                background-color: #d9effd;
+                border: 1px solid #d4d7db;
+              }
+              .course-name,
+              .course-version {
+                max-width: 150px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+        .course-loader-container{
+          margin-top: 95px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .course-loader{
+            background-image: url("images/balls.gif");
+            width: 180px;
+            height: 180px;
+          }
+        }
+        .empty-courses-container {
+          margin-top: 95px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+
+          .empty-courses-image {
+            background-image: url('../media/landingPopup/empty folder.png');
+            width: 104px;
+            height: 101px;
+            margin-bottom: 15px;
+          }
+          .empty-courses-text{
+            color: #b0b0b0;
+            font-style: italic;
+            font-size: 16px;
+          }
+        }
+        .search-filter-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .filter-buttons-container {
+            display: flex;
+
+            .course-filter-button {
+              background-color: #d9e9fd;
+              margin: 0 5px;
+              padding: 3px 12px;
+              font-size: 13px;
+              line-height: 21px;
+              height: 26px;
+              cursor: pointer;
+              &.selected {
+                background-color: #2477e6;
+                color: #fff;
+                &:hover{
+                  opacity: 0.7;
+                }
+              }
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+          .search-container {
+            position: relative;
+            .course-search-bar {
+              background-color: #fff;
+              padding: 3px 22px 3px 10px;
+              border: 1px solid #d9e9fd;
+              width: 290px;
+              font-size: 14px;
+              color: #000;
+              &:focus {
+                border-color: #4391f7;
+              }
+            }
+            .magnifying-glass {
+              background-image: url('../media/landingPopup/search icon.png');
+              width: 17px;
+              height: 14px;
+              position: absolute;
+              right: 5px;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .import-course-container {
+      .icon-real-download-alt {
+        color: #4391F7;
+        font-size: 50px;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        margin: 10px 35px;
+      }
+
+      .icon-import-epub {
+        color: #4391F7;
+        font-size: 50px;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        margin: 10px 35px;
+      }
+    }
+  }
+}

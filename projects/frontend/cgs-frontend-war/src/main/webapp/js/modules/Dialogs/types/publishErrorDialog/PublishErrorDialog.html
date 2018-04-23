@@ -1,0 +1,21 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div>
+    <table border="1">
+        <thead>
+        <tr>
+            <th style="width:85px">((Entity type))</th>
+            <th style="width:300px">((Error Trigger))</th>
+            <th style="width:120px">((Error Type))</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#options.config.data}}
+        <tr>
+            <td style="width:85px">{{lessonName}}</td>
+            <td style="width:300px">{{sequenceName}}</td>
+            <td style="width:120px">(({{conflictType}}))</td>
+        </tr>
+        {{/options.config.data}}
+        </tbody>
+    </table>
+</div>

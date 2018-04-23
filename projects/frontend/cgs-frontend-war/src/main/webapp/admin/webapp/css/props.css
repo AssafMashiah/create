@@ -1,0 +1,63 @@
+.required-field:before{
+    content: '* ';
+    color: #FF0000;
+}
+
+.editor-wrapper.props_editor {
+    padding-top: 10px;
+    height: -webkit-calc(100% - 10px);
+    border-left: solid 1px #C3C3C3;
+}
+.editor-wrapper.props_editor .nav {
+    margin-bottom: 0;
+}
+
+.editor-wrapper.props_editor .nav-tabs:first-child {
+    margin-left: 10px;
+}
+
+.editor-wrapper.props_editor .nav-tabs > .active > a, 
+.nav-tabs > .active > a:hover {
+    /*color: #34B6AC;*/
+     color: #0099e5;
+    cursor: default;
+    background-color: transparent;
+    /*background-image: url("../media/tex_tree.png");*/
+    border: 1px solid #C3C3C3;
+    border-bottom-color: white;
+}
+
+.editor-wrapper.props_editor .tab-content > .active {
+    padding-top: 24px;
+}
+
+.editor-wrapper.props_editor .tab-content {
+    padding: 0px 24px;
+    height: -webkit-calc(100% - 38px);
+}
+
+.editor-wrapper.props_editor .nav-tabs > li > a {
+    color: #555;
+    font-weight: bold;
+}
+
+.editor-wrapper.props_editor .control-group {
+    margin-bottom: 30px;
+}
+
+.editor-wrapper.AnswerFieldTypeText_editor.props_editor .control-group div > input[type="checkbox"] {
+    margin: 0;
+}
+
+.editor-wrapper.props_editor .order-data {
+    margin: 30px 0; 
+    white-space: nowrap;
+    text-align: right;
+}
+
+.editor-wrapper.props_editor .order-data .asset-id,
+.editor-wrapper.props_editor .order-data .asset-state {
+    margin-left: 8px; 
+    width: 170px;
+}
+

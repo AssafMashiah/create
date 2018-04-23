@@ -1,0 +1,50 @@
+<div id="learning_path" >
+    <table class="standards_package_list">
+    	<thead>
+    		<tr>
+				<th>((dialog.learningpath.head.standard))
+					<div>((dialog.learningpath.head.standard))</div>
+				</th>
+				<th>((dialog.learningpath.head.performance))
+					<div>((dialog.learningpath.head.performance))
+						
+					</div>
+				</th>
+				<th>((dialog.learningpath.head.lessons))
+					<span class="info">((dialog.learningpath.mandatoryplaceholder))</span>
+					<div>
+						<span class="settings base-icon icon-cogs"></span>
+						<div id="settings_dropdown" class="hide">
+							<label  class="control-label" for="settings_numberoflevels">((dialog.learningpath.settings.levels)):</label>
+							<select id="settings_numberoflevels" class="input-small">
+								<option value="1" selected>1</option>
+								<option value="2" selected>2</option>
+								<option value="3" selected>3</option>
+								<option value="4" selected>4</option>
+								<option value="5" selected>5</option>
+							</select>
+							<div class="settings_buttons">
+							<div id="settings_cancel" class="btn ">((Cancel))</div>
+							<div id="settings_set" class="btn ">((dialog.learningpath.settings.setbutton))</div>
+							</div>
+						</div>
+						((dialog.learningpath.head.lessons))
+						<span class="info">((dialog.learningpath.mandatoryplaceholder))</span>
+					</div>
+				</th>
+			</tr>
+    	</thead>
+        <tbody>
+			{{#options.config.standards}}
+			<tr class="standard_row {{pedagogicalId}}" data-pedagogical-id="{{pedagogicalId}}" data-interval-id="0">
+				<td class="standard_name">
+                    <div class="standard_name_wrap">
+                        <div>{{pedagogicalId}}</div>
+                        <div class="description">{{standardName}}</div>
+                    </div>
+				</td>
+			</tr>
+        	{{/options.config.standards}}
+        </tbody>
+    </table>
+</div>

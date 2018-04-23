@@ -1,0 +1,53 @@
+<tr {{#obj.filtered}}class="hidden"{{/obj.filtered}}>
+	<td class="assetId" rowspan="{{obj.totalRows}}">
+		{{^obj.isDone}}
+		<input type="checkbox" class="select-row" {{#obj.isSelected}}checked{{/obj.isSelected}} {{#obj.readonly}}disabled{{/obj.readonly}} />
+		{{/obj.isDone}}
+	</td>
+	<td class="original-text" rowspan="{{obj.totalRows}}"></td>
+	<td data="narrationType" rowspan="{{obj.totalRows}}">
+		<select class="narration-type" recordId="{{obj.id}}" cantBeEnabled="true" {{^obj.isSelected}}disabled{{/obj.isSelected}}{{#obj.isSelected}}{{#obj.isDone}}disabled{{/obj.isDone}}{{/obj.isSelected}}>
+			{{#obj.narrationTypes}}
+			<option value="{{value}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+			{{/obj.narrationTypes}}
+		</select>
+	</td>
+	<td data="asIs">
+		{{#obj.narration}}
+		<input type="checkbox" class="as-is-check" recordId="{{recordId}}" srcAttr="{{srcAttr}}" {{#asIs}}checked{{/asIs}} cantBeEnabled="true" {{^obj.isSelected}}disabled{{/obj.isSelected}}{{#obj.isSelected}}{{#obj.isDone}}disabled{{/obj.isDone}}{{/obj.isSelected}} />
+		{{/obj.narration}}
+	</td>
+	<td>
+		{{#obj.narration}}{{^obj.narration.asIs}}
+		<textarea class="narration-text" recordId="{{recordId}}" srcAttr="{{srcAttr}}" cantBeEnabled="true" {{^obj.isSelected}}disabled{{/obj.isSelected}}{{#obj.isSelected}}{{#obj.isDone}}disabled{{/obj.isDone}}{{/obj.isSelected}}>{{narrationText}}</textarea>
+		{{/obj.narration.asIs}}{{/obj.narration}}
+	</td>
+	<td data="status" rowspan="{{obj.totalRows}}">
+		<span class="row-status">
+			{{#obj.isDone}}
+				((Done))
+			{{/obj.isDone}}
+			{{^obj.isDone}}
+				{{#obj.isSelected}}
+					{{#obj.totalFiles}}{{obj.totalFiles}} ((files)){{/obj.totalFiles}}
+				{{/obj.isSelected}}
+				{{^obj.isSelected}}
+					((Not Done))
+				{{/obj.isSelected}}
+			{{/obj.isDone}}
+		</span>
+		{{#obj.isDone}}<br><button class='btn btn-small revert-narration'>((Change))</button>{{/obj.isDone}}
+	</td>
+</tr>
+{{#obj.additionalNarrations}}
+<tr {{#obj.filtered}}class="hidden"{{/obj.filtered}}>
+	<td data="asIs">
+		<input type="checkbox" class="as-is-check" recordId="{{recordId}}" srcAttr="{{srcAttr}}" {{#asIs}}checked{{/asIs}} cantBeEnabled="true" {{^obj.isSelected}}disabled{{/obj.isSelected}}{{#obj.isSelected}}{{#obj.isDone}}disabled{{/obj.isDone}}{{/obj.isSelected}} />
+	</td>
+	<td>
+		{{^asIs}}
+		<textarea class="narration-text" recordId="{{recordId}}" srcAttr="{{srcAttr}}" cantBeEnabled="true" {{#asIs}}disabled{{/asIs}}{{^asIs}}{{^obj.isSelected}}disabled{{/obj.isSelected}}{{#obj.isSelected}}{{#obj.isDone}}disabled{{/obj.isDone}}{{/obj.isSelected}}{{/asIs}}>{{narrationText}}</textarea>
+		{{/asIs}}
+	</td>
+</tr>
+{{/obj.additionalNarrations}}

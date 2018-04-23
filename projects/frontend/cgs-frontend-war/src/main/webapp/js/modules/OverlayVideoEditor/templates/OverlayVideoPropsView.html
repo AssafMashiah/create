@@ -1,0 +1,47 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper video_editor props_editor {{controller.record.data.overlayType}}">
+    <ul class="nav nav-tabs" id="VideoEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((props.{{controller.record.type}})) {{childOrder}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_overlayType">((Source:))</label>
+                <select id="field_overlayType" data-value="obj.overlayType">
+                    <option value="VIDEO_FILE">((File))</option>
+                    <option value="VIDEO_YOUTUBE">((Url))</option>
+                </select>
+            </div>
+            {{^showFile}}
+            <div class="control-group">
+                <label class="control-label">((Video URL:))</label>
+                <div class="controls">
+                    <div><input id="overlay-url" type="text" data-value="obj.overlaySrc" class="input-large" autocomplete="off"></div>
+                </div>
+            </div>
+            {{/showFile}}
+            {{#showFile}}
+            <div class="control-group">
+                <label class="control-label">((Video File:))</label>
+                {{#showPreview}}
+                <div class="controls" id="video_wrapper"
+                     style="max-width:{{controller.record.data.width}}px;max-height:{{controller.record.data.height}}px" >
+                    {{#controller.record.data.overlaySrc}}
+                    <video id="video-player" controls
+                           src="{{#server-path}}{{controller.record.data.overlaySrc}}{{/server-path}}"></video>
+                    {{/controller.record.data.overlaySrc}}
+                    {{^controller.record.data.overlaySrc}}
+                    <div class="previewVideo inline-block noVideo"></div>
+                    {{/controller.record.data.overlaySrc}}
+                </div>
+                {{/showPreview}}
+                <div class="video-upload-row">
+                    <button id="button_upload_video" class="btn btn-small">((...))</button>
+                </div>
+            </div>
+            {{/showFile}}
+        </div>
+    </div>
+</div>

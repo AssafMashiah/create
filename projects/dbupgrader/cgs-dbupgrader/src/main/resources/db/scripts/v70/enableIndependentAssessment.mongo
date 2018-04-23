@@ -1,0 +1,6 @@
+#############################################################################
+#  add enable Independent Assessment default false in publishers collection #
+#############################################################################
+
+publishers.update({},{$set:{"customization.enableIndependentAssessment": false
+                            }}, {upsert: false, multi:true});

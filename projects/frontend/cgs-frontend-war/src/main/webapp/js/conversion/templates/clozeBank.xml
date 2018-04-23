@@ -1,0 +1,5 @@
+{{#content}}
+<bank>
+{{{content}}}
+</bank>
+{{/content}}

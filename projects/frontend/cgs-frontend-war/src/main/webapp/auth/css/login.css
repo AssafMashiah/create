@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'myriad pro';
+    src: url('fonts/MyriadPro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    font-family: 'myriad pro';
+}
+
+input {
+	border: 1px solid #0099e5;
+	border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    width: 178px;
+    height: 18px;
+    padding: 8px;
+    background-color: transparent;
+    outline: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+.hidden {
+    display: none;
+}
+
+.mainDiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+}
+.logoDiv{
+    margin-top: 48px;
+    margin-left: 144px;
+}
+.loginDiv{
+    margin-top: 20px;
+    margin-left: 242px;
+}
+
+.logo {
+    background: transparent url('../assets/logo_03.png') no-repeat;
+    width: 281px;
+    height: 86px;
+}
+
+.formInputError {
+    border:1px solid #FC5B5B;
+}
+.inputGroup{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.errorDivContainer {
+    display: none;
+}
+
+.errorDivMessage {
+    color: #FC5B5B;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.formLabel {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.labelMargin {
+    margin-top: 12px;
+}
+
+.emptyInputMessage {
+    font-size: 14px;
+    color: #FC5B5B;
+    display: none;
+    margin-left: 1px;
+    margin-top: 3px;
+}
+
+.loginButton {
+	border: 1px solid #0099e5;
+	background-color: #0099e5;
+	border-radius: 4px;
+	font-size: 24px;
+	color: #fff;
+    cursor: pointer;
+    width: 58px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.footer{
+    font-size: 16px;
+    color: #333333;
+    bottom: 10px;
+    left: 144px;
+    position: absolute;
+}
+
+/* SSO pages */
+
+html#sso-html {
+	width: 100%;
+	height: 100%;
+}
+
+body.sso {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.sso-main {
+	width: 100%;
+	height: 100%;
+}
+
+.sso-header {
+	width: 100%;
+	height: 55px;
+	background-color: #333333;
+	background-image: url('../assets/sso_sprite.png');
+	background-repeat: no-repeat;
+	background-position: 20px 7px;
+}
+
+.sso-content {
+	width: 100%;
+	height: calc(100% - 55px);
+}
+
+.sso-center {
+	margin-top: 170px;
+	text-align: center;
+}
+
+.sso-lock {
+	width: 92px;
+	height: 128px;
+	background-image: url('../assets/sso_sprite.png');
+	background-repeat: no-repeat;
+	background-position: 0px -50px;
+	margin: auto;
+}
+
+.sso-placeholder {
+	width: 92px;
+	height: 50px;
+	margin: auto;
+}
+
+.sso-message {
+	margin-top: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #333333;
+}
+
+.message-bold {
+	font-weight: bold;
+}

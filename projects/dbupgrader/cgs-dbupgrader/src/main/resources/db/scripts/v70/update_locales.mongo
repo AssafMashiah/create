@@ -1,0 +1,1 @@
+publishers.update({}, {$set:{locales: ['en_US', 'fr_FR', 'he_IL', 'nl_NL']}},{multi: true});

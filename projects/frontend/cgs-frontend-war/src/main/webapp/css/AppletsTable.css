@@ -1,0 +1,64 @@
+
+
+.applets-title h4 {
+    float: left;
+}
+
+.applets-title button {
+    float: right;
+    margin-right: 10px;
+    display: none;
+}
+
+.applets-title div {
+    clear: both;
+}
+
+#applets_table {
+    margin-bottom: -20px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#applets_table th, #applets_table td { overflow: hidden; }
+
+.wordwrap {
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+
+#applets_table .ui-state-highlight {
+    height: 1.5em;
+    line-height: 1.2em;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    background-image: none;
+}
+
+#applets_table tbody td:first-child:hover {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#applets_table thead {
+    background-color: #EEE;
+}
+
+#applets_table thead th {
+    margin: 1px;
+}
+
+#applets_table tbody tr:hover {
+    background-color: #DFE8E5;
+}
+
+#applets_table .update_applet {
+    float: right;
+}

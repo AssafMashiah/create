@@ -1,0 +1,86 @@
+.required-field:after{
+    content: '* ';
+    color: #FF0000;
+}
+
+.editor-wrapper.props_editor {
+	box-sizing: border-box;
+    padding-top: 15px;
+    height: -webkit-calc(100% - 24px);
+    border-left: solid 1px #e1e1e1;
+    font-family: "open_sans";
+}
+.editor-wrapper.props_editor .nav {
+    margin-bottom: 0;
+}
+
+
+
+.editor-wrapper.props_editor .tab-content > .active {
+    padding-top: 24px;
+}
+
+.editor-wrapper.props_editor .tab-content {
+    /*background: url("../media/tex_tree.png");*/
+	overflow: visible;
+    padding: 0px 12px;
+    height: -webkit-calc(100% - 32px);
+}
+
+
+
+.editor-wrapper.props_editor .control-group {
+    margin-bottom: 30px;
+}
+
+.editor-wrapper.AnswerFieldTypeText_editor.props_editor .control-group div > input[type="checkbox"] {
+    margin: 0;
+}
+
+.editor-wrapper.props_editor .order-data {
+    margin: 30px 0; 
+    white-space: nowrap;
+    text-align: left;
+}
+
+.editor-wrapper.props_editor .order-data .order-data-title {
+   margin-left: 8px;
+}
+
+.editor-wrapper.props_editor .order-data input[type=checkbox] {
+    margin-left: 8px;
+    margin-top: -2px;
+}
+
+.editor-wrapper.props_editor .order-data textarea {
+    margin-left: 8px;
+}
+
+.editor-wrapper.props_editor .order-data .asset-id,
+.editor-wrapper.props_editor .order-data .asset-notes,
+.editor-wrapper.props_editor .order-data .asset-state {
+    margin-left: 8px; 
+    width: 170px;
+}
+
+.editor-wrapper.props_editor .order-data .narration-text.rtl {
+    direction: rtl;
+}
+
+.editor-wrapper.props_editor .order-data .narration-text.ltr {
+    direction: ltr;
+}
+
+.editor-wrapper.props_editor div.mathfieldHeight {
+    display:none;
+}
+
+.editor-wrapper.props_editor div.mathfieldHeight[placeholder="studentMath"] {
+    display:block;
+}
+.editor-wrapper.props_editor .no-img{
+    height: 124px;
+    width: 124px;
+    background-image: url('../media/icons_sprite.png');
+    background-position: -1px -171px;   
+}

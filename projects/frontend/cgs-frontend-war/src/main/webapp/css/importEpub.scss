@@ -1,0 +1,36 @@
+#dialog.importEpub {
+  width: 480px;
+  #dialogContent {
+    height: 100%;
+    display: block;
+    .content-box {
+      padding: 15px;
+      .content-row {
+        margin-bottom: 10px;
+      }
+      .tocinfo {
+        list-style: none;
+        .tocinfo-label {
+          width: 100px;
+        }
+      }
+      #button_row {
+        padding-bottom: 15px;
+
+        position: absolute;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        left: 0;
+        bottom: 0;
+        button {
+          display: block;
+          margin: 0 auto;
+          height: 35px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

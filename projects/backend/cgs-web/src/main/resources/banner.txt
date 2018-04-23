@@ -1,0 +1,8 @@
+
+████████  ████████  ████████
+██        ██        ██
+██        ██ █████  ████████
+██        ██    ██        ██
+████████  ████████  ████████
+
+:: CGS App ${application.version} :: Running Spring Boot ${spring-boot.version} ::

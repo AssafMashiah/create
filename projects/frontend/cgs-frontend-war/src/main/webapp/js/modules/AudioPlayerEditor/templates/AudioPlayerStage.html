@@ -1,0 +1,16 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content">
+	
+	<div class="audioPlayer {{record.data.audioImgClass}} {{#isOrdered}} ordered {{/isOrdered}}">
+		<div class="audioHeader {{record.data.displayAudioHeader}}">
+			{{#record.data.showTitle}}
+				<div class="title"> {{record.data.audioDispalyTitle}}</div>
+			{{/record.data.showTitle}}
+			{{#record.data.showCopyrights}}
+				<div class="copyrights" > {{record.data.copyrights}}</div>
+			{{/record.data.showCopyrights}}
+		</div>
+	</div>
+	
+</div>
+

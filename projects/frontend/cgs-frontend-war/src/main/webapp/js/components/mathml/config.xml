@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MathLayout>
+    <!--
+    <LoadTarget
+        method="javascript"
+        target="mathml.init"/>
+    -->
+    
+    <GraphicalUserInterface
+        footerVisible="false"/>
+    
+    <HostIntegration
+        changeFunction="mathMLHandler.change"
+        readyFunction="mathMLHandler.init"/>
+    
+    <RenderingEnvironment
+        displayStyle="true"
+        scriptLevel="0"
+        fontFamily="StixEmbed"
+        fontLookup="embeddedCFF"
+        fontSize="24"
+        scriptMinSize="13"
+        scriptSizeMultiplier="0.8"
+        color="black"
+        bold="false"
+        italic="false"
+        infixlinebreakstyle="before"/>
+
+</MathLayout>

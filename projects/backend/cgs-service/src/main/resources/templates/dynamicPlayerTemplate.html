@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <title>DBP API Template usage</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #target {
+            width: 980px;
+            position: relative;
+            height: 1437px;
+            overflow: hidden;
+        }
+
+        #target iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    </style>
+
+    <!-- jQuery is required for dbpPlayer -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Our SDK Wrapper -->
+    <script type="text/javascript" src="../../../../../dbplayer/sdk/sdk.js"></script>
+
+    <!-- Shared enums -->
+    <script type="text/javascript" src="../../../../../dbplayer/common_js/enums.js"></script>
+
+    <!-- Callbacks module -->
+    <script type="text/javascript" src="../../../../../dbplayer/common_js/callbacks.js"></script>
+
+    <!-- Communicator module -->
+    <script type="text/javascript" src="../../../../../dbplayer/common_js/communicator.js"></script>
+
+    <!-- Book player module -->
+    <script type="text/javascript" src="../../../../../dbplayer/sdk/sdk_book_player.js"></script>
+
+    <script type="text/javascript">
+
+        /*
+         - SDK configuration -
+         note that the target_id and the player location are now part of this configuration
+         */
+        var sdk_configuration = {
+            target_id: 'target',
+//            player_url: "http://localhost.timetoknow.com/cgs/client/player/scp/players/db/player/index.html"
+            player_url: "{{httpServerAddress}}/dbplayer/index.html"
+        };
+
+        /* Player configuration is a json object which holds all player configurable settings */
+        var player_configuration = {
+
+            // Player Type, see enums.PLAYER_TYPE
+            player_type: dbp.enums.PLAYER_TYPE.VIEWER,
+            //player_type: dbp.enums.PLAYER_TYPE.EDITOR,
+
+            // RTL Support
+            is_rtl: false,
+
+            // Choose the player stage mode (single / dual page view).
+            //stage_mode: dbp.enums.STAGE_MODE.DUAL_PAGE,
+            stage_mode: dbp.enums.STAGE_MODE.SINGLE_PAGE,
+
+            // Enable/Disable navigation.
+            navigation_enabled: false,
+
+            // Enable/Disable search.
+            search_enabled: false,
+
+            // Enable/Disable bookmarks.
+            bookmark_enabled: false,
+
+            // Enable/Disable highlights.
+            highlight_enabled: false,
+
+            // Enable/Disable the thumbnails bar (hide/show)
+            thumbnails_bar_enabled: false,
+
+            // Disable pages internal links.
+            disable_internal_links: false,
+
+            // Running mode. (ONLINE/OFFLINE. see dbp.RUNNING_MODe)
+            running_mode: dbp.enums.RUNNING_MODE.ONLINE,
+
+            // Limit nav between pages
+            limit_page_range: {start: 0, end: 0},
+
+            // read only mode
+            read_only: true,
+
+            // prefix for the pages url/thumbnails etc, might contain fs:// prefix when assests loaded from file system.
+            book_path_prefix: '',
+
+            assets_path_prefix: '{{httpServerAddress}}/publishers/{{publisherId}}/courses/{{courseId}}',
+
+            // does the player needs to inform the host to play audio/video
+            use_external_player: false,
+
+            // let the host disable the state_changed event. (state_changed won't be fire if set to false.)
+            save_state: false,
+        };
+
+        var book_configuration = {
+            /*
+             Table of contents is an array of json objects that represent a book page.
+             Each index of the array is the page number.
+             */
+            table_of_contents: [{
+                id: '{{pageId}}',
+                page_url: "publishers/{{publisherId}}/{{pageRelativeHref}}",
+                thumbnail_url: '',
+                full_text: '',
+                title: '{{title}}',
+                overlay_elements_data: {{overlayElements}}
+            }]
+        }
+
+        var state_configuration = {}
+
+        var player;
+        var current_page_id = -1;
+        $(function () {
+            function _cb(data) {
+                // Here we change the DBPlayer so it won"t contain the player's arrows, thumbnails view, borders, etc.
+                console.log("on init callback response:", data);
+                this.$iframe.ready(function() {
+                    var iframe = $(this.body.getElementsByTagName('iframe')[0]);
+                    var frameContents = iframe.contents();
+
+                    frameContents.find("#mod_viewer_toolbar").css("display", "none");
+                    frameContents.find("body").css({
+                        "background-color": "#fff",
+                        "overflow": "hidden"
+                    });
+                    frameContents.find("#mod_stage").css({"margin": 0, "padding": 0});
+                    frameContents.find("#mod_stage").css({"width": '100%'});
+                    frameContents.find(".page.loaded").css({"border": "none", "margin": 0, "padding": 0});
+                    frameContents.find("#mod_player").css("overflow-y", "auto");
+
+                    frameContents.find(".page").css({"margin": 0, "padding": 0, "border" : "none"});
+                    frameContents.find(".content").css("outline", "none");
+                })
+            }
+
+            player = new dbp.book_player(sdk_configuration, player_configuration, book_configuration, state_configuration, _cb);
+        });
+    </script>
+</head>
+<body>
+
+<div id="target"></div>
+</body>
+</html>

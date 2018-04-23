@@ -1,0 +1,218 @@
+#dialog.learningPath {
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  margin: 0; }
+  #dialog.learningPath #dialogTitle span {
+    position: absolute; }
+  #dialog.learningPath #dialogTitle .back_btn {
+    display: inline-block;
+    height: 50px;
+    left: 0;
+    font-size: 10px;
+    width: 50px; }
+    #dialog.learningPath #dialogTitle .back_btn .base-icon {
+      font-size: 24px;
+      top: 10px;
+      left: 12px; }
+    #dialog.learningPath #dialogTitle .back_btn .btn-text {
+      padding-top: 10px;
+      left: 0;
+      width: 50px;
+      text-align: center; }
+  #dialog.learningPath #dialogTitle .title_sep {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    left: 37px;
+    display: inline-block;
+    border-right: 1px solid #E4DFDF;
+    margin-left: 10px;
+    margin-right: 10px; }
+  #dialog.learningPath #dialogTitle .header {
+    pointer-events: none;
+    top: 0;
+    padding-left: 50px;
+    font-weight: normal; }
+  #dialog.learningPath #dialogContent {
+    max-height: calc(100% - 140px);
+    min-height: calc(100% - 140px);
+    padding: 0;
+    width: 100%;
+    display: block; }
+    #dialog.learningPath #dialogContent .icon-caret-down, #dialog.learningPath #dialogContent .icon-caret-up {
+      margin-top: 5px;
+      margin-left: 3px; }
+    #dialog.learningPath #dialogContent #learning_path {
+      height: calc(100% - 140px);
+      overflow-y: auto;
+      padding-top: 41px; }
+    #dialog.learningPath #dialogContent table {
+      width: 100%;
+      margin: -1px; }
+      #dialog.learningPath #dialogContent table th {
+        height: 0;
+        line-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: transparent; }
+        #dialog.learningPath #dialogContent table th div {
+          color: #333;
+          position: absolute;
+          top: 50px;
+          padding-top: 10px;
+          height: 41px;
+          margin-left: -10px;
+          padding-left: 10px;
+          padding-top: 20px;
+          background-color: #CCE2EF;
+          width: 100%;
+          z-index: 100;
+          border-bottom: 1px solid #ddd; }
+          #dialog.learningPath #dialogContent table th div .settings {
+            font-size: 20px;
+            position: absolute;
+            top: 15px;
+            margin-left: -40px; }
+          #dialog.learningPath #dialogContent table th div #settings_dropdown {
+            left: -300px;
+            position: absolute;
+            top: 41px;
+            width: auto;
+            height: auto;
+            padding: 20px;
+            display: block;
+            background-color: white;
+            border: 1px solid #ddd; }
+            #dialog.learningPath #dialogContent table th div #settings_dropdown div {
+              position: initial;
+              background: transparent;
+              height: initial;
+              border: none;
+              text-align: right; }
+            #dialog.learningPath #dialogContent table th div #settings_dropdown label {
+              display: inline-block;
+              margin-right: 20px; }
+            #dialog.learningPath #dialogContent table th div #settings_dropdown .btn {
+              margin-left: 10px;
+              width: auto;
+              display: inline-block;
+              font-weight: 400;
+              height: 34px;
+              padding: 6px 16px;
+              border: 0;
+              background-color: #4391F7;
+              color: #FFF;
+              font-size: 16px;
+              text-shadow: none;
+              border-radius: 2px;
+              text-transform: capitalize; }
+        #dialog.learningPath #dialogContent table th .info {
+          font-weight: normal;
+          padding-left: 80px; }
+      #dialog.learningPath #dialogContent table tr:hover {
+        background-color: initial; }
+      #dialog.learningPath #dialogContent table td {
+        text-align: center; }
+        #dialog.learningPath #dialogContent table td .standard_name, #dialog.learningPath #dialogContent table td.standard_name {
+          font-weight: bold;
+          width: 30%; }
+          #dialog.learningPath #dialogContent table td .standard_name .standard_name_wrap, #dialog.learningPath #dialogContent table td.standard_name .standard_name_wrap {
+            display: inline-block;
+            text-align: left; }
+            #dialog.learningPath #dialogContent table td .standard_name .standard_name_wrap .description, #dialog.learningPath #dialogContent table td.standard_name .standard_name_wrap .description {
+              display: inline-block;
+              font-weight: normal; }
+        #dialog.learningPath #dialogContent table td.standard_interval {
+          padding: 0px; }
+      #dialog.learningPath #dialogContent table .interval_cell, #dialog.learningPath #dialogContent table .lessons_cell {
+        display: table-cell;
+        padding: 10px;
+        position: relative;
+        text-align: left;
+        height: 75px;
+        font-size: 13px;
+        vertical-align: middle; }
+        #dialog.learningPath #dialogContent table .interval_cell.empty, #dialog.learningPath #dialogContent table .lessons_cell.empty {
+          text-align: center; }
+        #dialog.learningPath #dialogContent table .interval_cell .connected_label, #dialog.learningPath #dialogContent table .lessons_cell .connected_label {
+          display: inline-block;
+          width: 80px;
+          vertical-align: middle; }
+        #dialog.learningPath #dialogContent table .interval_cell #lessons_list, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list {
+          display: inline-block;
+          vertical-align: middle; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list .lesson_rows, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list .lesson_rows {
+            max-height: 75px;
+            overflow: hidden; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list .btn_less, #dialog.learningPath #dialogContent table .interval_cell #lessons_list .btn_more, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list .btn_less, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list .btn_more {
+            display: none; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list.expandable .btn_more, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list.expandable .btn_more {
+            display: block; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list.expanded .lesson_rows, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list.expanded .lesson_rows {
+            max-height: initial; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list.expanded .btn_more, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list.expanded .btn_more {
+            display: none; }
+          #dialog.learningPath #dialogContent table .interval_cell #lessons_list.expanded .btn_less, #dialog.learningPath #dialogContent table .lessons_cell #lessons_list.expanded .btn_less {
+            display: block; }
+        #dialog.learningPath #dialogContent table .interval_cell .buttons, #dialog.learningPath #dialogContent table .lessons_cell .buttons {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 24px; }
+        #dialog.learningPath #dialogContent table .interval_cell .int_label, #dialog.learningPath #dialogContent table .lessons_cell .int_label {
+          display: inline-block;
+          color: #999999;
+          min-width: 60px; }
+        #dialog.learningPath #dialogContent table .interval_cell .int_value, #dialog.learningPath #dialogContent table .lessons_cell .int_value {
+          font-size: 16px;
+          display: inline-block;
+          min-width: 40px;
+          padding-right: 10px; }
+      #dialog.learningPath #dialogContent table .interval_cell {
+        width: 30%; }
+      #dialog.learningPath #dialogContent table .lessons_cell {
+        width: 40%; }
+    #dialog.learningPath #dialogContent .lessons_table {
+      padding: 20px; }
+      #dialog.learningPath #dialogContent .lessons_table .lessons_container {
+        padding-left: 20px; }
+      #dialog.learningPath #dialogContent .lessons_table .toc_item {
+        font-weight: bold; }
+      #dialog.learningPath #dialogContent .lessons_table .lesson_row {
+        margin-bottom: 10px; }
+        #dialog.learningPath #dialogContent .lessons_table .lesson_row label {
+          display: inline-block;
+          color: #276CC7; }
+        #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links {
+          width: 100%;
+          height: 26px;
+          font-size: 13px;
+          display: inline-block;
+          overflow: hidden; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links * {
+            vertical-align: top;
+            display: inline-block; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links .links_list {
+            max-width: calc(100% - 150px); }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links .lesson_link {
+            display: inline-block;
+            padding: 3px 5px;
+            margin-right: 2px;
+            margin-bottom: 4px;
+            background-color: #CCCCCC; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links .links_label {
+            padding-top: 3px;
+            padding-right: 5px; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links .links_more, #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links .links_less {
+            display: none;
+            padding-top: 5px; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links.expandable .links_more, #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links.expandable .links_less {
+            display: initial; }
+          #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links.expanded {
+            height: auto; }
+            #dialog.learningPath #dialogContent .lessons_table .lesson_row .lesson_links.expanded .links_more {
+              display: none; }

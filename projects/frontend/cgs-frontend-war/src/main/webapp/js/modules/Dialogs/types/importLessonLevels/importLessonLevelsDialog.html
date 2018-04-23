@@ -1,0 +1,38 @@
+<div id="import_lesson_levels_container">
+{{#hasLevels}}
+	<div>((import_lesson.different_differentation_values.msg_label))</div><br>
+	<table>
+		<tr>
+			<th>((import_lesson.different_differentiation_values.table_header1))</th>
+			<th>((import_lesson.different_differentiation_values.table_header2))</th>
+		</tr>
+		{{#options.config.localLevels.levels}}
+			<tr>
+				<td><span>{{name}} ({{acronym}}):</span></td>
+				<td>
+					<select class="remote-for-{{id}}">
+						<option value>((Select from list))</option>
+						{{#options.config.remoteLevels.levels}}
+						<option value="{{id}}">{{name}} ({{acronym}})</option>
+						{{/options.config.remoteLevels.levels}}
+						<option value="none">((None))</option>
+					</select>
+				</td>
+			</tr>
+		{{/options.config.localLevels.levels}}
+	</table><br>
+	<div class="import-note">((Note: Levels not used will be deleted from the lesson))</div>
+{{/hasLevels}}
+{{^hasLevels}}
+	<div>
+		<div>((import.lesson.with.differentiation.label))</div><br>
+		<div>((import.lesson.with.differentiation.prompt))</div>
+		<select class="remote_default">
+			<option value>((Select from list))</option>
+			{{#options.config.remoteLevels.levels}}
+			<option value="{{id}}">{{name}} ({{acronym}})</option>
+			{{/options.config.remoteLevels.levels}}
+		</select>
+	</div>
+{{/hasLevels}}
+</div>

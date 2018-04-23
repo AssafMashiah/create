@@ -1,0 +1,100 @@
+#dialog.theming{
+	width: 96%;
+	height: 96%;
+	margin: 0;
+	top: 2%;
+	left: 2%;
+	min-height: 96%;
+}
+#dialog.theming #dialogTitle{
+	display: none;
+}
+#dialog.theming #dialogControls{
+	height: 60px;
+	padding: 10px;
+}
+
+#dialog.theming #dialogContent{
+	padding: 0;
+	max-height: 100%;
+	width: 100%;
+	height: calc(100% - 60px);
+    position: relative;
+}
+#dialog.theming #configurationSection{
+	width: 280px;
+	float: left;
+	height: 100%;
+
+}
+#dialog.theming #previewSection{
+	width: calc(100% - 280px);
+	display: inline-block;
+	height: 98%;
+}
+#themingDialog{
+	height: 100%;
+    width: 100%;
+    position: absolute;
+}
+#themingDialog > div {
+    position: initial;
+}
+#themingDialog #content{
+	height: calc(100% - 55px);
+}
+#themingDialog #header{
+	height: 55px;
+	background-color: #276CC7;
+	color: #e5e5e5;
+	font-size: 16px;
+	font-family: Arial;
+	padding: 10px 20px;
+
+}
+#themingDialog #header span {
+	vertical-align: top;
+	line-height: 30px;
+}
+#themingDialog #header select{
+	color: #fff;
+	margin-right: 15px;
+}
+#themingDialog #header select:focus{
+	color: #333;
+	margin-right: 15px;
+}
+#themingDialog #header .btn{
+	vertical-align: top;
+	height: 30px;
+
+}
+#themingDialog .property{
+	width: 106px;
+	float: right;
+	font-size: 12px
+}
+#themingDialog input.property{
+	width: 92px;
+}
+#themingDialog .properties-row{
+	padding: 10px 15px;
+	font: 12px Arial;
+	color:  #333;
+	line-height: 30px;
+	vertical-align: top;
+}
+#themingDialog .properties-row .property-name{
+	vertical-align: top;
+	width: 140px;
+	display: inline-block;
+}
+#themingDialog .properties-row .rangeLabel{
+	display: inline-block;
+}
+#themingDialog input[type='range'].property{
+	margin: 0 10px;
+	width: 106px;
+	float: none;
+	display: inline-block;
+}

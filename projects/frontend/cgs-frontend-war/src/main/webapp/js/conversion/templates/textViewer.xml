@@ -1,0 +1,21 @@
+{{^dontDisplay}}
+	{{#isMathfieldOnly}}
+		{{{text}}}
+	{{/isMathfieldOnly}}
+	{{^isMathfieldOnly}}
+	{{#message}}
+		<message {{#name}}name="{{name}}"{{/name}} attempt="{{attempt}}" type="{{feedback_type}}">
+	{{/message}}
+
+	<textViewer id="{{id}}">
+	    <paragraph>{{{text}}}</paragraph>
+
+
+	    {{{content}}}
+	</textViewer>
+
+	{{#message}}
+		</message>
+	{{/message}}
+	{{/isMathfieldOnly}}
+{{/dontDisplay}}

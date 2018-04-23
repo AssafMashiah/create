@@ -1,0 +1,27 @@
+<div class="lessons_table">
+    <div class="lessons_list">
+        {{#lessons}}
+            <div class="lesson_row" id="{{id}}">
+                <input type="checkbox" id="check_{{id}}" {{#selected}}checked{{/selected}}/><label for="check_{{id}}" >{{data.title}}</label>
+                {{#isLinked}}
+                <div>
+                    <span class="lesson_links">
+                        <span class="links_list">
+                        {{#linkedTo}}
+                            <div class="lesson_link">
+                                <b>{{pedagogicalId}}</b>
+                                <span>{{standardName}}<span>
+                                <span>| ((Level))</span>
+                                <span>{{levelNo}}</span>
+                            </div>
+                        {{/linkedTo}}
+                            <span class="links_less">((dialog.learningpath.lessons.connections.less))<span class="base-icon icon-caret-up"></span></span>
+                        </span>
+                        <span class="links_more">((dialog.learningpath.lessons.connections.more))<span class="base-icon icon-caret-down"></span></span>
+                    </span>
+                </div>
+                {{/isLinked}}
+            </div>
+        {{/lessons}}
+    </div>
+</div>

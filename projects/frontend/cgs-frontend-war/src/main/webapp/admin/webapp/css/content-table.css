@@ -1,0 +1,247 @@
+
+#T2KPublisherEditor,
+#T2KPublisherAccounts {
+    width: 95%;
+}
+
+.unactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#accounts-table_filter > label > input[type=text] {
+    vertical-align: -webkit-baseline-middle;
+    margin-bottom: 10px;
+}
+.t2k-admin-screen-content  > div.row-fluid {
+    padding-top: 45px;
+}
+
+#T2KPublisherEditor  #accounts-table_wrapper,
+#T2KPublisherAccounts  #accounts-table_wrapper {
+    margin-bottom:30px;
+}
+#T2KPublisherEditor  #accounts-table_wrapper > .row-fluid,
+#T2KPublisherAccounts  #accounts-table_wrapper > .row-fluid {
+    display:block;
+}
+
+.t2k-admin-screen-content .nav-tabs li.active a {
+    color:#c4399c !important;
+}
+.t2k-admin-screen-content .nav-tabs li.active {
+    background-color:#fff;
+    padding: 3px 0;
+    bottom: 0px;
+    position: relative
+
+}
+
+.t2k-admin-screen-content .btn[disabled=disabled]:hover a {
+      color:inherit;
+}
+.t2k-admin-screen-content .nav-tabs li a {
+    border:none !important;
+    color: #333;
+}
+.t2k-admin-screen-content .nav-tabs li {
+    background-color:#f5f5f5;
+    font-family: Arial;
+    font-weight:normal;
+    font-size:14px;
+    color: #333;
+    border:1px solid #dddddd;
+    bottom: -6px;
+    position: relative;
+}
+.t2k-admin-screen-content  .btn,
+.t2k-admin-screen-content  .btn a{
+    line-height: 20px;
+    font-size: 32px;
+    vertical-align: middle;
+    text-decoration: none;
+    padding: 3px;
+    display: inline-block;
+    color: #333;
+}
+.t2k-admin-screen-content  .btn:hover a{
+    color: #C4399C;
+}
+.t2k-admin-screen-content .table  th,
+.t2k-admin-screen-content .table   td  {
+   vertical-align: middle;
+
+}
+
+.t2k-admin-screen-content .content-table thead th {
+    font-weight: normal;
+    background-color: #F5F5F5;
+}
+
+.t2k-admin-screen-content .content-table .sorting {
+    background-image: none;
+}
+
+.content-table .sorting_asc {
+    background-image: url('../media/sort_asc.png');
+    background-repeat: no-repeat;
+    background-position: right 12px;
+}
+
+.content-table thead .sorting_desc {
+    background-image: url('../media/sort_desc.png');
+    background-repeat: no-repeat;
+    background-position: right 6px;
+}
+.content-table {
+	border: 1px solid #e1e1e1;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.content-tablee tr:hover,
+.content-table tr:hover td {
+    background-color: #F9E9F4 !important;
+}
+
+.content-table tr td {
+	font-size: 12px;
+}
+
+.content-table thead th {
+	padding-top: 0;
+	padding-bottom: 0;
+	font-weight: normal;
+}
+
+.content-table thead th.middle {
+    vertical-align: middle;
+}
+
+.content-table tr th {
+	background-color: #F5F5F5;
+}
+
+.content-table tr td.actions,
+.content-table tr th.actions_header{
+    max-width: 97px !important;
+    width:97px !important;
+}
+.content-table tr th input {
+    width:85%;
+    max-width:85%;
+}
+.content-table tr th, td {
+	border-left: 0px !important;
+	border-radius: 0px !important;
+}
+
+.content-table .icon-cog, .icon-trash, .icon-folder-close {
+	font-size: 32px;
+	color: #333;
+}
+
+.content-table .icon-folder-close {
+	color: #C4399C;
+}
+
+.content-table .icon-cog:hover, .icon-trash:hover {
+	color: #C4399C;
+}
+
+.content-table .btn.focus {
+	border: 1px solid #C4399C;
+}
+
+.content-table .btn,
+.content-table .btn a{
+    line-height: 20px;
+    font-size: 32px;
+    vertical-align: middle;
+    text-decoration: none;
+    padding: 3px;
+    display: inline-block;
+    color: #333;
+
+    border-radius: 0px;
+}
+
+
+.content-table thead tr th {
+	background-color: #F5F5F5 !important;
+}
+
+
+
+
+.content-table tbody td,th {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	vertical-align: middle;
+
+	height: 40px;
+
+	border-right: 1px solid #e1e1e1;
+}
+
+.content-table .selected {
+	background-color: #F9E9F4 !important;
+}
+
+.content-table tr td.image-container {
+    text-align: center;
+    padding: 4px;
+}
+
+.content-table tr td.image-container img {
+    border-radius: 5px;
+
+    width: 100px;
+    height: 100px;
+}
+
+.btn.add-new-user {
+	border-radius: 0;
+}
+
+#T2KCourses .content-table tr td.image-container{
+    width: 120px;
+    }
+
+#T2KCourses .content-table tr td.course-title,
+#T2KCourses .content-table tr td.course-author,
+#T2KCourses .content-table tr td.course-id,
+#T2KCourses .content-table tr td.course-lastModified{
+    width: 20%
+
+}
+
+#T2KCourses .content-table tr td.actions{
+    width: 80px
+}
+
+#T2KPublisherEditor .sizes-table {
+    margin-bottom: 40px;
+}
+
+#T2KPublisherEditor .sizes-table td {
+    padding-right: 7px;
+}
+
+#T2KPublisherEditor .sizes-table .size-name {
+    text-align: right;
+}
+
+#T2KPublisherEditor .sizes-table .size-value input,
+#T2KPublisherMediaUploads .sizes-table .size-value input,
+#T2KPublisherBookAlive .sizes-table .size-value input {
+    width: 50px;
+    text-align: right;
+    margin-bottom: 4px;
+}

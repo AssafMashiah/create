@@ -1,0 +1,29 @@
+.multiNarrationWrapper {
+	width: calc(90% - 2px);
+	margin-bottom: 25px;
+	border: 1px solid #dddddd;
+}
+
+.multiNarrationWrapper ul {
+	width: 100%;
+	border: 0;
+	margin: 0; padding: 0;
+	list-style-type: none;
+	max-height: 150px;
+	overflow-y:	scroll; 
+}
+.multiNarrationWrapper ul li {
+	padding: 5px;
+}
+
+.multiNarrationWrapper ul li:hover {
+	background-color: #DFE8E5;
+}
+
+.multiNarrationWrapper #add_narration_locale {
+	margin: 5px;
+}
+
+.multiNarrationWrapper ul li .x-button-container{
+	float: right;
+}

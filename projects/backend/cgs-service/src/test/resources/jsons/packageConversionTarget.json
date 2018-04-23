@@ -1,0 +1,225 @@
+{
+    "customFields": [
+        {
+            "cid": "893a2316-68c0-4b87-aeb5-ef727f9cc99c",
+            "type": "text",
+            "name": "text",
+            "value": {
+                "text": "val"
+            }
+        },
+        {
+            "cid": "461d7556-1055-416a-bdf8-8d91cd7d3d16",
+            "type": "number",
+            "name": "int",
+            "value": {
+                "number": 2
+            }
+        },
+        {
+            "cid": "b913c6e6-8ce5-4c50-9b59-c3edac8fa844",
+            "type": "text",
+            "name": "free text",
+            "value": {
+                "text": "free val"
+            }
+        },
+        {
+            "cid": "51711392-bfda-44d2-945c-355683fca903",
+            "type": "list",
+            "name": "tags space",
+            "values": [
+                {
+                    "text": "a"
+                },
+                {
+                    "text": "b"
+                },
+                {
+                    "text": "c"
+                },
+                {
+                    "text": "d"
+                }
+            ]
+        },
+        {
+            "cid": "32a7de77-b59d-418a-8f18-e4534d73c89b",
+            "type": "list",
+            "name": "tags comma",
+            "values": [
+                {
+                    "text": "a"
+                },
+                {
+                    "text": "b"
+                },
+                {
+                    "text": "c"
+                },
+                {
+                    "text": "d"
+                }
+            ]
+        },
+        {
+            "cid": "60005d08-ce12-4a78-85a2-b67891530f94",
+            "type": "list",
+            "name": "tags semicolon",
+            "values": [
+                {
+                    "text": "a"
+                },
+                {
+                    "text": "b"
+                },
+                {
+                    "text": "c"
+                },
+                {
+                    "text": "d"
+                }
+            ]
+        },
+        {
+            "cid": "7325e4c8-8646-4cdc-9a84-c9a0e9a3c305",
+            "type": "text",
+            "name": "url",
+            "value": {
+                "text": "http:\\\\\\\\www.walla.com"
+            }
+        },
+        {
+            "cid": "94aa0aec-a125-469a-8c8a-d5fc9f90ec53",
+            "type": "date",
+            "name": "date1",
+            "value": {
+                "date": "2014-09-04T00:00:00Z"
+            }
+        },
+        {
+            "cid": "9ac1ce77-9489-42fd-87e4-9da03d9e2979",
+            "type": "date",
+            "name": "date2",
+            "value": {
+                "date": "2014-09-04T00:00:00Z"
+            }
+        },
+        {
+            "cid": "20385bd2-851b-46b3-bd7a-9448afcf3a23",
+            "type": "date",
+            "name": "date3",
+            "value": {
+                "date": "2014-09-04T00:00:00Z"
+            }
+        },
+        {
+            "cid": "9cda0be6-487a-4b30-9ae2-0bfb5c6de3f5",
+            "type": "date",
+            "name": "date4",
+            "value": {
+                "date": "2014-09-04T00:00:00Z"
+            }
+        },
+        {
+            "cid": "1967c308-9cab-4b92-abe6-02076679390b",
+            "type": "duration",
+            "name": "time1",
+            "value": {
+                "duration": "P1H0M0S"
+            }
+        },
+        {
+            "cid": "169cdea5-f8ef-44e4-8d93-5011a8aea132",
+            "type": "duration",
+            "name": "time2",
+            "value": {
+                "duration": "P1H0M0S"
+            }
+        },
+        {
+            "cid": "eb152bee-b177-4d6b-98ad-49e14f1ac466",
+            "type": "duration",
+            "name": "time3",
+            "value": {
+                "duration": "P1H0M0S"
+            }
+        },
+        {
+            "cid": "62851349-9774-432e-9773-fc7e9c932dfb",
+            "type": "duration",
+            "name": "time4",
+            "value": {
+                "duration": "P1H0M0S"
+            }
+        },
+        {
+            "cid": "50ae5258-1817-495f-b0ed-776fa166f8b4",
+            "type": "text",
+            "name": "list",
+            "value": {
+                "text": "a"
+            }
+        },
+        {
+            "cid": "394a60ce-9af9-4837-ac1e-1e1fac727760",
+            "type": "boolean",
+            "name": "bool",
+            "value": {
+                "boolean": true
+            }
+        },
+        {
+            "cid": "course_4",
+            "name": "topics",
+            "type": "list",
+            "values": [
+                {
+                    "number": 5
+                }
+            ]
+        },
+        {
+            "cid": "course_5",
+            "name": "class",
+            "type": "list",
+            "values": [
+                {
+                    "number": 1
+                }
+            ]
+        },
+        {
+            "cid": "1967c308-9cab-4b92-abe6-02076679390b",
+            "type": "duration",
+            "name": "time1",
+            "value": {
+                "duration": "P12H59M0S"
+            }
+        },
+        {
+            "cid": "169cdea5-f8ef-44e4-8d93-5011a8aea132",
+            "type": "duration",
+            "name": "time2",
+            "value": {
+                "duration": "P12H59M0S"
+            }
+        },
+        {
+            "cid": "eb152bee-b177-4d6b-98ad-49e14f1ac466",
+            "type": "duration",
+            "name": "time3",
+            "value": {
+                "duration": "P12H59M0S"
+            }
+        },
+        {
+            "cid": "62851349-9774-432e-9773-fc7e9c932dfb",
+            "type": "duration",
+            "name": "time4",
+            "value": {
+                "duration": "P12H59M0S"
+            }
+        }
+    ]
+}

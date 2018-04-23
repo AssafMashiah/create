@@ -1,0 +1,682 @@
+.level_list_preview,
+.course_references,
+.course-standards,
+.course-diff-levels{
+    border: 1px solid black;
+    padding: 6px;
+    background: white;
+
+}
+
+.level_list_preview .row div {
+    white-space: nowrap;
+}
+
+.modal-course-standards {
+    width: 98%;
+}
+
+.course-editor .thumbnail {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.editor-wrapper.course-editor {
+    margin-top: 15px;
+    font-family: "open_sans";
+}
+
+.editor-wrapper.course-editor .nav-tabs > li > a {
+    font-weight: bold;
+    position: relative;
+}
+
+#references_list li button {
+    position: absolute;
+    right: 2px;
+    line-height: 10px;
+    display: none;
+}
+
+#references_list li:hover {
+    background-color: #DFE8E5;
+}
+
+#references_list li:hover button {
+    display: inline;
+}
+
+#references_list a {
+    display: inline;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+#standards_list a {
+
+}
+
+
+
+.package-title.not-first {
+    margin-left: 0.5em;
+}
+
+.standards_package_list  tr:hover, .standards_package_list  tr.selected  {
+    text-decoration: none;
+    background-color: #DFE8E5;
+}
+
+.standards_package_list  tr.disabled:hover {
+    background-color: white;
+}
+
+.standards_package_list tr {
+    word-break: break-all;
+    word-wrap: break-word;
+    cursor: pointer;
+
+}
+
+.standards_package_list input[type=checkbox] {
+    position: relative;
+    bottom: 2px;
+}
+
+.standards_package_list td {
+    word-break: normal;
+}
+
+#standards_package_selected{
+    margin-bottom: 30px;
+}
+#standards_package_selected tr:hover td:nth-child(even) {
+
+    text-align: right;
+}
+#standards_package_selected tr:hover .removeStdPkg {
+    visibility: visible;
+}
+
+.standards_package_list tr td.last {
+    padding-right: 0em !important;
+
+}
+
+.removeStdPkg {
+    line-height: 20px;
+    width: 35px;
+    height: 28px;
+    color: black;
+    visibility: hidden;
+    right: 3px;
+    top: 2px;
+    position: relative;
+    font-size:19px;
+
+}
+
+.removeStdPkg[disabled=disabled] {
+    color: lightgray !important;
+}
+.removeStdPkg:hover {
+    color: #0088cc;
+}
+
+.standards_package_list tr td:nth-child(odd) {
+
+}
+
+#standards_package_selected  tr td:nth-child(odd){
+    left: 5px;
+    position: relative;
+}
+
+.standards_package_list tr td {
+    padding-bottom: 0.3em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+#button_select_standard {
+    margin-top: 6px;
+}
+.standards_package_list {
+
+}
+
+.package-standards {
+    margin: 10px 0;
+}
+
+.standardPackage #dialogContent {
+    /* min-height: 305px;*/
+  /*  max-height: none;*/
+    padding:10px;
+    overflow:auto;
+}
+
+.standardPackage  ::-webkit-scrollbar,
+.diffLevels   ::-webkit-scrollbar {
+    width: 6px;
+}
+#dialog.diffLevels {
+    min-height: 484px;
+    max-height: 484px;
+}
+#dialog.standardPackage{
+    /*min-height: 570px;*/
+    /*max-height: 570px;*/
+}
+
+#dialog.standardPackage #dialogContent {
+    min-height: 410px;
+    max-height: 410px;
+    padding: 20px 10px 20px 30px;
+}
+
+
+#dialog.standardPackage #standardsListTitle {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#dialog.standardPackage th {
+    background-color:  #f5f5f5;
+    padding:10px;
+    border-right: 1px solid #ddd;
+}
+
+#dialog.standardPackage table {
+    text-align: left;
+    width:95%;
+}
+#dialog.standardPackage td {
+    padding: 5px;
+}
+
+#dialog.standardPackage table,
+#dialog.standardPackage tr,
+#dialog.standardPackage td,
+#dialog.diffLevels td{
+    border: 1px solid #ddd;
+}
+
+#standards_package_selected .standards_package_list{
+    width:100%;
+}
+#standards_package_selected tr .updateStdPkg{
+    vertical-align: baseline;
+    visibility: hidden;
+    font-size: 13px;
+    top: -1px;
+    position: relative;
+    line-height: 18px;
+    right:1px;
+
+}
+.standardPackage #dialogTitle {
+         text-align: left;
+}
+#standards_package_selected .update-indication {
+    position: relative;
+    left: 0;
+}
+#standards_package_selected tr:hover .updateStdPkg{
+    visibility: visible;
+
+
+}
+
+
+.standards_package_list tr.disabled td {
+    color: lightgrey !important;
+}
+
+
+
+div#settings {
+    width: 97%;
+}
+
+#button_select_diff_levels {
+    font-size: 24px;
+    display: inline-block;
+    padding: 0px 3px;
+    float: right;
+
+}
+
+#diff-levels-container label {
+    display:inline-block;
+}
+
+#diff_levels_container {
+    min-height: 150px;
+    padding: 0;
+    clear: both;
+}
+
+#diff-levels-container table {
+    text-align: left;
+    width: 100%;
+}
+#diff-levels-container thead {
+    border-bottom: 1px solid lightgray;
+}
+
+#diff-levels-container thead th,
+#dialog.diffLevels thead th{
+    font-weight: normal;
+    background-color: #f5f5f5;
+    padding: 4px;
+    border-right: 1px solid #ddd;
+}
+#dialog.diffLevels thead th {
+    font-weight:bold !important;
+}
+
+
+#dialog.diffLevels table {
+    display: inline-block;
+    border: 1px solid #ddd;
+    text-align: left;
+    padding-right: 1px;
+
+}
+#dialog.diffLevels #dialogContent {
+    height: 340px;
+    max-height: 340px;
+    padding-top: 25px
+}
+
+#dialog.diffLevels #dialogContent #diff-level-container {
+    left: 3px;
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    max-height: 210px;
+    overflow:auto;
+    margin:0 auto;
+}
+
+#dialog.diffLevels input[type=text] {
+    vertical-align: middle;
+    left: 3px;
+    top: 5px;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    border: none;
+    box-shadow:none !important;
+}
+
+#button_add_diffLevel {
+    left: 18px;
+    top: 5px;
+    position: relative;
+}
+
+
+#diff-level-title {
+    margin-bottom: 8px;
+    left: 20px;
+    position: relative;
+}
+
+.remove-diff{
+    padding: 0;
+    font-size: 32px;
+    font-weight: normal;
+    visibility: hidden;
+    width: 35px;
+    height: 32px;
+    line-height:29px;
+}
+/*#diff-level-table tr.diffData:hover .remove-diff{
+    visibility: visible;
+}*/
+
+#diffLevel_error {
+    left: 20px;
+    position: relative;
+    color: red;
+    display: block;
+}
+
+#bottom-diff-div {
+   position:absolute;
+   bottom:110px;
+    left: 0;
+    width: 100%;
+    height:1px;
+    border-top: 1px solid lightgray;
+}
+
+#diff-level-table tr.diffData:hover{
+    background-color: #DFE8E5;
+}
+
+
+.diffData .default {
+    text-align: center;
+}
+
+.diffData .default input[type=radio] {
+    top: -3px;
+    position: relative;
+}
+
+#diff-level-table .idHeader{
+    width:5%
+}
+
+#diff-level-table .nameHeader {
+    width:60%;
+}
+
+#diff-level-table .acryHeader {
+    width:25%;
+}
+
+#diff-level-table .defaultHeader {
+    width:10%
+}
+
+.diffData .diffId {
+    text-align: center;
+}
+
+.diffData .deleteDiff {
+    text-align: center;
+}
+.diff_label {
+    float: left;
+    display: inline-block;
+}
+
+.diff_levels_list th{
+    width: 30%;
+    background-color: #f5f5f5;
+    padding: 4px;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+    text-align: left;
+}
+.diff_levels_list tr{
+    border-bottom: 1px solid #ddd;
+
+}
+
+.diff_levels_list td {
+    border: 1px solid #ddd;
+    padding:4px;
+}
+.icon-ok {
+    color:green;
+}
+ .icon-ok:before {
+    content: "\f00c";
+    font-family: 'FontAwesomeOld';
+}
+
+ .diff_levels_list .default {
+     text-align: center;
+ }
+ .diff_levels_list {
+    width: 100%;
+ }
+
+
+ #standards_package_selected .tooltip-inner {
+     word-wrap: normal;
+     word-break: normal;
+ }
+
+
+#references_list li a::before {
+    font-family: 'CGS-icons';
+    content: "\0028";
+    font-size: 16px;
+    vertical-align: middle;
+    position:relative;
+    left: -1px;
+    margin-right: 5px;
+    color: rgb(51, 51, 51);
+}
+
+#references_list li.media-file a::before {
+    font-family: 'CGS-icons';
+    content: "\0029";
+}
+
+#references_list li.img-file a::before {
+    font-family: 'CGS-icons';
+    content: "\002A";
+}
+
+#customizationComment{
+    width: 300px;
+    float: right;
+    background-color: rgb(255,255,204);
+    padding: 10px;
+    margin-right: 20px;
+}
+#customCourseMetadata .row-fluid{
+    margin-bottom: 10px;
+}
+#tts-services {
+    clear: both;
+    width: 90%;
+}
+#tts-services table th.language{
+    width: 20%;
+}
+#tts-services table th.short {
+    width: 5%;
+}
+
+.use-tts-service-wrapper  input[type=checkbox]{
+    float: left;
+    margin: 6px;
+}
+.service-properties {
+    max-width: 141px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.inline { float:left; }
+.clearBoth { clear:both; }
+
+#tabTitle {
+    margin: 0px 30px;
+}
+#props_base.course-props {
+   margin-left: 0px;
+}
+.course-editor h3 {
+    font-size: 22px;
+}
+.course-editor #CourseEditorTabs {
+    margin-bottom: 0px;
+    height: 68px;
+    background-color: #E9F0F3;
+    border-bottom: solid 1px #DEE1e6;
+    max-width: 169px;
+    position: relative;
+}
+.course-editor #CourseEditorTabs #props_button {
+    background-color: #E9F0F3;
+}
+
+.course-editor #CourseEditorTabs #props_button:hover {
+    background-color: #B4D3FC;
+}
+
+.course-editor.lessons #CourseEditorTabs {
+    max-width: 50px;
+    background-color: transparent;
+    border: none;
+}
+.course-editor.lessons #CourseEditorTabs #lessons_button {
+    display: none;
+}
+.editor-wrapper.course-editor:not(.lessons) #CourseEditorTabs #props_button {
+    display: none;
+}
+.course-editor.properties #CourseEditorTabs #props_button {
+    display: none;
+}
+.course-editor.lessons #CourseEditorTabs #props_button {
+    border-radius: 0px 15px 15px 0px;
+}
+.course-editor #CourseEditorTabs #props_button div {
+    width: fit-content;
+    margin: 0 auto;
+}
+.course-editor #CourseEditorTabs #props_button img {
+    padding: 7px 10px;
+    display: block;
+}
+.course-editor #CourseEditorTabs li a {
+    text-decoration: none;
+    color: white;
+    border: none;
+    margin: 0px;
+}
+.course-editor #CourseEditorTabs li#props_button a {
+    font-weight: normal;
+    font-size: 12px;
+    height: auto;
+}
+#CourseEditorTabs .cgs-tooltip-button,
+.verticalNavContainer .cgs-tooltip-button {
+    color: white;
+    border-color: white;
+}
+#CourseEditorTabs #lessons_button {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+#CourseEditorTabs #lessons_button a {
+    width: 100%;
+    height: 100%;
+}
+#CourseEditorTabs #lessons_button a img {
+    display: block;
+    margin: 10% auto 0;
+}
+.tab-pane#lessons {
+    margin-left: 5%;
+}
+
+/* vertical nav bar - settings */
+.nav {
+    margin-bottom: 0px;
+}
+.verticalNavContainer {
+    background-color: #E9F0F3;
+    max-width: 170px;
+}
+.verticalNavContainer a {
+    cursor: pointer;
+}
+.verticalNavContainer .nav-pills a:hover {
+    background-color: #80ABE6;
+    color: white;
+}
+.verticalNavContainer .nav-pills > .active > a {
+    background-color: #276CC7;
+    color: white;
+}
+.verticalNavContainer .nav-pills > li.active:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 12px;
+    border-color: transparent transparent transparent #276CC7;
+    position: absolute;
+    top: 18%;
+    right: -8px;
+}
+.verticalNavContainer .nav-pills a {
+    color: #276CC7;
+    font-weight: bold;
+    border-radius: 0;
+    border-bottom: solid 1px #D6D6D6;
+    line-height: 28px;
+    margin: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.verticalNavContainer > ul{
+    margin-bottom: 150%;
+}
+.verticalNavContainer{
+    border-right: 1px solid #eee;
+}
+.verticalNavContainer li {
+    position: relative;
+    margin-top: -3px;
+}
+.verticalNavContainer #li_properties {
+    position: relative;
+    margin-top: 0px;
+}
+.verticalNavContainer ul ul li {
+    margin-top: -3px;
+    position: relative;
+}
+
+/* vertical nav bar - settings - end */
+
+#props_general .splitBottom{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+.multiselect{
+    width: 198px;
+    min-height: 20px;
+    max-height: 190px;
+    overflow: auto;
+    border-bottom: 1px solid #ededed;
+    padding: 7px 14px 7px 0;
+
+}
+
+.multiselect .multiselectRow {
+    line-height: 22px;
+    font-size: 14px;
+}
+.multiselect .multiselectRow input[type="checkbox"]{
+    margin: 0 5px 0 0;
+}
+
+.includeLoLabel{
+    display: inline-block;
+}
+
+.loading-image-gif {
+    position: absolute;
+    top: calc(50% - 90px);
+    left: 59%;
+}
+
+#ebooks_in_use_table td {
+    vertical-align: middle;
+}
+
+#ebooks_in_use_table .update-col {
+    text-align: center;
+}
+
+#ebooks_in_use_table .update-col div {
+    margin: 10px;
+}
+
+.updateEpub > #dialogControls {
+    display: none;
+}

@@ -1,0 +1,14 @@
+{
+    "jobId" : "fc3eb01b-36bc-4e88-8c38-2cc83c14b296",
+    "componentsProgressInPercent" : {
+        "unzip resources files" : 100,
+        "validate" : 100
+    },
+    "errors" : {},
+    "properties" : {
+        "exportedCourseResourceFiles" : "/resources/CourseId_960002a0-4df4-42a5-ba43-e9de452bcf50_1410944598147_25fa",
+        "passValidation" : "true"
+    },
+    "status" : "COMPLETED",
+    "warnings" : []
+}

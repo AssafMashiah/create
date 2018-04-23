@@ -1,0 +1,26 @@
+{
+  "id" : "123456789",
+  "eBookId" : "8cb4fecc-9863-4fca-8980-4f25c91a8959",
+  "originalFileName" : "IRFEACTX7_U1.pdf",
+  "username" : "tali",
+  "sha1" : "cc14cca4a24c08ed615f1b4379af32a3f86747e2",
+  "publisherId" : 2,
+  "creationDate" : "2015-12-14T11:26:35.406Z",
+  "conversionLibrary":"IDR",
+  "conversionLibraryVersion":"1.0",
+  "structure" : {
+    "title" : "IRFEACTX7_U1",
+    "coverImage" : "ebooks/8cb4fecc-9863-4fca-8980-4f25c91a8959/converted/thumbnails/1.jpg",
+    "pages" : [
+      {
+        "id" : "page-1",
+        "eBookId" : "8cb4fecc-9863-4fca-8980-4f25c91a8959",
+        "title" : "Page 1",
+        "href" : "ebooks/8cb4fecc-9863-4fca-8980-4f25c91a8959/converted/1.html",
+        "thumbnailHref" : "ebooks/8cb4fecc-9863-4fca-8980-4f25c91a8959/converted/thumbnails/1.jpg",
+        "originalIndex" : 1
+      }
+    ],
+    "eBookStructures" : []
+  }
+}

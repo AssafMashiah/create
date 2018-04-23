@@ -1,0 +1,9 @@
+.ConvertQuestionOnlyEditor .instruction_icon {
+	clear: both;
+}
+
+.ConvertQuestionOnlyEditor .content-area.question_content,
+.ConvertQuestionOnlyEditor .content-area.question_content > .drop-zone[dropable-content-id='question_instruction_content'] {
+	height: 50px !important;
+	min-height: 50px !important;
+}

@@ -1,0 +1,15 @@
+// Find all the thumbnails that their content starts with an invalid prefix, and remove that prefix 
+// Fixes bug: CGS-4843 
+
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+	var stringToReplace = "data\:image\/png\;base64,";
+	print(stringToReplace);
+	var corruptedThumbnails = db.thumbnails.find({"content":/^data\:image\/png\;base64\,/});
+	corruptedThumbnails.forEach(function(thumb){
+		thumb.content = thumb.content.replace(stringToReplace,"");
+		db.thumbnails.save(thumb);
+		print("thumbnail content fixed: seqId:"+thumb.seqId+" lessonCId:"+thumb.lessonCId+" courseId:"+thumb.courseId);
+	})
+
+}

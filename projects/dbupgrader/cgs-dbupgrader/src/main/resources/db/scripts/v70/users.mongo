@@ -1,0 +1,19 @@
+############################
+# Unique Id for publishers #
+############################
+incrementals.insert({"collectionName":"publishers", "incrementalId":new NumberInt(1)});;
+
+################
+# Define Users #
+################
+createCollection("users");;
+users.ensureIndex({"username":1} , {name : "users_userNameUniqueIdx", unique: true});;
+users.ensureIndex({"userId":1} , {name : "users_userIdUniqueIdx", unique: true});;
+users.ensureIndex({"email":1} , {name : "users_emailUniqueIdx", unique: true});;
+
+####################
+# Update publisher #
+####################
+publishers.dropIndexes();;
+publishers.ensureIndex({"publisherId":1} , {name : "publisher_publisherIdx", unique: true});;
+publishers.update({"publisherId": 1}, { $set : { "_class" : "com.mongodb.BasicDBObject"}});;

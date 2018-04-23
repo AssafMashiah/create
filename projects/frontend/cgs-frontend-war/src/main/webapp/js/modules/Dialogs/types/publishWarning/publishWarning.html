@@ -1,0 +1,22 @@
+<div id="publishWarningWrapper">
+    <div id="publishWarningDesc">((course.publish.pop_up_table.locked_lessons.label))</div>
+    <div id="tableWrapper">
+        <table id="publishWarningTable" border="1">
+            <thead>
+            <tr>
+                <th>((User))</th>
+                <th>((Lesson))</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#options.config.data.locks}}
+            <tr>
+                <td>{{userName}}</td>
+                <td>{{lesson}}</td>
+            </tr>
+            {{/options.config.data.locks}}
+            </tbody>
+        </table>
+    </div>
+    <div id="publishWarningProceed">((course.publish.pop_up.table.locked_lessons.prompt))</div>
+</div>

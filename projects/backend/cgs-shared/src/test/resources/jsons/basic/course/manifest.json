@@ -1,0 +1,194 @@
+{
+	"schema": "schema/v1.0#course",
+	"header":{
+				"id":"12312312312",
+				"last-modified":"yyyy.MM.dd HH:mm:ss Z"
+			},
+	"type": "course",
+	"author": "Ronen Mintz",
+	"publisher": "Hotza\"at Yediut Aharonot",
+
+	"created":  "2012-01-01 12:12:12Z",
+	"updated":  "2012-01-01 12:12:12Z",
+	"version":  "1.0",
+	"cgsVersion": "CGS1.0.1",
+
+	"title": "aTitle",
+	"isbn": "0-596-00894-5",
+	"coverRefId": "media/F4/A8/F4A834564356345.gif",
+	"contentLocales": ["en_US", "he_IL"],
+
+	"overview": "an extremely long text (about xxx bytes)",
+	"subjectArea": ["Subject1","Subject2","math","exl"],
+	"description": "some description",
+	"credits": "sdfgsdfgsdfg",
+	"copyright": "sdfgsdfgsdfg",
+	"gradeLevel": ["5th","4th","3rd"],
+	"targetPopulation": ["orthodox", "gifted","simple","NY"],
+
+	"technicalReq": "sdfgsdfgsdfgsdfgsdfg",
+
+	"glossary":[{
+					"foo": "def1",
+					"baz": "def2"
+				}],
+
+	"toc": {
+		"localId":"43534563456",
+		"type":"toc",
+		"maxDepth": 6,
+		"lessonsRef": [
+									"lessons/12312312359",
+									"lessons/12312312369",
+									"lessons/12312312379"
+								],
+		"tocItems": [
+				{
+					"localId": "toc_100",
+					"type":"tocItem",
+					"title": "my titles",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312359",
+									"lessons/12312312369",
+									"lessons/12312312379"
+								],
+					"tocItems": [{
+								"localId": "toc_101",
+								"type":"tocItem",
+								"title": "bla",
+								"overview": "an extremely long text (about xxx bytes)",
+								"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+								"lessonsRef": [
+												"lessons/12312313319",
+												"lessons/12313312319",
+												"lessons/15312312319"
+											]
+								},
+								{
+								"localId": "toc_102",
+								"type":"tocItem",
+								"title": "bla",
+								"overview": "an extremely long text (about xxx bytes)",
+								"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+								"lessonsRef": [
+												"lessons/12319312319",
+												"lessons/12312812319",
+												"lessons/12312372319"
+											]
+								}]
+				},
+				{
+					"localId": "toc_103",
+					"type":"tocItem",
+					"title": "bla",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312314",
+									"lessons/12312312313",
+									"lessons/12312312315"
+								]
+				},
+				{
+					"localId": "toc_104",
+					"type":"tocItem",
+					"title": "bla",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312319",
+									"lessons/12312312310",
+									"lessons/12312312311"
+								]
+				}
+			]
+	},
+
+	"lessonTemplates": [
+						{ "name": "Assessment",
+						  "lessonRef": "cgsData/template/lessons/template1"
+						},
+						{ "name": "Core",
+						  "url": "cgsData/template/lessons/template2"
+						}
+					],
+
+	"cssRefId": "css/funky.css",
+
+	"pedagogicalLoTypes": [
+							{ "value": "presentation",
+							  "name": "Presentation",
+							  "typeIcon": "media/F4/A8/F4A834564356345.gif",
+							  "description": "Presents a topic, overview."
+							}
+						],
+
+	"differentiationClasses": [{
+								"value": "belowLevel",
+								"name" : "Below Level",
+								"typeIcon": "media/F4/A8/F4A834564356345.gif",
+								"description": "challenged students. up to 30%"
+							},
+							{
+								"value": "onLevel",
+								"name" : "On Level",
+								"typeIcon": "media/F4/A8/F4A834564356345.gif",
+								"description": "most students"
+							},
+							{
+								"value": "aboveLevel",
+								"name" : "Above Level",
+								"typeIcon": "media/F4/A8/F4A834564356345.gif",
+								"description": "top 5% students"
+							}
+							],
+
+	"resources": [
+					{
+						"href": "media/F4/A8/F4A834564356345.docx",
+						"description": "original doc name",
+						"type":"attachment"
+					},
+					{
+						"href": "media/F4/A8/F4A834564356345.xls",
+						"description": "content of this sheet",
+						"type":"attachment"
+
+					},
+					{
+						"href": "media/F4/A8/F4A834564356345.gif",
+						"type":"media"
+					},
+					{
+						"href": "cgsData/planning.txt",
+						"type":"planning"
+					},
+					{
+						"href": "cgsData/planning.pdf",
+						"type":"planning"
+					},
+					{
+						"href": "cgsData/template/lessons/template1",
+						"type": "lessonTemplate"
+					},
+					{
+						"href": "cgsData/template/lessons/template2",
+						"type": "lessonTemplate"
+					},
+					{
+						"href": "cgsData/template/media/F4/A8/F4A834564356345.xml",
+						"type": "lessonTemplate"
+					},
+					{
+						"href": "cgsData/template/media/F4/A8/F4A834564356345.xml",
+						"type": "lessonTemplate"
+					},
+					{
+						"href": "css/funky.css",
+						"type": "css"
+					}
+			   ]
+
+}

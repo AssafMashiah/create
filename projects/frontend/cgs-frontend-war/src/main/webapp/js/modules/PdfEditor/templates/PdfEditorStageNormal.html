@@ -1,0 +1,24 @@
+<div class="{{elementType}}_content" id="pdf-editor">
+	<div id="editors" class="col left-col"></div>
+	<div class="col right-col">
+		<div id="pdf_toolbar" class="btn-toolbar">
+			<span class="label label-inverse">((Mode))</span>
+			<div class="btn-group" data-toggle="buttons-radio">
+				<button id="pdf_tool_text" class="btn btn-small active">((Text))</button>
+				<button id="pdf_tool_image" class="btn btn-small">((Image))</button>
+			</div>
+			<span class="label label-inverse">((Zoom))</span>
+			<div class="btn-group">
+				<input type="range" id="pdf_page_zoom" min="50" value="50" max="200">
+			</div>
+		</div>
+		<div class="page" id="pdf_page">
+			<div class="flow_container">
+				<img class="default_scale" src="{{#server-path}}{{record.data.image}}{{/server-path}}" />
+				<div class="html_layer_wrapper">
+					<div class="html_layer default_scale">(({{{record.data.html}}}))</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+
+<i class=" warning-icon base-icon icon-exclamation-sign"></i>
+<div id="changes-title">((course.props_area.tab_general_settings.standard_package.delete_msg))</div>
+
+<div id="changes-tree-container">
+
+
+    <div id="changes-tree">
+        {{#options.config.changes}}
+        {{#options.config.changes.deleted.length}}
+        <h5>((Deleted))</h5>
+        {{/options.config.changes.deleted.length}}
+        {{#options.config.changes.deleted}}
+
+        <div class="deletedStandard">
+            {{#courseName}}
+            <span class="name">{{courseName}}</span>
+            {{/courseName}}
+
+            {{#tocName}}
+            <span class="name">{{tocName}}</span>
+            {{/tocName}}
+
+            {{#tocItemName}}
+            {{! tocItemName --> Lesson/assessment name }}
+            <span class="name">{{tocItemName}}</span>
+            {{/tocItemName}}
+
+            {{#loName}}
+            {{! loName --> LO/Quiz name }}
+            <span class=""> > </span>
+            <span class="name">{{loName}}</span>
+            {{/loName}}
+
+            {{#sequenceName}}
+            <span class=""> > </span>
+            <span class="name">{{sequenceName}}</span>
+            {{/sequenceName}}
+
+            {{#taskName}}
+            <span class=""> > </span>
+            <span class="name">{{taskName}}</span>
+            {{/taskName}}
+
+            <span class="standardIds">
+                <span>(</span>
+                 <span class="inner-standardIds">
+                    {{#standardIds}}
+                    <span class="sid">{{.}}<span class="comma">,</span></span>
+                    {{/standardIds}}
+                </span>
+                <span>)</span>
+             </span>
+
+
+        </div>
+        {{/options.config.changes.deleted}}
+        {{#options.config.changes.updated.length}}
+        <h5>((Updated))</h5>
+        {{/options.config.changes.updated.length}}
+        {{#options.config.changes.updated}}
+        <div class="updatedStandard">
+            {{#courseName}}
+            <span class="name">{{courseName}}</span>
+            {{/courseName}}
+
+            {{#tocName}}
+            <span class="name">{{tocName}}</span>
+            {{/tocName}}
+
+            {{#tocItemName}}
+            {{! tocItemName --> Lesson/assessment name }}
+            <span class="name">{{tocItemName}}</span>
+            {{/tocItemName}}
+
+            {{#loName}}
+            {{! loName --> LO/Quiz name }}
+            <span class=""> > </span>
+            <span class="name">{{loName}}</span>
+            {{/loName}}
+
+            {{#sequenceName}}
+            <span class=""> > </span>
+            <span class="name">{{sequenceName}}</span>
+            {{/sequenceName}}
+
+            {{#taskName}}
+            <span class=""> > </span>
+            <span class="name">{{taskName}}</span>
+            {{/taskName}}
+
+            <span class="standardIds">
+                <span>(</span>
+                 <span class="inner-standardIds">
+                    {{#standardIds}}
+                    <span class="sid">{{.}}<span class="comma">,</span></span>
+                    {{/standardIds}}
+                </span>
+                <span>)</span>
+             </span>
+
+
+        </div>
+        {{/options.config.changes.updated}}
+        {{/options.config.changes}}
+    </div>
+
+</div>

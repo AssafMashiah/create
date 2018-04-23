@@ -1,0 +1,19 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.ebooks.find().forEach(function(doc) {
+		var originalFileName = doc.originalFileName;
+		var splitFileName = originalFileName.split(".");
+		var fileExtension = splitFileName[splitFileName.length - 1].toLowerCase(); //the last item in the array in the file extension
+
+		var conversionLibrary="";
+		if(fileExtension == "pdf"){
+			conversionLibrary = "IDR";
+		}
+		if(fileExtension == "epub"){
+			conversionLibrary = "EPUB";
+		}
+		doc.conversionLibrary = conversionLibrary;
+		doc.conversionLibraryVersion = "1.0";
+		db.ebooks.save(doc); // re-saving the publisher ebook
+    });
+}

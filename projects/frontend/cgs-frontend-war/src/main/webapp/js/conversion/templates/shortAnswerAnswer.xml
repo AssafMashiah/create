@@ -1,0 +1,5 @@
+<answer checkable="{{checkable}}">
+	<clozearea id="{{id}}">
+		{{{content}}}
+	</clozearea>
+</answer>

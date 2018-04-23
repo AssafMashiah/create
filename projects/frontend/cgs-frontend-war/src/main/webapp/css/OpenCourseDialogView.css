@@ -1,0 +1,126 @@
+#dialog.openCourse {
+    min-height: 620px;
+    max-height: 620px;
+    height: 620px;
+    width: 800px;
+    margin: -325px 0 0 -400px;
+}
+
+
+#dialog.openAndNewCourse .landing-popoup .close-dialog {
+    height: 26px !important;
+    background-image: url('../media/landingPopup/close button_normal.png') !important;
+}
+#dialog.openAndNewCourse .landing-popoup .close-dialog:hover {
+    opacity: .7;
+}
+
+#dialog.openCourse #dialogContent {
+    min-height: 490px;
+    max-height: 490px;
+    margin:0px;
+    padding: 0px;
+    overflow:visible;
+}
+
+#dialog.openCourse #left_panel {
+    background: url("../media/tex_tree.png");
+    border-right: solid 1px #C3C3C3;
+    height: 490px;
+    padding-left: 10px;
+    padding-top:20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#dialog.openCourse #right_panel {
+    display: inline-block;
+    padding-top:15px;
+    padding-left: 15px;
+}
+
+#dialog.openCourse #right_panel #srch_course_name {
+    width: 178px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+
+#dialog.openCourse #dialogContent .Thumb {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 110px;
+    cursor: pointer;
+}
+
+#dialog.openCourse #dialogContent .courseThumb {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 110px;
+    cursor: pointer;
+}
+
+#dialog.openCourse #dialogContent .courseThumb:hover .caption,
+#dialog.openCourse #dialogContent .courseThumb.active .caption {
+    color: #0099e5;
+}
+
+#dialog.openCourse #dialogContent .courseThumb:hover .thumbnail,
+#dialog.openCourse #dialogContent .courseThumb.active .thumbnail {
+    border-color: #0099e5;
+}
+
+#dialog.openCourse #dialogContent img.thumbnail {
+    height: 100px;
+}
+
+#dialog.openCourse #dialogContent .caption {
+    line-height: 20px;
+    width: 100%;
+    color:#333;
+    padding: 0 3%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#dialog.openCourse .btn-link, 
+#dialog.openCourse .btn-link:active {
+    cursor:pointer;
+    text-decoration: underline;
+    color: #5A9CBD;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+
+#dialog.openCourse #advanced.btn.btn-link {
+    position: absolute;
+    right: -100px;
+    top: -30px;
+    z-index: 9;
+}
+
+#dialog.openCourse .btn.btn-link.active,
+#dialog.openCourse .btn.btn-link:active {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+
+}
+
+#dialog.openCourse #results_wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 340px;
+}
+
+#dialog.openCourse #results_wrapper > div {
+    display:none;
+}
+
+#dialog.openCourse #results_wrapper > div.shown {
+    display:block;
+}

@@ -1,0 +1,267 @@
+buildscript {
+    File f = file('dbupgrader')
+    dependencies {
+        classpath files { f.listFiles() }
+        classpath files('.')    // needed to include t2k.properties to classpath
+    }
+}
+
+
+import com.t2k.common.dbupgrader.flow.FlowManager
+import org.apache.tools.ant.filters.*
+
+ant.property(file: "t2k.properties")
+
+project.ext.operationSystem = 'win'
+
+def isWindows() {
+    if (hasProperty('os')) {
+        println 'System is ' + os
+
+        operationSystem = os
+    }
+
+    return (operationSystem == 'win')
+}
+
+def executeCommand = { exec, command, serviceName, options ->
+    try {
+        def commandStr = "${exec} ${command} ${serviceName} ${options}"
+        println "Executing: " + commandStr
+
+        def proc = commandStr.execute()
+        proc.waitFor()
+
+        println "return code: ${proc.exitValue()}"
+        println "stderr: ${proc.err.text}"
+        println "stdout: ${proc.in.text}"
+
+        Thread.sleep(2000)
+    }
+    catch (Exception e) {
+    }
+}
+
+def createDir = { dir ->
+    File directory = new File(dir)
+
+    if (!directory.exists()) {
+        directory.mkdirs();
+    }
+}
+
+def patchCatalinaPolicy = { policyFile, warName ->
+    File catalina = new File("${ant.installDir}/tomcat/conf/catalina.policy")
+    if (!catalina.text.contains("webapps/${warName}")) {
+        File destPolicy = new File("${policyFile}")
+        catalina.append destPolicy.text
+    }
+}
+
+task upgradeDb() << {
+
+    FlowManager flowManager = new FlowManager()
+    flowManager.execute(false, false, false)
+}
+
+task upgradeDbClean() << {
+
+
+    FlowManager flowManager = new FlowManager()
+    flowManager.execute(true, false, false)
+}
+
+
+task stopTomcat() << {
+    if (isWindows()) {
+        executeCommand("SC", "stop", "${ant.tomcatServiceName}", "")
+    } else {
+	executeCommand("systemctl", "stop", "${ant.tomcatServiceName}", "")
+    }
+    sleep(10000)
+}
+
+task deleteBackendWar(dependsOn: stopTomcat, type: Delete) {
+    delete ant.installDir + '/tomcat/webapps/' + backendWebappName
+}
+
+task copyBackendWar(dependsOn: deleteBackendWar, type: Copy) {
+    from backendWebappSourceDir
+    into ant.installDir + '/tomcat/webapps/' + backendWebappName
+}
+
+task copyFrontendFilesIntoBackendWar(dependsOn: copyBackendWar, type: Copy) {
+    from(frontendWebappSourceDir) {
+        exclude 'WEB-INF'
+        exclude 'META-INF'
+    }
+    into ant.installDir + '/tomcat/webapps/' + backendWebappName //+ '/WEB-INF'
+}
+
+//def patchMongoProperties = {
+//    project.copy() {
+//        from 'backend/cgs-backend-war/WEB-INF/classes/config/mongo.properties'
+//        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+//        //filter ExpandProperties, project: ant.project     // for runtime.properties
+//        filter ReplaceTokens, tokens: ant.properties
+//    }
+//}
+//
+//def patchCmsProperties = {
+//    project.copy() {
+//        from 'backend/cgs-backend-war/WEB-INF/classes/config/cms.properties'
+//        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+//        //filter ExpandProperties, project: ant.project     // for runtime.properties
+//        filter ReplaceTokens, tokens: ant.properties
+//    }
+//}
+//
+//def patchCgsProperties = {
+//    project.copy() {
+//        from 'backend/cgs-backend-war/WEB-INF/classes/config/cgsConfig.properties'
+//        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+//        //filter ExpandProperties, project: ant.project     // for runtime.properties
+//        filter ReplaceTokens, tokens: ant.properties
+//    }
+//}
+
+def copyT2KProperties = {
+    project.copy() {
+        from 't2k.properties'
+        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+    }
+    project.copy() {
+        from 't2k-windows.properties'
+        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+    }
+}
+
+//def patchUsersProperties = {
+//    project.copy() {
+//        from 'backend/cgs-backend-war/WEB-INF/classes/config/users.properties'
+//        into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config'
+//        //filter ExpandProperties, project: ant.project     // for runtime.properties
+//        filter ReplaceTokens, tokens: ant.properties
+//    }
+//}
+
+def copyCmsXmlToTomcatLocalhostDir = {
+    ant.copy(toFile: ant.installDir + '/tomcat/conf/Catalina/localhost/cms.xml', file: 'cms/cms.xml', overwrite: "true") {
+        ant.filterset(begintoken: "@", endtoken: "@") {
+            ant.filter(token: "cmsHome", value: cmsHome)
+        }
+    }
+}
+
+def copyCmsWebInfDirToCmsDir() {
+    project.copy {
+        from cmsWebInfDir
+        into ant.cmsHome + '/WEB-INF'
+    }
+}
+
+task copyVersionProperties(dependsOn: deleteBackendWar, type: Copy) {
+    from project.projectDir.canonicalPath + '/version.properties'
+    into ant.installDir + '/tomcat/webapps/' + backendWebappName + '/WEB-INF/classes/config/' //fixme
+}
+
+task deleteCMSFolder(type: Delete) {
+    delete ant.cmsHome
+}
+
+task installBackend() {
+    dependsOn copyFrontendFilesIntoBackendWar, copyVersionProperties
+}
+installBackend.doLast {
+    createDir(ant.packagedOutputLocation)
+    createDir(ant.appletsDownloadDir)
+    createDir(ant.cmsHome)
+}
+
+def deleteWIRISeditor() {
+    delete ant.installDir + '/tomcat/webapps/' + WIRISeditorDir
+}
+
+// returns true only if wiris is not installed, or there is an update in wiris
+def isWirisWarCopyNeeded() {
+    def wirisWarFileName = "/WIRISeditor.war";
+    def installedWarFilePath = ant.installDir + '/tomcat/webapps/' + wirisWarFileName;
+    if (!(new File(installedWarFilePath)).exists()) { // no WIRIS is installed, so we need to install
+        println("WIRIS is not installed - copying it to tomcat");
+        return true;
+    }
+
+    // wiris is installed, now we'll check if it's the same as the new one
+    ant.checksum(file: externalWarDir + wirisWarFileName, property: "new_wiris_checksum")
+    def newWirisCheckSum = "${ant.properties["new_wiris_checksum"]}"
+
+    ant.checksum(file: installedWarFilePath, property: "installed_wiris_checksum")
+    def installedWirisCheckSum = "${ant.properties["installed_wiris_checksum"]}"
+
+    if (installedWirisCheckSum == newWirisCheckSum) {
+        println("No need to update WIRIS, no changes from latest installation.");
+        return false;
+    } else {
+        println("There is a new WIRIS version in town. installing it to tomcat...");
+        return true;
+    }
+}
+
+def copyWirisEditorIntoTomcat() {
+    project.copy {
+        from externalWarDir
+        into ant.installDir + '/tomcat/webapps/'
+    }
+}
+
+task copyWIRISeditor(dependsOn: stopTomcat) << {
+    println("******** checking if WIRIS needs an update *****");
+    if (isWirisWarCopyNeeded()) {
+        copyWirisEditorIntoTomcat()
+    }
+    println("********");
+}
+
+task installBackendUpgrade() {
+    dependsOn installBackend, upgradeDb, copyWIRISeditor
+}
+
+task installBackendClean() {
+    dependsOn installBackend, upgradeDbClean, deleteCMSFolder, copyWIRISeditor
+}
+
+task installBackendWithoutDB() {
+    dependsOn installBackend, copyWIRISeditor
+}
+
+installBackend.doLast {
+//    patchMongoProperties();
+//    patchCmsProperties();
+//    patchCgsProperties();
+//    patchUsersProperties();
+    copyT2KProperties();
+}
+
+installBackend.doLast {
+    patchCatalinaPolicy('backend.policy', backendWebappName)
+    copyCmsXmlToTomcatLocalhostDir();
+    copyCmsWebInfDirToCmsDir();
+}
+
+installBackend.doLast {
+    if (isWindows()) {
+        executeCommand("SC", "start", "${ant.tomcatServiceName}", "");
+    } else {
+        executeCommand("./phantomjs_install.sh", "", "", "");
+        executeCommand("systemctl", "start", "${ant.tomcatServiceName}", "");
+    }
+}
+
+task deleteFrontendWar(type: Delete) {
+    delete ant.installDir + '/tomcat/webapps/' + frontendWebappName
+}
+
+task copyFrontendWar(dependsOn: deleteFrontendWar, type: Copy) {
+    from frontendWebappSourceDir
+    into ant.installDir + '/tomcat/webapps/' + frontendWebappName
+}

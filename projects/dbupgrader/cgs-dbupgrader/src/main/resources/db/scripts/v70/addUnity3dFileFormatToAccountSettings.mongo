@@ -1,0 +1,19 @@
+//##################################################################
+//#  add the Unity3D filetype + size limit to all accounts         #
+//##################################################################
+function f(dbName) {
+db=db.getSiblingDB(dbName);
+db.publishers.find().forEach(function(doc){
+    var fileSizes =  doc.fileSizeLimits;
+    var unity3dExists = false;
+    fileSizes.forEach(function(fileSize){
+        if (fileSize.type == "Unity3D"){
+            unity3dExists = true;
+        }
+    });
+    if (!unity3dExists){
+        db.publishers.update({_id:doc._id},{$push:{"fileSizeLimits":{ "type" : "Unity3D", "size" : new NumberLong("41943040"), "mimeTypes" : [ "application/vnd.unity" ] }}},{upsert: true, multi: true});
+        }
+    }
+)
+}

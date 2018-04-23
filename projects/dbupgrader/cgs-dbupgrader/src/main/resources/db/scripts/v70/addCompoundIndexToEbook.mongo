@@ -1,0 +1,7 @@
+######################################################################################################################
+#  add new compound index to ebooks collection using: sha1, publisherId,conversionLibrary, conversionLibraryVersion  #
+######################################################################################################################
+ebooks.ensureIndex(
+    	{ sha1: 1, conversionLibrary: 1, publisherId: 1,conversionLibraryVersion:1 },
+    	{unique: true}
+    );

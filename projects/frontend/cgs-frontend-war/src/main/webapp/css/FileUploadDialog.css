@@ -1,0 +1,40 @@
+#dialog #uploadError {
+	color: #f00;
+	padding-top: 5px;
+
+	white-space: pre;
+}
+
+#dialog .todo-order span {
+    display: inline-block;
+    width: 75px;
+}
+
+#dialog .todo-order textarea.rtl {
+	direction: rtl;
+}
+
+#dialog .todo-order textarea.ltr {
+	direction: ltr;
+}
+
+#dialog .todo-order input[type=checkbox] {
+	margin-top: -2px;
+}
+#fileUploadDialog .todo-order ,#fileUploadDialog .uploadStatus, #fileUploadDialog .uploadError{
+	margin-top: 10px;
+}
+.todo-options{
+	margin: 0;
+}
+#fileUploadDialog .todo-upload{
+	display: inline-block;
+}
+#fileUploadDialog .seperator{
+	margin: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+#fileUploadDialog .multiLingualWrapper{
+	border-top: 1px solid #eee;
+	padding-top: 10px
+}

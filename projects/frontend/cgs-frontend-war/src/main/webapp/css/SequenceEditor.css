@@ -1,0 +1,147 @@
+.element_preview_wrapper {
+    position: relative;
+}
+
+/*shared*/
+.editor-wrapper.sequence_editor.sharedContent_wrapper {
+    padding:0;
+    margin-left: 5px;
+}
+
+.editor-wrapper.sequence_editor.sharedContent_wrapper > .element_preview_wrapper:before {
+    display: none;/*hide the task numbering on shared item*/
+}
+.sharedContent_wrapper .view_mode_small .element_header .delete_element{
+    display: none; /*disable the delete of a shared item*/
+}
+
+.sharedBefore .sequence.share-content,
+.sharedAfter .shared.share-content{
+    float: right;
+    margin-left: 2%;
+}
+.sharedBefore .shared.share-content,
+.sharedAfter .sequence.share-content{
+    float: left;
+    margin-left: 0;
+
+}
+/*end - shared */
+
+
+/*compare*/
+.compare_content > .element_preview_wrapper {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+}
+.compare_content > .task_element.element_preview_wrapper:first-child{
+    padding-right: 10px;
+}
+
+/*end - compare*/
+
+/*small view*/
+.sequence_editor.sequence_stage > .element_preview_wrapper{
+    margin-top: 25px;
+}
+.element_header {
+    position: relative;
+    width: 100%;
+    top:4px;
+}
+.view_mode_small.task_element > .element_wrapper {
+    outline: 1px dashed #cccccc;
+    padding: 10px;
+    min-height: 67px;
+    display: inline-block;
+    width: calc(100% - 57px);
+    cursor: pointer;
+}
+.view_mode_small.task_element.over >  .element_wrapper{
+    outline-color: #FF9900;
+}
+.view_mode_small.task_element.selected >  .element_wrapper{
+    outline-color: #0099e5;
+}
+
+.element_header .element_type {
+    font-family: Arial;
+    font-size: 20px;
+    color: rgb(204, 204, 204);
+    position: relative;
+    max-width: 60%;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 9px;
+    vertical-align: bottom;
+    background-color: #fff;
+    margin-left: 8px;
+    top: 4px;
+}
+
+.view_mode_small.task_element.over .element_header .element_type{
+    color: #FF9900;
+}
+.view_mode_small.task_element.selected .element_header .element_type{
+    color: #0099e5;
+}
+
+.element_header .btn.btn-small {
+    position: absolute;
+    right: 0;
+    background: none;
+    background-image: none;
+    box-shadow: none;
+    border-color: rgb(204, 204, 204);
+    top:15px;
+    font-size: 32px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.element_header .btn.btn-small.delete_element {
+    top:48px;
+}
+
+.view_mode_small.task_element.over .element_header .btn.btn-small
+{
+    border-color: #FF9900;
+
+}
+.view_mode_small.task_element.selected .element_header .btn.btn-small
+{
+    border-color: #0099e5;
+}
+/*end - small view */
+
+/*tasks couter*/
+.sequence_editor.sequence_stage {
+    counter-reset: num-div;/* declare the counter num-div */
+    padding-left: 30px;
+}
+.sequence_editor.sequence_stage > .element_preview_wrapper:not(.noNumber) {
+    counter-increment: num-div;/* each div.element_preview_wrapper inside, increment the counter */
+}
+
+.sequence_editor.sequence_stage > .element_preview_wrapper:not(.noNumber):before {
+    content: "" counter(num-div) ".";
+    color: rgb(204, 204, 204);
+    float: left;
+    position: relative;
+    margin-left: -30px;
+    margin-top: 4px;
+    margin-right: 2px;
+    width: 28px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+}
+/*end - tasks couter*/
+
+#creative_wrapper_thumbnail{ /*creative wrapper in props*/
+    width: 124px;
+    height: 124px;
+}

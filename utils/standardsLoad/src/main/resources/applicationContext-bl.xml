@@ -1,0 +1,98 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="init">
+
+    <import resource="applicationContext-shared.xml"/>
+    <import resource="applicationContext-dal.xml"/>
+
+    <bean name="loader" class="com.t2k.cgs.utils.standards.Loader">
+        <property name="standardsSourceDao" ref="standardsSourceDao"/>
+        <property name="standardsTargetDao" ref="standardsTargetDao"/>
+        <property name="jsonConverter">
+            <bean class="com.t2k.cgs.utils.standards.parsing.SimpleJSONConverter"/>
+        </property>
+        <property name="packageDetailsRetriever" ref="packageDetailsRetriever"/>
+        <property name="standardsParser" ref="standardsParser"/>
+        <property name="treeConstructionStrategy">
+            <bean class="com.t2k.cgs.utils.standards.tree.SimpleTreeConstructionStrategy"/>
+        </property>
+        <property name="standardsValidator">
+            <bean class="com.t2k.cgs.utils.standards.validators.ValidationSequence">
+                <property name="validatorList">
+                    <list>
+                        <bean class="com.t2k.cgs.utils.standards.validators.UniquePedagogicalIdValidator"/>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="inputFileContentValidator">
+            <bean class="com.t2k.cgs.utils.standards.validators.CorrectNumberOfColumnsValidator">
+                <property name="correctNumberOfColumns" value="10"/>
+            </bean>
+        </property>
+        <property name="userInteraction">
+            <bean class="com.t2k.cgs.utils.standards.interaction.StdUserInteraction"/>
+        </property>
+    </bean>
+
+
+    <bean name="standardsParser" class="com.t2k.cgs.utils.standards.parsing.CSVStandardsParser">
+        <property name="descriptionProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.SpecialCharactersDecoderProcessor"/>
+        </property>
+        <property name="nameProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.SpecialCharactersDecoderProcessor"/>
+        </property>
+        <property name="gradeLevelProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.LowerCaseProcessor"/>
+        </property>
+    </bean>
+
+
+    <bean name="packageDetailsRetriever" class="com.t2k.cgs.utils.standards.metadata.PackageDetailsRetrieverImpl">
+        <property name="countryStringProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.NullStringProcessor"/>
+        </property>
+        <property name="nameStringProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.LowerCaseProcessor"/>
+        </property>
+        <property name="stateStringProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.NullStringProcessor"/>
+        </property>
+        <property name="subjectAreaStringProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.StringProcessingSequence">
+                <property name="processingList">
+                    <list>
+                        <bean class="com.t2k.cgs.utils.standards.stringProcessing.DictionaryReplacingProcessor">
+                            <property name="dictionary">
+                                <map>
+                                    <entry key="MATH_US" value="MATH"/>
+                                </map>
+                            </property>
+                        </bean>
+                        <bean class="com.t2k.cgs.utils.standards.stringProcessing.LowerCaseProcessor"/>
+                        <bean class="com.t2k.cgs.utils.standards.stringProcessing.DictionaryReplacingProcessor">
+                            <property name="dictionary">
+                                <map>
+                                    <entry key="language_arts" value="languageArts"/>
+                                    <entry key="road_safety" value="roadSafety"/>
+                                </map>
+                            </property>
+                        </bean>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="descriptionStringProcessor">
+            <bean class="com.t2k.cgs.utils.standards.stringProcessing.NullStringProcessor"/>
+        </property>
+    </bean>
+
+
+</beans>

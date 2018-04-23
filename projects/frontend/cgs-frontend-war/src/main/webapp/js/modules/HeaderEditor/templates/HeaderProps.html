@@ -1,0 +1,22 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper header_editor props_editor">
+    <ul class="nav nav-tabs" id="headerEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">(({{controller.elementRenderName}} Properties))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.showGenericTitle" id="field_show_generic_sub_title"   {{#controller.record.data.disableGenericTitle}}disabled {{/controller.record.data.disableGenericTitle}} cantBeEnabled="true">
+                <label class="control-label" for="field_show_generic_sub_title">((Show title))</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.showGenericSubTitle" id="field_show_Generic_title"  {{#controller.record.data.disableGenericSubTitle}}disabled {{/controller.record.data.disableGenericSubTitle}} cantBeEnabled="true">
+                <label class="control-label" for="field_show_Generic_title">((Show instructions))</label>
+            </div>
+        </div>
+    </div>
+</div>

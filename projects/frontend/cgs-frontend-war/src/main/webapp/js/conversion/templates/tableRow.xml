@@ -1,0 +1,3 @@
+<row id="{{id}}">
+	{{{content}}}
+</row>

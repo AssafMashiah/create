@@ -1,0 +1,5 @@
+##############################################################################
+#  set true values of type string to boolean false in standards collection   #
+##############################################################################
+
+standards.update({ "isLatest": "true" },{ $set: { "isLatest": false } }, false, true);

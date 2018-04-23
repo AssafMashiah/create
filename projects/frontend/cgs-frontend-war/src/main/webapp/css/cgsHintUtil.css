@@ -1,0 +1,105 @@
+.cgs-hint{
+    background: rgba(252, 195, 45, 0.9);
+    min-width: 251px;
+    max-width: 401px;
+    min-height: 95px;
+    color: #666;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    border-radius: 4px !important;
+}
+
+.cgs-hint-arrow {
+    width: 125px;
+    height: 95px;
+    display: inline-block;
+}
+
+.cgs-hint.bottom.left .cgs-hint-arrow,
+.cgs-hint.bottom.middle-left .cgs-hint-arrow{
+    float: left;
+    background: url("../media/cgs-hints-sprite.png") -20px 0;
+}
+
+.cgs-hint.bottom.right .cgs-hint-arrow,
+.cgs-hint.bottom.middle-right .cgs-hint-arrow {
+    float: right;
+    background: url("../media/cgs-hints-sprite.png") 0 95px;
+}
+
+.cgs-hint.top.left .cgs-hint-arrow,
+.cgs-hint.top.middle-left .cgs-hint-arrow{
+    float: left;
+    background: url("../media/cgs-hints-sprite.png") -165px 0;
+}
+
+.cgs-hint.top.right .cgs-hint-arrow,
+.cgs-hint.top.middle-right .cgs-hint-arrow{
+    float: right;
+    background: url("../media/cgs-hints-sprite.png") -140px 95px;
+}
+
+.cgs-hint.middle.left .cgs-hint-arrow{
+    float: right;
+    background: url("../media/cgs-hints-sprite.png") -300px 95px;
+}
+
+.cgs-hint.middle.right .cgs-hint-arrow{
+    float: left;
+    background: url("../media/cgs-hints-sprite.png") -290px 0;
+}
+
+.cgs-hint-text-container .text {
+    margin: 0;
+    font-family: 'Delius', cursive;
+    font-size: 20px;
+    word-wrap: break-word;
+    line-height: 144%;
+}
+
+.cgs-hint-text-container{
+    min-width: 106px;
+    max-width: 256px;
+
+    display: inline-block;
+
+    cursor: default;
+
+    position: relative;
+}
+
+.cgs-hint-toggle{
+    height: 36px;
+    width: 36px;
+    border-radius: 21px !important;
+    text-align: center;
+    font-family: "ArchitectsDaughter";
+    font-size: 26px;
+    font-weight: bold;
+    color: #666;
+    line-height: 42px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    vertical-align: middle;
+    border: 2px solid #666;
+    z-index: 10;
+}
+
+.toggle-hints-on{
+    background: rgba(252, 195, 45, 0.9);
+}
+
+.toggle-hints-off{
+    background: #fff;
+}
+
+.toggle-hints-on.disabled {
+    background-color: #E8E8E8;
+    border-color: #CACFCC;
+}
+
+.cgs-hint-toggle:before{
+    content: "?";
+}

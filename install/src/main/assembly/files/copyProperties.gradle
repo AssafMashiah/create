@@ -1,0 +1,67 @@
+defaultTasks 'copyProperties'
+
+ext {
+    srcProperties = null
+}
+
+def checkProperties() {
+    if (hasProperty('fromProperties')) {
+        srcProperties = fromProperties
+    }
+}
+
+def t2kPropertiesSrc = new Properties()
+StringBuilder propBulder = new StringBuilder()
+
+def patchPropertiesFile = { it ->
+	int index = it.lastIndexOf('=')
+	if (index > 0) {
+		String name = it.substring(0, index).trim()
+		String value = it.substring(index + 1).trim()
+		
+		String newValue = t2kPropertiesSrc[name]
+		
+		if (newValue != null) {
+			if (newValue != value) {
+				propBulder.append name + '=' + newValue
+				println '#####  INFO ## property: ' + name + ' - has been changed to - ' + newValue
+			}
+			else {
+				propBulder.append it
+			}
+		}
+		else {
+			propBulder.append it
+			println '#####  WARNING ## property: ' + name + ' - does not exist in source t2k.properties file'
+		}
+	}
+	else {
+		propBulder.append it
+	}
+		
+	propBulder.append "\n"
+}
+
+task copyProperties() << {
+	checkProperties()
+	
+	if (srcProperties != null) {
+		File t2kSrcPropFile = new File(srcProperties)
+		File t2kDestPropFile = new File(t2kSrcPropFile.getName())
+		
+		if (t2kSrcPropFile.exists() && t2kDestPropFile.exists()) {
+			t2kSrcPropFile.withInputStream { stream ->
+				t2kPropertiesSrc.load(stream)
+			}
+
+			println ''
+
+			t2kDestPropFile.eachLine(patchPropertiesFile)
+	
+			t2kDestPropFile.text = propBulder
+		}	
+	}
+	else {
+		println '#####  ERROR ## source t2k.properties file does not define'
+	}
+}

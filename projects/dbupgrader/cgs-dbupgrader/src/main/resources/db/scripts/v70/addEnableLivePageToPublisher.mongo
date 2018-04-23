@@ -1,0 +1,4 @@
+######################################
+#  add Enable Live Page To Publisher #
+######################################
+publishers.update({},{$set:{enableLivePage: false}},{upsert: false, multi: true});

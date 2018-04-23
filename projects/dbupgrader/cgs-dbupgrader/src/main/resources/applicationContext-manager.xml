@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+
+       http://www.springframework.org/schema/data/mongo
+       http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+    <bean id="pureMongoDao" class="com.t2k.common.dbupgrader.dao.PureMongoDao">
+        <property name="dbFactory" ref="adminMongoDbFactory"/>
+        <property name="targetDb" value="#{t2kConfig.getProperty('common.mongo.dbName')}"/>
+    </bean>
+
+    <bean id="migrationDao" class="com.t2k.cgs.dbupgrader.dao.MigrationDao">
+        <property name="mongoTemplate" ref="cgsMongoTemplate"/>
+    </bean>
+
+    <bean id="updateLogDao" class="com.t2k.common.dbupgrader.dao.UpdateMongoLogDao">
+        <property name="mongoTemplate" ref="adminMongoTemplate"/>
+        <property name="targetDb" value="#{t2kConfig.getProperty('common.mongo.dbName')}"/>
+    </bean>
+
+    <bean id="pureMongoTask" class="com.t2k.common.dbupgrader.task.common.PureMongoTask" scope="prototype">
+        <property name="pureMongoDao" ref="pureMongoDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean name="t2kConfig" class="com.t2k.configurations.Configuration" init-method="loadConfigurations">
+        <constructor-arg index="0">
+            <list>
+                <value>t2k.properties</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="mongoScriptTask" class="com.t2k.common.dbupgrader.task.common.MongoScriptTask"  scope="prototype">
+        <property name="pureMongoDao" ref="pureMongoDao" />
+        <property name="updateLogDao" ref="updateLogDao" />
+    </bean>
+
+    <mongo:mongo id="mongo" host="#{t2kConfig.getProperty('common.mongo.host')}" port="#{t2kConfig.getIntProperty('common.mongo.port')}">
+        <mongo:options
+                connections-per-host="#{t2kConfig.getIntProperty('common.mongo.connectionsPerHost')}"
+                threads-allowed-to-block-for-connection-multiplier="#{t2kConfig.getIntProperty('common.mongo.threadsAllowedToBlockForConnectionMultiplier')}"
+                connect-timeout="#{t2kConfig.getIntProperty('common.mongo.connectTimeout')}"
+                max-wait-time="#{t2kConfig.getIntProperty('common.mongo.maxWaitTime')}"
+                auto-connect-retry="#{t2kConfig.getBooleanProperty('common.mongo.autoConnectRetry')}"
+                socket-keep-alive="#{t2kConfig.getBooleanProperty('common.mongo.socketKeepAlive')}"
+                socket-timeout="#{t2kConfig.getIntProperty('common.mongo.socketTimeout')}"
+                slave-ok="#{t2kConfig.getBooleanProperty('common.mongo.slaveOk')}"
+                write-number="1"
+                write-timeout="0"/>
+    </mongo:mongo>
+
+    <mongo:db-factory id="adminMongoDbFactory" dbname="admin" mongo-ref="mongo" username="#{t2kConfig.getProperty('common.mongo.adminUser')}"
+                      password="#{t2kConfig.getProperty('common.mongo.adminPassword')}"/>
+    <mongo:db-factory id="cgsMongoDbFactory" dbname="cgs" mongo-ref="mongo" username="#{t2kConfig.getProperty('common.mongo.user')}"
+                      password="#{t2kConfig.getProperty('common.mongo.password')}"/>
+
+    <bean id="adminMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="adminMongoDbFactory"/>
+    </bean>
+
+    <bean id="cgsMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+    </bean>
+
+    <bean id="createMongoUserDao" class="com.t2k.common.dbupgrader.dao.CreateMongoUserDao">
+        <property name="dbFactory" ref="adminMongoDbFactory"/>
+        <property name="targetDb" value="#{t2kConfig.getProperty('common.mongo.dbName')}"/>
+        <property name="user" value="#{t2kConfig.getProperty('common.mongo.user')}"/>
+        <property name="password" value="#{t2kConfig.getProperty('common.mongo.password')}"/>
+    </bean>
+
+    <bean id="createMongoUserTask" class="com.t2k.common.dbupgrader.task.common.CreateMongoUserTask" scope="prototype">
+        <property name="createMongoUserDao" ref="createMongoUserDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="lessonsRefMigration" class="com.t2k.cgs.dbupgrader.task.LessonsRefMigration">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="removeSelectedStandardsFromTasks" class="com.t2k.cgs.dbupgrader.task.RemoveSelectedStandardsFromTasks">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixTaskType" class="com.t2k.cgs.dbupgrader.task.FixTaskType" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixTeacherGuide" class="com.t2k.cgs.dbupgrader.task.FixTeacherGuide" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="addTitleToInstructionsSequence" class="com.t2k.cgs.dbupgrader.task.AddTitleToInstructionsSequence" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="addTitleToFillInTheGaps" class="com.t2k.cgs.dbupgrader.task.AddTitleToFillInTheGaps" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixFillInTheGapsSpans" class="com.t2k.cgs.dbupgrader.task.FixFillInTheGapsSpans" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="addMissingFieldsToCoursesCustomFields" class="com.t2k.cgs.dbupgrader.task.AddMissingFieldsToCoursesCustomFields" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixAccounts" class="com.t2k.cgs.dbupgrader.task.FixAccountsAndUsers" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="setAdminUser" class="com.t2k.cgs.dbupgrader.task.CreateSystemAdmin">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="createCleanupJobUser" class="com.t2k.cgs.dbupgrader.task.CreateCleanupJobUser">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixPublisherRelatesToIdField" class="com.t2k.cgs.dbupgrader.task.PublisherRelatesToFieldId">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="escapeCharactersInStandardPackageDescriptions" class="com.t2k.cgs.dbupgrader.task.EscapeCharactersInStandardPackageDescriptions">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixStandardPackageId" class="com.t2k.cgs.dbupgrader.task.FixStandardPackageId">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixAssessmentsStandardsPackageId" class="com.t2k.cgs.dbupgrader.task.FixAssessmentsStandardsPackageId">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="customizationPackStylesJsonFix" class="com.t2k.cgs.dbupgrader.task.CustomizationPackStylesJsonFix">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="customizationPackStylesJsonIntegrityFix" class="com.t2k.cgs.dbupgrader.task.CustomizationPackStylesJsonIntegrityFix">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="fixParagraphsOutsideDivsInTextViewer" class="com.t2k.cgs.dbupgrader.task.FixParagraphsOutsideDivsInTextViewer">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixContentSpanStyleOfFillingTheGaps" class="com.t2k.cgs.dbupgrader.task.FixContentSpanStyleOfFillingTheGaps">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixWrongTextDisplayInAppletHint" class="com.t2k.cgs.dbupgrader.task.FixWrongTextDisplayInAppletHint">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="addCustomizationToCgsUsers" class="com.t2k.cgs.dbupgrader.task.AddCustomizationToCgsUsers">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixHebrewLocale" class="com.t2k.cgs.dbupgrader.task.FixHebrewLocale">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+
+    <bean id="addStyleOverrideToTextViewer" class="com.t2k.cgs.dbupgrader.task.AddStyleOverrideToTextViewer">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+
+    <bean id="separatorImageSizeUpdate" class="com.t2k.cgs.dbupgrader.task.SeparatorImageSizeUpdate">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="styleMigration" class="com.t2k.cgs.dbupgrader.task.StyleMigration">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="removeFieldsFromCustomizationConfig" class="com.t2k.cgs.dbupgrader.task.RemoveFieldsFromCustomizationConfig">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="removeStandardsFromDifferentiatedSequence" class="com.t2k.cgs.dbupgrader.task.RemoveStandardsFromDifferentiatedSequence">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="addTextToExistingEbookPages" class="com.t2k.cgs.dbupgrader.task.AddTextToExistingEbookPages">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="addEBooksIdsToCourseFromLesson" class="com.t2k.cgs.dbupgrader.task.AddEBooksIdsToCourseFromLesson" scope="prototype">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="updateLastModified" class="com.t2k.cgs.dbupgrader.task.UpdateLastModified">
+        <constructor-arg name="migrationDao" ref="migrationDao"/>
+        <constructor-arg name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixLearningPathsIntegrity" class="com.t2k.cgs.dbupgrader.task.FixLearningPathsIntegrity">
+        <constructor-arg name="migrationDao" ref="migrationDao"/>
+        <constructor-arg name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixTocItemsSequencesType" class="com.t2k.cgs.dbupgrader.task.FixTocItemsSequencesType">
+        <constructor-arg name="migrationDao" ref="migrationDao"/>
+        <constructor-arg name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="fixLessonsStandardsPackageId" class="com.t2k.cgs.dbupgrader.task.FixLessonsStandardsPackageId">
+        <constructor-arg name="migrationDao" ref="migrationDao"/>
+        <constructor-arg name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+</beans>

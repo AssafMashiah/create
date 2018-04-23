@@ -1,0 +1,28 @@
+{{#obj.isCourse}}
+	{{#obj.ReadOnly}}
+		{{#obj.publishInProgress}}
+			((course.statusBar.publish.lock))
+		{{/obj.publishInProgress}}
+		{{^obj.publishInProgress}}
+			<span class="bold">{{obj.userName}}</span> ((course_toc_locking.status_bar.message))&nbsp;&nbsp;
+<span id="lock_attempt"><div id="button_lock" >((readOnly.messageBar.button))</div>
+    {{#obj.aquireDate}}&nbsp;&nbsp;[((locking.status_bar.lastAttempt)) {{obj.aquireDate}}]{{/obj.aquireDate}}</span>
+		{{/obj.publishInProgress}}
+	{{/obj.ReadOnly}}
+	{{^obj.ReadOnly}}
+		((readOnly.messageBar.beforeButton))
+		<div id="button_lock" >((readOnly.messageBar.button))</div>
+	{{/obj.ReadOnly}}
+{{/obj.isCourse}}
+
+{{^obj.isCourse}}
+	{{#obj.ReadOnly}}
+		<span class="bold">{{obj.userName}}</span> ((course_lesson_locking.status.bar.message))&nbsp;&nbsp;
+<span id="lock_attempt"><div id="button_lock" >((readOnly.messageBar.button))</div>
+    {{#obj.aquireDate}}&nbsp;&nbsp;[((locking.status_bar.lastAttempt)) {{obj.aquireDate}}]{{/obj.aquireDate}}</span>
+	{{/obj.ReadOnly}}
+	{{^obj.ReadOnly}}
+		((readOnly.messageBar.beforeButton))
+		<div id="button_lock" >((readOnly.messageBar.button))</div>
+	{{/obj.ReadOnly}}
+{{/obj.isCourse}}

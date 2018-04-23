@@ -1,0 +1,10 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+	var users = db.users.find();
+	users.forEach(function(user) {
+		db.packages.find({userName: user.username, isShow: true}).sort({packStartDate: -1}).skip(20).forEach(function(package) {
+		    package.isShow = false;
+		    db.packages.save(package);
+        })
+	});
+}

@@ -1,0 +1,11 @@
+//####################################################
+//#  add max file size to epub file type  - 500 MB  #
+//###################################################
+function f(dbName) {
+        db = db.getSiblingDB(dbName);
+        db.getCollection('publishers').update({"fileSizeLimits":{$not:{$elemMatch:{type:"epub"}}}},{$push: {"fileSizeLimits":{
+               "type" : "epub",
+               "size" : NumberLong("524288000"),
+               "mimeTypes" : ["application/epub+zip", "application/epub"]
+           }}},{multi:true});
+  }

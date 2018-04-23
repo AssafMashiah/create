@@ -1,0 +1,12 @@
+defaultTasks 'clean', 'build'
+
+apply from: '../../../cgs-common.gradle'
+
+
+if (hasProperty('findBugs')) {
+    apply plugin: 'findbugs'
+
+    findbugs {
+        ignoreFailures = true
+    }
+}

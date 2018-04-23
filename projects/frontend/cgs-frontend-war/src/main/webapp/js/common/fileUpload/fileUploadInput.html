@@ -1,0 +1,35 @@
+<input type='file' accept='{{accept_files}}' class='hide-file-upload' />
+{{#enableAssetManager}}
+	{{#enableDelete}}
+		{{^isNotOrdered}}
+			<button class='btn btn-small delete icon-trash file-upload'></button>
+		{{/isNotOrdered}}
+	{{/enableDelete}}
+	<div class='order-data' {{#isNotOrdered}}hidden{{/isNotOrdered}}>
+		{{^isTTS}}
+			<div class='order-data-title'>((Asset ID)):</div >
+			<input type='text' class='asset-id' {{#assetId}}value='{{assetId}}'{{/assetId}} /><br>
+			<div class='order-data-title'>((Notes:))</div>
+			<textarea class='asset-notes'>{{notes}}</textarea><br>
+		{{/isTTS}}
+		<div class='order-data-title'>((Status)):</div>
+		<select class='asset-state' value='{{#isDone}}1{{/isDone}}{{^isDone}}0{{/isDone}}'>
+			<option value='1' {{#isDone}}selected{{/isDone}}>((Done))</option>
+			<option value='0' {{^isDone}}selected{{/isDone}}>((Not Done))</option>
+		</select>
+		<div class='narration-data' {{^isNarration}}hidden{{/isNarration}}>
+			<span class='order-data-title'>((As Is)):</span>
+			<input type='checkbox' class='chk-as-is' {{#asIs}}checked{{/asIs}} {{#isDone}}disabled{{/isDone}}/><br>
+			<div {{#asIs}}hidden{{/asIs}}>
+				<span>((Text)):</span>
+				<textarea class='narration-text {{direction}}' {{#isDone}}disabled{{/isDone}}>{{narrationText}}</textarea>
+			</div>
+		</div>
+		{{#isTTS}}
+			<br>
+			<button class='btn btn-small btn-position tts-go-button' {{#isDone}}canBeDisabled='false' disabled{{/isDone}}>
+				((Convert Text to Speech))
+			</button>
+		{{/isTTS}}
+	</div>
+{{/enableAssetManager}}

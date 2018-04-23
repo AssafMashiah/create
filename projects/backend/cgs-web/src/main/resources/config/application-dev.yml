@@ -1,0 +1,36 @@
+#spring:
+#    output:
+#      ansi:
+#        enabled: always
+
+server:
+    port: 8000
+#    port: 8443
+    contextPath: /cgs
+    https:
+        port: 8443
+        #$JAVA_HOME/bin/keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+        ssl:
+          protocol: TLS
+          # class path location for keystore
+          keyStore: classpath:keys/devkey.p12
+          keyStorePassword: dvorak22
+          keyStoreType: PKCS12
+          keyAlias: tomcat
+# spring autoconfig for ssl fails to work for embedded tomcat earlier to 7.0.68, as it is unable to read the key from jar
+# we can't use 7.0.68 because production environment uses 7.0.54 and we replicate the environment. when updated, we can switch to spring autoconfig and
+#    ssl:
+#      enabled: true
+#      protocol: TLS
+#      #$JAVA_HOME/bin/keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+#      keyStore: classpath:keys/devkey.p12
+##      keyStore: /home/alex/TimeToKnow/t2kdev/cgs/projects/backend/cgs-web/src/main/resources/keys/devkey.p12
+#      keyStorePassword: dvorak22
+#      keyStoreType: PKCS12
+#      keyAlias: tomcat
+#    http:
+#        port: 8000
+
+
+#security:
+#  requireSsl: true

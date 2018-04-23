@@ -1,0 +1,31 @@
+//##################################################################
+//#  add fr_fr tp tts providers                                    #
+//##################################################################
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.ttsproviders.find({"name": "ReadSpeaker"}).forEach(function (doc) {
+
+        var frfrExists = false;
+        // check if fr_fr exists
+        doc.locales.forEach(function (locale) {
+            if (locale == "fr_fr") {
+                frfrExists = true;
+            }
+        });
+
+        // if it doesnt - add it
+        if (!frfrExists) {
+            doc.locales.push("fr_fr");
+        }
+
+        var confs = doc.configurations.course;
+        confs.forEach(function (conf) {
+            if (conf.key == "voice") {
+                conf.options["fr_fr"] = [
+                    "Male01",
+                    "Female01"
+                ]
+            }});
+        db.ttsproviders.save(doc); // override existing
+    });
+}

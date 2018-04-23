@@ -1,0 +1,206 @@
+//  Add to existing publishers zn_HK & zn_CN locales if doesn't exist
+
+function f(dbName) {
+   db = db.getSiblingDB(dbName);
+   myCursor = db.publishers.find();
+
+   gradeLevelCn = {
+       "locale" : "zn_CN",
+       "value" : [
+           {
+               "id" : "第一"
+           },
+           {
+               "id" : "第二"
+           },
+           {
+               "id" : "第三"
+           },
+           {
+               "id" : "第四"
+           },
+           {
+               "id" : "第五"
+           },
+           {
+               "id" : "第六"
+           },
+           {
+               "id" : "第七"
+           },
+           {
+               "id" : "第八"
+           },
+           {
+               "id" : "第九"
+           },
+           {
+               "id" : "第十"
+           },
+           {
+               "id" : "第十一"
+           }
+       ]
+   };
+   gradeLevelHk = {
+   	"locale" : "zn_HK",
+   	"value" : [
+   	    {
+   	        "id" : "第一"
+   	    },
+   	    {
+   	        "id" : "第二"
+   	    },
+   	    {
+   	        "id" : "第三"
+   	    },
+   	    {
+   	        "id" : "第四"
+   	    },
+   	    {
+   	        "id" : "第五"
+   	    },
+   	    {
+   	        "id" : "第六"
+   	    },
+   	    {
+   	        "id" : "第七"
+   	    },
+   	    {
+   	        "id" : "第八"
+   	    },
+   	    {
+   	        "id" : "第九"
+   	    },
+   	    {
+   	        "id" : "第十"
+   	    },
+   	    {
+   	        "id" : "第十一"
+   	    }
+   	]
+   };
+   subjectAreaCn = {
+       "locale" : "zn_CN",
+       "value" : [
+           {
+               "id" : "数学"
+           },
+           {
+               "id" : "希伯来语"
+           },
+           {
+               "id" : "英语"
+           },
+           {
+               "id" : "语言艺术"
+           },
+           {
+               "id" : "非母语英语课程ESL"
+           },
+           {
+               "id" : "科学"
+           },
+           {
+               "id" : "道路交通安全"
+           },
+           {
+               "id" : "阅读"
+           },
+           {
+               "id" : "神学"
+           }
+       ]
+   };
+   subjectAreaHk =  {
+       "locale" : "zn_HK",
+       "value" : [
+           {
+               "id" : "數學"
+           },
+           {
+               "id" : "希伯來語"
+           },
+           {
+               "id" : "英語"
+           },
+           {
+               "id" : "語言藝術"
+           },
+           {
+               "id" : "非母語英語課程ESL"
+           },
+           {
+               "id" : "科學"
+           },
+           {
+               "id" : "道路交通安全"
+           },
+           {
+               "id" : "閱讀"
+           },
+           {
+               "id" : "神學"
+           }
+       ]
+   };
+
+   myCursor.forEach( function (myDoc) {
+   	hasModifications = false;
+   	if(myDoc.contentLocales.options.indexOf("zn_CN") <= -1) {
+   		myDoc.contentLocales.options.push("zn_CN");
+   		hasModifications = true;
+   	}
+   	if(myDoc.contentLocales.options.indexOf("zn_HK") <= -1) {
+   		myDoc.contentLocales.options.push("zn_HK");
+   		hasModifications = true;
+   	}
+   	if(myDoc.interfaceLocales.options.indexOf("zn_CN") <= -1) {
+   		myDoc.interfaceLocales.options.push("zn_CN");
+   		hasModifications = true;
+   	}
+   	if(myDoc.interfaceLocales.options.indexOf("zn_HK") <= -1) {
+   		myDoc.interfaceLocales.options.push("zn_HK");
+   		hasModifications = true;
+   	}
+   	hasGradeLevelCN = false;
+   	hasGradeLevelHK = false;
+   	myDoc.gradeLevels.forEach(function(gradeLevel) {
+   		if(gradeLevel.locale == "zn_CN") {
+   			hasGradeLevelCN = true;
+   		}
+   		if(gradeLevel.locale == "zn_HK") {
+   			hasGradeLevelHK = true;
+   		}
+   	});
+   	if (!hasGradeLevelCN) {
+   		myDoc.gradeLevels.push(gradeLevelCn);
+   		hasModifications = true;
+   	}
+   	if (!hasGradeLevelHK) {
+   		myDoc.gradeLevels.push(gradeLevelHk);
+   		hasModifications = true;
+   	}
+   	hasSubjectAreaCN = false;
+   	hasSubjectAreaHK = false;
+   	myDoc.subjectAreas.forEach(function(subjectAreas) {
+   		if(subjectAreas.locale == "zn_CN") {
+   			hasSubjectAreaCN = true;
+   		}
+   		if(subjectAreas.locale == "zn_HK") {
+   			hasSubjectAreaHK = true;
+   		}
+   	});
+   	if (!hasSubjectAreaCN) {
+   		myDoc.subjectAreas.push(subjectAreaCn);
+   		hasModifications = true;
+   	}
+   	if (!hasSubjectAreaHK) {
+   		myDoc.subjectAreas.push(subjectAreaHk);
+   		hasModifications = true;
+   	}
+   	if (hasModifications) {
+   		db.publishers.save(myDoc);
+   	}
+   });
+}

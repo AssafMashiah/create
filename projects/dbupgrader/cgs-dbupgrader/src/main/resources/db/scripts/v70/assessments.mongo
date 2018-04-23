@@ -1,0 +1,10 @@
+//////// standards v1 /////
+
+##################
+# Define Lessons #
+##################
+createCollection("assessments");;
+assessments.ensureIndex({"cgsData.publisherId":1} , {name : "assessments_publisherIdx"});;
+assessments.ensureIndex({"cgsData.courseId":1} , {name : "assessments_courseIdx"});;
+assessments.ensureIndex({"contentDate.cid":1} , {name : "assessments_cIdx"});;
+assessments.ensureIndex({"contentData.header.lastModified":1});;

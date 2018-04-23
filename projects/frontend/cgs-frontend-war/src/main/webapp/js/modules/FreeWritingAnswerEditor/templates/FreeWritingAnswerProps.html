@@ -1,0 +1,33 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper FreeWritingAnswer_editor props_editor">
+    <ul class="nav nav-tabs" id="textEditorEditorTabs">
+        <li class="active" >
+        	<a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_mode">((Mode))</label>
+                <select id="field_mode" data-value="obj.mode">
+                    <option value="SingleAnswerMode">((Single Answer Field))</option>
+                    <option value="multiple">((Sub Tasks))</option>
+                </select>
+                <hr />
+                <div class="{{#controller.record.data.isSubTask}} hidden {{/controller.record.data.isSubTask}}">
+                    <label class="control-label" for="field_answer_type">((Answer Type))</label>
+                    <select id="field_answer_type" data-value="obj.answer_type">
+                        <option value="student">((Text))</option>
+                        <option value="studentMath">((Math Field))</option>
+                    </select>
+                </div>
+                <div class="{{^controller.record.data.isSubTask}} hidden {{/controller.record.data.isSubTask}}">
+                     <label class="control-label" for="field_has_questions">((All Sub-Questions has question))</label>
+                     <input data-checked="obj.has_questions" type="checkbox" id="field_has_questions" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

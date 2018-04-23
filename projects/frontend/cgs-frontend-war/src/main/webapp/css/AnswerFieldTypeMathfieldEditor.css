@@ -1,0 +1,118 @@
+#conditionsCheckingType-placeHolder  .comparisonSelect{
+    padding: 0;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.answerFieldTypeMathfield_editor .growinglist-component .conditionTitle {
+    width: auto;
+    line-height: 2;
+    padding: 0;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 6px !important;
+}
+
+.answerFieldTypeMathfield_editor .correct-answer-header {
+    font-size: 15px;
+    font-weight: normal;
+
+    margin: 0;
+    padding:0;
+    color: #0088cc;
+}
+
+.answerFieldTypeMathfield_editor .mathfieldContainer  {
+    height:auto;
+    font-size: 14px;
+    display: inline-block;
+    min-width:85px;
+    vertical-align: top;
+}
+
+.answerFieldTypeMathfield_editor div.growinglist div.growinglist-row {
+    width:auto;
+    position: relative;
+}
+
+
+.answerFieldTypeMathfield_editor div.growinglist .growinglist-row  {
+    padding-top: 5px;
+
+}
+
+.answerFieldTypeMathfield_editor div.growinglist div.growinglist-row div.column.trash {
+    position: absolute;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    margin: 0 0 0 3px;
+    left: 91%;
+}
+
+.answerFieldTypeMathfield_editor div.growinglist div.growinglist-row div.column.trash button {
+    font-size:24px;
+}
+
+.answerFieldTypeMathfield_editor div.growinglist div.growinglist-row div.column.trash .js-growing-remove {
+    background: none;
+    padding: 0;
+}
+
+.answerFieldTypeMathfield_editor .growinglist-component .row {
+    margin: 0 5px;
+}
+.answerFieldTypeMathfield_editor div.growinglist div.growinglist-row div.column.trash
+.answerFieldTypeMathfield_editor div.growinglist  {
+    padding-bottom: 75px;
+}
+
+
+
+.answerFieldTypeMathfield_editor  div.growinglist {
+    overflow: visible;
+
+}
+
+.answerFieldTypeMathfield_editor  .growinglist-component{
+    padding-bottom: 100px;
+}
+
+.answerFieldTypeMathfield_editor  div.growinglist  .big-icon-remove button {
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+.answerFieldTypeMathfield_editor  div.growinglist  .big-icon-remove {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    float: right;
+    position: relative;
+    bottom: -11px;
+}
+
+
+.answerFieldTypeMathfield_editor .addCondition li {
+    cursor: pointer;
+}
+
+.answerFieldTypeMathfield_editor div.growinglist .btn-group {
+    margin-top: 10px;
+    display: block;
+}
+
+.answerFieldTypeMathfield_editor div.growinglist .btn-group button {
+  border:  1px solid rgb(204, 204, 204);
+}
+
+.answerFieldTypeMathfield_editor.props_editor .answer-container{
+    width: 270px;
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden; 
+
+    line-height: 60px;
+}

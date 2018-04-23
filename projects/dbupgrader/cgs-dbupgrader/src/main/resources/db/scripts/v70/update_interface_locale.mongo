@@ -1,0 +1,7 @@
+####################################################################################################
+## set all publishers' interfaceLocales.options to be ["en_US","fr_FR"]  (optional CGS languages) ##
+## if there is no selected CGS language - set en_US to be the default one                         ##
+####################################################################################################
+
+publishers.update({},{$set:{"interfaceLocales.options":["en_US","fr_FR"]}},{multi: true});;
+publishers.update({"interfaceLocales.selected":{$exists:false}},{$set:{"interfaceLocales.selected":"en_US"}},{multi: true});;

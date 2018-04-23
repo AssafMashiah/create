@@ -1,0 +1,11 @@
+﻿CharReplace,\u0060,\u0027
+CharReplace,\u2018,\u0027
+CharReplace,\u201b,\u0027
+CharReplace,\u2019,\u0027
+CharReplace,\u2010,\u002D
+CharReplace,\u2013,\u002D
+CharReplace,\u2014,\u002D
+CharReplace,\u2044,\u002f
+CharReplace,\u00A0,\u0020
+CharReplace,\u2007,\u0020
+CharReplace,\u202F,\u0020

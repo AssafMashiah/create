@@ -1,0 +1,1490 @@
+{
+    "schemaLinkType": {
+        "type": "string",
+        "format": "uri",
+        "required": true
+    },
+    "nameDescIconType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string",
+                "required": true
+            },
+            "description": {
+                "type": "string"
+            },
+            "iconRefId": {
+                "$ref": "#/resourceIdType"
+            }
+        }
+    },
+    "resourceIdType": {
+        "description": "a unique resource ID indicator. Within the scope of a book different elements may use the resource ID to reference an managed resource. This in effect servers as the name of a resource, since its actual, phisical, name may appear as a hash value of its binary content. The motivation for using resource IDs to reference resources within the document is to allow a single URI replacement when the resource itself chagnes (since the physical name may be a hash value), and, more importantly, it allows logical grouping of referenced to the same asset. i.e, if two logical instances of a reference at any point in time refer to the same binary value, a distinct ID allows the model to represent the fact that these are actually two disntinct referenced, and that it is possible for one referant file to be replaced in the future without affecting the other reference at all.\nWhen copying items with resources from one document to another the file reference may require reallocation to avoid conflicts",
+        "type": "string",
+        "pattern": "resource_[0-9]+"
+    },
+    "localeType": {
+        "type": "string"
+    },
+    "resourceTypeEnum": {
+        "description": "describes the purpose or role a specific resource has.",
+        "type": "string",
+        "required": true,
+        "enum": ["attachment", "media", "planning", "lessonTemplate", "css", "standard", "skills", "internal", "lib" , "sequence","url"]
+    },
+    "subjectAreaEnum": {
+        "type": "string"
+    },
+    "difficultyEnum": {
+        "type": "string",
+        "enum": ["high", "medium", "low"]
+    },
+    "checkingTypeEnum": {
+        "type": "string",
+        "enum": ["manual", "auto", "none"]
+    },
+    "gradeLevelEnum": {
+        "type": "string"
+    },
+    "targetPopulationType": {
+        "type": "string"
+    },
+    "enumDescType": {
+        "type": "object",
+        "additionalProperties": {
+            "$ref": "#/nameDescIconType"
+        }
+    },
+    "pedagogicalLoTypeEnum": {
+        "type": "string"
+    },
+    "modalityTypeEnum": {
+        "type": "string",
+        "enum": ["Class",
+            "Group",
+            "Partner",
+            "Individual"
+        ]
+    },
+
+    "differentiationClassesEnum": {
+        "type": "string",
+        "enum": ["approachingLevel", "onLevel", "beyondLevel"]
+    },
+    "learningFrameworkEnum": {
+        "type": "string",
+        "enum": ["class", "group", "individual", "partner"]
+    },
+    "durationType": {
+        "type": "string",
+        "pattern": "^P(\\d+Y)?(\\d+M)?(\\d+D)?(T(((\\d+H)(\\d+M)?(\\d+(\\.\\d{1,2})?S)?)|((\\d+M)(\\d+(\\.\\d{1,2})?S)?)|((\\d+(\\.\\d{1,2})?S))))?$"
+    },
+    "uuidV4Type": {
+        "type": "string",
+        "description": "UUID V4 string",
+        "pattern": "^[\\da-fA]{8}-[\\da-fA-F]{4}-4[\\da-fA-F]{3}-[89aAbB][\\da-fA-F]{3}-[\\da-fA-F]{12}$"
+    },
+    "ebookDetailsType": {
+        "type": "object"
+    },
+    "documentHeaderType": {
+        "type": "object",
+        "properties": {
+            "last-modified": {
+                "type": ["object", "null"],
+                "properties": {
+                    "$date": {
+                        "$ref": "#/timestampType",
+                        "required": true
+                    }
+                }
+            },
+            "publishedToProduction": {
+                "type": "object",
+                "properties": {
+                    "$date": {
+                        "$ref": "#/timestampType",
+                        "required": true
+                    }
+                }
+            },
+            "editioned": {
+                "type": "object",
+                "properties": {
+                    "$date": {
+                        "$ref": "#/timestampType",
+                        "required": true
+                    }
+                }
+            },
+            "tocIdsPublishedToProduction": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": false
+    },
+    "keywordsType": {
+        "type": "array",
+        "items": {
+            "type": "string"
+        }
+    },
+    "objectiveType": {
+        "type": "string"
+    },
+    "resourceRefArrayType": {
+        "type": "array",
+
+        "items": {
+            "$ref": "#/resourceIdType"
+        }
+    },
+    "resourceLinkType": {
+        "description": "a link to a resouce file, usually, relative to the course root",
+
+        "type": "string",
+        "required": true
+    },
+    "resourceListType": {
+        "required": true,
+        "type": "array",
+        "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "resId": {
+                    "$ref": "#/resourceIdType",
+                    "required": true
+                },
+                "baseDir": {
+                    "$ref": "#/resourceLinkType"
+                },
+                "href": {
+                    "$ref": "#/resourceLinkType"
+                },
+                "hrefs": {
+                    "type": "array",
+
+
+                    "items": {
+                        "$ref": "#/resourceLinkType"
+                    }
+
+                },
+                "description": {
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/resourceTypeEnum"
+                },
+                "locale": {
+                    "$ref": "#/localeType"
+                },
+                "addedOn": {
+                    "$ref": "#/timestampType"
+                },
+                "addedBy": {
+                    "$ref": "#/userType"
+                },
+                "md5": {
+                    "$ref": "#/md5Type"
+                },
+                "sha1": {
+                    "$ref": "#/sha1Type"
+                },
+                "source": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "host": {
+                            "type": "string",
+                            "format": "host-name"
+                        },
+                        "assetId": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "editorState": {
+                    "type": "any"
+                }
+            },
+            "links": [
+                {
+                    "rel": "root",
+                    "href": "{href}"
+                }
+            ]
+        }
+    },
+    "md5Type": {
+        "type": "string",
+        "pattern": "[\\da-fA-F]{32}"
+
+    },
+    "sha1Type": {
+        "type": "string",
+        "pattern": "[\\da-fA-F]{40}"
+
+    },
+    "userType": {
+        "type": "string"
+
+    },
+    "tocItemsRefArrayType": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+            "type": "object",
+            "properties": {
+                "cid": {
+                    "$ref": "#/uuidV4Type",
+                    "required": true
+                },
+                "type": {
+                    "type": "string",
+                    "enum": ["lesson", "assessment"],
+                    "required": true
+                }
+            },
+            "links": [
+                {
+                    "rel": "full",
+                    "href": "lessons/{cid}"
+                }
+            ]
+        }
+    },
+    "authorType": {
+        "type": "string",
+
+        "required": false
+    },
+    "overviewType": {
+        "type": "string",
+
+        "required": false
+    },
+    "lessonDescriptionType": {
+        "type": "string",
+
+        "required": false
+    },
+
+
+    "teacherGuideType": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": false,
+        "properties": {
+            "mimeType": {
+                "type": "string",
+                "required": true
+            },
+            "data": {
+                "type": "string",
+                "required": true
+            },
+            "resourceRefId": {
+                "$ref": "#/resourceRefArrayType",
+                "required": false
+            },
+            "attachments": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/attachmentType"
+                },
+                "required": false
+            }
+        }
+    },
+
+    "attachmentType": {
+        "displayName": {
+            "$ref": "#/titleType"
+        },
+        "resourceId": {
+            "$ref": "#/resourceIdType"
+        }
+    },
+
+    "titleType": {
+        "type": "string",
+        "maxLength": 500,
+        "required": true
+    },
+    "contentLocaleType": {
+        "type": "array",
+
+        "required": true,
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+            "$ref": "#/localeType"
+        }
+    },
+    "timestampType": {
+        "type": ["string", "null"],
+        "format": "datetime"
+    },
+    "copyrightType": {
+
+        "type": "string",
+        "required": false
+    },
+    "isbnType": {
+        "type": "string",
+        "pattern": "ISBN(-1(?:(0)|3))?:?\\x20(\\s)*[0-9]+[- ][0-9]+[- ][0-9]+[- ][0-9]*[- ]*[xX0-9]",
+        "required": false
+    },
+
+    "skillsType": {
+        "type": "array",
+        "items": {
+            "type": "string"
+        },
+        "uniqueItems": true
+    },
+
+    "standardPackageIdType": {
+        "type": "string"
+    },
+
+    "standardPackageNameType": {
+        "type": "string"
+    },
+
+    "standardPackageVersionType": {
+        "type": "string",
+        "pattern": "^[\\d]+\\.[\\d]+$"
+    },
+
+    "pedagogicalIdType": {
+        "type": "string"
+    },
+
+    "pedagogicalIdsListType": {
+        "type": "array",
+        "items": {
+            "$ref": "#/pedagogicalIdType"
+        },
+        "uniqueItems": true
+    },
+
+    "standardsPackageTag": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": false,
+        "properties": {
+            "stdPackageId": {
+                "$ref": "#/standardPackageIdType",
+                "required": true
+            },
+            "pedagogicalIds": {
+                "$ref": "#/pedagogicalIdsListType",
+                "required": true
+            }
+        }
+    },
+
+    "standardsTypeEnum": {
+        "type": "array",
+        "items": {
+            "$ref": "#/standardsPackageTag"
+        },
+        "uniqueItems": true
+    },
+    "gradingScale": {
+        "type": "object",
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "scaleDescriptionData": {
+                "type": "string",
+                "required": false
+            },
+            "gradingExplanationData": {
+                "type": "string",
+                "required": false
+            }
+        }
+    },
+    "rubricsCriteriasItem": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": true,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "mimeType": {
+                "type": "string",
+                "required": true
+            },
+            "nameData": {
+                "type": "string",
+                "required": true
+            },
+            "totalScore": {
+                "type": "number",
+                "required": true
+            },
+            "gradingScales": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/gradingScale"
+                },
+                "uniqueItems": true
+            }
+        }
+    },
+
+    "rubricsCriterias": {
+        "type": "array",
+        "items": {
+            "$ref": "#/rubricsCriteriasItem"
+        },
+        "uniqueItems": true
+    },
+
+    "standardPackageType": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": false,
+        "properties": {
+            "stdPackageId": {
+                "$ref": "#/standardPackageIdType",
+                "required": true
+            },
+            "name": {
+                "$ref": "#/standardPackageNameType",
+                "required": true
+            },
+            "subjectArea": {
+                "$ref": "#/subjectAreaEnum",
+                "required": true
+            },
+            "version": {
+                "$ref": "#/standardPackageVersionType",
+                "required": true
+            }
+        }
+    },
+
+    "standardPackagesListType": {
+        "type": "array",
+        "items": {
+            "$ref": "#/standardPackageType"
+        },
+        "uniqueItems": true
+    },
+
+    "lessonType": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "schema": {
+                "$ref": "#/schemaLinkType"
+            },
+            "isHidden": {
+                "type": "boolean"
+            },
+            "type": {
+                "type": "string",
+                "enum": ["lesson"],
+                "required": true
+            },
+            "format": {
+                "type": "string",
+                "enum": ["NATIVE","EBOOK", "DI"],
+                "required": false
+            },
+            "eBooks":{
+                "$ref":"#/ebookDetailsType"
+            },
+            "header": {
+                "$ref": "#/documentHeaderType"
+            },
+            "title": {
+                "$ref": "#/titleType"
+            },
+            "overview": {
+                "$ref": "#/overviewType"
+            },
+            "description": {
+                "$ref": "#/lessonDescriptionType"
+            },
+            "teacherGuide": {
+                "$ref": "#/teacherGuideType"
+            },
+            "keywords": {
+                "$ref": "#/keywordsType"
+            },
+            "supplementaryNarrationLocales": {
+                "type": "array",
+                "required": false,
+                "minItems": 0,
+                "uniqueItems": true,
+                "items": {
+                    "$ref": "#/localeType"
+                }
+            },
+            "contentLocales": {
+                "$ref": "#/contentLocaleType"
+            },
+            "objective": {
+                "$ref": "#/objectiveType"
+            },
+            "resources": {
+                "$ref": "#/resourceListType"
+            },
+            "standardPackages": {
+                "$ref": "#/standardPackagesListType"
+            },
+            "customizationPack": {
+                "$ref": "#/customizationPackType"
+            },
+            "glossary": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "key": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "value": {
+                            "type": "string",
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "typicalLearningTime": {
+                "$ref": "#/durationType"
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum"
+            },
+            "skills": {
+                "$ref": "#/skillsType"
+            },
+            "pedagogicalLessonType": {
+                "type": "string"
+            },
+            "learningObjects": {
+                "$ref": "#/learningObjectsType"
+            },
+            "customFields": {
+                "type": "array",
+				"additionalProperties": true
+            }
+        }
+    },
+
+    "assessmentType": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "schema": {
+                "$ref": "#/schemaLinkType"
+            },
+            "type": {
+                "type": "string",
+                "enum": [
+                    "assessment"
+                ],
+                "required": true
+            },
+            "supplementaryNarrationLocales": {
+                "type": "array",
+                "required": false,
+                "minItems": 0,
+                "uniqueItems": true,
+                "items": {
+                    "$ref": "#/localeType"
+                }
+            },
+            "contentLocales": {
+                "$ref": "#/contentLocaleType"
+            },
+            "header": {
+                "$ref": "#/documentHeaderType"
+            },
+            "title": {
+                "$ref": "#/titleType"
+            },
+            "overview": {
+                "$ref": "#/overviewType"
+            },
+            "description": {
+                "$ref": "#/lessonDescriptionType"
+            },
+            "teacherGuide": {
+                "$ref": "#/teacherGuideType"
+            },
+            "keywords": {
+                "$ref": "#/keywordsType"
+            },
+            "objective": {
+                "$ref": "#/objectiveType"
+            },
+            "resources": {
+                "$ref": "#/resourceListType"
+            },
+            "standardPackages": {
+                "$ref": "#/standardPackagesListType"
+            },
+            "customizationPack": {
+                "$ref": "#/customizationPackType"
+            },
+            "glossary": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "key": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "value": {
+                            "type": "string",
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "typicalLearningTime": {
+                "$ref": "#/durationType"
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum"
+            },
+            "useForDifferentialRecommendation": {
+                "type": "boolean",
+                "required": true
+            },
+            "checkingType": {
+                "type": "string",
+                "enum": [
+                    "auto", "mixed"
+                ],
+                "required": true
+            },
+            "containsInstructionalSequence": {
+                "type": "boolean",
+                "required": true
+            },
+            "sequences": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/assessmentSequenceType"
+                }
+            },
+            "customFields": {
+                "type": "array",
+				"additionalProperties": true
+            }
+        }
+    },
+    "overlayElementPresentationType":{
+        "type": "object",
+        "displayType": {
+            "type": "string",
+            "enum": [
+                "EMBEDDED",
+                "HOTSPOT"
+            ],
+            "required": true
+        },
+        "openType": {
+            "type":"string",
+            "enum":[
+                "POPUP",
+                "TAB"
+            ]
+        },
+        "position":{
+            "type": "object",
+            "x": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "y":{
+                "type": "integer",
+                "minimum": 0
+            },
+            "required":true
+        },
+        "size": {
+            "type":"object",
+            "height": {
+                "type":"string"
+            },
+            "width": {
+                "type":"string"
+            }
+        }
+    },
+    "overlayElementContentType":{
+        "type":"object"
+    },
+    "overlayElementType":{
+        "type": "object",
+        "eBookId":{
+            "type":"string",
+            "required":true
+        },
+        "cid": {
+            "$ref": "#/uuidV4Type",
+            "required": true
+        },
+        "presentation":{
+            "$ref":"overlayElementPresentationType"
+        },
+        "content":{
+            "$ref":"overlayElementContentType"
+        }
+    },
+
+    "ebookPageWithOverlayElementsType":{
+        "type": "object",
+        "eBookId":{
+            "type":"string",
+            "required":true
+        },
+        "cid": {
+            "$ref": "#/uuidV4Type",
+            "required": true
+        },
+        "originalIndex":{
+            "type":"integer",
+            "required":true
+        },
+        "title": {
+            "$ref": "#/titleType",
+            "required": false
+        },
+        "href":{
+            "$ref":"#/resourceLinkType",
+            "required":true
+        },
+        "thumbnailHref":{
+            "$ref":"#/resourceLinkType",
+            "required":false
+        },
+        "overlayElements":{
+            "type":"array",
+            "items":{
+                "type":"#/overlayElementType"
+            },
+            "required":false
+        }
+
+
+    },
+    "learningObjectsType": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cid": {
+                    "$ref": "#/uuidV4Type",
+                    "required": true
+                },
+                "displayed": {
+                    "type": "boolean",
+                    "default": true
+                },
+                "type": {
+                    "type": "string",
+                    "enum": ["lo", "loItem"],
+                    "required": true
+                },
+                "title": {
+                    "$ref": "#/titleType"
+                },
+                "overview": {
+                    "$ref": "#/overviewType"
+                },
+                "keywords": {
+                    "$ref": "#/keywordsType"
+                },
+                "pedagogicalLoType": {
+                    "$ref": "#/pedagogicalLoTypeEnum",
+                    "required": false
+                },
+                "modality": {
+                    "$ref": "#/modalityTypeEnum",
+                    "required": false
+                },
+                "differential": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "learningFramework": {
+                    "$ref": "#/learningFrameworkEnum"
+                },
+                "objective": {
+                    "$ref": "#/objectiveType"
+                },
+                "teacherGuide": {
+                    "$ref": "#/teacherGuideType"
+                },
+                "typicalLearningTime": {
+                    "$ref": "#/durationType"
+                },
+                "difficulty": {
+                    "$ref": "#/difficultyEnum"
+                },
+                "standards": {
+                    "$ref": "#/standardsTypeEnum"
+                },
+                "skills": {
+                    "$ref": "#/skillsType"
+                },
+                "item": {
+                    "type": "object",
+                    "additionalProperties": true
+                },
+                "sequences": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "differentiatedSequenceParent", "sequence", "assessmentSequence", "sequenceRef"
+                                ],
+                                "required": true
+                            }
+                        }
+                    }
+                },
+                "pages":{
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/ebookPageWithOverlayElementsType"
+                    }
+                }
+            }
+        }
+    },
+
+
+    "differentialLevelIdType": {
+        "type": "number"
+    },
+
+    "genericSequenceType_shouldBePartOfLearningObjectsType_ForMoreInfoCheckCommentsInContentValidator": {
+
+        "type": "object",
+
+        "oneOf": [
+            {
+                "$ref": "#/sequenceRefType"
+            },
+            {
+                "$ref": "#/differentialSequenceType"
+            },
+            {
+                "$ref": "#/regularSequenceType"
+            }
+        ]
+
+    },
+    "differentialSequenceElementType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "levelId": {
+                "required": true,
+                "$ref": "#/differentialLevelIdType"
+            },
+            "sequence": {
+                "required": true,
+                "$ref": "#/regularSequenceType"
+            }
+        }
+    },
+
+    "differentialSequenceType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "title": {
+                "$ref": "#/titleType",
+                "required": true
+            },
+            "type": {
+                "type": "string",
+                "enum": ["differentiatedSequenceParent"],
+                "required": true
+            },
+            "levels": {
+                "type": "array",
+                "required": true,
+                "items": {
+                    "$ref": "#/differentialSequenceElementType"
+                }
+            }
+        }
+    },
+
+    "regularSequenceType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "title": {
+                "$ref": "#/titleType",
+                "required": true
+            },
+            "differentiation": {
+                "$ref": "#/differentiationClassesEnum",
+                "required": false
+            },
+            "type": {
+                "type": "string",
+                "enum": ["sequence", "assessmentSequence"],
+                "required": true
+            },
+            "mimeType": {
+                "type": "string",
+                "required": true
+            },
+            "contentRef": {
+                "$ref": "#/resourceIdType",
+                "required": true
+            },
+            "teacherGuide": {
+                "$ref": "#/teacherGuideType"
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum"
+            },
+            "resourceRefId": {
+                "$ref": "#/resourceRefArrayType"
+            },
+            "tasks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "cid": {
+                            "$ref": "#/uuidV4Type",
+                            "required": true
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": ["task"],
+                            "required": true
+                        },
+                        "editorState": {
+                            "type": "any"
+                        },
+                        "standards": {
+                            "$ref": "#/standardsTypeEnum"
+                        },
+                        "allowedAttempts": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "checkingType": {
+                            "$ref": "#/checkingTypeEnum",
+                            "required": true
+                        },
+                        "title": {
+                            "type": ["string", "null"]
+                        },
+                        "difficulty": {
+                            "$ref": "#/difficultyEnum"
+                        }
+
+                    }
+                }
+            }
+        }
+    },
+
+    "assessmentSequenceType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "title": {
+                "$ref": "#/titleType",
+                "required": true
+            },
+
+            "type": {
+                "type": "string",
+                "enum": ["assessmentSequence"],
+                "required": true
+            },
+            "mimeType": {
+                "type": "string",
+                "required": true
+            },
+            "contentRef": {
+                "$ref": "#/resourceIdType",
+                "required": true
+            },
+            "teacherGuide": {
+                "$ref": "#/teacherGuideType"
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum"
+            },
+            "resourceRefId": {
+                "$ref": "#/resourceRefArrayType"
+            },
+            "tasks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "cid": {
+                            "$ref": "#/uuidV4Type",
+                            "required": true
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": ["assessmentTask"],
+                            "required": true
+                        },
+                        "editorState": {
+                            "type": "any"
+                        },
+                        "standards": {
+                            "$ref": "#/standardsTypeEnum"
+                        },
+                        "rubricsCriterias": {
+                            "$ref": "#/rubricsCriterias",
+                            "required": false
+                        },
+
+                        "checkingType": {
+                            "type": "string",
+                            "enum": ["auto", "manual", "none"],
+                            "required": true
+                        },
+                        "title": {
+                            "type": "string"
+                        },
+                        "totalScore": {
+                            "type": "number",
+                            "required": true,
+                            "minimum": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sequenceRefElementType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "lessonCid": {
+                "required": true,
+                "$ref": "#/uuidV4Type"
+            },
+            "sequenceCid": {
+                "required": true,
+                "$ref": "#/uuidV4Type"
+            }
+        }
+    },
+    "sequenceRefType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "type": {
+                "type": "string",
+                "enum": ["sequenceRef"],
+                "required": true
+            },
+            "sequenceRef": {
+                "$ref": "#/sequenceRefElementType",
+                "required": true
+            }
+        }
+    },
+
+    "differentiationLevelType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "id": {
+                "required": true,
+                "type": "number"
+            },
+            "acronym": {
+                "required": true,
+                "type": "string"
+            },
+            "name": {
+                "required": true,
+                "type": "string"
+            }
+        }
+    },
+
+    "differentiationType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "defaultLevelId": {
+                "required": true,
+                "type": "number"
+            },
+            "levels": {
+                "type": "array",
+                "required": true,
+                "items": {
+                    "$ref": "#/differentiationLevelType"
+                }
+            }
+
+        }
+    },
+    "customizationPackType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "resourceId": {
+                "required": true,
+                "$ref": "#/resourceIdType"
+            },
+            "name": {
+                "type": "string"
+            },
+            "version": {
+                "type": "string"
+            },
+            "language": {
+                "type": "string"
+            },
+            "date": {
+                "type": "string"
+            },
+            "author": {
+                "type": "string"
+            },
+            "structureVersion":{
+                "type" : "string"
+            }
+        }
+    },
+    "courseType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "courseId": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "schema": {
+                "$ref": "#/schemaLinkType"
+            },
+            "header": {
+                "$ref": "#/documentHeaderType"
+            },
+            "type": {
+                "type": "string",
+                "enum": ["course"],
+                "required": true
+            },
+            "author": {
+                "type": "string",
+                "required": true
+            },
+            "format": {
+                "type": "string",
+                "enum": ["NATIVE","EBOOK"],
+                "required": true
+            },
+            "publisher": {
+                "type": "string",
+                "required": true
+            },
+            "created": {
+                "$ref": "#/timestampType"
+            },
+            "updated": {
+                "$ref": "#/timestampType"
+            },
+            "version": {
+                "type": "string",
+                "pattern": "^[\\d]+\\.[\\d]+(\\.[\\d]+){0,1}$",
+                "required": true
+            },
+            "includeLo": {
+                "type": "boolean",
+                "required": true
+            },
+            "differentiation": {
+                "required": false,
+                "$ref": "#/differentiationType"
+            },
+            "cgsVersion": {
+                "type": "string",
+                "required": true,
+                "pattern": "^[\\d]+\\.[\\d]+\\.[\\d]+(\\.[\\d]+)?$"
+            },
+            "title": {
+                "$ref": "#/titleType"
+            },
+            "isbn": {
+                "$ref": "#/isbnType"
+            },
+            "contentLocales": {
+                "$ref": "#/contentLocaleType"
+            },
+            "copyright": {
+                "$ref": "#/copyrightType"
+            },
+            "coverRefId": {
+                "$ref": "#/resourceIdType"
+            },
+            "customizationPack": {
+                "$ref": "#/customizationPackType"
+            },
+            "overview": {
+                "$ref": "#/overviewType"
+            },
+            "credits": {
+                "type": "string"
+            },
+            "subjectArea": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/subjectAreaEnum"
+                },
+                "uniqueItems": true
+            },
+            "gradeLevel": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/gradeLevelEnum"
+                },
+                "uniqueItems": true
+            },
+            "targetPopulation": {
+                "type": "string",
+                "required": false
+            },
+            "technicalRequirements": {
+                "type": "string"
+            },
+            "eBooks":{
+                "$ref":"#/ebookDetailsType"
+
+            },
+            "lessonTemplates": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "refId": {
+                            "$ref": "#/resourceIdType",
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "cssRefId": {
+                "$ref": "#/resourceIdType"
+            },
+
+            "pedagogicalLoTypes": {
+                "$ref": "#/enumDescType"
+            },
+            "differentiationClasses": {
+                "$ref": "#/enumDescType"
+            },
+
+            "resources": {
+                "$ref": "#/resourceListType"
+            },
+            "standardPackages": {
+                "$ref": "#/standardPackagesListType"
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum",
+                "required": true
+            },
+
+            "maxDepth": {
+                "type": "number",
+                "required": true,
+                "minimum": 0
+            },
+
+            "toc": {
+                "$ref": "#/tocItemType"
+            },
+            "useTtsServices": {
+                "type": "boolean"
+            },
+            "themingLastModified": {
+                "type": "object",
+                "additionalProperties": true
+            },
+            "ttsServices": {
+                "type": "object",
+                "additionalProperties": true
+            },
+            "supplementaryNarrationLocales": {
+                "type": "array",
+                "required": false,
+                "minItems": 0,
+                "uniqueItems": true,
+                "items": {
+                    "$ref": "#/localeType"
+                }
+            },
+            "customFields": {
+                "type": "array",
+                "additionalProperties": true
+            },
+
+            "customMetadataPackages": {
+                "type": "array",
+                "required": false,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "packageId": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "packageName": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "packageDescription": {
+                            "type": "string",
+                            "required": false
+                        },
+                        "version": {
+                            "type": "string",
+                            "required": true
+                        },
+                        "schemaVersion": {
+                            "type": "string",
+                            "required": false
+                        },
+                        "customMetadata":{
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": true
+                            }
+                        }
+                    },
+                    "additionalProperties": true
+                }
+            }
+        }
+    },
+
+    "tocItemType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "cid": {
+                "$ref": "#/uuidV4Type",
+                "required": true
+            },
+            "type": {
+                "type": "string",
+                "enum": ["tocItem"],
+                "required": true
+            },
+            "title": {
+                "$ref": "#/titleType"
+            },
+            "overview": {
+                "$ref": "#/overviewType"
+            },
+            "keywords": {
+                "$ref": "#/keywordsType"
+            },
+            "tocItems": {
+                "$ref": "#/tocItemsType"
+            },
+            "tocItemRefs": {
+                "$ref": "#/tocItemsRefArrayType"
+            },
+            "lessons": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/lessonType"
+                }
+            },
+            "standards": {
+                "$ref": "#/standardsTypeEnum",
+                "required": false
+            }
+        }
+    },
+
+    "tocItemsType": {
+        "type": "array",
+        "items": {
+            "$ref": "#/tocItemType"
+        }
+    }
+}

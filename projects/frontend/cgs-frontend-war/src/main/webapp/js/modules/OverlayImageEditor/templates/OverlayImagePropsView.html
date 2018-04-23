@@ -1,0 +1,31 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper sequence_editor props_editor">
+    <ul class="nav nav-tabs" id="sequenceEditorTabs">
+        <li class="active">
+            <a href="#properties" data-toggle="tab">((props.{{controller.record.type}})) {{childOrder}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label block" >((Image:))</label>
+                <div class="controls">
+                    {{#showPreview}}
+                    <div class="image-preview-crop-row">
+                        {{#controller.record.data.overlaySrc}}
+                        <img rows="3" src="{{#server-path}}{{controller.record.data.overlaySrc}}{{/server-path}}" id="field_image_Viewer" class="previewImage inline-block"/>
+                        {{/controller.record.data.overlaySrc}}
+                        {{^controller.record.data.overlaySrc}}
+                        <div class="previewImage inline-block noImage"></div>
+                        {{/controller.record.data.overlaySrc}}
+                    </div>
+                    {{/showPreview}}
+                    <div class="image-overlay-upload-row">
+                        <button id="button_upload_image" class="btn btn-small">((...))</button>
+                        <button id="button_image_editor" class="image-cropper-edit-button btn btn-small edit_element"><span class="base-icon icon-cog"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

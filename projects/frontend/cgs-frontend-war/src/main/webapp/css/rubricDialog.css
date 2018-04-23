@@ -1,0 +1,116 @@
+#dialog.rubric {
+	width: 856px;
+	height: 530px;
+
+	max-height: 470px;
+
+	margin-top: -250px;
+	margin-left: -406px;
+}
+
+
+#dialog.rubric #dialogControls {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#dialog.rubric #dialogContent {
+	min-height: 310px;
+	width: 100%;
+
+	overflow: auto;
+}
+
+#rubric_container label {
+	display: inline;
+}
+
+#rubric_container .table-definitions {
+	margin-bottom: 20px;
+}
+#rubric_container #rubric-dialog-table {
+	width: 812px;
+
+	border-collapse: collapse;
+
+	outline-width: 1px;
+	outline-color: #E1E1E1;
+	outline-style: solid;
+	border: 1px solid white;
+
+	margin: 0 auto;
+}
+
+#rubric_container #rubric-dialog-table tr > th {
+	background-color: #DAE9FC;
+
+	height: 36px;
+	width: 240px;
+
+	padding: 0;
+
+	line-height: 36px;
+
+	text-align: left;
+}
+
+#rubric_container #rubric-dialog-table tr >  td {
+	border: 1px solid #E1E1E1;
+	border-collapse: collapse;
+	border-left: 0;
+}
+
+#rubric_container #rubric-dialog-table tr > th input,
+#rubric_container #rubric-dialog-table tr > td input {
+	width: 240px;
+	height: 26px;
+	padding: 0 inherit;
+	margin: 0 2px;
+	background: #fff;
+	border: 1px solid #DDD;
+}
+
+#rubric_container #rubric-dialog-table tr > td textarea {
+	width: 240px;
+	height: 85px;
+	resize: none;
+	padding: 0 inherit;
+	margin-bottom: 0;
+	border: 1px solid #DDD;
+}
+#rubric_container #rubric-dialog-table tr > th input:focus,
+#rubric_container #rubric-dialog-table tr > td input:focus,
+#rubric_container #rubric-dialog-table tr > td textarea:focus{
+	border-color:#276CC7;
+}
+
+
+#rubric_container #rubric-dialog-table tr > td {
+	width: 240px;
+
+	vertical-align: top;
+
+	padding: 3px 1px;
+}
+
+#rubric_container #rubric-dialog-table tr > td.totalScore {
+	width: 90px;
+}
+
+#rubric_container #rubric-dialog-table tr > td.totalScore > input {
+	width: 66px;
+	padding-left: 8px;
+}
+
+#rubric_container #rubric-dialog-table tr > th.totalScore {
+	width: 90px;
+
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+
+#rubric_container input {
+	margin: 0;
+}

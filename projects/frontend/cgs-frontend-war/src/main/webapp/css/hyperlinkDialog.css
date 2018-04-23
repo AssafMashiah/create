@@ -1,0 +1,36 @@
+#dialog.hyperlink {
+	width: 560px;
+	min-height: 250px;
+	max-height: 250px;
+	height: 250px;
+}
+
+#dialog.hyperlink #dialogContent {
+	min-height: 130px;
+	max-height: 130px;
+	height: 130px;
+}
+
+#dialog.hyperlink #dialogContent #text-url {
+	direction: ltr;
+	text-align: left;
+	width: calc(100% - 80px);
+}
+#text-url.notValid{
+	border-color: red;
+}
+
+
+#dialog.hyperlink #dialogContent .test-link {
+	width: 50px;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 12px;
+	vertical-align: super;
+}
+
+#dialog.hyperlink #dialogContent .url-notice {
+	display: block;
+}

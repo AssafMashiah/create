@@ -1,0 +1,26 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper sequence_editor props_editor">
+    <ul class="nav nav-tabs" id="sequenceEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((url_sequence)) ((name)):</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" class="input-large">
+                    <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+                </div>
+            </div> 
+            <div class="control-group">
+                <label class="control-label required-field" for="field_url">((URL)):</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.url" id="field_url" class="input-large">
+                    <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+                </div>
+            </div>             
+        </div>
+    </div>
+</div>

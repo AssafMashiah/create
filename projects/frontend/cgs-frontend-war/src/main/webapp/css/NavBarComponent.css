@@ -1,0 +1,187 @@
+.screen-header {
+    position: relative;
+	z-index: 3;
+}
+
+#navbar_base_wrapper {
+    width: 100%;
+    color: #535353;
+    overflow: visible;
+    position: relative;
+}
+
+#navbar_base_wrapper div {
+    box-sizing: border-box;
+}
+
+#navbar_base_wrapper .left {
+    display: inline-block;
+    height: 100%;
+    padding: 2px 5px 0 0;
+    line-height: 42px;
+    border-right: solid 2px rgb(204, 204, 204);
+}
+
+#navbar_base_wrapper .message {
+    background-color: #DAF0FB;
+    height: 44px;
+    border-right: 1px solid #e1e1e1;
+}
+
+#navbar_base {
+    border: 0 none;
+    position: relative;
+}
+
+#navbar_list {
+    vertical-align: top;
+    display: block;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+#navbar_list .entry {
+    display: inline-block;
+    height: 32px;
+}
+
+#navbar_list .entry span#navbar_over_ellipsis {
+    display: inline;
+}
+
+#navbar_list,
+#navbar_list .entry {
+    line-height: 32px;
+    color: #535353;
+    margin: 0 5px;
+    position: relative;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+#navbar_base .node-collapse,
+#navbar_base i[class^='icon-'] {
+    font-size: 13px;
+}
+
+#navbar_list i {
+    margin: 0 9px;
+    line-height: 32px;
+    width: 14px;
+    height: 32px;
+    vertical-align: top;
+}
+
+#navbar_list .entry i:last-child {
+    display: none;
+}
+
+#task_types_nav_bar {
+    margin-left: 0;
+    padding: 6px 15px;
+    clear: both;
+    background-color: #fff;
+    position: absolute;
+    font-family: "open_sans";
+    z-index: 0;
+}
+
+#task_types_nav_bar .tasksTypes {
+    display: flex;
+}
+
+#task_types_nav_bar .tasksTypes .taskSettingsButton {
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+
+#navbar_over {
+    display: none;
+}
+
+#navbar_over .entry:last-child {
+    display: none;
+    visibility: hidden;
+}
+
+#task_types_nav_bar select {
+    font-family: "open_sans";
+    font-size: 12px;
+}
+#task_types_nav_bar .taskLabel{
+    line-height: 30px;
+}
+
+#task_types_nav_bar .btn.error {
+    color: red;
+}
+
+#lock_message_bar {
+    display: none;
+    background-color: rgb(250, 248, 214);
+    width: 100%;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+#lock_message_bar.waiting {
+    background-color: #EFECBB;
+}
+
+#lock_message_bar.waiting #lock_attempt {
+    visibility: hidden;
+}
+
+#lock_message_bar .lockingMessage {
+    line-height: 32px;
+    height: 32px;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+
+#lock_message_bar #button_lock {
+    margin-left: 8px;
+    cursor: pointer;
+    display: inline-block;
+    color: #279CC7;
+    text-decoration: underline;
+}
+
+.limitWidth.node-label {
+    max-width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.selectTaskTypeLabel {
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0 5px 0 0;
+    color: #0099E8;
+    font-family: "open_sans";
+}
+
+#btn_TaskSettings {
+    background-color: #276cc7;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: none;
+    padding: 2px 10px;
+    border-radius: 0;
+    font-family: "open_sans";
+    border: 0 none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+}
+#btn_TaskSettings:hover{
+    background-color: #3C90FF;
+}
+#btn_TaskSettings.active{
+    box-shadow: none;
+}
+#btn_TaskSettings.active:hover{
+    background-color: #276cc7;
+}

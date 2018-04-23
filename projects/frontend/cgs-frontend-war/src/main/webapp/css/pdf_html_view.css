@@ -1,0 +1,288 @@
+
+/* FIXME: do we need this? */
+#pdf_page ::selection { background: rgba(0,0,255,0.3); }
+#pdf_page ::-moz-selection { background: rgba(0,0,255,0.3); }
+
+#pdf_page .html_layer.not_selectable, #pdf_page .html_layer.not_selectable * {
+	-webkit-user-select: none;
+}
+#pdf_page .flow_container {
+	height: 100%;
+	width: 100%;
+
+	position: relative;
+}
+
+#pdf_page::-webkit-scrollbar {
+	height: 8px;
+}
+
+.row-fluid [class*="span"].stage_base_no_flow {
+	overflow: hidden !important;
+	margin: 0;
+}
+
+/*
+#pdf_page .flow_container .html_layer_wrapper * {
+	-webkit-user-select: text;
+}
+*/
+
+.html_layer .ui-selecting, .html_layer .ui-selected {
+	background: rgba(0,0,255,0.3);
+}
+
+.draggingContainer .ui-selected {
+	background: rgba(0,0,255,0.3);
+}
+
+.draggingContainer {
+    opacity: 0.75;
+    z-index: 9000;
+}
+
+.drag-text {
+	position: relative;
+}
+
+.drag-text > div {
+	position: absolute;
+	white-space: pre;
+}
+
+#editors .draggingContainer {
+	opacity: 1;
+	z-index: auto;
+}
+
+.draggingContainer div {
+	color: #000 !important;
+}
+
+#pdf_toolbar {
+	position: fixed;
+	z-index: 1000;
+	padding: 5px;
+	margin-top: -60px;
+	margin-left: 5px;
+	/*background-color: #0080ff;*/
+	background-color: rgb(84, 84, 84);
+	border: 1px solid #b0b0b0;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	/*-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;*/
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	white-space: nowrap;
+}
+
+#pdf_page .flow_container .html_layer_wrapper,
+#pdf_page .flow_container .html_layer_wrapper .html_layer {
+	position: absolute;
+
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	color: #000;
+
+}
+
+#pdf_toolbar #pdf_tool_text,
+#pdf_toolbar #pdf_tool_image {
+	color: #fff;
+
+	background-color: rgb(54, 54, 54);
+	background-image: -webkit-linear-gradient(top, rgb(68, 68, 68), rgb(34, 34, 34));
+}
+
+#pdf_toolbar #pdf_tool_text.active,
+#pdf_toolbar #pdf_tool_image.active,
+#pdf_toolbar #pdf_tool_text:hover,
+#pdf_toolbar #pdf_tool_image:hover {
+	background: -webkit-linear-gradient(90deg, rgb(117, 181, 223) 0%, rgb(102, 172, 219) 100%);
+	color: #fff;
+ 
+}
+
+#pdf_page input, button, select {
+
+}
+
+#pdf_toolbar .label {
+	background: transparent;
+	margin: 5px;
+	vertical-align: middle;
+
+	line-height: 20px;
+}
+
+.pdf_loading_title {
+
+	color: #333;
+}
+
+
+#pdf_toolbar .label:first-child {
+	margin-left: 0;
+}
+
+#pdf_page_zoom {
+	width: 160px;
+}
+
+#pdf_page {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	position: relative;
+}
+
+
+
+#pdf-editor select {
+	width: 170px;
+}
+
+#pdf_page .hidden {
+	display: none;
+}
+
+#pdf_page [hidden] {
+	display: none;
+}
+
+#pdf_page img {
+	margin: 0;
+	display: block;
+	max-width: none;
+}
+
+#pdf-editor #pdf_page .default_scale {
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+}
+.html_sequence_content .layout-element,
+#pdf_page .img.default_scale 
+{
+	visibility: hidden;
+}
+
+
+
+#pdf_page .flow_container .html_layer_wrapper  {
+	width: 100%;
+	height: 100%;
+}
+#pdf_page .flow_container .html_layer_wrapper .html_layer > div, 
+.draggingContainer > div {
+	color: transparent;
+	position: absolute;
+	line-height:1.3;
+	white-space:pre;
+}
+
+#pdf_page .flow_container .html_layer_wrapper .html_layer .highlight {
+	margin: -1px;
+	padding: 1px;
+	background-color: rgba(180, 0, 170, 0.2);
+	border-radius: 4px;
+}
+
+#pdf_page .flow_container .html_layer_wrapper .html_layer .highlight.begin {
+	border-radius: 4px 0px 0px 4px;
+}
+
+#pdf_page .flow_container .html_layer_wrapper .html_layer .highlight.end {
+	border-radius: 0px 4px 4px 0;
+}
+
+#pdf_page .flow_container .html_layer_wrapper .html_layer .highlight.middle {
+	border-radius: 0;
+}
+
+#pdf_page .flow_container .html_layer_wrapper .html_layer .highlight.selected {
+	background-color: rgba(0, 100, 0, 0.2);
+}
+
+
+
+.progress-striped #pdf_loading.bar,
+.pdf_upload_wrapper #pdf_upload_btn.btn.btn-primary {
+	background-color:  #2cabc1;
+	background-image: none;
+}
+
+.pdf_loading_title {
+	font-size: 18px;
+	color: #333;
+}
+/* imgAreaelect */
+.imgareaselect-border1, 
+.imgareaselect-border2, 
+.imgareaselect-border3, 
+.imgareaselect-border4 {
+	opacity: 1;
+}
+
+.imgareaselect-outer {
+	display: none !important;
+}
+
+.imgareaselect-selection {
+	background: rgba(0,0,255,0.3);
+}
+
+
+/*grid view*/
+#grid{
+	font-family: 'Arial';
+	font-size: 14px;
+	color: #333;
+}
+#grid,
+#imgWrapper{
+	top: 50px;
+	left: 50px;
+	position: absolute;
+}
+
+#grid .tr{
+	border-top: 1px solid #ccc;
+}
+#grid .td{
+	border-left: 1px solid #ccc;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+}
+#grid .td .circle{
+	width:3px;
+	height:3px;
+	border-radius:50% !important;
+	background-color: #666;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+
+}
+#grid .rowNumber{
+	position: absolute;
+	left: -25px;
+	top: -5px;
+}
+#grid .colNumber {
+	position: absolute;
+	top: -25px;
+	left: -5px;
+}
+
+

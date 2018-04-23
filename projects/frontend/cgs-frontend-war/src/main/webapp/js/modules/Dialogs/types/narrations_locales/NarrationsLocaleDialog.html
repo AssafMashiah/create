@@ -1,0 +1,17 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<table class="table">
+	<tr>
+		<th><input type="checkbox" id="check_all" /></th>
+		<th>((Language))</th>
+		<th>((Country))</th>
+		<th>((Locale))</th>
+	</tr>
+	{{#narrationsLocales}}
+		<tr>
+			<td><input type="checkbox" class="locale_selection" data-value="{{locale}}" /></td>
+			<td>{{language}}</td>
+			<td>{{country}}</td>
+			<td>{{locale}}</td>
+		</tr>
+	{{/narrationsLocales}}
+</table>

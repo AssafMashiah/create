@@ -1,0 +1,4 @@
+#############################################
+#  add the ar_IL locale to all publishers   #
+#############################################
+publishers.update({},{$push:{"locales":"ar_IL", "gradeLevels":{"locale":"ar_IL","value":[]},"subjectAreas":{"locale":"ar_IL","value": [] }}},{upsert: true, multi: true});

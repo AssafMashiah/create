@@ -1,0 +1,50 @@
+{
+     "nameType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+    },
+    "accountIdType": {
+        "type": "integer",
+        "minimum": 1
+    },
+    "refType": {
+        "type": "string"
+    },
+
+    "relatesToType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "_id": {
+                "type": "integer"
+            },
+            "type": {
+                "type": "string"
+            }
+        }
+    },
+    "accountType": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+            "_class": {
+                "type": "string",
+                "required": false
+            },
+              "name": {
+                "$ref": "#/nameType"
+            },
+            "accountId": {
+                "$ref": "#/accountIdType",
+                "required": false
+            },
+            "relatesTo": {
+                "$ref": "#/relatesToType",
+                "required": true
+            }
+
+        }
+    }
+
+}

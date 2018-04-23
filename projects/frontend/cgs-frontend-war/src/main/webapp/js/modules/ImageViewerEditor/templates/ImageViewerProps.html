@@ -1,0 +1,95 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper ImageViewer_editor props_editor">
+    <ul class="nav nav-tabs" id="imageViewerEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((props.tab.element.displayName.{{controller.elementType}}))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label block" >((Image:))</label>
+                <div class="controls">
+                    <div class="image-preview-crop-row">
+                        {{#isShowImagePreview}}
+                        <img rows="3" src="{{#server-path}}{{controller.record.data.image}}{{/server-path}}" id="field_image_Viewer" class="previewImage inline-block"/>
+                        {{/isShowImagePreview}}
+                        {{#isShowImageCropperButton}}
+                        <button id="button_image_editor" class="image-cropper-edit-button btn btn-small edit_element"><span class="base-icon icon-cog"></span></button>
+                        {{/isShowImageCropperButton}}
+                        {{^isShowImagePreview}}
+                        <div class="previewImage inline-block noImage"></div>
+                        {{/isShowImagePreview}}
+                    </div>
+                    <div class="image-order-upload-row">
+                        <button id="button_upload_image" class="btn btn-small">((...))</button>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="heightBox">
+                    <label class="control-label inline-block" >((Height)):</label>
+                    <div class="inline-block">
+                        {{#controller.record.data.image}}
+                        <span id="txtImgHeight" data-text="obj.imgHeight"/>(( px))
+                            {{/controller.record.data.image}}
+                            {{^controller.record.data.image}}
+                            <label id="txtImgHeight">(( 0px))</label>
+                            {{/controller.record.data.image}}
+                        </div>
+                    </div>
+                    <div class="widthBox">
+                        <label class="control-label inline-block" >((Width)):</label>
+                        <div class="inline-block">
+                            {{#controller.record.data.image}}
+                            <span id="txtImgWidth" data-text="obj.imgWidth" />(( px))
+                                {{/controller.record.data.image}}
+                                {{^controller.record.data.image}}
+                                <label id="txtImgWidth">(( 0px))</label>
+                                {{/controller.record.data.image}}
+                            </div>
+                        </div>
+                        <button id="ImageViewerAdvanced" class="btn btn-small image-viewer-advanced-button">((Advanced))</button>
+                    </div>
+                    {{^controller.record.data.isThinMode}}
+                        {{^controller.record.data.dontInputCopyrights}}
+                        <div class="control-group">
+                            <input id="chkImgCopyrights" type="checkbox" value="copyrights" data-checked="obj.showCopyrights">
+                            <label class="control-label inline-block" >((Copyrights))</label>
+                            {{#controller.record.data.showCopyrights}}
+                            <div class="controls">
+                                <input id="txtImgCopyrights" data-value="obj.copyrights" type="text" placeholder="((Copyrights))" />
+                            </div>
+                            {{/controller.record.data.showCopyrights}}
+                        </div>
+                        {{/controller.record.data.dontInputCopyrights}}
+                        {{^controller.record.data.dontInputCaption}}
+                        <div class="control-group">
+                            <input id="chkImgCaption" type="checkbox" value="caption" data-checked="obj.showCaption">
+                            <label class="control-label inline-block" >((Caption))</label>
+                            {{#controller.record.data.showCaption}}
+                            <div class="controls" >
+                                <input id="txtImgCaption" data-value="obj.caption" type="text" placeholder="((Caption))"/>
+                                <label class="control-label" >((Narration:))</label>
+                                <div class="controls">
+                                    <div id="captionNarrationUpload"></div>
+                                </div>
+                            </div>
+                            {{/controller.record.data.showCaption}}
+                        </div>
+                        {{/controller.record.data.dontInputCaption}}
+                        {{^controller.record.data.dontInputSound}}
+                        <div class="control-group">
+                            <input id="chkImgSound" type="checkbox" value="sound" data-checked="obj.showSound">
+                            <label class="control-label inline-block" >((Sound))</label>
+                            {{#controller.record.data.showSound}}
+                            <div class="controls" >
+                                <div id="ImageViewerSoundUpload"></div>
+                            </div>
+                            {{/controller.record.data.showSound}}
+                        </div>
+                        {{/controller.record.data.dontInputSound}}
+                    {{/controller.record.data.isThinMode}}
+                </div>
+            </div>
+        </div>

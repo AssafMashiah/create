@@ -1,0 +1,337 @@
+{
+    "cid": "1720d87c-2543-4e2f-8248-44ca8646a5eb",
+    "type": "lesson",
+    "version": "1.0.3",
+    "format": "NATIVE",
+    "data": {
+        "contentLocales": ["en_US"],
+        "pedagogicalLessonType": "Custom",
+        "customFields": [
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_general_identifier_catalog",
+                "name": "General catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "Universal Resource Identifier (URI)"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_general_identifier_entry",
+                "name": "General catalog entry",
+                "type": "text",
+                "value": {
+                    "text": "http://www.fee.foo"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_identifier_catalog",
+                "name": "MetaMetadata catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "T2KStore"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_identifier_entry",
+                "name": "MetaMetadata catalog entry",
+                "type": "text",
+                "value": {
+                    "text": "cat entry 2"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_role",
+                "name": "MetaMetadata contributor role",
+                "type": "text",
+                "value": {
+                    "text": "creator"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_title",
+                "name": "MetaMetadata contributor entity title",
+                "type": "text",
+                "value": {
+                    "text": "Ms."
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_name",
+                "name": "MetaMetadata contributor entity name",
+                "type": "text",
+                "value": {
+                    "text": "bob"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_familyName",
+                "name": "MetaMetadata contributor entity family name",
+                "type": "text",
+                "value": {
+                    "text": "fil"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_email",
+                "name": "MetaMetadata contributor entity family email",
+                "type": "text",
+                "value": {
+                    "text": "123"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_phone",
+                "name": "MetaMetadata contributor entity family phone #",
+                "type": "text",
+                "value": {
+                    "text": "222"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_date",
+                "name": "MetaMetadata contribute date",
+                "type": "date",
+                "value": {
+                    "date": "2014-12-08T00:00:00Z"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_date_time",
+                "name": "MetaMetadata contribute date time",
+                "type": "duration",
+                "value": {
+                    "duration": "P2H1M0S"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_contribute_date_description",
+                "name": "MetaMetadata contribute date description",
+                "type": "text",
+                "value": {
+                    "text": "my birhtday"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_metaMetadata_language",
+                "name": "MetaMetadata language",
+                "type": "text",
+                "value": {
+                    "text": "fr-FR"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_technical_location_",
+                "name": "Technical location",
+                "type": "text",
+                "value": {
+                    "text": "office"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_technical_requirement_orComposite_minimumVersion",
+                "name": "Technical requirement minimum version",
+                "type": "text",
+                "value": {
+                    "text": "2.3."
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_technical_requirement_orComposite_maximumVersion",
+                "name": "Technical requirement maximum version",
+                "type": "text",
+                "value": {
+                    "text": "11"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_technical_installationRemarks",
+                "name": "Technical installation remarks",
+                "type": "text",
+                "value": {
+                    "text": "first git"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_technical_otherPlatformRequirements",
+                "name": "Technical other platform requirements",
+                "type": "text",
+                "value": {
+                    "text": "asdasd"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_learningResourceType",
+                "name": "Educational learning resource type",
+                "type": "text",
+                "value": {
+                    "text": "experiment"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_interactivityLevel",
+                "name": "Educational interactivity level",
+                "type": "text",
+                "value": {
+                    "text": "very low"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_semanticDensity",
+                "name": "Educational semantic density",
+                "type": "text",
+                "value": {
+                    "text": "medium"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_intendedEndUserRole",
+                "name": "Educational indended end user",
+                "type": "text",
+                "value": {
+                    "text": "teacher"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_context",
+                "name": "Educational context",
+                "type": "text",
+                "value": {
+                    "text": "higher education"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_typicalAgeRange",
+                "name": "Educational typical age range",
+                "type": "text",
+                "value": {
+                    "text": "asd"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_difficulty",
+                "name": "Educational difficulty",
+                "type": "text",
+                "value": {
+                    "text": "medium"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_educational_description",
+                "name": "Educational description",
+                "type": "text",
+                "value": {
+                    "text": "asd"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_rights_cost",
+                "name": "Rights cost",
+                "type": "text",
+                "value": {
+                    "text": "yes"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_rights_copyrightAndOtherRestrictions",
+                "name": "Rights copyright and other restrictions",
+                "type": "text",
+                "value": {
+                    "text": "yes"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_rights_description",
+                "name": "Rights description",
+                "type": "text",
+                "value": {
+                    "text": "rights desc"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_relation_kind",
+                "name": "Relation kind",
+                "type": "text",
+                "value": {
+                    "text": "isrequiredby"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_relation_resource_identifier_catalog",
+                "name": "Relation resource catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "isrequiredby-cat"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_relation_resource_identifier_entry",
+                "name": "Relation resource entry identifier",
+                "type": "text",
+                "value": {
+                    "text": "entry id #4"
+                }
+            },
+            {
+                "cid": "t2k_lesson_scorm2004_v4_lom_relation_resource_description",
+                "name": "Relation resource description",
+                "type": "text",
+                "value": {
+                    "text": "relation des"
+                }
+            }
+        ],
+        "standardPackages": [],
+        "keywords": ["TosterOven", "PizzaPeppers"],
+        "learningObjects": [
+            {
+                "cid": "00df9b93-99a9-4dc5-ab37-7e0716d5c096",
+                "typicalLearningTime": "PT0H33M0S",
+                "title": "New Learning Object",
+                "type": "lo",
+                "standards": [],
+                "pages": [
+                    {
+                        "cid": "cba60144-f321-4715-9bd3-83bb1943a524",
+                        "type": "page",
+                        "overlayElements": [
+                            {
+                                "cid": "8d5f44aa-5835-4e3b-85b8-146951561d46",
+                                "presentation": {
+                                    "displayType": "EMBEDDED"
+                                },
+                                "content": {
+                                    "type": "DL_SEQUENCE",
+                                    "data": {
+                                        "cid": "054766e5-b396-41f7-b8b1-fe6c26d845eb",
+                                        "version": "1.0.3",
+                                        "type": "sequence",
+                                        "title": "New Sequence"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "header": {
+            "last-modified": {
+                "$date": "2014-12-02T09:32:38.546Z"
+            }
+        },
+        "schema": "course_v4",
+        "customizationPackResourceBaseDir": "customizationPack/en_US/1.8",
+        "title": "Main Lesson Name",
+        "description": "description in english",
+        "assetRootHRef": ""
+    },
+    "metadata": {
+        "lastModified": 1417512770281,
+        "created": 1417512770281
+    },
+    "original": {
+        "courseCid": "a5756721-bc1c-400e-9d7a-972d4ac66f7a",
+        "lessonCid": "1720d87c-2543-4e2f-8248-44ca8646a5eb",
+        "version": "1.0.3"
+    }
+}

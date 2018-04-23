@@ -1,0 +1,4 @@
+####################################################################
+#  add enable customization standards from lesson to publisher     #
+####################################################################
+publishers.update({},{$set:{"customization.enableCourseLevelsCustomizationForScorm": false}},{upsert: false, multi: true});

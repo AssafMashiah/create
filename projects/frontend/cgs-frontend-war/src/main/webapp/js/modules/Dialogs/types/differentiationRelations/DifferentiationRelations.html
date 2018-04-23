@@ -1,0 +1,44 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<table class="relations table table-bordered">
+	<thead>
+		<th>((quiz.relation_dialog.differentiation_levels))</th>
+		<th>((quiz.relation_dialog.score_range)) ((quiz.relation_dialog.differentiation_levels.table.scoreRange.percent))</th>
+		<th>((quiz.relation_dialog.feedback))</th>
+		{{#showBadges}}
+			<th>((quiz.relation_dialog.x_of_badges))</th>
+		{{/showBadges}}
+	</thead>
+	<tbody>
+	{{#edited_critirias}}
+	<tr class="row-table" id="diff_level_{{targetDiffLevelId.id}}">
+		<td>{{targetDiffLevelId.name}}</td>
+		<td>
+            {{#isLast}}
+            <span class="score-range-span">((quiz.relation_dialog.from)):</span>
+            <span class="score-range-span"><span min="0" max="{{maximumScore}}" class="score-input-x">{{fromScore}}</span></span>
+            <span class="score-range-span">((quiz.relation_dialog.up_to_end)):</span>
+            <span class="score-range-span"><span class="score-input-y">{{toScoreNotEqual}}</span></span> 
+            {{/isLast}}
+            {{^isLast}}
+            <span class="score-range-span">((quiz.relation_dialog.from)):</span>
+            <span class="score-range-span"><span min="0" max="{{maximumScore}}" class="score-input-x">{{fromScore}}</span></span>
+            <span class="score-range-span">((quiz.relation_dialog.up_to)):</span>
+            <span class="score-range-span"><input type="number" pattern="[1-{{maximumScore}}]+" min="0" max="{{maximumScore}}" value="{{toScoreNotEqual}}" class="score-input-y" /></span>
+            {{/isLast}}
+        </td>
+		<td><textarea class="feedback">{{feedback}}</textarea></td>
+		{{#showBadges}}
+			<td>
+				<select data-selected="{{score}}" class="badges">
+					{{#badges}}
+						<option value="{{.}}">(({{.}}))</option>
+					{{/badges}}
+				</select>
+			</td>
+		{{/showBadges}}
+	</tr>
+	{{/edited_critirias}}
+	<tbody>
+	<tfoot>
+	</tfoot>
+</table>

@@ -1,0 +1,4 @@
+#############################################
+#  add the ar_IL locale to all publishers   #
+#############################################
+publishers.update({},{$set:{"elementsLimit.maxEmbeddedInteractionsOnPage": NumberInt(3)}},{upsert: false, multi: true});

@@ -1,0 +1,25 @@
+defaultTasks 'clean', 'build'
+
+
+apply from: '../../../cgs-common.gradle'
+
+
+
+if (hasProperty('findBugs')) {
+    apply plugin: 'findbugs'
+
+    findbugs {
+        ignoreFailures = true
+    }
+}
+
+dependencies {
+
+	compile project(':projects:backend:cgs-domain-model')
+    compile project(':projects:backend:cgs-shared')
+
+    compile t2klibraries.gcrCommonClient
+
+    testCompile project(':projects:backend:cgs-backend-shared-test')
+    testCompile project(':projects:backend:cgs-web')
+}

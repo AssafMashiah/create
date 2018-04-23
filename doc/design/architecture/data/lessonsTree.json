@@ -1,0 +1,104 @@
+[ {
+  "root" : {
+    "cid" : "d2e91db0-78de-40b5-922e-cef7d5533597",
+    "title" : "Nouveau cours",
+    "type" : "tocItem",
+    "children" : [ {
+      "cid" : "70c6f7f1-2306-4bf3-ba07-23b2ae8d50a2",
+      "title" : "Nouveau assessment",
+      "type" : "assessment"
+    }, {
+      "cid" : "0b86f4df-77fe-46af-9bf1-aa1b9b62c087",
+      "title" : "Nouveau Leçon",
+      "type" : "lesson"
+    }, {
+      "cid" : "58bcb48c-3da9-4489-82be-19dfd2ecfc33",
+      "title" : "Nouveau Leçon",
+      "type" : "lesson"
+    } ]
+  }
+}, {
+  "root" : {
+    "cid" : "ad8f00f3-f1c0-4a85-a62e-f532c5887c92",
+    "title" : "Hidden lessons sequence tree",
+    "type" : "tocItem",
+    "children" : [ {
+      "cid" : "1edc60b7-697a-440a-ac84-f7b02eca6501",
+      "title" : "TOC 1",
+      "type" : "tocItem",
+      "children" : [ {
+        "cid" : "d13c4547-6946-4c64-a55a-a017a494afa7",
+        "title" : "TOC 1.1",
+        "type" : "tocItem",
+        "children" : [ {
+          "cid" : "2d462e5e-f546-4ec0-99e3-9f09689ad6d3",
+          "title" : "TOC 1.1.1",
+          "type" : "tocItem"
+        } ]
+      }, {
+        "cid" : "60d5473e-a036-4918-b368-111a36f78e83",
+        "title" : "TOC 1.2 - with hidden",
+        "type" : "tocItem",
+        "children" : [ {
+          "cid" : "c6d7a0c4-8602-42b1-8fac-4a9c4796b46c",
+          "title" : "TOC 1.2 Assessment",
+          "type" : "assessment"
+        }, {
+          "cid" : "e23253ba-a212-4819-8f53-be90557feb03",
+          "title" : "TOC 1.2 - Lesson",
+          "type" : "lesson"
+        } ]
+      } ]
+    }, {
+      "cid" : "3a24bfd7-5986-47ae-baf3-62fe0d5e32e8",
+      "title" : "TOC 2 - 1 not hidden lesson",
+      "type" : "tocItem",
+      "children" : [ {
+        "cid" : "b089da19-97be-4ffc-bbcc-8f04d8f193bf",
+        "title" : "TOC 2.1",
+        "type" : "tocItem"
+      }, {
+        "cid" : "47e2c876-31a5-49cb-96a0-ccfacd1ae8af",
+        "title" : "TOC 2 Lesson",
+        "type" : "lesson"
+      } ]
+    }, {
+      "cid" : "8a6ed6ac-9f57-4079-8c2c-99c864519339",
+      "title" : "TOC 3 - 1 hidden",
+      "type" : "tocItem",
+      "children" : [ {
+        "cid" : "5c61d3df-ae60-48b3-93ee-3c8691e860fd",
+        "title" : "TOC 3.1",
+        "type" : "tocItem"
+      }, {
+        "cid" : "12ff8939-7020-46a5-81ff-223a1317dfa6",
+        "title" : "TOC 3 lesson - hidden",
+        "type" : "lesson"
+      } ]
+    }, {
+      "cid" : "0ed9e432-9781-4149-af45-c707f93c5d10",
+      "title" : "Course Lesson",
+      "type" : "lesson"
+    }, {
+      "cid" : "0c087514-68a0-4a04-acb0-4713f361ba62",
+      "title" : "Course Lesson - hidden no los",
+      "type" : "lesson"
+    }, {
+      "cid" : "a583d330-2b46-48a5-a0c1-33dda507679e",
+      "title" : "Course Lesson - hidden + lo",
+      "type" : "lesson"
+    }, {
+      "cid" : "fb8a36c7-dd9f-494f-a304-c5f966f89226",
+      "title" : "Course Lesson - hidden + lo + 1 seq",
+      "type" : "lesson"
+    }, {
+      "cid" : "5bfc4985-a73d-439a-a614-3b0adbe9850a",
+      "title" : "Course Lesson - hidden + lo + 3 seq",
+      "type" : "lesson"
+    }, {
+      "cid" : "a4ae5fb0-74a4-4c57-906c-1fa7b37e8471",
+      "title" : "Course Assessment",
+      "type" : "assessment"
+    } ]
+  }
+} ]

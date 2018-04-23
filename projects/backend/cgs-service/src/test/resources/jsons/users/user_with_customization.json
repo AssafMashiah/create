@@ -1,0 +1,9 @@
+{
+	"firstName": "Roni",
+	"lastName": "Darwish",
+	"email": "fsd",
+	"username": "rd1",
+	"password": "password1",
+	"relatesTo": {"id":1,"type":"PUBLISHER"},
+    "customization" : {"cgsHintsShowMode":"showAll"}
+}

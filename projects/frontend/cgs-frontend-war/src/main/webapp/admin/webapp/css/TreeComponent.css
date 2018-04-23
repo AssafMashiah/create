@@ -1,0 +1,198 @@
+.screen-content > .row-fluid,
+#tree_base, 
+#props_base {
+	height: 100%;
+}
+
+#tree_base, 
+#props_base {
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+#tree_base{
+	/*background: url("../media/tex_tree.png");*/
+}
+
+#tree_list {
+	padding-left: 20px;
+}
+
+
+#tree_list .node-tree{
+	margin: 0 0 0 14px;
+}
+
+#tree_list .icon-caret-down,
+#tree_list .icon-caret-right{
+	color: #B0B0B0;
+}
+
+#tree_list .node-index{
+	font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+	font-size: 13px;
+	color: #999999;
+}
+
+#tree_list .node-label{
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 13px;
+	color: #333;
+}
+
+#tree_list > .entry {
+
+}
+
+#tree_list > .entry > .node-collapse .node-label,
+#tree_list > .entry > .node-collapse:hover .node-label,
+#tree_list > .entry > .node-collapse.active .node-label {
+	font-weight: bold;
+	background-color: transparent;
+	padding:2px;
+	border: solid 1px transparent;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#tree_list .node-collapse {
+	display: inline-block;
+	width: 100%;
+}
+
+#tree_list .node-collapse:hover {
+	background-color: transparent;
+}
+
+#tree_list .node-collapse .node-label{
+	padding:2px 4px;
+	display: inline-block;
+	line-height: 20px;
+	margin: 3px 0 0 2px;
+	height:20px;
+	width: 100%;
+	position: absolute;
+}
+
+#tree_list .node-collapse:hover .node-label,
+#tree_list .node-collapse.active .node-label{
+	background-color: rgba(191, 225, 241,.5);
+}
+
+#tree_list .node-collapse, 
+#tree_list .node-collapse * {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: rgb(82, 82, 82);
+}
+#tree_list .dloIcon{
+	background-color: red;
+	color: white;
+}
+
+.css-treeview {
+    width: auto;
+    height: 400px;
+
+}
+
+.css-treeview .tooltip {
+    max-width: 180px;
+    margin-left: 50px;
+}
+
+.css-treeview .tooltip .tooltip-inner {
+    white-space: pre-wrap;
+    padding: 5px;
+}
+
+.css-treeview ul,
+.css-treeview li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.node-label-root {
+	font-weight: bold;
+}
+
+.node-label {
+	margin: 0;
+}
+.css-treeview input {
+    position: absolute;
+    opacity: 0;
+}
+
+.css-treeview input.toggle-box {
+    z-index: 10000;
+}
+
+.css-treeview input + label + ul {
+
+}
+
+.css-treeview input ~ ul {
+    display: none;
+}
+
+.css-treeview label,
+.css-treeview label::before {
+    cursor: pointer;
+}
+
+.css-treeview input:disabled + label {
+    cursor: default;
+    opacity: .6;
+}
+
+.css-treeview input.toggle-box:checked:not(:disabled) ~ ul {
+    display: block;
+}
+.css-treeview .node-label.selected {
+    color: #C4399C !important;
+}
+
+.css-treeview label,
+.css-treeview label::before {
+    background: url("../media/icons.png") no-repeat;
+}
+
+.css-treeview #tree_list label.node-label,
+.css-treeview #tree_list label.node-label::before {
+    background: none;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before {
+    display: inline-block;
+    min-height: 16px;
+    line-height: 16px;
+	vertical-align : middle;
+}
+
+.css-treeview label {
+    background-position: 0;
+}
+
+.css-treeview label::before {
+    content: "";
+    width: 16px;
+    margin: 0 0px 0 0;
+    vertical-align: middle;
+    background-position: 0 -32px;
+}
+
+.css-treeview .root_node > label::before {
+    background-position: 0 -16px;
+}
+
+.css-treeview li ul li label {
+    background-position: 0 -32px;
+}

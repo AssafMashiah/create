@@ -1,0 +1,183 @@
+{
+  "cid": "eadfa012-d51f-43c7-9fb8-0cb7841b8da7",
+  "header": {
+    "last-modified": {
+      "$date": "2015-11-18T15:37:29.762Z"
+    }
+  },
+  "schema": "course_v5",
+  "pedagogicalLessonType": "Custom",
+  "contentLocales": [
+    "en_US"
+  ],
+  "standards": [],
+  "standardPackages": [],
+  "resources": [
+    {
+      "href": "media/37/fc/37fc42439890978d316b6adaf67388bd51591e56.png",
+      "type": "media",
+      "resId": "resource_1"
+    },
+    {
+      "type": "sequence",
+      "href": "sequences/59/fb/59fb735ccc26e7ca2d635faf2268873147c3529c.json",
+      "resId": "resource_2"
+    },
+    {
+      "href": "media/00/58/00586e24c3cc0f15c9c55cf1ea22a267cf54ff2e.png",
+      "type": "media",
+      "resId": "resource_3"
+    },
+    {
+      "href": "media/b6/2e/b62e6160fdbf01ba316054ca2b162ec29a39e3c9.png",
+      "type": "media",
+      "resId": "resource_4"
+    },
+    {
+      "href": "media/ea/5f/ea5fd2470205e4619621ffc5ea38947a53c64a66.png",
+      "type": "media",
+      "resId": "resource_5"
+    },
+    {
+      "href": "media/2a/60/2a60eacb7364b525ce7d8293886163142d4af2e8.jpg",
+      "type": "media",
+      "resId": "resource_6"
+    },
+    {
+      "type": "sequence",
+      "href": "sequences/75/5b/755b49d969c29acd426a7df08a03f623ce49460c.json",
+      "resId": "resource_7"
+    },
+    {
+      "type": "sequence",
+      "href": "sequences/0f/2a/0f2a7b153b24803070d5d85e089929874ef6576b.json",
+      "resId": "resource_8"
+    },
+    {
+      "type": "sequence",
+      "href": "sequences/cc/56/cc565e21e3f6b2f4c8325aff91feb05efd9d7066.json",
+      "resId": "resource_9"
+    }
+  ],
+  "title": "New Lesson?",
+  "type": "lesson",
+  "customFields": [],
+  "format": "NATIVE",
+  "learningObjects": [
+    {
+      "cid": "8cfc9e82-7ad6-4615-8e1f-6ee9cc5f2679",
+      "title": "New Learning Object ",
+      "type": "lo",
+      "standards": [],
+      "sequences": [
+        {
+          "cid": "816127b3-b9ad-443c-8fdb-7a1464569ee5",
+          "mimeType": "DL",
+          "tasks": [
+            {
+              "cid": "8b1a1163-ee3c-44ed-bb59-5f840a140deb",
+              "type": "task",
+              "title": "New Question Only",
+              "allowedAttempts": 0,
+              "checkingType": "manual",
+              "standards": []
+            }
+          ],
+          "contentRef": "resource_2",
+          "resourceRefId": [
+            "resource_1",
+            "resource_2",
+            "resource_3",
+            "resource_4",
+            "resource_5",
+            "resource_6"
+          ],
+          "standards": [],
+          "title": "New Sequence",
+          "type": "sequence"
+        },
+        {
+          "cid": "f27ae87a-a7a7-4805-87cb-62773fe96269",
+          "levels": [
+            {
+              "levelId": 1,
+              "sequence": {
+                "cid": "27c65b23-b4d3-4ff2-bebc-6be9c3953bee",
+                "mimeType": "DL",
+                "tasks": [
+                  {
+                    "cid": "e565b17e-bb7b-4069-90c8-b893e64ce663",
+                    "type": "task",
+                    "title": "New Multiple Choice",
+                    "allowedAttempts": 2,
+                    "checkingType": "auto",
+                    "standards": []
+                  }
+                ],
+                "contentRef": "resource_7",
+                "resourceRefId": [
+                  "resource_7"
+                ],
+                "standards": [],
+                "title": "first",
+                "type": "sequence"
+              }
+            },
+            {
+              "levelId": 2,
+              "sequence": {
+                "cid": "691d7add-333d-44dc-a942-3e57495baafc",
+                "mimeType": "DL",
+                "tasks": [
+                  {
+                    "cid": "cd8f4b62-7f1b-488a-9f09-962e4948cf8a",
+                    "type": "task",
+                    "title": "New Free Writing",
+                    "allowedAttempts": 0,
+                    "checkingType": "manual",
+                    "standards": []
+                  }
+                ],
+                "contentRef": "resource_8",
+                "resourceRefId": [
+                  "resource_8"
+                ],
+                "standards": [],
+                "title": "second",
+                "type": "sequence"
+              }
+            },
+            {
+              "levelId": 3,
+              "sequence": {
+                "cid": "5ed30367-5de5-46ee-b138-00d26bf513be",
+                "mimeType": "DL",
+                "tasks": [
+                  {
+                    "cid": "3ac82658-107c-4183-8cf3-bca28b9b8962",
+                    "type": "task",
+                    "title": "New mtq matching editor",
+                    "allowedAttempts": 2,
+                    "checkingType": "auto",
+                    "standards": []
+                  }
+                ],
+                "contentRef": "resource_9",
+                "resourceRefId": [
+                  "resource_9"
+                ],
+                "standards": [],
+                "title": "third",
+                "type": "sequence"
+              }
+            }
+          ],
+          "title": "New Differentiated Sequence",
+          "type": "differentiatedSequenceParent"
+        }
+      ]
+    }
+  ]
+}
+
+

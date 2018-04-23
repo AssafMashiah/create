@@ -1,0 +1,53 @@
+{
+    "_id": "53ea0b83dbe55ggg5e50bd45",
+    "cgsData": {
+        "courseId": "e1ff172f-20d1-4d16-a6dd-3bb75f10c152",
+        "publisherId": 1
+    },
+    "contentData": {
+        "cid": "ab56c004-5308-401d-9888-545282b103ca",
+        "header": {
+            "last-modified": {
+                "$date": "2014-08-12T12:42:50.272Z"
+            }
+        },
+        "schema": "course_v4",
+        "pedagogicalLessonType": "Custom",
+        "contentLocales": [
+            "en_US"
+        ],
+        "standards": [],
+        "standardPackages": [],
+        "resources": [
+            {
+                "type": "sequence",
+                "href": "sequences/80322a66-393d-43a6-8106-4c24fd052586",
+                "resId": "resource_1"
+            }
+        ],
+        "title": "New Lesson",
+        "type": "lesson",
+        "learningObjects": [
+            {
+                "cid": "e74f9435-4680-4438-966d-dcbbc1fd370d",
+                "title": "New Learning Object",
+                "type": "lo",
+                "standards": [],
+                "sequences": [
+                    {
+                        "cid": "80322a66-393d-43a6-8106-4c24fd052586",
+                        "mimeType": "DL",
+                        "tasks": [],
+                        "contentRef": "resource_1",
+                        "resourceRefId": [
+                            "resource_1"
+                        ],
+                        "standards": [],
+                        "title": "Sequence 4",
+                        "type": "sequence"
+                    }
+                ]
+            }
+        ]
+    }
+}

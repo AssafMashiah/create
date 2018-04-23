@@ -1,0 +1,7 @@
+<!-- {{constructor.type}} -->
+<td><img src="{{#obj.thumbnail}}{{{obj.thumbnail}}}{{/obj.thumbnail}}"/></td>
+<td>{{obj.name}}</td>
+<td>
+	{{obj.version}}
+    {{#obj.updateAvailable}}<button class="btn btn-small update_applet" {{#isDisabled}}disabled{{/isDisabled}}>((Update))</button>{{/obj.updateAvailable}}
+</td>

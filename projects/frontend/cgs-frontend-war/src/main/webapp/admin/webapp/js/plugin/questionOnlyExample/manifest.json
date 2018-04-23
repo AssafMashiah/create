@@ -1,0 +1,12 @@
+{
+    "menu_button" :{
+        "enable_icon":"images/questionmarkOn.png",
+        "disable_icon":"images/questionmarkOff.png",
+        "text":"test one"
+    },
+    "name" : "question only plugin",
+    "indexJs":"main.js",
+    "pluginParent":"SequenceEditor",
+    "version":"1.0.0",
+    "api_version":"1.0.0"
+}

@@ -1,0 +1,11 @@
+<sequence type="{{sequenceType}}" id="{{id}}">
+
+<!-- 	<title> -->
+<!-- 		{{title}} -->
+<!-- 	</title> -->
+	
+	<htmlContent {{#image}}bg="{{image}}"{{/image}}>
+		{{{html}}}
+	</htmlContent>
+	
+</sequence>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Conversion remoteData/Repo</title>
+	<script src="js/libs/lodash/lodash.js"></script>
+	<script src="js/libs/jquery/jquery.js"></script>
+	<script src="js/libs/jsonpath/jsonpath.js"></script>
+	<script>
+		window.define = function(foo, bar) {
+			window.conversionUtil = bar(_, $);
+		}
+	</script>
+	<script src="js/common/conversionUtil.js"></script>
+	<style type="text/css">
+		h3,
+		legend {
+			padding: 0;
+			text-align: center;
+			margin: 0;
+			color: green;
+			font-size:10px;
+			text-transform:uppercase;
+		}
+		button{
+			font: bold 18px Arial, serif;
+			cursor: pointer;
+			background-color: green;
+			border-radius: 10px;
+			box-shadow:inset 0px 0px 3px 3px white;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			margin:0;
+		}
+		.show{
+			border-left:solid 1px green;
+			border-top:solid 1px green; 
+			width:48%;
+			padding:2px;
+			float: left;
+			word-wrap:break-word;
+			height:100%;
+		}
+		.row{
+			float:left;
+			width:100%;
+		}
+		fieldset.show{
+			width: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+		<fieldset class="show"><legend>dataRemote to Repo</legend>
+		  	<button id="dataRemoteToRepo">Go</button>
+			<select name="dataRemoteToRepoSelect" id="dataRemoteToRepoSelect"> 
+				<option value="remote.json">remote.json</option>
+			</select>
+		</fieldset>
+		<fieldset class="show"><legend>Repo to dataRemote</legend>
+		  	<button id="RepoToDataRemote">Go</button>
+			<select name="RepoToDataRemoteSelect" id="RepoToDataRemoteSelect"> 
+				<option value="repo.json">repo.json</option>
+				<!-- <option value="test_course.json">test_course.json</option> -->
+			</select>
+		</fieldset>
+	</div>
+	<br>
+	<div class="show"><h3>Loded</h3></div><div class="show"><h3>Converted</h3></div>
+	<div id="Loaded" class="show"></div>
+	<div id="Converted" class="show"></div>
+	<script>
+		function loadFile(url){		
+			var tmpData,
+				tmpPath = 'js/test/validationData/'; // 'js/test/validationData/' 'data/'
+
+			jQuery.ajax({
+				url: tmpPath + url,
+				dataType: "json",
+				async: false,
+				success: function(data) {
+					tmpData = data;
+				},
+				error: function(jqXhr, textStatus, error) {
+	            	throw new Error("ERROR: \n" + textStatus + ",\n " + error);
+	        	}
+			});
+	        return tmpData;
+		}
+
+		$('#dataRemoteToRepo').click(function(event) {
+			var objectData = loadFile($('select#dataRemoteToRepoSelect option:selected').val());
+			$('#Converted').html( JSON.stringify(conversionUtil.dataRemoteToRepo(objectData)) );
+			$('#Loaded').html( JSON.stringify(objectData) );
+
+		});
+
+		$('#RepoToDataRemote').click(function(event) {
+			var objectData = loadFile($('select#RepoToDataRemoteSelect option:selected').val());
+			$('#Converted').html( JSON.stringify(conversionUtil.repoToDataRemote(objectData)) );
+			$('#Loaded').html( JSON.stringify(objectData) );
+		});
+
+	</script>
+</body>
+</html>

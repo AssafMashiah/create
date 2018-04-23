@@ -1,0 +1,14 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div class="form">
+	<section class="service-selection-container">
+		<label>((Service type)):</label>
+		<select id="service-selector">
+			<option>((Select from List))</option>
+			{{#providers}}
+				<option value="{{id}}">{{name}}</option>
+			{{/providers}}
+		</select>
+	</section>
+	<section class="generated-form">
+	</section>
+</div>

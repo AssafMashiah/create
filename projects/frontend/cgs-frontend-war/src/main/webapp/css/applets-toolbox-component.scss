@@ -1,0 +1,41 @@
+#applets-toolbox {
+  margin: 40px 0;
+
+  .toolbox-title {
+    &__subtitle {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      // justify-content: center;
+    }
+
+    &__description {
+      flex: 1 1 0;
+    }
+  }
+
+  thead {
+    background-color: #eee;
+  }
+
+  .toolbox-delete-cell {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .toolbox-row__delete {
+    padding: 0;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+
+    i {
+      font-style: normal;
+      position: relative;
+      display: inline;
+      font-size: 2em;
+      line-height: 30px;
+      vertical-align: initial;
+    }
+  }
+}

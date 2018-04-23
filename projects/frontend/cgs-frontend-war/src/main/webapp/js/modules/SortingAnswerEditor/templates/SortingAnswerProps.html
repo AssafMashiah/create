@@ -1,0 +1,57 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper sortingAnswer_editor props_editor">
+    <ul class="nav nav-tabs" id="sortingAnswerEditorTabs">
+       <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_interaction_type">((mtq.answer.props.interaction)):</label>
+                <select id="field_interaction_type" data-value="obj.interaction_type" {{#isOneToMany}}disabled cantBeEnabled="true"{{/isOneToMany}}>
+                    <option selected value="drag_and_drop">((Drag and Drop))</option>
+                    <option value="linking">((Linking))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_matching_mode">((mtq.answer.props.mode)):</label>
+                <select id="field_matching_mode" data-value="obj.mtqMode">
+                    <option selected value="one_to_one">((mtq.answer.props.singleUse))</option>
+                    <option value="one_to_many">((mtq.answer.props.multiUse))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_definitionType">((Definitions Type)):</label>
+                <select id="field_definitionType" data-value="obj.definitionType">
+                    <option value="textViewer">((Text))</option>
+                    <option value="imageViewer">((Image))</option>
+                    <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_answerType">((Answer Type)):</label>
+                <select id="field_answerType" data-value="obj.answerType">
+                    <option value="textViewer">((Text))</option>
+                    <option value="imageViewer">((Image))</option>
+                    <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.random" id="field_random" >
+                <label class="control-label" for="field_random">((Randomize Definitions))</label>
+            </div>
+             <div class="control-group">
+                <input type="checkbox" data-checked="obj.placeHolder" id="field_placeholder" >
+                <label class="control-label" for="field_placeholder">((Show Placeholders))</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.useBank" id="field_useBank"  {{#isOneToMany}}disabled cantBeEnabled="true"{{/isOneToMany}}>
+                <label class="control-label" for="field_useBank">((use Bank))</label>
+                {{#isOneToMany}}
+                <div>((The same user-defined answers appear in the Bank. Bank items are reusable))</div>
+                {{/isOneToMany}}
+            </div>
+        </div>    
+    </div>
+</div>

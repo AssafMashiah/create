@@ -1,0 +1,95 @@
+.MCAnswerEditor {
+    min-width: 750px;
+    padding: 5px;
+}
+
+.mcAnswer_content {
+    display:inline-block;
+}
+.mcAnswer_content > .element_preview_wrapper.view_mode_normal {
+    padding-right: 70px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* option	                                                                                                 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.mcAnswer_content .OptionEditor {
+    cursor: pointer;
+    background: #276CC7;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.mcAnswer_content .OptionEditor > .option_wrapper {
+    width: 100%;
+    height: 100%;
+}
+.mcAnswer_content .OptionEditor > .option_wrapper .option_content .element_preview_wrapper {
+    margin-top: 0 !important;
+}
+.mcAnswer_content .OptionEditor > .option_wrapper .option_content {
+    border: 1px solid white;
+    background: rgb(247, 247, 247);
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 3px;
+    width: calc(100% - 30px);
+}
+
+.mcAnswer_content .OptionEditor > .option_wrapper iframe,
+.mcAnswer_content .OptionEditor > .option_wrapper .textViewer-placeholder {
+    border: 0 none;
+}
+
+.mcAnswer_content .OptionEditor > .option_wrapper .option_content > .element_preview_wrapper {
+    margin: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* option_icon		                                                                                                 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ltr .option_icon {
+    float: left;
+}
+
+.rtl .option_icon {
+    float: right;
+}
+
+.mcAnswer_content .OptionEditor .option_icon{
+    font-family: 't2k-icons';
+    margin: 4px;
+    color: #9DB8D0;
+    padding-left: 1px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.mcAnswer_content .OptionEditor.selected #unSelect,
+.mcAnswer_content .OptionEditor #select{
+	display:none;
+}
+
+.mcAnswer_content .OptionEditor.selected #select{
+	display:inline;
+}
+
+.mcAnswer_content .OptionEditor.selected .option_icon {
+	color: #FFFFFF;
+}
+
+
+.mcAnswer_content .MCAnswerEditor .addAnswers {
+    margin-top: 10px;
+}
+
+
+.small_stage_mode.mcAnswer_content > .element_preview_wrapper:not(:last-of-type) {
+   margin-bottom:10px;
+}

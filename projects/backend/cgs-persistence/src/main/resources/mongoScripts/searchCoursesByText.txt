@@ -1,0 +1,99 @@
+var publisherId = %d;
+var searchTerm = '%s';
+
+var re = new RegExp(searchTerm, 'ig');
+var cquery = {'contentData.title':re};
+var lquery = {'contentData.title':re};
+var aquery = {'contentData.title':re};
+var lfieds = {'contentData.title': 1, 'contentData.format': 1, 'contentData.cid': 1, 'contentData.type': 1};
+
+var courses = db.courses.find({'cgsData.publisherId': publisherId}, {'contentData.toc': 1, 'contentData.title': 1, 'contentData.courseId': 1}).limit(5000);
+
+var matchedC = [];
+var processCourse = function (c) {
+	var matched = !!c.contentData.title.match(re) ;
+	c.contentData.matched = matched;
+	var included = matched;
+	var flat = flatten(c.contentData.toc);
+	if (flat.lesson.length) {
+		lquery = {};
+		if (!matched) lquery['contentData.title'] = re;
+		lquery['contentData.cid'] = {'$in':flat.lesson};
+		var lessons = db.lessons.find(lquery, lfieds);
+		var lc = lessons.count();
+		if (lc) {
+			included = true;
+			lessons.forEach(function (i) {
+				Object.extend(flat.map[i.contentData.cid], i.contentData);
+				flat.map[i.contentData.cid].matched = !!i.contentData.title.match(re) || false;
+			})
+		}
+	}
+	if (flat.assessment.length) {
+		aquery = {};
+		if (!matched) aquery['contentData.title'] = re;
+		aquery['contentData.cid'] = {'$in':flat.assessment};
+		var assessments = db.assessments.find(aquery, lfieds);
+		var lc = assessments.count();
+		if (lc) {
+			included = true;
+			assessments.forEach(function (i) {
+				Object.extend(flat.map[i.contentData.cid], i.contentData);
+				flat.map[i.contentData.cid].matched = !!i.contentData.title.match(re) || false;
+
+			})
+		}
+	}
+	if (!matched) {
+		removeUnmatched(c.contentData.toc);
+	}
+	if (included && (c.contentData.toc.tocItems.length || c.contentData.toc.tocItemRefs.length)) {
+		matchedC.push(c.contentData);
+	}
+}
+
+
+function removeUnmatched(toc) {
+	for (var i = 0; i < toc.tocItemRefs.length; i++) {
+		if (!toc.tocItemRefs[i].matched) {
+			toc.tocItemRefs.splice(i, 1)
+			i--;
+		}
+	}
+	var cm = false;
+	for (var ti = 0; ti < toc.tocItems.length; ti++) {
+		var toci = toc.tocItems[ti];
+		var cmatched = false;
+		if (!toci.matched) {
+			cmatched = removeUnmatched(toci);
+		}
+		cm = cm || cmatched;
+		if ((!toci.matched && !cmatched) || (!toci.tocItemRefs.length && !toci.tocItems.length)) {
+			toc.tocItems.splice(ti, 1);
+			ti--;
+		}
+	}
+	return toc.tocItemRefs.length || toc.tocItems.length || cm;
+}
+
+function flatten(toc) {
+	var r = {lesson:[], assessment:[], map: {}};
+	delete toc.type;
+	delete toc.overview;
+	delete toc.keywords;
+	toc.tocItemRefs.forEach(function (ti) {
+		r[ti.type].push(ti.cid);
+		r.map[ti.cid] = ti;
+	})
+	if (toc.title) toc.matched = !!toc.title.match(re) || false;
+	toc.tocItems.forEach(function (t) {
+		var ft = flatten(t);
+	    r.lesson = r.lesson.concat(ft.lesson);
+		r.assessment = r.assessment.concat(ft.assessment);
+		Object.extend(r.map, ft.map);
+	});
+	return r;
+}
+
+courses.forEach(processCourse);
+return matchedC;

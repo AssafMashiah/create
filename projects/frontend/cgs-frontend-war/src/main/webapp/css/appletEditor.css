@@ -1,0 +1,15 @@
+.AppletWrapperEditor img{
+	max-width: 100px;
+	border: 1px solid transparent;
+}
+.AppletWrapperEditor img:hover{
+	border-color: #0099E5;
+}
+.AppletWrapperEditor.small img{
+	max-width: 75px;
+}
+
+
+.applet_content  {
+    background: white;
+}

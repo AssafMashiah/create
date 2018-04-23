@@ -1,0 +1,1 @@
+<p><span class="normal">Arrange the letter cards to form the words you hear.</span><textviewernarration multilanguage="true" src="%7B%22en_US%22%3A%22/media/90/88/9088ab1d39d5854a60bbf3be76cbdc04f21fea23.mp3%22%7D"></textviewernarration></p>

@@ -1,0 +1,768 @@
+{
+    "_id": "72de9f49-07cf-4716-9df9-c57e751051dc",
+    "_class": "com.mongodb.BasicDBObject",
+    "cgsData": {
+        "publisherId": 1
+    },
+    "contentData": {
+        "author": "efrat.asif",
+        "cgsVersion": "7.0.510",
+        "cid": "8fded980-1001-41f4-8b96-891e9d88e862",
+        "courseId": "72de9f49-07cf-4716-9df9-c57e751051dc",
+        "header": {
+            "last-modified": "2014-07-14T15:16:38.397Z"
+        },
+        "includeLo": true,
+        "maxDepth": 4,
+        "publisher": "T2K",
+        "customizationPack": {
+            "name": "iw_IL_T2K_IL",
+            "version": "3.1015",
+            "language": "hebrew",
+            "date": "03/03/2014",
+            "author": "Itai Ben-Naftali",
+            "resourceId": "resource_2"
+        },
+        "coverRefId": "resource_1",
+        "resources": [
+            {
+                "href": "media/6a/2d/6a2d5af918eda91b424d47f8017c25b36371539b.png",
+                "type": "media",
+                "resId": "resource_1"
+            },
+            {
+                "resId": "resource_2",
+                "baseDir": "customizationPack/iw_IL_T2K_IL/3.1015",
+                "hrefs": [
+                    "manifest.json",
+                    "cgs/config.json",
+                    "cgs/system-font.css",
+                    "cgs/systemFonts/DL-Iconfont_normal.eot",
+                    "cgs/systemFonts/DL-Iconfont_normal.svg",
+                    "cgs/systemFonts/DL-Iconfont_normal.ttf",
+                    "cgs/systemFonts/DL-Iconfont_normal.woff",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.eot",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.svg",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.ttf",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.woff",
+                    "dl/config.json",
+                    "dl/strings.js",
+                    "dl/style.css",
+                    "dl/system-font.css",
+                    "dl/systemFonts/DL-Iconfont_normal.eot",
+                    "dl/systemFonts/DL-Iconfont_normal.svg",
+                    "dl/systemFonts/DL-Iconfont_normal.ttf",
+                    "dl/systemFonts/DL-Iconfont_normal.woff",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.eot",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.svg",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.ttf",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.woff",
+                    "dl/mathfield/mathField.css",
+                    "dl/mathfield/fonts/MF_T2K_HE-Bold-Italic.ttf",
+                    "dl/mathfield/fonts/MF_T2K_HE-Bold.ttf",
+                    "dl/mathfield/fonts/MF_T2K_HE-Italic.ttf",
+                    "dl/mathfield/fonts/MF_T2K_HE-Regular.ttf",
+                    "cgs/fonts/daat-bold-webfont.eot",
+                    "cgs/fonts/daat-bold-webfont.svg",
+                    "cgs/fonts/daat-bold-webfont.ttf",
+                    "cgs/fonts/daat-bold-webfont.woff",
+                    "cgs/fonts/daat-heavy-webfont.eot",
+                    "cgs/fonts/daat-heavy-webfont.svg",
+                    "cgs/fonts/daat-heavy-webfont.ttf",
+                    "cgs/fonts/daat-heavy-webfont.woff",
+                    "cgs/fonts/daat-light-webfont.eot",
+                    "cgs/fonts/daat-light-webfont.svg",
+                    "cgs/fonts/daat-light-webfont.ttf",
+                    "cgs/fonts/daat-light-webfont.woff",
+                    "cgs/fonts/daat-regular-webfont.eot",
+                    "cgs/fonts/daat-regular-webfont.svg",
+                    "cgs/fonts/daat-regular-webfont.ttf",
+                    "cgs/fonts/daat-regular-webfont.woff",
+                    "cgs/fonts/daat-semibold-webfont.eot",
+                    "cgs/fonts/daat-semibold-webfont.svg",
+                    "cgs/fonts/daat-semibold-webfont.ttf",
+                    "cgs/fonts/daat-semibold-webfont.woff",
+                    "cgs/fonts/t2k-ayala-bold-webfont.eot",
+                    "cgs/fonts/t2k-ayala-bold-webfont.svg",
+                    "cgs/fonts/t2k-ayala-bold-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-bold-webfont.woff",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.eot",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.svg",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.woff",
+                    "cgs/fonts/t2k-ayala-italic-webfont.eot",
+                    "cgs/fonts/t2k-ayala-italic-webfont.svg",
+                    "cgs/fonts/t2k-ayala-italic-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-italic-webfont.woff",
+                    "cgs/fonts/t2k-ayala-regular-webfont.eot",
+                    "cgs/fonts/t2k-ayala-regular-webfont.svg",
+                    "cgs/fonts/t2k-ayala-regular-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-regular-webfont.woff",
+                    "cgs/fonts/t2k-icons.eot",
+                    "cgs/fonts/t2k-icons.svg",
+                    "cgs/fonts/t2k-icons.ttf",
+                    "cgs/fonts/t2k-icons.woff",
+                    "cgs/fonts/daat_heavy.ttf",
+                    "cgs/fonts/daat_heavy.woff",
+                    "cgs/fonts/daat_light.eot",
+                    "cgs/fonts/daat_light.svg",
+                    "cgs/fonts/daat_light.ttf",
+                    "cgs/fonts/daat_light.woff",
+                    "cgs/fonts/daat_regular.eot",
+                    "cgs/fonts/daat_regular.svg",
+                    "cgs/fonts/daat_regular.ttf",
+                    "cgs/fonts/daat_regular.woff",
+                    "cgs/fonts/daat_semibold.eot",
+                    "cgs/fonts/daat_semibold.svg",
+                    "cgs/fonts/daat_semibold.ttf",
+                    "cgs/fonts/daat_semibold.woff",
+                    "cgs/fonts/daat_bold.eot",
+                    "cgs/fonts/daat_bold.svg",
+                    "cgs/fonts/daat_bold.ttf",
+                    "cgs/fonts/daat_bold.woff",
+                    "cgs/fonts/daat_heavy.eot",
+                    "cgs/fonts/daat_heavy.svg",
+                    "cgs/fonts/arial.ttf",
+                    "cgs/fonts/arialbd.ttf",
+                    "cgs/fonts/arialbi.ttf",
+                    "cgs/fonts/ariali.ttf",
+                    "cgs/fonts/ariblk.ttf",
+                    "dl/fonts/daat-bold-webfont.eot",
+                    "dl/fonts/daat-bold-webfont.svg",
+                    "dl/fonts/daat-bold-webfont.ttf",
+                    "dl/fonts/daat-bold-webfont.woff",
+                    "dl/fonts/daat-heavy-webfont.eot",
+                    "dl/fonts/daat-heavy-webfont.svg",
+                    "dl/fonts/daat-heavy-webfont.ttf",
+                    "dl/fonts/daat-heavy-webfont.woff",
+                    "dl/fonts/daat-light-webfont.eot",
+                    "dl/fonts/daat-light-webfont.svg",
+                    "dl/fonts/daat-light-webfont.ttf",
+                    "dl/fonts/daat-light-webfont.woff",
+                    "dl/fonts/daat-regular-webfont.eot",
+                    "dl/fonts/daat-regular-webfont.svg",
+                    "dl/fonts/daat-regular-webfont.ttf",
+                    "dl/fonts/daat-regular-webfont.woff",
+                    "dl/fonts/daat-semibold-webfont.eot",
+                    "dl/fonts/daat-semibold-webfont.svg",
+                    "dl/fonts/daat-semibold-webfont.ttf",
+                    "dl/fonts/daat-semibold-webfont.woff",
+                    "dl/fonts/t2k-ayala-bold-webfont.eot",
+                    "dl/fonts/t2k-ayala-bold-webfont.svg",
+                    "dl/fonts/t2k-ayala-bold-webfont.ttf",
+                    "dl/fonts/t2k-ayala-bold-webfont.woff",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.eot",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.svg",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.ttf",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.woff",
+                    "dl/fonts/t2k-ayala-italic-webfont.eot",
+                    "dl/fonts/t2k-ayala-italic-webfont.svg",
+                    "dl/fonts/t2k-ayala-italic-webfont.ttf",
+                    "dl/fonts/t2k-ayala-italic-webfont.woff",
+                    "dl/fonts/t2k-ayala-regular-webfont.eot",
+                    "dl/fonts/t2k-ayala-regular-webfont.svg",
+                    "dl/fonts/t2k-ayala-regular-webfont.ttf",
+                    "dl/fonts/t2k-ayala-regular-webfont.woff",
+                    "dl/fonts/t2k-icons.eot",
+                    "dl/fonts/t2k-icons.svg",
+                    "dl/fonts/t2k-icons.ttf",
+                    "dl/fonts/t2k-icons.woff",
+                    "dl/fonts/daat_heavy.ttf",
+                    "dl/fonts/daat_heavy.woff",
+                    "dl/fonts/daat_light.eot",
+                    "dl/fonts/daat_light.svg",
+                    "dl/fonts/daat_light.ttf",
+                    "dl/fonts/daat_light.woff",
+                    "dl/fonts/daat_regular.eot",
+                    "dl/fonts/daat_regular.svg",
+                    "dl/fonts/daat_regular.ttf",
+                    "dl/fonts/daat_regular.woff",
+                    "dl/fonts/daat_semibold.eot",
+                    "dl/fonts/daat_semibold.svg",
+                    "dl/fonts/daat_semibold.ttf",
+                    "dl/fonts/daat_semibold.woff",
+                    "dl/fonts/daat_bold.eot",
+                    "dl/fonts/daat_bold.svg",
+                    "dl/fonts/daat_bold.ttf",
+                    "dl/fonts/daat_bold.woff",
+                    "dl/fonts/daat_heavy.eot",
+                    "dl/fonts/daat_heavy.svg",
+                    "dl/fonts/arial.ttf",
+                    "dl/fonts/arialbd.ttf",
+                    "dl/fonts/arialbi.ttf",
+                    "dl/fonts/ariali.ttf",
+                    "dl/fonts/ariblk.ttf",
+                    "dl/styles.json",
+                    "cgs/fonts.css",
+                    "cgs/effects.css",
+                    "cgs/styles.css",
+                    "cgs/cgsStyles.css"
+                ],
+                "type": "lib"
+            }
+        ],
+        "schema": "course_v4",
+        "standardPackages": [
+            {
+                "stdPackageId": "standards_חינוך לשוני_1.2",
+                "name": "standards",
+                "subjectArea": "חינוך לשוני",
+                "version": "1.2"
+            }
+        ],
+        "title": "לא לגעת!! חינוך לשוני עם \"עת הדעת\" לכיתה ה'",
+        "contentLocales": [
+            "iw_IL"
+        ],
+        "subjectArea": [
+            "חינוך לשוני"
+        ],
+        "gradeLevel": [
+            "כיתה ה"
+        ],
+        "overview": "תכנית לימודי העברית ב\"עת הדעת\" כוללת יחידות הוראה לכיתות ד', ה', ו' הנותנות מענה ליעדי תכנית הלימודים בחינוך הלשוני ומטפחות לומד אורייני. תכנית העברית מתייחסת למגוון סוגות ועולמות שיח וכן - לארבע אופנויות השפה. רמת הטקסטים והפעילויות מותאמות לסטנדרטים בינלאומיים ולהישגים הנדרשים בתכ\"ל.",
+        "credits": "צוות חינוך לשוני - עת הדעת",
+        "targetPopulation": "כיתה ה",
+        "toc": {
+            "cid": "657342d5-6981-4f8f-9df6-637c49b82363",
+            "title": "לא לגעת!! חינוך לשוני עם \"עת הדעת\" לכיתה ה'",
+            "overview": "תכנית לימודי העברית ב\"עת הדעת\" כוללת יחידות הוראה לכיתות ד', ה', ו' הנותנות מענה ליעדי תכנית הלימודים בחינוך הלשוני ומטפחות לומד אורייני. תכנית העברית מתייחסת למגוון סוגות ועולמות שיח וכן - לארבע אופנויות השפה. רמת הטקסטים והפעילויות מותאמות לסטנדרטים בינלאומיים ולהישגים הנדרשים בתכ\"ל.",
+            "keywords": [],
+            "type": "tocItem",
+            "tocItemRefs": [],
+            "tocItems": [
+                {
+                    "cid": "331ab4c8-0f7d-433c-97bd-8ebcb70b390e",
+                    "title": "מבוא להוראת העברית בכיתה ה",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [
+                        {
+                            "cid": "5e49a077-59ae-4127-b170-1481150c02bf",
+                            "type": "lesson"
+                        }
+                    ],
+                    "tocItems": []
+                },
+                {
+                    "cid": "0d21ad3d-14db-4755-b16d-afde64cef0c5",
+                    "title": "חגים ומועדים",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [],
+                    "tocItems": [
+                        {
+                            "cid": "0fc2c895-39b1-4578-a476-4942bad7d753",
+                            "title": "התחלות",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "246b3e2a-9af3-4415-b0f4-0ad29b2fb215",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "3226c8c0-7ce2-4240-b1a5-9631ec012419",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "40a0f522-8be9-467c-a2bd-53ca363a4a8e",
+                            "title": "יום הכיפורים",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "94abc1c3-2e30-4a11-9ebb-ead025a69971",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "b42c763e-09bb-4100-accc-b4064644f13e",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "e08bbfeb-4eb6-4aa8-9f2c-f173c6891d8e",
+                            "title": "יום השואה - סיפורו של יאנוש קורצ'אק",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "e470963a-8542-4459-8671-f1f15307d8ec",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "1e4b195c-e370-4ed3-8a05-a34549938cfb",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "69ce69e1-571a-4c30-ad78-eee2abade304",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "bcfcd2f6-18d9-4089-9706-c689dc84b088",
+                            "title": "יום ירושלים",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "c198d3a5-e5a7-4dee-9dbf-91a3974537ae",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "a44cc752-6430-4041-9ad3-5ec64b07ab3d",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "29b30cd8-cb98-4a4f-a9df-d79125ba13d6",
+                            "title": "שבועות",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "f77557d7-5163-4b6d-a96c-8cde460c34df",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "37ed539a-f516-4694-a567-40242d2b0be4",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "161a9680-e9c6-440e-8212-dc50f7867a37",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        }
+                    ]
+                },
+                {
+                    "cid": "e892782a-d043-4220-983a-909d8146c565",
+                    "title": "ספרות",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [],
+                    "tocItems": [
+                        {
+                            "cid": "9bd8092a-45a4-4e0f-bb09-7ae36b4d8745",
+                            "title": "הסיפור",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "f201cca7-286e-44d6-9792-624ff55ac94b",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "6d030ada-4a5c-4981-8c90-9ad31952bcf7",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "2c2ee237-6fe3-4a0a-a118-7ccc38c92cf9",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "27901c05-e81d-4432-81c6-d88acdddb9cf",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "342af037-3ca1-4228-a51f-631785658bc3",
+                            "title": "המשל",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "f6f59883-96b8-4917-b99f-5a8284d222af",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "c46614ec-fee5-4759-98bc-1cc1da0875e5",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "8a7307b7-4a0d-4a67-ab05-11607447b068",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "4c69504f-25fc-4f2c-9d86-8b74caf7e994",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "2f4e94b3-9ea7-4633-8086-86d34a95aa9b",
+                                    "type": "assessment"
+                                }
+                            ],
+                            "tocItems": []
+                        }
+                    ]
+                },
+                {
+                    "cid": "9406dfde-73e9-4c8e-b84e-33023c387cd5",
+                    "title": "סוגות",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [],
+                    "tocItems": [
+                        {
+                            "cid": "8c1f5ad4-0cda-4b67-acc7-e4b97bf4d2d3",
+                            "title": "מידוע",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [],
+                            "tocItems": [
+                                {
+                                    "cid": "2606812e-acbe-4786-a260-9d1cb69d4358",
+                                    "title": "כתבה חדשותית",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "fd63966b-410a-4082-a23a-306283411397",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "deda80b8-3c6f-4391-bc80-3a76eaffa158",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "91d91675-734c-4d88-bcd6-e10d01dd3a82",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "d6c004a8-7238-4619-a6ab-9f1feffe172c",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "7a1a0733-d87a-4798-b96a-5b7062a9f46a",
+                                            "type": "assessment"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                },
+                                {
+                                    "cid": "363958f7-a57d-4def-96a9-f82bb964d928",
+                                    "title": "מבנה הטקסט המידעי",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "111e61bd-768c-4a46-8805-088e2daadf4c",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "0e2cbeec-eda0-4909-8dc3-41ed3c583552",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                },
+                                {
+                                    "cid": "8d41978b-b294-4345-a67b-5e65593b3272",
+                                    "title": "השפה העברית מאז ועד היום",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "84d48a45-b1c3-4057-9f26-e22a6537e4bb",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                },
+                                {
+                                    "cid": "e4b80f4d-88cc-4ba9-9049-8349d9adb0f7",
+                                    "title": "מטיילים בשביל ישראל",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "745b36d7-0984-48d8-9a10-a7118f5c493b",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "220fcc15-2308-4911-a9bb-64adb32e9456",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "23b39a2f-3546-4ff8-8f24-eb3279140ac2",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "050bbbde-6dc7-43fe-92b0-df6a92f1321c",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                }
+                            ]
+                        },
+                        {
+                            "cid": "2b55ed15-13ef-4a25-aa9a-79741a29a5c9",
+                            "title": "הפעלה",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [],
+                            "tocItems": [
+                                {
+                                    "cid": "5c4b6637-9c67-4b5f-b2db-a904e9de58ab",
+                                    "title": "פיצוח מטלות- זה\"ב",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "47c959bf-c97b-4a32-9997-e9c5e4673948",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "69e1a73b-7ffb-46aa-aa8b-b762ab4de073",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "24d3c97b-1006-460f-a6df-7350a9d7d2c2",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                }
+                            ]
+                        },
+                        {
+                            "cid": "25b3e5c0-4873-4da7-9266-64e355a2769c",
+                            "title": "טיעון ושכנוע",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [],
+                            "tocItems": [
+                                {
+                                    "cid": "7edf08b9-2487-47a1-a91f-75a3367a7cb4",
+                                    "title": "כותבים מכתב טיעוני",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "e8a3d5af-6170-457c-b089-968befeb32af",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "8655f1ad-03e4-42ca-a364-07e98e00839d",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "d1c9f519-542a-47ee-a685-92dad6a3c9a9",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "b1d3fa69-bb96-4075-8963-7f0d3c2c3a59",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "cbd7a7e0-ba3d-4bd4-af08-3295b7fbf2f3",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                },
+                                {
+                                    "cid": "e83964c9-46db-4b81-9924-991809011e0f",
+                                    "title": "כותבים עצומה ",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "3bd571e4-d75a-4cda-9b9e-afc53210bd7a",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "2db30123-6bb4-49db-90d3-a5300f379878",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "a73bdc60-e21b-4adb-b52c-33d66a2e3914",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "3695bc6f-4f00-4d41-bf48-4c1b47735e4d",
+                                            "type": "assessment"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                },
+                                {
+                                    "cid": "34cd6222-aec4-41d1-8371-eacfbac91275",
+                                    "title": "הבעת דעה ושכנוע בעל-פה",
+                                    "overview": "",
+                                    "keywords": [],
+                                    "type": "tocItem",
+                                    "tocItemRefs": [
+                                        {
+                                            "cid": "1cd6daa0-a36b-40e0-8fa3-789411be9e81",
+                                            "type": "lesson"
+                                        },
+                                        {
+                                            "cid": "6f962227-f11e-4f7e-8181-8655720881fd",
+                                            "type": "lesson"
+                                        }
+                                    ],
+                                    "tocItems": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "cid": "23499ce9-d0a7-48c3-9271-68f9d94f8f20",
+                    "title": "לשון",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [],
+                    "tocItems": [
+                        {
+                            "cid": "d88a2566-a70d-44b4-a5d8-d2860ab37cc4",
+                            "title": "שם המספר",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "8b771663-ceeb-41b3-9402-86ac6b5a5547",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "63dae09d-f535-471d-b7ae-f8297d286ae2",
+                                    "type": "assessment"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "aa3f0ccb-db3f-4ced-b1f2-83c2b9f37704",
+                            "title": "סימני פיסוק",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "0ed6821f-353f-472a-96b8-f6d8bc48c6d8",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        },
+                        {
+                            "cid": "95c1a97f-1678-4bf0-a9f5-c0ad9240f8f5",
+                            "title": "שפת התנ\"ך",
+                            "overview": "",
+                            "keywords": [],
+                            "type": "tocItem",
+                            "tocItemRefs": [
+                                {
+                                    "cid": "30f8eb62-fbcf-4fbd-9973-c20bcd6d367f",
+                                    "type": "lesson"
+                                },
+                                {
+                                    "cid": "ab8e481a-7d84-4ed7-9d4c-49dbebd83183",
+                                    "type": "lesson"
+                                }
+                            ],
+                            "tocItems": []
+                        }
+                    ]
+                },
+                {
+                    "cid": "b8ea1753-67fd-4b25-b8b8-4cf535a63eef",
+                    "title": "ביסוס והעמקת הידע בחינוך לשוני",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "tocItemRefs": [
+                        {
+                            "cid": "d8f3d222-0dd1-47fc-9a7e-9f8f3e92f908",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "337c1583-886e-4f00-9c60-841aa69f6fa9",
+                            "type": "assessment"
+                        },
+                        {
+                            "cid": "4e95d0f2-c4f3-4103-9d71-636b63acdac4",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "81286e7c-2c46-4e0c-8ec8-7949d572a7e9",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "93f5fae0-505c-4a1e-9432-3870e87f3bab",
+                            "type": "assessment"
+                        },
+                        {
+                            "cid": "f1fd862b-c102-449c-be25-3b53c808081a",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "0847a0d6-1f96-47da-b2dd-1586eebbec06",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "3613a062-03ce-4e92-b737-e17c2c2ee9c4",
+                            "type": "assessment"
+                        }
+                    ],
+                    "tocItems": []
+                }
+            ]
+        },
+        "type": "course",
+        "version": "1.0.0",
+        "differentiation": {
+            "defaultLevelId": 2,
+            "levels": [
+                {
+                    "id": 1,
+                    "name": "בסיסי",
+                    "acronym": "1"
+                },
+                {
+                    "id": 2,
+                    "name": "היקפי",
+                    "acronym": "2"
+                }
+            ]
+        }
+    }
+}

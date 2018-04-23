@@ -1,0 +1,71 @@
+#FreeWritingAnswer_content .textEditor,
+#ShortAnswerAnswer_content .textEditor{
+    min-width: 20px;
+    min-height: 42px;
+    background-color:#f9f9f9;
+    background-image:url(../media/tex_stripes.png);
+    background-repeat:repeat;
+    border:1px solid #b3b3b3;
+}
+.textEditor.Letter{
+    width: 35px;
+    max-width: 35px;
+    height: 42px;
+}
+.textEditor.Word{
+    width: 244px;
+    max-width: 244px;
+    height: 42px;
+
+}
+.textEditor.Line{
+    width: 680px;
+    max-width: 680px;
+    height: 42px;
+}
+
+.view_mode_small .textEditor.Line,
+.view_mode_small .textEditor.FullText,
+.view_mode_small .textEditor.Paragraph{
+    width: auto; 
+}
+
+.textEditor.Paragraph{
+    width: 680px;
+    max-width: 680px;
+    height: 104px;
+
+}
+.textEditor.FullText{
+    width: 680px;
+    max-width: 680px;
+    height: 333px;
+
+}
+input#MaxChars{
+    width:50px;
+}
+#MathFieldKeyboard_wrapper{
+    padding-top : 25px;
+}
+input#field_textEditorPropsShowToolbar{
+    margin-bottom: 7px;
+}
+
+div#FreeWritingAnswer_content textarea {
+    border: solid 1px #000;
+    margin: 5px;
+    display:block;
+}
+.editOpenQuestionAnswer {
+    color: #33B6AC;
+}
+/*compare and share in sequence*/
+.compare_content .textViewer_content{
+    max-width: 300px;
+}
+/*.compare_content .textEditor.Paragraph{
+    border-right:1px solid #b9b9b9;
+    background-color: #F9F9F9;
+}*/
+

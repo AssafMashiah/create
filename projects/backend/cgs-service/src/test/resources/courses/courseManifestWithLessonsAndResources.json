@@ -1,0 +1,622 @@
+{
+        "author" : "nimrod.shatil",
+        "cgsVersion" : "7.0.21.56",
+        "cid" : "6e399f5b-1304-45cd-8ee8-3f5ff9e2af2d",
+        "contentLocales" : [
+            "iw_IL"
+        ],
+        "courseId" : "d157e8a4-d470-42dc-b756-22b38b2c05ed",
+        "coverRefId" : "resource_1",
+        "credits" : "ניהול אקדמי\nד\"ר אורנית ספקטור-לוי\nפיתוח רעיוני וניהול הפרויקט\nד\"ר מרב יפרח\nיפה גונדה-קרן\nצוות פיתוח\nאושרה אלוני\nיפה גונדה-קרן\nאסנת חכם-בוסיס\nד\"ר מרב יפרח\nאווה שוורץ\nקראו והעירו\nיוסי אסטרייכר\nד\"ר טוני לוי\nייעוץ מדעי בנושא חומרים\nד\"ר חנה ויטמן\nפרופ' יצחק מסתאי\nייעוץ מדעי בנושא אנרגיה\nד\"ר עידית גרומן\nייעוץ לשוני ומגדרי\nדפנה לב\nעיצוב הסדרה ואיורים\nשני עצמון\nעיצוב כריכה\nסטודיו עוזי גרפיקס\nגרפיקה\nנועם שושן",
+        "customizationPack" : {
+            "name" : "iw_IL",
+            "version" : "1.7002",
+            "language" : "hebrew",
+            "date" : "03/12/2013",
+            "author" : "Itai Ben-Naftali",
+            "resourceId" : "resource_3"
+        },
+        "gradeLevel" : [
+            "כיתה ז"
+        ],
+        "header" : {
+            "last-modified" : {"$date":"2014-07-15T11:46:08.416Z"}
+},
+"includeLo" : true,
+"maxDepth" : 3,
+"overview" : "הספר ‘טבע החומר׳ מיועד לכיתות ז‘ ומותאם לדרישות הסילבוס המעודכן לחטה”ב בנושאים: חומרים − בהיבטי מקרו ומיקרו; אנרגיה − סוגי אנרגיה, המרות אנרגיה וחוק שימור האנרגיה; טכנולוגיה − היבטים טכנולוגיים של חומרים ותהליך התיכון. \nבספר הקניה, יישום, תרגול והעברה של המיומנויות: מיון, שאילת שאלות, חקר וארגון ידע.\n\nהספר ‘טבע החומר׳ הוא הספר הראשון בסדרת עולמו”ט. סדרת עולמו״ט היא סביבת הוראה ולמידה במקצוע מדע וטכנולוגיה בחטיבת הביניים. הסדרה פותחה על ידי צוות המדעים במכון לאינטגרציה, באוניברסיטת בר אילן. בסדרה מושם דגש על מגוון שיטות הוראה ולמידה, תוך התייחסות ומתן מענה לשונות בין התלמידים בכיתה ההטרוגנית.\nייחודה של הסדרה:\n* מתן מענה לדרישות החדשות של המקצוע מדע וטכנולוגיה בחטיבת הביניים כפי שהן באות לידי ביטוי בתוכנית הלימודים החדשה. \n* מתן מענה מעשי ורב-ערוצי לשונות בין התלמידים בכיתה ההטרוגנית.\n* הוראה ספירלית של התכנים, בשילוב מיומנויות, לאורך שלוש שנות הלימוד בחטיבת הביניים.\n* פיתוח חשיבה מסדר גבוה אצל התלמידים.\n* סביבת למידה פעילה, המפתחת לומד עצמאי, בעל יכולות שיתוף ועבודה בצוות.\n* סביבת הוראה ולמידה עשירה ומגוונת העונה על צורכי המורה ועל צורכי התלמידים. \n* אמצעי הערכה, כגון: שאלות בסוף הדרך, שאלות פיצוחים, מבחני ‘בחנו את עצמכם’ ומחוונים לשימוש התלמידים.",
+"publisher" : "McGraw-Hill",
+"resources" : [
+{
+"href" : "media/a7/3d/a73d92eb56f2390b1837f07a8ca52a2a6135738b.png",
+"type" : "media",
+"resId" : "resource_1"
+},
+{
+"resId" : "resource_2",
+"href" : "cgsData/טבע_המערכת_למורה__סופי_לדפוס_27.06.12.pdf",
+"type" : "planning"
+},
+{
+"resId" : "resource_3",
+"baseDir" : "customizationPack/iw_IL/1.7002",
+"hrefs" : [
+"manifest.json",
+"cgs/config.json",
+"cgs/system-font.css",
+"cgs/fonts/daat_bold.eot",
+"cgs/fonts/daat_bold.svg",
+"cgs/fonts/daat_bold.ttf",
+"cgs/fonts/daat_bold.woff",
+"cgs/fonts/daat_heavy.eot",
+"cgs/fonts/daat_heavy.svg",
+"cgs/fonts/daat_heavy.ttf",
+"cgs/fonts/daat_heavy.woff",
+"cgs/fonts/daat_light.eot",
+"cgs/fonts/daat_light.svg",
+"cgs/fonts/daat_light.ttf",
+"cgs/fonts/daat_light.woff",
+"cgs/fonts/daat_regular.eot",
+"cgs/fonts/daat_regular.svg",
+"cgs/fonts/daat_regular.ttf",
+"cgs/fonts/daat_regular.woff",
+"cgs/fonts/daat_semibold.eot",
+"cgs/fonts/daat_semibold.svg",
+"cgs/fonts/daat_semibold.ttf",
+"cgs/fonts/daat_semibold.woff",
+"cgs/systemFonts/DL-Iconfont_normal.eot",
+"cgs/systemFonts/DL-Iconfont_normal.svg",
+"cgs/systemFonts/DL-Iconfont_normal.ttf",
+"cgs/systemFonts/DL-Iconfont_normal.woff",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.eot",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.svg",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.ttf",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.woff",
+"dl/config.json",
+"dl/strings.js",
+"dl/style.css",
+"dl/system-font.css",
+"dl/fonts/daat_bold.eot",
+"dl/fonts/daat_bold.svg",
+"dl/fonts/daat_bold.ttf",
+"dl/fonts/daat_bold.woff",
+"dl/fonts/daat_heavy.eot",
+"dl/fonts/daat_heavy.svg",
+"dl/fonts/daat_heavy.ttf",
+"dl/fonts/daat_heavy.woff",
+"dl/fonts/daat_light.eot",
+"dl/fonts/daat_light.svg",
+"dl/fonts/daat_light.ttf",
+"dl/fonts/daat_light.woff",
+"dl/fonts/daat_regular.eot",
+"dl/fonts/daat_regular.svg",
+"dl/fonts/daat_regular.ttf",
+"dl/fonts/daat_regular.woff",
+"dl/fonts/daat_semibold.eot",
+"dl/fonts/daat_semibold.svg",
+"dl/fonts/daat_semibold.ttf",
+"dl/fonts/daat_semibold.woff",
+"dl/systemFonts/DL-Iconfont_normal.eot",
+"dl/systemFonts/DL-Iconfont_normal.svg",
+"dl/systemFonts/DL-Iconfont_normal.ttf",
+"dl/systemFonts/DL-Iconfont_normal.woff",
+"dl/systemFonts/Text-Editor-Iconfont_normal.eot",
+"dl/systemFonts/Text-Editor-Iconfont_normal.svg",
+"dl/systemFonts/Text-Editor-Iconfont_normal.ttf",
+"dl/systemFonts/Text-Editor-Iconfont_normal.woff",
+"dl/mathfield/mathField.css",
+"dl/mathfield/fonts/MF_T2K_HE-Bold-Italic.ttf",
+"dl/mathfield/fonts/MF_T2K_HE-Bold.ttf",
+"dl/mathfield/fonts/MF_T2K_HE-Italic.ttf",
+"dl/mathfield/fonts/MF_T2K_HE-Regular.ttf",
+"dl/styles.json",
+"cgs/fonts.css",
+"cgs/effects.css",
+"cgs/styles.css",
+"cgs/cgsStyles.css"
+],
+"type" : "lib"
+}
+],
+"schema" : "course_v4",
+"standardPackages" : [],
+"standards" : [],
+"subjectArea" : [
+"מדעים"
+],
+"targetPopulation" : "כיתות ז",
+"title" : "טבע החומר לכיתה ז'",
+"toc" : {
+"cid" : "b92fe43f-a585-4dcb-9c62-8295b2d8b002",
+"title" : "טבע החומר לכיתה ז'",
+"overview" : "הספר ‘טבע החומר׳ מיועד לכיתות ז‘ ומותאם לדרישות הסילבוס המעודכן לחטה”ב בנושאים: חומרים − בהיבטי מקרו ומיקרו; אנרגיה − סוגי אנרגיה, המרות אנרגיה וחוק שימור האנרגיה; טכנולוגיה − היבטים טכנולוגיים של חומרים ותהליך התיכון. \nבספר הקניה, יישום, תרגול והעברה של המיומנויות: מיון, שאילת שאלות, חקר וארגון ידע.\n\nהספר ‘טבע החומר׳ הוא הספר הראשון בסדרת עולמו”ט. סדרת עולמו״ט היא סביבת הוראה ולמידה במקצוע מדע וטכנולוגיה בחטיבת הביניים. הסדרה פותחה על ידי צוות המדעים במכון לאינטגרציה, באוניברסיטת בר אילן. בסדרה מושם דגש על מגוון שיטות הוראה ולמידה, תוך התייחסות ומתן מענה לשונות בין התלמידים בכיתה ההטרוגנית.\nייחודה של הסדרה:\n* מתן מענה לדרישות החדשות של המקצוע מדע וטכנולוגיה בחטיבת הביניים כפי שהן באות לידי ביטוי בתוכנית הלימודים החדשה. \n* מתן מענה מעשי ורב-ערוצי לשונות בין התלמידים בכיתה ההטרוגנית.\n* הוראה ספירלית של התכנים, בשילוב מיומנויות, לאורך שלוש שנות הלימוד בחטיבת הביניים.\n* פיתוח חשיבה מסדר גבוה אצל התלמידים.\n* סביבת למידה פעילה, המפתחת לומד עצמאי, בעל יכולות שיתוף ועבודה בצוות.\n* סביבת הוראה ולמידה עשירה ומגוונת העונה על צורכי המורה ועל צורכי התלמידים. \n* אמצעי הערכה, כגון: שאלות בסוף הדרך, שאלות פיצוחים, מבחני ‘בחנו את עצמכם’ ומחוונים לשימוש התלמידים.",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : [
+{
+"cid" : "746a3002-4501-48b8-b023-ad8f1a0d2c4e",
+"title" : "הקדמה: מדע ומדענים",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "2e3d63a1-a5d5-468e-aa91-3b9f96f3c413",
+"type" : "lesson"
+},
+{
+"cid" : "784f5075-4395-416c-8f55-7b314613a913",
+"type" : "lesson"
+},
+{
+"cid" : "ee37949e-55b0-4222-bee3-582029892f4d",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "f2501b43-5382-4b01-bda4-5b66ac82b940",
+"title" : "חלק א: חומרים בסביבה",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : [
+{
+"cid" : "a4cfde1c-29a0-41dd-9b66-b9989a46a46e",
+"title" : "פרק א': מה בסביבה?",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "e58f0db5-6523-4e4a-a18b-5f6fce2a438c",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "38a8e24b-5f51-4e1a-9455-abc28526c9f8",
+"title" : "פרק ב': מהו חומר?",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "936ba106-ea92-4033-9e62-2936df7f0149",
+"type" : "lesson"
+},
+{
+"cid" : "6ac712e5-467c-4001-a157-c83ad3b0aa38",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "09adb87b-86cd-4977-87cc-31be578c7a4e",
+"title" : "פרק ג': לחומר יש מסה - מהי מסה?",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "1b1e25df-39bc-4315-bb21-c9fd33688084",
+"type" : "lesson"
+},
+{
+"cid" : "59b6d5e3-d7c4-4eba-b6ae-46b133b71b06",
+"type" : "lesson"
+},
+{
+"cid" : "bed9e387-6926-4b23-b297-2ee794f6c130",
+"type" : "lesson"
+},
+{
+"cid" : "b1b8d9ab-9f9b-4d74-92a0-779c7a9b20ed",
+"type" : "lesson"
+},
+{
+"cid" : "85a12b0f-2196-4287-94e8-6cd23501bc77",
+"type" : "lesson"
+},
+{
+"cid" : "531f8966-a62e-49f9-8635-c4bfebad18d0",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "3dd86ee4-f3b4-4d95-b4cc-69dcb5864c55",
+"title" : "פרק ד': לחומר יש נפח - מהו נפח?",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "1422757b-8c1c-4373-83dc-1928235ecc5e",
+"type" : "lesson"
+},
+{
+"cid" : "72212472-98ba-49d0-8058-b8ea57a881cf",
+"type" : "lesson"
+},
+{
+"cid" : "5c2d616b-b092-447b-9874-7aa7781d9f3c",
+"type" : "lesson"
+},
+{
+"cid" : "b0fb130a-f293-486a-af31-190e00fcfc66",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "c162d401-d689-44b3-95d7-409cc51ee591",
+"title" : "פרק ה': צפיפות - מסה, נפח ומה שביניהם",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "080a5b3d-dac7-4c6e-807a-abd0948f5275",
+"type" : "lesson"
+},
+{
+"cid" : "fd4d4770-66b4-4edf-b535-b93536b16b3a",
+"type" : "lesson"
+},
+{
+"cid" : "e1373d8b-018b-4ede-bb60-c320d555894b",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+{
+"cid" : "894846ee-2b2d-42c9-ad35-47662f76dd88",
+"title" : "חלק ב: תכונות החומר",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : [
+{
+"cid" : "da0303bf-1972-44e8-a278-2d2b4429cc47",
+"title" : "פרק א': מגוון תכונות החומרים",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "73093174-77d7-40d0-bf91-3f2f7b64c464",
+"type" : "lesson"
+},
+{
+"cid" : "2c7ace25-e890-493f-b03f-4e9748481710",
+"type" : "lesson"
+},
+{
+"cid" : "38fabd2c-6dd2-423c-a317-988897ce94df",
+"type" : "lesson"
+},
+{
+"cid" : "46a8bdfa-ea8e-4c39-a7ee-1ce4401cdbff",
+"type" : "lesson"
+},
+{
+"cid" : "47a9cbca-8b51-4e2b-b03f-086588e5088b",
+"type" : "lesson"
+},
+{
+"cid" : "de3faa52-e9e3-4751-b64e-2d62032eee0b",
+"type" : "lesson"
+},
+{
+"cid" : "1bfcd59c-d66f-432e-bc64-064cfcfc5041",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "c82fb2c4-0b79-4d9f-bd16-604cbb8e203d",
+"title" : "פרק ב': יוצאים למסע ליצירת מוצר - תהליך התיכון",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "3fda4707-9b95-49d8-8e95-35a929ff1155",
+"type" : "lesson"
+},
+{
+"cid" : "8ce50f93-d3ea-4bcc-841c-a480e6eefacb",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+{
+"cid" : "93d65622-1b52-4967-9543-884c5a91b619",
+"title" : "חלק ג: מבנה החומר - המודל החלקיקי של החומר",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : [
+{
+"cid" : "aeadcc04-5163-40fb-9fba-81f191a56f85",
+"title" : "מבוא: חומרים בטבע במצבי צבירה שונים",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "dfca8944-d7d4-4297-b4fd-e8fef746d069",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "18fde22e-4c1f-49f9-962f-ce9691f03c56",
+"title" : "פרק א': המודל החלקיקי של החומר במצב צבירה נוזל",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "6533f90c-0a0b-40de-86fb-0606cab91e97",
+"type" : "lesson"
+},
+{
+"cid" : "6dbdcaa9-3a30-49e7-858e-a31dec5076ef",
+"type" : "lesson"
+},
+{
+"cid" : "8a4d85b3-a3f1-4f69-b270-18ac16407b1c",
+"type" : "lesson"
+},
+{
+"cid" : "096e51b7-19f6-49c6-b49e-3323ac550b8c",
+"type" : "lesson"
+},
+{
+"cid" : "59dc1e5e-2ea8-4b84-a418-fc83f4f28d0c",
+"type" : "lesson"
+},
+{
+"cid" : "166ba47a-96f0-458a-967d-4a0b828c903c",
+"type" : "lesson"
+},
+{
+"cid" : "ae56f63b-2a85-4e6b-9bfb-5a30cb5d5a64",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "946f625a-763d-4a3d-9b8d-f0e3f3b8859b",
+"title" : "פרק ב': המודל החלקיקי של החומר במצב צבירה גז",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "0ac91f46-7b89-491f-8b7b-a71f697bd6c9",
+"type" : "lesson"
+},
+{
+"cid" : "f4efbfcc-ea1c-41c0-aaf5-0521c09386fd",
+"type" : "lesson"
+},
+{
+"cid" : "8a340ea2-6590-4cd8-bdb9-714a6f13f39b",
+"type" : "lesson"
+},
+{
+"cid" : "17252f49-1d87-454b-a63a-ebd3526adc17",
+"type" : "lesson"
+},
+{
+"cid" : "232aa21d-d56c-475b-b277-dba51785959a",
+"type" : "lesson"
+},
+{
+"cid" : "8f058067-530f-4eaa-85f5-a0772e533cf0",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "243455f0-76fc-42c3-8c6e-0428b4634ff6",
+"title" : "פרק ג': המודל החלקיקי של החומר במצב צבירה מוצק",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "9b679190-df0f-44b6-9b95-8e0c12f24d34",
+"type" : "lesson"
+},
+{
+"cid" : "4a61e2de-e114-44d4-8fdf-33edb45a8d4b",
+"type" : "lesson"
+},
+{
+"cid" : "328b6a3d-e558-46b2-b3c4-2f6f4e0b0d54",
+"type" : "lesson"
+},
+{
+"cid" : "1162947f-1732-4127-bed1-708b6b5470a0",
+"type" : "lesson"
+},
+{
+"cid" : "0418b85f-e1a1-414f-94f8-c3d866974519",
+"type" : "lesson"
+},
+{
+"cid" : "b5367b51-fce7-49cf-a3d7-3636f1fba22e",
+"type" : "lesson"
+},
+{
+"cid" : "183fd4d4-ba5f-40de-af49-46bb8c5ae895",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "85c9c148-a778-46ca-b4cf-03f0e0670a60",
+"title" : "פרק ד': חימום, טמפרטורה ומעברים בין מצבי צבירה",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "362b7935-405a-4554-80f1-5e724885863d",
+"type" : "lesson"
+},
+{
+"cid" : "cb4a5b91-3dba-4d3f-88e3-3d00517dca38",
+"type" : "lesson"
+},
+{
+"cid" : "6f79776b-2f9b-49ec-9bc0-d00b363df734",
+"type" : "lesson"
+},
+{
+"cid" : "60ba0994-1efa-49dd-bdee-e4ea71e4e70b",
+"type" : "lesson"
+},
+{
+"cid" : "3e516b2b-39ba-4f09-b533-f58deb3e62de",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+{
+"cid" : "a39d2241-7ad5-4310-9a10-6b2e253d4d23",
+"title" : "חלק ד: אנרגיה וחומר",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : [
+{
+"cid" : "ed4f276a-65b6-432a-bcfa-d758a759db18",
+"title" : "פרק א': חימום, שינויי טמפרטורה ואנרגיה תרמית",
+"overview" : "ASDFA",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "30448a61-afdc-4e19-8634-68b87dea88f7",
+"type" : "lesson"
+},
+{
+"cid" : "458ab345-a848-4c3d-af39-97334b239048",
+"type" : "lesson"
+},
+{
+"cid" : "5716c9f9-d298-4098-aab2-2a1a12984d4e",
+"type" : "lesson"
+},
+{
+"cid" : "cf1b9938-e5e1-40b3-b46d-8ee4757f7226",
+"type" : "lesson"
+},
+{
+"cid" : "2e0a4012-38d0-4bff-b52f-ed121472fb26",
+"type" : "lesson"
+},
+{
+"cid" : "09a173cf-41a0-45dc-8f8c-c2981793e93b",
+"type" : "lesson"
+},
+{
+"cid" : "0cd7f71e-b052-4fc3-baae-df14bda471bf",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "2e3687d7-55e4-4e20-84e7-5df76f9eee34",
+"title" : ".פרק ב': אנרגיה תרמית וסוגי אנרגיה נוספים",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "ff5209d5-de96-4660-980d-8af8f64b2c9a",
+"type" : "lesson"
+},
+{
+"cid" : "bf21f36d-a5cc-4b15-b761-005f4f2574f3",
+"type" : "lesson"
+},
+{
+"cid" : "837e5412-36ef-4c07-a570-be8469982747",
+"type" : "lesson"
+},
+{
+"cid" : "3c4b6a79-45a6-430a-9a0d-b4e805f4a9db",
+"type" : "lesson"
+},
+{
+"cid" : "bd5d05cd-c5e0-48e6-a292-6800cafd352c",
+"type" : "lesson"
+},
+{
+"cid" : "fb650a40-d269-404e-8221-4cedaf7c6df1",
+"type" : "lesson"
+},
+{
+"cid" : "921625ff-dfe1-4592-9bfd-de9429e95d51",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+{
+"cid" : "ab4921ae-7d66-4427-8e28-82734a08e5f5",
+"title" : "מילון מושגים",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "280d049b-68cc-4fe3-93f0-be6420b107c2",
+"type" : "lesson"
+},
+{
+"cid" : "0c60f49c-f45a-4e58-be70-69bed7d0b690",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+"type" : "course",
+"version" : "1.0.0"
+
+}

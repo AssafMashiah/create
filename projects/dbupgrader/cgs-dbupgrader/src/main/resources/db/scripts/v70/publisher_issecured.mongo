@@ -1,0 +1,1 @@
+publishers.update({}, {$set:{isSecured: false}},{multi: true}) ;

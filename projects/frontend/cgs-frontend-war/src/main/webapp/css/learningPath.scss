@@ -1,0 +1,294 @@
+#dialog.learningPath {
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  margin: 0;
+  #dialogTitle {
+    span {
+      position: absolute;
+    }
+    .back_btn {
+      display: inline-block;
+      height: 50px;
+      left: 0;
+      .base-icon {
+        font-size: 24px;
+        top: 10px;
+        left: 12px;
+      }
+      .btn-text {
+        padding-top: 10px;
+        left: 0;
+        width: 50px;
+        text-align: center;
+      }
+      font-size: 10px;
+      width: 50px;
+    }
+    .title_sep {
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      top: 0;
+      bottom: 0;
+      left: 37px;
+      display: inline-block;
+      border-right: 1px solid #E4DFDF;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .header {
+      pointer-events: none;
+      top: 0;
+      padding-left: 50px;
+      font-weight: normal;
+    }
+  }
+  #dialogContent {
+    max-height: calc(100% - 140px);
+    min-height: calc(100% - 140px);
+    padding: 0;
+    width: 100%;
+    display: block;
+    .icon-caret-down, .icon-caret-up {
+      margin-top: 5px;
+      margin-left: 3px;
+    }
+    #learning_path {
+      height: calc(100% - 140px);
+      overflow-y: auto;
+      padding-top: 41px;
+    }
+    table {
+        width: 100%;
+        margin: -1px;
+        
+        th {
+          height: 0;
+          line-height: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          color: transparent;
+          div {
+             color: #333;
+             position: absolute;
+             top: 50px;
+             padding-top: 10px;
+             height: 41px;
+             margin-left: -10px;
+             padding-left: 10px;
+             padding-top: 20px;
+             background-color: #CCE2EF;
+             width: 100%;
+             z-index: 100;
+             border-bottom: 1px solid #ddd;
+             .settings {
+                font-size: 20px;
+                position: absolute;
+                top: 15px;
+                margin-left: -40px;
+             }
+             #settings_dropdown {
+               left: -300px;
+                div {
+                  position: initial;
+                  background: transparent;
+                  height: initial;
+                  border: none;
+                  text-align: right;
+                }
+                label {
+                  display: inline-block;
+                  margin-right: 20px;
+                }
+                .btn {
+                  margin-left: 10px;
+                  width: auto;
+                  display: inline-block;
+                  font-weight: 400;
+                  height: 34px;
+                  padding: 6px 16px;
+                  border: 0;
+                  background-color: #4391F7;
+                  color: #FFF;
+                  font-size: 16px;
+                  text-shadow: none;
+                  border-radius: 2px;
+                  text-transform: capitalize;
+                }
+                position: absolute;
+                top: 41px;
+                width: auto;
+                height: auto;
+                padding: 20px;
+                display: block;
+                background-color: white;
+                border: 1px solid #ddd;
+             }
+          }
+          .info {
+            font-weight: normal;
+            padding-left: 80px;
+          }
+        }
+        tr {
+          &:hover {
+            background-color: initial;
+          }
+        }
+        td {
+            .standard_name, 
+            &.standard_name {
+                font-weight: bold;
+                width: 30%;
+                .standard_name_wrap {
+                  display: inline-block;
+                  text-align: left;
+                  .description {
+                    display: inline-block;
+                    font-weight: normal;
+                  }
+                }
+            }
+
+            text-align: center;
+
+            &.standard_interval {
+              padding: 0px;
+            }
+        }
+
+        .interval_cell, .lessons_cell {
+          display: table-cell;
+          padding: 10px;
+          position: relative;
+          text-align: left;
+          height: 75px;
+          font-size: 13px;
+          vertical-align: middle;
+          &.empty {
+            text-align: center;
+          }
+          .connected_label {
+            display: inline-block;
+            width: 80px;
+            vertical-align: middle;
+          }
+          #lessons_list {
+            display: inline-block;
+            vertical-align: middle;
+            .lesson_rows {
+              max-height: 75px;
+              overflow: hidden;
+            }
+            .btn_less, .btn_more {
+              display: none;
+            }
+            &.expandable {
+              .btn_more {
+                display: block;
+              }
+            }
+            &.expanded {
+              .lesson_rows {
+                max-height: initial;
+              }
+              .btn_more {
+                display: none;
+              }
+              .btn_less {
+                display: block;
+              }
+            }
+          }
+          .buttons {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 24px;
+          }
+          .int_label {
+            display: inline-block;
+            color: #999999;
+            min-width: 60px;
+          }
+          .int_value {
+            font-size: 16px;
+            display: inline-block;
+            min-width: 40px;
+            padding-right: 10px;
+          }
+        }
+
+        .interval_cell {
+          width: 30%;
+        }
+
+        .lessons_cell {
+          width: 40%;
+        }
+    }
+    .lessons_table {
+      padding: 20px;
+      .lessons_container {
+       padding-left: 20px;
+      }
+      .toc_item {
+        font-weight: bold;
+      }
+      .lesson_row {
+        margin-bottom: 10px;
+        label {
+          display: inline-block;
+          color: #276CC7;
+        }
+        .lesson_links {
+          * {
+            vertical-align: top;
+            display: inline-block;
+          }
+          width: 100%;
+          height: 26px;
+          font-size: 13px;
+          display: inline-block;
+          overflow: hidden;
+          .links_list {
+            max-width: calc(100% - 150px);
+          }
+          .lesson_link {
+            display: inline-block;
+            padding: 3px 5px;
+            margin-right: 2px;
+            margin-bottom: 4px;
+            background-color: #CCCCCC;
+            
+          }
+          .links_label {
+            padding-top: 3px;
+            padding-right: 5px;
+          }
+          .links_more, .links_less {
+            display: none;
+            padding-top: 5px;
+          }
+          &.expandable {
+            .links_more, .links_less {
+              display: initial;
+            }
+          }
+          &.expanded {
+            height: auto;
+            .links_more {
+              display: none;
+            }
+          }
+        }
+      }
+      
+    }
+    
+    
+  }
+  
+}

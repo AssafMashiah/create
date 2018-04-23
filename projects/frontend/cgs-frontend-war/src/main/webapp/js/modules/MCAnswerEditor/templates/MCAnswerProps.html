@@ -1,0 +1,33 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper mcAnswer_editor props_editor">
+    <ul class="nav nav-tabs" id="MCAnswerEditorTabs">
+       <li class="active" >
+        	<a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_answerMode">((Mode:))</label>
+                <select id="field_answerMode" data-value="obj.answerMode">
+                    <option value="mc">((Single Answer))</option>
+                    <option value="mmc">((Multiple Answers))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_optionsType">((Type of options:))</label>
+                <select id="field_optionsType" data-value="obj.optionsType">
+                    <option value="textViewer">((Text))</option>
+                    <option value="imageViewer">((Image))</option>
+                    <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.random" id="field_random" >
+                <label class="control-label" for="field_random">((Randomize answers))</label>
+            </div>
+        </div>    
+    </div>
+</div>
+

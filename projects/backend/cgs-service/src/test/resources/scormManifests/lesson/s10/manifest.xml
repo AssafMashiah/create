@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="t2k_scorm" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 4th Edition</schemaversion>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+            <general>
+                <title>
+                    <string>Main Lesson Name</string>
+                </title>
+                <language>en-US</language>
+                <description>
+                    <string>description in english</string>
+                </description>
+                <identifier>
+                    <catalog>International Standard Serial Numbers (ISSN)</catalog>
+                    <entry>http://lessonData.com</entry>
+                </identifier>
+                <structure>
+                    <source>LOMv1.0</source>
+                    <value>atomic</value>
+                </structure>
+                <aggregationLevel>
+                    <source>LOMv1.0</source>
+                    <value>2</value>
+                </aggregationLevel>
+            </general>
+            <lifeCycle>
+                <version>
+                    <string>1.0.1</string>
+                </version>
+                <status>
+                    <source>LOMv1.0</source>
+                    <value>final</value>
+                </status>
+                <contribute>
+                    <role>
+                        <source>LOMv1.0</source>
+                        <value>publisher</value>
+                    </role>
+                    <entity>BEGIN:VCARD&amp;#13;&amp;#10;VERSION:2.1&amp;#13;&amp;#10;N:publisher name&amp;#13;&amp;#10;END:VCARD</entity>
+                    <date>
+                        <dateTime>2014-01-01T00:00:00</dateTime>
+                        <description>
+                            <string>This date represents the date the author finished authoring the component</string>
+                        </description>
+                    </date>
+                </contribute>
+            </lifeCycle>
+            <metaMetadata>
+                <metadataSchema>LOMv1.0</metadataSchema>
+                <language>pt</language>
+                <identifier>
+                    <catalog>T2KTeach</catalog>
+                    <entry>serial #4</entry>
+                </identifier>
+                <contribute>
+                    <role>
+                        <source>LOMv1.0</source>
+                        <value>creator</value>
+                    </role>
+                    <entity>
+                        BEGIN:VCARD&amp;#13;&amp;#10;VERSION:2.1&amp;#13;&amp;#10;TITLE:Ms.&amp;#13;&amp;#10;FN:first_name last_name&amp;#13;&amp;#10;EMAIL;PREF;INTERNET:email@mail.com&amp;#13;&amp;#10;TEL;WORK;VOICE:09-phone&amp;#13;&amp;#10;END:VCARD
+                    </entity>
+                    <date>
+                        <dateTime>2014-12-11</dateTime>
+                        <description>
+                            <string>date descriptionasd</string>
+                        </description>
+                    </date>
+                </contribute>
+            </metaMetadata>
+            <technical>
+                <format>text/html</format>
+                <size>28567</size>
+                <requirement>
+                    <orComposite>
+                        <type>
+                            <source>LOMv1.0</source>
+                            <value>browser</value>
+                        </type>
+                        <name>
+                            <source>LOMv1.0</source>
+                            <value>ms-internet explorer</value>
+                        </name>
+                        <minimumVersion>10.0</minimumVersion>
+                        <maximumVersion>11.0</maximumVersion>
+                    </orComposite>
+                </requirement>
+                <otherPlatformRequirements>
+                    <string>display: at least 800 X 600 pixels x 256 colors</string>
+                </otherPlatformRequirements>
+                <installationRemarks>
+                    <string>technical installation</string>
+                </installationRemarks>
+            </technical>
+            <educational>
+                <description>
+                    <string>educational_description</string>
+                </description>
+                <interactivityType>
+                    <source>LOMv1.0</source>
+                    <value>mixed</value>
+                </interactivityType>
+                <language>en-US</language>
+                <learningResourceType>
+                    <source>LOMv1.0</source>
+                    <value>narrative text</value>
+                </learningResourceType>
+                <interactivityLevel>
+                    <source>LOMv1.0</source>
+                    <value>low</value>
+                </interactivityLevel>
+                <semanticDensity>
+                    <source>LOMv1.0</source>
+                    <value>medium</value>
+                </semanticDensity>
+                <intendedEndUserRole>
+                    <source>LOMv1.0</source>
+                    <value>manager</value>
+                </intendedEndUserRole>
+                <context>
+                    <source>LOMv1.0</source>
+                    <value>training</value>
+                </context>
+                <typicalAgeRange>
+                    <string>23-56</string>
+                </typicalAgeRange>
+                <difficulty>
+                    <source>LOMv1.0</source>
+                    <value>medium</value>
+                </difficulty>
+            </educational>
+            <rights>
+                <cost>
+                    <source>LOMv1.0</source>
+                    <value>yes</value>
+                </cost>
+                <copyrightAndOtherRestrictions>
+                    <source>LOMv1.0</source>
+                    <value>no</value>
+                </copyrightAndOtherRestrictions>
+                <description>
+                    <string>sad</string>
+                </description>
+            </rights>
+            <relation>
+                <kind>
+                    <source>LOMv1.0</source>
+                    <value>isrequiredby</value>
+                </kind>
+                <resource>
+                    <identifier>
+                        <catalog>Relation resource</catalog>
+                        <entry>identifier_entry</entry>
+                    </identifier>
+                    <description>
+                        <string>333-description-333333</string>
+                    </description>
+                </resource>
+            </relation>
+        </lom>
+    </metadata>
+    <organizations default="t2k_main">
+        <organization identifier="t2k_main">
+            <title>someFieldsExistOnCourseLevelAndOnManifest</title>
+            <item identifier="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb" identifierref="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb_resource">
+                <title>Main Lesson Name</title>
+            </item>
+            <imsss:sequencing>
+                <imsss:controlMode choiceExit="true" flow="true"/>
+                <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+            </imsss:sequencing>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb_resource" adlcp:scormType="sco"
+                  href="scp/index.html?locale=en_US&amp;vmode=l&amp;contentPath=../&amp;scorm=t#lessonView/11188902-10e6-4453-a799-2c3b4bf08788/courseVersion/1.0.1/lesson/1720d87c-2543-4e2f-8248-44ca8646a5eb/lessonVersion/1.0.1"
+                  type="webcontent">
+            <file href="scp/index.html"/>
+        </resource>
+    </resources>
+</manifest>

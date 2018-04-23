@@ -1,0 +1,150 @@
+#dialog.newCourse, #dialog.importEpub {
+  max-width: 88%;
+  max-height: 88%;
+  min-width: 480px;
+  min-height: 380px;
+  width: auto;
+  height: auto;
+  padding: 0px;
+  border: solid 1px #E4DFDF;
+  #dialogTitle {
+    padding: 0px;
+    box-shadow: none;
+    background-color: #f4f8fa;
+    border-bottom: solid 1px #E4DFDF;
+    height: 50px;
+    h3 {
+      color: #2D3033;
+      font-weight: bold;
+      font-size: 18px;
+      padding-left: 20px;
+      line-height: 40px;
+      padding-top: 7px;
+    }
+  }
+  #dialogContent {
+    padding: 0;
+    max-width: none;
+    max-height: none;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    form {
+      padding-top: 0px;
+      button {
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .form-control {
+        font-size: 14px;
+        color: #2D3033;
+        &:disabled{
+          color: #c2c2c2;
+        }
+        &.input-xlarge {
+          width: 95%;
+        }
+        &#newCourseName {
+          direction: ltr!important;
+          &.rtl {
+            direction: rtl!important;
+          }
+        }
+      }
+      select.form-control {
+        color: #999999;
+        &.has-value {
+          color: #2D3033;
+        }
+      }
+      #last-row {
+        margin-top: 60px;
+        margin-bottom: 0px;
+        position: relative;
+        label {
+          color: #939091;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        &:after {
+          border-top: 1px solid #E4DFDF;
+          content: "";
+          margin: 0 auto;
+          position: absolute;
+          top: -18%;
+          left: -40px;
+          right: 0;
+          bottom: 0;
+          width: 478px;
+        }
+      }
+      #button_row {
+        padding-top: 17px;
+        button {
+          display: block;
+          margin: 0 auto;
+          border: 1px solid #4391f7;
+          border-radius: 3px;
+          width: 240px;
+          height: 34px;
+          background-color: #4391f7;
+          color: #fff;
+          font-size: 16px;
+          &:disabled {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  #dialogControls {
+    display: none;
+  }
+  .form-group {
+    margin: 30px 30px 30px 40px;
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      color: #2D3033;
+      margin: 0px;
+      position: relative;
+    }
+    &.required label:before {
+      content: "*";
+      color: #4391f7;
+      font-size: 14px;
+      font-weight: 600;
+      position: absolute;
+      left: -11px;
+      top: 0px;
+    }
+  }
+}
+
+ #dialog.importEpub {
+  width: 480px;
+  #file_name , #courseName{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    white-space: nowrap;
+  }
+  #courseName {
+    width: 100%;
+  }
+  .dropoutline {
+    pointer-events: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  #dropzone.dropping .dropoutline{
+    outline: 2px dashed black;
+    outline-offset: -10px;
+  }
+}

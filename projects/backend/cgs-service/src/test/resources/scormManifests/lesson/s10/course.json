@@ -1,0 +1,309 @@
+{
+    "id": "11188902-10e6-4453-a799-2c3b4bf08788",
+    "cid": "11188902-10e6-4453-a799-2c3b4bf08788",
+    "version": "1.0.1",
+    "type": "course",
+    "format": "NATIVE",
+    "itemsData": {
+        "items": {
+            "dd5f45bb-4abe-4306-a7bd-fc722a13726a": {
+                "original": {
+                    "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a",
+                    "version": "1.0.1",
+                    "type": "lesson",
+                    "title": "New Lesson",
+                    "index": 1
+                }
+            }
+        }
+    },
+    "data": {
+        "contentLocales": ["en_US"],
+        "toc": {
+            "cid": "bb6c9d21-7988-4c75-87ee-bfb703860c62",
+            "title": "someFieldsExistOnCourseLevelAndOnManifest",
+            "overview": "",
+            "keywords": [],
+            "type": "tocItem",
+            "tocItems": [
+                {
+                    "cid": "a7ccd3b4-641a-4991-9266-3c7aaa99180b",
+                    "title": "New level ",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "standards": [],
+                    "tocItems": [],
+                    "tocItemRefs": [
+                        {
+                            "type": "lesson",
+                            "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a"
+                        }
+                    ]
+                }
+            ],
+            "tocItemRefs": []
+        },
+        "standardPackages": [],
+        "includeLo": true,
+        "publisher": "myPublishe",
+        "schema": "course_v4",
+        "standards": [],
+        "author": "asaf.editor",
+        "cgsVersion": "7.0.28.47",
+        "maxDepth": 3,
+        "title": "someFieldsExistOnCourseLevelAndOnManifest",
+        "updated": "2014-12-02T08:21:40.769+0000",
+        "assetRootHRef": "",
+        "customFields": [
+            {
+                "cid": "446a0def-01dd-4164-a92d-8e04d8b13a72",
+                "name": "\\zcx\\z",
+                "type": "text",
+                "value": {
+                    "text": ""
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_general_identifier_catalog",
+                "name": "General catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "Universal Resource Identifier (URI)"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_general_identifier_entry",
+                "name": "General catalog entry",
+                "type": "text",
+                "value": {
+                    "text": "http://www.google.com"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_identifier_catalog",
+                "name": "Metadata catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "T2KTeach"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_identifier_entry",
+                "name": "Metadata catalog entry",
+                "type": "text",
+                "value": {
+                    "text": "serial #4"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_role",
+                "name": "Metadata contributor role",
+                "type": "text",
+                "value": {
+                    "text": "creator"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_title",
+                "name": "Metadata contributor title",
+                "type": "text",
+                "value": {
+                    "text": "Ms."
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_name",
+                "name": "Metadata contributor first name",
+                "type": "text",
+                "value": {
+                    "text": "first_name"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_familyName",
+                "name": "Metadata contributor last name",
+                "type": "text",
+                "value": {
+                    "text": "last_name"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_email",
+                "name": "Metadata contributor email",
+                "type": "text",
+                "value": {
+                    "text": "email@mail.com"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_phone",
+                "name": "Metadata contributor phone number",
+                "type": "text",
+                "value": {
+                    "text": "09-phone"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_date",
+                "name": "Metadata contribution date",
+                "type": "date",
+                "value": {
+                    "date": "2014-12-11T00:00:00Z"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_date_description",
+                "name": "Metadata contribution date description",
+                "type": "text",
+                "value": {
+                    "text": "date descriptionasd"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_metaMetadata_language",
+                "name": "Metadata language",
+                "type": "text",
+                "value": {
+                    "text": "pt"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_technical_installationRemarks",
+                "name": "Technical installation comments",
+                "type": "text",
+                "value": {
+                    "text": "technical installation"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_learningResourceType",
+                "name": "Educational learning resource type",
+                "type": "text",
+                "value": {
+                    "text": "narrative text"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_interactivityLevel",
+                "name": "Educational interactivity level",
+                "type": "text",
+                "value": {
+                    "text": "low"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_semanticDensity",
+                "name": "Educational semantic density",
+                "type": "text",
+                "value": {
+                    "text": "medium"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_intendedEndUserRole",
+                "name": "Educational end-user",
+                "type": "text",
+                "value": {
+                    "text": "manager"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_context",
+                "name": "Educational context",
+                "type": "text",
+                "value": {
+                    "text": "training"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_typicalAgeRange",
+                "name": "Educational age range",
+                "type": "text",
+                "value": {
+                    "text": "23-56"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_difficulty",
+                "name": "Educational difficulty",
+                "type": "text",
+                "value": {
+                    "text": "medium"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_educational_description",
+                "name": "Educational description",
+                "type": "text",
+                "value": {
+                    "text": "educational_description"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_rights_cost",
+                "name": "License cost",
+                "type": "text",
+                "value": {
+                    "text": "yes"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_rights_copyrightAndOtherRestrictions",
+                "name": "License copyright and other restrictions",
+                "type": "text",
+                "value": {
+                    "text": "no"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_rights_description",
+                "name": "License description",
+                "type": "text",
+                "value": {
+                    "text": "sad"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_relation_kind",
+                "name": "Relation type",
+                "type": "text",
+                "value": {
+                    "text": "isrequiredby"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_relation_resource_identifier_catalog",
+                "name": "Relation resource catalog identifier",
+                "type": "text",
+                "value": {
+                    "text": "Relation resource"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_relation_resource_identifier_entry",
+                "name": "Relation resource entry identifier",
+                "type": "text",
+                "value": {
+                    "text": "identifier_entry"
+                }
+            },
+            {
+                "cid": "t2k_course_scorm2004_v4_lom_relation_resource_description",
+                "name": "Relation resource description",
+                "type": "text",
+                "value": {
+                    "text": "333-description-333333"
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "lastModified": 1417508501096,
+        "created": 1417508501096
+    },
+    "original": {
+        "courseCid": "578f782d-29db-48b0-b7d5-e6becae26bd0",
+        "version": "1.0.1"
+    }
+}

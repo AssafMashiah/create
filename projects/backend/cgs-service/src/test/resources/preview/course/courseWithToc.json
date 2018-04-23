@@ -1,0 +1,1285 @@
+{
+  "_id": "6157a392-c005-4f0a-ba80-3f013b0f9d0e",
+  "_class": "com.mongodb.BasicDBObject",
+  "cgsData": {
+    "publisherId": 2
+  },
+  "contentData": {
+    "author": "Shiri.exl Shiri.exl",
+    "cgsVersion": "7.0.482",
+    "cid": "f9af47d9-3fe7-4ef7-954c-e7e25fc72e36",
+    "courseId": "30f4f01f-e34c-424c-a8e6-6899102727e6",
+    "header": {
+      "last-modified": {
+        "$date": "2015-11-26T14:55:02.101Z"
+      }
+    },
+    "includeLo": true,
+    "maxDepth": 4,
+    "publisher": "test",
+    "supplementaryNarrationLocales": [
+      "iw_IL"
+    ],
+    "customizationPack": {
+      "name": "en_US_EFL",
+      "version": "3.7",
+      "language": "english",
+      "date": "04/03/2014",
+      "author": "Itai Ben-Naftali",
+      "structureVersion": "2.0",
+      "resourceId": "resource_2"
+    },
+    "coverRefId": "resource_1",
+    "resources": [
+      {
+        "href": "media/bc/94/bc94e35a9653980f67facc85b013c391de4c17bb.png",
+        "type": "media",
+        "resId": "resource_1"
+      },
+      {
+        "resId": "resource_2",
+        "baseDir": "customizationPack/en_US_EFL/3.7",
+        "hrefs": [
+          "manifest.json",
+          "overrides/config.json",
+          "dl/system-font.css",
+          "dl/styles.json",
+          "dl/style.css",
+          "dl/strings.js",
+          "dl/config.json",
+          "dl/systemFonts/Text-Editor-Iconfont_normal.woff",
+          "dl/systemFonts/Text-Editor-Iconfont_normal.ttf",
+          "dl/systemFonts/Text-Editor-Iconfont_normal.svg",
+          "dl/systemFonts/Text-Editor-Iconfont_normal.eot",
+          "dl/systemFonts/DL-Iconfont_normal.woff",
+          "dl/systemFonts/DL-Iconfont_normal.ttf",
+          "dl/systemFonts/DL-Iconfont_normal.svg",
+          "dl/systemFonts/DL-Iconfont_normal.eot",
+          "dl/mathfield/mathField.css",
+          "dl/mathfield/fonts/MF_T2K_US-Regular.ttf",
+          "dl/mathfield/fonts/MF_T2K_US-Italic.ttf",
+          "dl/mathfield/fonts/MF_T2K_US-Bold.ttf",
+          "dl/mathfield/fonts/MF_T2K_US-Bold-Italic.ttf",
+          "dl/fonts/ttkreg-webfont.woff",
+          "dl/fonts/ttkreg-webfont.ttf",
+          "dl/fonts/ttkreg-webfont.svg",
+          "dl/fonts/ttkreg-webfont.eot",
+          "dl/fonts/ttkbol-webfont.woff",
+          "dl/fonts/ttkbol-webfont.ttf",
+          "dl/fonts/ttkbol-webfont.svg",
+          "dl/fonts/ttkbol-webfont.eot",
+          "dl/fonts/ttk-italic-webfont.woff",
+          "dl/fonts/ttk-italic-webfont.ttf",
+          "dl/fonts/ttk-italic-webfont.svg",
+          "dl/fonts/ttk-italic-webfont.eot",
+          "dl/fonts/t2k-icons.woff",
+          "dl/fonts/t2k-icons.ttf",
+          "dl/fonts/t2k-icons.svg",
+          "dl/fonts/t2k-icons.eot",
+          "dl/fonts/SassonSansTTK_Regular.woff",
+          "dl/fonts/SassonSansTTK_Regular.ttf",
+          "dl/fonts/SassonSansTTK_Regular.svg",
+          "dl/fonts/SassonSansTTK_Regular.eot",
+          "dl/fonts/SassonSansTTK_Italic.woff",
+          "dl/fonts/SassonSansTTK_Italic.ttf",
+          "dl/fonts/SassonSansTTK_Italic.svg",
+          "dl/fonts/SassonSansTTK_Italic.eot",
+          "dl/fonts/SassonSansTTK_Bold.woff",
+          "dl/fonts/SassonSansTTK_Bold.ttf",
+          "dl/fonts/SassonSansTTK_Bold.svg",
+          "dl/fonts/SassonSansTTK_Bold.eot",
+          "defaults/stylesDefaults.json",
+          "defaults/stringsDefaults.js",
+          "cgs/config.json",
+          "cgs/cgsStyles.css",
+          "cgs/media/f726eced3d38568b69189037019846f48a412e49.mp3",
+          "cgs/media/f537f5144701720ff16dc685f60b223675910326.mp3",
+          "cgs/media/f4c2bb5a18b7385f8a02cadfd9945101cc68c1f1.png",
+          "cgs/media/e6bf173feb4b8d7263688050fe0481e23608c2f0.mp3",
+          "cgs/media/e3779cb45814bbb1ebac4f9218188d25bea2a03f.mp3",
+          "cgs/media/dee43ed61d555825e7851eab21606ed9662a64da.mp3",
+          "cgs/media/d94f568f63e93dd4940740f6fe7e558a3e983063.mp3",
+          "cgs/media/d6fb52c1645390de2b8ea2444a99cabfa98798b1.mp3",
+          "cgs/media/cfc61d7b88755e6cda40e4a4c01716c08b06be60.mp3",
+          "cgs/media/ca0c39eb3c3a4d7652e5d2e197ee852e68b90395.png",
+          "cgs/media/c5fbf367a32b0662676a187e2811db8b4e851f1d.mp3",
+          "cgs/media/c33268432d157a035aea2bfcfa324d0211354a85.mp3",
+          "cgs/media/c1975c171d851c9520b981a38b9df60a5e3257e8.mp3",
+          "cgs/media/b749a15ba05877368057bd25cadde680e591ce1e.mp3",
+          "cgs/media/b6acc15821368001d72632434b918ed418655718.mp3",
+          "cgs/media/a7ff1d57ddf64efe768ce12d35af413e8c8e8b4e.mp3",
+          "cgs/media/a59123de834c11f75b3592a966cb6bc13c26095c.mp3",
+          "cgs/media/a0326b8b3f80a79c3e4d917c356de6cd8eb05353.mp3",
+          "cgs/media/9034d2fb0165c370758f859cb9424c2d374f59d1.mp3",
+          "cgs/media/8ef10519192b0f6927dfab8e11be8321e7c556c7.png",
+          "cgs/media/84cb5e1d7da4aaf65b48918c8398f39f84912259.mp3",
+          "cgs/media/845027c599ed4383c099b7c4ad2bea0a6a6a0a09.mp3",
+          "cgs/media/818a3f012bc61a95775f39bca9b143f26f9e5db9.mp3",
+          "cgs/media/79608398c95045fa6c773b7cc097362dea404708.mp3",
+          "cgs/media/776fb17a49a2193f316d653ff5ff998484e4f8f7.mp3",
+          "cgs/media/769d5755f57dbd091934933448da3b8f0cc40d35.mp3",
+          "cgs/media/6b6b668c0714c12080a28ff1fd052aa20d3b9048.mp3",
+          "cgs/media/6b2c410a3fe2bf53c2d1eba16a23ec6247acc4e9.mp3",
+          "cgs/media/677321dc3d0afa277e91de16697e3c281e4d14eb.mp3",
+          "cgs/media/64e2ad91b16c50911d9c9485ea3f37b431485bba.mp3",
+          "cgs/media/60337c3506650a468ef61f42b249e5e0ebb427f8.mp3",
+          "cgs/media/5eb2505f00152509f6f948c33a4c929d7487b358.mp3",
+          "cgs/media/5153099379df97b590221182c809d23347253422.mp3",
+          "cgs/media/4d24d5244d2a0e92fffbc617912838b22c545ac5.mp3",
+          "cgs/media/497e261092f9f334a4268794e2235b8fb133334c.mp3",
+          "cgs/media/45122d235f12822e3e9dd786b5479e4eb3dbd61d.mp3",
+          "cgs/media/3bd90f5dc8f99690a75c3f1ad8d39e397c9693dd.mp3",
+          "cgs/media/22056622ca7fc82b00c3cca374370bba5eafce99.mp3",
+          "cgs/media/20ed93a60b2d6516e4c82092c5c9cb697db016e0.mp3",
+          "cgs/media/1b992a8bf7d9caea316c8472cee82374e185a6a2.mp3",
+          "cgs/media/10cdf8aebf663a821d45e6e28beec976798dcc18.mp3",
+          "cgs/media/0f3c41eddbed815302eb173d68d4deacf24a5815.mp3",
+          "cgs/media/0d806c19267952d98b168015cbcf95cfcb1b76b7.mp3",
+          "cgs/media/051abf5fb1b1fea9c6d4332b9b4ae7f5484c21e0.mp3"
+        ],
+        "type": "lib"
+      }
+    ],
+    "schema": "course_v5",
+    "standards": [],
+    "standardPackages": [
+      {
+        "stdPackageId": "standards_english_2.1",
+        "name": "standards",
+        "subjectArea": "english",
+        "version": "2.1"
+      },
+      {
+        "stdPackageId": "skills_english_1.0",
+        "name": "skills",
+        "subjectArea": "english",
+        "version": "1.0"
+      }
+    ],
+    "title": "Foundation Level Stage 1",
+    "contentLocales": [
+      "en_US"
+    ],
+    "subjectArea": [
+      "English"
+    ],
+    "overview": "Time To Know English is a multi-sensory program for teaching English as a second or a foreign language (ESL/EFL). As a fully balanced literacy curriculum, the curriculum emphasizes the development of reading, writing, listening, speaking, and pronunciation skills. The pedagogical approach of the program is based on the following principles:\n- Learning occurs when students are engaged in experiential activities that encourage them to construct meaning and gain new understandings.\n- A second or foreign language is acquired most successfully when students use language in context for communicative purposes.\n- The spiraling of vocabulary and literacy skills reinforces the material learned and also allows for the teaching of increasingly higher levels of complexity.\n- The learning environment stimulates students to develop 21st century thinking skills rather than simply memorizing data.  \nThe program includes a rich variety of media and texts to offer differentiated stimuli that cater to many levels of interest, proficiency, and learning styles. Various types of scaffolding are provided throughout the content in the form of hints, help, feedback, and narration.\nInteractive language applets are integrated into lessons to help students build understanding and construct meaning.  \nFormative and summative assessments throughout the program facilitate data-driven teaching.",
+    "credits": "Time To Know",
+    "toc": {
+      "cid": "dafac9f8-4941-4608-bb6f-bb932facbb9f",
+      "title": "Foundation Level Stage 1",
+      "overview": "Time To Know English is a multi-sensory program for teaching English as a second or a foreign language (ESL/EFL). As a fully balanced literacy curriculum, the curriculum emphasizes the development of reading, writing, listening, speaking, and pronunciation skills. The pedagogical approach of the program is based on the following principles:\n- Learning occurs when students are engaged in experiential activities that encourage them to construct meaning and gain new understandings.\n- A second or foreign language is acquired most successfully when students use language in context for communicative purposes.\n- The spiraling of vocabulary and literacy skills reinforces the material learned and also allows for the teaching of increasingly higher levels of complexity.\n- The learning environment stimulates students to develop 21st century thinking skills rather than simply memorizing data.  \nThe program includes a rich variety of media and texts to offer differentiated stimuli that cater to many levels of interest, proficiency, and learning styles. Various types of scaffolding are provided throughout the content in the form of hints, help, feedback, and narration.\nInteractive language applets are integrated into lessons to help students build understanding and construct meaning.  \nFormative and summative assessments throughout the program facilitate data-driven teaching.",
+      "keywords": [],
+      "type": "tocItem",
+      "tocItemRefs": [
+        {
+          "cid": "755cd2ba-32e0-470f-9404-97b02ff38794",
+          "type": "lesson"
+        },
+        {
+          "cid": "763b706b-b1aa-493b-bd69-190a3e7b4601",
+          "type": "lesson"
+        }
+      ],
+      "tocItems": [
+        {
+          "cid": "3a07df70-59de-418c-9324-11f4cbf7f4a0",
+          "title": "Early Beginner",
+          "overview": "Time To Know English is a multi-sensory program for teaching English as a second or a foreign language (ESL/EFL). As a fully balanced literacy curriculum, the curriculum emphasizes the development of reading, writing, listening, speaking, and pronunciation skills. The pedagogical approach of the program is based on the following principles:\n- Learning occurs when students are engaged in experiential activities that encourage them to construct meaning and gain new understandings.\n- A second or foreign language is acquired most successfully when students use language in context for communicative purposes.\n- The spiraling of vocabulary and literacy skills reinforces the material learned and also allows for the teaching of increasingly higher levels of complexity.\n- The learning environment stimulates students to develop 21st century thinking skills rather than simply memorizing data.  \nThe program includes a rich variety of media and texts to offer differentiated stimuli that cater to many levels of interest, proficiency, and learning styles. Various types of scaffolding are provided throughout the content in the form of hints, help, feedback, and narration.\nInteractive language applets are integrated into lessons to help students build understanding and construct meaning.  \nFormative and summative assessments throughout the program facilitate data-driven teaching.",
+          "keywords": [],
+          "type": "tocItem",
+          "standards": [],
+          "tocItemRefs": [
+            {
+              "cid": "eab40dcf-3cd9-4327-94dc-1403faa43c7c",
+              "type": "lesson"
+            }
+          ],
+          "tocItems": [
+            {
+              "cid": "0fcc7264-f864-4699-8b37-9c982d438c7e",
+              "title": "Reading Module 1",
+              "overview": "Integrated into the Reading program are the various skills necessary for building a sound foundation in literacy; the alphabet, phonological awareness, vocabulary, and comprehension. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.\n",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "cc3dfad3-2bfb-45ac-88f9-2b03986d3677",
+                  "title": "Alphabet and Letters \"Tt\", \"Ii\", \"Pp\" ",
+                  "overview": "This unit focuses on learning the alphabet and the letters “Tt”, “Ii”, and “Pp”. Students begin the unit by learning all the letters of the alphabet and words that begin with each letter. Students complete reading, speaking, listening, vocabulary, and writing activities about the letters “Tt”, “Ii”, and “Pp”, and the sounds that they make. As students learn new letters, they learn to say, read, and understand new words. In the lessons students are also introduced to high frequency words. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "27aa1b79-8cd0-422f-bcba-7ca2ec65904a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ee2a413a-5ccf-4222-8a91-41b6754cb763",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c28ca5c7-2cb1-4170-9413-dcba1bc1c287",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "0094c68e-7899-4867-a8d0-1b4c33e8b8d5",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "35617c64-a5f5-4d29-9787-45e351727cd2",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "4f409fce-e44b-4cec-9b68-e2202457da5e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "6887b4cd-1fa0-417a-9089-a1170652217c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "48ef4026-249f-452e-b802-a5957aea4428",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c8c124db-bcfa-4ade-9d71-99f20d122426",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "99080cf2-a0bf-430e-9897-68c9090ea033",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "cdafac56-d2a4-4483-8337-233d80a661b6",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                },
+                {
+                  "cid": "1b13edef-6a2b-4783-9bd5-7eb9977b3667",
+                  "title": "Letters \"Nn\", \"Ss\"",
+                  "overview": "This unit focuses on the letters “Nn” and “Ss”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson at the end of the unit, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "f5057d81-57eb-4f8b-9ab6-13731010cac6",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "9fee208c-3e49-4bc3-a400-2995382aac67",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ed56a970-ce69-405e-82a4-2616ce792880",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "2761404f-6ada-4e14-89f1-4401ae6ddfa8",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "a5b78ed0-af5d-4a70-9c33-b5372a0773ca",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3ac4a6dd-45fd-40c2-91bb-6235cf48bdb5",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "cb69aee3-0af1-4a66-ac7d-423137ee207b",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "f2eededd-7b1a-4ec2-956a-83566b41cc51",
+              "title": "Theme Module 1",
+              "overview": "The Theme units in Stage 1 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures such as word order. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "bc4b6de5-cba6-449b-a3ef-b8821a6cc28c",
+                  "title": "Characters",
+                  "overview": "The Characters unit introduces students to the eight Power Kids and their teacher, Rob the robot. In the unit students learn how to introduce themselves and use basic sentence structures such as 'My name is...' and 'I am a boy/girl. \n\nStudents are exposed to the pronouns 'you/he/she' and the possessive pronouns 'her/his/your'.\n\nThe unit consists of reading, listening, speaking, and sentence structure activities. Many activities have three levels, allowing all students to participate equally in the lessons.\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students write a dialogue with the help of prompts, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [
+                    ""
+                  ],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "e1f4e451-054e-421b-92dd-9dad5aab325e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "53b55276-f47b-4b5b-80c0-94375107fe40",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3937eb24-aae6-40d8-a230-f0c27d13779f",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ae7a81a3-ccfd-42bd-8926-6076f82b76eb",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "878d4a85-e076-4229-82a9-75144982220e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "12f65896-90bc-4cd8-98ea-3e6c428941fb",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "76e039cc-e8fd-4d20-aa46-bad887373711",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "7f205d92-5a00-4b7f-8a7e-1239cabfd67f",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "81cffaf8-2046-47a3-b244-1e8337a2df75",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "0b0dca74-1c23-4eca-b20d-28e8a21e702b",
+              "title": "Reading Module 2",
+              "overview": "Integrated into the Reading program are the various skills necessary for building a sound foundation in literacy; the alphabet, phonological awareness, vocabulary, and comprehension. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.\n",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "2c770f85-1cdb-4153-9b03-5432695f4f85",
+                  "title": "Letters \"Aa\", \"Dd\", \"Hh\"",
+                  "overview": "This unit focuses on the letters “Aa”, “Dd”, and “Hh”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [
+                    "letters"
+                  ],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "fc4a1b83-662f-4f7e-be00-7c7076868c3e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "98b7cb15-1063-402d-a9cf-5c69ae7c5f19",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c5f4d58b-da49-40a4-ae9c-5941dfd55d1a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c70ed73e-f3f6-4855-8612-d21a4c141a0c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f68bc436-0464-468f-a231-54b6df983200",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "e795ea26-0547-40e3-b0fd-07aa4b94471f",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c8edccc0-e614-406a-85cf-70249f72a207",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3fe56bac-06fd-435a-875b-833a5905817a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "66338527-985d-4e0e-ab3b-04515c6f2b79",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "992bf156-9686-446b-badf-a695c2cb4397",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "703547b3-a008-4d8d-ae3f-8553a65737ff",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "3dcf78ce-c113-4670-af7e-83fcff3f069f",
+              "title": "Theme Module 2",
+              "overview": "The Theme units in Stage 1 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures such as word order. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "27e56fce-adb9-4a87-87a5-9dacfe8d25c1",
+                  "title": "Food",
+                  "overview": "In the Food unit students learn the names of different foods and the sentence structures 'I like/I want/I am hungry.' Students also learn how to express their eating habits, including their like or dislike of certain foods.\n\nStudents read the poem \"I am Hungry\" and have the opportunity to use their listening, reading, writing, and speaking skills throughout the unit. Many activities have three levels, allowing all students to participate equally in the lessons.\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students create a menu, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n\n\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "9d8c27ed-e1f8-431f-8a16-2dfbba8fe0ec",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "888718ae-fa46-455b-ac35-30cc8a254611",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "cc102b87-c222-45c1-b5ce-7cf508c44d6e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "cd327769-47ef-4420-bd7e-1dfb7d5fe1bf",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "b7c8400e-25fc-4b3d-ba55-3f411cb6b44b",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "1fcc5e4e-3875-4ba4-b314-4398c7d06ec7",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "4d9e4782-a5ab-4ede-a889-538c00c8cabe",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3429dfd9-028a-4f16-b534-16a26265fb50",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "49b6e85a-338b-482a-bd3f-e380993ba65e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "5421e770-7d88-44a3-beb5-af50b0e17120",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "2a446be6-5586-4258-b3a8-e4b82897076e",
+              "title": "Reading Module 3",
+              "overview": "Integrated into the Reading program are the various skills necessary for building a sound foundation in literacy; the alphabet, phonological awareness, vocabulary, and comprehension. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.\n",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "94c7acbe-ffd4-47f7-a604-7b3fe241544a",
+                  "title": "Letters \"Cc\", \"Kk\"",
+                  "overview": "This unit focuses on the letters “Cc” and “Kk”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "4131255e-afcc-4ec1-9ba7-4603b32cbd0a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f66efaf8-2bb2-4fc8-8d03-ad5a73535b20",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3dcca302-d5e7-45d1-9083-c070bea11757",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "62c99077-f989-4a23-ada1-fb37eb1e85dc",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "11706b39-015c-4846-aed1-5a6928d6afb8",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "6476d515-736b-4f51-90d9-d0c6f9d5b85a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "2eff798c-4255-430a-98fe-343be286a35b",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "d61a00e4-eef6-4c5c-aa49-093759b5bc8e",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "2022189f-033b-4f44-be65-3b00c4566e1c",
+              "title": "Theme Module 3",
+              "overview": "The Theme units in Stage 1 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures such as word order. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "b960e1a0-e47d-4a11-a06e-4576d4d3ccf8",
+                  "title": "Colors and Clothes",
+                  "overview": "The Colors and Clothes unit teaches students the names of colors and clothes. In the unit students learn how to use adjectives when describing nouns and how to construct sentences with 'to be/to have'. \n\nStudents read and sing \"Colors Song\" and have the opportunity to use their listening, reading, writing, and speaking skills throughout the unit. Many activities have three levels, allowing all students to participate equally in the lessons.\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students design and describe an outfit, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "dc577556-be68-4185-a017-89e26eb4cb8c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "494c3831-de98-4ee9-bbae-29c804c3887e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d8aadd51-5832-46f7-94fc-512e2ec061ac",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "881ae166-a689-45e3-afea-2e955ca682b6",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "97972947-5e45-43d3-89dd-2cd0cd40208a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "86b37a4a-83f1-4bbd-b91d-e7d03809c06b",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "a4bb8ff1-8406-4f44-a00a-4cc08eb1c00d",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "08997f4a-aa43-4b41-be1f-d31de4f539ac",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "7b52336f-cdae-47ce-a4b0-92b496fe71d5",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ab6107cb-7a7a-4a22-81c9-866f940ac8ac",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "54bb1c5f-f626-45f8-aa66-18bc6584e166",
+              "title": "Reading Module 4",
+              "overview": "Integrated into the Reading program are the various skills necessary for building a sound foundation in literacy; the alphabet, phonological awareness, vocabulary, and comprehension. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.\n",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "940bd626-bc51-4914-8f64-0ea598f8b3ce",
+                  "title": "Letters \"Bb\", \"Oo\", \"Rr\"",
+                  "overview": "This unit focuses on the letters “Bb”, “Oo”, and “Rr”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "595bab1a-7eea-495d-94b2-a0d7b30e6d46",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f39934fd-0119-4587-82dd-14c4fe334cc8",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "57473f52-a858-4e6c-8181-90cab96d3a61",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "298407ac-af7e-49f4-96c8-4bcf448127eb",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "eda407ce-a36c-4cff-aa01-7300450cf78a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "63ace778-6974-4672-825e-89d20a43c02c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f007b0e5-74a7-48ff-bedd-787590f6704d",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "b3f46d52-1681-4b2a-90f6-2e7d8258305a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "eb417409-c7da-4662-b056-6e0c58bd3e12",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "1c4de626-146a-48a4-a385-9fbc93ba6c9d",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "3c1ce768-74f6-4e15-8a92-3a5f03b72df1",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                },
+                {
+                  "cid": "2fd28ada-8b04-4308-94b4-d1c5f04f7cb7",
+                  "title": "Letter Combinations “ck”, “ar” and Letter “Mm”",
+                  "overview": "This unit focuses on the letter combinations “ck”, “ar”, and the letter “Mm”. Students complete reading, speaking, listening, vocabulary and writing activities about each letter or letter combination. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter or letter combination, which synthesizes what they have learned about the letter combination while developing reading comprehension skills.  The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "04dda921-26e5-42e9-9d95-a5367a64e3e1",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "0808c566-88eb-4713-a0ed-516bb38b6c1b",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "9015eb9f-b9c0-4e78-b1b8-6170885e1e6e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "b1562f23-ce72-4d51-9281-788900a81b13",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "e4a790b7-721a-4552-9645-d613317c2e8e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "0e05ef24-540f-46c5-b1e1-90d308323bab",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c0077911-573d-41c7-a43a-c626988d9ca1",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "6233ff1b-15ac-476b-9925-4f8bd296b619",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "9480a010-8e09-4b85-bff4-4aa4fcfd6966",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "97fb902d-cf93-4cf3-9b42-1254f268e62f",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": "8e3a1fad-9d70-4efe-8318-72fbc6d5dac3",
+          "title": "Beginner",
+          "overview": "Time To Know English is a multi-sensory program for teaching English as a second or a foreign language (ESL/EFL). As a fully balanced literacy curriculum, the curriculum emphasizes the development of reading, writing, listening, speaking, and pronunciation skills. The pedagogical approach of the program is based on the following principles:\n- Learning occurs when students are engaged in experiential activities that encourage them to construct meaning and gain new understandings.\n- A second or foreign language is acquired most successfully when students use language in context for communicative purposes.\n- The spiraling of vocabulary and literacy skills reinforces the material learned and also allows for the teaching of increasingly higher levels of complexity.\n- The learning environment stimulates students to develop 21st century thinking skills rather than simply memorizing data.  \nThe program includes a rich variety of media and texts to offer differentiated stimuli that cater to many levels of interest, proficiency, and learning styles. Various types of scaffolding are provided throughout the content in the form of hints, help, feedback, and narration.\nInteractive language applets are integrated into lessons to help students build understanding and construct meaning.  \nFormative and summative assessments throughout the program facilitate data-driven teaching.",
+          "keywords": [],
+          "type": "tocItem",
+          "standards": [],
+          "tocItemRefs": [],
+          "tocItems": [
+            {
+              "cid": "53aa0429-ef4a-4efa-b4d8-607f0f8ce7a7",
+              "title": "Theme Module 1",
+              "overview": "The Theme units in Stage 2 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures, such as singular and plural verbs, adjectives, and prepositions of place. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "cda3c0dc-031f-4aa3-8a7e-ec89f1b66dfa",
+                  "title": "Animals",
+                  "overview": "In the Animals unit, students learn the names of animals, body parts, and the use of adjectives. \n\nStudents read and sing \"Old MacDonald\" and \"There Was an Old Woman,\" and have the opportunity to use their listening, reading, writing, and speaking skills throughout the unit. Many activities have three levels, allowing all students to participate equally in the lessons.\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students design a safari park, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "02d6d106-4988-4023-801d-6b9ae909fb09",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "1b4ac954-b334-48dc-8ec3-91466f3fcbe4",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "68883ffa-c1b2-457f-a69e-1792bb905be0",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d426d0a7-b4f3-4c20-9fc9-9b093dd2a70b",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "8111401f-ee16-4dcf-a2d8-7f34bf7e8b09",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "8d7fd092-c939-41d1-b3c2-1152bdc67906",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "58f3296c-146c-411d-a059-26777eaaf01c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "1c9014fc-c2ee-4b90-a12c-bcc985f82636",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "456dc28c-bc86-4a77-b766-b3185d3e3571",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "7dd960dd-7ea6-4a2e-bbbe-6c33e956a353",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "a56f5afe-dac1-4e89-807d-4b7f68c38a40",
+              "title": "Reading Module 1",
+              "overview": "The Reading program in Stage 2 introduces additional letters, while building skills in phonological awareness and pronunciation. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "85141c16-317b-4af6-9197-501290d8f49e",
+                  "title": "Letters \"Ll\", \"Ff\", \"Ee\"",
+                  "overview": "This unit focuses on the letters “Ll”, “Ff”, and “Ee”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [
+                    ""
+                  ],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "8bbbf808-802c-42de-bf97-c38fd11a4386",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "22fbd7a6-571b-4964-8f8b-0053a3b7c1e3",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "73e833d8-ab79-4ce2-ae80-d79fff39fb68",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d9725d50-d364-4c78-982c-ec557d219a1e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "092e1ec3-0c73-46b1-8eea-b83b299aea25",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c975f806-690f-4ab4-9a51-6c919c31311e",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "8ea6656e-12f2-4b02-8bcb-d8ce3e737539",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d50c3c93-08d1-4bc3-a472-b9e36f62750f",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "93211c5d-091e-4a13-9615-aed6ad3990b9",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "8ae74334-2534-4fce-9f76-db800689a884",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "92e3e3a7-dbc0-403a-ad2e-7fbd6bf7a000",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "acb150ff-5564-4d69-bf3f-c20239bc6423",
+              "title": "Theme Module 2",
+              "overview": "The Theme units in Stage 2 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures, such as singular and plural verbs, adjectives, and prepositions of place. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "a575deb7-6224-44ed-b80b-c33f397092b2",
+                  "title": "School",
+                  "overview": "In the School unit, students learn vocabulary related to school. The sentence structures used in this unit focus on asking and answering questions about the location of objects and the use of prepositions of place. \n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students design and describe a room, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "72c97ddf-93dc-459c-b066-696b22bd4383",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "60196066-763f-49d2-8060-9ffacb3d5ab6",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "769decb2-5f31-4fbe-819f-606c9e0b88bb",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "5657e59a-f90a-49eb-875f-21c0be2fb77f",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "57d7d0a3-2af3-4f54-abd4-ea747265a226",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "76770ef1-2a01-4de8-9729-bc3942a68a4c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "14555a28-c0ab-45c0-a0bc-bac9d8f333ee",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "67979b08-7794-4034-91ee-c68fc940fdbc",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "71a1a3f0-79fe-4092-ae59-f5aa59984f20",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f0fc7086-87bc-45dd-8c5a-6b00131eff81",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "1be3f1e2-9251-4976-ac82-7d267dc63558",
+              "title": "Reading Module 2",
+              "overview": "The Reading program in Stage 2 introduces additional letters, while building skills in phonological awareness and pronunciation. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "e2d250a7-5ea4-433c-b91f-843fb3d3a9e2",
+                  "title": "Letters \"Gg\", \"Yy\", \"Ww\"",
+                  "overview": "This unit focuses on the letters “Gg”, “Yy”, and “Ww”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "8226ce06-6f20-45a0-8371-ae9c912c5be3",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "8bb6619e-332c-49aa-8dc1-68368d9f0568",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "62f3d415-f210-4f42-a6f9-efc61b91293a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ddcf6ef4-5a88-4db1-9b9f-4e8c176a4be4",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "c3f0bca8-cec6-44bb-9bfb-0db71015cb93",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "cb4548da-7fa3-45df-907d-23214f012809",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "63caa4bb-79a9-46f7-a99a-98d28f65d235",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "1e68f2d2-e19e-4ef7-8525-994cccaa75d3",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "a3404b4e-8608-4e5f-ba1a-86c38647f404",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "973479cb-bc17-45cc-829c-dd2663772e71",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "9f68cf88-721a-4d86-9a37-5eba9eb3fa25",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "f0ea85ce-02aa-4af4-b0ea-e8e482f26b9c",
+              "title": "Theme Module 3",
+              "overview": "The Theme units in Stage 2 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures, such as singular and plural verbs, adjectives, and prepositions of place. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "12676734-c61b-4e5e-96e4-238af04c305a",
+                  "title": "Numbers",
+                  "overview": "In the Numbers unit, students are introduced to the topic of numbers. Students learn the language of buying and selling, such as \"How much is it?\" and \"It is ..........cents.\"\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students create a counting book, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "401405f8-4815-4b94-a782-c267fe33c39c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "cee1d9d0-b593-495a-8e61-18149f73d2a6",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "172269ca-16b0-4540-a4ba-097bb22a26cb",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "6a017243-560d-423e-bf67-10fbdcc58db5",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "b22b66ed-64fa-4cc8-aadd-c5ceb16abf34",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "4c4cf7b2-9ba6-4667-93b7-a1bfa308304d",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "75b11f39-a5e2-4871-a03b-4b567ed7ebe6",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "ed9ec453-3b2f-4ca1-8610-a617922a0eb9",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "b5653fe0-e411-4041-a844-a6576038c00c",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "7019a2e5-29d2-4fa7-a7e1-1f1fefa9681f",
+              "title": "Reading Module 3",
+              "overview": "The Reading program in Stage 2 introduces additional letters, while building skills in phonological awareness and pronunciation. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "bdb70945-fde2-4c92-b426-361a9b7d23e9",
+                  "title": "Letters \"Vv\", \"Jj\", \"Uu\"",
+                  "overview": "This unit focuses on the letters “Vv”, “Jj\", and “Uu”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "0128f61d-30dc-4bf5-b18f-6bcdbe07f5b2",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "2d073c1d-029d-44ea-a62b-109c7da186e8",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "a6cf9a4f-2ae0-4e8f-b5cb-03dcb69c8dbf",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "947bc3db-2e81-450f-9f21-5f9dad40feb4",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "12165db9-9daf-4514-bb23-81a0c93d9ccd",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "68ff2163-b069-4933-b7ed-db65e74fddfd",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "2c0c4b63-ed48-42cb-bbb4-f396f933cb35",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "385f0f03-8ec1-4e82-850e-c72a68bc370a",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "978da361-c984-4add-ae69-220281e84472",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f2b42136-2017-426c-bb02-9fb08185c357",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "360114de-d87a-4be5-8065-f01504b3439f",
+                      "type": "lesson"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "1ee93c65-0708-4409-abc4-fcf2f1e1f4bd",
+              "title": "Theme Module 4",
+              "overview": "The Theme units in Stage 2 develop students' aural-oral skills for understanding and producing basic sentences. Each Theme unit is based upon a theme or topic relevant to the learners’ world. The content of the Theme exposes students to simple language structures, such as singular and plural verbs, adjectives, and prepositions of place. During practice exercises, students communicate in simple sentences and read short, simple texts with fluency and clear pronunciation.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "2994eb5a-3f10-4525-a8ed-65dd616fbdd0",
+                  "title": "My Family",
+                  "overview": "In the Family unit, students are introduced to the vocabulary and language structures associated with family members and family relationships. Students learn the names of family members and the language used to describe them.\n\nThroughout the unit students are encouraged to interact with each other. There are activities that specifically relate to the domain of social interaction.\n\nThe unit concludes with a Performance Task in which students create a family album, and complete an Assessment.\n\nThe Vocabulary PAL adaptive learning applet appears at the end of every core theme lesson.\n",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "ee88054e-775a-4622-96d7-3e161a5debfa",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "e0ef4570-b96b-40dc-8a13-f5a6da656726",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "68c31ef3-5bc2-410c-8127-f25b669af4e4",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "2dfc45f4-6a21-4687-9297-342f9f544758",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d2361b97-7e0a-4f51-87d0-76c25c3447a4",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "388f21b5-0e7a-4edc-9cb9-0b842fd92c9c",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "50b80ce5-d780-4c94-a530-fada9f2b1f7d",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "082976ab-5c5f-4d1d-90d4-ae23eda0ee58",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "f4fb66d4-480f-42d8-bc97-a1d8abc750ec",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "3131021d-58a8-4702-98e1-ec843c5ec371",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            },
+            {
+              "cid": "80f3e18f-f46c-4989-b9bb-716f8f4c573c",
+              "title": "Reading Module 4",
+              "overview": "The Reading program in Stage 2 introduces additional letters, while building skills in phonological awareness and pronunciation. The letters of the English alphabet are taught according to the sound-spelling correspondences through animations that demonstrate shapes, sounds, words, images, and positions on the keyboard. Students practice both perception and production of target sounds to develop accurate pronunciation. At this stage, consonants and vowels are used in words following the consonant-vowel-consonant (CVC) pattern. Stories using the studied letters allow students to succeed in reading aloud and producing the words correctly.",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItemRefs": [],
+              "tocItems": [
+                {
+                  "cid": "4382e450-bca0-414d-9bae-af05050b54b2",
+                  "title": "Letters \"Xx\" , \"Qq\", \"Zz\"",
+                  "overview": "This unit focuses on the letters “Xx”, “Qq”, and “Zz”. Students complete reading, speaking, listening, vocabulary, and writing activities about each letter and the sound that it makes. As students learn new letters, they learn to read, say, and understand new words. In the lessons students continue to develop and practice their knowledge of high frequency words. There is also a story comprehension lesson focusing on each letter, which builds on the new words they have learned while developing reading comprehension skills. The unit concludes with an assessment event.",
+                  "keywords": [],
+                  "type": "tocItem",
+                  "standards": [],
+                  "tocItemRefs": [
+                    {
+                      "cid": "fdf492bb-b842-444c-a70b-9d554f0c5b08",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "47c9c11b-34c6-49e3-a09e-57ef446551a3",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "752fa599-2aef-434e-a22b-455485dddd91",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "be8f70cd-a2f3-45ef-9785-9ff28d2ab582",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "d1c7f9c7-cea3-43a9-952c-525ed2ef17a0",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "68031c2b-137d-41b2-a2f3-9156d3a2f556",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "98536870-6291-4cb2-a568-8c78ab838701",
+                      "type": "assessment"
+                    },
+                    {
+                      "cid": "ec110208-77d7-4dfd-b4a5-5c111d165189",
+                      "type": "lesson"
+                    },
+                    {
+                      "cid": "a69e48aa-30d5-4dca-92e7-c77216b9e93d",
+                      "type": "assessment"
+                    }
+                  ],
+                  "tocItems": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": "3b9cbbc3-28c3-46a9-a637-4953d79595df",
+          "title": "English With Time To Know ",
+          "overview": "",
+          "keywords": [],
+          "type": "tocItem",
+          "standards": [],
+          "tocItemRefs": [
+            {
+              "cid": "fea37abc-7069-4cee-b6f7-819bf31f93e1",
+              "type": "lesson"
+            }
+          ],
+          "tocItems": []
+        }
+      ]
+    },
+    "type": "course",
+    "version": "1.0.0",
+    "differentiation": {
+      "defaultLevelId": 2,
+      "levels": [
+        {
+          "id": 1,
+          "name": "Pre-Level",
+          "acronym": "Pre"
+        },
+        {
+          "id": 2,
+          "name": "On Level",
+          "acronym": "On"
+        },
+        {
+          "id": 3,
+          "name": "Above Level",
+          "acronym": "Abv"
+        }
+      ]
+    },
+    "customFields": [],
+    "ttsServices": {},
+    "format": "NATIVE"
+  }
+}

@@ -1,0 +1,43 @@
+div.teachersGuide div.inputField {
+    width: 100%;
+    overflow-y: auto;
+    margin: 0 10px 0px 0px;
+    padding: 10px 0px 0px 10px;
+    outline: none;
+    border: solid 1px #CCC;
+    height: 350px;
+}
+
+div.teachersGuide div.menu_button {
+    width: 30px;
+    height: 30px;
+}
+
+.teachersGuide .icon-picture,
+.teachersGuide .icon-comment-alt {
+    font-size: 27px;
+    padding: 3px 0;
+    margin: 0;
+}
+
+.teachersGuide .icon-arrow-up,
+.teachersGuide .icon-arrow-down {
+    font-size: 25px;
+    padding: 3px 0;
+    margin: 0;
+}
+
+div.teachersGuide div.inputField img {
+    max-width: 125px;
+    max-height: 125px;
+}
+
+.tg_references {
+    border: 1px solid #000;
+    padding: 6px;
+    background: #FFF;
+}
+
+.font-13{
+    font-size: 13px;   
+}

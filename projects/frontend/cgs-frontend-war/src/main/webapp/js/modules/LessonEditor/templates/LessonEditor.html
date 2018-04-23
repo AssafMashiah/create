@@ -1,0 +1,129 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper lesson_editor props_editor">
+    <ul class="nav nav-tabs" id="LessonEditorTabs">
+        <li class="active"><a href="#properties" data-toggle="tab">((Props.))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+        <li><a href="#guide" data-toggle="tab">((Teacher's Guide))</a></li>
+        {{#controller.showMetadataTab}}
+        <li><a href="#customCourseMetadata" data-toggle="tab">((Metadata))</a></li>
+        {{/controller.showMetadataTab}}
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((lesson)) ((name:))</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" maxlength="200" class="input-large">
+                    <span class="help-inline error" id="field_title_err"
+                    style="display:none">((This field is required))</span>
+                </div>
+            </div>
+            {{#controller.isEbookType}}
+            <div class="control-group">
+                <label  class="control-label" for="field_placement">((lesson.props.book_alive.odd_pages_display.label)):</label>
+                <select id="field_displayOddPages" data-value="obj.displayOddPages" class="input-large lesson_type">
+                    <option value="left">((lesson.props.book_alive.odd_pages_display.left))</option>
+                    <option value="right" selected>((lesson.props.book_alive.odd_pages_display.right))</option>
+                </select>
+            </div>
+            {{/controller.isEbookType}}
+            <div class="control-group">
+                <label class="control-label" for="field_overview">((Additional information)):</label>
+                <div class="controls">
+                    <textarea rows="2" data-value="obj.overview" id="field_overview" class="input-large" placeholder="((Enter text))"/>
+                </div>
+            </div>
+
+            {{#controller.isLessonHiddenEnabled}}
+            <div class="control-group lesson-hidden-control-group">
+                <input type="checkbox" data-checked="obj.isHidden" id="field_isHidden" class="lesson-hidden-checkbox" />
+                <span class="control-label" for="field_isHidden">((lesson.props.lesson_is_hidden.field_label))</span>
+            </div>
+            {{/controller.isLessonHiddenEnabled}}
+
+            <div class="control-group lesson-hide-overview-title-control-group">
+                <input type="checkbox" data-checked="obj.hideOverviewTitle" id="field_hideOverviewTitle" class="lesson-hidden-checkbox" />
+                <span class="control-label" for="field_hideOverviewTitle">((Hide overview title))</span>
+            </div>
+
+            <div class="control-group lesson-hide-description-control-group">
+                <input type="checkbox" data-checked="obj.hideDescriptionAndObjective" id="field_hideDescriptionAndObjective" class="lesson-hidden-checkbox" />
+                <span class="control-label" for="field_hideDescriptionAndObjective">((Hide description and objective))</span>
+            </div>
+
+            <div class="control-group">
+                <label  class="control-label" for="field_pedagogicalLessonType">((Type)):</label>
+                <select id="field_pedagogicalLessonType" data-value="obj.pedagogicalLessonType" class="input-small lesson_type">
+                    <option value="Custom" selected>((Custom))</option>
+                    <option value="Core">((Core))</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <div class="div4 lesson_img">
+                    <img class="thumbnail" id="lesson_image"
+                         {{! if there is no cover, dont add data-src }}
+                         {{ #controller.record.data.image }}
+                         data-src="obj.imageUrl"
+                         {{ /controller.record.data.image }}
+                    src="media/insert_image.png" width="150" height="200">
+                    <button id="image_cropper_button"
+                            class="image-cropper-edit-button btn btn-small edit_element"
+                            {{ ^controller.record.data.image }}
+                            style="display: none;"
+                            {{ /controller.record.data.image }}
+                    ><span class="base-icon icon-cog"></span></button>
+                    <button id="button_upload_image" class="btn btn-small">((...))</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_description">((Description:))</label>
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.description" id="field_description" class="input-large" placeholder="((Enter text))"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_objective">((Objectives:))</label>
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.objective" id="field_objective" class="input-large" placeholder="((Enter text))"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_typicalLearningTime">((Recommended Duration:))</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.typicalLearningTime" id="field_typicalLearningTime" class="span2"
+                    maxlength="3">&nbsp;((Minutes))
+                    <span class="help-inline error" id="field_typicalLearningTime_err" style="display:none">((Please enter a valid 3 digit number))</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="field_keywords">((Keywords:))</label>
+                <div class="controls">
+                    <textarea rows="2" data-value="obj.keywords" id="field_keywords" class="input-large" placeholder="((Enter text))"/>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="guide">
+            <div class="control-group">
+                <div class="teacherGuide-placeholder">
+                </div>
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <div class="tab-pane" id="standards">
+            <h5>((standards.lesson_editor.props.title))</h5>
+            <div class="control-group">
+                <div style="margin-bottom: 10px;">((These are the standards that you selected in the Course Editor. Click the button to add more standards.))</div>
+                <div class="controls">
+                    <div id="standards_list"></div>
+                </div>
+            </div>
+        </div>
+        {{/controller.enableStandards}}
+        <div class="tab-pane" id="customCourseMetadata">
+        </div>
+    </div>
+</div>

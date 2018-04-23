@@ -1,0 +1,204 @@
+.bi-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 99999;
+    opacity: 0.5;
+    filter: alpha(opacity = 50);
+    display: none;
+}
+
+
+
+#busyIndicator .info {
+    width: 320px;
+    margin: 0 auto 5px auto;
+    font-family: "open_sans";
+    font-size: 13px;
+}
+
+#busyIndicator {
+	position: fixed;
+    padding: 40px 5px 40px 5px;
+    width: 430px;
+	top: 64px;
+	left: 50%;
+	margin-left: -225px;
+	z-index: 99999;
+	overflow: hidden;
+	background-color: rgb(235, 235, 235);
+	border: solid 1px rgba(0, 0, 0, .45);
+	border-radius: 0;
+	box-shadow: 0 0 30px 5px rgba(0, 0, 0, .5);
+}
+
+#busyIndicatorContent {
+    width: 100%;
+    height: 70px;
+}
+
+/* Loading Animation */
+.loading-ball {
+  background-color: rgba(0,0,0,0);
+  border:5px solid rgba(0,183,229,0.9);
+  opacity:.9;
+  border-top:5px solid #a2dbfd;
+  border-left:5px solid #a2dbfd;
+  border-radius:50px !important;
+  width:50px;
+  height:50px;
+  margin:0 auto;
+  -ms-animation:spin .6s infinite linear;
+  -moz-animation:spin .6s infinite linear;
+  -webkit-animation:spin .6s infinite linear;
+}
+.loading-ball1 {
+  background-color: rgba(0,0,0,0);
+  border:5px solid rgba(0,183,229,0.9);
+  opacity:.9;
+  border-top:5px solid #a2dbfd;
+  border-left:5px solid #a2dbfd;
+  border-radius:50px !important;
+  width:30px;
+  height:30px;
+  margin:0 auto;
+  position:relative;
+  top:-50px;
+  -ms-animation:spinoff .6s infinite linear;
+  -moz-animation:spinoff .6s infinite linear;
+  -webkit-animation:spinoff .6s infinite linear;
+}
+
+@-ms-keyframes spin {
+  0% { -ms-transform:rotate(0deg); }
+  100% { -ms-transform:rotate(360deg); }
+}
+@-ms-keyframes spinoff {
+  0% { -ms-transform:rotate(0deg); }
+  100% { -ms-transform:rotate(-360deg); }
+}
+@-moz-keyframes spin {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes spinoff {
+  0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(-360deg); }
+}
+
+#busyIndicator .busy-loading {
+	width: 100%;
+	height: 100%;
+}
+
+#busyIndicatorTitle {
+
+}
+
+#busyIndicatorTitle h3 {
+	height: 40px;
+	margin: 5px 0;
+	color: rgb(70, 70, 70);
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#busyIndicator .bi-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    max-width: 280px;
+    display: inline-block;
+    color: #666666;
+}
+
+
+
+#busyIndicator .bar[complete]~.bi-percentage {
+    color: #fff;
+}
+
+#busyIndicator .progress {
+    background: rgb(245, 245, 245);
+    margin: 0;
+    position:relative;
+    height: 12px;
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    margin: 0 auto !important;
+    
+    border-radius: 0;
+}
+
+#busyIndicator .progress-bar {
+    top: -5px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 11px;
+    float: none !important;
+}
+#busyIndicator .bar {
+    color: rgb(0, 153, 229) !important;
+}
+
+#busyIndicator .bar.no-transition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+#busyIndicator .progress.active .bar {
+   width: 100% !important;
+}
+
+
+
+
+#busyIndicator .info.temp-progress .bi-percentage {
+    display:none;
+}
+
+#busyIndicator .bi-percentage {
+    margin:0;
+    float:right;
+    color: #cccccc;
+}
+
+#busyIndicator .cancel {
+    cursor:pointer;
+    display: none;
+    position: absolute;
+    right: 60px;
+    bottom: 18px;
+    font-size: 11px;
+    color: #0099e5;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+#busyIndicator .cancel.disabled {
+    cursor: not-allowed;
+    color: #BEBEBE;
+    text-decoration: none;
+}
+
+#busyIndicator .cancel:not(.disabled):hover {
+    color: #000080;
+}
+

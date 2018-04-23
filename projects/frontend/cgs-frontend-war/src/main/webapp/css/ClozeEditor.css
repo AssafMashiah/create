@@ -1,0 +1,30 @@
+
+/* PROPS EDITOR */
+.editor-wrapper.props_editor .cloze_answer_editor .control-group {
+	margin-bottom: 15px;
+}
+
+.editor-wrapper.props_editor .cloze_answer_editor .control-group select {
+	margin-bottom: 0;
+}
+
+/* CLOZE ANSWER */
+
+
+.cloze_content .cloze_answer_content .clozeBank_content > .element_preview_wrapper > div > iframe,
+.cloze_content .cloze_answer_content .clozeBank_content > .element_preview_wrapper > div > .textViewer-placeholder {
+	border: 0 none;
+}
+.clozeBank_content > .element_preview_wrapper.view_mode_normal  {
+	border: 0 none;
+	border-bottom:	1px dotted #D9D9D9;
+}
+.clozeBank_content .element_preview_wrapper{
+	display: inline-block;
+    padding-right: 70px;
+}
+.clozeBankArea{
+	border: 1px solid #E1E1E1;
+	padding: 5px;
+	margin: 10px 0;
+}

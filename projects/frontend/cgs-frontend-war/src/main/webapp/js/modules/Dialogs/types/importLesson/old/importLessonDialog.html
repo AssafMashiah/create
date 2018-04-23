@@ -1,0 +1,28 @@
+<div id="import_lesson_container">
+    {{#showReplaceNotification}}
+    <p class="warning">
+        ((Import will replace the selected item))
+    </p>
+    {{/showReplaceNotification}}
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" class="search-bar"
+                placeholder="{{placeholder}}" />
+            <div class="magnifying-glass"></div>
+        </div>
+    </div>
+    <ul class="courses-list">
+        {{#options.config.structure}}
+        <li>
+            <div class="course-list treeNode" courseId="{{courseId}}">
+                {{title}}
+                <ul class="inProgress">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </ul>
+            </div>
+        </li>
+        {{/options.config.structure}}
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+.mathfieldEditor {
+    width: 244px;
+    height: 24px;
+    background-color:#f9f9f9;
+    background-image:url(../media/tex_stripes.png);
+    background-repeat:repeat;
+    border:1px solid #b3b3b3;
+    font-style: italic;
+    font-size: 18px;
+    padding:4px 0 0 5px;
+    color:gray;
+
+}
+.mathfieldEditor:after{
+    content: '123...';
+}

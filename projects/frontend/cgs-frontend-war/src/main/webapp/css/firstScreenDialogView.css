@@ -1,0 +1,179 @@
+#dialog.firstscreen {
+    min-height: 550px;
+    max-height: 550px;
+    height: 550px;
+    width: 800px;
+    margin: -280px 0 0 -400px;
+}
+
+#dialog.firstscreen #dialogContent {
+    height: 420px;
+    max-height: 490px;
+    margin:0px;
+    padding: 0;
+    overflow:visible;
+}
+
+#dialog.firstscreen #left_panel {
+    border-right: solid 1px rgba(205, 205, 205, .5);
+    height: 401px;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#dialog.firstscreen h4 { /*  #left_panel  */
+    color:#4e4e4e;
+    padding-left: 15px;
+    margin: 0 0 10px 0;
+}
+
+#dialog.firstscreen #right_panel {
+    display: inline-block;
+    padding-top:15px;
+    padding-left: 15px;
+}
+
+#dialog.firstscreen #right_panel #srch_course_name {
+    width: 178px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+#dialog.firstscreen #dialogContent .Thumb {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 110px;
+    cursor: pointer;
+}
+
+#dialog.firstscreen #dialogContent .courseThumb {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 110px;
+    cursor: pointer;
+}
+#dialog.firstscreen #dialogContent .courseThumb.newItem{
+   
+    width: 91px;
+    height: 91px;    
+    border:1px solid #cccccc;
+    text-align: center;
+
+    background-image: -ms-linear-gradient(top, #FFFFFF 0%, #E7E7E7 100%);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #E7E7E7 100%);
+    background-image: -o-linear-gradient(top, #FFFFFF 0%, #E7E7E7 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #E7E7E7));
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E7E7E7 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #E7E7E7 100%);
+
+}
+#dialog.firstscreen #dialogContent .courseThumb .new-icon{
+    font-family: 'CGS-icons';
+    font-size: 42px;
+    line-height: 50px;
+}
+
+#dialog.firstscreen #dialogContent .courseThumb .new-icon-2{
+    font-family: 'CGS2';
+    font-size: 42px;
+    line-height: 50px;
+}
+#dialog.firstscreen #dialogContent .courseThumb .newCourseIcon:after{
+    content: '\0031';
+}
+#dialog.firstscreen #dialogContent .courseThumb .newEbookIcon:after{
+    font-family: 'eBook_Iconfont';
+    content: '\e900';
+}
+#dialog.firstscreen #dialogContent .courseThumb .newCgsIcon:after{
+    content: '\e61C';
+}
+#dialog.firstscreen #dialogContent .courseThumb .new-course-text{
+    font-family: 'Arial';
+    font-size: 13px;
+    color: #333333;
+}
+
+#dialog.firstscreen #dialogContent .courseThumb:hover .caption,
+#dialog.firstscreen #dialogContent .courseThumb.active .caption
+{
+    color: #0099e5;
+}
+
+#dialog.firstscreen #dialogContent .courseThumb:hover,
+#dialog.firstscreen #dialogContent .courseThumb:hover img.thumbnail,
+#dialog.firstscreen #dialogContent .courseThumb.active img.thumbnail,
+#dialog.firstscreen #dialogContent .courseThumb.active {
+    border-color: #0099e5;
+}
+
+#dialog.firstscreen #dialogContent img.thumbnail {
+    height: 100px;
+    border-radius: 0;
+}
+
+#dialog.firstscreen #dialogContent .caption {
+    line-height: 20px;
+    width: 100%;
+    color:#333;
+    padding: 0 3%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#dialog.firstscreen .btn-link, 
+#dialog.firstscreen .btn-link:active {
+    cursor:pointer;
+    text-decoration: none;
+    color: #0099e5;
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+#dialog.firstscreen .btn.btn-link.active,
+#dialog.firstscreen .btn.btn-link:active {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    padding-left: 0;
+    padding-right: 20px;
+    color: #4e4e4e;
+
+
+}
+
+
+#dialog.firstscreen #btn_search.btn,
+#dialog.firstscreen #btn_search.btn.active, 
+#dialog.firstscreen #btn_search.btn:active {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    padding: 4px 8px;
+    color: #4e4e4e;
+    margin-left: -5px;
+
+     vertical-align: middle;
+}
+
+#dialog.firstscreen #results_wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 320px;
+}
+
+#dialog.firstscreen #results_wrapper > div {
+    display:none;
+}
+
+#dialog.firstscreen #results_wrapper > div.shown {
+    display:block;
+}
+

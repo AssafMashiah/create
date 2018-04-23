@@ -1,0 +1,19 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper progress_editor props_editor">
+    <ul class="nav nav-tabs" id="ProgressEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label">((score:))</label>
+                <input maxlength="10" {{#isQuizEqualMode}}disabled="disabled" value="equal"{{/isQuizEqualMode}} cantBeEnabled="true" type="text" {{^isQuizEqualMode}}data-value="obj.score"{{/isQuizEqualMode}} id="field_score"></input>
+                {{^isQuizEqualMode}}
+                <label class="control-label" for="field_score">((out of )){{totalSum}}</label>
+                {{/isQuizEqualMode}}
+            </div>
+        </div>    
+    </div>
+</div>

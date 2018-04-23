@@ -1,0 +1,56 @@
+<subAnswer answerId="{{subAnswerId}}" originalId="{{originalId}}">
+	{{^dragAndDrop}}
+		{{#isText}}
+			<textEditor mode="{{textEditorMode}}" {{#maxChar}} maxChar="{{maxChar}}" {{/maxChar}} ></textEditor>
+		{{/isText}}
+
+		{{^isText}}
+			<mathField widthEM="{{widthEM}}" {{^isCompletionType}}completionType="{{completionType}}"{{/isCompletionType}} keyboardPreset="{{mathfield_keyboardPreset}}" type="{{mathfield_type}}" editMode="{{mathfield_editMode}}"
+                                        maxHeight="{{maxHeight}}" autoComma="{{autoComma}}">{{#isCompletionType}}{{{answerMarkup}}}{{/isCompletionType}}</mathField>
+		{{/isText}}
+		{{#hint}}<hint>{{hint}}</hint>{{/hint}}
+	{{/dragAndDrop}}
+
+	{{^isNoncheckable}}
+		{{^dragAndDrop}}
+			<check>
+		{{/dragAndDrop}}
+                {{#isText}}
+                <caseSensitive>false</caseSensitive>
+                <punctuationMarks>false</punctuationMarks>
+                {{/isText}}
+                <correct>
+                {{#correctAnswers}}
+					<ans_option widthEM="{{widthEM}}" {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{{item}}}</ans_option>
+				{{/correctAnswers}}
+                </correct>
+
+                <partiallyCorrect>
+                {{#partiallyCorrect}}
+					<ans_option {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{item}}</ans_option>
+				{{/partiallyCorrect}}
+                </partiallyCorrect>
+
+                <incorrectPredicted>
+                {{#incorrectPredicted}}
+					<ans_option {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{item}}</ans_option>
+				{{/incorrectPredicted}}
+                </incorrectPredicted>
+
+				{{#displayshowAnswer}}
+					<showAnswer>
+						{{^isCompletionType}}
+	                		{{{answerMarkup}}}
+	                	{{/isCompletionType}}
+	                	{{#isCompletionType}}
+	                		{{{showAnswerMarkup}}}
+	                	{{/isCompletionType}}
+					</showAnswer>
+				{{/displayshowAnswer}}
+
+		{{^dragAndDrop}}
+			</check>
+		{{/dragAndDrop}}
+	{{/isNoncheckable}}
+
+</subAnswer>

@@ -1,0 +1,56 @@
+#dialog.captcha .captcha-place-holder {
+	font-weight: bold;
+
+	-webkit-user-select: none;
+}
+
+#dialog.captcha #captcha-code {
+	margin-bottom: 0;
+}
+
+#dialog.captcha .captcha-box {
+	border: 1px solid #dedede;
+	border-radius: 5px;
+
+	width: 212px;
+
+	padding-bottom: 5px;
+
+	margin-top: 5px;
+}
+
+#dialog.captcha .captcha-box .control-group {
+	margin: 0 auto;
+
+	width: 200px;
+}
+
+#dialog.captcha .captcha-box .control-group label {
+	font-weight: bold;
+}
+
+
+#dialog.tts {
+	max-height: 1000px !important;
+	height: auto !important;
+}
+
+#dialog.tts #dialogContent {
+	max-height: 100% !important;
+}
+
+/*standard error dialog*/
+
+#dialog.standardError {
+    width: 60%;
+    height: 50%;
+    min-width: 60%;
+    min-height: 50%;
+    left: 40%;
+    top: 40%;
+}
+
+#dialog.standardError #dialogContent{
+	min-height: 50%;
+    overflow-y: scroll;
+}

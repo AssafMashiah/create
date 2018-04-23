@@ -1,0 +1,23 @@
+<subAnswer answerId="{{subAnswerId}}" originalId="{{originalId}}">
+	{{^dragAndDrop}}
+	<mathField widthEM="{{widthEM}}" keyboardPreset="fullMathField" type="singleLine" editMode="{{editMode}}"
+	           completionType="{{completionType}}" maxHeight="{{maxHeight}}" autoComma="{{autoComma}}">
+	           {{#isCompletionType}}{{{markup}}}{{/isCompletionType}}
+	       </mathField>
+	{{/dragAndDrop}}
+	{{#hint}}<hint>{{hint}}</hint>{{/hint}}
+	{{^isNoncheckable}}
+	<check>
+		<correct>
+		{{#correctAnswers}}
+			<ans_option widthEM="{{widthEM}}" {{#checkType}} checkType="{{checkType}}" {{/checkType}}>{{{item}}}</ans_option>
+		{{/correctAnswers}}
+		</correct>
+
+		<showAnswer>
+			{{#isCompletionType}}{{{answerMarkup}}}{{/isCompletionType}}
+			{{^isCompletionType}}{{{markup}}}{{/isCompletionType}}
+		</showAnswer>
+	</check>
+	{{/isNoncheckable}}
+</subAnswer>

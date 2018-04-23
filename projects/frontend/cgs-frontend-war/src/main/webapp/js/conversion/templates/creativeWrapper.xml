@@ -1,0 +1,8 @@
+<!-- {{#creativeSet}} -->
+<creativeSet type='automatic'>
+	{{#footer_small}}<asset name='footer' path='{{footer_small}}'/>{{/footer_small}}
+    {{#footer_big}}<asset name='full_footer' path='{{footer_big}}'/>{{/footer_big}}
+    {{#margin}}<asset name='margin' path='{{margin}}'/>{{/margin}}
+    {{{content}}}
+</creativeSet>
+<!-- {{/creativeSet}} -->

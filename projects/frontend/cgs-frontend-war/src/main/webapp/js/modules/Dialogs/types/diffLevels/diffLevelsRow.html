@@ -1,0 +1,17 @@
+<tr class="diffData">
+    <td class="diffId">
+        {{id}}
+    </td>
+    <td class="name">
+        <input type="text" value="{{name}}">
+    </td>
+    <td class="acronym">
+        <input type="text" maxlength="3" value="{{acronym}}">
+    </td>
+    <td class="default">
+        <input type="radio" name="default-diff" {{#isDefault}} checked  {{/isDefault}}/>
+    </td>
+    <td>
+        <button class="remove-diff base-icon icon-trash"></button>
+    </td>
+</tr>

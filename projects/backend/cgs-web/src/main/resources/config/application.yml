@@ -1,0 +1,21 @@
+
+spring:
+    application:
+        name: cgs
+    mvc:
+      view:
+        prefix: /
+        suffix: .jsp
+    data:
+        elasticsearch:
+            cluster-name: cgs_elasticsearch
+            cluster-nodes:
+            properties:
+                path:
+                  logs: elasticsearch/log # we are appending this to the application baseDir set in t2k.properties file
+                  data: elasticsearch/data # we are appending this to the application baseDir set in t2k.properties file
+#    data:
+#      mongodb:
+#        uri: mongodb://localhost/cgs
+#        username: cgsUser
+#        password: 4samlsh

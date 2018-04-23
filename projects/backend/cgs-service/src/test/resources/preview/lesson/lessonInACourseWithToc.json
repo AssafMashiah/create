@@ -1,0 +1,2353 @@
+ {
+    "cid" : "27aa1b79-8cd0-422f-bcba-7ca2ec65904a",
+    "header" : {
+      "last-modified": {
+        "$date": "2015-11-18T15:37:29.762Z"
+      }
+    },
+    "schema" : "course_v4",
+    "pedagogicalLessonType" : "Core",
+    "contentLocales" : [
+      "en_US"
+    ],
+    "supplementaryNarrationLocales" : [
+      "iw_IL"
+    ],
+    "standards" : [
+      {
+        "stdPackageId" : "standards_english_2.1",
+        "pedagogicalIds" : [
+          "510.A.1.1.1.2",
+          "510.A.1.1.1.6"
+        ]
+      },
+      {
+        "stdPackageId" : "skills_english_1.0",
+        "pedagogicalIds" : [
+          "Reading",
+          "Writing",
+          "Listening"
+        ]
+      }
+    ],
+    "standardPackages" : [
+      {
+        "name" : "standards",
+        "subjectArea" : "english",
+        "version" : "2.1",
+        "stdPackageId" : "standards_english_2.1"
+      },
+      {
+        "name" : "skills",
+        "subjectArea" : "english",
+        "version" : "1.0",
+        "stdPackageId" : "skills_english_1.0"
+      }
+    ],
+    "resources" : [
+      {
+        "href" : "media/b4/54/b454abb890b3cb2b3e6da6821606bdb76fbde721.pdf",
+        "type" : "attachment",
+        "resId" : "resource_1"
+      },
+      {
+        "type" : "media",
+        "href" : "media/64/1a/641a26fe4d91caab80a424c841505f5640367a80.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_2"
+      },
+      {
+        "href" : "media/d3/61/d361be84195bb10d2298a95f0571e01d054d1038.mp4",
+        "type" : "media",
+        "resId" : "resource_3"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/a0dd79b4-8bd7-49e5-a9a4-8ea2435aaa0f",
+        "resId" : "resource_4"
+      },
+      {
+        "href" : "media/cc/64/cc6421287318259b759a4f2ee07e432d0feb85f7.png",
+        "type" : "media",
+        "resId" : "resource_6"
+      },
+      {
+        "href" : "media/68/d6/68d62ec0c80d045eb510770eb2a6b351970f62c6.png",
+        "type" : "media",
+        "resId" : "resource_7"
+      },
+      {
+        "href" : "media/8c/a7/8ca7a03e8376f364cf60c778e40dd47f37258ece.png",
+        "type" : "media",
+        "resId" : "resource_8"
+      },
+      {
+        "href" : "media/13/d4/13d4897009a2d41e43b3a34d90342d207ca82703.jpg",
+        "type" : "media",
+        "resId" : "resource_9"
+      },
+      {
+        "href" : "media/58/1f/581fcc64241ed4b3db8894e999d9ede406a39deb.png",
+        "type" : "media",
+        "resId" : "resource_197"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/684ac6ee-2db5-42bf-9a74-88436e6013b8",
+        "resId" : "resource_198"
+      },
+      {
+        "type" : "media",
+        "href" : "media/b5/69/b5690c6020c0ef5e0ccd62b5f08882c48482f81a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_10"
+      },
+      {
+        "type" : "media",
+        "href" : "media/fc/30/fc30843a27e2f4893e91de61db9ecd4938fb34e3.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_11"
+      },
+      {
+        "href" : "media/f1/71/f171ec7329b659c563e9975cd36f482e74c2b273.mp4",
+        "type" : "media",
+        "resId" : "resource_12"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/577f6d5f-1d8f-4e99-980e-4be31f5b440d",
+        "resId" : "resource_13"
+      },
+      {
+        "href" : "media/68/c6/68c6fbfaec863e3e3ada0c31212ee39ce0e5748f.png",
+        "type" : "media",
+        "resId" : "resource_15"
+      },
+      {
+        "href" : "media/80/7c/807cf08ce977c37d55d1d380e5b5dd8e4426b3f0.png",
+        "type" : "media",
+        "resId" : "resource_16"
+      },
+      {
+        "href" : "media/cd/c3/cdc3842d0bb0af4508f3bc45a3006e60383f94e9.png",
+        "type" : "media",
+        "resId" : "resource_17"
+      },
+      {
+        "href" : "media/dd/a6/dda6aafc7d6452ba2eb68f2509d767661cdc52bd.jpg",
+        "type" : "media",
+        "resId" : "resource_18"
+      },
+      {
+        "type" : "media",
+        "href" : "media/7a/87/7a8772081fea9df4033179afaa37b30f550fe620.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_19"
+      },
+      {
+        "type" : "media",
+        "href" : "media/6e/00/6e00e673ce1a22724ab675d317649c4a46bbc51a.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_20"
+      },
+      {
+        "href" : "media/3c/c8/3cc878e673b38aba87251f6416f10ae1134ab84a.mp3",
+        "type" : "media",
+        "resId" : "resource_21"
+      },
+      {
+        "type" : "media",
+        "href" : "media/3c/c8/3cc878e673b38aba87251f6416f10ae1134ab84a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_22"
+      },
+      {
+        "type" : "media",
+        "href" : "media/79/97/7997876f66c008b8c640ca85ac8071a66f232700.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_23"
+      },
+      {
+        "type" : "media",
+        "href" : "media/f7/a5/f7a544f652243b8a4ac2ce101975149818e0f88a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_24"
+      },
+      {
+        "type" : "media",
+        "href" : "media/fb/f4/fbf413c6f972480857d6ed02b8eeb9aaec3c4c38.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_25"
+      },
+      {
+        "href" : "media/84/cb/84cb5e1d7da4aaf65b48918c8398f39f84912259.mp3",
+        "type" : "media",
+        "resId" : "resource_26"
+      },
+      {
+        "href" : "media/84/50/845027c599ed4383c099b7c4ad2bea0a6a6a0a09.mp3",
+        "type" : "media",
+        "resId" : "resource_27"
+      },
+      {
+        "href" : "media/ca/0c/ca0c39eb3c3a4d7652e5d2e197ee852e68b90395.png",
+        "type" : "media",
+        "resId" : "resource_28"
+      },
+      {
+        "href" : "media/5e/b2/5eb2505f00152509f6f948c33a4c929d7487b358.mp3",
+        "type" : "media",
+        "resId" : "resource_29"
+      },
+      {
+        "href" : "media/79/97/7997876f66c008b8c640ca85ac8071a66f232700.mp3",
+        "type" : "media",
+        "resId" : "resource_30"
+      },
+      {
+        "type" : "media",
+        "href" : "media/b6/75/b675e64c66a2d2dd350acf44b745222d6ae48a73.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_31"
+      },
+      {
+        "href" : "media/f7/a5/f7a544f652243b8a4ac2ce101975149818e0f88a.mp3",
+        "type" : "media",
+        "resId" : "resource_32"
+      },
+      {
+        "href" : "media/fb/f4/fbf413c6f972480857d6ed02b8eeb9aaec3c4c38.mp3",
+        "type" : "media",
+        "resId" : "resource_33"
+      },
+      {
+        "type" : "media",
+        "href" : "media/a3/0c/a30ce32e4a4893b1a810a4cd21fdbde319725a6d.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_34"
+      },
+      {
+        "href" : "media/b6/75/b675e64c66a2d2dd350acf44b745222d6ae48a73.mp3",
+        "type" : "media",
+        "resId" : "resource_35"
+      },
+      {
+        "type" : "media",
+        "href" : "media/97/c0/97c0c4d119d7c2e874f00b9832a522172ccbc0bf.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_36"
+      },
+      {
+        "href" : "media/a3/0c/a30ce32e4a4893b1a810a4cd21fdbde319725a6d.mp3",
+        "type" : "media",
+        "resId" : "resource_37"
+      },
+      {
+        "href" : "media/97/c0/97c0c4d119d7c2e874f00b9832a522172ccbc0bf.mp3",
+        "type" : "media",
+        "resId" : "resource_38"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/9e9afae0-2764-41da-ac92-e9ede8fb96ae",
+        "resId" : "resource_39"
+      },
+      {
+        "href" : "media/76/1d/761de75b7d7fa08db8164781dec284e27fc90e9d.png",
+        "type" : "media",
+        "resId" : "resource_41"
+      },
+      {
+        "href" : "media/36/1b/361be0033958999a8e7c5979ab5407866711b8d3.png",
+        "type" : "media",
+        "resId" : "resource_42"
+      },
+      {
+        "href" : "media/59/ea/59ea4f8648fa8066f880e2648ccfd581a0e72adf.png",
+        "type" : "media",
+        "resId" : "resource_43"
+      },
+      {
+        "href" : "media/60/6a/606ac5b0c7d50c5ca8f2e6266c9911f40170a363.jpg",
+        "type" : "media",
+        "resId" : "resource_44"
+      },
+      {
+        "type" : "media",
+        "href" : "media/81/b1/81b11ce6b446575c16504955561b8f7fe8ce7133.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_45"
+      },
+      {
+        "type" : "media",
+        "href" : "media/e6/46/e64646d580fea564e1825e70cbc1427547ffa5a6.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_46"
+      },
+      {
+        "href" : "media/83/14/8314f7197f956ff9910801630676a681f5d70cd0.mp3",
+        "type" : "media",
+        "resId" : "resource_47"
+      },
+      {
+        "href" : "media/8f/92/8f9264bb2db5b01d1340cfa61e0f2eb29286ce11.mp3",
+        "type" : "media",
+        "resId" : "resource_48"
+      },
+      {
+        "href" : "media/a3/c0/a3c0da4e7b0892b50f8d4c59d6a1b981cc5565b5.mp3",
+        "type" : "media",
+        "resId" : "resource_49"
+      },
+      {
+        "href" : "media/e0/ba/e0baacf8f91b619f17b6074563e5bf13065ac2fb.mp3",
+        "type" : "media",
+        "resId" : "resource_50"
+      },
+      {
+        "href" : "media/f5/f0/f5f062f0fdc7198aa6cf2d99e4cadac76628f474.mp3",
+        "type" : "media",
+        "resId" : "resource_51"
+      },
+      {
+        "href" : "media/44/6c/446c8179a15d5d29312e91619c78f768de748b00.mp3",
+        "type" : "media",
+        "resId" : "resource_52"
+      },
+      {
+        "href" : "media/22/05/22056622ca7fc82b00c3cca374370bba5eafce99.mp3",
+        "type" : "media",
+        "resId" : "resource_53"
+      },
+      {
+        "href" : "media/90/34/9034d2fb0165c370758f859cb9424c2d374f59d1.mp3",
+        "type" : "media",
+        "resId" : "resource_54"
+      },
+      {
+        "href" : "media/c3/32/c33268432d157a035aea2bfcfa324d0211354a85.mp3",
+        "type" : "media",
+        "resId" : "resource_55"
+      },
+      {
+        "href" : "media/f2/2a/f22a8c04b395011b193401e00dc58a6ec4ba1548.mp3",
+        "type" : "media",
+        "resId" : "resource_56"
+      },
+      {
+        "href" : "media/8c/0c/8c0c8b1140b8b41a143bcd821f47432d74d701ce.mp3",
+        "type" : "media",
+        "resId" : "resource_57"
+      },
+      {
+        "href" : "media/0b/64/0b646e6a5aa426bbb21b23959b616c21cf8d578a.mp3",
+        "type" : "media",
+        "resId" : "resource_58"
+      },
+      {
+        "href" : "media/3f/42/3f424291b72d8ef55e3a8c5268a78596b37f5a32.mp3",
+        "type" : "media",
+        "resId" : "resource_59"
+      },
+      {
+        "href" : "media/fb/55/fb558b72ddb399ee74d976b4e9422c905a200ce8.mp3",
+        "type" : "media",
+        "resId" : "resource_60"
+      },
+      {
+        "href" : "media/4d/6a/4d6a99b6bcb74c88ada75ad663fb85e598743f61.mp3",
+        "type" : "media",
+        "resId" : "resource_61"
+      },
+      {
+        "href" : "media/0c/03/0c0370c363de34b5b96ccb3c8107d77903c878c6.mp3",
+        "type" : "media",
+        "resId" : "resource_62"
+      },
+      {
+        "href" : "media/bf/02/bf027538ddc48b7e7c75b40407bd2178fa04d8af.mp3",
+        "type" : "media",
+        "resId" : "resource_63"
+      },
+      {
+        "href" : "media/5e/5a/5e5a5e3e4e90689ab64d1de31b16f52aba97d60c.mp3",
+        "type" : "media",
+        "resId" : "resource_64"
+      },
+      {
+        "href" : "media/fb/c3/fbc378105eda93d7d0f5778396b6f02bb39a60cc.mp3",
+        "type" : "media",
+        "resId" : "resource_65"
+      },
+      {
+        "href" : "media/10/4d/104d5eafd5f0f5da2e75bf12c0ac53b20c9c6067.mp3",
+        "type" : "media",
+        "resId" : "resource_66"
+      },
+      {
+        "href" : "media/79/48/7948d41b7eb60fd102f311d0b660c8277f4584d1.mp3",
+        "type" : "media",
+        "resId" : "resource_67"
+      },
+      {
+        "href" : "media/26/74/2674160ab66fd1891861a8b2f1d8ff24e1e5b60d.mp3",
+        "type" : "media",
+        "resId" : "resource_68"
+      },
+      {
+        "href" : "media/38/1a/381aae014aa4baf65913d9c871dcc4b6b509c6b1.mp3",
+        "type" : "media",
+        "resId" : "resource_69"
+      },
+      {
+        "href" : "media/c5/34/c5345e9b1f3407f350960faf34125ba527824dc7.mp3",
+        "type" : "media",
+        "resId" : "resource_70"
+      },
+      {
+        "href" : "media/ad/2c/ad2cc1e72c509847f22f0c8ea9458eb2fc75ec2e.mp3",
+        "type" : "media",
+        "resId" : "resource_71"
+      },
+      {
+        "href" : "media/14/ba/14ba3fe9ca9250354de49a2d4c1c7cd84d709527.mp3",
+        "type" : "media",
+        "resId" : "resource_72"
+      },
+      {
+        "href" : "media/71/af/71af86bd80ecf25fb89b9f99ba988379908b6902.mp3",
+        "type" : "media",
+        "resId" : "resource_73"
+      },
+      {
+        "href" : "media/70/3d/703d6946ef8fb277ebb297e48dcf264fbbc17ebd.mp3",
+        "type" : "media",
+        "resId" : "resource_74"
+      },
+      {
+        "href" : "media/78/96/789640a5e5e1392970f60e8fd327050fe31f638f.mp3",
+        "type" : "media",
+        "resId" : "resource_75"
+      },
+      {
+        "href" : "media/0d/23/0d2361a23b614b49383615de0e86bc7fa096a4ce.mp3",
+        "type" : "media",
+        "resId" : "resource_76"
+      },
+      {
+        "href" : "media/2a/14/2a14763a129b8ff917ae4fe5c2800d4ae956cded.mp3",
+        "type" : "media",
+        "resId" : "resource_77"
+      },
+      {
+        "href" : "media/a8/14/a8148b8300c5c812b1b1e38c456c409fe02ec538.mp3",
+        "type" : "media",
+        "resId" : "resource_78"
+      },
+      {
+        "href" : "media/2f/94/2f94638d7009f1bfb0dea96844064acf63602762.mp3",
+        "type" : "media",
+        "resId" : "resource_79"
+      },
+      {
+        "href" : "media/be/3c/be3caaf9bc90d5cc07982fd32b0e7bdcbecbbb05.mp3",
+        "type" : "media",
+        "resId" : "resource_80"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/6c3fda4f-50b1-45c3-bf5a-35012720fe3b",
+        "resId" : "resource_81"
+      },
+      {
+        "type" : "media",
+        "href" : "media/83/14/8314f7197f956ff9910801630676a681f5d70cd0.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_83"
+      },
+      {
+        "type" : "media",
+        "href" : "media/0c/03/0c0370c363de34b5b96ccb3c8107d77903c878c6.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_84"
+      },
+      {
+        "type" : "media",
+        "href" : "media/f2/2a/f22a8c04b395011b193401e00dc58a6ec4ba1548.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_85"
+      },
+      {
+        "type" : "media",
+        "href" : "media/26/74/2674160ab66fd1891861a8b2f1d8ff24e1e5b60d.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_86"
+      },
+      {
+        "type" : "media",
+        "href" : "media/70/3d/703d6946ef8fb277ebb297e48dcf264fbbc17ebd.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_87"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/b4cc60fc-610e-4f80-9a6f-554a350e927e",
+        "resId" : "resource_88"
+      },
+      {
+        "href" : "media/13/75/13750e9030571b191704b51544fe1628b3279804.png",
+        "type" : "media",
+        "resId" : "resource_90"
+      },
+      {
+        "href" : "media/d4/3a/d43a665f97a9a910db70c804f4a4432609848753.png",
+        "type" : "media",
+        "resId" : "resource_91"
+      },
+      {
+        "href" : "media/4d/b6/4db60887286cc01e58bd2fe94a7c87cfdf33dfb1.png",
+        "type" : "media",
+        "resId" : "resource_92"
+      },
+      {
+        "href" : "media/d3/57/d3571a008adb2de5a88dcca0a795c47f6330d03b.jpg",
+        "type" : "media",
+        "resId" : "resource_93"
+      },
+      {
+        "type" : "media",
+        "href" : "media/e5/20/e520742ace4f45072b44c1c7ae0bb125902b2439.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_94"
+      },
+      {
+        "type" : "media",
+        "href" : "media/fc/07/fc07a91e9c1f83ae6fd31073012059379e853917.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_95"
+      },
+      {
+        "type" : "media",
+        "href" : "media/af/67/af67bd48a93e510b965454eb209a0c697c57c357.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_96"
+      },
+      {
+        "type" : "media",
+        "href" : "media/87/4e/874e0ae725f66d573424c833ca57cf71d9c74674.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_97"
+      },
+      {
+        "type" : "media",
+        "href" : "media/2f/35/2f351ba5b5b557d497acb30b5a9d54c18fd114d6.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_98"
+      },
+      {
+        "type" : "media",
+        "href" : "media/61/de/61dedba8484d4511842d94adbe6dfc7937d0fb55.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_99"
+      },
+      {
+        "type" : "media",
+        "href" : "media/d1/9f/d19f00cc62907047db56de585f5abcb1f85883b0.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_100"
+      },
+      {
+        "type" : "media",
+        "href" : "media/79/1f/791f1816933148fa639e8ab8221e70bf8dc585ba.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_101"
+      },
+      {
+        "type" : "media",
+        "href" : "media/8b/6a/8b6ace23a526aa788a0c73feca1dd068be805dc5.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_102"
+      },
+      {
+        "type" : "media",
+        "href" : "media/fd/78/fd78fd3f54dff74bdb471fd2ef65fa0cc6af75f6.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_103"
+      },
+      {
+        "type" : "media",
+        "href" : "media/44/2d/442d807126e2f2bba8e24e34a9950fe96521a03e.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_104"
+      },
+      {
+        "type" : "media",
+        "href" : "media/03/44/03445783486280fd3f98a3fc1c3db165e9a14b85.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_105"
+      },
+      {
+        "type" : "media",
+        "href" : "media/5f/86/5f8614bf57c993918eebb176d428794149e13e1d.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_106"
+      },
+      {
+        "type" : "media",
+        "href" : "media/3b/54/3b5490bcb206f479ee71f58d6c7d99fc83538685.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_107"
+      },
+      {
+        "type" : "media",
+        "href" : "media/a6/64/a6649ccc4486318d5b3a3cd4968aad3a7141b2c1.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_108"
+      },
+      {
+        "type" : "media",
+        "href" : "media/94/ee/94ee455ccd033b98d9192b58d4bca9c41f18edc3.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_109"
+      },
+      {
+        "type" : "media",
+        "href" : "media/a6/ae/a6ae29c7beb209a16abe68a8b817b04f4a45c9d4.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_110"
+      },
+      {
+        "type" : "media",
+        "href" : "media/53/6a/536a1f65fce591f445e4ab77e2d72b5bd0221460.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_111"
+      },
+      {
+        "type" : "media",
+        "href" : "media/c4/60/c460b2361c8cee438019edc87c8f32ea9ad575a4.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_112"
+      },
+      {
+        "type" : "media",
+        "href" : "media/d7/99/d79974ea8b810a09812be3e6ba2f58ad63fe9c3d.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_113"
+      },
+      {
+        "type" : "media",
+        "href" : "media/89/f8/89f838c15974732996df0460415da89073fc895a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_114"
+      },
+      {
+        "type" : "media",
+        "href" : "media/ec/01/ec01a7154eec3e5fcba5edff1f9cc4947aaf0b32.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_115"
+      },
+      {
+        "type" : "media",
+        "href" : "media/40/c8/40c8274a4328c80fe5f88bbb0c031d5250baeafb.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_116"
+      },
+      {
+        "type" : "media",
+        "href" : "media/8e/fb/8efbafecb841a8a46d48a66d2b65f5007fdf5f72.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_117"
+      },
+      {
+        "type" : "media",
+        "href" : "media/89/97/8997c476b388ec96d4fd9e0e42225cea0492c735.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_118"
+      },
+      {
+        "type" : "media",
+        "href" : "media/87/b9/87b9b807994a19e03fedcc0a1bb058943dee0fb7.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_119"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/9ba7a049-0fd8-4de3-b141-963e56599767",
+        "resId" : "resource_120"
+      },
+      {
+        "href" : "media/1a/00/1a0012a45f78e7139fccc7198281ec927821812e.png",
+        "type" : "media",
+        "resId" : "resource_122"
+      },
+      {
+        "href" : "media/7c/71/7c71b3067a63b74ebda2c7242bdc23d896d41b5d.png",
+        "type" : "media",
+        "resId" : "resource_123"
+      },
+      {
+        "href" : "media/10/db/10db81456b45b6d8e74f15f5f0f14c4f22d792b4.png",
+        "type" : "media",
+        "resId" : "resource_124"
+      },
+      {
+        "href" : "media/f2/34/f234ae8a6ba2ac2e394d57b77f771d1fb852e8f4.jpg",
+        "type" : "media",
+        "resId" : "resource_125"
+      },
+      {
+        "type" : "media",
+        "href" : "media/30/9b/309be2c152a6e719cd9c655f5f7956a91f251ef3.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_126"
+      },
+      {
+        "type" : "media",
+        "href" : "media/79/9c/799c558e231742d33afec0ebec53576d1271a68e.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_127"
+      },
+      {
+        "type" : "media",
+        "href" : "media/88/2a/882ae661a2ea9801962af9fff181012c0a56c5ce.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_128"
+      },
+      {
+        "type" : "media",
+        "href" : "media/31/ba/31ba9bca225960e461e671e7910ead8cc52be509.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_129"
+      },
+      {
+        "type" : "media",
+        "href" : "media/06/6f/066faafa5d7824cdf744cc20d64cfc04e3cb4c30.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_130"
+      },
+      {
+        "type" : "media",
+        "href" : "media/2b/6b/2b6b599aebfb43cc20ac339efa81d0860896333b.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_131"
+      },
+      {
+        "type" : "media",
+        "href" : "media/30/b8/30b8cbd177e02c667e9d1706967a6caa3ffcce94.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_132"
+      },
+      {
+        "type" : "media",
+        "href" : "media/3a/15/3a15cf0a81763281eee2d9ef98f45d8e31be3fb4.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_133"
+      },
+      {
+        "type" : "media",
+        "href" : "media/d3/96/d39636dba9b396b94ab3bc9d794d9925405feadc.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_134"
+      },
+      {
+        "type" : "media",
+        "href" : "media/50/34/50348f6f8f39bc6c63f3e5259416369d2dd297cd.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_135"
+      },
+      {
+        "type" : "media",
+        "href" : "media/d0/c5/d0c5f99c574930790c475d7997ce175cd6c190d5.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_136"
+      },
+      {
+        "type" : "media",
+        "href" : "media/8d/28/8d285e094703db3f733d08da6dbe5caca9f2ac14.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_137"
+      },
+      {
+        "type" : "media",
+        "href" : "media/de/29/de29661bec9c46908cb23609699d37c16f1def7a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_138"
+      },
+      {
+        "type" : "media",
+        "href" : "media/f0/e2/f0e2a82c5e52ceebcddae27e847d7beb8bddd9db.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_139"
+      },
+      {
+        "type" : "media",
+        "href" : "media/3a/31/3a310b30def2f07767d3f7a8d17f15b3799e66ff.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_140"
+      },
+      {
+        "type" : "media",
+        "href" : "media/87/86/8786fdf3d1f0f520b38fe1364969b233e998ac86.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_141"
+      },
+      {
+        "type" : "media",
+        "href" : "media/21/c5/21c5fc0138ad55d4495df4d08d8858a86fffa712.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_142"
+      },
+      {
+        "type" : "media",
+        "href" : "media/3d/2d/3d2dcecca835df0e851cc35a1e72cff1bba672b6.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_143"
+      },
+      {
+        "type" : "media",
+        "href" : "media/ad/e8/ade81caa1825b4b72ee04c7a5871b5d138c44e2f.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_144"
+      },
+      {
+        "type" : "media",
+        "href" : "media/0f/bc/0fbc62ac9dc0e5af3f6c589303cd6112e1897072.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_145"
+      },
+      {
+        "type" : "media",
+        "href" : "media/df/ec/dfec9af0bd6700a0096a5019f1fe737e14caa681.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_146"
+      },
+      {
+        "type" : "media",
+        "href" : "media/9b/0e/9b0e564bbd01d4f5d334bed9b1a065e21050579e.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_147"
+      },
+      {
+        "type" : "media",
+        "href" : "media/fd/27/fd27b56e6ca3c96d29f936a30afc4d752866a481.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_148"
+      },
+      {
+        "type" : "media",
+        "href" : "media/ac/41/ac41797175740381ddf16db3a9ab7062c9b1a4aa.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_149"
+      },
+      {
+        "type" : "media",
+        "href" : "media/4b/ff/4bffb33d4653832415d34a4ae9cf7cff839b671a.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_150"
+      },
+      {
+        "type" : "media",
+        "href" : "media/2e/16/2e163827971efcf90c52a3945542c92e81a0872b.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_151"
+      },
+      {
+        "type" : "media",
+        "href" : "media/a2/53/a253b61f2f7152a3e19d5307f7addf8aa9c44c6b.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_152"
+      },
+      {
+        "type" : "media",
+        "href" : "media/2e/47/2e471d182d8b8de6845ffa541617465d1ff2d508.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_153"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/afe422c1-a309-4a6e-ad7f-3bac0abc3acf",
+        "resId" : "resource_154"
+      },
+      {
+        "href" : "media/ba/a6/baa63cef8071df33d78c8f6e790fdda58a921c3b.png",
+        "type" : "media",
+        "resId" : "resource_156"
+      },
+      {
+        "href" : "media/9a/be/9abea7af9b5b60851588da3f6b947d791f949371.png",
+        "type" : "media",
+        "resId" : "resource_157"
+      },
+      {
+        "href" : "media/b6/a8/b6a8a39934cbf6d0db3426612b79cdeefaf75602.png",
+        "type" : "media",
+        "resId" : "resource_158"
+      },
+      {
+        "href" : "media/47/34/4734400c73cf1c76851bda0732c437646e42096f.jpg",
+        "type" : "media",
+        "resId" : "resource_159"
+      },
+      {
+        "type" : "media",
+        "href" : "media/c0/56/c05648d203087b34e247b3b7798e3b77dc172231.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_160"
+      },
+      {
+        "type" : "media",
+        "href" : "media/7c/fe/7cfe7b2415264a7598950e3877eeee7dd2a1d718.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_161"
+      },
+      {
+        "href" : "media/f4/c2/f4c2bb5a18b7385f8a02cadfd9945101cc68c1f1.png",
+        "type" : "media",
+        "resId" : "resource_162"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/004aeebb-f91a-4a7f-928b-2f81cc1ae778",
+        "resId" : "resource_163"
+      },
+      {
+        "href" : "media/ce/81/ce81a5ba2c36b754a9ba77a8fe29a4beda7b2464.png",
+        "type" : "media",
+        "resId" : "resource_165"
+      },
+      {
+        "href" : "media/3c/3a/3c3ab15f1a262e66e759c3e6cb73aef48cfe0d94.png",
+        "type" : "media",
+        "resId" : "resource_166"
+      },
+      {
+        "href" : "media/1a/50/1a50841bcae66d41b5d77f06f58622c647e9f508.png",
+        "type" : "media",
+        "resId" : "resource_167"
+      },
+      {
+        "href" : "media/23/cd/23cdc98c691cbe4de12d9108aa0b9f9ede38c265.jpg",
+        "type" : "media",
+        "resId" : "resource_168"
+      },
+      {
+        "type" : "media",
+        "href" : "media/b9/7c/b97cc44a6750246b698c2e32833639b403d7c5ec.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_169"
+      },
+      {
+        "type" : "media",
+        "href" : "media/cc/ba/ccbaa37161cf9226cd8d408756b9126830019285.mp3",
+        "locale" : "iw_IL",
+        "resId" : "resource_170"
+      },
+      {
+        "href" : "media/de/e4/dee43ed61d555825e7851eab21606ed9662a64da.mp3",
+        "type" : "media",
+        "resId" : "resource_171"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/82dc6d40-cf28-44fe-98fc-b6aaf4a2fb0d",
+        "resId" : "resource_172"
+      },
+      {
+        "href" : "media/21/40/21401f47754ccecd8f54f247bf40617ceeb13980.png",
+        "type" : "media",
+        "resId" : "resource_174"
+      },
+      {
+        "href" : "media/6d/2a/6d2a495a1aa49db49258811de762a66513eefc9b.png",
+        "type" : "media",
+        "resId" : "resource_175"
+      },
+      {
+        "href" : "media/18/99/189982c7fa689776a92197e026c09b11db80cd56.png",
+        "type" : "media",
+        "resId" : "resource_176"
+      },
+      {
+        "href" : "media/98/4c/984cfc262e66f27d866c549a01077e9a3f38e328.jpg",
+        "type" : "media",
+        "resId" : "resource_177"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/61248095-3452-4dc9-841f-25aad4af5625",
+        "resId" : "resource_200"
+      },
+      {
+        "type" : "media",
+        "href" : "media/25/f7/25f7ad7b339944d8c1d1eb79a1cc08a5aaaafad2.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_178"
+      },
+      {
+        "type" : "media",
+        "href" : "media/bc/f4/bcf4d05c8a88d4eece95fd48ff6ee2953d4b44dd.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_179"
+      },
+      {
+        "href" : "media/4e/f8/4ef8cba1440327c32cff354d98e092057a363132.png",
+        "type" : "media",
+        "resId" : "resource_180"
+      },
+      {
+        "href" : "media/09/04/09041b2d54298810221682f7131a00dcde2c443e.png",
+        "type" : "media",
+        "resId" : "resource_181"
+      },
+      {
+        "href" : "media/67/21/67215933aa3104397e0f2d054ef9e64b63195dff.png",
+        "type" : "media",
+        "resId" : "resource_182"
+      },
+      {
+        "href" : "media/47/0f/470f0d1520edc7443ad78db884b516b632f9e1fa.png",
+        "type" : "media",
+        "resId" : "resource_183"
+      },
+      {
+        "href" : "media/ec/7b/ec7b1ed312d425bf16b9c977ba2cf55970e3ce6c.png",
+        "type" : "media",
+        "resId" : "resource_184"
+      },
+      {
+        "type" : "media",
+        "href" : "media/80/1d/801d4adffc27a5e29cd3bed00b330f948ce699fa.mp3",
+        "locale" : "en_US",
+        "resId" : "resource_185"
+      },
+      {
+        "href" : "media/90/15/9015f1efc8c64ac941ca2ce396d8c5005fc29554.png",
+        "type" : "media",
+        "resId" : "resource_186"
+      },
+      {
+        "href" : "media/28/a4/28a4daafaf5175fba299c59975535dba1b2ba4fe.png",
+        "type" : "media",
+        "resId" : "resource_187"
+      },
+      {
+        "href" : "media/73/84/7384344437232c95969554642f2e2acbddf789e5.png",
+        "type" : "media",
+        "resId" : "resource_188"
+      },
+      {
+        "href" : "media/1e/66/1e665224b6f095725fa3e456f0ea4eade482ecf3.png",
+        "type" : "media",
+        "resId" : "resource_189"
+      },
+      {
+        "href" : "media/7d/1a/7d1a156023d26dbbb7d4a3dd0ad9314b097c5bde.png",
+        "type" : "media",
+        "resId" : "resource_190"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/a85bab59-4058-459d-b019-04162adf7f79",
+        "resId" : "resource_191"
+      },
+      {
+        "href" : "media/15/f6/15f64dbb9b4691967fabe9eeef744db47f6f6354.png",
+        "type" : "media",
+        "resId" : "resource_193"
+      },
+      {
+        "href" : "media/70/33/7033f64d94c01668470f68e562a9a6aebf4f585e.png",
+        "type" : "media",
+        "resId" : "resource_194"
+      },
+      {
+        "href" : "media/cb/89/cb89ba29fb5f1ea2cf8bf33c179c13e2bd85f7ef.png",
+        "type" : "media",
+        "resId" : "resource_195"
+      },
+      {
+        "href" : "media/eb/92/eb929212897d8e4d66f5da722fcaa40faa2b15bf.jpg",
+        "type" : "media",
+        "resId" : "resource_196"
+      },
+      {
+        "type" : "sequence",
+        "href" : "sequences/ac77ef47-7c00-4980-bd94-7648b7a367d9",
+        "resId" : "resource_202"
+      }
+    ],
+    "teacherGuide" : {
+      "resourceRefId" : [
+        "resource_1"
+      ],
+      "attachments" : [
+        {
+          "displayName" : "Upper-Lower & words strips.pdf",
+          "resourceId" : "resource_1"
+        }
+      ],
+      "data" : "PGI+RW5nYWdlPC9iPjo8ZGl2PjxkaXY+U3R1ZGVudHMgYXJlIGludHJvZHVjZWQgdG8gdGhlIGFscGhhYmV0IGJ5IHdhdGNoaW5nIHRoZSBhbmltYXRpb24gb2YgdGhlICJBQkMgU29uZy4iPGJyPjwvZGl2PjwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+PGI+UHJhY3RpY2U6PC9iPjwvZGl2PjxkaXY+U3R1ZGVudHMgc2VxdWVuY2UgdGhlIGFscGhhYmV0LCBpZGVudGlmeSB0aGUgbmFtZXMgb2YgdGhlIGxldHRlcnMsIHJlY29nbml6ZSB1cHBlcmNhc2UgYW5kIGxvd2VyY2FzZSBsZXR0ZXJzLCBhbmQgaWRlbnRpZnkgdGhlIHNvdW5kcyBvZiB0aGUgbGV0dGVycy48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj48Yj5TdW1tYXJ5OjwvYj48L2Rpdj48ZGl2PlN0dWRlbnRzIHJldmlldyB0aGUgdGhlIHNlcXVlbmNlIGFuZCBzb3VuZCBvZiBlYWNoIGxldHRlciBvZiB0aGUgYWxwaGFiZXQuPC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj5Zb3UgY2FuIGZpbmQgZXh0cmEgcHJhY3RpY2Ugd29ya3NoZWV0cyBmb3IgdGhpcyBsZXNzb24gYXR0YWNoZWQgYmVsb3cuPGJyPjwvZGl2PjxkaXY+PGJyPjwvZGl2Pg==",
+      "mimeType" : "text/html+base64Encoded"
+    },
+    "overview" : " DONE - Naama",
+    "title" : "Alphabetical Order ",
+    "type" : "lesson",
+    "description" : "In this lesson, students recognize the names of each letter of the alphabet, sequence each letter of the alphabet, and identify the sound of each letter. The lesson includes a teacher-led Engage activity and an independent computerized Practice. The teacher summarizes the lesson in a teacher-led activity.",
+    "objective" : "Students will:\n- sequence the alphabet;\n- identify the names of the letters;\n- recognize uppercase/lowercase letters;\n- identify the sounds of the letters; and\n- listen to an alphabet song.",
+    "typicalLearningTime" : "PT0H45M0S",
+    "customFields" : [],
+    "learningObjects" : [
+      {
+        "cid" : "f3a31c3c-aa07-417e-8419-75169b09b3f0",
+        "title" : "Engage ",
+        "type" : "lo",
+        "standards" : [],
+        "modality" : "Class",
+        "sequences" : [
+          {
+            "cid" : "a0dd79b4-8bd7-49e5-a9a4-8ea2435aaa0f",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "1aca12ba-872b-4360-b343-789f36a8d958",
+                "type" : "task",
+                "title" : "New Question Only",
+                "allowedAttempts" : 0,
+                "checkingType" : "manual",
+                "standards" : []
+              }
+            ],
+            "contentRef" : "resource_4",
+            "resourceRefId" : [
+              "resource_2",
+              "resource_3",
+              "resource_4",
+              "resource_6",
+              "resource_7",
+              "resource_8",
+              "resource_9"
+            ],
+            "teacherGuide" : {
+              "resourceRefId" : [],
+              "attachments" : [],
+              "data" : "%3Cdiv%3E%3Cb%3E%3C/b%3E%3C/div%3EExplain%20to%20students%20that%20they%20will%20view%20an%20animation%20and%20hear%20the%20%u201CABC%20Song.%u201D%20Students%20hear%20the%20song%2C%20and%20see%20images%3A%20each%20letter%20is%20represented%20by%20an%20image%20of%20its%20initial%20sound%2C%20except%20the%20letter%20%22Xx%22%20that%20is%20represented%20by%20the%20word%20taxi.%20Encourage%20students%20to%20sing%20along%20with%20the%20animation.%0A%3Cbr%3E",
+              "mimeType" : "text/html-template"
+            },
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.2",
+                  "510.A.1.1.1.5",
+                  "510.A.1.1.1.9",
+                  "510.A.1.1.1.10",
+                  "510.A.1.1.1.6"
+                ]
+              },
+              {
+                "stdPackageId" : "skills_english_1.0",
+                "pedagogicalIds" : [
+                  "Listening"
+                ]
+              }
+            ],
+            "title" : "Engage 1",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "684ac6ee-2db5-42bf-9a74-88436e6013b8",
+            "mimeType" : "DL",
+            "contentRef" : "resource_198",
+            "resourceRefId" : [
+              "resource_197",
+              "resource_198"
+            ],
+            "title" : "End of Engage",
+            "type" : "sequence"
+          }
+        ]
+      },
+      {
+        "cid" : "ee0c1202-e9e1-4adc-af99-cde973281c4c",
+        "title" : "Practice",
+        "type" : "lo",
+        "standards" : [],
+        "modality" : "Individual",
+        "sequences" : [
+          {
+            "cid" : "577f6d5f-1d8f-4e99-980e-4be31f5b440d",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "f5fe959f-44eb-4dca-87a4-c2880be7e377",
+                "type" : "task",
+                "title" : "New Question Only",
+                "allowedAttempts" : 0,
+                "checkingType" : "manual",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_13",
+            "resourceRefId" : [
+              "resource_10",
+              "resource_11",
+              "resource_12",
+              "resource_13",
+              "resource_15",
+              "resource_16",
+              "resource_17",
+              "resource_18"
+            ],
+            "teacherGuide" : {
+              "resourceRefId" : [],
+              "attachments" : [],
+              "data" : "VGVsbCBzdHVkZW50cyB0aGF0IHRoZXkgYXJlIGdvaW5nIHRvIHVzZSB0aGUgaW5mb3JtYXRpb24gbGVhcm5lZCBpbiB0aGUgaW50cm9kdWN0b3J5IGFjdGl2aXR5IHRvIGhlbHAgdGhlbSBjb21wbGV0ZSByZWFkaW5nLCBsaXN0ZW5pbmcsIGFuZCB3cml0aW5nIGFjdGl2aXRpZXMu",
+              "mimeType" : "text/html+base64Encoded"
+            },
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.2",
+                  "510.A.1.1.1.6"
+                ]
+              }
+            ],
+            "title" : "Practice 1",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "9e9afae0-2764-41da-ac92-e9ede8fb96ae",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "1afec89c-f95f-406c-991d-05f6a5a4bd4a",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "6b273b33-8305-4008-a688-5aa639af80cc",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "966aed47-367c-4817-932d-8bf5561bc834",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "bb9a826e-215a-4bd2-9518-f01b954e00ba",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "167a6185-f3c7-4509-96ca-8b513cbaa7a1",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "2ec10deb-bd85-46eb-aef6-cf48a61736fb",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "19a6a335-d855-4882-84bc-30436757c20b",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_39",
+            "resourceRefId" : [
+              "resource_19",
+              "resource_20",
+              "resource_21",
+              "resource_22",
+              "resource_23",
+              "resource_24",
+              "resource_25",
+              "resource_26",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_30",
+              "resource_31",
+              "resource_32",
+              "resource_33",
+              "resource_34",
+              "resource_35",
+              "resource_36",
+              "resource_37",
+              "resource_38",
+              "resource_39",
+              "resource_41",
+              "resource_42",
+              "resource_43",
+              "resource_44"
+            ],
+            "standards" : [],
+            "title" : "Practice 2",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "6c3fda4f-50b1-45c3-bf5a-35012720fe3b",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "8ff1b71e-22b2-4bed-b8ea-87e9481eb53d",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "02a7879b-5c18-429c-b8b2-25e41420b342",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "f2d7b556-60c8-4062-b541-ffd4408b3f84",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "c3235c41-bad6-4c67-bcd8-b61dff58228a",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "f1ec690e-a013-4dcb-b43f-bb325b98a6c6",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Listening"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_81",
+            "resourceRefId" : [
+              "resource_45",
+              "resource_46",
+              "resource_47",
+              "resource_48",
+              "resource_49",
+              "resource_50",
+              "resource_51",
+              "resource_52",
+              "resource_53",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_54",
+              "resource_55",
+              "resource_56",
+              "resource_57",
+              "resource_58",
+              "resource_59",
+              "resource_60",
+              "resource_61",
+              "resource_62",
+              "resource_63",
+              "resource_64",
+              "resource_65",
+              "resource_66",
+              "resource_67",
+              "resource_68",
+              "resource_69",
+              "resource_70",
+              "resource_71",
+              "resource_72",
+              "resource_73",
+              "resource_74",
+              "resource_75",
+              "resource_76",
+              "resource_77",
+              "resource_78",
+              "resource_79",
+              "resource_80",
+              "resource_81"
+            ],
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.2"
+                ]
+              }
+            ],
+            "title" : "Practice 3",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "b4cc60fc-610e-4f80-9a6f-554a350e927e",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "495c4053-d626-4634-b307-09f7fbb17d82",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "391c0893-b11f-49bc-bbd6-523b85f6d2e8",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "369a786b-8c81-4dcb-90b0-fc7002276fce",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "8af1a3da-0b5c-46f8-9308-3eda6d36f207",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "41b312ba-daeb-4e5b-8489-3e4ad199d38b",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_88",
+            "resourceRefId" : [
+              "resource_19",
+              "resource_20",
+              "resource_47",
+              "resource_83",
+              "resource_84",
+              "resource_85",
+              "resource_86",
+              "resource_26",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_56",
+              "resource_87",
+              "resource_62",
+              "resource_68",
+              "resource_74",
+              "resource_88",
+              "resource_90",
+              "resource_91",
+              "resource_92",
+              "resource_93"
+            ],
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.2",
+                  "510.A.1.1.1.6"
+                ]
+              }
+            ],
+            "title" : "Practice 4",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "9ba7a049-0fd8-4de3-b141-963e56599767",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "eb4fcfc5-ab2e-4dd4-8d9f-8a0dec91b207",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "6740b1d4-37ee-4e83-a649-42f919a15a2d",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "47446ae4-89aa-472d-ba41-7a0d2e9b4b61",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "a6642723-6797-4375-9b1c-886ef2c71818",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "973dd222-2883-49bc-bc97-b03cca8dfccd",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_120",
+            "resourceRefId" : [
+              "resource_45",
+              "resource_46",
+              "resource_47",
+              "resource_94",
+              "resource_95",
+              "resource_96",
+              "resource_97",
+              "resource_98",
+              "resource_53",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_54",
+              "resource_55",
+              "resource_56",
+              "resource_99",
+              "resource_100",
+              "resource_101",
+              "resource_102",
+              "resource_103",
+              "resource_62",
+              "resource_104",
+              "resource_105",
+              "resource_106",
+              "resource_107",
+              "resource_108",
+              "resource_68",
+              "resource_109",
+              "resource_110",
+              "resource_111",
+              "resource_112",
+              "resource_113",
+              "resource_74",
+              "resource_114",
+              "resource_115",
+              "resource_116",
+              "resource_117",
+              "resource_118",
+              "resource_119",
+              "resource_3",
+              "resource_120",
+              "resource_122",
+              "resource_123",
+              "resource_124",
+              "resource_125"
+            ],
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.2",
+                  "510.A.1.1.1.6"
+                ]
+              }
+            ],
+            "title" : "Practice 5",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "afe422c1-a309-4a6e-ad7f-3bac0abc3acf",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "9660f3a7-131d-4a0c-a419-2ac50828f1b4",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "b0398bfe-92b4-4b6f-bafa-9bd4ce81e9a7",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "7a94409c-a47a-4e98-b947-e487e9c18270",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "2d66b470-a7af-46aa-a1d1-cf3934994df3",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "9fb612d4-9341-4259-aefa-e5afabf32f6b",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "6870a545-6a00-4f4b-9d35-a1f63e781a01",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "4ae86043-ee96-44a9-b8c0-ef330f56dc4e",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "e2a5fba4-4d73-482d-85a9-d226faa8b875",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "d8390d93-fdc7-4fc6-bc98-80476ed2ba85",
+                "type" : "task",
+                "title" : "New mtq sequencing editor",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_154",
+            "resourceRefId" : [
+              "resource_126",
+              "resource_127",
+              "resource_128",
+              "resource_129",
+              "resource_130",
+              "resource_131",
+              "resource_53",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_54",
+              "resource_55",
+              "resource_132",
+              "resource_133",
+              "resource_134",
+              "resource_135",
+              "resource_136",
+              "resource_137",
+              "resource_138",
+              "resource_139",
+              "resource_140",
+              "resource_141",
+              "resource_142",
+              "resource_143",
+              "resource_144",
+              "resource_145",
+              "resource_146",
+              "resource_147",
+              "resource_148",
+              "resource_149",
+              "resource_150",
+              "resource_151",
+              "resource_152",
+              "resource_153",
+              "resource_154",
+              "resource_156",
+              "resource_157",
+              "resource_158",
+              "resource_159"
+            ],
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.6",
+                  "510.A.1.1.1.2"
+                ]
+              }
+            ],
+            "title" : "Practice 6 ",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "004aeebb-f91a-4a7f-928b-2f81cc1ae778",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "68bafdd4-9e46-45c6-9caa-909d363916c2",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "afba2e18-7e64-474e-87ab-34b78ca6cae4",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "9e92afbd-968e-4308-8a58-a50f51a7afe8",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "3b8a4f75-ea91-4e1f-b55c-7d3e91d07a65",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "d760e019-95b2-405d-af0c-887a96c51128",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "573a6c9c-6492-4180-abfe-2acbb977aa29",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "dda57f9f-f55c-4165-9deb-2e7f16a2e7e3",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "2168c1a3-a80f-4783-81b8-431d535235f7",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "f18a9234-ea46-4282-a31a-0f5cbcaa183e",
+                "type" : "task",
+                "title" : "New Multiple Choice",
+                "allowedAttempts" : 2,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_163",
+            "resourceRefId" : [
+              "resource_3",
+              "resource_160",
+              "resource_161",
+              "resource_162",
+              "resource_96",
+              "resource_95",
+              "resource_98",
+              "resource_101",
+              "resource_26",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_99",
+              "resource_94",
+              "resource_102",
+              "resource_105",
+              "resource_108",
+              "resource_109",
+              "resource_97",
+              "resource_106",
+              "resource_117",
+              "resource_112",
+              "resource_111",
+              "resource_116",
+              "resource_107",
+              "resource_119",
+              "resource_114",
+              "resource_103",
+              "resource_104",
+              "resource_100",
+              "resource_113",
+              "resource_163",
+              "resource_165",
+              "resource_166",
+              "resource_167",
+              "resource_168"
+            ],
+            "standards" : [
+              {
+                "stdPackageId" : "standards_english_2.1",
+                "pedagogicalIds" : [
+                  "510.A.1.1.1.6",
+                  "510.A.1.1.1.2"
+                ]
+              }
+            ],
+            "title" : "Practice 7",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "82dc6d40-cf28-44fe-98fc-b6aaf4a2fb0d",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "8b64f411-6a68-485a-b1ee-f2e1ce0e5226",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "08ff7b7a-64e3-4298-8d10-80236fbefd99",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "c602a408-438d-41c4-9ac6-4535bcac68d6",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "5730521e-6474-47ca-a2be-53481e815209",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "10476647-acb2-4bea-9000-fc70d1f9dd3e",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              },
+              {
+                "cid" : "eb067454-961f-4cfc-ab75-4159cca368c9",
+                "type" : "task",
+                "title" : "Fill in the gaps",
+                "allowedAttempts" : 0,
+                "checkingType" : "auto",
+                "standards" : [
+                  {
+                    "stdPackageId" : "skills_english_1.0",
+                    "pedagogicalIds" : [
+                      "Reading"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "contentRef" : "resource_172",
+            "resourceRefId" : [
+              "resource_169",
+              "resource_170",
+              "resource_171",
+              "resource_27",
+              "resource_28",
+              "resource_29",
+              "resource_54",
+              "resource_55",
+              "resource_172",
+              "resource_174",
+              "resource_175",
+              "resource_176",
+              "resource_177"
+            ],
+            "standards" : [],
+            "title" : "Practice 8",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "61248095-3452-4dc9-841f-25aad4af5625",
+            "mimeType" : "DL",
+            "contentRef" : "resource_200",
+            "resourceRefId" : [
+              "resource_197",
+              "resource_200"
+            ],
+            "title" : "End of Practice",
+            "type" : "sequence"
+          }
+        ]
+      },
+      {
+        "cid" : "a0bf67a2-e828-4f10-8a8e-441f1cf12720",
+        "title" : "Summary",
+        "type" : "lo",
+        "standards" : [],
+        "modality" : "Class",
+        "sequences" : [
+          {
+            "cid" : "a85bab59-4058-459d-b019-04162adf7f79",
+            "mimeType" : "DL",
+            "tasks" : [
+              {
+                "cid" : "ca97563c-a033-4158-8f88-5afb6269c361",
+                "type" : "task",
+                "title" : "New Question Only",
+                "allowedAttempts" : 0,
+                "checkingType" : "manual",
+                "standards" : []
+              },
+              {
+                "cid" : "15a7af9f-e588-4217-a03e-a7eea35d2037",
+                "type" : "task",
+                "title" : "New Question Only",
+                "allowedAttempts" : 0,
+                "checkingType" : "manual",
+                "standards" : []
+              }
+            ],
+            "contentRef" : "resource_191",
+            "resourceRefId" : [
+              "resource_178",
+              "resource_3",
+              "resource_179",
+              "resource_180",
+              "resource_181",
+              "resource_182",
+              "resource_183",
+              "resource_184",
+              "resource_185",
+              "resource_186",
+              "resource_187",
+              "resource_188",
+              "resource_189",
+              "resource_190",
+              "resource_191",
+              "resource_193",
+              "resource_194",
+              "resource_195",
+              "resource_196"
+            ],
+            "teacherGuide" : {
+              "resourceRefId" : [],
+              "attachments" : [],
+              "data" : "VGhpcyBhY3Rpdml0eSBzdW1tYXJpemVzIHRoZSBjb250ZW50IG9mIHRoaXMgbGVzc29uLiBDb25kdWN0IHRoZSBhY3Rpdml0eSBhY2NvcmRpbmcgdG8gdGhlIGluc3RydWN0aW9ucyBvbiB0aGUgc2NyZWVuLg==",
+              "mimeType" : "text/html+base64Encoded"
+            },
+            "standards" : [
+              {
+                "stdPackageId" : "skills_english_1.0",
+                "pedagogicalIds" : [
+                  "Reading"
+                ]
+              }
+            ],
+            "title" : "Summary 1",
+            "type" : "sequence"
+          },
+          {
+            "cid" : "ac77ef47-7c00-4980-bd94-7648b7a367d9",
+            "mimeType" : "DL",
+            "contentRef" : "resource_202",
+            "resourceRefId" : [
+              "resource_197",
+              "resource_202"
+            ],
+            "title" : "End of  Summary",
+            "type" : "sequence"
+          }
+        ]
+      }
+    ],
+    "format" : "NATIVE"
+  }

@@ -1,0 +1,51 @@
+
+.FreeWritingAnswer_content {
+	display: inline-block;
+	width: 99%;
+}
+
+.sequence_stage .FreeWritingAnswer_content .element_preview_wrapper,
+.FreeWritingAnswer_content .element_preview_wrapper {
+	max-width: 102%;
+	width: 100%;
+}
+.FreeWritingAnswer_content .element_preview_wrapper.view_mode_normal {
+    display:inline-block;
+    width:auto;
+    line-height: initial;
+}
+.FreeWritingAnswer_content .element_preview_wrapper.view_mode_small {
+	width: 100%;
+}
+
+.FreeWritingAnswer_content h3 {
+	color: rgb(135, 135, 135);
+	white-space: normal;
+	word-wrap: break-word;
+	border-bottom: solid 1px rgb(218, 220, 219);
+	line-height: 1.2;
+	width: -webkit-calc(100% - 2px);
+	max-width: 92%;
+	min-width: 92%;
+}
+
+.screen-content.task_screen .FreeWritingAnswer_content.FreeWritingAnswer_dontShow > div.FreeWritingAnswer_message,
+.FreeWritingAnswer_content.FreeWritingAnswer_dontShow > div.FreeWritingAnswer_message {
+	display: inline-block;
+    color: #6CB6A5;
+}
+
+
+input#textEditorEditorMaxChars{
+    width: 30px;
+}
+label#label_textEditorToolbarCheckbox input#textEditorToolbarCheckbox{
+    margin-right: 25px;
+
+}
+
+
+.FreeWritingAnswer_content > .element_preview_wrapper > .editor-wrapper {
+    display:inline-block;
+    vertical-align: middle;
+}

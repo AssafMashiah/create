@@ -1,0 +1,26 @@
+<td class="lessons_cell {{^length}}empty{{/length}}">
+   
+    {{#hasLessons}}
+    <span class="connected_label">((dialog.learningpath.lessons.connected)):</span>
+    <div id="lessons_list" class="{{#expandable}}expandable{{/expandable}}">
+        <div class="lesson_rows">
+        {{#lessons}}
+            <div class="lesson_row">
+                <label >{{data.title}}</label>
+            </div>
+        {{/lessons}}
+        </div>
+        {{#expandable}}
+        <div class="btn_more"><a><span>((dialog.learningpath.lessons.showall))</span> ({{length}})</a><span class="base-icon icon-caret-down"></span></div>
+        <div class="btn_less"><a>((dialog.learningpath.lessons.showless))</a><span class="base-icon icon-caret-up"></span></div>
+        {{/expandable}}
+    </div>
+
+    <a class="buttons edit_lessons base-icon icon-cog"></a>
+    {{/hasLessons}}
+    {{^hasLessons}}
+        <a class="edit_lessons">+ ((dialog.learningpath.lessons.placeholder))</a>
+    {{/hasLessons}}
+        
+
+</td>

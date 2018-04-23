@@ -1,0 +1,485 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "#",
+	"required":false,
+	"properties":{
+		"author": {
+			"type":"string",
+			"id": "author",
+			"required":false
+		},
+		"cgsVersion": {
+			"type":"string",
+			"id": "cgsVersion",
+			"required":false
+		},
+		"contentLocales": {
+			"type":"array",
+			"id": "contentLocales",
+			"required":false,
+			"items":
+				{
+					"type":"string",
+					"id": "0",
+					"required":false
+				}
+
+
+		},
+		"copyright": {
+			"type":"string",
+			"id": "copyright",
+			"required":false
+		},
+		"coverRefId": {
+			"type":"string",
+			"id": "coverRefId",
+			"required":false
+		},
+		"created": {
+			"type":"string",
+			"id": "created",
+			"required":false
+		},
+		"credits": {
+			"type":"string",
+			"id": "credits",
+			"required":false
+		},
+		"cssRefId": {
+			"type":"string",
+			"id": "cssRefId",
+			"required":false
+		},
+		"description": {
+			"type":"string",
+			"id": "description",
+			"required":false
+		},
+		"differentiationClasses": {
+			"type":"array",
+			"id": "differentiationClasses",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "0",
+					"required":false,
+					"properties":{
+						"description": {
+							"type":"string",
+							"id": "description",
+							"required":false
+						},
+						"name": {
+							"type":"string",
+							"id": "name",
+							"required":false
+						},
+						"typeIcon": {
+							"type":"string",
+							"id": "typeIcon",
+							"required":false
+						},
+						"value": {
+							"type":"string",
+							"id": "value",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"glossary": {
+			"type":"array",
+			"id": "glossary",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "0",
+					"required":false,
+					"properties":{
+						"baz": {
+							"type":"string",
+							"id": "baz",
+							"required":false
+						},
+						"foo": {
+							"type":"string",
+							"id": "foo",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"gradeLevel": {
+			"type":"array",
+			"id": "gradeLevel",
+			"required":false,
+			"items":
+				{
+					"type":"string",
+					"id": "0",
+					"required":false
+				}
+
+
+		},
+		"header": {
+			"type":"object",
+			"id": "header",
+			"required":false,
+			"properties":{
+				"id": {
+					"type":"string",
+					"id": "id",
+					"required":false
+				},
+				"last-modified": {
+					"type":"string",
+					"id": "last-modified",
+					"required":false
+				}
+			}
+		},
+		"isbn": {
+			"type":"string",
+			"id": "isbn",
+			"required":false
+		},
+		"lessonTemplates": {
+			"type":"array",
+			"id": "lessonTemplates",
+			"required":false,
+			"items":[
+				{
+					"type":"object",
+					"id": "0",
+					"required":false,
+					"properties":{
+						"lessonRef": {
+							"type":"string",
+							"id": "lessonRef",
+							"required":false
+						},
+						"name": {
+							"type":"string",
+							"id": "name",
+							"required":false
+						}
+					}
+				},
+				{
+					"type":"object",
+					"id": "1",
+					"required":false,
+					"properties":{
+						"name": {
+							"type":"string",
+							"id": "name",
+							"required":false
+						},
+						"url": {
+							"type":"string",
+							"id": "url",
+							"required":false
+						}
+					}
+				}
+			]
+		},
+		"overview": {
+			"type":"string",
+			"id": "overview",
+			"required":false
+		},
+		"pedagogicalLoTypes": {
+			"type":"array",
+			"id": "pedagogicalLoTypes",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "0",
+					"required":false,
+					"properties":{
+						"description": {
+							"type":"string",
+							"id": "description",
+							"required":false
+						},
+						"name": {
+							"type":"string",
+							"id": "name",
+							"required":false
+						},
+						"typeIcon": {
+							"type":"string",
+							"id": "typeIcon",
+							"required":false
+						},
+						"value": {
+							"type":"string",
+							"id": "value",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"publisher": {
+			"type":"string",
+			"id": "publisher",
+			"required":false
+		},
+		"resources": {
+			"type":"array",
+			"id": "resources",
+			"required":false,
+			"items":
+				{
+					"type":"object",
+					"id": "0",
+					"required":false,
+					"properties":{
+						"description": {
+							"type":"string",
+							"id": "description",
+							"required":false
+						},
+						"href": {
+							"type":"string",
+							"id": "href",
+							"required":false
+						},
+						"type": {
+							"type":"string",
+							"id": "type",
+							"required":false
+						}
+					}
+				}
+
+
+		},
+		"schema": {
+			"type":"string",
+			"id": "schema",
+			"required":false
+		},
+		"subjectArea": {
+			"type":"array",
+			"id": "subjectArea",
+			"required":false,
+			"items":
+				{
+					"type":"string",
+					"id": "0",
+					"required":false
+				}
+
+
+		},
+		"targetPopulation": {
+			"type":"array",
+			"id": "targetPopulation",
+			"required":false,
+			"items":
+				{
+					"type":"string",
+					"id": "0",
+					"required":false
+				}
+
+
+		},
+		"technicalReq": {
+			"type":"string",
+			"id": "technicalReq",
+			"required":false
+		},
+		"title": {
+			"type":"string",
+			"id": "title",
+			"required":false
+		},
+		"toc": {
+			"type":"object",
+			"id": "toc",
+			"required":false,
+			"properties":{
+				"lessonsRef": {
+					"type":"array",
+					"id": "lessonsRef",
+					"required":false,
+					"items":
+						{
+							"type":"string",
+							"id": "0",
+							"required":false
+						}
+
+
+				},
+				"localId": {
+					"type":"string",
+					"id": "localId",
+					"required":false
+				},
+				"maxDepth": {
+					"type":"number",
+					"id": "maxDepth",
+					"required":false
+				},
+				"tocItems": {
+					"type":"array",
+					"id": "tocItems",
+					"required":false,
+					"items":
+						{
+							"type":"object",
+							"id": "0",
+							"required":false,
+							"properties":{
+								"keywords": {
+									"type":"array",
+									"id": "keywords",
+									"required":false,
+									"items":
+										{
+											"type":"string",
+											"id": "0",
+											"required":false
+										}
+
+
+								},
+								"lessonsRef": {
+									"type":"array",
+									"id": "lessonsRef",
+									"required":false,
+									"items":
+										{
+											"type":"string",
+											"id": "0",
+											"required":false
+										}
+
+
+								},
+								"localId": {
+									"type":"string",
+									"id": "localId",
+									"required":false
+								},
+								"overview": {
+									"type":"string",
+									"id": "overview",
+									"required":false
+								},
+								"title": {
+									"type":"string",
+									"id": "title",
+									"required":false
+								},
+								"tocItems": {
+									"type":"array",
+									"id": "tocItems",
+									"required":false,
+									"items":
+										{
+											"type":"object",
+											"id": "0",
+											"required":false,
+											"properties":{
+												"keywords": {
+													"type":"array",
+													"id": "keywords",
+													"required":false,
+													"items":
+														{
+															"type":"string",
+															"id": "0",
+															"required":false
+														}
+
+
+												},
+												"lessonsRef": {
+													"type":"array",
+													"id": "lessonsRef",
+													"required":false,
+													"items":
+														{
+															"type":"string",
+															"id": "0",
+															"required":false
+														}
+
+
+												},
+												"localId": {
+													"type":"string",
+													"id": "localId",
+													"required":false
+												},
+												"overview": {
+													"type":"string",
+													"id": "overview",
+													"required":false
+												},
+												"title": {
+													"type":"string",
+													"id": "title",
+													"required":false
+												},
+												"type": {
+													"type":"string",
+													"id": "type",
+													"required":false
+												}
+											}
+										}
+
+
+								},
+								"type": {
+									"type":"string",
+									"id": "type",
+									"required":false
+								}
+							}
+						}
+
+
+				},
+				"type": {
+					"type":"string",
+					"id": "type",
+					"required":false
+				}
+			}
+		},
+		"type": {
+			"type":"string",
+			"id": "type",
+			"required":false
+		},
+		"updated": {
+			"type":"string",
+			"id": "updated",
+			"required":false
+		},
+		"version": {
+			"type":"string",
+			"id": "version",
+			"required":false
+		}
+	}
+}

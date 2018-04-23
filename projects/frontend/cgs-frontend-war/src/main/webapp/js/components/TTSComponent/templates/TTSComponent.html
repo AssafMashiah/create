@@ -1,0 +1,31 @@
+<table class="table table-bordered">
+    <tr>
+        <th class="language">((Language))</th>
+        <th class="short">((Service))</th>
+        <th>((Properties))</th>
+        <th class="short">((Edit))</th>
+    </tr>
+    {{#providers}}
+        <tr id="locale_{{locale}}">
+            <td>{{locale}}{{#getMappedName}}{{/getMappedName}}</td>
+            <td>
+                {{#has_providers}}
+                    <select data-locale="{{locale}}" class="locale-service">
+                        <option value="" selected="selected">((Select from list))</option>
+                        {{#providers}}
+                            <option value="{{id}}">{{name}}</option>
+                        {{/providers}}
+                    </select>
+                {{/has_providers}}
+                {{^has_providers}}
+                    <span>((No services for this locale))</span>
+                {{/has_providers}}
+            </td>
+            <td class="service-properties">
+            </td>
+            <td>
+                <button data-locale="{{locale}}" class="btn base-icon icon-cog edit-service disabled"></button>
+            </td>
+        </tr>
+    {{/providers}}
+</table>

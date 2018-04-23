@@ -1,0 +1,95 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper answerFieldTypeMathfield_editor props_editor">
+    <ul class="nav nav-tabs" id="answerFieldTypeMathfieldEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- Answer field )){{options.af_num}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            {{#controller.record.data.isNoncheckable}}
+            <div class="control-group">
+                    <label class="control-label" for="completionType">((task.answer_field_type_mathfield.props.activeKeyOnKeyboard)):</label>
+                    <select id="completionType" data-value="obj.completionType">
+                        {{#controller.constants.completionTypesNonCheckable}}
+                            <option value="{{key}}">{{label}}</option>
+                        {{/controller.constants.completionTypesNonCheckable}}
+                    <select>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="field_answer_width">((task.answer_field_type_mathfield.props.field_width))</label>
+                    <select id="field_answer_size" data-value="obj.fieldWidth">
+                        {{#controller.record.data.allowedWidths}}
+                            <option value="{{value}}">(({{text}}))</option>
+                        {{/controller.record.data.allowedWidths}}
+                    </select>
+                </div>
+            {{/controller.record.data.isNoncheckable}}
+
+            {{^controller.record.data.isNoncheckable}}
+                {{^isDDTask}}
+             
+                {{#controller.record.data.displayFieldSize}}
+                    <div class="control-group">
+                        <label class="control-label" for="field_answer_size">((Size))</label>
+                        <select id="field_answer_size" data-value="obj.answer_size">
+                            {{#controller.record.data.allowedSizes}}
+                                <option value="{{value}}">(({{text}}))</option>
+                            {{/controller.record.data.allowedSizes}}
+                        </select>
+                        <label class="control-label" for="field_AnswerType">((Max. number of characters))</label>                   
+                        <input type="text" {{#controller.record.data.disabledMaxChars}} disabled="disabled" cantBeEnabled="true" {{/controller.record.data.disabledMaxChars}} data-value="obj.MaxChars" class="textEditorInput" id="MaxChars" maxlength="4" />
+                    </div>
+                {{/controller.record.data.displayFieldSize}}
+
+                <div class="control-group">
+                    <label class="control-label" for="completionType">((task.answer_field_type_mathfield.props.activeKeyOnKeyboard)):</label>
+                    <select id="completionType" data-value="obj.completionType">
+                        {{#controller.constants.completionTypes}}
+                            <option value="{{key}}">{{label}}</option>
+                        {{/controller.constants.completionTypes}}
+                    <select>
+                </div>
+
+               
+                <div class="control-group">
+                    {{^controller.record.data.noCheckingType}}
+    				<label class="control-label" for="field_CheckingType">((Checking Type)):</label>
+    				<select id="field_CheckingType" data-value="obj.checkingType">
+    					<option value="condition">((Condition))</option>
+    					<option value="exactMatch">((Exact Match))</option>
+    					<option value="mathCorrectness">((Math Correctness))</option>                    
+    				</select>
+                    {{/controller.record.data.noCheckingType}}
+                </div> 
+                <div class="control-group">
+                    <h3 class="correct-answer-header hide">((task.answer_field_type_mathfield.props.correctAnswer)):</h3>
+                    <div class="answer-container hide">
+                    </div>
+                </div>
+                {{#showConditions}}
+                    <label class="control-label">((Student answer will have to match the folowing conditions:))</label>
+                    <div id="conditionsCheckingType-placeHolder"></div>
+
+                {{/showConditions}}
+                {{#showExactMatchList}}
+                    <div id="exactMatchCheckingType-placeHolder"></div>
+                {{/showExactMatchList}}
+
+                {{/isDDTask}}
+
+            {{/controller.record.data.isNoncheckable}}
+
+
+            
+            <!-- <br><br> -->
+            {{^controller.record.data.hideFieldHint}}
+            <div>
+                <label class="control-label">((Field Hint))</label>
+                <input id="mathfield-hint" type="text" data-value="obj.hint">
+            </div>
+            {{/controller.record.data.hideFieldHint}}
+        </div>
+    </div>
+</div>

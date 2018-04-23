@@ -1,0 +1,172 @@
+{
+  "id": "11188902-10e6-4453-a799-2c3b4bf08788",
+  "cid": "fcc7fe5c-2ba1-4337-84b2-6708511f83fa",
+  "version": "1.0.1",
+  "type": "course",
+  "format": "NATIVE",
+  "itemsData": {
+    "de9e7d14-bc6d-4110-a569-36195ef6ea0a": {
+      "tocItemRefCid": "de9e7d14-bc6d-4110-a569-36195ef6ea0a",
+      "items": [
+        {
+          "cid": "de9e7d14-bc6d-4110-a569-36195ef6ea0a",
+          "version": "1.0.1",
+          "type": "lesson",
+          "title": "My Lesson",
+          "index": 1
+        }
+      ]
+    },
+    "02d4f028-a5e5-4581-9a82-47eb2bc1dbe4": {
+      "tocItemRefCid": "02d4f028-a5e5-4581-9a82-47eb2bc1dbe4",
+      "items": [
+        {
+          "cid": "02d4f028-a5e5-4581-9a82-47eb2bc1dbe4",
+          "version": "1.0.1",
+          "type": "assessment",
+          "title": "Assessment 2",
+          "index": 2
+        }
+      ]
+    },
+    "ed6b7758-cbf2-4e77-8290-a1235a1c72c9": {
+      "tocItemRefCid": "ed6b7758-cbf2-4e77-8290-a1235a1c72c9",
+      "items": [
+        {
+          "cid": "ed6b7758-cbf2-4e77-8290-a1235a1c72c9",
+          "version": "1.0.1",
+          "type": "lesson",
+          "title": "Lesson in lower level",
+          "index": 3
+        }
+      ]
+    },
+    "dd5f45bb-4abe-4306-a7bd-fc722a13726a": {
+      "tocItemRefCid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a",
+      "items": [
+        {
+          "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a",
+          "version": "1.0.1",
+          "type": "lesson",
+          "title": "New Lesson",
+          "index": 4
+        }
+      ]
+    },
+    "622a58c4-6d35-40e5-9105-6a214f6e6100": {
+      "tocItemRefCid": "622a58c4-6d35-40e5-9105-6a214f6e6100",
+      "items": [
+        {
+          "cid": "622a58c4-6d35-40e5-9105-6a214f6e6100",
+          "version": "1.0.1",
+          "type": "lesson",
+          "title": "Negative Exponents",
+          "index": 5
+        }
+      ]
+    },
+    "82037b1a-a437-46c0-bb9b-1b0fdacf62e4": {
+      "tocItemRefCid": "82037b1a-a437-46c0-bb9b-1b0fdacf62e4",
+      "items": [
+        {
+          "cid": "82037b1a-a437-46c0-bb9b-1b0fdacf62e4",
+          "version": "1.0.1",
+          "type": "assessment",
+          "title": "Assessment 1",
+          "index": 6
+        }
+      ]
+    }
+  },
+  "data": {
+    "contentLocales": [
+      "en_US"
+    ],
+    "toc": {
+      "cid": "bb6c9d21-7988-4c75-87ee-bfb703860c62",
+      "title": "Course with several lessons, assessments and hidden lessons",
+      "overview": "",
+      "keywords": [],
+      "type": "tocItem",
+      "tocItems": [
+        {
+          "cid": "a7ccd3b4-641a-4991-9266-3c7aaa99180b",
+          "title": "Level 1",
+          "overview": "",
+          "keywords": [],
+          "type": "tocItem",
+          "standards": [],
+          "tocItems": [
+            {
+              "cid": "dafb905f-a6f8-4ef3-b6fc-b41100e06f3b",
+              "title": "Level 2",
+              "overview": "",
+              "keywords": [],
+              "type": "tocItem",
+              "standards": [],
+              "tocItems": [],
+              "tocItemRefs": [
+                {
+                  "type": "lesson",
+                  "cid": "ed6b7758-cbf2-4e77-8290-a1235a1c72c9"
+                }
+              ]
+            }
+          ],
+          "tocItemRefs": [
+            {
+              "type": "lesson",
+              "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a"
+            },
+            {
+              "type": "lesson",
+              "cid": "622a58c4-6d35-40e5-9105-6a214f6e6100"
+            },
+            {
+              "type": "assessment",
+              "cid": "82037b1a-a437-46c0-bb9b-1b0fdacf62e4"
+            }
+          ]
+        }
+      ],
+      "tocItemRefs": [
+        {
+          "type": "lesson",
+          "cid": "de9e7d14-bc6d-4110-a569-36195ef6ea0a"
+        },
+        {
+          "type": "assessment",
+          "cid": "02d4f028-a5e5-4581-9a82-47eb2bc1dbe4"
+        }
+      ]
+    },
+    "customFields": [],
+    "standardPackages": [],
+    "includeLo": true,
+    "publisher": "myPublishe",
+    "schema": "course_v4",
+    "standards": [
+      {
+        "stdPackageId": "ccss_math_1.0",
+        "pedagogicalIds": [
+          "6.EE.A.3",
+          "6.EE.A.4"
+        ]
+      }
+    ],
+    "author": "test2",
+    "cgsVersion": "7.0.28.47",
+    "maxDepth": 3,
+    "title": "Course with several lessons, assessments and hidden lessons",
+    "updated": "2014-12-02T08:21:40.769+0000",
+    "assetRootHRef": ""
+  },
+  "metadata": {
+    "lastModified": 1417508501096,
+    "created": 1417508501096
+  },
+  "original": {
+    "courseCid": "578f782d-29db-48b0-b7d5-e6becae26bd0",
+    "version": "1.0.1"
+  }
+}

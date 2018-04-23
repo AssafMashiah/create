@@ -1,0 +1,160 @@
+"course": {
+	"schema": "schema/v1.0#course",  // the schema's URI, not neccesserily the URL 
+	"header":{
+				"id":"12312312312",
+				"last-modified":"yyyy.MM.dd HH:mm:ss Z",
+				"objVersion":"0.0.0"  // place holder - this will be used 
+			},
+	"type": "course",
+	"author": "Ronen Mintz",
+	"publisher": "Hotza\"at Yediut Aharonot",
+	
+	"created":  "2012-01-01 12:12:12Z", // application level creation date. relates to the entire course.
+	"updated":  "2012-01-01 12:12:12Z", // application level modification date. relates to the entire course. TBD - when to change??
+	"version":  "1.0.4", // application level creation date. equivalent to a printed book revision number. changed upon publication.
+	"cgsVersion": "CGS1.0.1",	// version of the creating environment.
+	
+	"title": "aTitle",
+	"isbn": "0-596-00894-5",	// if applicable
+	"coverRefId": "media/F4/A8/F4A834564356345.gif",
+	"contentLocales": ["en_US", "he_IL"], 
+
+	"overview": "an extremely long text (about xxx bytes)",
+	"subjectArea": ["Subject1","Subject2","math","exl"], 
+	"description": "some description",
+	"credits": "sdfgsdfgsdfg",
+	"copyright": "sdfgsdfgsdfg",
+	"gradeLevel": ["5th","4th","3rd"], 
+	"targetPopulation": ["orthodox", "gifted","simple","NY"],
+
+	"technicalReq": "sdfgsdfgsdfgsdfgsdfg",
+	
+	"toc": {
+		"localId":"43534563456",
+		"type":"toc",
+		"maxDepth": 6,
+		"tocItems": [
+				{
+					"localId": "toc_100", 
+					"type":"tocItem",
+					"title": "my titles",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312359",
+									"lessons/12312312369",
+									"lessons/12312312379"
+								],
+					"tocItems": [{
+								"localId": "toc_101", 
+								"type":"tocItem",
+								"title": "bla",
+								"overview": "an extremely long text (about xxx bytes)",
+								"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+								"lessonsRef": [
+												"lessons/12312313319",
+												"lessons/12313312319",
+												"lessons/15312312319"
+											],
+								},{
+								"localId": "toc_102", 
+								"type":"tocItem",
+								"title": "bla",
+								"overview": "an extremely long text (about xxx bytes)",
+								"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+								"lessonsRef": [
+												"lessons/12319312319",
+												"lessons/12312812319",
+												"lessons/12312372319"
+											],
+								}]
+				},
+				{
+					"localId": "toc_103", 
+					"type":"tocItem",
+					"title": "bla",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312314",
+									"lessons/12312312313",
+									"lessons/12312312315"
+								]
+				},
+				{
+					"localId": "toc_104", 
+					"type":"tocItem",
+					"title": "bla",
+					"overview": "an extremely long text (about xxx bytes)",
+					"keywords": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+					"lessonsRef": [
+									"lessons/12312312319",
+									"lessons/12312312310",
+									"lessons/12312312311"
+								]				
+				}
+			]
+	},
+
+	"lessonTemplates": [ // we copy the lesson templates into the book in order to support local customization and migration of book templates
+						{ "name": 'Assessment',
+						  "lessonRef": 'cgsData/template/lessons/template1'
+						},
+						{ "name": 'Core',
+						  "url": 'cgsData/template/lessons/template2'
+						}
+					],
+
+	"cssRefId": "css/funky.css", 	
+	
+	"resources": [  // TBD - maybe we dont need the list at this level 
+					{
+						"href": "media/F4/A8/F4A834564356345.doc",  
+						"description": "original doc name",
+						"type":"attachment"
+					},
+					{
+						"href": "media/F4/A8/F4A834564356345.xls",  
+						"description": "content of this sheet",
+						"type":"attachment"
+						
+					},
+					{
+						"href": "media/F4/A8/F4A834564356345.avi",
+						"type":"media"
+					},
+					{
+						"href": "media/F4/A8/F4A834564356345.gif",
+						"type":"media"
+					},
+					{
+						"href": "cgsData/planning.txt"
+						"type":"planning"
+					},
+					{
+						"href": "cgsData/planning.pdf"
+						"type":"planning"
+					},
+					{
+						"href": "cgsData/template/lessons/template1",
+						"type": "lessonTemplate",
+					},
+					{
+						"href": "cgsData/template/lessons/template2",
+						"type": "lessonTemplate",
+					},
+					{
+						"href": "cgsData/template/media/template1_seq1",
+						"type": "lessonTemplate",
+					},
+					{
+						"href": "cgsData/template/media/tempalte2_seq1",
+						"type": "lessonTemplate",
+					},
+					{
+						"href": "css/funky.css",
+						"type": "css"
+					}	
+			   ]
+
+}

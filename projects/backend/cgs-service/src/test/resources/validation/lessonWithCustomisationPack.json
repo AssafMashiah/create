@@ -1,0 +1,38 @@
+{
+    "cid":"e5c40be2-cb02-447a-af2f-c99ef2ad937b",
+    "header":{
+        "last-modified":{
+            "$date":"2013-11-17T08:24:21.575Z"
+        }
+    },
+    "schema":"course_v4",
+    "pedagogicalLessonType":"Custom",
+    "standards":[
+
+    ],
+    "standardPackages":[
+
+    ],
+    "resources":[
+
+    ],
+    "title":"Shared Content",
+    "type":"lesson",
+    "learningObjects":[
+        {
+            "cid":"31162278-8358-47ae-ae03-4b654d205047",
+            "title":"lo",
+            "type":"lo",
+            "sequences" : [
+                {
+                    "cid" : "0229599f-a233-401e-9982-18f9e8b2f23a",
+                    "type" : "sequenceRef",
+                    "sequenceRef": {
+                        "lessonCid": "0229599f-a233-401e-9982-18f9e8b2f23a",
+                        "sequenceCid": "0111599f-a233-401e-9982-18f9e8b2f23a"
+                    }
+                }
+            ]
+        }
+    ]
+}

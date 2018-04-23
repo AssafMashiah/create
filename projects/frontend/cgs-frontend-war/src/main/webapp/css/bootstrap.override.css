@@ -1,0 +1,628 @@
+.tooltip.top .tooltip-arrow {
+    border-top-color: #464646;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #464646;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #464646;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #464646;
+}
+
+.tooltip-inner {
+    max-width: 400px;
+    padding: 3px 8px;
+    color: #FFFFFF;
+    text-align: left;
+    text-decoration: none;
+    background-color: #464646;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px!important;
+    border-radius: 4px;
+}
+
+.tooltip.in {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.input-small {
+    width: 100px;
+}
+
+.base-icon {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: auto;
+    vertical-align: baseline;
+    font-family: FontAwesome;
+    background-position: 0 0;
+}
+
+.base-icon-no-width {
+    display: inline-block;
+    height: auto;
+    margin: auto;
+    vertical-align: baseline;
+    font-family: FontAwesome;
+    background-position: 0 0;
+}
+
+.btn .base-icon,
+.nav-tabs .base-icon {
+    line-height: .9em;
+}
+
+.base-icon:before {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+a.base-icon,
+a.base-icon {
+    display: inline-block;
+    text-decoration: inherit;
+}
+/* makes the font 33% larger relative to the icon container */
+
+.icon-large:before {
+    font-size: 1.3333333333333333em;
+    vertical-align: middle;
+}
+
+li.base-icon {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+}
+
+li .icon-large:before,
+li .icon-large:before {
+    /* 1.5 increased font size for icon-large * 1.25 width */
+    
+    width: 1.875em;
+}
+
+ul.icons {
+    margin-left: 2em;
+    text-indent: -0.8em;
+    list-style-type: none;
+}
+
+ul.icons li.base-icon {
+    width: .8em;
+}
+
+ul.icons li .icon-large:before,
+ul.icons li .icon-large:before {
+    vertical-align: initial;
+}
+
+.btn.disabled,
+.btn[disabled],
+a:disabled,
+a[disabled],
+a[disabled] * {
+    color: #999999;
+}
+
+.table tr.success td {
+    background-color: #dff0d8;
+}
+
+.table tr.error td {
+    background-color: #f2dede;
+}
+
+.table tr.warning td {
+    background-color: #fcf8e3;
+}
+
+.table tr.info td {
+    background-color: #d9edf7;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.modal.fade.in {
+    margin-top: -250px;
+    top: 50%;
+}
+
+.modal-body {
+    position: static;
+}
+.dropdown-menu{
+    border-radius: 0;
+}
+.btn-group > .dropdown-menu {
+    font-size: 14px;
+}
+
+.btn-group > .btn-mini {
+    font-size: 11px;
+}
+
+.btn-group > .btn-small {
+    font-size: 12px;
+}
+
+.btn-group > .btn-large {
+    font-size: 16px;
+}
+
+.btn-small {
+    padding: 3px 9px;
+    font-size: 12px;
+    line-height: 17px !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child {
+    margin-right: -1px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+    margin-left: -1px;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.btn-mini {
+    padding: 0 2px;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll .btn.btn-link-title .base-icon {
+    padding: 0;
+    color: #333;
+    line-height: 0.9em;
+    width: 2em;
+}
+
+.text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+label {
+    cursor: default;
+}
+
+.control-label {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 3px;
+}
+/*navbar*/
+
+.nav-tabs {
+    border: none;
+    font-family: "open_sans";
+}
+
+.nav-tabs > li {
+    display: inline-block;
+    float: none;
+}
+
+.nav.nav-tabs li a {
+    border: none;
+    font-weight: normal;
+}
+
+.nav.nav-tabs li:hover a,
+.nav.nav-tabs li.active a,
+.nav.nav-tabs li.active:hover a {
+    color: #2D66C0;
+    border-bottom: 1px solid #276CC7;
+    position: relative;
+}
+
+.nav-tabs > .active > a:focus,
+.nav.nav-tabs li:hover a,
+.nav.nav-tabs li > a {
+    background: none;
+    cursor: pointer;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 4px 0;
+    margin: 0px 6px;
+    font-size: 13px;
+}
+
+.nav.nav-tabs li a {
+    color: #333333;
+    height: 20px;
+    border-bottom: 1px solid transparent;
+}
+/*end nav bar*/
+/*time picker ovverride*/
+
+.bootstrap-timepicker-widget .icon-chevron-up:before,
+.bootstrap-timepicker-widget .icon-chevron-down:before {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-family: 'FontAwesome';
+}
+
+.bootstrap-timepicker-widget .icon-chevron-up,
+.bootstrap-timepicker-widget .icon-chevron-down {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: auto;
+    vertical-align: baseline;
+    font-family: FontAwesome;
+    background-position: 0 0;
+}
+
+.bootstrap-timepicker-widget .icon-chevron-up {
+    -webkit-transform: rotate(90deg);
+}
+
+.bootstrap-timepicker-widget .icon-chevron-down {
+    -webkit-transform: rotate(270deg);
+}
+/*end time picker ovverride*/
+/*CUSTOM INPUTS*/
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+select:focus,
+.btn:focus {
+    outline: none;
+}
+/*checkbox*/
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+}
+
+input[type="checkbox"]:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    margin-right: 5px;
+    border: 2px solid #BDBDBD;
+    border-radius: 2px;
+    -webkit-transition: 240ms;
+    -o-transition: 240ms;
+    transition: 240ms;
+}
+input[type="checkbox"].revert-color:after{
+    border-color: white; 
+}
+
+input[type="checkbox"]:checked:after {
+    background-color: #276CC7;
+    border-color: #276CC7;
+}
+input[type="checkbox"].revert-color:checked:after{
+    background-color: rgb(255, 255, 255);
+    border-color: white;
+
+}
+
+input[type="checkbox"][disabled]:checked:after {
+    background-color: #C1CBD8;
+    border-color: #C1CBD8;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    display: table;
+    width: 5px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-top-width: 0;
+    border-left-width: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+input[type="checkbox"].revert-color:checked:before{
+    border-color: rgb(39, 108, 199);
+}
+/*display the label that comens after a checkbox in a display inline-block*/
+
+input[type="checkbox"] +.control-label ,
+input[type="radio"] +.control-label {
+    display: inline;
+}
+/*end- checkbox*/
+/*radio-button*/
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 4px;
+    vertical-align: -4px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+input[type="radio"]:checked:after,
+.radio input[type="radio"]:checked:after,
+.radio-inline input[type="radio"]:checked:after {
+    border-color: #276CC7;
+}
+
+input[type="radio"]:after,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+    border: 2px solid #666666;
+}
+
+
+input[type="radio"]:before,
+.radio input[type="radio"]:before,
+.radio-inline input[type="radio"]:before,
+input[type="radio"]:after,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -3px;
+    border-radius: 50%;
+    -webkit-transition: 240ms;
+    -o-transition: 240ms;
+    transition: 240ms;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="radio"],
+.checkbox-inline input[type="radio"],
+.radio input[type="checkbox"],
+.radio-inline input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    margin-left: -25px;
+}
+
+input[type="radio"]:checked:before,
+.radio input[type="radio"]:checked:before,
+.radio-inline input[type="radio"]:checked:before {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+input[type="radio"]:before,
+.radio input[type="radio"]:before,
+.radio-inline input[type="radio"]:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #276CC7;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+input[type="radio"][disabled]:after,
+.radio input[type="radio"][disabled]:after,
+.radio-inline input[type="radio"][disabled]:after{
+    border-color: #C1CBD8;
+}
+input[type="radio"][disabled]:before, .radio input[type="radio"][disabled]:before, .radio-inline input[type="radio"][disabled]:before{
+    background-color:#C1CBD8;
+}
+
+/*text input*/
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    color: #BEBEBE;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    background-color: transparent;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    border-bottom: 1px solid #ddd;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    -webkit-box-shadow: none;
+    /* box-shadow: none; */
+    
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 0;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #276CC7;
+    outline: none;
+}
+/*select*/
+
+select {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 0;
+}
+
+select:focus {
+    border-bottom: 1px solid #276CC7;
+}
+/*button*/
+
+.btn,
+button {
+    background-image: none;
+    border-radius: 0;
+    vertical-align: middle;
+    padding: 3px 9px;
+}
+/*END  -  CUSTOM INPUTS*/
+/*badge*/
+
+.badge {
+    text-shadow: none;
+    background-color: #FF2578;;
+    display: inline-block;
+    padding: 1px 6px 1px;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-weight: normal;
+    font-size: 12px;
+}
+/*end- badge*/
+
+h4 {
+    font-family: "open_sans";
+    font-size: 16px;
+}
+
+.radio-row{
+    margin-bottom: 5px;
+}
+
+/* modifications to superscript and subscript tags to handle toggling of styles in teacher guide 
+this is a workaround for the document.execComand("subscript") bug described here:
+http://stackoverflow.com/questions/5203194/contenteditable-superscript-subscript-in-chrome
+*/
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+/*carousel*/
+.carousel-control{
+    top: 50%;
+}
+.carousel-indicators li{
+    border: 1px solid #e4e4e4;
+    background-color: #e4e4e4;
+}

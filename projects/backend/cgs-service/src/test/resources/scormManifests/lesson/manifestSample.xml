@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<manifest identifier="t2k_scorm" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                                                http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                                                http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 3rd Edition</schemaversion>
+    </metadata>
+    <organizations default="t2k_main">
+        <organization identifier="t2k_main">
+            <title>New Course</title>
+            <item identifier="t2k_dd5f45bb-4abe-4306-a7bd-fc722a13726a" identifierref="t2k_dd5f45bb-4abe-4306-a7bd-fc722a13726a_resource">
+                <title>New Lesson</title>
+            </item>
+            <imsss:sequencing>
+                <imsss:controlMode choiceExit="true" flow="true"/>
+                <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+            </imsss:sequencing>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb_resource" adlcp:scormType="sco" href="scp/index.html?locale=en_US&amp;vmode=l&amp;contentPath=../&amp;scorm=t#lessonView/a5756721-bc1c-400e-9d7a-972d4ac66f7a/courseVersion/1.0.1/lesson/dd5f45bb-4abe-4306-a7bd-fc722a13726a/lessonVersion/1.0.1" type="webcontent"></resource>
+    </resources>
+</manifest>

@@ -1,0 +1,225 @@
+html, body, #base {
+    height: 100%;
+}
+
+body {
+    background: #fbfbfb;
+    overflow-y: hidden;
+}
+
+
+/* T2K-ICONS */
+
+
+
+.hide-icon {
+    text-indent: -900px;
+}
+
+.modal-body .progress, .alert {
+    margin-bottom: 0;
+}
+
+#loading {
+    width: 90%;
+}
+
+.error {
+    color: #fb0000;
+}
+
+.error-message.no-error {
+    display: none;
+}
+
+/* Used by common/FileUpload.js */
+
+.hide-file-upload {
+    display: none;
+}
+
+button.file-upload.delete {
+    margin: 0;
+    width: 32px;
+    height: 28px;
+    font-size: 24px;
+    padding: 0;    
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    background-color: #fff;
+    z-index: 99;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    overflow: visible;
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    display: block;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  background-repeat: no-repeat;
+}
+ 
+ 
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(../media/vertical-decrement-arrow.png);
+}
+ 
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(../media/vertical-increment-arrow.png);
+}
+
+
+.hidden {
+    display: none !important;
+}
+#dynamic-book-player-holder > iframe{
+    border: none;
+}
+iframe,
+.textViewer-placeholder{
+    border: 1px solid #e1e1e1;
+}
+
+
+.screen-content {
+    background-color: #fff;
+}
+
+.mathfieldContainer {
+    -webkit-user-select: none;
+    direction: ltr !important;
+
+    white-space: nowrap;
+}
+.mathfieldContainer .mathField {
+    display: inline-block;
+}
+
+
+div.mathField input {
+    margin:0;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    vertical-align: baseline;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: normal;
+    padding:0;
+    height: auto;
+}
+
+div.mathField input:focus {
+    border:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    outline:none;
+}
+
+div.mask-overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    z-index: 1000;
+}
+
+.latex-textarea {
+    width: 99%;
+    height: 178px;
+    resize: none;
+
+    direction: ltr !important;
+}
+
+.MathJax_Display {
+    background-color: transparent;
+}
+
+.progress-bar {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 12px;
+	background-color: #dadada;
+}
+
+.progress-bar {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 12px;
+	background-color: #dadada;
+}
+
+.progress-bar .progress-info {
+	display: block;
+	box-sizing: border-box;
+	height: 12px;
+	background-color: #282828;
+}
+
+.custom_table {
+    margin-bottom: -20px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.custom_table th, .custom_table td { overflow: hidden; }
+
+.custom_table .ui-state-highlight {
+    height: 1.5em;
+    line-height: 1.2em;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    background-image: none;
+}
+
+.custom_table tbody td:first-child:hover {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom_table thead {
+    background-color: #EEE;
+}
+
+.custom_table thead th {
+    margin: 1px;
+}
+
+.custom_table tbody tr:hover {
+    background-color: #DFE8E5;
+}
+
+

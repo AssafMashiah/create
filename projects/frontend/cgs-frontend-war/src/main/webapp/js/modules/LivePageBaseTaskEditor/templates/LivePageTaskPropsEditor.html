@@ -1,0 +1,42 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper task_editor props_editor">
+    <ul class="nav nav-tabs" id="taskEditorTabs">
+        {{#controller.showTaskSettingsButton}}
+        <li class="active" ><a href="#settings" data-toggle="tab">((Properties))</a></li>
+        {{/controller.showTaskSettingsButton}}
+        <li class=""><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        <li {{^controller.showTaskSettingsButton}}class="active"{{/controller.showTaskSettingsButton}}><a href="#properties" data-toggle="tab">((Metadata))</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane {{#controller.showTaskSettingsButton}}active{{/controller.showTaskSettingsButton}}" id="settings">
+        </div>
+        <div class="tab-pane {{^controller.showTaskSettingsButton}}active{{/controller.showTaskSettingsButton}}" id="properties">
+            <div class="control-group">
+                <label class="control-label sharedIntegrationg" style="" for="field_sharedIntegration">((Integration with Shared:))</label>
+                <div class="controls sharedIntegrationg" style="">
+                    <select id="field_sharedIntegration" data-value="obj.sharedIntegration">
+                        <option value="">((select from list))</option>
+                        <option value="Explore">((Explore))</option>
+                        <option value="Reference">((Reference))</option>
+                        <option value="Support">((Support))</option>
+                    </select>
+                </div>
+                <label class="control-label" for="field_difficulty">((Difficulty:))</label>
+                <div class="controls">
+                    <select id="field_difficulty" data-value="obj.difficulty">
+                        <option value="">((select from list))</option>
+                        <option value="low">((1))</option>
+                        <option value="medium">((2))</option>
+                        <option value="high">((3))</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane" id="standards">
+            <h5>((standards.task_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+    </div>
+</div>

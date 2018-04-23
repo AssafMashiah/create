@@ -1,0 +1,23 @@
+<fieldset class="{{elementType}}_content ConvertEditor ConvertFreeWritingEditor">
+	<legend>((Free Writing))</legend>
+	<div class="control-group instruction">
+		<div id="instruction_icon" class="instruction_icon">/</div>
+		<span class="placeholder">{{{record.data.question_instruction}}}</span>
+	</div>
+	<div class="control-group">
+		<span class="placeholder">((Enter Question Content))</span>
+		<div class="content-area question_content">
+			<div dropable-content="image,text" 
+			dropable-content-id="question_content" 
+			dropable-event-id="{{record.id}}" 
+			class="drop-zone">{{{record.data.question_content}}}</div>
+		</div>
+	</div>
+	<div class="props">
+		<div class="convert_props_{{elementId}}">
+					
+		</div>
+	</div>
+	<div class="answer_area {{record.data.size}}">
+	</div>
+</fieldset>

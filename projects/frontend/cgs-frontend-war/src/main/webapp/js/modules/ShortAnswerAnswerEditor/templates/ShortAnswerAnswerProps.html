@@ -1,0 +1,40 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper ShortAnswerAnswer_editor props_editor">
+    <ul class="nav nav-tabs" id="textEditorEditorTabs">
+        <li class="active" >
+        	<a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_mode">((Mode)):</label>
+                <select id="field_mode" data-value="obj.fieldsNum">
+                    <option value="SingleAnswerMode">((Single Answer Field))</option>
+                    <option value="multiple">((Multiple Answer Fields))</option>
+                </select>
+                <div class="{{#controller.record.data.isSubTask}} hidden {{/controller.record.data.isSubTask}}">
+                    <label class="control-label" for="field_answer_type">((Answer Type)):</label>
+                    <select id="field_answer_type" data-value="obj.answer_type">
+                        <option value="student">((Text))</option>
+                        <option value="studentMath">((Math Field))</option>
+                    </select>
+                </div>
+
+                <div data-placeholder="obj.answer_type" class="mathfieldHeight control-group {{#controller.record.data.isSubTask}} hidden {{/controller.record.data.isSubTask}}">
+                    <input type="checkbox" id="field_FractionOverFraction"{{#fractionOverFraction}}checked{{/fractionOverFraction}} >
+                    <label class="control-label" for="field_FractionOverFraction">((task.clozeAnswer.properties.FractionOverFraction))</label>
+                </div>
+
+                <div class="{{^controller.record.data.isSubTask}} hidden {{/controller.record.data.isSubTask}}">
+                     <input data-checked="obj.has_questions" type="checkbox" id="field_has_questions" >
+                     <label class="control-label" for="field_has_questions">((A question precedes each answer field))</label>
+                </div>
+            </div>
+            {{^controller.record.data.checkingEnabled}}
+            <div id="rubric_component"></div>
+            {{/controller.record.data.checkingEnabled}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<imageViewer src="{{src}}" width="{{imgWidth}}" height="{{imgHeight}}" {{#title}} alt="{{title}}"  {{/title}} id="{{id}}" minimumReadable="{{minimumReadable}}">
+    {{#showSound}}
+    <imageSound src="{{src_sound}}"/>
+    {{/showSound}}    
+    {{#showCopyrights}}
+    <credit>
+    	<textViewer>
+		    <paragraph><span>{{{copyrights}}}</span></paragraph>
+		</textViewer>
+    </credit>
+    {{/showCopyrights}}    
+    {{#showCaption}}
+    <imageCaption>
+    	<textViewer>
+		    <paragraph><span>{{{caption}}}</span></paragraph>
+            {{#captionNarration}}
+            <inlineNarration src="{{captionNarration}}" tooltip="narrationTooltip"></inlineNarration>
+            {{/captionNarration}}
+		</textViewer>
+    </imageCaption>
+    {{/showCaption}}
+    {{{content}}}
+</imageViewer>

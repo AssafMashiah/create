@@ -1,0 +1,61 @@
+<div class="content-box">
+	<div class="error-message no-error">
+		<div class="failure-title-wrapper">
+			<div class="failed-sign"></div>
+			<div class="failed-title">
+				<a id="epub-error-details-toggle">((error.details))</a>
+			</div>
+		</div>
+		<div class="failed-text" id="epub-error-failure-text"></div>
+	</div>
+	<div id="success-message">
+		<div class="line1">((dialog.importepub.progress.success.line1))</div>
+		<div class="line2">((dialog.importepub.progress.success.line2))</div>
+	</div>
+	<div class="content-row">
+		<span id="progress-info"></span>
+		<span id="progress-step"></span>
+	</div>
+	<div class="content-row">
+		<div class="progress-bar">
+			<div id="progress" style="width: 0%; transition: width 0.5s;" class="progress-info"></div>
+		</div>
+		<div id="filename"></div>
+	</div>
+	
+	<div class="content-row tocinfo" style="margin-top: 20px;">
+		<div><strong>((dialog.importepub.progress.resultlabel))</strong></div>
+	</div>
+	<ul class="tocinfo">
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.toclevels)):</span>
+			<span id="toclevels"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.lessons)):</span>
+			<span id="lessons"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.pages)):</span>
+			<span id="pages"></span>
+		</li>
+	</ul>
+	<ul class="stepsinfo">
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.buildstructure)):</span>
+			<span id="buildEbookStructure"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.generatingthumbs)):</span>
+			<span id="generatingPageThumbnails"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.importepub.progress.creatingcourse)):</span>
+			<span id="creatingCourse"></span>
+		</li>
+	</ul>
+	<div id="button_row">
+		<button id="button_continue" class="btn btn-small pull-left">((dialog.importepub.progress.continue.label))</button>
+		<button id="button_cancel" class="btn pull-right">((dialog.importepub.progress.cancel.label))</button>
+	</div>
+</div>

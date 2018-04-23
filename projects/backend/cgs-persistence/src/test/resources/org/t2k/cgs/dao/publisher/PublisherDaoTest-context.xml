@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/data/mongo
+          http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <context:property-placeholder location="classpath:config/mongo.properties"/>
+
+    <mongo:mongo id="mongo" host="${mongoHost}" port="${mongoPort}">
+        <mongo:options
+                connections-per-host="${mongoConnectionsPerHost}"
+                threads-allowed-to-block-for-connection-multiplier="${mongoThreadsAllowedToBlockForConnectionMultiplier}"
+                connect-timeout="${mongoConnectTimeout}"
+                max-wait-time="${mongoMaxWaitTime}"
+                auto-connect-retry="${mongoAutoConnectRetry}"
+                socket-keep-alive="${mongoSocketKeepAlive}"
+                socket-timeout="${mongoSocketTimeout}"
+                slave-ok="${mongoSlaveOk}"
+                write-number="1"
+                write-timeout="0"
+                />
+    </mongo:mongo>
+
+    <mongo:db-factory id="cgsMongoDbFactory" dbname="${mongoDbName}" mongo-ref="mongo" />
+
+
+    <bean id="cgsMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+        <property name="writeConcern" value="ACKNOWLEDGED"/>
+    </bean>
+
+    <bean name="mongoDao" class="org.t2k.cgs.dao.MongoDao" abstract="true">
+        <property name="mongoTemplate" ref="cgsMongoTemplate"/>
+    </bean>
+
+    <bean class="org.t2k.cgs.dao.publisher.AccountMongoDao" parent="mongoDao" name="pubDao" />
+
+</beans>

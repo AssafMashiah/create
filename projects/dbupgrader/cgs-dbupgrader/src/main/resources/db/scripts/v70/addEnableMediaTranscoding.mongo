@@ -1,0 +1,13 @@
+//##################################################################
+//#  add the enableMediaEncoding=false flag to all publishers      #
+//##################################################################
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.publishers.find().forEach(function (doc) {
+            if (!doc.customization.enableMediaEncoding) {
+                doc.customization.enableMediaEncoding = false; // set default to true
+                db.publishers.save(doc);
+            }
+        }
+    )
+}

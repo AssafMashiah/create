@@ -1,0 +1,9 @@
+<div id="toolbar" class="minimum-readable-toolbar">
+    <span class="definition-span">((component.image.props advanced.label))</span>
+    <span class="icon-pdf-zoom-out zooming-button"></span>
+    <input id="minimumValue" value="{{config.data.minimum}}" type="range" step="5" class="minimum-readable-range-style" min="25" max="100" />
+    <span class="icon-pdf-zoom-in zooming-button"></span>
+</div>
+<div id="imageView">
+    <img src="{{#server-path}}{{config.data.img}}{{/server-path}}" style="width: {{config.data.minimum}}%; height: {{config.data.minimum}}%" />
+</div>

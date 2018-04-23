@@ -1,0 +1,91 @@
+<div id="T2KStandards" >
+    <div id="standards-adminstration-table">
+        <table id="standards-table" cellpadding="0" cellspacing="0" border="0"
+               class="table table-striped table-bordered content-table">
+            <thead>
+            <th>((name))</th>
+            <th>((subjectArea))</th>
+            <th>((description))</th>
+            <th>((country))</th>
+            <th>((purpose))</th>
+            <th>((version))</th>
+            <th>((created))</th>
+            <th class="actions_header">((Actions))</th> 
+            </thead>
+            <tbody>
+            {{#item.data}}
+            <tr model-id="{{name}},{{subjectArea}}">
+                <td>
+                    {{name}}
+                </td>
+                <td>
+                    {{subjectArea}}
+                </td>
+                <td>
+                    {{description}}
+                </td>
+                <td>
+                    {{country}}
+                </td>
+                <td>
+                    {{purpose}}
+                </td>
+                <td>
+                    {{version}}
+                </td>
+                <td>
+                    {{created}}
+                </td>
+                <td class="actions">
+                    <button class="edit-standard btn">
+                        <a href="#" class="icon-cog"></a>
+                    </button>
+                    <button class="remove_standard btn">
+                        <a href="#" class="icon-trash"></a>
+                    </button>
+                </td> 
+            </tr>
+            {{/item.data}}
+            </tbody>
+            <tfoot id="form-add-standard">
+            <tr>
+                <th>
+                    <input type="text" id="name" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="subjectArea" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="description" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="country" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="purpose" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="version" class="input-medium" value=""/>
+                </th>
+                <th hidden>
+                    <input type="text" id="created" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="file" id="button_upload_file" class="input-medium"></input>
+                </th>
+                <th class="actions">
+                    <button id="save-standard" class="btn focus">
+                        <a href="#" class="icon-folder-close"></a>
+                    </button>
+                    <button class="remove_standard btn">
+                        <a href="#" class="icon-trash"></a>
+                    </button>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+        <button class="btn add-new-standard" id="add-new-standard">
+            <a class="icon-plus"></a>
+        </button>
+    </div>
+</div>

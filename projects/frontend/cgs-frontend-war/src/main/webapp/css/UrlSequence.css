@@ -1,0 +1,7 @@
+#url_sequence_iframe {
+	width: 100%;
+	height: 100%;
+	overflow: hidden !important;
+	pointer-events: none;
+	opacity : 0.5;
+}

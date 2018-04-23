@@ -1,0 +1,18 @@
+<fieldset class="{{elementType}}_content ConvertEditor ConvertSelfCheckEditor">
+	<legend>((Self-Check))</legend>
+	<div class="control-group instruction">
+		<span class="placeholder">((Enter Title))</span>
+		<div dropable-content="text" 
+		dropable-limit="1"  
+		dropable-content-id="question_title" 
+		dropable-event-id="{{elementId}}" 
+		class="drop-zone">{{{record.data.question_title}}}</div>
+	</div>
+	<div class="control-group">
+		<div class="content-area question_content">
+			<div dropable-content="image,text" dropable-content-id="question_content" 
+			data-placeholder='((Enter content ...))' 
+			dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_content}}}</div>
+		</div>
+	</div>
+</fieldset>

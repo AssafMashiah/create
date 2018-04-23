@@ -1,0 +1,46 @@
+<div class="growinglist-component control-group task_container scroll_enabled">
+    <label class="control-label">{{title}}</label>
+
+    <div class="controls">
+        <div class="growinglist">
+            {{#has_data}}
+            {{#data}}
+            <div idx="{{idx}}" class="outerList">
+                <div class="mainListTitle">(({{title}}))</div>
+                <div class="btn big-icon-remove">
+                    <button class="btn js-growing-remove-condition base-icon icon-trash"></button>
+                </div>
+                {{#innerList}}
+                {{> row}}
+                {{/innerList}}
+                {{#splitAddButton}}
+                <div class="btn-group split">
+                    <button class="js-growing-add btn">
+                        <i class=" base-icon icon-plus"></i>
+                    </button>
+                    <button data-toggle="dropdown" class=" btn">
+                        <b class="caret white-caret"></b>
+                    </button>
+                    <ul class="addCondition dropdown-menu">
+                        <li>
+                            <a class="newInnerList"> ((New Rule))</a>
+                        </li>
+                        <li>
+                            <a class="newOuterList"> ((New condition))</a>
+                        </li>
+                    </ul>
+                </div>
+                {{/splitAddButton}}
+                {{^splitAddButton}}
+                <div class="btn-group split">
+                    <button class="js-growing-add btn">
+                        <i class=" base-icon icon-plus"></i>
+                    </button>
+                </div>
+                {{/splitAddButton}}
+            </div>
+            {{/data}}
+            {{/has_data}}
+        </div>
+    </div>
+</div> 	

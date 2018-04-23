@@ -1,0 +1,200 @@
+
+#lessons_table {
+   max-width: 680px;
+}
+
+.lessonTableTitle{
+    font-size: 18px;
+    color: #333;
+    margin: 15px 0;
+    font-family: "open_sans";
+}
+#new_lesson_component.readOnlyMode{
+    display: none;
+}
+#new_lesson_component {
+    margin-top:25px;
+}
+#new_lesson_component .addNew{
+    display: inline-block;
+    border: solid 1px #4391F7;
+    border-radius: 3px;
+    padding: 0 12px 0px 5px;
+    background-color: #4391F7;
+    line-height: 0;
+    color: white;
+}
+
+
+#new_lesson_component .addNew:hover{
+   opacity: 0.7;
+}
+
+#new_lesson_component .addNew.new_assessment{
+    border: solid 1px #F1CFF7;
+    background-color: #FAE3FE;
+    color: #C331DE;
+}
+
+#new_lesson_component .addNew.new_assessment:hover{
+   opacity: 0.6;
+}
+
+#new_lesson_component .addNew.new_assessment .newText{
+    color: #C331DE;
+}
+
+#new_lesson_component .addNew.new_lesson, #new_lesson_component .addNew.new_ebook{
+    margin-right: 10px;
+}
+#new_lesson_component:not(.readOnlyMode) .addNew:hover{
+    cursor: pointer;
+}
+#new_lesson_component .newText{
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 34px;
+}
+#new_lesson_component .newIcon{
+    background-image: url('../media/CGS_icons.png?ver=35');
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+    display: inline-block;
+}
+#new_lesson_component .new_lesson .newIcon {
+    background-position: -150px -63px;
+}
+#new_lesson_component .new_ebook .newIcon {
+    background-position: -80px -66px;
+}
+#new_lesson_component .new_assessment .newIcon {
+    background-position: 0 -33px;
+}
+.row-item{
+    font-size: 16px;
+    color: #333333;
+    border-bottom: 1px solid #d6d6d6;
+    position: relative;
+    cursor: move;
+
+}
+.row-item .iconClass{
+    background-image: url('../media/CGS_icons.png?ver=35');
+    width: 30px;
+    height: 30px;
+    margin-top: 13px;
+}
+.row-item.lesson .iconClass{
+    background-position: -115px -62px;
+}
+.row-item.ebook .iconClass{
+    background-position: -41px -63px;
+}
+.row-item.assessment .iconClass{
+    background-position: 0 -31px;
+}
+
+
+.row-item.hiddenLesson .iconClass{
+    background-position: 0 0;
+}
+.row-item.hiddenLesson{
+    color: #a2ab80;
+}
+
+.row-item .td{
+    display: inline-block;
+    height: 59px;
+    vertical-align: middle;
+    line-height: 60px;
+}
+
+.row-item .td.lessonTitle{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+}
+.row-item .td.lessonTitle .view_lesson{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    color: #333;
+}
+.row-item .td.index{
+    width: 30px;
+}
+
+.row-item.focused,
+.row-item:hover{
+    background-color: #f5f5f5;
+}
+
+.row-item .lessonTitle:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.row-item.published:hover .publishedSign {
+    display: none;
+}
+
+.row-item.published .publishedSign{
+    width: 30px;
+    height: 30px;
+    background-image: url('../media/CGS_icons.png?ver=35');
+    background-position: 0 -192px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+
+}
+.row-item .delete_lesson{
+    display: none;
+}
+#lessons_table:not(.readOnlyMode) .row-item:hover .delete_lesson{
+    display: inline-block;
+    background-image: url('../media/CGS_icons.png?ver=35');
+    width: 30px;
+    height: 30px;
+    background-position: 0 -160px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.sortable-placeholder{
+    border-top: 1px solid #0099e5;
+    height: 60px;
+}
+
+.inDrag{
+    background-color: #f5f5f5;
+    opacity:0.7;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+}
+
+#lessons_table .row-item.enable-cut {
+    background-color: #f5f5f5;
+    opacity:0.4;
+}
+
+#lessons_table #lessons_list .empty-placeholder{
+    color: #cccccc;
+    font-size: 18px;
+    border-bottom: 1px solid #d6d6d6;
+    height: 200px;
+    line-height: 60px;
+    margin-top: 60px;
+    text-align: center;
+}  
+
+#lessons_list .row-item:first-child{
+    border-top: 1px solid #d6d6d6;
+}

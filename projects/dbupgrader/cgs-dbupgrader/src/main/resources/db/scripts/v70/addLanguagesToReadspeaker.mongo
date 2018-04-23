@@ -1,0 +1,20 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    var localesList = ["en_us","fr_fr","en_uk"];
+    var voiceOptions = {
+        "en_us": ["Kate", "Paul","Male01", "Female01"],
+        "fr_fr": ["Male01", "Female01"],
+        "en_uk": ["Male01", "Female01"]
+    };
+
+    var readSpeakerConf = db.ttsproviders.findOne({name: "ReadSpeaker"});
+    readSpeakerConf.locales = localesList;
+    readSpeakerConf.configurations.course.forEach(function (entry) {
+        if (entry.key == "voice") {
+            entry.options = voiceOptions;
+        }
+    });
+
+    db.ttsproviders.save(readSpeakerConf);
+
+}

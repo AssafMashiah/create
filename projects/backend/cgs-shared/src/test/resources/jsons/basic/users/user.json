@@ -1,0 +1,37 @@
+{
+    "userId": 1,
+    "role": {
+        "id": "53ccc35b20ca89186900e832",
+        "name": "ACCOUNT_ADMIN",
+        "relatesTo": {
+            "id": -1,
+            "type": "SUPER_USER"
+        },
+        "permissions": {
+            "create_course": true,
+            "save_as_course": true,
+            "new_edition": true,
+            "edit_course": true,
+            "delete_course": true,
+            "publish_course": true,
+            "create_lesson": true,
+            "import_lesson": true,
+            "edit_lesson": true,
+            "delete_lesson": true,
+            "accounts_admin": false,
+            "users_admin": true,
+            "roles_admin": true,
+            "release_locks": true
+        }
+    },
+    "firstName": "dummy",
+    "lastName": "dummy",
+    "email": "work@timetoknow.com",
+    "relatesTo": {
+        "id": 1,
+        "type": "PUBLISHER"
+    },
+    "customization": {
+        "cgsHintsShowMode": "showAll"
+    }
+}

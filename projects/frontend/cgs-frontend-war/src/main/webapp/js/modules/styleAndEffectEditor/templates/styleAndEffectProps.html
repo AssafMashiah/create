@@ -1,0 +1,48 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper style_editor props_editor">
+    <ul class="nav nav-tabs" id="styleEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((course.props_area.tab_design.style_editor.properties.header))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">                      
+            <div class="control-group">                
+                <label class="control-label" >((course.props_area.tab_design.style_editor.style_name.label)):</label>
+                <input {{#controller.data.currentItem.isSystem}}disabled cantBeEnabled="true" {{/controller.data.currentItem.isSystem}} type="text" class="style_name" value="{{controller.data.currentItem.name}}">
+            </div>
+            <div class="control-group" {{^controller.defaultFonts}}style='display:none'{{/controller.defaultFonts}}>
+                <label class="control-label">((course.props_area.tab_design.style_editor.font_family)):</label>
+                <div>
+                    <span>((course.props_area.tab_design.style_editor.font_family.opt1)):</span>
+                    <select class="family-1" >
+                        {{#controller.family1}}
+                        <option value="{{value}}" {{#selected}}selected{{/selected}} {{#hidden}}style="display: none;"{{/hidden}}>{{name}}</option>
+                        {{/controller.family1}}
+                    </select>
+                </div>
+                <div>
+                    <span>((course.props_area.tab_design.style_editor.font_family.opt2)):</span>
+                    <select class="family-2" >
+                        {{#controller.family2}}
+                        <option value="{{value}}" {{#selected}}selected{{/selected}} {{#hidden}}style="display: none;"{{/hidden}}>{{name}}</option>
+                        {{/controller.family2}}
+                    </select>
+                </div>
+                <div>
+                    <span>((course.props_area.tab_design.style_editor.font_family.opt3)):</span>
+                    <select class="family-3" >
+                        {{#controller.family3}}
+                        <option value="{{value}}" {{#selected}}selected{{/selected}} {{#hidden}}style="display: none;"{{/hidden}}>{{name}}</option>
+                        {{/controller.family3}}
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="details">
+                    {{>details}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

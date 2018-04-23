@@ -1,0 +1,152 @@
+#pdf_page .layout-element {
+	position: absolute;
+	cursor: move;
+}
+
+#pdf_page .layout-element.ellipse,
+#pdf_page .layout-element.ellipse .data-container {
+	border-radius: 50% !important;
+}
+
+#pdf_page .layout-element .controls:not(.disabled) {
+	font-size: 32px;
+	color: #f5f5f5;
+	background-color: #0099e5;
+	float: left;
+	margin-left: 20px;
+	display: flex;
+	visibility: hidden;
+	position: relative;
+}
+
+#pdf_page .layout-element .controls:not(.disabled):after {
+	right: 97%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(0, 153, 229, 0);
+	border-right-color: #0099e5;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+
+#pdf_page .layout-element .controls.disabled{
+	visibility: hidden;
+}
+#pdf_page .layout-element.selected .controls:not(.disabled){
+	visibility: visible;
+}
+#pdf_page .layout-element .remove,
+#pdf_page .layout-element .edit {
+	position: relative;
+	width: 36px;
+	height: 34px;
+	padding: 3px;
+	cursor: pointer;
+}
+#pdf_page .layout-element .edit{
+	margin-right: 5px;
+	border-right: 1px solid #f5f5f5; 
+
+}
+#pdf_page .layout-element .remove [class^="icon-"],
+#pdf_page .layout-element .edit [class^="icon-"]{
+	line-height: 32px;
+}
+
+/* 4 layout elements styles */
+
+#pdf_page .layout-element .data-container{
+	border: 3px solid transparent;
+	float: left;
+}
+
+#pdf_page .layout-element.selected .data-container,
+#pdf_page .layout-element .data-container:hover
+{
+	border: 3px solid #0099e5;
+}
+
+#pdf_page .layout-element.ui-draggable-dragging .data-container
+ {
+	opacity:0.8;
+	-webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+#pdf_page .layout-element.layoutIcon .data-container > :not(.style-icon),
+#pdf_page .layout-element.layoutText .data-container > :not(.style-text) {
+	display: none;
+}
+
+#pdf_page .layout-element.layoutIcon .data-container .style-icon {
+	width: 42px;
+	height: 42px;
+}
+
+#pdf_page .layout-element.layoutIcon .data-container .style-icon img {
+	position: absolute;
+	width: 42px;
+	height: 42px;
+}
+
+#pdf_page .layout-element.layoutText .data-container .style-text {
+	padding: 14px 12px;
+	color: #FFF;
+}
+
+body.rtl #pdf_page .layout-element.layoutText .data-container .style-text {
+	direction: rtl;
+}
+
+
+/* 4 layout elements props styles */
+#properties .props-layoutIcon > :not(.icons),
+#properties .props-layoutText > :not(.text){
+	display: none;
+}
+
+#properties .props-layoutIcon .icons img {
+	margin: 4px 2px;
+	border: 3px solid transparent;
+	width: 45px;
+	height: 45px;
+	background-color: #333;
+}
+#properties .props-layoutIcon .icons img.ellipse{
+	border-radius:50% !important; 
+}
+
+#properties .props-layoutIcon .icons img.current,
+#properties .props-layoutIcon .icons img:not(.disabled):hover
+ {
+	border: 3px solid #0099E5;
+}
+
+
+#properties .props-layoutIcon .icons img:not(.disabled) {
+	cursor: pointer;
+}
+
+#properties .props-layoutIcon,
+#properties .props-layoutText {
+	margin-bottom: 4px;
+}
+
+#properties .location{
+	display: inline-block;
+}
+
+input.span3.colorPicker {
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}

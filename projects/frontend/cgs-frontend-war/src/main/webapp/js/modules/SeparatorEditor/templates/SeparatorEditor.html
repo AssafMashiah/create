@@ -1,0 +1,59 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper separator_editor props_editor">
+    <ul class="nav nav-tabs" id="separatorEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((Name:))</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" class="input-large"></input>
+                    <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_separator_image">((Graphics:))</label>
+                <div class="controls">
+
+                    <button id="button_upload_image" class="btn btn-small">((...))</button>
+                    {{#controller.record.data.separatorImage}}
+                    <img rows="3" src="{{#server-path}}{{controller.record.data.separatorImage}}{{/server-path}}" id="field_separator_image"/>
+                    {{/controller.record.data.separatorImage}}
+                    {{^controller.record.data.separatorImage}}
+                    <div class="seperator-previewImage no-img"></div>
+                    {{/controller.record.data.separatorImage}}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_separator_title">((Title:))</label>
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.separatorTitle" id="field_separator_title" class="input-large" placeholder="((Type Something...))"/>
+                </div>
+
+                <div class="controls" id="separatorTitleNarration">
+                    <label class="control-label" for="separatorTitleNarrationUpload">((Narration:))</label>
+                    <div id="separatorTitleNarrationUpload"></div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="field_separator_sub_title">((Sub-title:))</label>
+                <div class="controls">
+                    <textarea rows="3" data-value="obj.separatorSubTitle" id="field_separator_sub_title" class="input-large" placeholder="((Type Something...))"/>
+                </div>
+
+                <div class="controls" id="separatorSubTitleNarration">
+                    <label class="control-label" for="separatorSubTitleNarrationUpload">((Narration:))</label>
+                    <div id="separatorSubTitleNarrationUpload"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

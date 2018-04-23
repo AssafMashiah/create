@@ -1,0 +1,28 @@
+<!--Generic Form Template!-->
+{{#properties}}
+	<div class="form-group">
+		<label class="capitalized">{{key}}</label>
+		{{#is_input}}
+			<input data-type="{{type}}" data-key="{{key}}" type="{{type}}" {{attributes_str}} />
+		{{/is_input}}
+		{{#is_select}}
+			<select data-type="{{type}}" data-key="{{key}}">
+				{{#options}}
+					<option>{{.}}</option>
+				{{/options}}
+			</select>
+		{{/is_select}}
+		{{#is_multiselection}}
+			<select class="multiselection" data-key="{{key}}" data-type="{{type}}">
+				{{#keys}}
+					<option value="{{.}}">{{.}}</option>
+				{{/keys}}
+			</select data-type="{{type}}" data-key="{{key}}">
+			<select data-type="sub_{{type}}" data-key="{{key}}">
+				{{#sub_options}}
+					<option value="{{.}}">{{.}}</option>
+				{{/sub_options}}
+			</select>
+		{{/is_multiselection}}
+	</div>
+{{/properties}}

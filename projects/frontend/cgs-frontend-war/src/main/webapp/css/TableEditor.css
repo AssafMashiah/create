@@ -1,0 +1,179 @@
+.virtualTable {
+	overflow: auto;
+	max-width: 750px;
+	max-height: 450px;
+    padding: 5px 10px;
+}
+
+.table_content ,
+.screen-content.task_screen .table_content.element_wrapper,
+.view_mode_small .table_content.element_wrapper {
+	border-collapse: collapse;
+	border:0;
+	outline: 0;
+	min-height: 60px;
+	padding: 0;
+}
+
+.view_mode_small .table_content.element_wrapper {
+	overflow-x: hidden; 
+	table-layout: fixed;
+	max-width: 90%;
+	width: 90%;
+	position: relative;
+	display: inline-block;
+}
+
+.table_content td,
+.table_content tr
+ {
+	margin: 0 !important;
+	padding: 12px !important;
+}
+
+.table_content td {
+	border: 1px solid #999;
+	vertical-align: top;
+	background-color: #fff;
+	min-width: 51px;
+	min-height: 40px;
+}
+
+.table_content tr {
+	border :none;
+}
+
+.table_content tr td, 
+.table_content tr  {
+	border-collapse:collapse;
+}
+
+.table_content tr.columnsHandlers{
+	background-color:transparent;
+}
+
+.table_content td.virtualColumnHandle,
+.table_content td.virtualRowHandle
+ {
+	border : none;	
+	background-color: transparent;	
+}
+
+
+.tableCell_content .mathField.disabled:not(.blur) {
+	border: 1px solid rgb(179,179,179);
+}
+
+.tableCell_content,
+.tableTitle,
+.copyrights {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.tableTitle.indent,
+.copyrights.indent {
+	margin-left: 30px;
+}
+
+.table_content .virtualRowHandle,
+.table_content .virtualColumnHandle {
+	/* display: table-cell; */
+	min-width: 30px;
+	cursor: default;
+	border : none;
+}
+
+/* fix dialog screen preview problem: ;*/
+.screen-content.dialog_screen td.element_preview_wrapper {
+	display:table-cell !important;
+}
+
+.screen-content.dialog_screen tr.element_preview_wrapper {
+	display:table-row !important;
+}
+
+
+.table_content.active-table .virtualRowHandle:hover{
+	cursor: url("../media/rightArrow.png"), e-resize;
+	background-color: #e5f5fc;
+}
+.table_content.active-table .virtualColumnHandle:hover {
+	cursor: url("../media/downArrow.png"), s-resize;
+}
+.table_content .virtualColumnHandle:nth-child(1):hover {
+	cursor: default;
+	background-color: transparent;
+}
+
+/*DEFINITION */
+.view_mode_small  .table_content.row-header tr:first-child td, 
+.screen-content.task_screen .table_content.row-header tr:nth-child(2) td:not(:first-child),
+.dialog_screen_wrapper .table_content.row-header tr:nth-child(2) td:not(:first-child)
+{
+    background-color: #E9E9E9;
+   /*  border-bottom-width: 2px; */
+}
+
+.dialog_screen_wrapper .table_content.column-header tr:nth-child(n+2) td:nth-child(2),
+.view_mode_small .table_content.column-header tr:nth-child(n+1) td:nth-child(1),
+.screen-content.task_screen .table_content.column-header tr:nth-child(n+2) td:nth-child(2)
+{
+    background-color: #E9E9E9;
+   /*  border-right-width: 2px; */
+}
+
+/*INTERSECTION*/
+/* as far as now this feature will never run because it is weaker then the previous definitions I am living this here if the QA will ever notice that*/
+.table_content.row-header.column-header tr:nth-child(2) td:nth-child(2),
+.view_mode_small .table_content.row-header.column-header tr:nth-child(1) td:nth-child(1),
+.screen-content.task_screen .table_content.row-header.column-header tr:nth-child(2) td:nth-child(2)
+{
+	background-color: #fff;
+}
+
+/*SUMMARY*/
+ .table_content.row_summery tr:nth-last-child(1)  td:not(:first-child),
+ .table_content.column_summery tr:nth-child(n+2) td:nth-last-child(1),
+ .view_mode_small  .table_content.row_summery tr:nth-last-child(1) td,
+ .view_mode_small  .table_content.column_summery tr > td:nth-last-child(1)
+{
+	background-color: #EDD9FF;
+}
+
+/*COLUMN/ROW virtual handle*/
+.table_content.active-table .virtualRowHandle:hover,
+.table_content.active-table .virtualColumnHandle:not(:first-child):hover, 
+.table_content tr .columnSelected,
+.table_content tr.selectedBak  td
+{
+	background-color: #e5f5fc !important;
+}
+
+.virtualTable .tableTitle,
+.view_mode_small .tableTitle {
+	padding-bottom: 10px;
+}
+
+.virtualTable .copyrights,
+.view_mode_small .table_content + .copyrights {
+	color: #999999;
+}
+
+/*TEXT/IMAGE VIEWER`s in the table*/
+.task_screen .span9 .table_content .tableCell_content .textViewer_content,
+.task_screen .span9 .table_content .tableCell_content .thinTextViewerEditor,
+.dialog_screen_wrapper .span9 .table_content .tableCell_content .textViewer_content,
+.dialog_screen_wrapper .span9 .table_content .tableCell_content .thinTextViewerEditor,
+.table_content .tableCell_content .imageViewer_content {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.tableCell_content {
+    font-size:22px;
+}
+.tableCell_content>.element_preview_wrapper.notValid{
+	display: inline-block;
+}

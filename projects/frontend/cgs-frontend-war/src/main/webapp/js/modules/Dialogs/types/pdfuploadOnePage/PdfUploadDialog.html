@@ -1,0 +1,22 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div class="pdf_upload_wrapper modal-body">
+    <p>
+        <button id="pdf_upload_btn" class="btn btn-primary">((Upload File...))</button>
+    </p>
+    <p id="message"></p>
+
+    <p>
+    <fieldset id="settings_form">
+        <div class="control-group">
+            <label for="pageNum">((Page Number))</label>
+            <input type="number" step="1" min="1" max="500" value="1" id="pageNum" class="input-mini" />
+        </div>
+    </fieldset>
+    </p>
+    <p class="pdf_loading_title">((Conversion progression:))</p>
+
+    <div class="progress progress-striped active">
+        <div class="bar pdf_loading" id="pdf_loading"></div>
+    </div>
+    <button class="btn" id="cancel_upload">((Cancel))</button>
+</div>

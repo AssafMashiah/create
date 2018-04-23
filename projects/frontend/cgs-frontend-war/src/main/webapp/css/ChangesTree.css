@@ -1,0 +1,70 @@
+.changesTree #changes-tree-container {
+    border: 1px solid #ddd;
+    height: 230px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.changesTree #changes-tree {
+    position: relative;
+
+}
+
+#dialog.changesTree {
+    min-height: 480px;
+    max-height: 480px;
+    width: 570px;
+}
+
+#dialog.changesTree #dialogContent {
+    min-height: 350px;
+    max-height: 350px;
+    padding:15px;
+}
+.changesTree #changes-tree{
+
+}
+#dialog.changesTree .warning-icon {
+    margin-right:20px;
+    left: 8px;
+    position: relative;
+    top: 10px;
+}
+.changesTree  ::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.obj-title {
+    font-weight: bold;
+}
+
+.inner-standardIds .sid:last-child .comma{
+    display:none;
+}
+
+#changes-tree > div {
+    margin-bottom: 1px;
+}
+#changes-tree .name {
+
+}
+
+.changesTree .bold{
+    color: #0088cc;
+}
+
+.changesTree #changes-title{
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 400px;
+    vertical-align: middle;
+    top: 10px;
+    position: relative;
+}
+
+.changesTree #warning-icon   {
+    display:inline-block;
+    width:84px;
+    height:84px;
+    vertical-align: middle;
+}

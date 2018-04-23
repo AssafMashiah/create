@@ -1,0 +1,17 @@
+{{^dontShow}}
+<ul cid="{{cid}}" type="{{type}}" class="items-list" name="{{title}}">
+  {{^isLeaf}}
+    <div cid="{{cid}}" type="{{type}}" class="items-list hasChildren">{{title}}</div>
+  {{/isLeaf}}
+
+  {{#isLeaf}}
+    <a class="sequence-link" cid="{{cid}}" type="{{type}}">{{title}}</a>        
+  {{/isLeaf}}
+
+  <li class='item'>
+    {{#children}}
+     {{>templateRow}}
+    {{/children}}
+  </li>
+</ul>
+{{/dontShow}}

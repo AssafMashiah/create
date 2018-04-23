@@ -1,0 +1,3 @@
+# drop db.Transaction collection and create a new one with name db.transactions
+Transaction.drop();;
+createCollection("transactions");;

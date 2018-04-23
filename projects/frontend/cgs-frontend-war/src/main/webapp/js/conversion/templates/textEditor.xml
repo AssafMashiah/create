@@ -1,0 +1,4 @@
+<subanswer>
+	<textEditor mode="{{answer_size}}" style="style1" enableToolbar="{{ShowToolbar}}" toolBarPreset="{{answer_type}}" maxchar="{{MaxChars}}">
+	</textEditor>
+</subanswer>

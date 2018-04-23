@@ -1,0 +1,56 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper sequence_editor props_editor">
+    <ul class="nav nav-tabs" id="sequenceEditorTabs">
+        <li class="active">
+            <a href="#properties" data-toggle="tab">((Properties))</a>
+        </li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+        <li><a href="#guide" data-toggle="tab">((Teacher's Guide))</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_title">((ebook.page.props.page_name.field_label)):</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" class="input-large">
+                </div>
+            </div>
+			<div class="control-group">
+				<label class="control-label" for="">((ebook.page.props.page_size.field_label)):</label>
+				{{#controller.currentPageStyleString}}
+					<div id="ebook-page-props-size">{{controller.currentPageStyleString}}</div>
+				{{/controller.currentPageStyleString}}
+				{{^controller.currentPageStyleString}}
+					<div id="ebook-page-props-size"></div>
+				{{/controller.currentPageStyleString}}
+			</div>
+			{{#controller.record.data.virtualData}}
+				<div id="virtual-page-properties"></div>
+			{{/controller.record.data.virtualData}}
+			{{^controller.record.data.virtualData}}
+				<label class="control-group" for="sequence_type">((ebook.page.props.source_info.field_label)):</label>
+				<div class="control-group">
+					<label class="control-label">((ebook.page.props.source.field_label)):</label>
+					<label id="field_ebookId">{{controller.ebookName}}</label>
+				</div>
+			<div class="control-group">
+					<label class="control-label">((ebook.page.props.originalIndex.field_label)):</label>
+					<label id="field_ebookId">{{controller.record.data.originalIndex}}</label>
+				</div>
+			{{/controller.record.data.virtualData}}
+        </div>
+        <div class="tab-pane" id="guide">
+            <div class="control-group">
+                <div class="teacherGuide-placeholder"></div>
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <div class="tab-pane" id="standards">
+            <h5>((standards.page_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>

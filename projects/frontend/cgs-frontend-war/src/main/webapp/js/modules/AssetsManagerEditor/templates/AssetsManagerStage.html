@@ -1,0 +1,51 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content">
+	<div>
+		<span>{{obj.notDone}} {{#obj.single}}((assets.report.one_asset_not_done)){{/obj.single}}{{^obj.single}}((assets.report.asset_not_done)){{/obj.single}} {{obj.total}} ((ordered)). </span>
+		<span class='filter-status'></span>
+	</div>
+	<div class="assets-title">((Assets status:))</div>
+	<table id="assets-table" class="table table-bordered">
+	    <thead>
+	    <tr>
+	        <th style="width: 10%" class='can-order' data='assetId'>((ID))</th>
+	        <th style="width: 10%" class='can-order' data='fileMymTypeDisplay'>((Asset Type))
+	        	<div class="btn-group filter" data='fileMymTypeDisplay'>
+				  <a class="btn btn-mini">
+				    <span class="base-icon icon-filter"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				  	<li class="filter-option-all">
+				  		<input type="checkbox" id="filter-fileMymTypeDisplay-all" checked /> 
+				  		<label for="filter-fileMymTypeDisplay-all">((All))</label>
+				  	</li>
+				  </ul>
+				</div>
+	        </th>
+	        <th style="width: 40%" class='can-order order-asc' data='location'>((Location))</th>
+	        <th style="width: 25%" class='can-order order-asc' data='notes'>((Notes))</th>
+	        <th style="width: 10%" class='can-order' data='status'>((Status))
+	        	<div class="btn-group filter" data='status'>
+				  <a class="btn btn-mini">
+				    <span class="base-icon icon-filter"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				  	<li class="filter-option-all">
+				  		<input type="checkbox" id="filter-status-all" checked /> 
+				  		<label for="filter-status-all">((All))</label>
+				  	</li>
+				  </ul>
+				</div>
+	        </th>
+	        <th style="width: 5%">((Upload))</th>
+	    </tr>
+	    </thead>
+	    <tbody id="assets-list">
+	        <tr id="empty-placeholder">
+	            <td colspan="5">
+	                <div class="alert alert-info">((This list is empty.))</div>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>

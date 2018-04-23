@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <!--context:spring-configured/ -->
+    <import resource="classpath*:springContext/applicationContext-allServices.xml"/>
+
+    <bean name="websocketClientService" class="org.t2k.cgs.websocket.WebsocketClientServiceImpl"/>
+    <bean name="narrationServiceBean" class="org.t2k.cgs.utils.NarrationServiceImpl"/>
+
+    <bean name="contentValidatorBean" class="org.t2k.cgs.model.utils.ContentValidator" init-method="initValidators">
+        <property name="active" value="true"/>
+        <property name="courseJsonSchemaResource" value="classpath:schema/course_v7.json"/>
+    </bean>
+
+    <bean name="lockService" class="org.t2k.cgs.lock.LockServiceImpl">
+        <property name="locksDao" ref="locksDao"/>
+        <property name="courseDataService" ref="coursesDataServiceBean"/>
+        <property name="tocItemsManager" ref="tocItemsManager"/>
+    </bean>
+
+    <bean name="transactionService" class="org.t2k.cgs.lock.TransactionServiceImpl">
+        <property name="transactionsDao" ref="transactionsDao"/>
+    </bean>
+
+    <bean name="lessonsDataServiceBean" class="org.t2k.cgs.tocItem.TocItemDataServiceImpl">
+        <property name="tocItemDao" ref="lessonsDao"/>
+        <property name="lockService" ref="lockService"/>
+        <property name="transactionService" ref="transactionService"/>
+        <property name="sequenceService" ref="sequenceService"/>
+        <property name="cleanupsDao" ref="cleanupsDao"/>
+        <property name="contentValidator" ref="contentValidatorBean"/>
+    </bean>
+
+    <bean name="assessmentsDataServiceBean" class="org.t2k.cgs.tocItem.TocItemDataServiceImpl">
+        <property name="tocItemDao" ref="assessmentsDao"/>
+        <property name="lockService" ref="lockService"/>
+        <property name="transactionService" ref="transactionService"/>
+        <property name="sequenceService" ref="sequenceService"/>
+        <property name="cleanupsDao" ref="cleanupsDao"/>
+        <property name="contentValidator" ref="contentValidatorBean"/>
+    </bean>
+
+    <bean name="importLessonService" class="org.t2k.cgs.tocItem.tocimport.ImportTocItemServiceImpl"/>
+
+    <!--bean for assets upload and download management-->
+    <bean name="cmsService" class="org.t2k.cgs.cms.CmsServiceImpl">
+        <property name="configuration" ref="t2kConfig"/>
+        <property name="fileDao" ref="fileDao"/>
+    </bean>
+
+    <!-- Skills / Standards service -->
+    <bean name="StandardsService" class="org.t2k.cgs.standards.StandardsServiceImpl">
+        <property name="standardsDao" ref="standardsDao"/>
+        <property name="lockService" ref="lockService"/>
+        <property name="courseDataService" ref="coursesDataServiceBean"/>
+        <property name="tocItemsManager" ref="tocItemsManager"/>
+    </bean>
+
+    <!-- Publisher service -->
+    <bean name="publisherService" class="org.t2k.cgs.publisher.AccountServiceImpl">
+        <property name="publisherDao" ref="publisherDao"/>
+        <property name="groupDataValidator">
+            <bean class="org.t2k.cgs.publisher.validation.BaseAccountDataValidator" init-method="initValidators">
+                <property name="active" value="true"/>
+                <property name="accountDataJsonSchemaResource" value="classpath:schema/groupSchema.json"/>
+            </bean>
+        </property>
+        <property name="accountDataValidator">
+            <bean class="org.t2k.cgs.publisher.validation.BaseAccountDataValidator" init-method="initValidators">
+                <property name="active" value="true"/>
+                <property name="accountDataJsonSchemaResource" value="classpath:schema/accountSchema.json"/>
+            </bean>
+        </property>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean class="org.t2k.cgs.configuration.ClientConfigurationServiceImpl" factory-bean="clientConfigurationService"
+          factory-method="getConfiguration" scope="request">
+        <aop:scoped-proxy/>
+    </bean>
+
+    <bean class="org.t2k.cgs.authentication.AuthenticationServiceImpl" factory-bean="authenticationService"
+          factory-method="getAuthenticationData" scope="request">
+        <aop:scoped-proxy/>
+    </bean>
+
+    <bean name="authenticationService" class="org.t2k.cgs.authentication.AuthenticationServiceImpl" scope="singleton">
+    </bean>
+
+    <bean name="clientConfigurationService" class="org.t2k.cgs.configuration.ClientConfigurationServiceImpl"
+          scope="singleton">
+        <property name="versionService" ref="versionService"/>
+        <property name="contentValidator" ref="contentValidatorBean"/>
+    </bean>
+
+    <bean name="packagingService" class="org.t2k.cgs.packaging.PackagingServiceImpl">
+        <property name="packagingDao" ref="packagingDao"/>
+    </bean>
+
+    <bean name="appletService" class="org.t2k.cgs.applet.AppletServiceImpl">
+        <property name="gcrClient" ref="gcrClient"/>
+        <property name="appletDao" ref="appletDao"/>
+        <property name="lockService" ref="lockService"/>
+        <property name="cmsService" ref="cmsService"/>
+        <property name="tocItemsManager" ref="tocItemsManager"/>
+        <property name="sequenceService" ref="sequenceService"/>
+    </bean>
+
+    <bean name="packageManager" class="org.t2k.cgs.packaging.PackageManagerImpl" init-method="init">
+        <property name="coursesDao" ref="coursesDao"/>
+        <property name="packagingService" ref="packagingService"/>
+        <property name="configuration" ref="t2kConfig"/>
+        <property name="transactionService" ref="transactionService"/>
+    </bean>
+
+    <bean name="exportImportService" class="org.t2k.cgs.exportImport.ExportImportImpl"/>
+
+    <bean name="catalogueUploader" class="org.t2k.cgs.packaging.uploaders.CatalogueUploader">
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean name="blossomUploader" class="org.t2k.cgs.packaging.uploaders.BlossomUploader"/>
+
+    <bean name="manifestHandlerWithSha1NameChangesAndWithResourceExclusion"
+          class="org.t2k.cgs.packaging.ManifestHandlerImpl">
+        <property name="doChangeFileNamesToSha1" value="true"/>
+        <property name="doCleanExcludedResourcesFromManifest" value="true"/>
+    </bean>
+
+    <bean name="manifestHandlerWithSha1NameChangesAndWithoutResourceExclusion"
+          class="org.t2k.cgs.packaging.ManifestHandlerImpl">
+        <property name="doChangeFileNamesToSha1" value="true"/>
+        <property name="doCleanExcludedResourcesFromManifest" value="false"/>
+    </bean>
+
+    <bean name="manifestHandlerWithoutSha1NameChangesAndWithoutResourceExclusion"
+          class="org.t2k.cgs.packaging.ManifestHandlerImpl">
+        <property name="doChangeFileNamesToSha1" value="false"/>
+        <property name="doCleanExcludedResourcesFromManifest" value="false"/>
+    </bean>
+
+    <bean name="manifestHandlerWithoutSha1NameChangesAndWithResourceExclusion"
+          class="org.t2k.cgs.packaging.ManifestHandlerImpl">
+        <property name="doChangeFileNamesToSha1" value="false"/>
+        <property name="doCleanExcludedResourcesFromManifest" value="true"/>
+    </bean>
+
+    <bean name="tocItemsHandlerImplWithSha1NameChanges" class="org.t2k.cgs.packaging.TocItemsHandlerImpl">
+        <property name="changeFileNamesToSha1" value="true"/>
+    </bean>
+
+    <bean name="tocItemsHandlerImplWithoutSha1NameChanges" class="org.t2k.cgs.packaging.TocItemsHandlerImpl">
+        <property name="changeFileNamesToSha1" value="false"/>
+    </bean>
+
+    <!-- Version service -->
+    <bean name="versionProperties"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location"
+                  value="classpath:config/version.properties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+    <bean name="versionService" class="org.t2k.cgs.version.VersionServiceImpl"/>
+
+    <bean name="userService" class="org.t2k.cgs.user.UserServiceImpl">
+        <property name="usersDao" ref="usersDao"/>
+        <property name="uniqueIdDao" ref="uniqueIdDao"/>
+        <property name="newUserValidator">
+            <bean class="org.t2k.cgs.user.validation.NewUserValidator"/>
+        </property>
+        <property name="updateUserValidator">
+            <bean class="org.t2k.cgs.user.validation.UpdateUserValidator"/>
+        </property>
+    </bean>
+
+    <bean name="jobsServiceBean" class="org.t2k.cgs.job.JobServiceImpl"/>
+    <bean name="contentTreeService" class="org.t2k.cgs.tocItem.ContentTreeServiceImpl"/>
+    <bean name="ttsProviderService" class="org.t2k.cgs.tts.TextToSpeechProviderServiceImpl"/>
+    <bean name="generalUtils" class="org.t2k.cgs.utils.GeneralUtils"/>
+    <bean name="packageStepsUpdater" class="org.t2k.cgs.packaging.PackageStepsUpdater"/>
+    <bean name="packageResourceHandler" class="org.t2k.cgs.packaging.PackageResourceHandlerImpl" scope="prototype"/>
+    <bean name="contentItemValidation" class="org.t2k.cgs.validation.ContentItemValidation"/>
+
+    <bean name="tocItemDataService" class="org.t2k.cgs.tocItem.TocItemDataServiceImpl">
+        <property name="sequenceService" ref="sequenceService"/>
+        <property name="lockService" ref="lockService"/>
+        <property name="tocItemDao" ref="lessonsDao"/>
+        <property name="transactionService" ref="transactionService"/>
+        <property name="cleanupsDao" ref="cleanupsDao"/>
+        <property name="contentValidator" ref="contentValidatorBean"/>
+    </bean>
+
+    <bean name="userSessionService" class="org.t2k.cgs.session.UserSessionServiceImpl"/>
+</beans>

@@ -1,0 +1,37 @@
+<!-- outer layer of {{constructor.type}} -->
+<div class="overlay"></div>
+<div id="dialog" class="{{options.config.type}} modal fade in">
+
+	{{#options.config.title}}
+	<div id="dialogTitle" class="modal-header">
+		<h3>(({{options.config.title}}))</h3>
+	</div>
+	{{/options.config.title}}
+	
+	
+	<div id="dialogContent" class="modal-body">
+
+        {{#options.config.closeIcon}}
+        <div id="close"></div>
+        {{/options.config.closeIcon}}
+
+        <div class="dialog-box-item dialog-content">
+            {{#options.config.icon}}
+            <div class="dialog-box-item dialog-icon">
+               <div class='dialog-base-icon icon-{{options.config.icon}}'></div>
+            </div>
+            {{/options.config.icon}}
+
+            {{#options.config.content.text}}
+			    (({{{options.config.content.text}}}))
+		    {{/options.config.content.text}}
+        </div>
+	</div>
+	
+	<div id="dialogControls" class="modal-footer">
+		{{#buttonsArr}}
+			<div id='{{name}}' class='btn {{#canBeDisabled}}disabled{{/canBeDisabled}}' {{#canBeDisabled}}disabled='disabled'{{/canBeDisabled}}>(({{label}}))</div>
+		{{/buttonsArr}}
+	</div>
+
+</div>

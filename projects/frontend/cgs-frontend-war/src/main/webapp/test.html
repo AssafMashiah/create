@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CGT Test Suite</title>
+		<link rel="stylesheet" href="css/qunit.css">
+	</head>
+	<body>
+		<div id="qunit"></div>
+		<script>
+			var initParams = {
+				user: {
+					userName: "micha.shlain",
+					firstName: "Micha",
+					lastName: "Shlain",
+					publisherAccountId: 1
+				},
+				configuration: {
+					basePath: "http://localhost/cgs/rest"
+				}
+			}
+		</script>
+		<script src="js/libs/qunit/qunit.js"></script>
+		<script data-main="js/test" src="js/libs/require/require.js"></script>
+	</body>
+</html>

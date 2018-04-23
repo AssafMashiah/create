@@ -1,0 +1,56 @@
+<h5>((specificFeedback.table.title))</h5>
+{{#defaultFeedbacks}}
+<table class="table table-bordered" id="specific_feedbacks_table">
+    <thead>
+    <tr>
+        <td style="width: 5%">((mtq.specificFeedback.table.title.icon))</td>
+        <td style="width: 48%">((mtq.specificFeedback.table.title.description))</td>
+        <td style="width: 47%">((mtq.specificFeedback.table.title.default))</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><div class="icon_correct"></div></td>
+        <td><div class="defaultFeedback">((mtq.specificFeedback.table.data.default.correct))</div></td>
+        <td id="td_default_correct"></td>
+    </tr>
+    <tr>
+        <td><div class="icon_incorrect"></div></td>
+        <td><div class="defaultFeedback">((mtq.specificFeedback.table.data.default.incorrect))</div></td>
+        <td id="td_default_incorrect"></td>
+    </tr>
+    </tbody>
+</table>
+{{/defaultFeedbacks}}
+{{#arr_options}}
+<table class="table table-bordered" id="specific_feedbacks_table">
+    <thead>
+    {{#definition}}
+        <tr>
+            <td colspan="3" class="preview_{{id}}"></td>
+        </tr>
+    {{/definition}}
+    <tr>
+        <td style="width: 5%">((mtq.specificFeedback.table.title.icon))</td>
+        <td style="width: 48%">((mtq.specificFeedback.table.title.studentAnswer))</td>
+        <td style="width: 47%">((mtq.specificFeedback.table.title.feedback))</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#children}}
+    <tr>
+        <td>
+            {{#isCorrect}}
+                <div class="icon_correct"></div>
+            {{/isCorrect}}
+            {{^isCorrect}}
+                <div class="icon_incorrect"></div>
+            {{/isCorrect}}
+        </td>
+        <td class="preview_{{additionalId}}_{{id}}"></td>
+        <td id="td_{{additionalId}}_{{id}}"></td>
+    </tr>
+    {{/children}}
+    </tbody>
+</table>
+{{/arr_options}}

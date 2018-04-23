@@ -1,0 +1,36 @@
+<!-- {{constructor.type}} -->
+<div id="{{elementType}}_content" class="{{elementType}}_content">
+    <div class="content_wrapper">
+        {{#show_feedback_stage}}
+        <div id="{{elementType}}_feedback" class="{{elementType}}_feedback">
+              {{^isValidFeedback}}<div class='validTip type_feedback' title='{{invalidFeedbackmsg}}'>&#xe601</div>{{/isValidFeedback}}
+            <div id="feedback_icon_container" class="base-icon icon-with-text">
+                <span class="icon base-icon icon-foo this-icon {{#empty_feedback}}empty{{/empty_feedback}}"></span>
+                    <a href="#load/{{feedbackId}}" class="text" onClick="javascript:require('events').fire('setActiveEditorEndEditing');" target="_self">((Feedback))</a>
+            </div>
+        </div>
+        {{/show_feedback_stage}}
+        {{#show_hint}}
+        <div id="{{elementType}}_hint" class="{{elementType}}_hint">
+            {{#record.data.show_hint}}
+            {{^isValidHint}}<div class='validTip type_hint' title='{{invalidHintmsg}}'>&#xe601</div>{{/isValidHint}}
+            <div id="hint_icon_container" class="base-icon icon-with-text">
+                <span class="icon base-icon icon-foo this-icon {{#empty_hint}}empty{{/empty_hint}}"></span>
+                    <a href="#load/{{hintId}}" class="text" onClick="javascript:require('events').fire('setActiveEditorEndEditing');" target="_self">((Hint))</a>
+            </div>
+            {{/record.data.show_hint}}
+        </div>
+        {{/show_hint}}
+        <div id="{{elementType}}_check">
+            <div id="check_icon_container" class="base-icon icon-with-text">
+                <span class="icon base-icon icon-foo this-icon"></span>
+                <span class="text">(({{record.data.button_label}}))</span>
+            </div>
+        </div>
+        {{#show_num_of_attempts}}
+        <div id="{{elementType}}_attempts">
+            <span class="text">((Attempts: ))((0))/{{record.data.num_of_attempts}}</span>
+        </div>
+        {{/show_num_of_attempts}}
+    </div>
+</div>

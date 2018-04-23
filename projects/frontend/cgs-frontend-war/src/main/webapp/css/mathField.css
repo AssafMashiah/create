@@ -1,0 +1,38 @@
+/*override icon css class in cgs- inside mathfield*/
+.mathField .icon{
+	display: inline-block;
+	width: 0em;
+	height: 1em;
+	background-image: none;
+}
+.answerFieldTypeMathfield_content:not([noncheckable]){
+	/*tmp color*/
+	background-color: rgb(245, 245, 245);
+    border: 1px solid #C6C6C6;
+    min-width: 244px;
+}
+
+.answerFieldTypeMathfield_content[noncheckable] .mathField {
+	background-color: #ddd;
+}
+
+.answerFieldTypeMathfield_content[fieldWidth="1"] { width: 33px; }
+.answerFieldTypeMathfield_content[fieldWidth="1"] .mathField { width: 31px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="4"] { width: 60px; }
+.answerFieldTypeMathfield_content[fieldWidth="4"] .mathField { width: 58px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="7"] { width: 100px; }
+.answerFieldTypeMathfield_content[fieldWidth="7"] .mathField { width: 98px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="11"] { width: 150px; }
+.answerFieldTypeMathfield_content[fieldWidth="11"] .mathField { width: 148px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="16"] { width: 220px; }
+.answerFieldTypeMathfield_content[fieldWidth="16"] .mathField { width: 218px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="halfLine"] { width: 430px; }
+.answerFieldTypeMathfield_content[fieldWidth="halfLine"] .mathField { width: 428px !important; }
+
+.answerFieldTypeMathfield_content[fieldWidth="line"] { width: 630px; }
+.answerFieldTypeMathfield_content[fieldWidth="line"] .mathField { width: 628px !important; }

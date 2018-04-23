@@ -1,0 +1,52 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content">
+	<div>
+		<span>{{obj.notDone}} {{#obj.single}}((narrations.report.one_narration_not_done)){{/obj.single}}{{^obj.single}}((narrations.report.asset_not_done)){{/obj.single}} {{obj.total}} ((ordered)). </span>
+		<span class='filter-status'></span>
+	</div>
+	<div class="assets-title">((Narrations Status))</div>
+	<table id="assets-table" class="table table-bordered">
+	    <thead>
+	    <tr>
+	        <th style="width: 8%" class='can-order  order-asc' data='assetId'>((ID))</th>
+	        <th style="width: 7%" class='can-order' data='narrationType'>((Type))
+	        	<div class="btn-group filter" data='narrationType'>
+				  <a class="btn btn-mini">
+				    <span class="base-icon icon-filter"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				  	<li class="filter-option-all">
+				  		<input type="checkbox" id="filter-narrationType-all" checked /> 
+				  		<label for="filter-narrationType-all">((All))</label>
+				  	</li>
+				  </ul>
+				</div>
+	        </th>
+	        <th style="width: 25%" class='can-order' data='asIs'>((Original Text))</th>
+	        <th style="width: 25%" class='can-order' data='asIs'>((Narration Text))</th>
+	        <th style="width: 20%" class='can-order' data='notes'>((Notes))</th>
+	        <th style="width: 10%" class='can-order' data='status'>((Status))
+	        	<div class="btn-group filter" data='status'>
+				  <a class="btn btn-mini">
+				    <span class="base-icon icon-filter"></span>
+				  </a>
+				  <ul class="dropdown-menu">
+				  	<li class="filter-option-all">
+				  		<input type="checkbox" id="filter-status-all" checked /> 
+				  		<label for="filter-status-all">((All))</label>
+				  	</li>
+				  </ul>
+				</div>
+	        </th>
+	        <th style="width: 5%">((Upload))</th>
+	    </tr>
+	    </thead>
+	    <tbody id="assets-list">
+	        <tr id="empty-placeholder">
+	            <td colspan="5">
+	                <div class="alert alert-info">((This list is empty.))</div>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>

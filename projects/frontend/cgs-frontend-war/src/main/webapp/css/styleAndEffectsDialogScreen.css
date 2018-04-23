@@ -1,0 +1,74 @@
+.styleAndEffectDialogScreenStage .editableTextExample,
+.styleAndEffectDialogScreenStage .referanceExampleText{
+	line-height: 1.14;
+	overflow: hidden;
+	width: 720px;
+}
+.rtl .styleAndEffectDialogScreenStage .editableTextExample,
+.rtl .styleAndEffectDialogScreenStage .referanceExampleText{
+	direction: rtl;
+}
+
+.styleAndEffectDialogScreenStage .editableTextExample{
+	margin: 80px 0 80px 40px;
+	height: 90px;
+}
+.styleAndEffectDialogScreenStage .referanceExampleText{
+	margin: 20px 0 20px 40px;
+}
+.styleAndEffectDialogScreenStage .referance .details{
+	margin-left: 40px;
+}
+.styleAndEffectDialogScreenStage .referenceRow{
+	height: 34px;
+	background-color: #F5F5F5;
+	padding-left: 40px
+}
+.styleAndEffectDialogScreenStage .referenceRow span{
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	color: #333;
+}
+.style_editor .caret,
+.styleAndEffectDialogScreenStage .caret{
+	margin-top: 7px;
+	-webkit-transform: rotate(270deg);
+}
+.style_editor .open .caret,
+.styleAndEffectDialogScreenStage .open .caret{
+	-webkit-transform: rotate(0deg);
+}
+.cssDetails{
+	display: none;
+}
+.details.open .cssDetails{
+	display: block;
+}
+.details{
+	color: #333;
+	font-size: 12px;
+	font-family: Arial;
+}
+.details .detailArea span{
+	color: #333;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#sub_menu_base #menu-button-paragraph-fontWeight+ .split_caret,
+#sub_menu_base #menu-button-paragraph-fontSize+ .split_caret,
+#sub_menu_base #menu-button-paragraph-fontFamily + .split_caret{
+	margin: 0;
+}
+
+.removeCssProperty.btn{
+	width: 17px;
+	height: 17px;
+	font-size: 16px;
+	padding: 0;
+	margin-left: 20px;
+}
+}

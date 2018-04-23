@@ -1,0 +1,4 @@
+###################################
+#  add "create" version to ebook  #
+###################################
+ebooks.update({},{$set:{"cgsVersion": "7.0.32.439"}},{upsert: false, multi: true});

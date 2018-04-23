@@ -1,0 +1,18 @@
+############################################################################
+#  add elements limit with maxEmbeddedInteractionsOnPage and maxEBookPages #
+############################################################################
+publishers.update(
+    {},
+    {
+        $set:{
+            "elementsLimit":{
+                "maxEBookPages" : NumberInt(500),
+                "maxEmbeddedInteractionsOnPage": NumberInt(3)
+            }
+        }
+    },
+    {
+         upsert: false,
+         multi: true
+    }
+);

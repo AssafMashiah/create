@@ -1,0 +1,171 @@
+{
+    "packageName": "SCORM 2004 4th Edition",
+    "packageDescription": "describes the components used in a learning experience, how to package those components for exchange from system to system, how to describe those components to enable search and discovery and how to define sequencing information for the components",
+    "target": "course",
+    "id": "t2k_course_scorm2004_E4",
+    "requiredTargetFields": {
+
+    },
+
+    "customMetadata": [
+        {
+            "id": "t2k_course_scorm2004_v4_package",
+            "type": "packageName",
+            "name": "Campos de metadados, quarta edição, 2004 SCORM"
+        },
+        {
+            "id": "t2k_course_scorm2004_v4_lom_general_identifier_catalog",
+            "name": "Identificador do catálogo geral",
+            "type": "list",
+            "value": "Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_general_identifier_entry",
+            "name": "Entrada do catálogo geral",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_identifier_catalog",
+            "name": "Identificador do catálogo de metadados",
+            "type": "list",
+            "value": "none,T2KStore,T2KTeach,Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_identifier_entry",
+            "name": "Entrada do catálogo de metadados",
+            "type": "text",
+            "maxLength":1000,
+            "value": 1000
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_role",
+            "name": "Função do contribuidor de metadados",
+            "type": "list",
+            "value": "creator,validator"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_title",
+            "name": "Cargo do contribuidor de metadados",
+            "type": "list",
+            "value": "Mr.,Ms.,Mrs.,Dr."
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_name",
+            "name": "Nome do contribuidor de metadados",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_familyName",
+            "name": "Sobrenome do contribuidor de metadados",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_email",
+            "name": "E-mail do contribuidor de metadados",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_entity_vcard_phone",
+            "name": "Telefone/celular do contribuidor de metadados",
+            "type": "text",
+            "value": 1000
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_date",
+            "name": "Data da contribuição de metadados",
+            "type": "date",
+            "value": "mm/dd/yy"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_contribute_date_description",
+            "name": "Descrição da data da contribuição de metadados",
+            "type": "freeText",
+            "maxLength":1000,
+            "value":3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_metaMetadata_language",
+            "name": "Idioma de metadados",
+            "type": "list",
+            "value":"en,fr,iw,nl, pt, ar"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_technical_installationRemarks",
+            "name": "Comentários sobre a instalação técnica",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_learningResourceType",
+            "name": "Tipo de recurso de aprendizagem educacional",
+            "type": "list",
+            "value": "exercise,simulation,questionnaire,diagram,figure,graph,index,slide,table,narrative text,exam,experiment,problem statement,self assessment,lecture"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_interactivityLevel",
+            "name": "Nível de interatividade educacional",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_semanticDensity",
+            "name": "Densidade da semântica educacional",
+            "type": "list",
+            "value": "very low,low,medium,high,very high"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_intendedEndUserRole",
+            "name": "Usuário final educacional",
+            "type": "list",
+            "value": "teacher,author,learner,manager"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_context",
+            "name": "Contexto educacional",
+            "type": "list",
+            "value": "school,higher education,training,other"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_typicalAgeRange",
+            "name": "Faixa de idade educacional",
+            "type": "text",
+            "maxLength":1000,
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_difficulty",
+            "name": "Dificuldade educacional",
+            "type": "list",
+            "value": "very easy,easy,medium,difficult,very difficult"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_educational_description",
+            "name": "Descrição educacional",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_rights_cost",
+            "name": "Custo da licença",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_rights_copyrightAndOtherRestrictions",
+            "name": "Direitos autorais da licença e outras restrições",
+            "type": "list",
+            "value": "yes,no"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_rights_description",
+            "name": "Descrição da licença",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_relation_kind",
+            "name": "Tipo de relação",
+            "type": "list",
+            "value": "ispartof,haspart,isversionof,hasversion,isformatof,hasformat,references,isreferencedby,isbasedon,isbasisfor,requires,isrequiredby"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_relation_resource_identifier_catalog",
+            "name": "Identificador do catálogo do recurso de relação",
+            "type": "list",
+            "value": "Universal Resource Identifier (URI),Universal Resource Name (URN),Digital Object Identifier (DOI),International Standard Book Numbers (ISBN),International Standard Serial Numbers (ISSN)"
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_relation_resource_identifier_entry",
+            "name": "Identificador de entrada do recurso de relação",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }, {
+            "id": "t2k_course_scorm2004_v4_lom_relation_resource_description",
+            "name": "Descrição do recurso de relação",
+            "type": "freeText",
+            "maxLength":1000,
+            "value": 3
+        }
+    ]
+}

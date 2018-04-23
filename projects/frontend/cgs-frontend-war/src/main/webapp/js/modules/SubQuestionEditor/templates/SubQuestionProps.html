@@ -1,0 +1,36 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper subQuestion_editor props_editor">
+    <ul class="nav nav-tabs" id="subQuestioneEditorTabs">
+        <li class="active">
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_question_type">((Question Type))</label>
+                <select data-value="obj.question_type" id="field_question_type" {{#disableQuestion}} disabled="disabled"
+                cantBeEnabled="true" {{/disableQuestion}}>
+                <option value="textViewer">((Text))</option>
+                <option value="imageViewer">((Image))</option>
+                <option value="soundButton">((Sound Button))</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="answer_type">((Answer Type))</label>
+                <select data-value="obj.answer_type" id="answer_type">
+                    <option value="student">((Text))</option>
+                    <option value="studentMath">((Math Field))</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <div class="mathfieldHeight" data-placeholder="obj.answer_type">
+                    <input type="checkbox" class="field_FractionOverFraction"{{#fractionOverFraction}}checked{{/fractionOverFraction}} >
+                    <label class="control-label" for="field_FractionOverFraction">((task.clozeAnswer.properties.FractionOverFraction))</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+        "author" : "user2",
+        "cgsVersion" : "7.0.23.64",
+        "cid" : "3e98d8e5-a185-4d58-97d5-e0390189c5c0",
+        "contentLocales" : [
+            "en_US"
+        ],
+        "courseId" : "80de9bb1-5e89-438b-a9f2-8d39de531b46",
+        "header" : {
+            "last-modified" : {"$date": "1970-01-01T00:00:00.000Z"}
+},
+"includeLo" : true,
+"maxDepth" : 3,
+"publisher" : "12312312312312",
+"resources" : [],
+"schema" : "course_v4",
+"standardPackages" : [],
+"standards" : [],
+"title" : "New Course",
+"toc" : {
+"cid" : "d87afcb9-956b-45d6-9f32-30dc36f3f75f",
+"title" : "New Course",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [],
+"tocItems" : []
+},
+"type" : "course",
+"version" : "1.0.0"
+}

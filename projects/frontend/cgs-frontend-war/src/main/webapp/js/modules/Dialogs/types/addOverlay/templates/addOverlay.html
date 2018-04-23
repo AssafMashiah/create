@@ -1,0 +1,37 @@
+<div class="error-message">
+	<div class="failed-sign"></div>
+	<div class="failed-text"></div>
+</div>
+
+<div id="overlay-container">
+	<div class="column" id="column-upload">
+		<h4 id="overlay-upload-subtitle"></h4>
+		<div id="overlay-upload-text">((ebook.addOverlay.dialog.upload.file))</div>
+		<div id="overlay-upload-row">
+			<button class="btn" id="upload-overlay-btn">((Choose file to upload))</button>
+			<div id="upload-drop">((Drop here))</div>
+		</div>
+	</div>
+	<div class="column" id="column-url">
+		<h4 id="overlay-url-subtitle"></h4>
+		<div id="overlay-url-text"></div>
+		<form id="url-save-form">
+			<div id="url-form-container">
+				<input id="overlay-url" type="text" value="" class="input-large" autocomplete="off">
+                <small>
+                    <i class="base-icon icon-exclamation-mark"></i>
+                </small>
+                <small id="url-error">
+                    <span>((ebook.addOverlay.dialog.url.error))</span>
+                </small>
+				<div id="url-note">((ebook.addOverlay.dialog.url.note))</div>
+
+                <iframe id="link-iframe" width="490" height="250" frameborder="0"></iframe>
+                <div id="loader" style="display:none;">
+                    <img src="media/preloader.gif" />
+                </div>
+			</div>
+			<div><button class="btn" id="save-url" type="submit" disabled>((Save))</button></div>
+		</form>
+	</div>
+</div>

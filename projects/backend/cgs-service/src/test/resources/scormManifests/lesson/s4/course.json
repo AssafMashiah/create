@@ -1,0 +1,68 @@
+{
+    "id": "11188902-10e6-4453-a799-2c3b4bf08788",
+    "cid": "11188902-10e6-4453-a799-2c3b4bf08788",
+    "version": "1.0.1",
+    "type": "course",
+    "format": "NATIVE",
+    "itemsData": {
+        "items": {
+            "dd5f45bb-4abe-4306-a7bd-fc722a13726a": {
+                "original": {
+                    "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a",
+                    "version": "1.0.1",
+                    "type": "lesson",
+                    "title": "New Lesson",
+                    "index": 1
+                }
+            }
+        }
+    },
+    "data": {
+        "contentLocales": ["en_US"],
+        "toc": {
+            "cid": "bb6c9d21-7988-4c75-87ee-bfb703860c62",
+            "title": "course name",
+            "overview": "",
+            "keywords": [],
+            "type": "tocItem",
+            "tocItems": [
+                {
+                    "cid": "a7ccd3b4-641a-4991-9266-3c7aaa99180b",
+                    "title": "New level ",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "standards": [],
+                    "tocItems": [],
+                    "tocItemRefs": [
+                        {
+                            "type": "lesson",
+                            "cid": "dd5f45bb-4abe-4306-a7bd-fc722a13726a"
+                        }
+                    ]
+                }
+            ],
+            "tocItemRefs": []
+        },
+        "customFields": [],
+        "standardPackages": [],
+        "includeLo": true,
+        "publisher": "myPublishe",
+        "schema": "course_v4",
+        "standards": [],
+        "author": "asaf.editor",
+        "cgsVersion": "7.0.28.47",
+        "maxDepth": 3,
+        "title": "someFieldsExistOnCourseLevelAndOnManifest",
+        "updated": "2014-12-02T08:21:40.769+0000",
+        "assetRootHRef": ""
+    },
+    "metadata": {
+        "lastModified": 1417508501096,
+        "created": 1417508501096
+    },
+    "original": {
+        "courseCid": "578f782d-29db-48b0-b7d5-e6becae26bd0",
+        "version": "1.0.1"
+    }
+}

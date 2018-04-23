@@ -1,0 +1,2 @@
+# add "standards:[]" to courses that does not have standards
+courses.update({"contentData.standards":{$exists:false}},{$set:{"contentData.standards":[]}},{multi:true})

@@ -1,0 +1,64 @@
+.component_view[component-name="rubric"] .rubric-table {
+	width: 260px;
+
+	border: 1px solid #E1E1E1;
+	border-collapse: collapse;
+}
+
+.component_view[component-name="rubric"] .rubric-table tr > td,
+.component_view[component-name="rubric"] .rubric-table tr > th {
+	border: 1px solid #E1E1E1;
+	border-collapse: collapse;
+
+	width: 70px;
+	height: 40px;
+
+	vertical-align: middle;
+	text-align: center;
+}
+
+.component_view[component-name="rubric"] .rubric-table tr > th {
+
+	background-color: #E9E9E9;
+}
+
+.component_view[component-name="rubric"] .rubric-table tr th > span,
+.component_view[component-name="rubric"] .rubric-table tr td > span {
+	font-size: 12px;
+	font-weight: normal;
+	display: inline-block;
+	width: 50px;
+	height: 28px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: pre;
+	background: white;
+	border: 1px solid #E1E1E1;
+	line-height: 28px;
+}
+
+
+.component_view[component-name="rubric"] .table-preview {
+	overflow: auto;
+	display: inline-block;
+}
+.component_view[component-name="rubric"] .edit {
+	bottom: 4px;
+	right: 43px;
+	position: relative;
+	font-size: 24px;
+	display: inline-block;
+	padding: 0px 3px;
+	float: right;
+}
+
+.component_view[component-name="rubric"] .rubric-table tr > td {
+	max-width: 60px;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	white-space: pre;
+
+	text-align: center;
+}

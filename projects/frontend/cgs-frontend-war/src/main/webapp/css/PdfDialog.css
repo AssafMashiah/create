@@ -1,0 +1,51 @@
+#dialog.pdfupload {
+	min-height: 390px;
+	max-height: 390px;
+	height: 360px;
+}
+
+#dialog.pdfupload #dialogContent {
+	min-height: 240px;
+	max-height: 240px;
+	height: 240px;
+}
+
+.pdf_upload_wrapper #cancel_upload {
+	position: absolute;
+
+	bottom: 0;
+	right: 0;
+
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.pdf_upload_wrapper #convert_upload {
+	position :absolute;
+	bottom:10px;
+	right:97px;
+
+}
+
+.pdf_upload_wrapper #settings_form .control-group {
+	display: inline-block;
+}
+
+.pdf_upload_wrapper #settings_form label {
+	display: inline-block;
+}
+
+.pdf_upload_wrapper #settings_form input[type="text"] {
+	margin: 0;
+}
+
+.pdf_upload_wrapper #message span.red {
+	color: red;
+}
+
+.pdf_upload_wrapper .locals_settings select{
+	width:120px;
+	display:inline-block;
+}
+.pdf_upload_wrapper .locals_settings label {
+	display:inline-block;
+}

@@ -1,0 +1,5 @@
+publishers.dropIndexes();;
+publishers.ensureIndex({"accountId":1} , {name : "publisher_accountIdx"});;
+createCollection("groups");;
+groups.dropIndexes();;
+groups.ensureIndex({"accountId":1} , {name : "groups_accountIdx"});;

@@ -1,0 +1,8 @@
+<suite name="Service Module Test Suite">
+    <test name="Account Service">
+        <classes>
+            <class name="org.t2k.cgs.publisher.AccountServiceTest" />
+        </classes>
+    </test>
+
+</suite>

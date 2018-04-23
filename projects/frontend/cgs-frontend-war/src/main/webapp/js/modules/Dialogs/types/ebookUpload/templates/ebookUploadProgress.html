@@ -1,0 +1,42 @@
+<div class="ebook-upload-step-2-wrapper">
+
+	<div class="ebook-page-selection-form-wrapper">
+		<div class="upload-failed-message">
+			<div class="failure-title-wrapper">
+				<div class="failed-sign"></div>
+				<div class="failed-title">
+					<a id="ebook-error-details-toggle">Details</a>
+				</div>
+			</div>
+
+			<div class="failed-text" id="ebook-error-failure-text"></div>
+		</div >
+		<div class="ebook-page-selection-form">
+		<div class="control-group">
+			<label class="control-label" for="ebook-page-selection">((ebook.uploadFile.dialog.page.selection))</label>
+			<input type="text" id="ebook-page-selection" name="ebook-page-selector" disabled="disabled" placeholder="e.g: 3, 5, 1-20"/>
+		</div>
+		<div class="control-group">
+			<div class="ebook-page-selection-input-error-message"></div>
+			<input type="checkbox" name="ebook-select-all-pages" id="ebook-select-all-pages" disabled="disabled"/>
+			<label class="control-label" for="ebook-select-all-pages" id="ebook-select-all-pages-label">((ebook.uploadFile.page.selection))</label>
+		</div>
+		</div>
+        <div class="ebook-upload-warning">
+            <div class="icon-eBook_Iconfont-14"></div>
+               ((ebook.uploadFile.warning))
+        </div>
+        <div id="conversionLibrary"></div>
+	</div>
+
+	<div class="ebook-upload-progress-wrapper">
+		<div id="ebook-resource-preview"></div>
+		<div class="ebook-upload-progress">
+			<div class="progress-phase">{{phase}}</div>
+			<div class="progress-wrapper">
+				<div class="progress-indication"></div>
+			</div>
+		</div>
+	</div>
+
+</div>

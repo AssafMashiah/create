@@ -1,0 +1,34 @@
+
+
+courses.dropIndexes();;
+courses.ensureIndex({"cgsData.publisherId":1} , {name : "courses_publisherIdx"});;
+courses.ensureIndex({"contentData.courseId":1} , {name : "courses_courseIdIdx"});;
+courses.ensureIndex({"contentData.header.last-modified":1},{name : "courses_lastModifiedIdx"});;
+courses.reIndex();;
+
+lessons.dropIndexes();;
+lessons.ensureIndex({"cgsData.publisherId":1} , {name : "lessons_publisherIdx"});;
+lessons.ensureIndex({"cgsData.courseId":1} , {name : "lessons_courseIdIdx"});;
+lessons.ensureIndex({"contentData.cid":1} , {name : "lessons_cIdIdx"});;
+lessons.ensureIndex({"contentData.header.last-modified":1},{name : "lessons_lastModifiedIdx"});;
+lessons.reIndex();;
+
+
+thumbnails.dropIndexes();;
+thumbnails.ensureIndex({"lessonCId":1,"courseId":1,"seqId":1,} , {name : "thumbnails_lessonCid_course_seq_idx",unique: true});;
+thumbnails.reIndex();;
+
+
+sequences.dropIndexes();;
+sequences.ensureIndex({"lessonCId":1,"courseId":1,"seqId":1,} , {name : "sequences_lessonCid_course_seq_idx",unique: true});;
+sequences.reIndex();;
+
+
+applets.dropIndexes();;
+applets.ensureIndex({"courseId": 1}, {unique: true});;
+applets.reIndex();;
+
+
+locks.dropIndexes();;
+locks.ensureIndex({"entityId":1} , {name : "locks_entityIdIdx", unique: true});;
+locks.reIndex();;

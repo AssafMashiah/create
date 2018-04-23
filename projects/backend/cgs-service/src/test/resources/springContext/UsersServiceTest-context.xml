@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <!--context:spring-configured/ -->
+    <import resource="classpath*:springContext/applicationContext-MongoDaosTest.xml"/>
+
+    <bean name="lockDaoTest" class="org.t2k.cgs.locks.LocksDaoDummy" />
+    <bean name="usersDao" class="org.t2k.cgs.dao.user.UsersMongoDao" parent="mongoDao"/>
+
+    <bean name="userService" class="org.t2k.cgs.user.UserServiceImpl">
+        <property name="usersDao" ref="usersDao"/>
+        <property name="uniqueIdDao" ref="uniqueIdDao"/>
+        <property name="newUserValidator">
+            <bean class="org.t2k.cgs.user.validation.NewUserValidator"/>
+        </property>
+        <property name="updateUserValidator">
+            <bean class="org.t2k.cgs.user.validation.UpdateUserValidator"/>
+        </property>
+    </bean>
+
+</beans>

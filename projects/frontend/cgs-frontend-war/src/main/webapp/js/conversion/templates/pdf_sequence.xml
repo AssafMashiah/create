@@ -1,0 +1,5 @@
+<sequence type="{{sequenceType}}" id="{{id}}">
+	
+	<htmlContent {{#pdf_student_url}}pdf_student_url="{{pdf_student_url}}"{{/pdf_student_url}}>(PDF)</htmlContent>
+	
+</sequence>

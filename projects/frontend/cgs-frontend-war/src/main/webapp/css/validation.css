@@ -1,0 +1,234 @@
+/*validation icon on task in preview mode*/
+.view_mode_small.task_element.notValid > .validTip,
+.view_mode_small.task_element.childNotValid > .validTip{
+	display: block;
+	top: 7px;
+	left: -4px;
+	border: 0;
+	padding: 0;
+}
+/*help in sequence properties*/
+.helpComponent.growinglist-component .validTip{
+	display: block;
+	left: -10px;
+	top: 9px;
+}
+
+.view_mode_small.notValid > .validTip,
+.view_mode_normal .validTip.type_pluginExternal,
+.view_mode_normal.task_element.childNotValid > .validTip,
+.view_mode_normal.task_element.childNotValid .validTip.type_questionOnly,
+.view_mode_normal .validTip.type_pluginTask,
+.view_mode_normal .validTip.type_mc,
+.view_mode_small.task_element.notValid > .validTip.type_pluginTask,
+.validTip.type_sequence,
+.sequence_editor .validTip,
+.view_mode_normal .validTip.type_appletTask,
+.view_mode_normal .validTip.type_sorting,
+.view_mode_normal .validTip.type_sequencing,
+.view_mode_normal .validTip.type_matching,
+.view_mode_normal .validTip.type_cloze,
+.view_mode_normal .validTip.type_ShortAnswer,
+.view_mode_normal .validTip.type_FreeWriting,
+.view_mode_normal .validTip.type_header,
+.view_mode_normal .validTip.type_mc,
+.view_mode_normal .validTip.type_subQuestion,
+.view_mode_normal .validTip.type_genericTitle,
+.view_mode_normal .validTip.type_sharedContent,
+.view_mode_normal .validTip.type_table,
+.separator_content .validTip.type_genericTitle,
+.view_mode_normal .validTip.type_genericSubTitle,
+.view_mode_normal .validTip.type_tableRow,
+.view_mode_normal .validTip.type_tableCell,
+.view_mode_normal .validTip.type_livePageAppletTask,
+.separator_content .validTip.type_genericSubTitle,
+.view_mode_normal.childNotValid .validTip.type_questionOnly,
+.view_mode_normal.childNotValid .validTip.type_narrative,
+.view_mode_normal.childNotValid .validTip.type_pedagogicalStatement,
+.view_mode_normal.childNotValid .validTip.type_selfCheck,
+.view_mode_normal.childNotValid .validTip.type_ShortAnswer,
+.view_mode_normal .growinglist-component .validTip,
+.notValid.type_html_sequence,
+.dialog_screen .validTip.type_feedback,
+.dialog_screen .validTip.type_hint,
+.dialog_screen .validTip.type_help,
+.dialog_screen .validTip.type_livePageTextViewerWrapper,
+.dialog_screen .validTip.type_livePageMultimedia,
+.dialog_screen .validTip.type_infoBaloon{
+	display: none;
+}
+
+
+.validTip{
+	font-family: 'CGS-icons';
+	font-size: 32px;
+	color: #FF005A;
+	display: block;
+	position: absolute;
+	cursor: help;
+	z-index: 1;
+}
+
+.dialog_screen .validTip,
+.view_mode_normal .validTip{
+	display: block;
+}
+
+.html_sequence_content .validTip.type_livePageTextViewerWrapper,
+.html_sequence_content .validTip.type_livePageSoundButton,
+.html_sequence_content .validTip.type_livePageAudioPlayer,
+.html_sequence_content .validTip.type_livePageVideoPlayer,
+.html_sequence_content .validTip.type_livePageMultimedia,
+.html_sequence_content .validTip.type_livePageAppletTask,
+.html_sequence_content .validTip.type_livePageImageViewer{
+	left: -10px;
+}
+.separator_content .validTip.type_imageViewer{
+	top: 55px;
+}
+
+.view_mode_normal.notValid .validTip.type_cloze_answer,
+.view_mode_normal.notValid .validTip.type_appletAnswer,
+.view_mode_normal.notValid .validTip.type_mcAnswer,
+.view_mode_normal.notValid .validTip.type_pedagogicalStatement,
+.view_mode_normal.notValid .validTip.type_questionOnly,
+.view_mode_normal.notValid .validTip.type_selfCheck,
+.view_mode_normal.notValid .validTip.type_ShortAnswerAnswer
+{
+	top: 7px;
+	left: -2px;
+	border: 0;
+	padding: 0;
+}
+.ShortAnswerAnswer_content .notValid .validTip.type_AnswerFieldTypeText,
+.ShortAnswerAnswer_content .notValid .validTip.type_answerFieldTypeMathfield,
+.notValid .validTip.type_cloze_text_viewer{
+	right: 65px;
+	bottom: 8px;
+}
+.ShortAnswerAnswer_content .subQuestion .notValid .validTip.type_answerFieldTypeMathfield,
+.ShortAnswerAnswer_content .subQuestion .notValid .validTip.type_AnswerFieldTypeText{
+	right: 0;
+}
+.separator_content .notValid .validTip.type_textViewer{
+	bottom: -5px;
+	right: -5px;
+}
+.question_content .notValid.view_mode_normal .validTip.type_textViewer{
+	right: 60px;
+}
+.title_content .notValid .validTip.type_textViewer{
+	left: 659px;
+}
+.option_content .notValid .validTip.type_textViewer{
+	right: -12px;
+}
+.definition_content .notValid .validTip.type_textViewer{
+	right: 70px;
+}
+.mtqBank_content  .notValid .validTip.type_textViewer{
+	bottom: 15px;
+}
+.notValid .validTip.type_mathfield{
+	bottom: 0;
+	right: -8px;
+}
+.matchingAnswer_content  .definition_content .notValid .validTip.type_textViewer,
+.notValid .validTip.type_textViewer,
+.notValid .validTip.type_AnswerFieldTypeText,
+.notValid .validTip.type_answerFieldTypeMathfield,
+.question_content .table_content .notValid .validTip.type_textViewer{
+	bottom: 6px;
+	right: 0;
+}
+.view_mode_normal.notValid > .validTip.type_narrative{
+	top: 28px;
+}
+.validTip.type_hint{
+	top: 8px;
+	left: 0;
+}
+.validTip.type_feedback{
+	top: 8px;
+	left: -6px;
+}
+.notValid .validTip.type_imageViewer,
+.notValid .validTip.type_videoPlayer,
+.notValid .validTip.type_soundButton,
+.notValid .validTip.type_appletWrapper,
+.notValid .validTip.type_audioPlayer{
+	color: transparent;
+}
+
+.notValid>.instruction_content>.instruction_message.answer_area h3,
+.notValid>.questionOnly_content>.element_preview_wrapper>.instruction_content.questionStage h3,
+.notValid>.pedagogicalStatement_content>.element_preview_wrapper>.instruction_content.questionStage h3,
+.notValid>.selfCheck_content>.element_preview_wrapper>.instruction_content.questionStage h3,
+.notValid>.narrative_content>.element_preview_wrapper>.instruction_content.questionStage h3 {
+	margin-left: 30px;
+	left: 0;
+}
+.notValid>.videoPlayer_content>.videoPlayer {
+	background-image: url('../media/not_valid_VP.jpg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.notValid>.videoPlayer_content>.videoPlayer.small {
+	background-size: 231px 180px;
+}
+.notValid>.imageViewer_content {
+	background-image: url('../media/not_valid_image.jpg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.notValid>.imageViewer_content .previewImage{
+	visibility: hidden;
+}
+.notValid>.soundButton_content>.soundButton {
+	background-image: url('../media/not_valid_SB.jpg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.notValid>.audioPlayer_content>.audioPlayer{
+	background-image: url('../media/not_valid_AP.jpg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	
+}
+.notValid>.audioPlayer_content>.audioPlayer.small{
+	background-size: 206px 99px;
+}
+.notValid>.AppletWrapperEditor a,
+.notValid>.AppletWrapperEditor.small{
+	background-image: url('../media/not_valid_Applet.jpg');
+	background-size:100px 100px;
+	width: 100px;
+	height: 100px;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+.notValid>.AppletWrapperEditor img{
+	visibility: hidden;
+}
+#tree_list .node-collapse .validTip.type_sequence{
+	color: #FF005A;
+	position: absolute;
+}
+.task_screen .growinglist-component .validTip.type_mathfieldList{
+	left: -12px;
+	top: 9px;
+	display: block;
+}
+
+.header_content .validTip.type_textViewer{
+	left: 658px;
+	top: 4px;
+}
+
+/*position the vlidation icon differently in TVE inside shared area, but not table*/
+.sharedContent_content > .element_preview_wrapper > .textViewer_content > .validTip.type_textViewer{
+	right: 70px;
+}

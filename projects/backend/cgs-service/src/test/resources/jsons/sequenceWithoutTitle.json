@@ -1,0 +1,21 @@
+{
+    "cid": "b7fb2f5d-43f9-4cc9-b075-af100ae5cdf5",
+    "type": "simple",
+    "mimeType": "DL",
+    "contentRef": "resource_1",
+    "resourceRefId": [
+        "resource_1"
+    ],
+    "standards": [
+        {
+            "stdPackageId" : "3",
+            "pedagogicalIds": ["M.1.1", "M.1.1.0"]
+
+        },
+        {
+            "stdPackageId" : "4",
+            "pedagogicalIds": ["M.6.4", "M.6.8"]
+
+        }
+    ]
+}

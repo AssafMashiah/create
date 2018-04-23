@@ -1,0 +1,14 @@
+<div id="propertyPreview">
+    {{#config.data.image}}
+    <img src="{{#server-path}}{{config.data.image}}{{/server-path}}" class="preview-media"/>
+    {{/config.data.image}}
+    {{#config.data.sound}}
+    <audio controls class="preview-media" src="{{#server-path}}{{config.data.sound}}{{/server-path}}" />
+    {{/config.data.sound}}
+    {{#config.data.audio}}
+    <audio controls class="preview-media" src="{{#server-path}}{{config.data.audio}}{{/server-path}}" />
+    {{/config.data.audio}}
+    {{#config.data.video}}
+    <video controls class="preview-media" src="{{#server-path}}{{config.data.video}}{{/server-path}}" preload="metadata" />
+    {{/config.data.video}}
+</div>

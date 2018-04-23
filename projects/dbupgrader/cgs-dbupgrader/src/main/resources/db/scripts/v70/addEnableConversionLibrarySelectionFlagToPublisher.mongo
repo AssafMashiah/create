@@ -1,0 +1,1 @@
+publishers.update({},{$set:{"customization.enablePdfConversionLibrarySelection": false}},{upsert: false, multi: true});

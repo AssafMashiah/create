@@ -1,0 +1,33 @@
+.bundles-upload-form {
+    margin: 0px; padding: 0px;
+}
+
+#bundles-table ul.plugin-list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+#bundles-table ul.plugin-list li {
+    float: left;
+
+    border-radius: 5px;
+    background: #dedede;
+
+    margin: 3px;
+    padding: 3px;
+
+    font-size: 10px;
+}
+
+#bundles-table .plugins-contaier {
+    max-width: 200px;
+}
+
+#bundles-table td.actions {
+    text-align: center;
+}
+
+#bundles-table td.actions .icon-trash {
+    font-size: 25px;
+}

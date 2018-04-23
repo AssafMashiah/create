@@ -1,0 +1,163 @@
+/*overlay upload dialog*/
+#overlay-add-dialog {
+	#dialog {
+		height: auto !important;
+		max-height: 100%;
+		&.addOverlay {
+			min-width: 1000px;
+			margin: 0 auto;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, 0);
+			h4 {
+				font-family: open_sans, sans-serif;
+				font-weight: bolder;
+				font-size: 18px;
+				color: #356CB5;
+			}
+			&.url {
+				top: 8%;
+				min-width: 850px;
+				max-height: 600px;
+				#dialogContent {
+                  min-height: 210px;
+                  max-height: 480px;
+                  #overlay-container{
+                    padding-top:0;
+                    padding-bottom:0;
+                  }
+                  #loader {
+                    width:492px;
+                    height:252px;
+                    text-align: center;
+                    padding-top: 15%;
+                    position: absolute;
+                    bottom:123px;
+                    background-color: white;
+                    img {
+                      width:100px;
+                      margin:auto;
+                    }
+                  }
+				}
+			}
+			&.image, &.audio {
+				top: 25%;
+				min-width: 850px;
+				min-height: 420px;
+				#dialogContent {
+					min-height: 284px;
+				}
+			}
+			&.video {
+				min-height: 264px;
+				width: 400px;
+				#dialogContent {
+					max-height: 300px;
+				}
+			}
+			#overlay-container {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: row;
+				flex-direction: row;
+				padding: 16px 50px;
+				> div {
+					flex: 1;
+				}
+			}
+			form {
+				padding: 0;
+				margin: 0;
+				div:first-child {
+					margin: 0 0 13px;
+				}
+				small {
+					visibility: hidden;
+				}
+				#overlay-url {
+					font-family: open_sans, sans-serif;
+					font-size: 12px;
+					color: #666666;
+					background-color: #FFFFFF;
+					border: 1px solid #356CB5;
+					width: 470px;
+					height: 26px;
+					padding-left: 12px;
+					margin: 0;
+                    direction: ltr;
+                    margin-bottom:10px;
+				}
+                #url-note{
+                  margin-bottom:14px;
+                }
+				&.error {
+					#overlay-url {
+						border-color: red;
+					}
+					small {
+						visibility: visible;
+					}
+				}
+			}
+			#overlay-upload-text, #overlay-url-text {
+				font-family: open_sans, sans-serif;
+				font-style: italic;
+				font-size: 14px;
+				color: #666666;
+				font-weight: 500;
+				padding-bottom: 18px;
+			}
+			button.btn {
+				font-family: open_sans, serif;
+				font-weight: 600;
+				font-style: normal;
+				font-size: 14px;
+				background-color: #356CB5;
+				color: #FFFFFF;
+				height: 30px;
+			}
+			#upload-overlay-btn {
+				width: 180px;
+			}
+			#upload-drop {
+				font-family: open_sans, sans-serif;
+				font-weight: 500;
+				font-size: 18px;
+				color: #AAAAAA;
+				width: 280px;
+				height: 105px;
+				background: #FDFDFD;
+				border: dashed #BBBBBB 1px;
+				margin-right: 16px;
+                margin-top: 16px;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 95px;
+				&.hover {
+					border: dashed #356CB5 1px;
+					color: #356CB5;
+				}
+			}
+		}
+	}
+}
+
+.video_editor {
+	#video-player {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.OVERLAY_EXTERNAL_URL {
+  #field_url {
+    direction: ltr;
+  }
+}
+
+.image-overlay-upload-row {
+  #button_image_editor {
+    margin: 0;
+  }
+}

@@ -1,0 +1,79 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    var lessons = db.lessons.find({"contentData.learningObjects.pages.overlayElements.0":{$exists: true}}).snapshot(); // lessons cursor
+    var count = 0;
+
+    lessons.forEach(function(lesson) {
+        var publisher = db.publishers.findOne({"accountId": lesson.cgsData.publisherId});
+        if (publisher == null) {
+            return;
+        }
+
+        var locale = publisher.interfaceLocales.selected;
+        var isModified = false;
+
+        lesson.contentData.learningObjects.forEach(function(lo) {
+            if (lo.pages == null) {
+                return;
+            }
+
+            lo.pages.forEach(function(page) {
+                page.overlayElements.forEach(function(overlayElement) {
+                    var content = overlayElement.content;
+                    var data = content.data;
+
+                    if (data.title) { // if title already exists - no need to create it.
+                        return;
+                    }
+
+                    switch(content.type) {
+                        case "VIDEO_FILE":
+                        case "VIDEO_YOUTUBE":
+                            switch(locale) {
+                                case "en_US":
+                                case "pt_BR":
+                                    data.title = "Video " + overlayElement.overlayOrder
+                                    break;
+                                case "fr_FR":
+                                    data.title = "Vidéo " + overlayElement.overlayOrder
+                                    break;
+                            }
+                            break;
+                        case "IMAGE_FILE":
+                            switch(locale) {
+                                case "en_US":
+                                case "fr_FR":
+                                    data.title = "Image " + overlayElement.overlayOrder
+                                    break;
+                                case "pt_BR":
+                                    data.title = "Imagem " + overlayElement.overlayOrder
+                                    break;
+                            }
+                            break;
+                        case "EXTERNAL_URL":
+                            data.title = data.resourceHref
+                            break;
+                        case "AUDIO_FILE":
+                            data.title = "Audio " + overlayElement.overlayOrder
+                            break;
+                        case "DL_SEQUENCE":
+                            var title = data.tasks[0].title;
+                            title = title.substr(title.indexOf(" ") + 1);
+                            data.title = title + " " + overlayElement.overlayOrder;
+                            break;
+                    }
+
+                    isModified = true;
+                });
+            });
+        });
+
+        if (isModified) {
+            lesson.contentData.header["last-modified"] = new Date();
+            db.lessons.save(lesson);
+            count++;
+        }
+    });
+
+    print("Created titles for hotspots of " + count + " lessons.");
+}

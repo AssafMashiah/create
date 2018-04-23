@@ -1,0 +1,55 @@
+.dialog_screen #menu_base, .dialog_screen #sub_menu_base {
+    margin: 0;
+    /* min-height: 54px; */
+}
+
+.dialog_screen #menu_base #menu_right_panel {
+    display: none;
+}
+.dialog_screen .task_screen #menu_base #menu_right_panel{
+	display: block;
+}
+.dialog_screen .task_screen #menu_base #menu_right_panel #userName_button_wrapper,
+.dialog_screen .task_screen #menu_base #menu_right_panel #btn_notifications_wrapper,
+.dialog_screen .task_screen #menu_base #menu_right_panel #img-trial-account-wrapper{
+	display: none;
+}
+
+.dialog_screen #sub_menu_base {
+    width: auto;
+}
+
+
+.screen-content.dialog_screen div.help_content:empty:before,
+.screen-content.dialog_screen div.help_content div.br:first-child:before,
+.screen-content.dialog_screen div.assessment_question_content:empty:before,
+.screen-content.dialog_screen div.assessment_question_content div.br:first-child:before{
+	color: #0099E5;
+	content: '\0077';
+	display: inline-block;
+	line-height: 0.7em;
+	margin-right: 5px;
+    font-family: 'CGS-icons';
+}
+.screen-content.dialog_screen div.help_content:empty:after,
+.screen-content.dialog_screen div.help_content div.br:first-child:after,
+.screen-content.dialog_screen div.assessment_question_content:empty:after,
+.screen-content.dialog_screen div.assessment_question_content div.br:first-child:after{
+	color: #0099e5;
+	content: attr(data-placeholder);
+	vertical-align: top;
+}
+
+.applet_dialog_screen .view_mode_normal.element_preview_wrapper.selected,
+.applet_dialog_screen .view_mode_normal.element_preview_wrapper.over{
+	outline: none;
+	cursor: default;
+}
+.applet_dialog_screen .view_mode_normal.element_preview_wrapper.over > .deleteBtn,
+.applet_dialog_screen .view_mode_normal.element_preview_wrapper.selected > .deleteBtn{
+	display: none;
+}
+
+.applet_dialog_screen #stage_base {
+	overflow-x: auto;
+}

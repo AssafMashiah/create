@@ -1,0 +1,25 @@
+<table id="player_interface_table" class="table table-bordered" style="width: 99%">
+    <thead>
+        <tr>
+            <th class="th_icon">((Icon))</th>
+            <th class="th_description" >((Description))</th>
+            <th class="th_string" >((Label))</th>
+        </tr>
+    </thead>
+    <tbody id="player_interface_table_body">
+        {{#playerIntefaceGroup}}
+            {{#display}}
+                <tr >
+                    <td colspan="3" style=" background-color: #ededed; ">(({{groupName}}))</td>
+                </tr>
+                {{#groupItems}}
+                    <tr id='row_{{index}}'>
+                        <td class="dl_icon {{#isTextFont}}text_font{{/isTextFont}}">{{icon}}</td>
+                        <td>(({{key}}))</td>
+                        <td id="props_text_viewer_{{index}}" class="propsTextContainer"></td>
+                    </tr>
+                {{/groupItems}}
+            {{/display}}
+        {{/playerIntefaceGroup}}
+    </tbody>
+</table>

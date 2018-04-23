@@ -1,0 +1,29 @@
+<div id="rubric_container">
+    <div class="table-definitions">
+        <label for="rubric-rows">((Rows)):</label>
+        <input type="number" class="input-mini" id="rubric-rows" min="{{minRows}}" max="{{maxRows}}" value="{{rowsCount}}" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="rubric-cols">((Columns)):</label>
+        <input type="number" class="input-mini" id="rubric-cols" min="{{minCols}}" max="{{maxCols}}" value="{{colsCount}}" />
+    </div>
+    <table id="rubric-dialog-table">
+        <tr>
+            <th>&nbsp;</th>
+            {{#data.columnsHeaders}}
+            <th><input type="text" class="input-medium row-name" value="{{.}}" /></th>
+            {{/data.columnsHeaders}}
+            <th class="totalScore">((Total Score))</th>
+        </tr>
+        {{#data.rows}}
+        <tr rowid="{{id}}">
+            <td><input type="text" class="input-mini row-name" value="{{name}}" /></td>
+            {{#cells}}
+            <td cellid="{{id}}">
+                <textarea type="text" class="text explanation">{{explanation}}</textarea>
+            </td>
+            {{/cells}}
+            <td class="totalScore"><input type="text" maxlength="10" class="input-mini row-score" value="{{totalScore}}" /></td>
+        </tr>
+        {{/data.rows}}
+    </table>
+</div>

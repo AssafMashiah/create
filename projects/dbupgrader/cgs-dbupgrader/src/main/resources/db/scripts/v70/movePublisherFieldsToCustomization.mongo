@@ -1,0 +1,44 @@
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+
+   var publishers = db.publishers.find().snapshot(); //publishers cursor
+
+       publishers.forEach(function(publisher) {
+
+           var customization = {}; //Create customization node
+
+           if (publisher.enableHints!=undefined)
+                customization.enableHints= publisher.enableHints;
+
+               if (publisher.enableCoachMarks!=undefined)
+                   customization.enableCoachMarks =  publisher.enableCoachMarks;
+
+               if (publisher.enableFullSpellChecker!=undefined)
+                   customization.enableFullSpellChecker = publisher.enableFullSpellChecker;
+
+               if (publisher.isSecured!=undefined)
+                   customization.isSecured =  publisher.isSecured;
+
+                if (publisher.publishSelectedLesson!=undefined)
+                   customization.publishSelectedLesson = publisher.publishSelectedLesson;
+
+               if (publisher.enablePdf2t2k!=undefined)
+                   customization.enablePdf2t2k =  publisher.enablePdf2t2k;
+
+                if (publisher.enableQuiz!=undefined)
+                   customization.enableQuiz =  publisher.enableQuiz;
+
+                if (publisher.enableHiddenLessons!=undefined)
+                   customization.enableHiddenLessons = publisher.enableHiddenLessons;
+
+                if (publisher.enableLivePage!=undefined)
+                   customization.enableLivePage = publisher.enableLivePage;
+
+           db.publishers.update({"_id":publisher._id},{
+               $set : {"customization" : customization}, //insert the new customization node
+               $unset : {"enableHints":1,"enableCoachMarks":1,"enableFullSpellChecker":1, //remove fields from publishers base node
+                   "isSecured":1,"publishSelectedLesson":1,"enablePdf2t2k":1,
+                   "enableQuiz":1,"enableHiddenLessons":1,"enableLivePage":1}
+               },false,false);
+       });
+}

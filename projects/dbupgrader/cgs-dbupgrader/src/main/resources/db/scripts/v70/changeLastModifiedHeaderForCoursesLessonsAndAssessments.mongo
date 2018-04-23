@@ -1,0 +1,7 @@
+############################################################################################################################
+#  Change the last-modified header for courses, lessons and assessments so they'd be loaded from server and not from cache #
+############################################################################################################################
+
+courses.update({"contentData.header.last-modified":{$ne:ISODate("1970-01-01T00:00:00.000Z")}}, {$set:{"contentData.header.last-modified":new Date()}}, {multi: true});;
+lessons.update({}, {$set:{"contentData.header.last-modified":new Date()}}, {multi: true});;
+assessments.update({}, {$set:{"contentData.header.last-modified":new Date()}}, {multi: true});;

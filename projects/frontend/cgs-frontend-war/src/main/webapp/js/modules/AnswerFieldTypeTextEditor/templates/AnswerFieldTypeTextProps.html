@@ -1,0 +1,77 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper AnswerFieldTypeText_editor props_editor">
+    <ul class="nav nav-tabs" id="AnswerFieldTypeTextEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- Answer field )){{options.af_num}}</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            {{^hideScenariosHeader}}<div><h5>((Answer Scenarios))</h5></div>{{/hideScenariosHeader}}
+
+            {{#controller.record.data.displayFieldSize}}
+                <div class="control-group">
+                    <label class="control-label" for="field_answer_size">((Size))</label>
+                    <select id="field_answer_size" data-value="obj.answer_size">
+                        {{#controller.record.data.allowedSizes}}
+                            <option value="{{value}}">(({{text}}))</option>
+                        {{/controller.record.data.allowedSizes}}
+                    </select>
+                    <label class="control-label" for="field_AnswerType">((Max. number of characters))</label>
+                    <input type="number" {{#controller.record.data.disabledMaxChars}} disabled="disabled" cantBeEnabled="true" {{/controller.record.data.disabledMaxChars}} data-value="obj.MaxChars" class="textEditorInput" id="MaxChars" maxlength="4" min="{{minChars}}" max="{{maxChars}}" />
+
+                    {{#controller.showToolbarCheckbox}}
+                    <div class="showToolbar">
+                        <input type="checkbox" data-checked="obj.ShowToolbar" class="textEditorInput" id="field_ShowToolbar" /> &nbsp;((Show Toolbar))
+                    </div>
+                    {{/controller.showToolbarCheckbox}}
+                </div>
+
+            {{/controller.record.data.displayFieldSize}}
+
+            {{^controller.record.data.isNoncheckable}}
+                <div class="control-group">
+                    {{^controller.record.data.noAdditionalCorrectAnswers}}
+                    <div >
+                        <input id="chkAdditionalCorrectAnswers" type="checkbox" data-checked="obj.showAdditionalCorrectAnswers">
+                        <label class="control-label inline-block" >((Additional Correct Answers))</label>
+                        {{#controller.record.data.showAdditionalCorrectAnswers}}
+                        <div class="controls" id="additional-placeholder">
+                        </div>
+                        {{/controller.record.data.showAdditionalCorrectAnswers}}
+                    </div>
+                    {{/controller.record.data.noAdditionalCorrectAnswers}}
+                    {{^controller.record.data.noPartiallyCorrectAnswers}}
+                    <div >
+                        <input id="chkPartiallyCorrectAnswers" type="checkbox" data-checked="obj.showPartiallyCorrectAnswers">
+                        <label class="control-label inline-block" >((Partially Correct Answers))</label>
+                        {{#controller.record.data.showPartiallyCorrectAnswers}}
+                        <div class="controls" id="partially-placeholder" >
+
+                        </div>
+                        {{/controller.record.data.showPartiallyCorrectAnswers}}
+                    </div>
+                    {{/controller.record.data.noPartiallyCorrectAnswers}}
+                    {{^controller.record.data.noExpectedWrong}}
+                    <div >
+                        <input id="chkExpectedWrong" cantBeEnabled="true" type="checkbox" data-checked="obj.showExpectedWrong">
+                        <label class="control-label inline-block" >((Expected Wrong))</label>
+                        {{#controller.record.data.showExpectedWrong}}
+                        <div class="controls" id="expectedWrong-placeholder" >
+
+                        </div>
+                        {{/controller.record.data.showExpectedWrong}}
+                    </div>
+                    {{/controller.record.data.noExpectedWrong}}
+                </div>
+            {{/controller.record.data.isNoncheckable}}
+            {{#showHintfield}}
+            <div>
+                <label class="control-label">((Field Hint))</label>
+                <input id="text-hint" type="text" data-value="obj.hint">
+            </div>
+            {{/showHintfield}}
+        </div>
+    </div>
+</div>

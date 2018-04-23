@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="t2k_scorm" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 4th Edition</schemaversion>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+            <general>
+                <title>
+                    <string>Empty course with standards only</string>
+                </title>
+                <language>en-US</language>
+                <structure>
+                    <source>LOMv1.0</source>
+                    <value>atomic</value>
+                </structure>
+                <aggregationLevel>
+                    <source>LOMv1.0</source>
+                    <value>2</value>
+                </aggregationLevel>
+                </general>
+            <lifeCycle>
+                <version>
+                    <string>1.0.1</string>
+                </version>
+                <status>
+                    <source>LOMv1.0</source>
+                    <value>final</value>
+                </status>
+                <contribute>
+                    <role>
+                        <source>LOMv1.0</source>
+                        <value>publisher</value>
+                    </role>
+                    <entity>BEGIN:VCARD&amp;#13;&amp;#10;VERSION:2.1&amp;#13;&amp;#10;N:publisher name&amp;#13;&amp;#10;END:VCARD</entity>
+                    <date>
+                        <dateTime>2014-01-01T00:00:00</dateTime>
+                        <description>
+                            <string>This date represents the date the author finished authoring the component</string>
+                        </description>
+                    </date>
+                </contribute>
+            </lifeCycle>
+            <metaMetadata>
+                <metadataSchema>LOMv1.0</metadataSchema>
+            </metaMetadata>
+            <technical>
+                <format>text/html</format>
+                <size>28567</size>
+                <requirement>
+                    <orComposite>
+                        <type>
+                            <source>LOMv1.0</source>
+                            <value>browser</value>
+                        </type>
+                        <name>
+                            <source>LOMv1.0</source>
+                            <value>ms-internet explorer</value>
+                        </name>
+                        <minimumVersion>10.0</minimumVersion>
+                        <maximumVersion>11.0</maximumVersion>
+                    </orComposite>
+                </requirement>
+                <otherPlatformRequirements>
+                    <string>display: at least 800 X 600 pixels x 256 colors</string>
+                </otherPlatformRequirements>
+            </technical>
+            <educational>
+                <interactivityType>
+                    <source>LOMv1.0</source>
+                    <value>mixed</value>
+                </interactivityType>
+                <language>en-US</language>
+            </educational>
+            <classification>
+                <description>
+                    <string>Common Core State Standards for Mathematics</string>
+                </description>
+                <taxonPath>
+                    <source>
+                        <string>ccss</string>
+                    </source>
+                    <taxon>
+                        <id>6.EE.A.3</id>
+                        <entry>
+                            <string>Apply the properties of operations to generate equivalent expressions.</string>
+                        </entry>
+                    </taxon>
+                    <taxon>
+                        <id>6.EE.A.4</id>
+                        <entry>
+                            <string>Identify when two expressions are equivalent (i.e., when the two expressions name the same number regardless of which value is substituted into them).</string>
+                        </entry>
+                    </taxon>
+                </taxonPath>
+            </classification>
+        </lom>
+    </metadata>
+    <organizations default="t2k_main">
+        <organization identifier="t2k_main">
+            <title>Empty course with standards only</title>
+            <imsss:sequencing>
+                <imsss:controlMode choiceExit="true" flow="true"/>
+                <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+            </imsss:sequencing>
+        </organization>
+    </organizations>
+    <resources>
+    </resources>
+</manifest>

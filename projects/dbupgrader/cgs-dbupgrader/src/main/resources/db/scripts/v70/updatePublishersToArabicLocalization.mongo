@@ -1,0 +1,47 @@
+//  Add to existing publishers Arabic locales if doesn't exist
+
+function f(dbName) {
+   db = db.getSiblingDB(dbName);
+   myCursor = db.publishers.find();
+
+   gradeLevel = {
+       'locale': 'ar_IL',
+       'value': []
+   };
+   subjectArea = {
+       "locale" : "ar_IL",
+       'value': []
+   };
+
+
+   myCursor.forEach( function (myDoc) {
+   	hasModifications = false;
+   	if(myDoc.contentLocales.options.indexOf("ar_IL") <= -1) {
+   		myDoc.contentLocales.options.push("ar_IL");
+   		hasModifications = true;
+   	}
+   	hasGradeLevel = false;
+   	myDoc.gradeLevels.forEach(function(gradeLevel) {
+   		if(gradeLevel.locale == "ar_IL") {
+   			hasGradeLevel = true;
+   		}
+   	});
+   	if (!hasGradeLevel) {
+   		myDoc.gradeLevels.push(gradeLevel);
+   		hasModifications = true;
+   	}
+   	hasSubjectArea = false;
+   	myDoc.subjectAreas.forEach(function(subjectAreas) {
+   		if(subjectAreas.locale == "ar_IL") {
+   			hasSubjectArea = true;
+   		}
+   	});
+   	if (!hasSubjectArea) {
+   		myDoc.subjectAreas.push(subjectArea);
+   		hasModifications = true;
+   	}
+   	if (hasModifications) {
+   		db.publishers.save(myDoc);
+   	}
+   });
+}

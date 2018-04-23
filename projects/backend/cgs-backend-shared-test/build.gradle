@@ -1,0 +1,89 @@
+defaultTasks 'clean', 'build'
+
+apply from: '../../../cgs-common.gradle'
+
+dependencies {
+    compile testing
+}
+
+task createDevEnv() << {
+    println ''
+    println 'Create properties for shared-test project'
+    println ''
+
+    try {
+		File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../../t2k.properties')
+		if (t2kPropFile.exists()) {
+			ant.property(file: project.projectDir.canonicalPath + '/../../../t2k.properties')
+			// copy 2k.properties from root project
+			project.copy() {
+				from '../../../t2k.properties'
+				into 'src/main/resources'
+			}
+		}
+		else {
+			ant.property(file: project.projectDir.canonicalPath + '/../../../t2k.properties')
+
+			// copy 2k.properties from root project
+			project.copy() {
+				from ('../../../t2k.properties')
+				into 'src/main/resources'
+			}
+		}
+
+        // copy and filter runtime properties from war project
+//        project.copy() {
+//            from ('../cgs-backend-war/src/main/resources/config/cgsConfig.properties.tmpl'){
+//                rename 'cgsConfig.properties.tmpl', 'cgsConfig.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+//        project.copy() {
+//            from ('../cgs-backend-war/src/main/resources/config/cms.properties.tmpl'){
+//                rename 'cms.properties.tmpl', 'cms.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+//        project.copy() {
+//            from ('../cgs-backend-war/src/main/resources/config/mongo.properties.tmpl'){
+//                rename 'mongo.properties.tmpl', 'mongo.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+//        project.copy() {
+//            from ('../cgs-backend-war/src/main/resources/config/users.properties.tmpl'){
+//                rename 'users.properties.tmpl', 'users.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+        int index = version.indexOf('.')
+        String major = version.substring(0, index)
+        String minor = version.substring(index + 1, version.lastIndexOf('.'))
+        String milestone = version.substring(version.lastIndexOf('.') + 1, version.lastIndexOf('-'))
+
+        ant.copy(toFile: "src/main/resources/version.properties", file: "../../../install/src/main/assembly/files/version.properties.tmpl", overwrite: "true") {
+            ant.filterset(begintoken: "@", endtoken: "@") {
+                ant.filter(token: "versionMajor", value: major)
+                ant.filter(token: "versionMinor", value: minor)
+                ant.filter(token: "versionMilestone", value: milestone)
+            }
+        }
+        ant.copy(toFile: "src/main/resources/config/version.properties", file: "../../../install/src/main/assembly/files/version.properties.tmpl", overwrite: "true") {
+            ant.filterset(begintoken: "@", endtoken: "@") {
+                ant.filter(token: "versionMajor", value: major)
+                ant.filter(token: "versionMinor", value: minor)
+                ant.filter(token: "versionMilestone", value: milestone)
+            }
+        }
+
+    }
+    catch (Exception e) {}
+}

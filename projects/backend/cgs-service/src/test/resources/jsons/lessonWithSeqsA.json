@@ -1,0 +1,99 @@
+{
+	"cid": "97d0109b-4464-42ea-97ca-b4663beafe3c",
+	"type": "lesson",
+	"title": "l2",
+	"pedagogicalLessonType": "Core",
+	"header": {
+		"last-modified": {
+			"$date": "2013-01-21T12:33:38.796Z"
+		}
+	},
+	"resources": [
+		{
+			"resId": "resource_1",
+			"href": "sequences/b7fb2f5d-43f9-4cc9-b075-af100ae5cdf5",
+			"type": "attachment"
+		},
+		{
+			"resId": "resource_2",
+			"href": "sequences/46b72377-efa3-4271-a71a-0162c0ec68ba",
+			"type": "attachment"
+		},
+		{
+			"resId": "resource_3",
+			"href": "sequences/182fe367-09f1-4ebd-8ca8-2b0caf1d30de",
+			"type": "attachment"
+		},
+		{
+			"resId": "resource_4",
+			"href": "sequences/6da73243-c10c-4ac6-ab3d-f3e740d246be",
+			"type": "attachment"
+		}
+	],
+			"learningObjects": [
+				{
+					"cid": "0fb42261-d7b3-45bd-8bad-59daa04fcabe",
+					"type": "lo",
+					"pedagogicalLoType": "introduction",
+					"sequences": [
+						{
+							"cid": "b7fb2f5d-43f9-4cc9-b075-af100ae5cdf5",
+							"type": "simple",
+							"mimeType": "DL",
+							"contentRef": "resource_1",
+							"resourceRefId": [
+								"resource_1"
+							],
+							"title": "New sequence 1"
+						},
+						{
+							"cid": "46b72377-efa3-4271-a71a-0162c0ec68ba",
+							"type": "simple",
+							"mimeType": "DL",
+							"contentRef": "resource_2",
+							"resourceRefId": [
+								"resource_2"
+							],
+							"title": "New sequence 2"
+						}
+					],
+					"title": "New lo"
+				},
+				{
+					"cid": "d3338053-10c8-495f-b538-589d1c96dd1a",
+					"type": "lo",
+					"pedagogicalLoType": "introduction",
+					"sequences": [
+						{
+							"cid": "182fe367-09f1-4ebd-8ca8-2b0caf1d30de",
+							"type": "simple",
+							"mimeType": "DL",
+							"contentRef": "resource_3",
+							"resourceRefId": [
+								"resource_3"
+							],
+							"title": "New sequence 3"
+						}
+					],
+					"title": "New lo"
+				} ,
+                {
+                					"cid": "093bb63c-f0a8-43a0-a674-60eda6952267",
+                					"type": "lo",
+                					"pedagogicalLoType": "introduction",
+                					"sequences": [
+                						{
+                							"cid": "6da73243-c10c-4ac6-ab3d-f3e740d246be",
+                							"type": "simple",
+                							"mimeType": "DL",
+                							"contentRef": "resource_4",
+                							"resourceRefId": [
+                								"resource_4"
+                							],
+                							"title": "New sequence 4"
+                						}
+                					],
+                					"title": "New lo"
+                				}
+			]
+}

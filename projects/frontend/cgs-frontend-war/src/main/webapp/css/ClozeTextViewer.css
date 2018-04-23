@@ -1,0 +1,61 @@
+body.texteditor > div {
+	padding: 5px 10px;
+}
+
+body.texteditor div::selection,
+.selected_mathfield {
+	background-color:#FEF3BA !important;
+}
+
+.AnswerField {
+	margin-right:30px;
+
+	min-height:28px;
+}
+
+.AnswerField > span.answerfieldSpan {
+	white-space: pre-wrap;
+}
+
+.AnswerField > span.answerfieldSpan {
+	outline: none;
+}
+
+.AnswerField,
+.AnswerField:hover,
+.AnswerField.unselect:hover {
+	outline:1px dashed #0099E5;
+	padding:4px 6px;
+
+	position: relative;
+	display: inline-block;
+}
+
+.AnswerField.unselect {
+	outline:1px solid #CCCCCC;
+}
+
+.unselect {
+	-webkit-user-select: none;
+}
+
+.x-button {
+	width:22px;
+	height:22px;
+	border:1px dashed #0099E5;
+	border-left: 0 none;
+	padding: 0;
+
+	line-height: 1;
+	color: #333;
+
+	position: absolute;
+	right: -22px;
+	top: -1px;
+	text-align: center;
+
+	cursor: pointer;
+	display: none;
+
+	-webkit-user-select: none;
+}

@@ -1,0 +1,195 @@
+div.growinglist {
+	width:100%;
+	overflow:hidden;
+}
+
+div.growinglist button {
+	cursor: pointer;
+	color: #333;
+	line-height: 0.4em;
+    border:none;
+    margin-bottom: 5px;
+}
+
+div.growinglist button:disabled {
+	color: #777;
+}
+
+div.growinglist button[disabled!=disabled]:hover {
+	text-decoration: none;
+	color: #0099e5;
+}
+
+
+div.growinglist div.growinglist-row {
+	clear:both;
+	overflow:hidden;
+	width:280px;
+	position: relative;
+}
+
+div.growinglist div.growinglist-row + div.growinglist-row {
+  margin-top: 15px;
+}
+
+div.growinglist div.growinglist-row input.description {
+	min-height: 30px;
+	width:100%;
+	text-overflow:ellipsis;
+	margin:0;
+	padding:0;
+}
+div.growinglist div.growinglist-row .inline{
+	width: 30%;
+}
+
+div.growinglist div.growinglist-row div.column {
+	display:inline-block;
+	margin-right:-5px;
+	/*height:19px;*/
+	text-align:center;
+	padding:4px 0 4px 2px;
+	vertical-align: middle;
+}
+
+div.growinglist div.growinglist-row div.column.index {
+	width:10%;
+}
+
+div.growinglist div.growinglist-row div.column.content {
+	width:170px;
+	max-width: 90%;
+	text-align:left;
+}
+
+div.growinglist div.growinglist-row div.column.icon-display button{
+    width:31px;
+    height:22px;
+    margin-left:1px;
+    padding:0px;
+}
+
+.growinglist-component.control-group button.js-growing-add.icon-plus {
+	color: #333;
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin: 0;
+	line-height: .7em;
+	cursor: pointer;
+  margin-top: 15px;
+}
+
+/*hide edit and delete icons only inside sequence help list*/
+.help_placeholder .growinglist-row.js-growing-row:hover .base-icon.icon-display{
+	visibility: visible;
+
+}
+.help_placeholder .base-icon.icon-display{
+	visibility: hidden;
+}
+
+
+.growinglist-component.control-group button.js-growing-add.icon-plus:hover,
+.growinglist-row.js-growing-row button.js-growing-remove.icon-remove:hover {
+	text-decoration: none;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.growinglist .mainListTitle,
+.growinglist .mainListTitle + .column.icon-display {
+	display: inline-block;
+}
+
+.growinglist {
+    counter-reset: num-div;/* declare the counter num-div */
+    padding-right: 10px;
+}
+
+.growinglist .outerList .mainListTitle {
+    padding-top: 24px;
+    counter-increment: num-div; /* each .mainListTitle inside, increment the counter */
+    font-size: 16px;
+}
+
+.growinglist .mainListTitle:after {
+	content: "" counter(num-div) "";
+	position: relative;
+	margin: 0 5px;
+	width: 25px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+div.growinglist .outerList div.growinglist-row{
+	border: solid 1px #ccc;
+}
+
+div.growinglist .outerList div.growinglist-row .row {
+	margin: 0;
+}
+
+/*div.growinglist .outerList div.growinglist-row input {
+	min-width: 75px;
+}*/
+div.growinglist .outerList div.growinglist-row select {
+	min-width: 90px;
+}
+
+div.growinglist .outerList .arrow {
+	vertical-align: middle;
+	border-top: 6px solid #000;
+	border-right: 6px solid rgba(0, 0, 0, 0);
+	border-left: 6px solid rgba(0, 0, 0, 0);
+	margin: 0 5px;
+}
+
+.growinglist-component .row{
+	padding: 2px 8px;
+}
+.growinglist-component .conditionTitle{
+	line-height: 30px;
+	padding: 6px 0;
+	vertical-align: top;
+}
+div.growinglist .outerList div.growinglist-row .first-row{
+	margin-bottom: 15px;
+}
+
+
+div.growinglist div.growinglist-row .matfieldContainer{
+	display: inline-block;
+	width: 50px;
+	padding: 5px;
+	float: left;
+}
+div.growinglist div.growinglist-row .comparisonSelect{
+	display: inline-block;
+}
+.column.trash{
+	width: 32px;
+}
+
+/*mathfield growing list*/
+
+div.growinglist div.growinglist-row.math{
+	margin-bottom: 0;
+}
+div.growinglist div.growinglist-row.math div.column.index{
+	vertical-align: top;
+}
+div.growinglist div.growinglist-row.math div.column.content{
+	width: 218px;
+	border: solid 1px #ccc;
+	padding: 0;
+}
+div.growinglist div.growinglist-row.math div.column.base-icon{
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.growinglist-component__predefined-fields {
+  margin-left: 10px;
+  margin-top: 15px;
+}

@@ -1,0 +1,43 @@
+{{#isLeaf}}
+    <div class="std-wrap"></div>
+    {{#isCheckable}}
+	<input pkgName="{{name}}" pkgSubjectArea="{{subjectArea}}" pkgVersion="{{version}}" class="standardSelection" type="checkbox" id="input_{{pedagogicalId}}" {{#isChecked}}checked{{/isChecked}} />
+    {{/isCheckable}}
+	<div class="standard-name">
+        {{#isCheckable}}
+            <span rel="tooltip" id="{{pedagogicalId}}" class="standard-tree-leaf final-node" title="{{description}}" data-original-title="{{#standardName}}<div><b>{{standardName}}</b></div>{{/standardName}}{{description}}">
+                 <b>{{pedagogicalId}}</b> {{standardName}}
+            </span>
+        {{/isCheckable}}
+
+        {{^isCheckable}}
+            <span rel="tooltip" id="{{pedagogicalId}}" class="standard-tree-leaf" title="{{description}}"  data-original-title="{{#standardName}}<div><b>{{standardName}}</b></div>{{/standardName}}">
+              {{standardName}}
+            </span>
+        {{/isCheckable}}
+    </div>
+{{/isLeaf}}
+
+{{^isLeaf}}
+    <div class="std-wrap"></div>
+    {{#isCheckable}}
+    <input pkgName="{{name}}" pkgSubjectArea="{{subjectArea}}" pkgVersion="{{version}}" class="standardSelection" type="checkbox" id="input_{{pedagogicalId}}"  {{#isChecked}}checked{{/isChecked}}/>
+    {{/isCheckable}}
+    <input type="checkbox" id="selectNode-{{pedagogicalId}}" class="toggle-box {{#isCheckable}}no-folder{{/isCheckable}}" />
+
+    <label class="{{#isCheckable}}no-folder{{/isCheckable}} stdLabel standard-name">
+        {{#isCheckable}}
+            <span for="item-{{pedagogicalId}}" rel="tooltip" title="{{description}}" data-original-title="{{#standardName}}<div><b>{{standardName}}</b></div>{{/standardName}}{{description}}">
+                  <b>{{pedagogicalId}}</b> {{standardName}}
+            </span>
+        {{/isCheckable}}
+
+        {{^isCheckable}}
+
+            <span rel="tooltip" id="{{pedagogicalId}}" title="{{description}}" data-original-title="{{#standardName}}<div><b>{{standardName}}</b></div>{{/standardName}}">
+                <b>{{pedagogicalId}}</b> {{standardName}}
+
+            </span>
+        {{/isCheckable}}
+    </label><ul>
+{{/isLeaf}}

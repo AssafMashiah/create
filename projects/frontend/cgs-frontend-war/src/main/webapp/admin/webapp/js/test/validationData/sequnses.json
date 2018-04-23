@@ -1,0 +1,841 @@
+{
+    "bb77f8b1-45e0-46e9-b476-67c92ec505e2": {
+        "type": "sequence",
+        "parent": "6abc2fbc-e18a-45a3-abb4-7c09136f240c",
+        "children":
+                [
+                    "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+                    "fabdfe26-ac84-40cf-b030-7a7133b91954",
+                    "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+                    "62e01e13-0f08-4903-9028-ee043378561f",
+                    "032521b3-17ef-4534-80b4-265c0f0f1d17",
+                    "91a3eab0-c7fe-4b4e-a663-33fb8caf4106"
+                ],
+        "data": {
+            "title": "New sequence 1",
+            "type": "simple"
+        },
+        "id": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "isCourse": false
+    },
+    "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7": {
+        "id": "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+        "type": "mc",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "b98587fd-0d1a-4a88-8682-95ca21d7caa4",
+                    "1ac48301-457e-4f24-a3d4-ca437cf04924",
+                    "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+                    "380f7903-0486-4d0b-856d-44da78950676"
+                ],
+        "data": {
+            "title": "New Multiple Choice"
+        },
+        "isCourse": false,
+        "showMetadata": true,
+        "displayTaskDropdown": true
+    },
+    "b98587fd-0d1a-4a88-8682-95ca21d7caa4": {
+        "id": "b98587fd-0d1a-4a88-8682-95ca21d7caa4",
+        "type": "instruction",
+        "parent": "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+        "children":
+                [
+                    "cb7f300a-c2a4-418e-9f1a-bb0b9f50e366"
+                ],
+        "data": {
+            "title": "Instruction",
+            "show": "true",
+            "disableDelete": true,
+            "emphasize": true
+        }
+    },
+    "cb7f300a-c2a4-418e-9f1a-bb0b9f50e366": {
+        "id": "cb7f300a-c2a4-418e-9f1a-bb0b9f50e366",
+        "type": "textViewer",
+        "parent": "b98587fd-0d1a-4a88-8682-95ca21d7caa4",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Select the correct answer",
+            "disableDelete": true,
+            "stageReadOnlyMode": true,
+            "showNarrationType": true
+        }
+    },
+    "1ac48301-457e-4f24-a3d4-ca437cf04924": {
+        "id": "1ac48301-457e-4f24-a3d4-ca437cf04924",
+        "type": "question",
+        "parent": "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+        "children":
+                [
+                    "065c389f-f35e-45de-bf45-562e832260e0"
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "065c389f-f35e-45de-bf45-562e832260e0": {
+        "type": "imageViewer",
+        "parent": "1ac48301-457e-4f24-a3d4-ca437cf04924",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "New imageViewer",
+            "image": "/media/bb/e7/b03086cf267f5291416be8df2c23a1dd4a77.jpg",
+            "imgWidth": 488,
+            "imgHeight": 500,
+            "minimumReadable": "50%"
+        },
+        "id": "065c389f-f35e-45de-bf45-562e832260e0"
+    },
+    "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0": {
+        "id": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "type": "mcAnswer",
+        "parent": "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+        "children":
+                [
+                    "38a31891-e505-4212-93c4-9480f221b45f",
+                    "cd884135-0e3b-47cc-8444-53c5a5df9b10",
+                    "c87b4b1e-ec76-4039-885e-26179158d1b1",
+                    "fc3668d7-5e95-4ff1-9d08-89f07f7567d9",
+                    "e19ce269-5ef3-40de-adb8-7cc6b23ac946",
+                    "5d5c1444-577e-4dc2-a250-df0eb04ac559"
+                ],
+        "data": {
+            "title": "Answer",
+            "disableDelete": true,
+            "answerMode": "mc",
+            "optionsType": "textViewer",
+            "canDeleteChildren": true
+        }
+    },
+    "38a31891-e505-4212-93c4-9480f221b45f": {
+        "id": "38a31891-e505-4212-93c4-9480f221b45f",
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "children":
+                [
+                    "13d7ff11-07e0-4c21-853f-39cba90500ba"
+                ],
+        "data": {
+            "title": "option",
+            "correct": true,
+            "disableDelete": false
+        }
+    },
+    "13d7ff11-07e0-4c21-853f-39cba90500ba": {
+        "id": "13d7ff11-07e0-4c21-853f-39cba90500ba",
+        "type": "textViewer",
+        "parent": "38a31891-e505-4212-93c4-9480f221b45f",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "TextViewer <i><b>TRUE</b></i>",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true,
+            "textEditorStyle": "texteditor",
+            "mathfieldArray": {
+            }
+        }
+    },
+    "cd884135-0e3b-47cc-8444-53c5a5df9b10": {
+        "id": "cd884135-0e3b-47cc-8444-53c5a5df9b10",
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "children":
+                [
+                    "58e20844-1920-4ac5-b35e-87f472ff32be"
+                ],
+        "data": {
+            "title": "option",
+            "correct": false,
+            "disableDelete": false
+        }
+    },
+    "58e20844-1920-4ac5-b35e-87f472ff32be": {
+        "id": "58e20844-1920-4ac5-b35e-87f472ff32be",
+        "type": "textViewer",
+        "parent": "cd884135-0e3b-47cc-8444-53c5a5df9b10",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "TextViewer",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true,
+            "textEditorStyle": "texteditor",
+            "mathfieldArray": {
+            }
+        }
+    },
+    "c87b4b1e-ec76-4039-885e-26179158d1b1": {
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "childConfig": {
+            "disableDelete": true,
+            "mode": "singleStyle"
+        },
+        "children":
+                [
+                    "4642e72a-5d9e-4fc2-98cb-674536747900"
+                ],
+        "data": {
+            "title": "New option",
+            "disableDelete": false
+        },
+        "id": "c87b4b1e-ec76-4039-885e-26179158d1b1"
+    },
+    "4642e72a-5d9e-4fc2-98cb-674536747900": {
+        "type": "textViewer",
+        "parent": "c87b4b1e-ec76-4039-885e-26179158d1b1",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "New textViewer",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true
+        },
+        "id": "4642e72a-5d9e-4fc2-98cb-674536747900"
+    },
+    "fc3668d7-5e95-4ff1-9d08-89f07f7567d9": {
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "childConfig": {
+            "disableDelete": true,
+            "mode": "singleStyle"
+        },
+        "children":
+                [
+                    "ca789fb3-70ed-465c-84c7-869081bff96c"
+                ],
+        "data": {
+            "title": "New option",
+            "disableDelete": false
+        },
+        "id": "fc3668d7-5e95-4ff1-9d08-89f07f7567d9"
+    },
+    "ca789fb3-70ed-465c-84c7-869081bff96c": {
+        "type": "textViewer",
+        "parent": "fc3668d7-5e95-4ff1-9d08-89f07f7567d9",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "New textViewer",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true
+        },
+        "id": "ca789fb3-70ed-465c-84c7-869081bff96c"
+    },
+    "e19ce269-5ef3-40de-adb8-7cc6b23ac946": {
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "childConfig": {
+            "disableDelete": true,
+            "mode": "singleStyle"
+        },
+        "children":
+                [
+                    "3ee4b4f5-1897-4f47-983a-550131b175a7"
+                ],
+        "data": {
+            "title": "New option",
+            "disableDelete": false
+        },
+        "id": "e19ce269-5ef3-40de-adb8-7cc6b23ac946"
+    },
+    "3ee4b4f5-1897-4f47-983a-550131b175a7": {
+        "type": "textViewer",
+        "parent": "e19ce269-5ef3-40de-adb8-7cc6b23ac946",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "New textViewer",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true
+        },
+        "id": "3ee4b4f5-1897-4f47-983a-550131b175a7"
+    },
+    "5d5c1444-577e-4dc2-a250-df0eb04ac559": {
+        "type": "option",
+        "parent": "7f222bbc-1e7f-48a9-afa7-0bece1b0e9d0",
+        "childConfig": {
+            "disableDelete": true,
+            "mode": "singleStyle"
+        },
+        "children":
+                [
+                    "da295726-ee0a-49a8-a20d-ca5ddc5adbf8"
+                ],
+        "data": {
+            "title": "New option",
+            "disableDelete": false
+        },
+        "id": "5d5c1444-577e-4dc2-a250-df0eb04ac559"
+    },
+    "da295726-ee0a-49a8-a20d-ca5ddc5adbf8": {
+        "type": "textViewer",
+        "parent": "5d5c1444-577e-4dc2-a250-df0eb04ac559",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "New textViewer",
+            "disableDelete": true,
+            "mode": "singleStyle",
+            "showNarrationType": true
+        },
+        "id": "da295726-ee0a-49a8-a20d-ca5ddc5adbf8"
+    },
+    "380f7903-0486-4d0b-856d-44da78950676": {
+        "id": "380f7903-0486-4d0b-856d-44da78950676",
+        "type": "progress",
+        "parent": "96fd5f3e-8cb4-4817-9fea-3bb266ab8af7",
+        "children":
+                [
+                    "1f5a47a6-53e5-47b9-9cd1-1bf417b1789b",
+                    "b4097290-2939-4dd3-9de5-24e91da684fb"
+                ],
+        "data": {
+            "title": "Progress",
+            "num_of_attempts": "3",
+            "show_hint": true,
+            "hint_timing": "1",
+            "on_attempt": "2",
+            "feedback_type": "generic",
+            "button_label": "Check",
+            "disableDelete": true
+        }
+    },
+    "1f5a47a6-53e5-47b9-9cd1-1bf417b1789b": {
+        "id": "1f5a47a6-53e5-47b9-9cd1-1bf417b1789b",
+        "type": "hint",
+        "parent": "380f7903-0486-4d0b-856d-44da78950676",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Hint"
+        }
+    },
+    "b4097290-2939-4dd3-9de5-24e91da684fb": {
+        "id": "b4097290-2939-4dd3-9de5-24e91da684fb",
+        "type": "feedback",
+        "parent": "380f7903-0486-4d0b-856d-44da78950676",
+        "children":
+                [
+                    "3beb088a-6471-4803-a4da-147de88af39e",
+                    "9e140ad1-febb-40dd-aa28-cf08392cb587",
+                    "f3dded36-206b-4ef1-a529-e056e21197bf",
+                    "6e2a6461-00d8-4044-946d-c6cfc2228183"
+                ],
+        "data": {
+            "title": "Feedback",
+            "show_partly_correct": false,
+            "feedbacksToDisplay":
+                    [
+                        "all_correct",
+                        "all_incorrect"
+                    ],
+            "feedbacks_map": {
+                "all_correct": {
+                    "type": "generic",
+                    "preliminary": "3beb088a-6471-4803-a4da-147de88af39e",
+                    "final": "9e140ad1-febb-40dd-aa28-cf08392cb587"
+                },
+                "all_incorrect": {
+                    "type": "generic",
+                    "preliminary": "f3dded36-206b-4ef1-a529-e056e21197bf",
+                    "final": "6e2a6461-00d8-4044-946d-c6cfc2228183"
+                }
+            }
+        },
+        "predefined_list": "list_1"
+    },
+    "3beb088a-6471-4803-a4da-147de88af39e": {
+        "type": "textViewer",
+        "parent": "b4097290-2939-4dd3-9de5-24e91da684fb",
+        "childConfig": {
+        },
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Excellent!",
+            "disableDelete": true,
+            "showNarrationType": true
+        },
+        "id": "3beb088a-6471-4803-a4da-147de88af39e",
+        "stage_preview_container": "#td_p_all_correct"
+    },
+    "9e140ad1-febb-40dd-aa28-cf08392cb587": {
+        "type": "textViewer",
+        "parent": "b4097290-2939-4dd3-9de5-24e91da684fb",
+        "childConfig": {
+        },
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Great work!",
+            "disableDelete": true,
+            "showNarrationType": true
+        },
+        "id": "9e140ad1-febb-40dd-aa28-cf08392cb587",
+        "stage_preview_container": "#td_f_all_correct"
+    },
+    "f3dded36-206b-4ef1-a529-e056e21197bf": {
+        "type": "textViewer",
+        "parent": "b4097290-2939-4dd3-9de5-24e91da684fb",
+        "childConfig": {
+        },
+        "children":
+                [
+                ],
+        "data": {
+            "title": "You can still make it! Please try again!",
+            "disableDelete": true,
+            "showNarrationType": true
+        },
+        "id": "f3dded36-206b-4ef1-a529-e056e21197bf",
+        "stage_preview_container": "#td_p_all_incorrect"
+    },
+    "6e2a6461-00d8-4044-946d-c6cfc2228183": {
+        "type": "textViewer",
+        "parent": "b4097290-2939-4dd3-9de5-24e91da684fb",
+        "childConfig": {
+        },
+        "children":
+                [
+                ],
+        "data": {
+            "title": " Please review the correct answer by pressing the button.",
+            "disableDelete": true,
+            "showNarrationType": true
+        },
+        "id": "6e2a6461-00d8-4044-946d-c6cfc2228183",
+        "stage_preview_container": "#td_f_all_incorrect"
+    },
+    "fabdfe26-ac84-40cf-b030-7a7133b91954": {
+        "id": "fabdfe26-ac84-40cf-b030-7a7133b91954",
+        "type": "questionOnly",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "7c103f96-70ba-497d-95c4-fe4bc7f23b49",
+                    "f2fb6f25-b340-4592-a9f2-7ffb917daf2e",
+                    "810b040f-1e4f-46e1-80e7-bf62494693ac"
+                ],
+        "data": {
+            "title": "New Question Only"
+        }
+    },
+    "7c103f96-70ba-497d-95c4-fe4bc7f23b49": {
+        "id": "7c103f96-70ba-497d-95c4-fe4bc7f23b49",
+        "type": "instruction",
+        "parent": "fabdfe26-ac84-40cf-b030-7a7133b91954",
+        "children":
+                [
+                    "0bdd751e-c19f-4aba-b5f1-73a715829351"
+                ],
+        "data": {
+            "title": "Instruction",
+            "show": "true",
+            "disableDelete": true
+        }
+    },
+    "0bdd751e-c19f-4aba-b5f1-73a715829351": {
+        "id": "0bdd751e-c19f-4aba-b5f1-73a715829351",
+        "type": "textViewer",
+        "parent": "7c103f96-70ba-497d-95c4-fe4bc7f23b49",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "The instruction is not editable",
+            "disableDelete": true,
+            "stageReadOnlyMode": true,
+            "width": "100%",
+            "showNarrationType": true
+        }
+    },
+    "f2fb6f25-b340-4592-a9f2-7ffb917daf2e": {
+        "id": "f2fb6f25-b340-4592-a9f2-7ffb917daf2e",
+        "type": "question",
+        "parent": "fabdfe26-ac84-40cf-b030-7a7133b91954",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "810b040f-1e4f-46e1-80e7-bf62494693ac": {
+        "id": "810b040f-1e4f-46e1-80e7-bf62494693ac",
+        "type": "progress",
+        "parent": "fabdfe26-ac84-40cf-b030-7a7133b91954",
+        "children":
+                [
+                    "559c3562-506b-4221-ba7c-280f92aa75f9",
+                    "4143e219-1f9d-48ea-afc4-e59a661f4b01"
+                ],
+        "data": {
+            "title": "Progress",
+            "num_of_attempts": "5",
+            "show_hint": true,
+            "hint_timing": "1",
+            "on_attempt": 2,
+            "feedback_type": "generic",
+            "button_label": "Continue",
+            "disableDelete": true
+        }
+    },
+    "559c3562-506b-4221-ba7c-280f92aa75f9": {
+        "id": "559c3562-506b-4221-ba7c-280f92aa75f9",
+        "type": "hint",
+        "parent": "810b040f-1e4f-46e1-80e7-bf62494693ac",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Hint"
+        }
+    },
+    "4143e219-1f9d-48ea-afc4-e59a661f4b01": {
+        "id": "4143e219-1f9d-48ea-afc4-e59a661f4b01",
+        "type": "feedback",
+        "parent": "810b040f-1e4f-46e1-80e7-bf62494693ac",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Feedback",
+            "show_partly_correct": true,
+            "feedbacksToDisplay":
+                    [
+                        "all_correct",
+                        "partly_correct_more_80",
+                        "partly_correct_less_80",
+                        "all_incorrect"
+                    ]
+        }
+    },
+    "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc": {
+        "id": "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+        "type": "openQuestion",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "a59ceea8-d3d3-4143-882c-d31cc1bb6bcf",
+                    "90057aab-9ec4-43a2-ba50-b46b5b2c0da4",
+                    "680b5fa8-9e42-48df-8745-f5791e993af1",
+                    "d0ff378d-4104-4767-97ca-1d14d7c56823"
+                ],
+        "data": {
+            "title": "New Open Question"
+        }
+    },
+    "a59ceea8-d3d3-4143-882c-d31cc1bb6bcf": {
+        "id": "a59ceea8-d3d3-4143-882c-d31cc1bb6bcf",
+        "type": "instruction",
+        "parent": "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+        "children":
+                [
+                    "b512e3af-9a54-48fe-93c3-566b0c9dd6d6"
+                ],
+        "data": {
+            "title": "Instruction",
+            "show": "true",
+            "disableDelete": true
+        }
+    },
+    "b512e3af-9a54-48fe-93c3-566b0c9dd6d6": {
+        "id": "b512e3af-9a54-48fe-93c3-566b0c9dd6d6",
+        "type": "textViewer",
+        "parent": "a59ceea8-d3d3-4143-882c-d31cc1bb6bcf",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Instructions TextViewer",
+            "disableDelete": true,
+            "showNarrationType": true
+        }
+    },
+    "90057aab-9ec4-43a2-ba50-b46b5b2c0da4": {
+        "id": "90057aab-9ec4-43a2-ba50-b46b5b2c0da4",
+        "type": "question",
+        "parent": "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "680b5fa8-9e42-48df-8745-f5791e993af1": {
+        "id": "680b5fa8-9e42-48df-8745-f5791e993af1",
+        "type": "FreeWritingAnswer",
+        "parent": "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+        "children":
+                [
+                    "f1be1915-09dd-4f82-a4de-fd6492235bb5"
+                ],
+        "data": {
+            "title": "Free Writing Answer",
+            "disableDelete": true,
+            "isSubTask": false,
+            "mode": "SingleAnswerMode",
+            "answer_type": "textEditor",
+            "has_questions": true
+        }
+    },
+    "f1be1915-09dd-4f82-a4de-fd6492235bb5": {
+        "id": "f1be1915-09dd-4f82-a4de-fd6492235bb5",
+        "type": "textEditor",
+        "parent": "680b5fa8-9e42-48df-8745-f5791e993af1",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Open Question Answer TextViewer",
+            "disableDelete": true,
+            "answer_size": "Paragraph",
+            "MaxChars": "150",
+            "ShowToolbar": "true",
+            "MathFieldKeyboard": "Basic"
+        }
+    },
+    "d0ff378d-4104-4767-97ca-1d14d7c56823": {
+        "id": "d0ff378d-4104-4767-97ca-1d14d7c56823",
+        "type": "progress",
+        "parent": "c0d81c9d-97e5-49b7-9548-f35f7d7d6efc",
+        "children":
+                [
+                    "f9321ef1-0b79-478d-9c79-adcbd299ae02",
+                    "85d56b74-da4e-422c-9782-2082c478d5bb"
+                ],
+        "data": {
+            "title": "Progress",
+            "show_hint": true,
+            "button_label": "Continue",
+            "disableDelete": true
+        }
+    },
+    "f9321ef1-0b79-478d-9c79-adcbd299ae02": {
+        "id": "f9321ef1-0b79-478d-9c79-adcbd299ae02",
+        "type": "hint",
+        "parent": "d0ff378d-4104-4767-97ca-1d14d7c56823",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Hint"
+        }
+    },
+    "85d56b74-da4e-422c-9782-2082c478d5bb": {
+        "id": "85d56b74-da4e-422c-9782-2082c478d5bb",
+        "type": "feedback",
+        "parent": "d0ff378d-4104-4767-97ca-1d14d7c56823",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Feedback",
+            "show_partly_correct": true,
+            "feedbacksToDisplay":
+                    [
+                        "all_correct",
+                        "partly_correct_more_80",
+                        "partly_correct_less_80",
+                        "all_incorrect"
+                    ]
+        }
+    },
+    "62e01e13-0f08-4903-9028-ee043378561f": {
+        "id": "62e01e13-0f08-4903-9028-ee043378561f",
+        "type": "narrative",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "625942ad-b8ca-4152-94f2-c8ac09dcf40d",
+                    "b667b626-cde4-4faa-a53f-e9c4803daa0b"
+                ],
+        "data": {
+            "title": "New narrative"
+        }
+    },
+    "625942ad-b8ca-4152-94f2-c8ac09dcf40d": {
+        "id": "625942ad-b8ca-4152-94f2-c8ac09dcf40d",
+        "type": "question",
+        "parent": "62e01e13-0f08-4903-9028-ee043378561f",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "b667b626-cde4-4faa-a53f-e9c4803daa0b": {
+        "id": "b667b626-cde4-4faa-a53f-e9c4803daa0b",
+        "type": "progress",
+        "parent": "62e01e13-0f08-4903-9028-ee043378561f",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Progress",
+            "show_hint": false,
+            "button_label": "Continue",
+            "disableDelete": true
+        }
+    },
+    "032521b3-17ef-4534-80b4-265c0f0f1d17": {
+        "id": "032521b3-17ef-4534-80b4-265c0f0f1d17",
+        "type": "pedagogicalStatement",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "9719cb2e-36e1-460a-ac3c-a8c1c570d9fa",
+                    "e4d0994f-49b0-4159-8432-5273cd0f50b2",
+                    "d6fe3eed-b65c-45b7-b49b-b4d583cab1c6"
+                ],
+        "data": {
+            "title": "New Pedagogical Statement"
+        }
+    },
+    "9719cb2e-36e1-460a-ac3c-a8c1c570d9fa": {
+        "id": "9719cb2e-36e1-460a-ac3c-a8c1c570d9fa",
+        "type": "title",
+        "parent": "032521b3-17ef-4534-80b4-265c0f0f1d17",
+        "children":
+                [
+                    "95d7da0d-0aa4-4449-9d86-b775bf58f040"
+                ],
+        "data": {
+            "title": "title",
+            "disableDelete": true
+        }
+    },
+    "95d7da0d-0aa4-4449-9d86-b775bf58f040": {
+        "id": "95d7da0d-0aa4-4449-9d86-b775bf58f040",
+        "type": "textViewer",
+        "parent": "9719cb2e-36e1-460a-ac3c-a8c1c570d9fa",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "add a title",
+            "disableDelete": true,
+            "showNarrationType": true
+        }
+    },
+    "e4d0994f-49b0-4159-8432-5273cd0f50b2": {
+        "id": "e4d0994f-49b0-4159-8432-5273cd0f50b2",
+        "type": "question",
+        "parent": "032521b3-17ef-4534-80b4-265c0f0f1d17",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "d6fe3eed-b65c-45b7-b49b-b4d583cab1c6": {
+        "id": "d6fe3eed-b65c-45b7-b49b-b4d583cab1c6",
+        "type": "progress",
+        "parent": "032521b3-17ef-4534-80b4-265c0f0f1d17",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Progress",
+            "show_hint": false,
+            "button_label": "Continue",
+            "disableDelete": true
+        }
+    },
+    "91a3eab0-c7fe-4b4e-a663-33fb8caf4106": {
+        "id": "91a3eab0-c7fe-4b4e-a663-33fb8caf4106",
+        "type": "selfCheck",
+        "parent": "bb77f8b1-45e0-46e9-b476-67c92ec505e2",
+        "children":
+                [
+                    "afc771d7-f495-4b46-b918-11984813a935",
+                    "0fdd2a0c-1664-48b4-83b1-a639e6fc61dd",
+                    "b2f843d6-3ad5-46d6-87f6-6558a705650b"
+                ],
+        "data": {
+            "title": "New Self Check"
+        }
+    },
+    "afc771d7-f495-4b46-b918-11984813a935": {
+        "id": "afc771d7-f495-4b46-b918-11984813a935",
+        "type": "title",
+        "parent": "91a3eab0-c7fe-4b4e-a663-33fb8caf4106",
+        "children":
+                [
+                    "dece3a13-1a93-4406-8865-9abdd7fb9596"
+                ],
+        "data": {
+            "title": "title",
+            "disableDelete": true
+        }
+    },
+    "dece3a13-1a93-4406-8865-9abdd7fb9596": {
+        "id": "dece3a13-1a93-4406-8865-9abdd7fb9596",
+        "type": "textViewer",
+        "parent": "afc771d7-f495-4b46-b918-11984813a935",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "add a title",
+            "disableDelete": true,
+            "showNarrationType": true
+        }
+    },
+    "0fdd2a0c-1664-48b4-83b1-a639e6fc61dd": {
+        "id": "0fdd2a0c-1664-48b4-83b1-a639e6fc61dd",
+        "type": "question",
+        "parent": "91a3eab0-c7fe-4b4e-a663-33fb8caf4106",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Question",
+            "disableDelete": true
+        }
+    },
+    "b2f843d6-3ad5-46d6-87f6-6558a705650b": {
+        "id": "b2f843d6-3ad5-46d6-87f6-6558a705650b",
+        "type": "progress",
+        "parent": "91a3eab0-c7fe-4b4e-a663-33fb8caf4106",
+        "children":
+                [
+                ],
+        "data": {
+            "title": "Progress",
+            "show_hint": false,
+            "button_label": "Continue",
+            "disableDelete": true
+        }
+    }
+}

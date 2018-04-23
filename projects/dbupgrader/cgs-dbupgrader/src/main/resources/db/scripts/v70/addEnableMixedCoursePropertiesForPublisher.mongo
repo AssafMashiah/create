@@ -1,0 +1,8 @@
+####################################################################
+#  add enable mixed properties course in publishers collection #
+####################################################################
+
+publishers.update({},{$set:{"customization.enableAssessment": true,
+                            "customization.enableBookAlive": true,
+                            "customization.enableBornDigital": true
+                            }}, {upsert: false, multi:true});

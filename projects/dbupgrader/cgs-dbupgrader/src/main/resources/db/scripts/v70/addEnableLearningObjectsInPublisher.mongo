@@ -1,0 +1,5 @@
+####################################################################
+#  add enable learning objects in lessons in publishers collection #
+####################################################################
+
+publishers.update({},{$set:{"customization.enableLearningObjects": true}}, {upsert: false, multi:true});

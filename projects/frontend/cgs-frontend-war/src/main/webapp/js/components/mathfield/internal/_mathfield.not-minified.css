@@ -1,0 +1,1498 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Sass Mixin's >>                                                                                                    */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  BORDER  ~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  BOX_SHADOW  ~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  GLOBAL FIXER BROWSER (prefix)  ~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  GRADIENT  ~~~~~~~~~~~~~~~~ */
+/* line 17, ../../sass/partials/_extendClasses.scss */
+.link_item .textViewer .textViewerParagraph.custom-alignment .mathField, .option_content .textViewer .textViewerParagraph.custom-alignment .mathField, .subAnswer_content .textViewer .textViewerParagraph.custom-alignment .mathField, .textViewer .textViewerParagraph.custom-alignment .subQuestion .mathField, .balloon_popup_content .textViewer .textViewerParagraph.custom-alignment .mathField, .cell .textViewer .textViewerParagraph.custom-alignment .mathField, .textViewer .textViewerParagraph.custom-alignment .sequenceSubTitle .mathField {
+  display: table;
+}
+/* line 19, ../../sass/partials/_extendClasses.scss */
+.link_item .textViewer .textViewerParagraph.custom-alignment .mathField .mathField_content, .option_content .textViewer .textViewerParagraph.custom-alignment .mathField .mathField_content, .subAnswer_content .textViewer .textViewerParagraph.custom-alignment .mathField .mathField_content, .textViewer .textViewerParagraph.custom-alignment .subQuestion .mathField .mathField_content, .balloon_popup_content .textViewer .textViewerParagraph.custom-alignment .mathField .mathField_content, .cell .textViewer .textViewerParagraph.custom-alignment .mathField .mathField_content, .textViewer .textViewerParagraph.custom-alignment .sequenceSubTitle .mathField .mathField_content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/****** D E V *******/
+/* line 4, ../../sass/components/mathField.scss */
+.mathField_button {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+}
+
+/* line 10, ../../sass/components/mathField.scss */
+.mathField_button_value {
+  position: absolute;
+  top: 170px;
+  left: 10px;
+}
+
+/* line 16, ../../sass/components/mathField.scss */
+.mathField_button_correctness {
+  position: absolute;
+  top: 140px;
+  left: 10px;
+}
+
+/* line 22, ../../sass/components/mathField.scss */
+.mathField_button_reduction {
+  position: absolute;
+  top: 110px;
+  left: 10px;
+}
+
+/****** D E V *******/
+@font-face {
+  font-family: 'MF_T2K_US-Regular';
+  src: local("MF_T2K_US-Regular"), url("../assets/fonts/MF_T2K_US-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MF_T2K_US-Regular';
+  src: url("../assets/fonts/MF_T2K_US-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_US-Regular';
+  src: url("../assets/fonts/MF_T2K_US-Bold-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_US-Regular';
+  src: url("../assets/fonts/MF_T2K_US-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+/*hebrew math font*/
+@font-face {
+  font-family: 'MF_T2K_HE-Regular';
+  src: url("../assets/fonts/MF_T2K_HE-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MF_T2K_HE-Regular';
+  src: url("../assets/fonts/MF_T2K_HE-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_HE-Regular';
+  src: url("../assets/fonts/MF_T2K_HE-Bold-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_HE-Regular';
+  src: url("../assets/fonts/MF_T2K_HE-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+/*french math fonts */
+@font-face {
+  font-family: 'MF_T2K_FR-Regular';
+  src: url("../assets/fonts/MF_T2K_FR-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MF_T2K_FR-Regular';
+  src: url("../assets/fonts/MF_T2K_FR-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_FR-Regular';
+  src: url("../assets/fonts/MF_T2K_FR-Bold-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_FR-Regular';
+  src: url("../assets/fonts/MF_T2K_FR-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Regular.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: 'MF_T2K_NL-Regular';
+  src: url("../assets/fonts/MF_T2K_NL-Bold-Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+/*******************************************************************************************/
+/***************************** italic vars *************************************************/
+/*******************************************************************************************/
+/* line 150, ../../sass/components/mathField.scss */
+.mathField.italicVariables .letter {
+  font-style: italic;
+}
+
+/*******************************************************************************************/
+/***************************** COLOR SHAPES*************************************************/
+/*******************************************************************************************/
+/* line 158, ../../sass/components/mathField.scss */
+.mathField.colorShapes .shape {
+  color: red;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD BLOWUP   *****************************************/
+/*******************************************************************************************/
+/* line 166, ../../sass/components/mathField.scss */
+.mathField .blowup {
+  position: absolute;
+  z-index: 60;
+  display: none;
+  overflow: hidden;
+}
+
+/* line 173, ../../sass/components/mathField.scss */
+.mathField.blowup .blowup {
+  display: block;
+  border: 1px solid #B3B3B3;
+  cursor: pointer;
+}
+
+/* line 179, ../../sass/components/mathField.scss */
+.mathField.blowup .blowup:hover {
+  border: 1px solid #2ed5ff;
+}
+
+/* line 183, ../../sass/components/mathField.scss */
+.mathField.blowup .blowup .blowupZoom {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: transparent url(../assets/images/imageViewer/sprite_ImageContainer.png) 0 -312px no-repeat;
+}
+
+/* line 192, ../../sass/components/mathField.scss */
+.mathField.blowup .blowup:hover .blowupZoom {
+  background-position: 0 -334px;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD BLOWUP CONTAINER *********************************/
+/*******************************************************************************************/
+/* line 199, ../../sass/components/mathField.scss */
+.blowupContainer,
+.task > .blowupContainer,
+.mathField .blowupContainer {
+  position: fixed;
+  padding: 10px;
+  padding-top: 21px;
+  border: 1px solid #BBB;
+  background-color: #FFF;
+  box-shadow: 0px 3px 8px 2px rgba(119, 118, 118, 0.7);
+  z-index: 80;
+  margin: 0;
+  overflow: auto;
+}
+
+/* line 213, ../../sass/components/mathField.scss */
+.mathField .blowupContainer {
+  display: none;
+}
+
+/* line 217, ../../sass/components/mathField.scss */
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+/* line 223, ../../sass/components/mathField.scss */
+.blowupContainer .x,
+.task > .blowupContainer .x,
+.mathField .blowupContainer .x {
+  width: 40px;
+  height: 22px;
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
+  background: transparent url(../assets/images/imageViewer/sprite_ImageContainer.png) 0 -156px no-repeat;
+}
+
+/* line 234, ../../sass/components/mathField.scss */
+.blowupContainer .x:hover,
+.task > .blowupContainer .x:hover,
+.mathField .blowupContainer .x:hover {
+  background-position: 0 -182px;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD MASC     *****************************************/
+/*******************************************************************************************/
+/* line 244, ../../sass/components/mathField.scss */
+.mathField .masc {
+  position: absolute;
+  background-color: white;
+  opacity: 0.01;
+  z-index: 40;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD ELEMENTS *****************************************/
+/*******************************************************************************************/
+/* line 254, ../../sass/components/mathField.scss */
+.completion.structure.placeholder {
+  padding: 2px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  width: 1.4em;
+  height: 1.4em;
+  font-size: 0.6em;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -0.2em;
+  margin: 0 1px;
+}
+/* line 266, ../../sass/components/mathField.scss */
+.divider .completion.structure.placeholder {
+  top: 0.1em;
+  left: 0.1em;
+}
+/* line 270, ../../sass/components/mathField.scss */
+.divided .completion.structure.placeholder {
+  top: 0.1em;
+}
+/* line 273, ../../sass/components/mathField.scss */
+.numerator .completion.structure.placeholder {
+  top: -0.2em;
+}
+/* line 276, ../../sass/components/mathField.scss */
+.denominator .completion.structure.placeholder {
+  top: -0.3em;
+}
+/* line 279, ../../sass/components/mathField.scss */
+.power .completion.structure.placeholder {
+  top: -0.3em;
+}
+/* line 282, ../../sass/components/mathField.scss */
+.absolute .completion.structure.placeholder {
+  top: -0.1em;
+}
+/* line 285, ../../sass/components/mathField.scss */
+.completion.structure.placeholder .remainder {
+  top: -0.2em;
+}
+
+/* line 290, ../../sass/components/mathField.scss */
+.mathField.completion.focus .frame {
+  outline: #fff7c2 solid 2px !important;
+  outline-offset: 0;
+  background: rgba(255, 247, 194, 0.8);
+}
+
+/* line 296, ../../sass/components/mathField.scss */
+.mathField .frame {
+  outline-offset: 1px;
+  position: absolute;
+  top: 0px;
+  min-height: 1em;
+}
+
+/* line 303, ../../sass/components/mathField.scss */
+.mathField.blowup .frame {
+  outline: none !important;
+}
+
+/* line 307, ../../sass/components/mathField.scss */
+.mathField.blur .frame {
+  outline: 1px solid #B3B3B3;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 312, ../../sass/components/mathField.scss */
+.mathField.blur.readOnly .frame {
+  background: none;
+}
+
+/* line 316, ../../sass/components/mathField.scss */
+.mathField.blowup.blur .frame {
+  outline: 1px solid #B3B3B3;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 321, ../../sass/components/mathField.scss */
+.mathField.focus .frame {
+  outline: 1px solid #FF9933;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 326, ../../sass/components/mathField.scss */
+.mathField.focus {
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+/* line 331, ../../sass/components/mathField.scss */
+.mathField .frame.not_valid {
+  /* without completion */
+  background: rgba(255, 255, 255, 0.2);
+  outline: solid 1px #F7374A;
+}
+
+/* line 344, ../../sass/components/mathField.scss */
+.mathField.completion .frame.not_valid {
+  border: none;
+  outline: #fee2de solid 2px;
+  outline-offset: 0;
+  background: rgba(254, 226, 222, 0.8);
+}
+
+/* line 351, ../../sass/components/mathField.scss */
+.mathField, .mathField.usa, .mathField.us {
+  font-family: MF_T2K_US-Regular;
+}
+
+/* line 355, ../../sass/components/mathField.scss */
+.mathField.il {
+  font-family: MF_T2K_HE-Regular;
+}
+
+/* line 359, ../../sass/components/mathField.scss */
+.mathField.fr {
+  font-family: MF_T2K_FR-Regular;
+}
+
+/* line 363, ../../sass/components/mathField.scss */
+.mathField.nl {
+  font-family: MF_T2K_NL-Regular;
+}
+
+/* line 367, ../../sass/components/mathField.scss */
+.mathField .symbol,
+.mathField .caret {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 1.05em;
+}
+
+/* line 374, ../../sass/components/mathField.scss */
+.ie9 .mathField .symbol {
+  height: 0.9em;
+}
+
+/* line 378, ../../sass/components/mathField.scss */
+.ie9 .longDivision .mathField .symbol {
+  height: 0.9em;
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: black;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: black;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+/* line 400, ../../sass/components/mathField.scss */
+.mathField .caret {
+  -webkit-animation: blink-caret 1s step-end infinite;
+  -ms-animation: blink-caret 1s step-end infinite;
+  -moz-animation: blink-caret 1s step-end infinite;
+  -o-animation: blink-caret 1s step-end infinite;
+  animation: blink-caret 1s step-end infinite;
+  text-decoration: blink;
+  border-color: black;
+  border-left: 0;
+  margin-left: 0;
+  border-right: .1em solid transparent;
+  margin-right: -.1em;
+  position: relative;
+  top: 1px;
+  width: 2px;
+}
+
+/*******************************************************************************************/
+/* line 415, ../../sass/components/mathField.scss */
+.mathField {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  cursor: text;
+  min-height: 1.2em;
+  line-height: normal;
+}
+/* line 422, ../../sass/components/mathField.scss */
+.mathField .mathField_content .icon {
+  width: auto;
+}
+
+/* line 427, ../../sass/components/mathField.scss */
+.mathField.readOnly {
+  min-height: 1em;
+}
+
+/* line 431, ../../sass/components/mathField.scss */
+.mathField .mathField_content {
+  display: inline-block;
+  vertical-align: bottom;
+  min-width: 1.3em;
+  min-height: 1.3em;
+  position: relative;
+  color: #444;
+  line-height: normal;
+  white-space: inherit !important;
+}
+
+/* line 443, ../../sass/components/mathField.scss */
+.mathField.readOnly .mathField_content, .mathField.empty .mathField_content {
+  min-width: 0.5em;
+}
+
+/* line 448, ../../sass/components/mathField.scss */
+.mtqBank .mathField.readOnly .mathField_content {
+  vertical-align: bottom;
+}
+
+/* line 452, ../../sass/components/mathField.scss */
+.texteditor .mathField.readOnly {
+  margin: 0px;
+}
+
+/* line 456, ../../sass/components/mathField.scss */
+.subQuestion > div > .mathField, .subQuestion .subAnswer.mathfield .mathField {
+  display: block;
+}
+
+/* line 460, ../../sass/components/mathField.scss */
+.texteditor .mathField .mathField_content {
+  color: inherit;
+}
+
+/* line 464, ../../sass/components/mathField.scss */
+.mathField .selection {
+  background-color: #9EC6F1;
+}
+
+/* line 468, ../../sass/components/mathField.scss */
+.mathField .not_valid {
+  color: #F7374A;
+}
+
+/* line 480, ../../sass/components/mathField.scss */
+.mpsWrapper.show.not_valid {
+  background-color: #FDABA2 !important;
+  border: none !important;
+}
+
+/* line 485, ../../sass/components/mathField.scss */
+.mathField .mpsAnchor {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0px;
+  height: 1em;
+  background-color: transparent;
+  position: relative;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 497, ../../sass/components/mathField.scss */
+.mathField .fraction .mpsAnchor {
+  width: 0px;
+  background-color: transparent;
+  margin-top: 0.5em;
+}
+
+/* line 503, ../../sass/components/mathField.scss */
+.mathField .fraction .numerator .mpsAnchor,
+.mathField .fraction .denominator .mpsAnchor {
+  width: 0px;
+  background-color: transparent;
+  margin-top: 0px;
+}
+
+/* line 510, ../../sass/components/mathField.scss */
+.mathField.readOnly .fraction .numerator .mpsAnchor,
+.mathField.readOnly .fraction .denominator .mpsAnchor {
+  margin-top: -0.5em;
+}
+
+/* line 515, ../../sass/components/mathField.scss */
+.mathField .mpsLasso {
+  height: 1em;
+  width: 0px;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 523, ../../sass/components/mathField.scss */
+.mathField .mpsContent {
+  white-space: nowrap !important;
+  height: 1.1em;
+  min-width: 0.5em;
+  left: 0px;
+  max-width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 533, ../../sass/components/mathField.scss */
+.mathField .power {
+  font-size: 0.75em;
+  top: -0.6em;
+  padding-top: 0.6em;
+  line-height: normal;
+}
+
+/* line 541, ../../sass/components/mathField.scss */
+.mathField .power .power {
+  font-size: 1em;
+  top: -0.4em;
+  padding-top: 0.4em;
+}
+
+/* line 547, ../../sass/components/mathField.scss */
+.mathField .symbol {
+  position: relative;
+  min-width: 0.4em;
+  text-align: left;
+}
+/* line 552, ../../sass/components/mathField.scss */
+.mathField .symbol[validationgroup="thousandsComma"], .mathField .symbol[validationgroup="decimalPoint"] {
+  min-width: 0.2em;
+}
+
+/** fraction **/
+/* line 558, ../../sass/components/mathField.scss */
+.displayInlineBlock, .mathField .mpsContent, .mathField .power, .mathField .fraction, .mathField .longDivision, .mathField .longDivision .divided, .mathField .longDivision .divider, .mathField .root, .mathField .root .radicand, .mathField .root .degree, .mathField .repeatingDecimal, .mathField .repeatingDecimal.fr .icon, .mathField .repeatingDecimal.nl .icon, .mathField .geometry, .mathField .remainder, .mathField .remainder .icon, .mathField .absolute, .mathField .absolute .icon, .mathField .completion {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+}
+
+/* line 564, ../../sass/components/mathField.scss */
+.mathField .fraction {
+  min-width: 1em;
+}
+/* line 568, ../../sass/components/mathField.scss */
+.mathField .fraction > .mpsContent {
+  text-align: center;
+}
+/* line 572, ../../sass/components/mathField.scss */
+.mathField .fraction .numerator, .mathField .fraction .denominator {
+  min-width: 20px;
+  min-height: 0.9em;
+  font-size: 0.9em;
+  line-height: normal;
+  display: block;
+  position: relative;
+  padding: 0;
+}
+/* line 581, ../../sass/components/mathField.scss */
+.mathField .fraction .numerator .symbol, .mathField .fraction .denominator .symbol {
+  max-height: 0.9em;
+  vertical-align: baseline;
+}
+/* line 587, ../../sass/components/mathField.scss */
+.mathField .fraction .fractionBar {
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  line-height: 100%;
+  background: black;
+  display: block;
+  font-size: 0.8em;
+  margin-bottom: 1px;
+}
+
+/** long division **/
+/* line 604, ../../sass/components/mathField.scss */
+.mpsMinWidth0_8em, .mathField .longDivision .divided, .mathField .longDivision .divider, .mathField .root .radicand {
+  min-width: 0.8em;
+  min-height: 0.9em;
+  line-height: 100%;
+  text-align: center;
+}
+
+/* line 615, ../../sass/components/mathField.scss */
+.mpsAnchorWidth0, .mathField .longDivision .mpsAnchor, .mathField .root .mpsAnchor {
+  top: 0.1em;
+  width: 0px;
+  background-color: transparent;
+}
+
+/* line 625, ../../sass/components/mathField.scss */
+.ie9 .mathField .longDivision .mpsAnchor {
+  top: 0.1em;
+}
+
+/* line 629, ../../sass/components/mathField.scss */
+.mpsAnchorNoFloat, .mathField .longDivision .divided .mpsAnchor,
+.mathField .longDivision .divider .mpsAnchor, .mathField .root .radicand .mpsAnchor, .mathField .root .degree .mpsAnchor {
+  float: none;
+  width: 0px;
+  background-color: transparent;
+  margin-top: 0px;
+}
+
+/* line 641, ../../sass/components/mathField.scss */
+.mathField .longDivision.il .divided {
+  top: 0px;
+}
+
+/* line 645, ../../sass/components/mathField.scss */
+.mathField .longDivision.il .divider {
+  border-top: 2px solid #444;
+  top: 0px;
+}
+
+/* line 650, ../../sass/components/mathField.scss */
+.mathField .longDivision.il .divider :first-child {
+  padding-right: 2px;
+}
+
+/* line 654, ../../sass/components/mathField.scss */
+.mathField .longDivision.fr .divided {
+  border-bottom: 0.1em solid #444;
+  top: 0px;
+  left: -5px;
+}
+
+/* line 660, ../../sass/components/mathField.scss */
+.mathField .longDivision.fr .divider {
+  top: 0px;
+  left: -5px;
+}
+
+/* line 665, ../../sass/components/mathField.scss */
+.mathField .longDivision.fr .divided > div {
+  top: 2px;
+}
+
+/* line 669, ../../sass/components/mathField.scss */
+.mathField .longDivision.us .divider, .mathField .longDivision.sg .divider {
+  border-top: 2px solid #444;
+  top: 0px;
+}
+
+/* line 674, ../../sass/components/mathField.scss */
+.mathField .longDivision .icon {
+  height: 1.1em;
+  width: 6px;
+}
+
+/* line 679, ../../sass/components/mathField.scss */
+.mathField .longDivision .icon svg {
+  position: absolute;
+  top: 0px;
+  height: 1.1em;
+}
+
+/* line 685, ../../sass/components/mathField.scss */
+.mathField .longDivision.sg .icon {
+  left: 1.4em;
+}
+
+/* line 689, ../../sass/components/mathField.scss */
+.mathField .longDivision.il .icon svg {
+  /*right: 1.4em;*/
+  top: -1px;
+}
+
+/* line 694, ../../sass/components/mathField.scss */
+.mathField .longDivision.fr .icon svg {
+  top: 1px;
+}
+
+/** root, square_root signs **/
+/* line 706, ../../sass/components/mathField.scss */
+.mathField .root .icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  width: 0.65em;
+  height: 0.95em;
+}
+/* line 713, ../../sass/components/mathField.scss */
+.mathField .root .icon .radical_sign {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  /* Ensure div tag stays behind content;*/
+}
+/* line 720, ../../sass/components/mathField.scss */
+.mathField .root .icon .radical_sign > img.stretch {
+  height: 100%;
+  width: 56%;
+}
+/* line 724, ../../sass/components/mathField.scss */
+.mathField .root .icon .radical_sign > img {
+  width: 44%;
+}
+/* line 737, ../../sass/components/mathField.scss */
+.mathField .root .radicand .top_line {
+  /*horizontal line*/
+  border-top: 1px solid #444;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  height: 1px;
+}
+/* line 748, ../../sass/components/mathField.scss */
+.mathField .root .degree {
+  vertical-align: top;
+  font-size: 0.7em;
+  min-width: 0.75em;
+  min-height: 0.75em;
+  bottom: 0.4em;
+}
+/* line 759, ../../sass/components/mathField.scss */
+.mathField .root .degree .mpsContent {
+  min-width: 0.75em;
+  min-height: 0.75em;
+}
+/* line 762, ../../sass/components/mathField.scss */
+.mathField .root .degree .mpsContent div.symbol {
+  height: 1em;
+}
+
+/*** Repeating decimal *********/
+/* line 771, ../../sass/components/mathField.scss */
+.mathField .repeatingDecimal {
+  white-space: nowrap;
+}
+/* line 775, ../../sass/components/mathField.scss */
+.mathField .repeatingDecimal.us .icon, .mathField .repeatingDecimal.il .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: 2px;
+  left: 0;
+  background-color: #444;
+  height: 2px;
+  width: 100%;
+}
+/* line 785, ../../sass/components/mathField.scss */
+.mathField .repeatingDecimal.fr .icon, .mathField .repeatingDecimal.nl .icon {
+  line-height: 100%;
+  margin: 0 0 0 0.1em;
+  padding: 0;
+  top: 0.1em;
+  font-family: inherit;
+}
+
+/* line 797, ../../sass/components/mathField.scss */
+.mathField .fraction .repeatingDecimal .icon {
+  top: -2px;
+}
+
+/*** GEOMETRY *********/
+/* line 803, ../../sass/components/mathField.scss */
+.mathField .geometry {
+  line-height: 110%;
+  text-align: center;
+}
+/* line 808, ../../sass/components/mathField.scss */
+.mathField .geometry .icon {
+  position: absolute;
+  font-size: 1.2em;
+  top: -0.08em;
+  left: 0px;
+}
+/* line 813, ../../sass/components/mathField.scss */
+.ie9 .mathField .geometry .icon {
+  top: 0.05em;
+}
+/* line 818, ../../sass/components/mathField.scss */
+.mathField .geometry > .mpsContent {
+  min-width: 0.9em;
+  left: 0.1em;
+}
+/* line 823, ../../sass/components/mathField.scss */
+.mathField .geometry .symbol {
+  position: relative;
+  font-size: 0.77em;
+  top: -0.2em;
+}
+
+/** Remainder **/
+/* line 831, ../../sass/components/mathField.scss */
+.mathField .remainder {
+  white-space: nowrap;
+  overflow: visible;
+}
+/* line 835, ../../sass/components/mathField.scss */
+.mathField .remainder .icon {
+  line-height: 100%;
+  margin: 0 0 0 0.2em;
+  padding: 0;
+  top: 0px;
+  font-family: inherit;
+  max-width: 1em;
+}
+/* line 843, ../../sass/components/mathField.scss */
+.nl_NL .mathField .remainder .icon {
+  max-width: 2.1em;
+}
+/* line 846, ../../sass/components/mathField.scss */
+.ie9 .mathField .remainder .icon {
+  top: 3px;
+}
+
+/*******************************************************************************************/
+/***************************** ABSOLUTE  *************************************************/
+/*******************************************************************************************/
+/* line 855, ../../sass/components/mathField.scss */
+.mathField .absolute {
+  min-width: 1em;
+  text-align: center;
+}
+/* line 860, ../../sass/components/mathField.scss */
+.mathField .absolute.not_valid {
+  color: inherit;
+}
+/* line 862, ../../sass/components/mathField.scss */
+.mathField .absolute.not_valid .icon.left {
+  color: #F7374A;
+}
+/* line 874, ../../sass/components/mathField.scss */
+.mathField .absolute .icon {
+  line-height: 1em;
+}
+/* line 878, ../../sass/components/mathField.scss */
+.mathField .absolute .icon.right {
+  margin-left: 0.1em;
+}
+/* line 882, ../../sass/components/mathField.scss */
+.mathField .absolute .icon.left {
+  margin-right: 0.1em;
+}
+/* line 886, ../../sass/components/mathField.scss */
+.ie9 .mathField .absolute .icon {
+  line-height: 0.5em;
+}
+
+/*******************************************************************************************/
+/***************************** COMPLETION  *************************************************/
+/*******************************************************************************************/
+/* line 895, ../../sass/components/mathField.scss */
+.mathField .completion {
+  padding: 0.09em 0.136em;
+  min-width: 1em;
+  line-height: 1em;
+}
+/* line 901, ../../sass/components/mathField.scss */
+.mathField .completion .operator {
+  margin: 0 2px 0px 2px;
+}
+/* line 905, ../../sass/components/mathField.scss */
+.mathField .completion .mpsContent {
+  text-align: center;
+  line-height: 100%;
+}
+/* line 908, ../../sass/components/mathField.scss */
+.mathField .completion .mpsContent .mpsContent {
+  height: 1em;
+}
+/* line 913, ../../sass/components/mathField.scss */
+.mathField .completion .square_root .icon, .mathField .completion .root .icon {
+  left: 0.05em;
+}
+/* line 917, ../../sass/components/mathField.scss */
+.mathField .completion > .mpsContent {
+  min-width: 0.7em;
+}
+/* line 921, ../../sass/components/mathField.scss */
+.mathField .completion .mpsWrapper.show.not_valid {
+  background-color: #FDD985 !important;
+  border: none !important;
+}
+
+/*******************************************************************************************/
+/***************************** MPS WRAPPER *************************************************/
+/*******************************************************************************************/
+/* line 931, ../../sass/components/mathField.scss */
+.mathField .mpsWrapper {
+  position: absolute;
+}
+/* line 933, ../../sass/components/mathField.scss */
+.mathField .mpsWrapper.show {
+  background-color: #FDD985;
+  z-index: -1;
+}
+/* line 940, ../../sass/components/mathField.scss */
+.mathField.readOnly .mpsWrapper.show {
+  background-color: transparent;
+  border: 1px solid #c3c3c3;
+}
+
+/* line 948, ../../sass/components/mathField.scss */
+.mathField.completion.blur .mpsWrapper.show {
+  background-color: #FFFFFF !important;
+  border: solid 1px #B3B3B3 !important;
+}
+
+/* line 953, ../../sass/components/mathField.scss */
+.mathField.completion.blur .mpsWrapper.show.not_valid {
+  background-color: #FFFFFF !important;
+  border: solid 1px #F7374A !important;
+}
+
+/* line 965, ../../sass/components/mathField.scss */
+.mathField.completion.focus .mpsWrapper.show {
+  background-color: #FFFFFF !important;
+  border: solid 1px #FF9933 !important;
+}
+
+/*********************************************************************************/
+/* line 972, ../../sass/components/mathField.scss */
+.mathField .mathField_content {
+  z-index: 20;
+}
+
+/* line 976, ../../sass/components/mathField.scss */
+.mathField.empty {
+  max-height: 1.2em;
+  min-height: 1em;
+}
+/* line 979, ../../sass/components/mathField.scss */
+.mathField.empty.blur {
+  min-width: 2rem;
+}
+/* line 981, ../../sass/components/mathField.scss */
+.mathField.empty.blur .frame {
+  min-width: 2rem;
+}
+/* line 984, ../../sass/components/mathField.scss */
+.mathField.empty.blur .mathField_content {
+  max-width: 1em;
+}
+/* line 988, ../../sass/components/mathField.scss */
+.texteditor .mathField.empty .mathField_content {
+  min-width: 1em;
+}
+/* line 991, ../../sass/components/mathField.scss */
+.mathField.empty .mf_icon {
+  font-style: italic;
+  /*     font-family: Rokkitt; */
+  font-family: Arial;
+  font-size: 0.9rem;
+  line-height: 0.9em;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: -0.15rem;
+  right: 0;
+  color: #B3B3B3;
+}
+
+/* line 1005, ../../sass/components/mathField.scss */
+.mathField .mf_icon, .clozeArea .subAnswer_content.full .mathField .mf_icon, .mathField.empty.focus .mf_icon {
+  display: none !important;
+}
+
+/* line 1009, ../../sass/components/mathField.scss */
+.mathField.empty.blur .mf_icon {
+  display: block !important;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD INPUT *****************************************/
+/*******************************************************************************************/
+/* line 1016, ../../sass/components/mathField.scss */
+.mathField .mathField_input {
+  opacity: 0.01;
+  width: 1px;
+  height: 0;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  font-size: 0px;
+  display: none;
+}
+
+/*******************************************************************************************/
+/***************************** MATH FIELD KEYBOARD *****************************************/
+/*******************************************************************************************/
+/* line 1031, ../../sass/components/mathField.scss */
+.mathField.keyboard {
+  font-size: 0;
+  /* To prevent display inline-block spacing */
+  position: absolute;
+  z-index: 1000;
+  padding: 0.71rem 0;
+  margin: 0 !important;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 1043, ../../sass/components/mathField.scss */
+.mathField.keyboard .keyboard_content {
+  background: #efefef;
+  border: 1px solid #cacaca;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 0.71rem;
+}
+
+/* line 1050, ../../sass/components/mathField.scss */
+.mathField.keyboard.mini {
+  padding: 2.429rem 0.286rem 0.286rem 0.286rem;
+}
+
+/* line 1054, ../../sass/components/mathField.scss */
+.mathField.keyboard.mini ul.tabs-nav {
+  display: none;
+}
+
+/* line 1058, ../../sass/components/mathField.scss */
+.mathField.keyboard.usa, .mathField.keyboard.us {
+  font-family: MF_T2K_US-Regular;
+}
+
+/* line 1062, ../../sass/components/mathField.scss */
+.mathField.keyboard.il {
+  font-family: MF_T2K_HE-Regular;
+}
+
+/* line 1066, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav ~ .close {
+  background: url(../assets/images/imageViewer/sprite_ImageContainer.png) 24px 281px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* line 1076, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav.rtl ~ .close {
+  left: 8px;
+}
+
+/* line 1080, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav {
+  padding: 0 0 0.71rem 0;
+  line-height: 1.214rem;
+}
+
+/* line 1085, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav li.tabs-nav-item {
+  font-size: 1.28rem;
+  color: #3f97df;
+  cursor: pointer;
+  display: inline-block;
+  border-right: 1px solid #cacaca;
+  padding: 0 0.71rem;
+  text-align: center;
+}
+
+/* line 1095, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav li.tabs-nav-item:first-child {
+  padding: 0 0.71rem 0 0;
+}
+
+/* line 1099, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav li.tabs-nav-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* line 1104, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav.rtl li.tabs-nav-item {
+  border-left: 1px solid #cacaca;
+  border-right: 0;
+}
+
+/* line 1109, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav.rtl li.tabs-nav-item:first-child {
+  padding: 0 0 0 0.71rem;
+}
+
+/* line 1113, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav.rtl li.tabs-nav-item:last-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* line 1118, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav li.tabs-nav-item:hover {
+  color: #4cc4ff;
+}
+
+/* line 1122, ../../sass/components/mathField.scss */
+.mathField.keyboard ul.tabs-nav li.tabs-nav-item.selected {
+  color: #ff9933;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* line 1128, ../../sass/components/mathField.scss */
+.mathField.keyboard .tab {
+  display: none;
+  white-space: nowrap;
+}
+
+/* line 1133, ../../sass/components/mathField.scss */
+.mathField.keyboard .tab.selected {
+  display: block;
+}
+
+/* line 1137, ../../sass/components/mathField.scss */
+.mathField.keyboard .box {
+  display: inline-block;
+  padding-right: 0.71rem;
+  vertical-align: top;
+}
+
+/* line 1143, ../../sass/components/mathField.scss */
+.mathField.keyboard .box:last-child {
+  padding-right: 0rem;
+}
+
+/* line 1147, ../../sass/components/mathField.scss */
+.mathField.keyboard .line.center {
+  text-align: center;
+}
+
+/* line 1151, ../../sass/components/mathField.scss */
+.mathField.keyboard .key {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #3f97df;
+  background: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #ffffff, #f0f0f0);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+  /* For Firefox 3.6 to 15 */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+  /* IE10 Consumer Preview */
+  background: linear-gradient(to top, #ffffff 0%, #f0f0f0 100%);
+  /* Standard syntax */
+  border: 1px solid #cacaca;
+  margin: 0 -1px -1px 0;
+  cursor: pointer;
+  font-size: 1.571rem;
+}
+/* line 1163, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal {
+  font-size: 13px;
+  background: #73B1E4;
+  color: white;
+  text-align: left;
+  padding-left: 8px;
+  height: 29px;
+  line-height: normal;
+  padding-top: 9px;
+  font-family: Arial;
+  border: none;
+  margin-bottom: 1px;
+}
+/* line 1175, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal .keyboard_emphasis {
+  font-weight: bold;
+  font-size: 16px;
+  width: 1.2rem;
+  text-align: center;
+  display: inline-block;
+}
+/* line 1182, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal .word {
+  margin-left: 3px;
+}
+/* line 1185, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal:not(.disabled):hover {
+  background: #7DD1fA;
+  color: white;
+}
+/* line 1189, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal:active {
+  background: #73B1E4;
+  color: white;
+}
+/* line 1193, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.literal.disabled {
+  outline: 1px solid;
+}
+
+/* line 1199, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.over {
+  color: #4cc4ff;
+}
+
+/* line 1203, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.pressed {
+  color: #ffffff;
+  background: #5a88ad;
+}
+
+/* line 1208, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.selected {
+  color: #ff9933;
+  background: #fff7c2;
+}
+
+/* line 1213, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.pressed.selected {
+  color: #ffb833;
+  background: #fff7c2;
+}
+
+/* line 1218, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.disabled {
+  color: #cccccc;
+  background: #efefef;
+}
+
+/* line 1223, ../../sass/components/mathField.scss */
+.mathField.keyboard .key.none {
+  visibility: hidden;
+}
+
+/********************************************* MathField inside of textviewer ****************************************************/
+/* line 1228, ../../sass/components/mathField.scss */
+.textViewer .mathFieldWrapper {
+  min-height: 1.17em;
+  max-width: 100%;
+  display: inline-block;
+  line-height: 100%;
+}
+
+/* line 1237, ../../sass/components/mathField.scss */
+.textViewer .textViewerParagraph .mathFieldWrapper .mathField {
+  white-space: nowrap;
+  text-indent: 0px;
+}
+
+/* line 1250, ../../sass/components/mathField.scss */
+.mtqArea .subAnswer .mathFieldWrapper, .inDragMtq .mathFieldWrapper, .inDrag .mathFieldWrapper {
+  height: auto;
+}
+
+/* line 1254, ../../sass/components/mathField.scss */
+.textViewer .mathField.blur .frame, .mathField.readOnly .frame, .subAnswer.mathfield .mathField.readOnly .frame {
+  outline: none;
+  outline-offset: 0px;
+}
+
+/* line 1259, ../../sass/components/mathField.scss */
+.textViewer .mathField.blur.empty .frame {
+  outline: 1px solid #B3B3B3;
+}
+
+/* line 1263, ../../sass/components/mathField.scss */
+.clozeArea .textViewer .subAnswer.mathfield .mathField {
+  vertical-align: baseline;
+  min-height: 1em;
+  white-space: nowrap;
+}
+
+/* line 1269, ../../sass/components/mathField.scss */
+.clozeArea .subAnswer.mathfield .mathField.completion {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/******************************************* MathField inside of subAnswer and definition *******************************************************/
+/* line 1275, ../../sass/components/mathField.scss */
+.bank .subAnswer.mathfield .mathField .frame, .inDragMtq .mathField .frame,
+.bank_readonly .subAnswer.mathfield .mathField .frame, .inDragMtq .mathField .frame,
+.player .task.mtq .definition .mathField .frame, .inDrag .mathField .frame {
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
+/* line 1282, ../../sass/components/mathField.scss */
+.subAnswer.mathfield .mathField .frame {
+  outline: 1px solid #CFCFCF;
+  outline-offset: -1px;
+}
+
+/* line 1287, ../../sass/components/mathField.scss */
+.subAnswer.mathfield .mathField.completion .frame {
+  outline: none !important;
+}
+
+/* line 1291, ../../sass/components/mathField.scss */
+.clozeArea .subAnswer.mathfield.disabled.correct .mathField .frame,
+.clozeArea .subAnswer.mathfield.disabled.wrong .mathField .frame,
+.clozeArea .subAnswer.mathfield.disabled.system_correct .mathField .frame,
+.clozeArea .subAnswer.mathfield.disabled.partlyCorrect .mathField .frame {
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
+/* line 1300, ../../sass/components/mathField.scss */
+.question .textViewer .mathField.readOnly .mpsContent {
+  vertical-align: baseline;
+}
+
+/* line 1305, ../../sass/components/mathField.scss */
+.subAnswer.mathfield.disabled .mathField .frame.not_valid {
+  background-color: transparent;
+}
+
+/* line 1309, ../../sass/components/mathField.scss */
+.bank .subAnswer.disabled .mathField .mathField_content {
+  color: #8A8A8A !important;
+}
+
+/* line 1313, ../../sass/components/mathField.scss */
+.mtqBank .subAnswer.mathfield .mathField .frame, .mtqArea .subAnswer .mathField .frame {
+  outline: none !important;
+}
+
+/* line 1317, ../../sass/components/mathField.scss */
+.mtqBank .subAnswer.mathfield .subAnswer_content, .inDragMtq .mathField {
+  padding: 0.3rem;
+}
+
+/* line 1321, ../../sass/components/mathField.scss */
+.mtqArea .subAnswer .textViewer .mathFieldWrapper .mathField,
+.inDragMtq .textViewer .mathFieldWrapper .mathField {
+  padding: 0px;
+}
+
+/* line 1326, ../../sass/components/mathField.scss */
+.definition .mathField.readOnly, .intersection .mathField.readOnly {
+  margin: 0 0 0.5rem 0 !important;
+}
+
+/* line 1330, ../../sass/components/mathField.scss */
+.mtqArea .subAnswer_content.draggable.full:hover .mathField .mathField_content, .mtqArea .subAnswer_content.draggable.full:hover .mathField .mathField_content {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+/*************************************** MathField inside of cloze area *********************************************************************************/
+/* line 1337, ../../sass/components/mathField.scss */
+.textViewer .mathField.focus .mathField_content,
+.textViewer .mathField.blur .mathField_content,
+.textViewer .mathField.disabled .mathField_content {
+  /*left: 0.25em;*/
+  /*margin: 0px;*/
+}
+
+/* line 1344, ../../sass/components/mathField.scss */
+.mathField .mf_icon {
+  display: none;
+}
+
+/* line 1348, ../../sass/components/mathField.scss */
+.clozeArea .mathField.empty .mf_icon {
+  font-size: 0.9rem;
+  line-height: 0.9em;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: block;
+}
+
+/* line 1357, ../../sass/components/mathField.scss */
+.clozeArea .subAnswer.disabled .mathField .mpsWrapper.show {
+  background-color: #FFFFFF !important;
+  border: solid 1px #B3B3B3 !important;
+}
+
+/*************************************** MathField inside of table cell *********************************************************************************/
+/* line 1363, ../../sass/components/mathField.scss */
+.table .cell .subAnswer .mathField.readOnly .frame {
+  outline: none !important;
+}
+
+/* line 1367, ../../sass/components/mathField.scss */
+.table .cell .mathField.readOnly .frame {
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
+/* line 1372, ../../sass/components/mathField.scss */
+.table .cell .mathField.readOnly {
+  padding-top: 0.1em;
+}
+
+/*textViewer_content*/
+/*************************************** MathField inside of textEditor *********************************************************************************/
+/* line 1379, ../../sass/components/mathField.scss */
+.texteditor .mathField {
+  display: inline-block;
+  user-modify: read-only;
+  -moz-user-modify: read-only;
+  -webkit-user-modify: read-only;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-weight: normal !important;
+  font-size: 22px;
+  background-color: transparent !important;
+  font-style: normal !important;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* line 1396, ../../sass/components/mathField.scss */
+#body_texteditor .mathField.focus .frame {
+  outline: 0px;
+  background: rgba(255, 247, 194, 0.8);
+}
+
+/* line 1401, ../../sass/components/mathField.scss */
+#body_texteditor .mathField.blur .frame {
+  outline: 0px;
+}
+
+/* line 1405, ../../sass/components/mathField.scss */
+#body_texteditor .mathField.empty .frame {
+  outline: 1px solid #B3B3B3;
+}
+
+/* line 1409, ../../sass/components/mathField.scss */
+.readwrite {
+  user-modify: read-write !important;
+  -moz-user-modify: read-write !important;
+  -webkit-user-modify: read-write !important;
+}
+
+/* line 1415, ../../sass/components/mathField.scss */
+.rtl .task_content .mathField {
+  text-align: left;
+}

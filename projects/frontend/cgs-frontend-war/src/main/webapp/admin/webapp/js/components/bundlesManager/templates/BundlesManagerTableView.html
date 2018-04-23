@@ -1,0 +1,38 @@
+<table id="bundles-table" cellpadding="0" cellspacing="0" border="0"
+           class="table table-striped table-bordered content-table">
+    <thead>
+        <th>((Bundle Id))</th>
+        <th>((Bundle Version))</th>
+        <th>((Bundle Name))</th>
+        <th>((Plugins))</th>
+        <th class="actions_header">((Actions))</th>
+    </thead>
+    <tbody>
+        {{#model}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{version}}</td>
+                <td>{{name}}</td>
+                <td class="plugins-contaier">
+                    <ul class="plugin-list">
+                        {{#plugins}}
+                            <li>{{name}}</li>
+                        {{/plugins}}
+                    </ul>
+                </td>
+                <td class="actions">
+                    <button class="btn" data-action="delete" data-id="{{id}}">
+                        <span class="icon-trash"></span>
+                    </button>
+                </td>
+            </tr>
+        {{/model}}
+    </tbody>
+    <tfoot id="form-add-user">
+    </tfoot>
+</table> 
+<span class="btn btn-default btn-file icon-plus">
+    <form class="bundles-upload-form" enctype="multipart/form-data" id="upload-form">
+        <input id="bundle-file" type="file">
+    </form>
+</span> 

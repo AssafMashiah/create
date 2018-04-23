@@ -1,0 +1,17 @@
+[
+	{
+		"url": "js/plugins/vocabulary_sequence"
+	},
+	{
+		"url": "js/plugins/vocabulary_task"
+	},
+	{
+		"url": "js/plugins/student"
+	},
+	{
+		"url": "js/plugins/teacher"
+	},
+	{
+		"url": "js/plugins/practice"
+	}
+]  

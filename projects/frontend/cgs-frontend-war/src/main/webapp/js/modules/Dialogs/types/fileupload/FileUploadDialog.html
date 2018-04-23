@@ -1,0 +1,78 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div id="fileUploadDialog">
+	<div data-locale="{{locale}}" class="narration_{{locale}}">
+		<select class="todo-options">
+			<option value="Upload" selected>((Upload))</option>
+            {{#isOrder}}<option value="Order">((Order))</option>{{/isOrder}}
+			{{#options.config.isNarration}}{{#isTTSEnabled}}<option value="TTS">((Text to speech))</option>{{/isTTSEnabled}}{{/options.config.isNarration}}
+		</select>
+		<div class="todo-upload">
+			<button class="addFile" class="button" >((...))</button>
+		</div>
+		<div class="uploadStatus"></div>
+		<div class="uploadError"></div>
+		<div class="todo-order" hidden>
+			<div>
+				<span class="order-id-label">((Asset ID)):</span>
+				<input type="text" class="order-id" />
+			</div>
+			<div>
+				<span>((Notes:))</span>
+				<textarea class='asset-notes'>{{notes}}</textarea><br>
+			</div>
+			<div {{^options.config.isNarration}}hidden{{/options.config.isNarration}}>
+				<span>((As Is)):</span><input type="checkbox" class='chk-as-is' {{#options.config.asIs}}checked{{/options.config.asIs}} /><br>
+				<span class='lbl-narration-text hidden'>((Text)):</span><textarea class='narration-text hidden {{options.config.direction}}'>{{options.config.narrationText}}</textarea>
+			</div>
+			<button class="btn btn-small tts-button" hidden>((Convert Text to Speech))</button>
+		</div>
+	</div>
+	<div class="seperator"></div>
+	{{#options.config.has_multi_locales}}
+		{{#options.config.isNarration}}
+			<div class="control-group" id="multiNarrationArea">
+		        <input type="checkbox" id="has_multinarration" {{#options.config.multiNarrationChecked}}checked{{/options.config.multiNarrationChecked}} />
+		        <label class="control-label" for="has_multinarration">((Additional Narrations))</label> 
+		    </div>  
+		{{/options.config.isNarration}}
+	{{/options.config.has_multi_locales}}
+
+	{{#options.config.isNarration}}
+	{{#options.config.multiNarrationChecked}}
+    {{#options.config.multiNarrationLocales}}
+    	<div class="multiLingualWrapper">
+    		<h5 >
+	        {{language}}-{{country}} ({{locale}})
+    		</h5>
+	        <div data-locale="{{locale}}" class="narration_{{locale}}">
+				<select class="todo-options">
+					<option value="Upload" selected>((Upload))</option>
+					<option value="Order">((Order))</option>
+					{{#options.config.isNarration}}{{#is_locale_tts_enabled}}<option value="TTS">((Text to speech))</option>{{/is_locale_tts_enabled}}{{/options.config.isNarration}}
+				</select>
+				<div class="todo-upload">
+					<button class="addFile" class="button" >((...))</button>
+				</div>
+		        <div class="uploadStatus"></div>
+				<div class="uploadError"></div>
+				<div class="todo-order" hidden>
+					<div>
+						<span class="order-id-label">((Asset ID)):</span>
+						<input type="text" class="order-id" />
+					</div>
+					<div>
+						<span>((Notes:))</span>
+						<textarea class='asset-notes'>{{notes}}</textarea><br>
+					</div>
+					<div {{^options.config.isNarration}}hidden{{/options.config.isNarration}}>
+						<span>((As Is)):</span><input type="checkbox" class='chk-as-is' checked /><br>
+						<span class='lbl-narration-text hidden'>((Text)):</span><textarea class='narration-text hidden {{direction}}'></textarea>
+					</div>
+					<button class="btn btn-small tts-button" hidden>((Convert Text to Speech))</button>
+				</div>
+			</div>
+    	</div>	
+    {{/options.config.multiNarrationLocales}}
+    {{/options.config.multiNarrationChecked}}
+    {{/options.config.isNarration}}
+</div>

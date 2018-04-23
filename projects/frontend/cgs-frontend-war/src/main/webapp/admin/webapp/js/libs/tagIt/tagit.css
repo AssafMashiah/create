@@ -1,0 +1,109 @@
+ul.tagit {
+    cursor: text;
+    overflow: auto;
+    font-size: 14px;
+    width: 97%;
+    padding: 3px;
+    margin-top: 2px;
+    margin-right: 6px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+ul.tagit li {
+    display: block;
+    float: left;
+    margin: 3px 8px 3px 0;
+    position: relative;
+}
+
+ul.tagit.ui-sortable li.tagit-choice a.ui-icon.ui-icon-grip-dotted-vertical{
+    float: left;
+    width: 12px;
+    margin-left: -5px;
+    cursor: move;
+}
+
+ul.tagit li.tagit-choice {
+    border: 1px solid #e9d3e2;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 13px;
+    vertical-align: middle;
+
+    padding: 4px 17px 4px 7px;
+
+    background: #F9E9F4;
+    cursor: move;
+}
+
+ul.tagit li.tagit-choice.selected {
+
+    color: #333333;
+    border: 1px solid #F9E9F4;
+    background: #F9E9F4;
+
+}
+
+ul.tagit li.tagit-choice:hover {
+
+    text-decoration: none;
+    background: #F9E9F4;
+}
+
+ul.tagit li.tagit-new {
+    padding: 2px 4px 1px 0;
+    display: block;
+    clear: both;
+}
+
+ul.tagit li.tagit-choice input {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+ul.tagit li.tagit-choice a.tagit-close {
+    color: #333333;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    outline: medium none;
+    padding: 0px 0 0px 3px;
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    top: 3px;
+    right: 3px;
+}
+
+
+ul.tagit div.tagit-label.hidden {
+	display: none;
+}
+
+ul.tagit input.tagit-edit {
+	margin: 0px 0px 0px 2px;
+	border: none;
+	line-height: 16px;
+}
+
+ul.tagit input[type="text"] {
+    -moz-box-sizing: border-box;
+    margin: 0;
+    width: inherit;
+    outline: none;
+    box-shadow: none;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    padding: 0 5px;
+}
+
+.tagit-hiddenSelect {
+    display:none;
+}

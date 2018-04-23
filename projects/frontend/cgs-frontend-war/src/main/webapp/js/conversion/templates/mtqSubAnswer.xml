@@ -1,0 +1,13 @@
+{{^hideSubAnswer}}
+	<subAnswer answerId="{{id}}" >
+		{{#displayContent}}
+			{{{content}}}
+		{{/displayContent}}
+
+		{{#displayCorrect}}	
+			<correct>
+				<option>{{correct}}</option>
+			</correct>	
+		{{/displayCorrect}}
+	</subAnswer>
+{{/hideSubAnswer}}

@@ -1,0 +1,4 @@
+<subAnswer answerId="{{subItemId}}" originalId="{{originalId}}">
+	{{{content}}}
+
+</subAnswer>

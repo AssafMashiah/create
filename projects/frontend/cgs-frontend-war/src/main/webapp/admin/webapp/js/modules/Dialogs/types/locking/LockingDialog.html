@@ -1,0 +1,24 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div>
+	
+	<div>{{options.config.lockUser}}</div>
+	
+	<table class="table table-striped table-bordered content-table">
+		<thead>
+			<tr>
+				<th class="middle">Entity type</th>
+				<th class="middle">Name</th>
+				<th class="middle">User</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#options.config.data}}
+			<tr>
+				<td style="width:85px">{{entityType}}</td>
+				<td style="width:300px">{{entityName}}</td>
+				<td style="width:120px">{{userName}}</td>
+			</tr>
+			{{/options.config.data}}
+		</tbody>
+	</table>
+</div>

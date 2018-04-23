@@ -1,0 +1,6 @@
+// Create tinyKeys collection and create indexes
+// Id, publisherId, courseId, lessonId, tinyKey
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db.tinyKeys.ensureIndex({id:1,publisherId:1,courseId:1,lessonId:1});
+}

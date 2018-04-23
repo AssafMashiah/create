@@ -1,0 +1,54 @@
+.ebook-props .ebook-props-title {
+  font-size: 14px;
+  margin: 8px 0;
+  font-weight: 400; }
+
+.ebook-props .preview-image {
+  width: 126px; }
+
+.ebook-props #blank-page-upload-image {
+  margin-left: 8px;
+  padding: 5px 9px; }
+
+.ebook-props #button_image_editor {
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-size: 27px; }
+
+.ebook-props .blank-page-image-positioning input[type="checkbox"] {
+  margin: 10px 0; }
+  .ebook-props .blank-page-image-positioning input[type="checkbox"]:after {
+    width: 20px;
+    height: 20px; }
+
+.ebook-props .ebook-props-position-button {
+  padding: 4px;
+  border: 1px solid #888888;
+  background-color: #F5F5F5;
+  margin: 0 4px 4px 0; }
+  .ebook-props .ebook-props-position-button .position-icon {
+    height: 12px;
+    width: 12px;
+    border: 2px solid #666666;
+    border-radius: 2px;
+    background-color: #f5f5f5; }
+  .ebook-props .ebook-props-position-button.selected {
+    border-color: #356CB5; }
+    .ebook-props .ebook-props-position-button.selected .position-icon {
+      border-color: #356CB5;
+      background-color: #356CB5; }
+  .ebook-props .ebook-props-position-button .blank-page-image-positioning {
+    margin-top: 20px; }
+
+.ebook-props .blank-page-background-wrapper {
+  margin-bottom: 50px; }
+  .ebook-props .blank-page-background-wrapper #blank-page-background {
+    width: 88px;
+    margin-right: 10px; }
+  .ebook-props .blank-page-background-wrapper .background-reset-button {
+    margin-bottom: 8px;
+    font-size: 16px;
+    padding: 7px 10px; }
+
+.v-align-bottom {
+  vertical-align: bottom; }

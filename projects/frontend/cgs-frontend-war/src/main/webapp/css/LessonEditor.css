@@ -1,0 +1,50 @@
+.structure-group .structure-row {
+    margin-bottom:15px;
+}
+
+.structure-group button {
+    margin-top:3px;
+    font-size:14px;
+}
+
+.lesson-hidden-checkbox {
+	margin: 0 !important;
+}
+
+.lesson-hidden-control-group {
+	margin: 0 !important;
+
+	position: relative;
+	bottom: 30px;
+}
+
+
+#preview_assessments_container div {
+    margin-bottom: 7px;
+}
+
+#preview_assessments_container .toc {
+    padding-left: 30px;
+}
+
+#preview_assessments_container .toc-name {
+    font-weight: bold;
+}
+
+#preview_assessments_container .lesson {
+    color: #276cc7;
+    padding-left: 10px;
+}
+
+#dialog.previewAssessmentsDialog {
+    width: 40%;
+    height: 60%;
+    left: 30%;
+    top: 20%;
+    margin: 0;
+}
+
+.previewAssessmentsDialog #dialogContent {
+    max-height: calc(100% - 140px);
+    min-height: calc(100% - 140px);
+}

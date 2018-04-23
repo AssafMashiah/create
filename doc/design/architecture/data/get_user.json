@@ -1,0 +1,10 @@
+{
+	"userId": 4,
+	"publisherAccountId": 1,
+	"firstName": "pub",
+	"lastName": "admin",
+	"email": "fsd",
+	"username": "pa1",
+	"password": "fdsa",
+	"roles": ["PUBLISHER_ADMIN"]
+}

@@ -1,0 +1,351 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper course-editor {{currentTab}}">
+    <div class="row-fluid">
+        <ul id="CourseEditorTabs" class="nav nav-tabs span2">
+            <li id="props_button"><a href="#properties" data-toggle="tab" title="((Settings))"><img src="media/icons/settings.png"></a></li>
+            <li id="lessons_button"><a href="#lessons" data-toggle="tab" title="((Settings))"><img src="media/icons/settings.png"></a></li>
+        </ul>
+        <div id="tabTitle" class="span9"><h3>{{controller.record.data.title}}</h3></div>
+    </div>
+    <div class="tab-content clearBoth">
+        <!-- Design (Lessons) tab -->
+        <div class="tab-pane active" id="lessons">
+            <div class="row-fluid" id="lessons_table_base"></div>
+        </div>
+        <!-- properties tab -->
+        <div class="tab-pane fade" id="properties">
+            <!-- vertical nav -->
+            {{> subMenuTemplate}}
+            <!-- Tab panes -->
+            <div class="tab-content" class="span10" style="padding: 0 40px;">
+                <!-- start properties tab -->
+                <div role="tabpanel" class="tab-pane active" id="course_properties">
+                    <div role="tabpanel" class="tab-pane">
+                        <div class="row-fluid">
+                            <div class="span5">
+                                <div class="control-group">
+                                    <label class="control-label required-field" for="field_title">((Title:))</label>
+                                    <div class="controls">
+                                        <input type="text" data-value="obj.title" id="field_title">
+                            <span class="help-inline error" id="field_title_err"
+                                  style="display:none">((This field is required))</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label required-field" for="field_contentLocales">((Content language:))</label>
+                                    <select class="notranslate" id="field_contentLocales"
+                                            data-value="obj.contentLocales" {{#partialEdit}} disabled
+                                            cantBeEnabled="true" {{/partialEdit}} >
+                                    {{#controller.contentLocales.options}}
+                                    <option value="{{.}}">{{.}}</option>
+                                    {{/controller.contentLocales.options}}
+                                    </select>
+                                    <span class="help-inline error" id="field_contentLocales_err" style="display:none">((This field is required))</span>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_subjectArea">((Subject Area:))</label>
+                                    <div class="multiselect" repoValue='subjectArea'>
+                                        {{#controller.subjectAreas}}
+                                        <div class="multiselectRow">
+                                            <input type="checkbox" name="subjectArea_{{id}}"
+                                                   value="{{id}}">{{id}}</input>
+                                        </div>
+                                        {{/controller.subjectAreas}}
+                                        {{^controller.subjectAreas}}
+                                        <div class="placeholder">
+                                            ((course.properties.multiselect.placeholder.subjectArea))
+                                        </div>
+                                        {{/controller.subjectAreas}}
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_grade">((Grade level:))</label>
+                                    <div class="multiselect" repoValue='gradeLevel'>
+                                        {{#controller.gradeLevels}}
+                                        <div class="multiselectRow">
+                                            <input type="checkbox" name="gradeLevel_{{id}}"
+                                                   value="{{id}}">{{id}}</input>
+                                        </div>
+                                        {{/controller.gradeLevels}}
+                                        {{^controller.gradeLevels}}
+                                        <div class="placeholder">
+                                            ((course.properties.multiselect.placeholder.gradeLevel))
+                                        </div>
+                                        {{/controller.gradeLevels}}
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_isbn">((ISBN:))</label>
+                                    <div class="controls">
+                                        <input type="text" data-value="obj.isbn" id="field_isbn">
+                                        <span class="help-inline error" id="field_isbn_err" style="display:none">((Please insert ISBN in the following format: ISBN 978 000 000 000 2))</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" style="display: inline-block">((Version)):</label>
+                                    <label data-text="obj.version" style="display: inline-block"></label>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" style="display: inline-block">((Published:))</label>
+                                    <label style="display: inline-block">{{publishDateFormated}}</label>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" style="display: inline-block">((Updated:))</label>
+                                    <label style="display: inline-block">{{updateDateFormated}}</label>
+                                </div>
+                            </div>
+                            <!-- Second column -->
+                            <div class="span7">
+                                <div class="control-group">
+                                    <label class="control-label" for="field_overview">((Description:))</label>
+                                    <div class="controls">
+                                        <textarea rows="2" class="span10" data-value="obj.overview"
+                                                  id="field_overview"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_credits">((Credits:))</label>
+                                    <div class="controls">
+                                        <textarea rows="2" class="span10" data-value="obj.credits" id="field_credits"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_targetPopulation">((Target Population:))</label>
+                                    <div class="controls">
+                                        <textarea rows="2" class="span10" data-value="obj.targetPopulation"
+                                                  id="field_targetPopulation"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="field_techReqs">((Tech. Requirements:))</label>
+                                    <div class="controls">
+                                        <textarea rows="2" class="span10" data-value="obj.technicalRequirements"
+                                                  id="field_techReqs"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="div4 course_cover_img">
+                                        <img class="thumbnail" id="course_cover"
+                                             {{! if there is no cover, dont add data-src }}
+                                             {{ #controller.record.data.cover }}
+                                             data-src="obj.coverUrl"
+                                             {{ /controller.record.data.cover }}
+                                        src="media/insert_image.png" width="150" height="200">
+                                        <button id="image_cropper_button"
+                                                class="image-cropper-edit-button btn btn-small edit_element"
+                                                {{ ^controller.record.data.cover }}
+                                                style="display: none;"
+                                                {{ /controller.record.data.cover }}
+                                        ><span class="base-icon icon-cog"></span></button>
+                                        <button id="button_upload_cover" class="btn btn-small">((...))</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end properties tab -->
+                <!-- Applets tab -->
+                <div role="tabpanel" class="tab-pane" id="applets">
+                    <!-- vertical nav -->
+                    <div id="applets_general" class="span10 defaultOpen">
+                        <div class="row-fluid" id="applets_table_base"></div>
+                        <div class="row-fluid" id="applets-toolbox"></div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ebooks_in_use">
+                    <!-- vertical nav -->
+                    <div id="ebooks_in_use_general" class="span10 defaultOpen">
+                        <div class="row-fluid" id="ebooks_in_use_base"></div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="fonts">
+                    <div id="CP_fontsComponent">
+                        <img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="styles">
+                    <div id="CP_stylesComponent">
+						<img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+					</div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="effects">
+                    <div id="CP_effectsComponent">
+						<img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+					</div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="players">
+                    <div id="CP_playersComponent">
+						<img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+					</div>
+                </div>
+                <!-- metadata (optional) tab-->
+                {{#options.controller.showMetadataTab}}
+                <div role="tabpanel" class="tab-pane" id="customCourseMetadata">
+                </div>
+                {{/options.controller.showMetadataTab}}
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <h5>((Course Hierarchy))</h5>
+                    <div class="control-group">
+                        <label class="control-label">((Maximum number of hierarchy levels))</label>
+                        <select class="span1" data-value="obj.maxDepth" id="maxDepth">
+                            <option>((1))</option>
+                            <option>((2))</option>
+                            <option>((3))</option>
+                            <option>((4))</option>
+                            <option>((5))</option>
+                            <option>((6))</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <input type="checkbox" id="includeLo" data-checked="obj.includeLo" cantBeEnabled="true">
+                        <label class="control-label includeLoLabel" for="includeLo">((Include Learning Object Level in Lessons))</label>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="row-fluid splitBottom">
+                            <div class="span4">
+                                <div class="control-group">
+                                    <label class="control-label">((Preview)):
+                                        <tooltip position="middle-right">((hints.course_editor.settings.preview))
+                                        </tooltip>
+                                    </label>
+                                    <div class="level_list_preview">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span1"></div>
+                            {{#showDiffLevelComponent}}
+                            <div class="span5">
+                                <div class="control-group">
+                                    <div>
+                                        <label class="diff_label">((Differentiation levels)):
+                                            <tooltip position="bottom-middle">
+                                                ((hints.course_editor.settings.differentiation_levels))
+                                            </tooltip>
+                                        </label>
+                                        <button id="button_select_diff_levels" class="btn base-icon icon-cog right"
+                                                {{#disableDiffLevels}} disabled cantBeEnabled="true" {{
+                                        /disableDiffLevels}}></button>
+                                    </div>
+                                    <div id="diff_levels_container" class="course-diff-levels">
+                                        <table class="diff_levels_list">
+                                            <thead>
+                                            <tr>
+                                                <th>((Name))</th>
+                                                <th>((Acronym))</th>
+                                                <th>((Default))</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {{#controller.record.data.diffLevels }}
+                                            <tr>
+                                                <td>
+                                                    {{name}}
+                                                </td>
+                                                <td>
+                                                    {{acronym}}
+                                                </td>
+                                                <td class="default">
+                                                    {{#isDefault}}
+                                                    <i class="base-icon icon-ok" style=""></i>
+                                                    {{/isDefault}}
+                                                </td>
+                                            </tr>
+                                            {{ /controller.record.data.diffLevels }}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {{#controller.enableBookAlive}}
+                                    <div class="course-diff-levels-note">
+                                        ((hints.course_editor.settings.differentiation_levels_note))
+                                    </div>
+                                    {{/controller.enableBookAlive}}
+                                </div>
+                            </div>
+                            {{/showDiffLevelComponent}}
+                        </div>
+                        <div class="row-fluid">
+                            {{#controller.enableReferences}}
+                            <div class="span4">
+                                <div class="control-group">
+                                    <h5>((Course references)):
+                                        <tooltip position="top-middle">
+                                            ((hints.course_editor.settings.course_reference))
+                                        </tooltip>
+                                    </h5>
+                                    <div class="course_references">
+                                        <ul id="references_list" class="nav" style="position:relative">
+                                            <li data-each-reference="obj.references" data-class="reference:fileType">
+                                                <a data-text="reference:fileName"
+                                                   data-href="reference:path|server-path" target="_blank"></a>
+                                                <button class="btn btn-link delete_reference">
+                                                    <span class="base-icon icon-remove"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <button id="button_upload_reference"
+                                                class="btn btn-small base-icon icon-plus"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span1"></div>
+                            {{/controller.enableReferences}}
+                            <div class="span5">
+                                {{#controller.enableStandards}}
+                                <div class="control-group">
+                                    <h5>((Standard packages)):</h5>
+                                    <div id="standards_package_selected" class="course-standards">
+                                        <table class="standards_package_list">
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                        <button id="button_select_standard" class="btn">
+                                            <div class="addPackege">((standards.course_editor.button.addNewPackage))
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h5>((standards.course_editor.props.title))</h5>
+                                <div id="standards_list"></div>
+                                {{/controller.enableStandards}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="languages">
+                    {{#controller.enableNarrationAdditionalLanguages}}
+                    <div id="multinarrations">
+                    </div>
+                    {{/controller.enableNarrationAdditionalLanguages}}
+                    {{#controller.enableTextToSpeach}}
+                    <div class="control-group use-tts-service-wrapper">
+                        <input type="checkbox" {{#controller.record.data.ttsServices}}checked="checked" {{/controller.record.data.ttsServices}}
+                        id="field_useTtsServices" />((Use Text-to-Speech service))
+                    </div>
+                    <div id="tts-services">
+
+                    </div>
+                    {{/controller.enableTextToSpeach}}
+                </div>
+                <div role="tabpanel" class="tab-pane" id="instructions">
+                    <div id="CP_InstructionsComponent">
+                        <img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="feedbacks">
+                    <div id="CP_feedbacksComponent">
+                        <img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="playerInterface">
+                    <div id="CP_playerInterfaceComponent">
+                        <img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="miscellaneous">
+					<img src="css/images/balls.gif" class="loading-image-gif" alt="loading">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

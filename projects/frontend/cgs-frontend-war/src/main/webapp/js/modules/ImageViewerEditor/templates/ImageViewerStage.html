@@ -1,0 +1,26 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content {{#record.data.hide}}dontShow{{/record.data.hide}}">
+	{{#isShowImagePreview}}
+		<img class="previewImage thambnail" src="{{#server-path}}{{record.data.image}}{{/server-path}}"/>
+	{{/isShowImagePreview}}
+	{{^isShowImagePreview}}
+		<div class="previewImage noImage"></div>
+	{{/isShowImagePreview}}
+
+	{{#record.data.showSound}}
+		{{#record.data.sound}}
+			<div class="soundPreview"></div>
+		{{/record.data.sound}}
+		{{^record.data.sound}}
+			<div class="soundPreview disabled"></div>
+		{{/record.data.sound}}
+	{{/record.data.showSound}}
+
+	{{#record.data.showCopyrights}}
+		<div class="ImageCopyrights"> {{record.data.copyrights}}</div>
+	{{/record.data.showCopyrights}}
+	{{#record.data.showCaption}}
+		<div class="ImageCaption"> {{record.data.caption}} </div>
+	{{/record.data.showCaption}}
+
+</div>

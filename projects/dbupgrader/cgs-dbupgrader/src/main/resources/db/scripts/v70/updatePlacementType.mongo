@@ -1,0 +1,18 @@
+//  Change placement type from String to Boolean
+function f(dbName) {
+   db = db.getSiblingDB(dbName);
+   myCursor = db.publishers.find();
+
+   var data = db.assessments.find({"contentData.placement":{$type: 2}});
+   if (data.hasNext()) {
+        process(data.next());
+   }
+
+   function process(d) {
+    d.contentData.placement = (d.contentData.placement == "true")? true : false;
+    db.assessments.update({_id: d._id}, d);
+       if (data.hasNext()) {
+           process(data.next());
+       }
+   }
+}

@@ -1,0 +1,32 @@
+<div class="cp_fontsTitle">((Embedded Content Fonts))</div>
+<table id="fonts_table" class="table table-bordered" style="width: 99%">
+    <thead>
+        <tr>
+            <th class="th_style" >((course.props_area.tab_design.font_table.header1))</th>
+            <th class="th_fileTypes" >((course.props_area_tab_design.font_table.header2))</th>
+        </tr>
+    </thead>
+    <tbody id="fonts_table_body">
+        <tr>
+            <td colspan="2">
+                <div>((Browser Defaults))</div>
+            </td>
+        </tr>
+        {{#.}}
+            <tr>
+                <td class="fontFamilyRow" colspan="2" familyName="{{fontFamilyName}}">
+                    <div class="fontFamilyName">(({{fontFamilyName}}))</div>
+                </td>
+            </tr>
+            {{#familyItem}}
+                <tr>
+                    <td>{{#styles}}{{.}} {{/styles}}</td>
+                    <td class='extesions'>{{#types}}{{.}}, {{/types}}</td>
+                </tr>
+            {{/familyItem}}
+        {{/.}}
+    </tbody>
+</table>
+<button class="btn new_font">
+    <i class=" base-icon icon-plus"></i>
+</button>

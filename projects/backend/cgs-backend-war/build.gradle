@@ -1,0 +1,76 @@
+defaultTasks 'clean', 'build'
+
+apply from: '../../../cgs-common.gradle'
+
+apply plugin: 'jetty'
+
+dependencies {
+	compile project(':projects:backend:cgs-domain-model')
+	compile project(':projects:backend:cgs-web')
+	runtime project(':projects:backend:cgs-persistence')
+	runtime project(':projects:backend:cgs-service')
+    runtime project(':projects:backend:cgs-shared')
+}
+
+war {
+	manifest {
+		attributes 'Implementation-Title': 'Time To Know CGS Server', 'Implementation-Version': version
+	}
+}
+
+war.doLast {
+	ant.unzip(src: war.archivePath, dest: "$buildDir/exploded/cgs-backend-war")
+}
+
+[jettyRun, jettyRunWar]*.with {
+	contextPath = 'lms'
+	httpPort = 8080
+	stopPort = 8079
+//	jettyConfig = file('src/test/resources/jetty-config.xml')
+}
+
+task createDevEnv() << {
+    try {
+		File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../../t2k.properties')
+		if (t2kPropFile.exists()) {
+			ant.property(file: project.projectDir.canonicalPath + '/../../../t2k.properties')
+		}
+
+        // copy and filter runtime properties
+//        println 'create and patch cgsConfig.properties'
+//        project.copy() {
+//            from ('src/main/resources/config/cgsConfig.properties.tmpl'){
+//                rename 'cgsConfig.properties.tmpl', 'cgsConfig.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+//        println 'create and patch cms.properties'
+//        project.copy() {
+//            from ('src/main/resources/config/cms.properties.tmpl'){
+//                rename 'cms.properties.tmpl', 'cms.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+
+//        println 'create and patch mongo.properties'
+//        project.copy() {
+//            from ('src/main/resources/config/mongo.properties.tmpl'){
+//                rename 'mongo.properties.tmpl', 'mongo.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+//        println 'create and patch user.properties'
+//        project.copy() {
+//            from ('src/main/resources/config/users.properties.tmpl'){
+//                rename 'users.properties.tmpl', 'users.properties'
+//            }
+//            into 'src/main/resources/config'
+//            filter ReplaceTokens, tokens: ant.properties
+//        }
+    }
+    catch (Exception e) {}
+}

@@ -1,0 +1,36 @@
+.quiz_editor #field_mandatory, #field_score_is_related {
+	float: left;
+	margin: 5px;
+}
+
+.quiz_editor #field_duration {
+	width: 35px
+}
+
+.quiz_editor .custom-label{
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.quiz_editor input, .quiz_editor select{
+    /* margin-bottom: 0; */
+}
+
+.quiz_editor select {
+    width: auto;
+}
+
+.quiz_editor .input-large{
+    width: 200px;
+    margin-bottom: 0;
+}
+
+.quiz_editor label[for=field_redoQuizEnabled]{
+	display: inline-block;
+	margin: 0;
+}
+
+.quiz_editor #field_typicalLearningTime{
+    width: 3em;
+}

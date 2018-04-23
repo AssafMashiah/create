@@ -1,0 +1,80 @@
+.control-group {
+	clear: both;
+}
+
+.state_line {
+	background-color: #eeeeee;
+
+	height: 54px;
+}
+
+.state_line .col {
+	float: left;
+
+	line-height: 61px;
+}
+
+.state_line .col label {
+	float: left;
+	line-height: 52px;
+	text-align:center;
+	color: #333333;
+}
+
+.ConvertFreeWritingEditor {
+	min-width: 604px;
+}
+
+
+/*.ConvertFreeWritingEditor .instruction {
+	border-bottom: 1px solid #cccccc;
+}*/
+
+
+.ConvertFreeWritingEditor .instruction .instruction_icon {
+	margin-top: 0px !important;
+}
+
+
+.ConvertFreeWritingEditor .props .col input[id^="field_show_toolbar"] {
+	float: left;
+	margin-top: 19px;
+	margin-left: 3px;
+}
+
+.ConvertFreeWritingEditor .props .props_editor {
+	border: 0;
+}
+
+.ConvertFreeWritingEditor .answer_area {
+	border: 1px solid #dedede;
+}
+.ConvertFreeWritingEditor .answer_area.Letter{
+    width: 20px;
+    height: 29px;
+}
+.ConvertFreeWritingEditor .answer_area.Word{
+    width: 244px;
+    height: 29px;
+}
+.ConvertFreeWritingEditor .answer_area.Line{
+    width: 680px;
+    height: 29px;
+}
+
+.ConvertFreeWritingEditor .answer_area.Paragraph{
+    width: 680px;
+    height: 104px;
+}
+
+.ConvertFreeWritingEditor .answer_area.FullText{
+    width: 680px;
+    height: 333px;
+}
+
+
+#ConvertEditors .props .col input[id^="field_randomize"],
+#ConvertEditors .props .col input[id^="field_toolbar_"] {/* input[type="checkbox"]  */
+	float: left;
+	margin: 19px 5px 0px 10px;
+}

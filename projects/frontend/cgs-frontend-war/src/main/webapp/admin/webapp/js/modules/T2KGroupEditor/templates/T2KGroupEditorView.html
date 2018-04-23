@@ -1,0 +1,80 @@
+<div id="T2KPublisherEditor">
+	<div class="control-group">
+	    <label class="control-label" for="publisher_name">((Name:))</label>
+
+	    <div class="controls">
+	        <input type="text" id="publisher_name" value="{{item.data.name}}">
+	    </div>
+	</div>
+	<div class="control-group">
+	    <label class="control-label" for="logLevel">((Log Level:))</label>
+
+	    <div class="controls">
+            <select id="logLevel">
+                {{#logLevels}}
+                <option value="{{.}}">{{.}}</option>
+                {{/logLevels}}
+            </select>
+	    </div>
+	</div>
+
+	<div id="account-adminstration-table">
+		<span>((Account Administrators:))</span>
+		<table id="accounts-table" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered content-table">
+			<thead>
+				<th>((Username))</th>
+				<th>((Email))</th>
+				<th>((Password))</th>
+				<th class="actions_header">((Actions))</th>
+			</thead>
+			<tbody>
+				{{#item.data.users}}
+					<tr model-id="{{userId}}">
+						<td>
+							{{username}}
+						</td>
+						<td>
+							{{email}}
+						</td>
+						<td>
+							{{password}}
+						</td>
+						<td class="actions" >
+
+							<button class="edit-user btn">
+								<a href="#" class="icon-cog"></a>
+							</button>
+                            <button class="remove_user btn">
+                                <a href="#" class="icon-trash"></a>
+                            </button>
+						</td>
+					</tr>
+				{{/item.data.users}}
+			</tbody>
+			<tfoot id="form-add-user">
+				<tr>
+                    <th>
+						<input type="text" id="account_username" class="input-medium" value="" />
+					</th>
+					<th>
+						<input type="text" id="account_email" class="input-medium" value="" />
+					</th>
+					<th>
+						<input type="password" id="account_password" class="input-medium" value="" />
+					</th>
+					<th class="actions">
+						<button id="save-user" class="btn focus">
+							<a href="#" class="icon-folder-close"></a>
+						</button>
+						<button class="remove_user btn">
+							<a href="#" class="icon-trash"></a>
+						</button>
+					</th>
+				</tr>
+			</tfoot>
+		</table>
+		<button class="btn add-new-user" id="add-new-user">
+			<a class="icon-plus"></a>
+		</button>
+	</div>
+</div>

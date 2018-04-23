@@ -1,0 +1,45 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper AudioPlayer_editor props_editor">
+    <ul class="nav nav-tabs" id="AudioPlayerEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((props.tab.element.displayName.{{controller.elementType}}))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">      
+            <div class="control-group">                
+                <label class="control-label">((File:))</label>
+                <div class="controls" >
+                    <div id="AudioPlayerUpload"></div>                  
+                </div>                
+            </div>
+            {{^controller.record.data.isThinMode}}
+                {{#controller.record.data.showAutoPlay}}
+                    <div class="control-group">
+                        <input id="chkAutoPlay" type="checkbox" value="autoPlay" data-checked="obj.autoPlay"> 
+                        <label class="control-label inline-block">((Auto Play))</label>
+                    </div>
+                {{/controller.record.data.showAutoPlay}}
+
+                <div class="control-group">
+                    <input id="chkTitle" type="checkbox" value="title" data-checked="obj.showTitle"> 
+                    <label class="control-label inline-block"> ((Title))</label>                
+                    {{#controller.record.data.showTitle}}
+                        <div class="controls">
+                            <input id="txtAudioPlayerTitle" data-value="obj.audioTitle" type="text" />
+                      </div>                
+                    {{/controller.record.data.showTitle}}
+                </div>
+                <div class="control-group">
+                    <input id="chkAudioPlayerCopyrights" type="checkbox" value="copyrights" data-checked="obj.showCopyrights"> 
+                    <label class="control-label inline-block" >((Copyrights))</label>
+                    {{#controller.record.data.showCopyrights}}
+                       <div class="controls">
+                          <input id="txtAudioPlayerCopyrights" data-value="obj.copyrights" type="text" />
+                      </div>
+                    {{/controller.record.data.showCopyrights}}
+                </div>
+            {{/controller.record.data.isThinMode}}
+        </div>
+    </div>
+</div>

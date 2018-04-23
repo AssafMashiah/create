@@ -1,0 +1,70 @@
+// Changes the fileSizeLimits format for the publishers
+
+ function f(dbName) {
+
+       var newFileSizeLimitsFormat =  [
+                                                        {
+                                                                        "type" : "image",
+                                                                        "size" : NumberLong("1048576"),
+                                                                        "mimeTypes" : [
+                                                                                        "image/jpeg",
+                                                                                        "image/png",
+                                                                                        "image/gif",
+                                                                                        "image/bmp"
+                                                                        ]
+                                                        },
+                                                        {
+                                                                        "type" : "audio",
+                                                                        "size" : NumberLong("15728640"),
+                                                                        "mimeTypes" : [
+                                                                                        "audio/wav",
+                                                                                        "audio/x-wav",
+                                                                                        "audio/mpeg3",
+                                                                                        "audio/x-mpeg-3",
+																						"audio/mp3"
+                                                                        ]
+                                                        },
+                                                        {
+                                                                        "type" : "video",
+                                                                        "size" : NumberLong("15728640"),
+                                                                        "mimeTypes" : [
+                                                                                        "video/mpeg",
+                                                                                        "video/x-mpeg",
+                                                                                        "video/mp4"
+                                                                        ]
+                                                        },
+                                                        {
+                                                                        "type" : "HTML",
+                                                                        "size" : NumberLong("15728640"),
+                                                                        "mimeTypes" : [
+                                                                                        "text/plain",
+                                                                                        "text/html",
+                                                                                        "text/css",
+                                                                                        "text/css",
+                                                                                        "application/x-javascript",
+                                                                                        "application/json",
+                                                                                        "application/xml"
+                                                                        ]
+                                                        },
+                                                        {
+                                                                        "type" : "PDF",
+                                                                        "size" : NumberLong("15728640"),
+                                                                        "mimeTypes" : [
+                                                                                        "application/pdf"
+                                                                        ]
+                                                        },
+                                                        {
+                                                                        "type" : "attachment",
+                                                                        "size" : NumberLong("15728640"),
+                                                                        "mimeTypes" : []
+                                                        },
+                                                            {
+                                                                            "type" : "default",
+                                                                            "size" : NumberLong("15728640"),
+                                                                            "mimeTypes" : []
+                                                            }
+                                        ];
+
+      db=db.getSiblingDB(dbName);
+      db.publishers.update({}, {$set:{"fileSizeLimits":newFileSizeLimitsFormat}},{multi:true});
+  }

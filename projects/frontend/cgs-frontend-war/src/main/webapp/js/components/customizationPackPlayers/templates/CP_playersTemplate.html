@@ -1,0 +1,24 @@
+<table id="players_table" class="table table-bordered" style="width: 99%">
+    <thead>
+    <tr>
+        <th class="th_style" >((course.props_area.tab_design.players_table.header1))</th>
+        <th class="th_fileTypes" >((course.props_area.tab_design.players_table.header2))</th>
+        <th class="th_fileTypes" >((course.props_area.tab_design.players_table.header3))</th>
+    </tr>
+    </thead>
+    <tbody id="players_table_body">
+    {{#players}}
+    <tr class="playerRow" id="{{id}}">
+        <td>((course.props_area.tab_design.players_table.player_name.{{id}}))</td>
+        <td class='lastModified'>(({{lastModified}}))</td>
+        <td class="player-edit-td">
+            <div class="player-edit-buttons-wrapper">
+                <button class="player-edit" title="((course.props_area.tab_design.players_table.edit.tooltip))"></button>
+                <div class="players-edit-separator" ></div>
+                <button class="player-reset" title="((course.props_area.tab_design.players_table.reset.tooltip))"></button>
+            </div>
+        </td>
+    </tr>
+    {{/players}}
+    </tbody>
+</table>

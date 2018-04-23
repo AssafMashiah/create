@@ -1,0 +1,49 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper textViewer_editor props_editor">
+    <ul class="nav nav-tabs" id="textViewereEditorTabs">
+        <li class="active" >
+        	<a href="#properties" data-toggle="tab">((props.tab.element.displayName.{{controller.elementType}}))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">   
+            {{#controller.record.data.showNarrationType}}
+            <div class="control-group">
+                <label class="control-label" for="narration_type">((Narration type)):</label>
+                <div class="controls">
+                    <select id="narration_type" data-value="obj.narrationType">                                    
+                    </select>                    
+                </div>
+            </div>
+            {{/controller.record.data.showNarrationType}}              
+            {{#controller.record.data.generalNarration}}
+                <div class="multiLingualNarrationWrapper" id="narrationArea">
+                    <div class="controls">
+                        <div id="generalNarrationUploader"></div>
+                    </div>
+                </div>  
+                {{#controller.showMultiNarration}}
+                    <div id="multiNarrationArea">
+                        <input type="checkbox" id="has_multinarration" data-checked="obj.has_multinarration" />
+                        <label class="control-label" for="has_multinarration">((Additional Narrations))</label> 
+                    </div>
+                    {{#controller.record.data.has_multinarration}}
+                        {{#controller.multiNarrationsLocales}}
+                        <div class="multiLingualNarrationWrapper">
+                            <h5>
+                                {{language}}-{{country}} ({{locale}})
+                            </h5>
+                            <div id="multiNarrationArea_{{locale}}">
+                                <div class="controls">
+                                    <div id="generalNarrationUploader_{{locale}}"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/controller.multiNarrationsLocales}}
+                    {{/controller.record.data.has_multinarration}}
+                {{/controller.showMultiNarration}}
+            {{/controller.record.data.generalNarration}}   
+        </div>      
+    </div>
+</div>

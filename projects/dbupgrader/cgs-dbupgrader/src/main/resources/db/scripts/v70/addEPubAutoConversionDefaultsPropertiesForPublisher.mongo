@@ -1,0 +1,7 @@
+####################################################################
+#  add enable mixed properties course in publishers collection #
+####################################################################
+
+publishers.update({},{$set:{"customization.enableEpubConversion": false,
+                            "customization.ePubConversionConfDelay": 10
+                            }}, {upsert: false, multi:true});

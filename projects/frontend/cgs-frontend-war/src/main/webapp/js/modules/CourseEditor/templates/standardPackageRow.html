@@ -1,0 +1,18 @@
+<tr package-id="{{name}}_{{subjectArea}}_{{version}}">
+    <td>
+        {{#update}}<span class="update-indication badge">!</span>{{/update}}
+        <span rel="tooltip" title="{{description}}">
+        	{{name}} ({{subjectArea}})
+        </span>
+    </td>
+    <td>
+        <!--  {{#update}} <td>
+     <span class="btn showReleaseNotes">R. Notes</span>
+        </td>  {{/update}}-->
+
+        {{#update}}
+        <button class="btn updateStdPkg" nextVersion="{{nextVersion}}">((update))</button>
+        {{/update}}
+        <button class="removeStdPkg base-icon icon-trash"></button>
+    </td>
+</tr>

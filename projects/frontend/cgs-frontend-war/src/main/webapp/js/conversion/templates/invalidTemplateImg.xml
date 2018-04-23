@@ -1,0 +1,2 @@
+<imageViewer src="{{invalidImg}}" width="{{invalidImgDimensions.width}}" height="{{invalidImgDimensions.height}}" >
+</imageViewer>

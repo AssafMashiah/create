@@ -1,0 +1,94 @@
+#customCourseMetadata input,
+#customCourseMetadata textarea,
+#customCourseMetadata select,
+#customCourseMetadata .input-append{
+	margin: 0;
+}
+#customCourseMetadata .multiselect .multiselectRow input[type="checkbox"]{
+	margin: 0 5px 0 0;
+}
+
+#customCourseMetadata .icon-time{
+	font-size: 32px;
+	color: #333333;
+}
+.bootstrap-timepicker .add-on,
+.bootstrap-timepicker .add-on i{
+	height: 28px;
+	width: 30px;
+	padding: 0;
+	margin: 0;
+	font-style: normal;
+	vertical-align: middle;
+	line-height: 28px;
+}
+.ui-datepicker-trigger{
+  font-family: 'CGS-icons';
+  border: 1px solid #ccc;
+  background-color: #EEE;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  font-size: 28px;
+
+}
+
+.date-wrapper {
+	white-space: nowrap;
+}
+
+input[id^="datePicker_"]:not([disabled]),
+input[id^="timePicker_"]:not([disabled]) {
+	background-color: #FFF;
+	cursor: pointer;
+}
+
+.date-clear {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	background-image: url('../media/CGS_icons.png?ver=32');
+	background-position: -39px -231px;
+	background-color: rgba(0, 0, 0, 0);
+	position: relative;
+	left: -59px;
+	outline: none;
+}
+
+/*multiselect component  + dialog*/
+#dialog.multiSelect{
+	width: 700px;
+	min-height: 500px;
+}
+#dialog.multiSelect #dialogContent{
+	min-height: 380px;
+}
+#dialog.multiSelect .searchTitle{
+	display: inline-block;
+	margin-right: 20px;
+}
+#dialog.multiSelect  .selection-options-area{
+	border: 1px solid #ededed;
+
+}
+#dialog.multiSelect .multiselect-row{
+	padding: 10px;
+}
+#dialog.multiSelect .multiselect-row:not(:last-child){
+	border-bottom: 1px solid #ededed;
+}
+#dialog.multiSelect .multiselect-row .selection{
+	vertical-align: top;
+}
+#dialog.multiSelect .multiselect-row .item-name{
+	width: 600px;
+	display: inline-block;
+	margin-left: 15px;
+}
+#dialog.multiSelect .selected-area{
+	margin-top: 20px;
+}
+
+/*end - multiselect component  + dialog*/

@@ -1,0 +1,17 @@
+.css-dialog .mathMLDialog{
+    width: 620px !important;
+    overflow: hidden !important;
+    height: 344px !important;
+    max-height: 344px !important;
+}
+
+.css-dialog .mathMLDialog #dialogContent{
+    max-height: 220px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.css-dialog .mathMLDialog .wrs_formulaDisplay{
+    height: 99px !important;
+    max-height: 99px !important;
+}

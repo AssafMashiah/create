@@ -1,0 +1,40 @@
+  <div class="cropper-rows-container">
+    <div class="cropper-header-row">
+      Image Editor
+    </div>   
+    <div class="cropper-main-display-row">
+      <div class="cropper-empty-left-column"></div>
+      <div class="img-container">
+       <img src="{{#server-path}}{{config.data.img}}{{/server-path}}" alt="Picture">
+     </div>
+     <div class="cropper-empty-right-column"></div>
+   </div>
+   <div class="cropper-buttons-row">
+    <div class="cropper-empty-left-column"></div>
+    <div class="cropper-buttons-column">
+      <div class="cropper-buttons-left">
+        <div class="cropper-button cropicon-zoom-in-cropper" title="((imageCropper.zoomin))">
+        </div>
+        <div class="cropper-button cropicon-zoom-out-cropper" title="((imageCropper.zoomout))">
+        </div>
+        <div class="cropper-button cropicon-rotate-left-cropper" title="((imageCropper.rotate.left))">
+        </div>
+        <div class="cropper-button cropicon-rotate-right-cropper" title="((imageCropper.rotate.right))">
+        </div>
+      </div>
+      <div class="cropper-resize-boxes">
+        <div class="cropper-resize-input">
+          <input class="cropper-inputbox" id="imgResizeWidth" type="text" maxlength="4" placeholder="100">
+          <div class="cropper-resize-text">((Width))</div>
+        </div>
+        <div class="cropper-resize-input">
+          <input class="cropper-inputbox" id="imgResizeHeight" type="text" maxlength="4" placeholder="100">
+          <div class="cropper-resize-text">((Height))</div>
+        </div>
+      </div>
+      <div class="cropper-button cropicon-refresh" title="((imageCropper.reset))">
+      </div>
+    </div>
+    <div class="cropper-empty-right-column"></div>
+  </div>
+</div>

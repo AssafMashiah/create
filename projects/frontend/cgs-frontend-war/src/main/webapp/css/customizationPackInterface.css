@@ -1,0 +1,344 @@
+.hiddenOnHover{
+	display: none;
+	float: right;
+	width:75px;
+}
+
+.visibleOnHover{
+	width: calc(100% - 79px);
+	display: inline-block;
+}
+
+#feedbacks_table_body .visibleOnHover{
+	width: calc(100% - 48px);
+}
+
+#feedbacks_table_body .hiddenOnHover{
+	width: 44px;
+}
+
+.props_text_container:hover .hiddenOnHover{
+	display: inline-block;
+}
+
+.contentEditableTve{
+	border: 1px #ddd solid;
+	padding: 2px;
+	width: calc(100% - 52px);
+	display: inline-block;
+	vertical-align: top;
+	line-height: 26px;
+	min-height: 26px;
+}
+
+.props_text_container .narration_icon {
+	display: inline-block;
+	position: relative;
+}
+
+#CP_InstructionsComponent .left{
+	float: left;
+	padding: 8px;
+}
+
+#CP_InstructionsComponent .right{
+	float: right;
+	padding: 8px;
+	border-left: 1px solid #ddd;
+}
+
+.th_task{
+	width: 25%;
+}
+
+.table th.th_instruction{
+	width: 75%;
+}
+
+inlinefile {
+	display: none;
+}
+
+inlinefile[type=inlineImage]{
+	display: inline-block;
+	width: 20px;
+	height:20px;
+	background-size: cover;
+}
+
+.warningMessage{
+	color: #ff6633;
+	font-size: 12px;
+	font-family: Arial;
+	font-style: italic;
+	padding: 5px 0;
+}
+
+.warningMessage .icon-info{
+	font-size: 27px;
+	vertical-align: text-bottom;
+}
+
+#feedbacks_table .th_icon,
+#feedbacks_table .icon
+{
+	width: 5%;
+}
+
+#feedbacks_table .th_condition,
+#feedbacks_table .condition
+{
+	width: 15%;
+}
+
+#feedbacks_table .th_preliminary,
+#feedbacks_table .preliminary{
+	width: 40%;
+}
+
+#feedbacks_table .th_final,
+#feedbacks_table .final{
+	width: 40%;
+}
+
+#feedbacks_table .props_text_container{
+	min-height: 85px;
+}
+
+#feedbacks_table_body #addNarration,
+#feedbacks_table_body .upload_tts 
+{
+	margin-bottom: 5px;
+}
+#feedbacks_table_body .upload_tts{
+	font-size: 10px;
+	padding: 3px;
+}
+#feedbacks_table_body .icon-picture{
+	font-size: 27px;
+	padding: 3px 0;
+	margin:0;
+
+}
+
+.asIs{
+	padding: 5px 0;
+}
+.asIs input{
+	margin:0;
+}
+
+.rtl table#instructions_table td .contentEditableTve,
+.rtl table#player_interface_table td .contentEditableTve,
+.rtl table#feedbacks_table td .contentEditableTve{
+	text-align: right;
+} 
+.props_text_container .narration_icon .remove-narration{
+
+	position: absolute;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	color: black;
+	border: 1px solid #dedede;
+	text-align: center;
+	left: 27px;
+	z-index: 10;
+	display: none;
+}
+.props_text_container .narration_icon:not(.disabled):hover .remove-narration{
+	display: block;
+}
+
+/*player interface*/
+#player_interface_table_body .dl_icon{
+	font-family:  'DL_Iconfont';
+	font-size: 22px;
+}
+#player_interface_table_body .dl_icon.text_font{
+	font-family: 'Text-Editor-Iconfont';
+}
+#player_interface_table_body .contentEditableTve,
+#player_interface_table_body .visibleOnHover{
+	width: 99%;
+}
+
+/*fonts table*/
+.cp_fontsTitle{
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.fontFamilyRow{
+	background-color: #ededed;
+}
+.fontFamilyName{
+	float: left;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 32px;
+}
+.delete_font {
+	float: right;
+	font-size: 32px;
+}
+/*upload font dialog  */
+
+.legalRightsLabel,.legalFontsInfo, .fontName{
+	display: inline-block;
+}
+input[type="checkbox"].legalRightsCheckbox,
+input[type="checkbox"].moreInfoBtn{
+	margin: 0;
+}
+.legalRightsLabel,
+.moreInfoBtn{
+	margin-top: 20px;
+}
+.moreInfo{
+	height: 280px;
+	overflow-y:scroll; 
+	outline: 1px solid #ededed;
+	padding: 5px;
+	display: none;
+	margin-top: 5px;
+}
+#dialog.showInfo .moreInfo{
+	display: block;
+}
+
+#dialog.cp_fontUpload.showInfo {
+	max-height: 580px;
+}
+#dialog.cp_fontUpload.showInfo  .modal-body{
+	max-height: 430px;
+	height: 430px;
+}
+.fontUpload .filesUploaded{
+	margin-bottom: 10px;
+}
+.fontUpload .font_row{
+	padding: 5px 0;
+}
+
+/*styles and effects*/
+.style_and_effect_row{
+	position: relative;
+	padding: 0 15px 10px 0;
+	clear: both;
+}
+.titleArea{
+	height: 19px;
+	border-bottom: 1px solid #f49121;
+	font-size: 12px;
+	font-family: 'Arial';
+	color: #333;
+	margin-bottom: 14px;
+}
+.titleArea.system{
+	border-bottom: 1px solid #0099e5;
+}
+
+.styleAndEffectTitle{
+	display: inline-block;
+	font-style: italic;
+}
+.style_and_effect_row .edit,
+.style_and_effect_row .delete
+{
+	cursor: pointer;
+	float: right;
+}
+.style_and_effect_row .edit:hover,
+.style_and_effect_row .delete:hover{
+	color: #0099e5;
+}
+.style_and_effect_row .delete{
+	border-left: 1px solid #333;
+	margin-left: 10px;
+	font-size: 32px;
+	line-height: 16px;
+
+}
+.sampleText{
+	
+	line-height: 1.14;
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+.rtl .sampleText{
+	direction: rtl;
+}
+.styleEffectsTitle {
+	height: 34px;
+	margin-bottom: 38px;
+	background-color: #f5f5f5;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 34px;
+	margin-left: -22px;
+	padding-left: 22px;
+	color: #f49121;
+}
+.styleEffectsTitle.default{
+	color: #0099e5;
+}
+#CP_stylesComponent,#CP_effectsComponent{
+	width: 720px;
+}
+
+#players_table{
+    max-width: 440px;
+}
+
+#players_table th{
+    background: #f5f5f5;
+}
+
+#players_table .player-edit-td{
+    text-align: center;
+}
+
+#players_table .player-edit-buttons-wrapper{
+    display: inline-block;
+}
+
+#players_table .player-edit, #players_table .player-reset{
+    font-family: "CGS-icons";
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+    color: #333;
+    float: left;
+    border: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+}
+
+#players_table .player-edit:hover, #players_table .player-reset:hover{
+    color: #0099e5;
+}
+
+#players_table .player-edit:before{
+    content: "\73";
+}
+
+#players_table .player-reset:before{
+    content: "\6d";
+}
+
+#players_table .players-edit-separator{
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #ccc;
+    float: left;
+    margin-top: 8px;
+}

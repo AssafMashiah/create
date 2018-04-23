@@ -1,0 +1,24 @@
+{
+   "cid" : "69bb10b0-26a6-11e2-81c1-080020" ,
+   "courseId" : "69bb10b0-26a6-11e2-81c1-0800200c9a61" ,
+
+   "header":{
+
+    "last-modified": null
+
+   },
+
+    "version" : "1.0.0",
+    "somethingsA":{
+        "t1":"st1",
+        "t2":"st2"
+    },
+
+
+	"somethingsB":{
+        "t1":"st1",
+        "t2":"st2"
+    },
+
+	"toc":{"data":"asdhasdjhaksjdhasjkd","data2":"sdsada"}
+}

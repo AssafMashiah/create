@@ -1,0 +1,23 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper instruction_editor props_editor">
+    <ul class="nav nav-tabs" id="InstructionEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.show" id="field_show_instructions">
+                <label class="control-label inline-block" for="field_show_instructions">((Show Instructions))</label>
+            </div>
+            {{#controller.record.data.show}}
+            <div class="control-group" >
+                <input type="checkbox" data-checked="obj.emphasize" id="field_emphasize">
+                <label class="control-label inline-block" for="field_emphasize">((Emphasize))</label>
+            </div>
+            {{/controller.record.data.show}}
+        </div>
+    </div>
+</div>
+

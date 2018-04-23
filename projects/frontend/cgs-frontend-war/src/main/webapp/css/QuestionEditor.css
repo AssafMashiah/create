@@ -1,0 +1,32 @@
+.questionEditor{
+	width: 715px;
+    padding:0 10px 10px 10px;
+}
+
+.questionEditor .question_content .element_preview_wrapper
+{
+    padding-right: 70px ;
+    width: auto !important;
+}
+ 
+.questionEditor .question_content .table_content .tableCell_content .element_preview_wrapper {
+     padding-right: 0px ;
+}
+.questionEditorWrapper {
+    border-top: 1px solid #fff;
+}
+/*.over .questionEditor{
+	background-color: #edefee;
+}
+.selected .questionEditor{
+	background-color: #e4e6e5;
+}*/
+div.addItemsInstructions{
+	color: #276CC7;
+    margin-left: 10px;
+    top: -6px;
+    position: relative;
+    font-family:"open_sans";
+
+}
+

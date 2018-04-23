@@ -1,0 +1,91 @@
+defaultTasks 'clean', 'build', 'assebmble', 'install:createInstall'
+
+apply from: 'cgs-common.gradle'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
+
+allprojects {
+    apply plugin: 'maven'
+    idea {
+        project {
+            languageLevel = '1.8'
+
+            //you can configure the VCS used by the project
+            vcs = 'svn'
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        maven {
+            url "http://maven:8081/nexus/content/groups/public"
+        }
+        maven {
+            url "http://maven:8081/nexus/content/repositories/repo.pentaho.org"
+        }
+//		maven {
+//			url "http://repository.pentaho.org/artifactory/pentaho"
+//		}
+
+        mavenCentral()
+        maven {
+            url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/"
+        }
+    }
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: "http://maven:8081/nexus/content/repositories/snapshots") {
+                    authentication(userName: "build-manager", password: "123456")
+                }
+            }
+        }
+    }
+
+    buildscript {
+        repositories {
+            mavenLocal()
+            maven {
+                url "http://maven:8081/nexus/content/groups/public"
+            }
+            mavenCentral()
+        }
+    }
+
+    try {
+        idea.module.iml {
+            beforeMerged { module ->
+                module.dependencies.clear()
+            }
+        }
+        idea.project.ipr {
+            beforeMerged { project ->
+                project.modulePaths.clear()
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            cacheChangingModulesFor 3, 'minutes'
+        }
+    }
+
+    // display dependencies for all subprojects in multi-project build
+    // https://solidsoft.wordpress.com/2014/11/13/gradle-tricks-display-dependencies-for-all-subprojects-in-multi-project-build/
+    task allDeps(type: DependencyReportTask) {}
+
+    // tracking down not expected transitive dependencies
+    // https://solidsoft.wordpress.com/2014/11/19/gradle-tricks-tracking-down-not-expected-transitive-dependencies/
+    // gradle allDepInsight --configuration testRuntime --dependency org.slf4j:slf4j-simple
+    task allDepInsight(type: DependencyInsightReportTask) {}
+}

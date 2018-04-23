@@ -1,0 +1,25 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper props_editor {{controller.record.type}}">
+    <ul class="nav nav-tabs" id="sequenceEditorTabs">
+        <li class="active">
+            <a href="#properties" data-toggle="tab">((props.{{controller.record.type}})) {{childOrder}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_url">((URL Address)):</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.overlaySrc" id="field_url" class="input-large">
+                    <span class="help-inline error" id="field_title_err"
+                          style="display:none">((This field is required))</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                   <a id="url-preview" target="_blank" href="{{controller.record.data.overlaySrc}}">((Preview in new tab))</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

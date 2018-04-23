@@ -1,0 +1,49 @@
+.css-dialog-property-preview #dialog {
+    max-width: 88%;
+    max-height: 88%;
+    min-width: 160px;
+    min-height: 140px;
+    width: auto;
+    height: auto;
+    padding: 35px 10px 10px 10px;
+    opacity: 0.01;
+}
+
+.css-dialog-property-preview #dialog.fixed-size {
+    min-height: 0;
+}
+
+.css-dialog-property-preview #dialog.position-ready {
+    opacity: 1;
+}
+
+.css-dialog-property-preview .overlay {
+    background-color: #333;
+    opacity: 0.7;
+}
+
+.css-dialog-property-preview #dialog #close {
+    background-position-x: -69px;
+    float: none;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.css-dialog-property-preview #dialogContent {
+    padding: 0;
+    max-width: none;
+    max-height: none;
+    min-width: 0;
+    min-height: 0;
+}
+
+.css-dialog-property-preview #dialogControls {
+    display: none;
+}
+
+.css-dialog-property-preview #dialogContent #propertyPreview video.preview-media {
+    width: 600px;
+    height: 450px;
+}

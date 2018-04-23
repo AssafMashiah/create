@@ -1,0 +1,37 @@
+<div class="span2 verticalNavContainer">
+<!-- Nav tabs -->
+<ul class="nav nav-pills nav-stacked" role="tablist">
+    <li role="presentation" class="active" id="li_properties">
+        <a href="#course_properties" class="active" aria-controls="course_properties"
+           role="tab" data-toggle="tab">((Properties))</a></li>
+    {{#options.controller.showMetadataTab}}
+    <li role="presentation"><a href="#customCourseMetadata" aria-controls="customCourseMetadata" role="tab" data-toggle="tab">((Metadata))</a></li>
+    {{/options.controller.showMetadataTab}}
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">((Settings))</a></li>
+    {{#options.controller.showNarrationTab}}
+    <li role="presentation"><a href="#languages" aria-controls="languages" role="tab" data-toggle="tab">((course.props_area.settings.narration))</a></li>
+    {{/options.controller.showNarrationTab}}
+    <li role="presentation"><a href="#applets" aria-controls="applets" role="tab" data-toggle="tab">
+        ((Applets))<span class="badge" id="applets-updates"></span></a></li>
+    <li role="presentation"><a href="#ebooks_in_use" aria-controls="ebooks_in_use" role="tab" data-toggle="tab">
+        ((ePubsInUse.title))<span class="badge" id="ebooks-in-use-updates"></span></a></li>
+    <li role="presentation"><a href="#instructions" aria-controls="instructions" role="tab" data-toggle="tab">((course.props_area.settings.defaults.instructions))</a>
+    </li>
+    <li role="presentation"><a href="#feedbacks" aria-controls="feedbacks" role="tab" data-toggle="tab">((course.props_area.settings.defaults.feedbacks))</a>
+    </li>
+    <li role="presentation"><a href="#playerInterface" aria-controls="playerInterface" role="tab" data-toggle="tab">((course.props_area.settings.defaults.playerInterface))</a>
+    </li>
+    {{#options.controller.enableCourseMiscSettings}}
+    <li role="presentation"><a href="#miscellaneous" aria-controls="miscellaneous" role="tab" data-toggle="tab">((course.props_area.settings.defaults.miscellaneous))</a>
+    </li>
+    {{/options.controller.enableCourseMiscSettings}}
+    <li role="presentation"><a href="#fonts" aria-controls="styles" role="tab" data-toggle="tab">((course.props_area.tab_design.fonts))</a>
+    </li>
+    <li role="presentation"><a href="#styles" aria-controls="styles" role="tab" data-toggle="tab">((course.props_area.tab_design.styles))</a>
+    </li>
+    <li role="presentation"><a href="#effects" aria-controls="effects" role="tab" data-toggle="tab">((course.props_area.tab_design.effects))</a>
+    </li>
+    <li role="presentation"><a href="#players" aria-controls="players" role="tab" data-toggle="tab">((course.props_area.tab_design.control.player))</a>
+    </li>
+</ul>
+</div>

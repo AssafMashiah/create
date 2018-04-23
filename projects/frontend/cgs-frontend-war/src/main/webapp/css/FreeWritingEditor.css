@@ -1,0 +1,6 @@
+.openQuestion_content .element_preview_wrapper,
+.openQuestion_content .element_preview_wrapper #instruction_content,
+.openQuestion_content .element_preview_wrapper #instruction_content .textViewer_content.small {
+	width: 100%;
+}
+

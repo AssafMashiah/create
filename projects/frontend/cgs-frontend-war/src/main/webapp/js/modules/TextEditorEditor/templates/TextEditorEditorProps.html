@@ -1,0 +1,42 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper textViewer_editor props_editor">
+    <ul class="nav nav-tabs" id="textViewereEditorTabs">
+        <li class="active" >
+        	<a href="#properties" data-toggle="tab">((Properties- ))(({{controller.elementType}}))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="field_answer_size">((Size))</label>
+                <select id="field_answer_size" data-value="obj.answer_size">
+                    {{#controller.record.data.allowedSizes}}
+                    <option value="{{value}}">(({{text}}))</option>
+                    {{/controller.record.data.allowedSizes}}
+                </select>
+                <label class="control-label" for="field_AnswerType">((Max. number of characters))</label>
+                <input min="1" max="{{maximumChars}}" placeholder="150" type="number" {{#controller.record.data.disabledMaxChars}} disabled="disabled" {{/controller.record.data.disabledMaxChars}} data-value="obj.MaxChars" class="textEditorInput" id="MaxChars" maxlength="4" />
+                <hr />
+                {{#controller.showToolbarCheckbox}}
+                <div class="showToolbar">
+                    <input type="checkbox" {{#controller.record.data.disabledShowToolbar}} disabled="disabled" {{/controller.record.data.disabledShowToolbar}} data-checked="obj.ShowToolbar" class="textEditorInput" id="field_ShowToolbar" /> &nbsp;((Show Toolbar))
+                </div>
+                {{/controller.showToolbarCheckbox}}
+
+                {{#controller.record.data.MathFieldKeyboard}}
+                    <br />
+                    <div  {{^controller.record.data.ShowToolbar}} class="hidden"  {{/controller.record.data.ShowToolbar}} id="MathFieldKeyboard_wrapper">
+                        <label class="control-label" for="MathFieldKeyboard">((Math Field keyboard))</label>
+                        <select id="MathFieldKeyboard" data-value="obj.MathFieldKeyboard" >
+                            <option value="Basic" selected>((Basic))</option>
+                            <option value="Line">((Line))</option>
+                            <option value="Algebra">((Algebra))</option>
+                            <option value="Geometry">((Geometry))</option>
+                        </select>
+                    </div>
+                {{/controller.record.data.MathFieldKeyboard}}
+            </div>
+        </div>
+    </div>
+</div>

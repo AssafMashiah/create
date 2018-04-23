@@ -1,0 +1,38 @@
+<!-- Alex Burdusel: Configuration was moved to spring-boot java annotations config-->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/mvc
+                        http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <import resource="applicationContext-web-common.xml" />
+
+    <!-- Static login resources -->
+    <mvc:resources mapping="/css/**" location="/WEB-INF/auth/css/"/>
+    <mvc:resources mapping="/assets/**" location="/WEB-INF/auth/assets/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/auth/js/"/>
+
+    <context:component-scan base-package="org.t2k.cgs.auth" />
+
+    <!-- view resolver for JSP -->
+    <bean id="loginViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/auth/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="en_US"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,8 @@
+ <multiSubAnswer id="{{id}}">
+ 	{{#displayContent}}
+ 		{{{content}}}
+ 	{{/displayContent}}
+ 	<correct>
+		<set>{{correctSet}}</set>
+	</correct>
+</multiSubAnswer>

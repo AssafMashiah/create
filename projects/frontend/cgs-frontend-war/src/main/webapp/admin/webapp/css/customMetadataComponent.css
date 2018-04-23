@@ -1,0 +1,78 @@
+#metadata-table tbody {
+	counter-reset: metadata;
+}
+
+#metadataPackagesTable tbody {
+    counter-reset: metadataPackage;
+}
+
+#metadata-table tbody tr {
+	counter-increment: metadata;
+}
+
+#metadataPackagesTable tbody tr td.counter {
+    counter-increment: metadataPackage;
+}
+
+#metadata-table tbody tr:before {
+	content: "" counter(metadata) "";
+	position: relative;
+	margin: 0 5px;
+	width: 25px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#metadataPackagesTable tbody tr td.counter:before {
+    content: "" counter(metadataPackage) "";
+}
+
+#metadata-table td input,
+#metadata-table td span,
+#metadata-table td select,
+#metadata-table td div,
+#metadataPackagesTable td input,
+#metadataPackagesTable td span,
+#metadataPackagesTable td div{
+	margin: 0;
+}
+#customMetadataComponent .btn,
+#customMetadataPackagesComponent .btn {
+	padding: 0;
+}
+#metadata-table td:first-child,
+#metadataPackagesTable td:first-child {
+	border-left: 1px solid #e1e1e1 !important
+}
+
+#customMetadataPackagesComponent .btn {
+    font-size: 18px;
+    padding: 4px;
+}
+
+#metadataPackagesTable td.packageName {
+    width: 240px;
+}
+
+#metadataPackagesTable td.packageDescription {
+    width: 650px;
+}
+
+#metadataPackagesTable td.packageName div,
+#metadataPackagesTable td.packageDescription div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#metadataPackagesTable td.packageName div {
+    max-width: 240px;
+}
+
+#metadataPackagesTable td.packageDescription div {
+    max-width: 650px;
+}
+
+#metadata-table td.text-center {
+    text-align: center;
+}

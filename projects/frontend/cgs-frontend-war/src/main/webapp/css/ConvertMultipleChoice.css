@@ -1,0 +1,54 @@
+.control-group {
+	clear: both;
+}
+
+.state_line {
+	background-color: #eeeeee;
+
+	height: 54px;
+}
+
+.state_line .col {
+	float: left;
+
+	line-height: 61px;
+}
+
+.state_line .col label {
+	float: left;
+	line-height: 52px;
+	text-align:center;
+	padding: 0 5px;
+	color: #333333;
+}
+
+.ConvertMultipleChoice {
+	min-width: 700px;
+}
+
+.ConvertMultipleChoice .create_mc_answer {
+	display: block;
+	clear: both;
+    float: left;
+}
+.ConvertMultipleChoice .instruction {
+	border-bottom: 1px solid #cccccc;
+}
+
+.ConvertMultipleChoice .instruction .instruction_icon {
+	margin-top: 0px !important;
+}
+
+
+
+
+.ConvertMultipleChoice .props .col input[id^="field_randomize"],
+.ConvertMultipleChoice .props .col input[id^="field_toolbar_"] {
+	float: left;
+	margin-top: 19px;
+	margin-left: 13px;
+}
+
+.ConvertMultipleChoice .props .props_editor {
+	border: 0;
+}

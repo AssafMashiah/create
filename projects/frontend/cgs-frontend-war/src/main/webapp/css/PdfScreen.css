@@ -1,0 +1,7 @@
+.pdf_screen_stage_base {
+	overflow: hidden !important;
+}
+
+.pdf_screen_stage_base > div {
+	margin: 0 !important;
+}

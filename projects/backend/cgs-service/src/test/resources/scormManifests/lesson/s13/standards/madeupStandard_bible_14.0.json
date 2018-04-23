@@ -1,0 +1,29 @@
+{
+  "name": "madeupStandard",
+  "description": "Standard for tests",
+  "subjectArea": "bible",
+  "country": "USA",
+  "purpose": "skill level",
+  "version": "14.0",
+  "created": "29/05/2013 04:14:22",
+  "standards": {
+    "pedagogicalId": "CM",
+    "taggable": "false",
+    "description": "",
+    "children": [
+      {
+        "pedagogicalId": "6",
+        "gradeLevel": "sixth",
+        "taggable": "false",
+        "description": "Common Core State Standards for Mathematics, Grade 6",
+        "children": [
+                  {
+                    "pedagogicalId": "mock.ped.id",
+                    "gradeLevel": "sixth",
+                    "taggable": "true",
+                    "description": "This is a standard made up for tests."
+                  }
+    ]
+  }]
+}
+}

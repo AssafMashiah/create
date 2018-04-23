@@ -1,0 +1,64 @@
+<!-- Alex Burdusel: Configuration was moved to spring-boot java annotations config-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+
+
+    <!--
+        CGS Application configuration
+    -->
+    <bean name="t2kConfig" class="com.t2k.configurations.Configuration" init-method="loadConfigurations">
+        <constructor-arg index="0">
+            <list>
+                <!--<value>config/cgsConfig.properties</value>-->
+                <!--<value>config/cms.properties</value>-->
+                <!--<value>config/mongo.properties</value>-->
+                <value>config/version.properties</value>
+                <value>config/t2k.properties</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+    <!--
+       Support for Required annotation
+    -->
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+
+    <!-- I18N Resource bundle configuration -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename">
+			<value>classpath:/resources/strings</value>
+		</property>
+        <property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+
+
+
+
+    <!--
+        A request scoped user details bean that can be injected into controllers and services and will always
+        point to the current user because of the auto scoped proxy.
+
+        Without this, classes interested in accessing user details will need to use a singleton method provided by
+        spring security, making it hard to unit test them.
+
+        NOTE: not sure if this is a good place to place this because of the use of the term 'request'
+              but I couldn't find a better location because we have multiple web contexts.
+
+    -->
+    <bean name="userDetails" class="org.t2k.cgs.security.AuthenticationHolder" factory-method="getUserDetails" scope="request">
+        <aop:scoped-proxy />
+    </bean>
+
+    <bean name="authentication" class="org.t2k.cgs.security.AuthenticationHolder" factory-method="getAuthentication" scope="request">
+        <aop:scoped-proxy />
+    </bean>
+
+</beans>

@@ -1,0 +1,18 @@
+
+CGT / MMT search
+
+This folder contains media files for SvnProxy and PreviewAccessPoint servlet assets.
+Whenever an asset is searched for and the file is not in availbale in the repository, 
+the servlet will attempt to retrieve the appropriate "dummy" file from this location.
+
+Supported media types include any media that may be used in CGT preview, and and image file that may be played in SWFLoader.
+
+mp3
+swf
+flv
+gif
+bmp
+jpg
+jpeg
+png
+mp4

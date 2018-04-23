@@ -1,0 +1,32 @@
+<ul class="toc-list">
+    {{#tocs}}
+    <li class="toc-item treeNode" tocId="{{cid}}">
+        {{title}}
+        <ul class="lessons-list ">
+            {{#tocItemsContent}}
+                {{#visible}}
+                <li>
+                    <a class="lesson-link" lessonId="{{cid}}" lessonType="{{itemtype}}">{{title}}</a>
+                </li>
+                {{/visible}}
+            {{/tocItemsContent}}
+        </ul>
+    </li>
+    {{/tocs}}
+</ul>
+
+<ul class="lessons-list">
+    {{#hasChildren}}
+    {{#tocItemsContent}}
+        {{#visible}}
+        <li>
+            <a class="lesson-link" lessonId="{{cid}}" lessonType="{{itemtype}}">{{title}}</a>
+        </li>
+        {{/visible}}
+    {{/tocItemsContent}}
+    {{/hasChildren}}
+    {{^hasChildren}}
+    <li disabled="disabled" class="disabled">((publish.scorm.empty_course.title))</li>
+    {{/hasChildren}}
+</ul>
+

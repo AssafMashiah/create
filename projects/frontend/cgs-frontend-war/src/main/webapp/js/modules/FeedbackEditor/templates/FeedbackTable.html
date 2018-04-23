@@ -1,0 +1,86 @@
+<table class="table table-bordered" id="feedbacks_table">
+    <thead>
+    <tr>
+        <td style="width: 5%">((Icon))</td>
+        <td style="width: 25%">((Condition))</td>
+        <td style="width: 35%">((Preliminary Attempts))</td>
+        <td style="width: 35%">((Final Attempt))</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#feedbacksToDisplay.all_correct}}
+    <tr id="all_correct">
+        <td><div class="icon_correct"></div></td>
+        <td>((All Correct))</td>
+        <td id="td_p_all_correct"></td>
+        <td id="td_f_all_correct"></td>
+    </tr>
+    {{/feedbacksToDisplay.all_correct}}
+    {{#feedbacksToDisplay.missing_item}}
+    <tr id="missing_item">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Missing Item))</td>
+        <td id="td_p_missing_item"></td>
+        <td id="td_f_missing_item"></td>
+    </tr>
+    {{/feedbacksToDisplay.missing_item}}
+    {{#feedbacksToDisplay.partly_correct}}
+    <tr id="partly_correct">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Partly Correct))</td>
+        <td id="td_p_partly_correct"></td>
+        <td id="td_f_partly_correct"></td>
+    </tr>
+    {{/feedbacksToDisplay.partly_correct}}
+    {{#feedbacksToDisplay.partly_correct_missing_item}}
+    <tr id="partly_correct_missing_item">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Partly Correct + Missing item))</td>
+        <td id="td_p_partly_correct_missing_item"></td>
+        <td id="td_f_partly_correct_missing_item"></td>
+    </tr>
+    {{/feedbacksToDisplay.partly_correct_missing_item}}
+    {{#controller.record.data.show_partly_correct}}
+    {{#feedbacksToDisplay.partly_correct_more_80}}
+    <tr id="partly_correct_more_80">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Partly Correct > 80%))</td>
+        <td id="td_p_partly_correct_more_80"></td>
+        <td id="td_f_partly_correct_more_80"></td>
+    </tr>
+    {{/feedbacksToDisplay.partly_correct_more_80}}
+    {{#feedbacksToDisplay.partly_correct_less_80}}
+    <tr id="partly_correct_less_80">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Partly Correct < 80%))</td>
+        <td id="td_p_partly_correct_less_80"></td>
+        <td id="td_f_partly_correct_less_80"></td>
+    </tr>
+    {{/feedbacksToDisplay.partly_correct_less_80}}
+    {{/controller.record.data.show_partly_correct}}
+    {{#feedbacksToDisplay.all_correct_and_wrong}}
+    <tr id="all_correct_and_wrong">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((All Correct + Wrong))</td>
+        <td id="td_p_all_correct_and_wrong"></td>
+        <td id="td_f_all_correct_and_wrong"></td>
+    </tr>
+    {{/feedbacksToDisplay.all_correct_and_wrong}}
+    {{#feedbacksToDisplay.misplaced_sequence_part}}
+    <tr id="misplaced_sequence_part">
+        <td><div class="icon_partially_correct"></div></td>
+        <td>((Misplaced Sequence Part))</td>
+        <td id="td_p_misplaced_sequence_part"></td>
+        <td id="td_f_misplaced_sequence_part"></td>
+    </tr>
+    {{/feedbacksToDisplay.misplaced_sequence_part}}
+    {{#feedbacksToDisplay.all_incorrect}}
+    <tr id="all_incorrect">
+        <td><div class="icon_incorrect"></div></td>
+        <td>((All Incorrect))</td>
+        <td id="td_p_all_incorrect"></td>
+        <td id="td_f_all_incorrect"></td>
+    </tr>
+    {{/feedbacksToDisplay.all_incorrect}}
+    </tbody>
+</table>

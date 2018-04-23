@@ -1,0 +1,58 @@
+
+grant codeBase "file:${catalina.base}/webapps/cgs/-" {
+		// ReflectPermission
+		permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+
+		// FilePermission (todo pelit - consider finer grained file permissions)
+		permission java.io.FilePermission "${catalina.base}${/}..${/}-", "read, write, delete";
+		permission java.io.FilePermission "<<ALL FILES>>", "read, write, delete";
+
+		// PropertyPermission
+		permission java.util.PropertyPermission "*", "read, write";
+
+		// SocketPermission
+		permission java.net.SocketPermission "*", "connect,accept,resolve";
+
+		// AuthPermission
+
+		permission java.security.SecurityPermission "removeProvider.STRTransform";
+		permission java.security.SecurityPermission "putProviderProperty.STRTransform";
+
+		// RuntimePermission
+		permission java.lang.RuntimePermission "getenv.WMSAPP_HOME";
+		permission java.lang.RuntimePermission "accessClassInPackage.sun.reflect";
+		permission java.lang.RuntimePermission "reflectionFactoryAccess";
+		permission java.lang.RuntimePermission "accessDeclaredMembers";
+		permission java.lang.RuntimePermission "createClassLoader";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.jasper.security";
+		permission java.lang.RuntimePermission "accessClassInPackage.sun.misc";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.tomcat.dbcp.dbcp";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.tomcat.dbcp.pool";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.tomcat.dbcp.pool.impl";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.coyote";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.cxf";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.tomcat.util.net";
+		permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.loader";
+
+		// for cobertura coverage tool
+		permission java.lang.RuntimePermission "shutdownHooks";
+
+		// Grant all permissions to MBean-related operations.
+		permission javax.management.MBeanServerPermission "*";
+		permission javax.management.MBeanTrustPermission "*";
+		permission javax.management.MBeanPermission "*", "*";
+										
+
+											
+		// Tomcat 7
+		permission java.net.SocketPermission "localhost:*", "listen,resolve";
+		
+};
+
+grant codeBase "file:${catalina.base}/webapps/cgs/WEB-INF/-" {
+	 permission java.security.AllPermission "*", "read";
+};
+
+grant codeBase "file:/-" {
+	 permission java.security.AllPermission "*", "read,write,delete";
+};

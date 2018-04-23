@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="t2k_scorm" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 4th Edition</schemaversion>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+            <general>
+                <title>
+                    <string>${TITLE}</string>
+                </title>
+                <language>${LANGUAGE}</language>
+                <structure>
+                    <source>LOMv1.0</source>
+                    <value>atomic</value>
+                </structure>
+                <aggregationLevel>
+                    <source>LOMv1.0</source>
+                    <value>2</value>
+                </aggregationLevel>
+            </general>
+            <lifeCycle>
+                <version>
+                    <string>${COURSE_VERSION}</string>
+                </version>
+                <status>
+                    <source>LOMv1.0</source>
+                    <value>${PUBLISH_MODE}</value>
+                </status>
+                <contribute>
+                    <role>
+                        <source>LOMv1.0</source>
+                        <value>publisher</value>
+                    </role>
+                    <entity>BEGIN:VCARD&amp;#13;&amp;#10;VERSION:2.1&amp;#13;&amp;#10;N:${ACCOUNT_NAME}&amp;#13;&amp;#10;END:VCARD</entity>
+                    <date>
+                        <dateTime>${PUBLISH_START_DATE}</dateTime>
+                        <description>
+                            <string>This date represents the date the author finished authoring the component</string>
+                        </description>
+                    </date>
+                </contribute>
+            </lifeCycle>
+            <metaMetadata>
+                <metadataSchema>LOMv1.0</metadataSchema>
+            </metaMetadata>
+            <technical>
+                <format>text/html</format>
+                <size>${SCP_AND_COURSE_FOLDERS_SIZE}</size>
+                <requirement>
+                    <orComposite>
+                        <type>
+                            <source>LOMv1.0</source>
+                            <value>browser</value>
+                        </type>
+                        <name>
+                            <source>LOMv1.0</source>
+                            <value>ms-internet explorer</value>
+                        </name>
+                        <minimumVersion>10.0</minimumVersion>
+                        <maximumVersion>11.0</maximumVersion>
+                    </orComposite>
+                </requirement>
+                <otherPlatformRequirements>
+                    <string>display: at least 800 X 600 pixels x 256 colors</string>
+                </otherPlatformRequirements>
+            </technical>
+            <educational>
+                <interactivityType>
+                    <source>LOMv1.0</source>
+                    <value>mixed</value>
+                </interactivityType>
+                <language>${LANGUAGE}</language>
+            </educational>
+        </lom>
+    </metadata>
+    <organizations default="t2k_main">
+        <organization identifier="t2k_main">
+            <imsss:sequencing>
+                <imsss:controlMode choiceExit="true" flow="true"/>
+                <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+            </imsss:sequencing>
+        </organization>
+    </organizations>
+</manifest>

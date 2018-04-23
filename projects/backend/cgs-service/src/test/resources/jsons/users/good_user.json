@@ -1,0 +1,11 @@
+{
+    "firstName": "Roni",
+    "lastName": "Darwish",
+    "email": "fsd",
+    "username": "rd1",
+    "password": "fdsa",
+    "relatesTo": {
+        "id": 1,
+        "type": "PUBLISHER"
+    }
+}

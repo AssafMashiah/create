@@ -1,0 +1,31 @@
+{
+  "cid": "eadfa012-d51f-43c7-9fb8-0cb7841b8da7",
+  "header": {
+    "last-modified": {
+      "$date": "2015-11-26T14:54:59.673Z"
+    }
+  },
+  "schema": "course_v5",
+  "pedagogicalLessonType": "Custom",
+  "contentLocales": [
+    "en_US"
+  ],
+  "supplementaryNarrationLocales": [
+    "iw_IL"
+  ],
+  "standards": [
+
+  ],
+  "standardPackages": [
+
+  ],
+  "resources": [
+
+  ],
+  "title": "Lesson",
+  "type": "lesson",
+  "customFields": [
+
+  ],
+  "format": "NATIVE"
+}

@@ -1,0 +1,54 @@
+<div class="publishWrapper">
+
+    {{#displayPublishModeDropdown}}
+    <div class="control-group horizontal">
+        <label class="control-label"
+               for="PublishMethodSelection">((course.pop_up.publish.publishing_method.label))</label>
+        <select id="PublishMethodSelection">
+            <option value="course" selected="selected">((course.pop_up.publish.publishing_method.entire_course))
+            </option>
+            <option value="lesson">((course.pop_up.publish.publishing_method.selected_lessons))</option>
+        </select>
+    </div>
+    {{/displayPublishModeDropdown}}
+
+    {{#enabledCourseCatalog}}
+        <div class="publishModeRow course">
+            <input id="courseToCatalog" type="radio" name="publishMode" value="courseToCatalog">
+            <label for="courseToCatalog" class="publishModeDescription" >((publish.mode.course.catalog))</label>
+        </div>
+    {{/enabledCourseCatalog}}
+    {{#enabledCourseFile}}
+        <div class="publishModeRow course">
+            <input id="courseToFile" type="radio" name="publishMode" value="courseToFile">
+            <label for="courseToFile" class="publishModeDescription">((publish.mode.course.file))</label>
+        </div>
+    {{/enabledCourseFile}}
+    {{#enabledLessonCatalog}}
+        <div class="publishModeRow lesson">
+            <input id="lessonToCatalog" type="radio" name="publishMode" value="lessonToCatalog">
+            <label for="lessonToCatalog" class="publishModeDescription">((publish.mode.lesson.catalog))</label>
+        </div>
+    {{/enabledLessonCatalog}}
+    {{#enabledLessonFile}}
+        <div class="publishModeRow lesson">
+            <input id="lessonToFile" type="radio" name="publishMode" value="lessonToFile">
+            <label for="lessonToFile" class="publishModeDescription">((publish.mode.lesson.file))</label>
+        </div>
+    {{/enabledLessonFile}}
+	{{#enabledLessonURL}}
+    <div class="publishModeRow lesson">
+        <input id="lessonShareLink" type="radio" name="publishMode" value="lessonShareLink">
+        <label for="lessonShareLink" class="publishModeDescription">((publish.mode.lesson.link))</label>
+    </div>
+	{{/enabledLessonURL}}
+	{{#enabledCourseURL}}
+    <div class="publishModeRow course">
+        <input id="courseShareLink" type="radio" name="publishMode" value="courseShareLink">
+        <label for="courseShareLink" class="publishModeDescription">((publish.mode.course.link))</label>
+    </div>
+	{{/enabledCourseURL}}
+    {{#noPublishMethods}}
+        ((publish.mode.none))
+    {{/noPublishMethods}}
+</div>

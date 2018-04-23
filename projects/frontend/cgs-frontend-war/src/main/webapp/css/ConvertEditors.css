@@ -1,0 +1,99 @@
+.drop-zone {
+	min-width: 465px;
+	min-height: 80px;
+	margin-top: 10px;
+	height: auto;
+}
+
+.drop-zone.over {
+	background-color: #dedede;
+}
+
+.drop-zone.disabled , .draggingContainer.disabled{
+	cursor: not-allowed;
+}
+
+.drop-zone .data-container {
+	position: relative;
+	margin-top: 10px;
+}
+
+.drop-zone .data-container button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+
+.drop-zone .data-container .draggingContainer,
+.drop-zone .data-container .draggingContainer > div {
+	white-space: normal;
+	position: static !important;
+}
+
+.ConvertEditor {
+	position: relative;
+	border: 1px dashed #cccccc;
+	min-width: 465px;
+	min-height: 80px;
+	background-color: white;
+	margin: 0 auto;
+	clear: both;
+	padding: 20px;
+}
+
+.ConvertEditor .instruction {
+	border-bottom: 1px solid #cccccc;
+}
+
+.ConvertEditor .placeholder,
+.pdf_screen_stage_base div[data-placeholder]:not(:focus):empty:before {
+	color: #999;
+}
+.pdf_screen_stage_base div[data-placeholder]:not(:focus):empty:before {
+    content: attr(data-placeholder);
+    float: left;
+    margin-left: 2px;
+}
+
+
+.ConvertEditor legend {
+	color: #cccccc;
+	min-width: 134px;
+	width: auto;
+	border: 0;
+}
+
+.ConvertEditor .content-area {
+	min-height: 80px;
+	position: relative;
+}
+
+.ConvertEditor .content-area .drop-zone div[type=text] {
+
+}
+
+.ConvertEditor .content-area .drop-zone div[type=image] {
+	position: static;
+}
+
+#ConvertEditors .element_preview_wrapper {
+	padding: 4px;
+}
+
+#ConvertEditors .element_preview_wrapper.selected {
+	background-color: white;
+}
+
+#ConvertEditors .no-image-content-area {
+	background-color: rgb(204,204,204);
+}
+
+#ConvertEditors .no-image-content-area-wrapper {
+	width: 150px !important;
+}
+
+#ConvertEditors .drop-zone.no-image-default-size {
+	min-width: 126px !important;
+	min-height: 126px !important;
+}

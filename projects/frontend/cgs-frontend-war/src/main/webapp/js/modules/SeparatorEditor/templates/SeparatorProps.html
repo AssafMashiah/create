@@ -1,0 +1,32 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper separator_editor props_editor">
+    <ul class="nav nav-tabs" id="separatorEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties))</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field" for="field_title">((Separator name)):</label>
+                <div class="controls">
+                    <input type="text" data-value="obj.title" id="field_title" class="input-large"></input>
+                    <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.showImage" id="field_show_image"   {{#controller.record.data.disableshowImage}}disabled {{/controller.record.data.disableshowImage}} cantBeEnabled="true">
+                <label class="control-label" for="field_show_image">((Image))</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.showTitle" id="field_show_title"   {{#controller.record.data.disableshowTitle}}disabled {{/controller.record.data.disableshowTitle}} cantBeEnabled="true">
+                <label class="control-label" for="field_show_title">((Title))</label>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.showSubTitle" id="field_show_sub_title"   {{#controller.record.data.disableshowSubTitle}}disabled {{/controller.record.data.disableshowSubTitle}} cantBeEnabled="true">
+                <label class="control-label" for="field_show_sub_title">((Subtitle))</label>
+            </div>
+        </div>
+    </div>
+</div>

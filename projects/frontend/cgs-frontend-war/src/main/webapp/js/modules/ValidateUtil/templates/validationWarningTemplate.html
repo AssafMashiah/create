@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="icon-warning"></div>
+        </div>
+        <div class="span10">
+            {{header}}
+            {{#fieldsByTab}}
+            <h5>{{tab}} Tab</h5>
+            <ul>
+                {{#fields}}
+                <li>{{name}}</li>
+                {{/fields}}
+            </ul>
+            {{/fieldsByTab}}
+        </div>
+    </div>
+</div>

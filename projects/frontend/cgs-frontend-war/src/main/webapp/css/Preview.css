@@ -1,0 +1,227 @@
+
+
+#toolbar {
+    /*border-bottom: 1px solid #BBB;*/
+    background: #276CC7;
+    padding: 0;
+}
+
+#toolbar label {
+    display: inline;
+}
+
+#toolbar select {
+    height: 31px;
+    font-size: 16px !important;
+    color: #fff;
+}
+
+#toolbar .select-resolution{
+    height: 27px;
+    font-size: 12px !important;
+    display: none;
+    margin-right: 8px;
+    margin-left: 8px;
+   
+}
+#toolbar select:focus{
+    color:#fff;
+    background-color:#276CC7;
+}
+
+#toolbar .multilanguage_text{
+    color: #f5f5f5;
+}
+
+#toolbar .multilanguage_text .number .small {
+    font-size: 85%;
+    vertical-align: top;
+    color: #555;
+}
+
+#toolbar #title {
+    background-color: #E6E6E6;
+    width: 107px;
+    float: left;
+    height: 55px;
+    margin-right: 12px;
+    line-height: 55px;
+}
+
+#toolbar #tools {
+    padding: 0;
+    padding-top: 6px;
+    height: 55px;
+    line-height: 55px;
+}
+
+#toolbar .platform-dropdown{
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    margin-left: 20px;
+    float: left;
+}
+
+#toolbar .platform-caret{
+    border-top: 4px solid #F5F5F5;
+    float: right;
+    margin-top: 0;
+}
+
+#toolbar .platform-button{
+    width: 44px;
+    height: 32px;
+    display: inline-block;
+    padding: 0;
+    margin-top: -8px;
+    outline: none;
+    border: none;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-color: #276CC7;
+}
+
+#toolbar .platform-icons{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-top: 3px;
+    float: left;
+    margin-left: 10px;
+}
+
+#toolbar .platform-selection{
+    margin-top: -5px;
+}
+
+#toolbar .platform-selection > li{
+    text-indent: 5px;
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+}
+
+#toolbar select[id^=PreviewMode_]{
+    width: auto;
+}
+
+#toolbar #SetCustomDims{
+    display: none;
+    height: 45px;
+    padding-top: 10px;
+    float: left;
+}
+
+#toolbar .previewCustomDimsLabel{
+    color: #f5f5f5;
+    float: left;
+    font-size: 14px;
+    margin: 0 8px 0 10px;
+    height: 32px;
+    line-height: 32px;
+}
+
+#toolbar .previewCustomDimsInput{
+    width: 70px;
+    float: left;
+    color: #FFF;
+    font-size: 14px;
+}
+
+#toolbar #ApplyCustomDims{
+    float: left;
+    height: 29px;
+    margin-left: 10px;
+}
+
+#toolbar #WithinTeachWrapper{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 10px;
+    position: relative;
+    float: left;
+}
+
+#toolbar #WithinTeachWrapper label{
+    color: #f5f5f5;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+}
+
+#toolbar #WithinTeachWrapper input{
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    float: left;
+}
+
+#toolbar .vertical-divider{
+    display: inline-block;
+    width: 1px;
+    height: 44px;
+    margin: 0 10px;
+    background: #FFF;
+    float: left;
+}
+
+.css-dialog-preview {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+#dialog.preview {
+    min-height: 97%;
+    height: 97%;
+    width: 97%;
+    position: absolute;
+    background: #eee;
+}
+
+#dialog.preview #dialogContent {
+    height: 98%;
+    min-height: 98%;
+    width: 100%;
+    padding: 0;
+}
+
+#dialog.preview #frame {
+    height:92%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#dialog.preview #frame::-webkit-scrollbar-button:horizontal:decrement,
+#dialog.preview #frame::-webkit-scrollbar-button:horizontal:increment {
+  display: none;
+}
+#dialog.preview #frame iframe{
+    margin: 20px;
+    border: 1px solid #386cb5;
+}
+
+#dialog.preview #dialogControls {
+    /*max-height: 78px;
+    bottom: 0;
+    position: absolute;
+    left: 0;*/
+    display: none;
+}
+
+.css-dialog-preview #dialog #close{
+    background-position-x: -39px !important;
+    background-position-y: -141px !important;
+    background-image: url(../media/icons_sprite.png) !important;
+    width: 16px !important;
+    height: 17px !important;
+    margin: 19px;
+}
+
+#dialog.preview{
+    background-color: #eee;
+}

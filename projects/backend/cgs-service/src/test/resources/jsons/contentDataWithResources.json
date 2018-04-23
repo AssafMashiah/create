@@ -1,0 +1,706 @@
+{
+    "author" : "renana renana",
+    "cgsVersion" : "7.0.345",
+    "cid" : "ca72169c-1c2a-4f36-9144-fd307442cea9",
+    "contentLocales" : [
+        "en_US"
+    ],
+    "courseId" : "46da9525-ea14-4be4-8b84-f7e80e28ecd3",
+    "coverRefId" : "resource_1",
+    "customizationPack" : {
+        "name" : "en_US_MHE",
+        "version" : "3.1",
+        "language" : "english",
+        "date" : "03/03/2014",
+        "author" : "Itai Ben-Naftali",
+        "resourceId" : "resource_4"
+    },
+    "header" : {
+        "last-modified" : "2014-08-12T11:17:26.452Z",
+"lastModifiedFormatted" : "2013-08-20 19:36:35"
+},
+"includeLo" : true,
+"maxDepth" : 3,
+"publisher" : "McGraw-Hill",
+"resources" : [{
+    "resId": "resource_7",
+    "href": "sequences/b7fb2f5d-43f9-4cc9-b075-af100ae5cdf5",
+    "type": "attachment"
+},
+    {
+        "resId": "resource_8",
+        "href": "sequences/46b72377-efa3-4271-a71a-0162c0ec68ba",
+        "type": "attachment"
+    },
+{
+"href" : "media/52/dc/52dc3e6869b49b03c94a6c10c6c8ea3cc9143af5.png",
+"type" : "media",
+"resId" : "resource_1"
+},
+{
+"resId" : "resource_2",
+"href" : "cgsData/Grade_6_EOY_Benchmark.pdf",
+"type" : "planning"
+},
+{
+"resId" : "resource_3",
+"href" : "cgsData/Grade_7_EOY_Benchmark.pdf",
+"type" : "planning"
+},
+{
+"resId" : "resource_4",
+"baseDir" : "customizationPack/en_US_MHE/3.1",
+"hrefs" : [
+"manifest.json",
+"cgs/config.json",
+"cgs/system-font.css",
+"cgs/systemFonts/DL-Iconfont_normal.eot",
+"cgs/systemFonts/DL-Iconfont_normal.svg",
+"cgs/systemFonts/DL-Iconfont_normal.ttf",
+"cgs/systemFonts/DL-Iconfont_normal.woff",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.eot",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.svg",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.ttf",
+"cgs/systemFonts/Text-Editor-Iconfont_normal.woff",
+"dl/systemFonts/DL-Iconfont_normal.eot",
+"dl/systemFonts/DL-Iconfont_normal.svg",
+"dl/systemFonts/DL-Iconfont_normal.ttf",
+"dl/systemFonts/DL-Iconfont_normal.woff",
+"dl/systemFonts/Text-Editor-Iconfont_normal.eot",
+"dl/systemFonts/Text-Editor-Iconfont_normal.svg",
+"dl/systemFonts/Text-Editor-Iconfont_normal.ttf",
+"dl/systemFonts/Text-Editor-Iconfont_normal.woff",
+"dl/config.json",
+"dl/strings.js",
+"dl/style.css",
+"dl/system-font.css",
+"dl/mathfield/mathField.css",
+"dl/mathfield/fonts/MF_T2K_US-Bold-Italic.ttf",
+"dl/mathfield/fonts/MF_T2K_US-Bold.ttf",
+"dl/mathfield/fonts/MF_T2K_US-Italic.ttf",
+"dl/mathfield/fonts/MF_T2K_US-Regular.ttf",
+"cgs/media/051abf5fb1b1fea9c6d4332b9b4ae7f5484c21e0.mp3",
+"cgs/media/0d806c19267952d98b168015cbcf95cfcb1b76b7.mp3",
+"cgs/media/0f3c41eddbed815302eb173d68d4deacf24a5815.mp3",
+"cgs/media/10cdf8aebf663a821d45e6e28beec976798dcc18.mp3",
+"cgs/media/1b992a8bf7d9caea316c8472cee82374e185a6a2.mp3",
+"cgs/media/20ed93a60b2d6516e4c82092c5c9cb697db016e0.mp3",
+"cgs/media/22056622ca7fc82b00c3cca374370bba5eafce99.mp3",
+"cgs/media/3bd90f5dc8f99690a75c3f1ad8d39e397c9693dd.mp3",
+"cgs/media/45122d235f12822e3e9dd786b5479e4eb3dbd61d.mp3",
+"cgs/media/497e261092f9f334a4268794e2235b8fb133334c.mp3",
+"cgs/media/4d24d5244d2a0e92fffbc617912838b22c545ac5.mp3",
+"cgs/media/5153099379df97b590221182c809d23347253422.mp3",
+"cgs/media/5eb2505f00152509f6f948c33a4c929d7487b358.mp3",
+"cgs/media/60337c3506650a468ef61f42b249e5e0ebb427f8.mp3",
+"cgs/media/64e2ad91b16c50911d9c9485ea3f37b431485bba.mp3",
+"cgs/media/677321dc3d0afa277e91de16697e3c281e4d14eb.mp3",
+"cgs/media/6b2c410a3fe2bf53c2d1eba16a23ec6247acc4e9.mp3",
+"cgs/media/6b6b668c0714c12080a28ff1fd052aa20d3b9048.mp3",
+"cgs/media/769d5755f57dbd091934933448da3b8f0cc40d35.mp3",
+"cgs/media/776fb17a49a2193f316d653ff5ff998484e4f8f7.mp3",
+"cgs/media/79608398c95045fa6c773b7cc097362dea404708.mp3",
+"cgs/media/818a3f012bc61a95775f39bca9b143f26f9e5db9.mp3",
+"cgs/media/845027c599ed4383c099b7c4ad2bea0a6a6a0a09.mp3",
+"cgs/media/84cb5e1d7da4aaf65b48918c8398f39f84912259.mp3",
+"cgs/media/8ef10519192b0f6927dfab8e11be8321e7c556c7.png",
+"cgs/media/9034d2fb0165c370758f859cb9424c2d374f59d1.mp3",
+"cgs/media/a0326b8b3f80a79c3e4d917c356de6cd8eb05353.mp3",
+"cgs/media/a59123de834c11f75b3592a966cb6bc13c26095c.mp3",
+"cgs/media/a7ff1d57ddf64efe768ce12d35af413e8c8e8b4e.mp3",
+"cgs/media/b6acc15821368001d72632434b918ed418655718.mp3",
+"cgs/media/b749a15ba05877368057bd25cadde680e591ce1e.mp3",
+"cgs/media/c1975c171d851c9520b981a38b9df60a5e3257e8.mp3",
+"cgs/media/c33268432d157a035aea2bfcfa324d0211354a85.mp3",
+"cgs/media/c5fbf367a32b0662676a187e2811db8b4e851f1d.mp3",
+"cgs/media/ca0c39eb3c3a4d7652e5d2e197ee852e68b90395.png",
+"cgs/media/cfc61d7b88755e6cda40e4a4c01716c08b06be60.mp3",
+"cgs/media/d6fb52c1645390de2b8ea2444a99cabfa98798b1.mp3",
+"cgs/media/d94f568f63e93dd4940740f6fe7e558a3e983063.mp3",
+"cgs/media/dee43ed61d555825e7851eab21606ed9662a64da.mp3",
+"cgs/media/e3779cb45814bbb1ebac4f9218188d25bea2a03f.mp3",
+"cgs/media/e6bf173feb4b8d7263688050fe0481e23608c2f0.mp3",
+"cgs/media/f4c2bb5a18b7385f8a02cadfd9945101cc68c1f1.png",
+"cgs/media/f537f5144701720ff16dc685f60b223675910326.mp3",
+"cgs/media/f726eced3d38568b69189037019846f48a412e49.mp3",
+"cgs/fonts/srasans2.0-bold-webfont.eot",
+"cgs/fonts/srasans2.0-bold-webfont.svg",
+"cgs/fonts/srasans2.0-bold-webfont.ttf",
+"cgs/fonts/srasans2.0-bold-webfont.woff",
+"cgs/fonts/srasans2.0-bolditalic-webfont.eot",
+"cgs/fonts/srasans2.0-bolditalic-webfont.svg",
+"cgs/fonts/srasans2.0-bolditalic-webfont.ttf",
+"cgs/fonts/srasans2.0-bolditalic-webfont.woff",
+"cgs/fonts/srasans2.0-book-webfont.eot",
+"cgs/fonts/srasans2.0-book-webfont.svg",
+"cgs/fonts/srasans2.0-book-webfont.ttf",
+"cgs/fonts/srasans2.0-book-webfont.woff",
+"cgs/fonts/srasans2.0-italic-webfont.eot",
+"cgs/fonts/srasans2.0-italic-webfont.svg",
+"cgs/fonts/srasans2.0-italic-webfont.ttf",
+"cgs/fonts/srasans2.0-italic-webfont.woff",
+"cgs/fonts/t2k-icons.eot",
+"cgs/fonts/t2k-icons.svg",
+"cgs/fonts/t2k-icons.ttf",
+"cgs/fonts/t2k-icons.woff",
+"cgs/fonts/SRASans2.0_Bold.eot",
+"cgs/fonts/SRASans2.0_Bold.svg",
+"cgs/fonts/SRASans2.0_Bold.ttf",
+"cgs/fonts/SRASans2.0_Bold.woff",
+"cgs/fonts/SRASans2.0_Bold+Italic.eot",
+"cgs/fonts/SRASans2.0_Bold+Italic.svg",
+"cgs/fonts/SRASans2.0_Bold+Italic.ttf",
+"cgs/fonts/SRASans2.0_Bold+Italic.woff",
+"cgs/fonts/SRASans2.0_Italic.eot",
+"cgs/fonts/SRASans2.0_Italic.svg",
+"cgs/fonts/SRASans2.0_Italic.ttf",
+"cgs/fonts/SRASans2.0_Italic.woff",
+"cgs/fonts/SRASans2.0_Regular.eot",
+"cgs/fonts/SRASans2.0_Regular.svg",
+"cgs/fonts/SRASans2.0_Regular.ttf",
+"cgs/fonts/SRASans2.0_Regular.woff",
+"dl/fonts/srasans2.0-bold-webfont.eot",
+"dl/fonts/srasans2.0-bold-webfont.svg",
+"dl/fonts/srasans2.0-bold-webfont.ttf",
+"dl/fonts/srasans2.0-bold-webfont.woff",
+"dl/fonts/srasans2.0-bolditalic-webfont.eot",
+"dl/fonts/srasans2.0-bolditalic-webfont.svg",
+"dl/fonts/srasans2.0-bolditalic-webfont.ttf",
+"dl/fonts/srasans2.0-bolditalic-webfont.woff",
+"dl/fonts/srasans2.0-book-webfont.eot",
+"dl/fonts/srasans2.0-book-webfont.svg",
+"dl/fonts/srasans2.0-book-webfont.ttf",
+"dl/fonts/srasans2.0-book-webfont.woff",
+"dl/fonts/srasans2.0-italic-webfont.eot",
+"dl/fonts/srasans2.0-italic-webfont.svg",
+"dl/fonts/srasans2.0-italic-webfont.ttf",
+"dl/fonts/srasans2.0-italic-webfont.woff",
+"dl/fonts/t2k-icons.eot",
+"dl/fonts/t2k-icons.svg",
+"dl/fonts/t2k-icons.ttf",
+"dl/fonts/t2k-icons.woff",
+"dl/fonts/SRASans2.0_Bold.eot",
+"dl/fonts/SRASans2.0_Bold.svg",
+"dl/fonts/SRASans2.0_Bold.ttf",
+"dl/fonts/SRASans2.0_Bold.woff",
+"dl/fonts/SRASans2.0_Bold+Italic.eot",
+"dl/fonts/SRASans2.0_Bold+Italic.svg",
+"dl/fonts/SRASans2.0_Bold+Italic.ttf",
+"dl/fonts/SRASans2.0_Bold+Italic.woff",
+"dl/fonts/SRASans2.0_Italic.eot",
+"dl/fonts/SRASans2.0_Italic.svg",
+"dl/fonts/SRASans2.0_Italic.ttf",
+"dl/fonts/SRASans2.0_Italic.woff",
+"dl/fonts/SRASans2.0_Regular.eot",
+"dl/fonts/SRASans2.0_Regular.svg",
+"dl/fonts/SRASans2.0_Regular.ttf",
+"dl/fonts/SRASans2.0_Regular.woff",
+"dl/styles.json",
+"cgs/fonts.css",
+"cgs/effects.css",
+"cgs/styles.css",
+"cgs/cgsStyles.css"
+],
+"type" : "lib"
+}
+],
+"schema" : "course_v4",
+"standardPackages" : [],
+"standards" : [],
+"title" : "Lynda's Sandbox",
+"toc" : {
+"cid" : "0546d7e8-8141-4fb6-8c18-14718a89a935",
+"title" : "Lynda's Sandbox",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "cfec443d-41e9-43ab-946f-27114b794e18",
+"type" : "lesson"
+}
+],
+"tocItems" : [
+{
+"cid" : "4e212139-3910-4a91-858e-2dc7b727019d",
+"title" : "Unit 3",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "bb11fba4-c96c-4152-8270-86a2cd78d478",
+"type" : "lesson"
+},
+{
+"cid" : "8e126053-a38e-47a4-979f-93661726763f",
+"type" : "lesson"
+},
+{
+"cid" : "82bb5cd7-b0f8-4656-b9f8-570dcf78c9e6",
+"type" : "lesson"
+},
+{
+"cid" : "e2a9e3e0-f72b-4514-8b09-a61dce0ef1ac",
+"type" : "lesson"
+},
+{
+"cid" : "bb9ba5d2-a2b7-4d84-8ddf-fde69c86cae7",
+"type" : "assessment"
+},
+{
+"cid" : "0b6167a2-1a45-4eea-a523-fe333f1306e2",
+"type" : "lesson"
+},
+{
+"cid" : "cc28cc37-0bb0-49e4-80ae-a5bf12fc5b76",
+"type" : "lesson"
+},
+{
+"cid" : "bdb05310-885f-41e3-bc66-beec9966f91b",
+"type" : "lesson"
+},
+{
+"cid" : "367504a0-55a7-43f1-b5dd-f7bb85fd0ca2",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "ce726897-cced-40c3-b8b5-65cd5cb476dc",
+"title" : "Benchmark Tests",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "6ca3fb73-5434-4018-8b19-1cb4144a1679",
+"type" : "assessment"
+},
+{
+"cid" : "80b4e3ff-8eeb-4673-afe8-d27e57f6ba40",
+"type" : "assessment"
+},
+{
+"cid" : "41142550-bebd-41ba-b5ce-f6ed56bca14d",
+"type" : "lesson"
+},
+{
+"cid" : "2239ec59-e13f-4163-863e-b9e6b0d8a7af",
+"type" : "lesson"
+},
+{
+"cid" : "e50a6421-b8ac-43a6-a542-86202a34ae3f",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "d5fc4511-1c3e-4bce-85db-da48d62954fc",
+"title" : "New TOC 1",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "4b3a9540-4900-4deb-84cc-efa2d0dba31a",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+},
+{
+"cid" : "48b9b69b-9734-4d0a-a154-36ee6cd76d28",
+"title" : "Grade 6 Unit 4",
+"overview" : "",
+"keywords" : [],
+"type" : "tocItem",
+"tocItemRefs" : [
+{
+"cid" : "800b1750-e6d0-40c5-b470-ffc71eecf5af",
+"type" : "lesson"
+},
+{
+"cid" : "e54f976a-30ba-4cf4-b4a0-fbf62cb3609e",
+"type" : "lesson"
+},
+{
+"cid" : "8de24311-5fcc-4f3d-9f44-93ead6e81767",
+"type" : "lesson"
+},
+{
+"cid" : "7e8abbf1-68f1-4f7c-95f5-f688dfc3ee42",
+"type" : "lesson"
+},
+{
+"cid" : "e51c5519-cfc4-461f-a559-25fdfeb02035",
+"type" : "lesson"
+}
+],
+"tocItems" : []
+}
+]
+},
+"type" : "course",
+"version" : "1.0.0",
+ "learningObjects":[
+     {
+         "cid" : "a7c2bee7-4f30-498b-9db2-c9cb2e4f9e3b",
+         "levels" : [
+             {
+                 "levelId" : 1,
+                 "sequence" : {
+                     "cid" : "1121cf1d-fb46-4813-85da-989bee473b9b",
+                     "mimeType" : "DL",
+                     "tasks" : [
+                         {
+                             "cid" : "aec27a0c-b261-4645-a242-09cd85c1e8ab",
+                             "type" : "task",
+                             "title" : "Fill in the gaps",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(E)"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "2157cd72-0cdf-429b-83d8-f27ee83a971c",
+                             "type" : "task",
+                             "title" : "Fill in the gaps",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(F)"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "48fd2bcd-6c12-4656-87ed-07d1f0d20f95",
+                             "type" : "task",
+                             "title" : "Fill in the gaps",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(H)"
+                                     ]
+                                 }
+                             ]
+                         }
+                     ],
+                     "contentRef" : "resource_191",
+                     "resourceRefId" : [
+                         "resource_146",
+                         "resource_51",
+                         "resource_147",
+                         "resource_53",
+                         "resource_62",
+                         "resource_54",
+                         "resource_56",
+                         "resource_57",
+                         "resource_148",
+                         "resource_123",
+                         "resource_149",
+                         "resource_150",
+                         "resource_151",
+                         "resource_152",
+                         "resource_135",
+                         "resource_76",
+                         "resource_153",
+                         "resource_154",
+                         "resource_155",
+                         "resource_84",
+                         "resource_191",
+                         "resource_193",
+                         "resource_194",
+                         "resource_195",
+                         "resource_196"
+                     ],
+                     "standards" : [
+                         {
+                             "stdPackageId" : "ccss_math_2.0",
+                             "pedagogicalIds" : [
+                                 "MP1",
+                                 "4.NBT.B.6"
+                             ]
+                         },
+                         {
+                             "stdPackageId" : "teks_math_2.0",
+                             "pedagogicalIds" : [
+                                 "4.1(A)",
+                                 "4.1(B)",
+                                 "4.4(H)",
+                                 "4.4(F)",
+                                 "4.4(E)"
+                             ]
+                         }
+                     ],
+                     "title" : "Approaching Level",
+                     "type" : "sequence"
+                 }
+             },
+             {
+                 "levelId" : 2,
+                 "sequence" : {
+                     "cid" : "3f02e133-b324-4a9d-8d74-41c60945c2cd",
+                     "mimeType" : "DL",
+                     "tasks" : [
+                         {
+                             "cid" : "07ddab29-a0d9-4a17-afaf-fb6dd125232b",
+                             "type" : "task",
+                             "title" : "New Multiple Choice",
+                             "allowedAttempts" : 2,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(F)",
+                                         "4.4(H)"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "38bb9cd9-00e2-4773-9fe5-02990ae0e6ac",
+                             "type" : "task",
+                             "title" : "New Multiple Choice",
+                             "allowedAttempts" : 2,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(H)"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "fcc6531e-1f55-45ba-b409-bcfb9e23bde5",
+                             "type" : "task",
+                             "title" : "Fill in the gaps",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(H)"
+                                     ]
+                                 }
+                             ]
+                         }
+                     ],
+                     "contentRef" : "resource_197",
+                     "resourceRefId" : [
+                         "resource_154",
+                         "resource_155",
+                         "resource_84",
+                         "resource_174",
+                         "resource_175",
+                         "resource_119",
+                         "resource_176",
+                         "resource_76",
+                         "resource_53",
+                         "resource_177",
+                         "resource_54",
+                         "resource_178",
+                         "resource_179",
+                         "resource_135",
+                         "resource_180",
+                         "resource_181",
+                         "resource_182",
+                         "resource_51",
+                         "resource_183",
+                         "resource_184",
+                         "resource_56",
+                         "resource_57",
+                         "resource_197",
+                         "resource_199",
+                         "resource_200",
+                         "resource_201",
+                         "resource_202"
+                     ],
+                     "standards" : [
+                         {
+                             "stdPackageId" : "ccss_math_2.0",
+                             "pedagogicalIds" : [
+                                 "MP1",
+                                 "4.NBT.B.6"
+                             ]
+                         },
+                         {
+                             "stdPackageId" : "teks_math_2.0",
+                             "pedagogicalIds" : [
+                                 "4.1(A)",
+                                 "4.1(B)",
+                                 "4.4(H)",
+                                 "4.4(F)",
+                                 "4.4(E)"
+                             ]
+                         }
+                     ],
+                     "title" : "On Level",
+                     "type" : "sequence"
+                 }
+             },
+             {
+                 "levelId" : 3,
+                 "sequence" : {
+                     "cid" : "f6a756ad-38b0-48ce-8989-5d3589696b6d",
+                     "mimeType" : "DL",
+                     "tasks" : [
+                         {
+                             "cid" : "4c7481fa-177e-48df-8247-aec57bf7ce8d",
+                             "type" : "task",
+                             "title" : "Fill in the gaps",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "auto",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(H)"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "7d7b54bb-05e2-49cb-8421-0678211e62df",
+                             "type" : "task",
+                             "title" : "New Free Writing",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "manual",
+                             "standards" : [
+                                 {
+                                     "stdPackageId" : "ccss_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.NBT.B.6"
+                                     ]
+                                 },
+                                 {
+                                     "stdPackageId" : "teks_math_2.0",
+                                     "pedagogicalIds" : [
+                                         "4.4(H)"
+                                     ]
+                                 }
+                             ]
+                         },
+                         {
+                             "cid" : "01ee0a67-cbb9-45e6-8433-b90f546e5484",
+                             "type" : "task",
+                             "title" : "New Self Check",
+                             "allowedAttempts" : 0,
+                             "checkingType" : "none",
+                             "standards" : []
+                         }
+                     ],
+                     "contentRef" : "resource_210",
+                     "resourceRefId" : [
+                         "resource_154",
+                         "resource_203",
+                         "resource_204",
+                         "resource_51",
+                         "resource_81",
+                         "resource_53",
+                         "resource_205",
+                         "resource_54",
+                         "resource_56",
+                         "resource_57",
+                         "resource_206",
+                         "resource_76",
+                         "resource_207",
+                         "resource_208",
+                         "resource_209",
+                         "resource_210",
+                         "resource_212",
+                         "resource_213",
+                         "resource_214",
+                         "resource_215"
+                     ],
+                     "standards" : [
+                         {
+                             "stdPackageId" : "ccss_math_2.0",
+                             "pedagogicalIds" : [
+                                 "MP1",
+                                 "4.NBT.B.6"
+                             ]
+                         },
+                         {
+                             "stdPackageId" : "teks_math_2.0",
+                             "pedagogicalIds" : [
+                                 "4.1(A)",
+                                 "4.1(B)",
+                                 "4.4(H)",
+                                 "4.4(F)",
+                                 "4.4(E)"
+                             ]
+                         }
+                     ],
+                     "title" : "Beyond Level",
+                     "type" : "sequence"
+                 }
+             }
+         ],
+         "title" : "Independent Learning 4",
+         "type" : "differentiatedSequenceParent",
+         "standards" : []
+     }
+ ]
+}

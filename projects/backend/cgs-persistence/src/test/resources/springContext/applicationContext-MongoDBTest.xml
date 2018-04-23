@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/data/mongo
+          http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+     <context:property-placeholder location="classpath:config/mongo.properties"/>
+
+    <mongo:mongo id="mongoTest" host="${common.mongo.host}" port="${common.mongo.port}">
+        <mongo:options
+                connections-per-host="${common.mongo.connectionsPerHost}"
+                threads-allowed-to-block-for-connection-multiplier="${common.mongo.threadsAllowedToBlockForConnectionMultiplier}"
+                connect-timeout="${common.mongo.connectTimeout}"
+                max-wait-time="${common.mongo.maxWaitTime}"
+                auto-connect-retry="${common.mongo.autoConnectRetry}"
+                socket-keep-alive="${common.mongo.socketKeepAlive}"
+                socket-timeout="${common.mongo.socketTimeout}"
+                slave-ok="${common.mongo.slaveOk}"
+                write-number="1"
+                write-timeout="0"/>
+    </mongo:mongo>
+
+    <mongo:db-factory id="cgsMongoDbFactory" dbname="cgs" mongo-ref="mongoTest" username="${common.mongo.user}" password="${common.mongo.password}" />
+
+    <bean id="cgsMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+         <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+         <property name="writeConcern" value="ACKNOWLEDGED"/>
+     </bean>
+
+     <bean name="mongoDao" class="org.t2k.cgs.dao.MongoDao">
+         <property name="mongoTemplate" ref="cgsMongoTemplate"/>
+     </bean>
+
+
+
+
+</beans>

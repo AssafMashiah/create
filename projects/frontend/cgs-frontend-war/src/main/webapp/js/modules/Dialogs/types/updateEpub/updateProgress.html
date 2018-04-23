@@ -1,0 +1,50 @@
+<div class="content-box">
+	<div class="error-message no-error">
+		<div class="failure-title-wrapper">
+			<div class="failed-sign"></div>
+			<div class="failed-title">
+				<a id="epub-error-details-toggle">((error.details))</a>
+			</div>
+		</div>
+		<div class="failed-text" id="epub-error-failure-text"></div>
+	</div>
+	<div id="success-message">
+        <div><span class="filename"></span> ((dialog.updateepub.updateSuccessful)).</div>
+        <div style="margin-top: 20px; margin-bottom: 20px;">((dialog.updateepub.publishToApply))</div>
+        <div>((dialog.updateepub.checkThePages))</div>
+	    <div id="updated-courses" style="display: none; margin-top: 20px;"></div>
+    </div>
+	<div class="content-row" style="margin-bottom: 20px;">
+		((dialog.updateepub.updating)) <span class="filename"></span>.
+	</div>
+	<div class="content-row">
+		<span id="progress-info"></span>
+		<span id="progress-step"></span>
+	</div>
+	<div class="content-row">
+		<div class="progress-bar">
+			<div id="progress" style="width: 0%; transition: width 0.5s;" class="progress-info"></div>
+		</div>
+	</div>
+	<ul class="stepsinfo">
+		<li id="buildEbookStructureItem">
+			<span class="tocinfo-label">((dialog.importepub.progress.buildstructure)):</span>
+			<span id="buildEbookStructure"></span>
+		</li>
+		<li id="generatingPageThumbnailsItem">
+			<span class="tocinfo-label">((dialog.importepub.progress.generatingthumbs)):</span>
+			<span id="generatingPageThumbnails"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.updateepub.progress.ebookValidation)):</span>
+			<span id="eBookStructureValidation"></span>
+		</li>
+		<li>
+			<span class="tocinfo-label">((dialog.updateepub.progress.updatingCourse)):</span>
+			<span id="creatingCourse"></span>
+		</li>
+	</ul>
+</div>
+<div id="dialogControls" class="modal-footer" style="position: absolute; bottom: 0">
+	<div id="button_cancel" class="btn">((dialog.importepub.progress.cancel.label))</div>
+</div>

@@ -1,0 +1,50 @@
+<sequence type="{{type}}" id="{{id}}" cgsversion="{{cgsversion}}" >
+	{{#creativeWrapper}}
+	<creativeSet type='automatic'>
+		{{#creativeWrapper.footer_small}}<asset name='footer' path='{{creativeWrapper.footer_small}}'/>{{/creativeWrapper.footer_small}}
+	    {{#creativeWrapper.footer_big}}<asset name='full_footer' path='{{creativeWrapper.footer_big}}'/>{{/creativeWrapper.footer_big}}
+	    {{#creativeWrapper.margin}}<asset name='margin' path='{{creativeWrapper.margin}}'/>{{/creativeWrapper.margin}}
+	</creativeSet>
+	{{/creativeWrapper}}
+	{{#instructions}}
+	<instruction>
+	    <textViewer>
+		    <p class="Instruction">
+		        <span>{{{instructions}}}</span>
+		    </p>
+		</textViewer>
+	</instruction>
+	{{/instructions}}
+	
+
+    {{{content}}}
+</sequence>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

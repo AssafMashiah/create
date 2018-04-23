@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Administrative Console</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="#">Administrative Console</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            <a href="../auth/logout">logout</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <div id="menuContainer"></div>
+                </div>
+                <div class="span10">
+                    <div>
+                        <div id="titleContainer"></div>
+                    </div>
+                    <div>
+                        <div id="viewContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal dialog -->
+        <div id="modalDialog">
+
+        </div>
+
+        <!-- Init params -->
+        <script>
+            var initParams = {
+                user: {
+                    userName: "micha.shlain",
+                    firstName: "Micha",
+                    lastName: "Shlain",
+                    publisherAccountId: 1
+                },
+                configuration: {
+                    basePath: "http://" + location.host + "/cgs/rest",
+                    logoutPath: "http://"  + location.host + "/auth/logout",
+                    cgsVersion: "x.x.x"
+                }
+            };
+        </script>
+        <!-- Load require application, with 'boot.js' as entry point -->
+        <script data-main="js/boot" src="js/libs/require/require.js"></script>
+    </body>
+</html>

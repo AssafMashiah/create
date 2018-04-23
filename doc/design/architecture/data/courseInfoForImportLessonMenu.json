@@ -1,0 +1,39 @@
+{
+    courseId: "578f782d-29db-48b0-b7d5-e6becae26bd0",
+    title: "someFieldsExistOnCourseLevelAndOnManifest",
+    toc: {
+        cid: "bb6c9d21-7988-4c75-87ee-bfb703860c62",
+        title: "someFieldsExistOnCourseLevelAndOnManifest",
+        overview: "",
+        keywords: [],
+        type: "tocItem",
+        tocItems: [{
+            cid: "a7ccd3b4-641a-4991-9266-3c7aaa99180b",
+            title: "New level ",
+            overview: "",
+            keywords: [],
+            type: "tocItem",
+            standards: [],
+            tocItems: [],
+            tocItemsContent: [{
+                cid: "dd5f45bb-4abe-4306-a7bd-fc722a13726a",
+                title: "New Lesson",
+                type: "lesson"
+            }, {
+                cid: "dde89c76-f59f-4a2b-8cd8-6908d4dcbd5f",
+                title: "New Lesson",
+                type: "lesson"
+            }, {
+                cid: "89e97686-776a-4667-b9b2-72e2be04654c",
+                title: "New Lesson",
+                type: "lesson"
+            }]
+        }],
+        tocItemsContent: [{
+            cid: "1720d87c-2543-4e2f-8248-44ca8646a5eb",
+            title: "Main Lesson",
+            type: "lesson"
+        }]
+    },
+    version: null
+},

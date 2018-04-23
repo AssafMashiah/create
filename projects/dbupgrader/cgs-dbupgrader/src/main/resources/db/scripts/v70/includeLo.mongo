@@ -1,0 +1,6 @@
+
+#####################
+# includeLo required#
+#####################
+
+courses.update({ "contentData.includeLo":{$exists: false}},{$set:{"contentData.includeLo" : false }}, {multi: true});;

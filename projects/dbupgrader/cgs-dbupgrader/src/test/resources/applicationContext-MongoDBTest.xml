@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/data/mongo
+       http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+
+    <bean id="pureMongoDao" class="com.t2k.common.dbupgrader.dao.PureMongoDao">
+        <property name="dbFactory" ref="cgsMongoDbFactory"/>
+        <property name="targetDb" value="#{t2kConfig.getProperty('common.mongo.dbName')}"/>
+    </bean>
+
+    <bean id="pureMongoTask" class="com.t2k.common.dbupgrader.task.common.PureMongoTask" scope="prototype">
+        <property name="pureMongoDao" ref="pureMongoDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+    </bean>
+
+    <bean id="mongoScriptTask" class="com.t2k.common.dbupgrader.task.common.MongoScriptTask"  scope="prototype">
+        <property name="pureMongoDao" ref="pureMongoDao" />
+        <property name="updateLogDao" ref="updateLogDao" />
+    </bean>
+
+    <bean id="updateLogDao" class="com.t2k.common.dbupgrader.dao.UpdateMongoLogDao">
+        <property name="mongoTemplate" ref="adminMongoTemplate"/>
+        <property name="targetDb" value="#{t2kConfig.getProperty('common.mongo.dbName')}"/>
+    </bean>
+    <bean id="adminMongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+    </bean>
+    <bean id="migrationDao" class="com.t2k.cgs.dbupgrader.dao.MigrationDao">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+    <bean id="lessonsRefMigration" class="com.t2k.cgs.dbupgrader.task.LessonsRefMigration">
+        <property name="migrationDao" ref="migrationDao"/>
+    </bean>
+
+
+    <bean id="fixTeacherGuide" class="com.t2k.cgs.dbupgrader.task.FixTeacherGuide">
+        <property name="migrationDao" ref="migrationDao"/>
+    </bean>
+
+     <bean id="fixAccounts" class="com.t2k.cgs.dbupgrader.task.FixAccountsAndUsers">
+        <property name="migrationDao" ref="migrationDao"/>
+    </bean>
+
+     <bean id="fixStandardPackageId" class="com.t2k.cgs.dbupgrader.task.FixStandardPackageId">
+        <property name="migrationDao" ref="migrationDao"/>
+    </bean>
+
+     <bean id="fixAssessmentsStandardsPackageId" class="com.t2k.cgs.dbupgrader.task.FixAssessmentsStandardsPackageId">
+        <property name="migrationDao" ref="migrationDao"/>
+    </bean>
+
+    <bean id="separatorImageSizeUpdate" class="com.t2k.cgs.dbupgrader.task.SeparatorImageSizeUpdate">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="customizationPackStylesJsonFix" class="com.t2k.cgs.dbupgrader.task.CustomizationPackStylesJsonFix">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="customizationPackStylesJsonIntegrityFix" class="com.t2k.cgs.dbupgrader.task.CustomizationPackStylesJsonIntegrityFix">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+
+    <bean id="styleMigration" class="com.t2k.cgs.dbupgrader.task.StyleMigration">
+        <property name="migrationDao" ref="migrationDao"/>
+        <property name="updateLogDao" ref="updateLogDao"/>
+        <property name="configuration" ref="t2kConfig"/>
+    </bean>
+    <bean name="t2kConfig" class=" com.t2k.configurations.Configuration" init-method="loadConfigurations">
+        <constructor-arg index="0">
+            <list>
+                <value>t2k.properties</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:t2k.properties"/>
+
+    <mongo:mongo id="mongo" host="${mongoHost}" port="${mongoPort}">
+        <mongo:options
+                connections-per-host="${mongoConnectionsPerHost}"
+                threads-allowed-to-block-for-connection-multiplier="${mongoThreadsAllowedToBlockForConnectionMultiplier}"
+                connect-timeout="${mongoConnectTimeout}"
+                max-wait-time="${mongoMaxWaitTime}"
+                auto-connect-retry="${mongoAutoConnectRetry}"
+                socket-keep-alive="${mongoSocketKeepAlive}"
+                socket-timeout="${mongoSocketTimeout}"
+                slave-ok="${mongoSlaveOk}"
+                write-number="1"
+                write-timeout="0"
+                />
+    </mongo:mongo>
+
+    <mongo:db-factory id="cgsMongoDbFactory" dbname="cgs" mongo-ref="mongo" username="cgsUser" password="4samlsh"/>
+
+     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+    </bean>
+
+</beans>

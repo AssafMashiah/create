@@ -1,0 +1,59 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper progress_editor props_editor">
+    <ul class="nav nav-tabs" id="ProgressEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">((Properties- )){{controller.elementType}}</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            {{#show_num_of_attempts}}
+            <div class="control-group">
+                <label class="control-label" for="field_num_of_attempts">((Number of attempts:))</label>
+                <select id="field_num_of_attempts" data-value="obj.num_of_attempts">
+                    {{#attemptsOptions}}<option value="{{value}}">{{value}}</option>{{/attemptsOptions}}
+                </select>
+            </div>
+            {{/show_num_of_attempts}}
+            {{#show_hint}}
+            <!-- <div>
+                <h5>((Hint))</h5>
+            </div> -->
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.show_hint" id="field_show_hint">
+                <label class="control-label inline-block" for="field_show_hint">((Show Hint button))</label>
+            </div>
+            {{#show_timing}}
+            <div class="control-group">
+                <label class="control-label" for="field_hint_timing">((Timing:))</label>
+                <select id="field_hint_timing" data-value="obj.hint_timing" >
+                    <option value="1">((Always))</option>
+                    {{^options.controller.record.data.showOnlyAlways}}
+                        <option value="2">((After Mistake))</option>
+                    {{/options.controller.record.data.showOnlyAlways}}
+                </select>
+            </div>
+            {{/show_timing}}
+
+            {{#options.controller.record.data.show_on_attempt}}
+            <div class="control-group">
+                <label class="control-label" for="field_on_attempt">((Mistake Number:))</label>
+                <select id="field_on_attempt" data-value="obj.on_attempt">
+                    {{#on_attempt}}<option value="{{value}}">{{value}}</option>{{/on_attempt}}
+                </select>
+            </div>
+            {{/options.controller.record.data.show_on_attempt}}
+
+            {{/show_hint}}
+            {{#show_feedback_prop}}
+            <!-- <div>
+                <h5>((Feedback))</h5>
+            </div> -->
+            <div class="control-group">
+                <label class="control-label" for="field_feedback_type">((Feedback type:))</label>
+                <select id="field_feedback_type" data-value="obj.feedback_type"></select>
+            </div>          
+            {{/show_feedback_prop}}
+        </div>    
+    </div>
+</div>

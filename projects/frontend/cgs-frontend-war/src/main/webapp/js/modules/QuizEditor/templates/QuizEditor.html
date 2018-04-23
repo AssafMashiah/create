@@ -1,0 +1,91 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper quiz_editor props_editor">
+    <ul class="nav nav-tabs" id="LoEditorTabs">
+        <li class="active"><a href="#properties" data-toggle="tab">((Properties))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label required-field custom-label" for="field_title">((quiz.props_area.quiz_name)):</label>
+                <input type="text" data-value="obj.title" id="field_title" class="input-large align-right" />
+                <span class="help-inline error" id="field_title_err" style="display:none">((This field is required))</span>
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.redoQuizEnabled" id="field_redoQuizEnabled" />
+                <label class="control-label" for="field_redoQuizEnabled">((quiz.props_area.retest))</label>
+            </div>
+
+            <div class="control-group retest-form {{^controller.record.data.redoQuizEnabled}}hide{{/controller.record.data.redoQuizEnabled}}">
+                <label class="control-label custom-label" for="field_redoQuizTitle">((quiz.props_area.test_title))</label>
+                <input type="text" class="align-right" data-value="obj.redoQuizTitle" id="field_redoQuizTitle">
+            </div>
+            
+            <div class="control-group">
+                <div class="controls">
+                    <label class="control-label custom-label" for="field_typicalLearningTime">((quiz.props_area.typical_learning_time)):</label>
+                    <input type="text" data-value="obj.typicalLearningTime" id="field_typicalLearningTime" class="input-small align-right" />
+                </div>
+            </div>
+             <div class="control-group">
+                <div class="controls">
+                    <label class="control-label custom-label" for="field_taskWeight">((quiz.props_area.task_weight)):</label>
+                    <div>
+                        <select data-value="obj.taskWeight" id="field_taskWeight">
+                            <option value="equal">((quiz.props_area.equal))</option>
+                            <option value="manual">((quiz.props_area.manually_set))</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <span>((quiz.props_area.overall_score)):</span>
+                    <span id="overall_score">{{#getOverallScore}}{{/getOverallScore}}</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label class="control-label custom-label" for="field_scoreType">((quiz.props_area.present_score_by)):</label>
+                    <div>
+                        <select data-value="obj.scoreType" id="field_scoreType" class="input-small align-right">
+                            <option value="NONE">((quiz.props_area.dont_present))</option>
+                            <option value="BADGES">((quiz.props_area.badges))</option>
+                            <option value="POINTS">((quiz.props_area.points))</option>
+                            <option value="PERCENT">((quiz.props_area.percent))</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group badges-container {{^controller.showBadges}}hide{{/controller.showBadges}}">
+                <div class="controls">
+                    <label class="control-label custom-label" for="field_maxScore">((quiz.props_area.number_of_badges)):</label>
+                    <select data-value="obj.maxScore" id="field_maxScore" class="input-small align-right">
+                        <option value="1">((quiz.props_area.one))</option>
+                        <option value="2">((quiz.props_area.two))</option>
+                        <option value="3">((quiz.props_area.three))</option>
+                    </select>
+                </div>
+            </div>
+            {{#controller.enableDiffLevels}}
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.useForDifferentialRecommendation" id="field_useForDifferentialRecommendation" />
+                <label class="control-label" for="field_useForDifferentialRecommendation">((quiz.props_area.score_is_related_to_differention_level))</label>
+            </div>
+            <div class="control-group">
+                <button {{^controller.record.data.useForDifferentialRecommendation}}canbedisabled="false" disabled="disabled"{{/controller.record.data.useForDifferentialRecommendation}} id="set_diff_relations" class="btn">((quiz.props_area.set_relations))</button>
+            </div>
+            {{/controller.enableDiffLevels}}
+        </div>
+        {{#controller.enableStandards}}
+        <!-- standards tab -->
+        <div class="tab-pane" id="standards">
+            <h5>((standards.quiz_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>
+

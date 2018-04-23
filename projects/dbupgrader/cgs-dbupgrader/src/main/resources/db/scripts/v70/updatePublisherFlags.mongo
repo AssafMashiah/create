@@ -1,0 +1,1 @@
+publishers.update({},{$set:{enableCoachMarks:false,enableHints:false,enablePdf2t2k:false}},{multi: true});

@@ -1,0 +1,4 @@
+<answer checkable="{{#checkable}}{{checkable}}{{/checkable}}{{^checkable}}{{isCheckable}}{{/checkable}}" {{#hasCheckingMode}} checkingMode="{{checkingMode}}" {{/hasCheckingMode}} 
+{{#isLinking}} linkingMode="{{linkingMode}}" {{/isLinking}} {{#bankItemsType}} bankItemsType="{{bankItemsType}}" {{/bankItemsType}}>
+	{{{content}}}
+</answer>

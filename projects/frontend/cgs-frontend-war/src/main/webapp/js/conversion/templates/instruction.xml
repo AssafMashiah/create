@@ -1,0 +1,5 @@
+{{#show}}
+<instruction {{#emphasize}}emphasized="{{emphasize}}"{{/emphasize}} id="{{id}}">
+    {{{content}}}
+</instruction>
+{{/show}}

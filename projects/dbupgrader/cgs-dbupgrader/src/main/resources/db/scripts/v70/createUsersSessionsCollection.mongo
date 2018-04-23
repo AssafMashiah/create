@@ -1,0 +1,9 @@
+// Create users sessions collection and create indexes
+
+function f(dbName) {
+    db=db.getSiblingDB(dbName);
+    db.usersSessions.ensureIndex({destructionDate:1});
+    db.usersSessions.ensureIndex({username:1, destructionDate:1});
+    db.usersSessions.ensureIndex({sessionId:1, destructionDate:1});
+    db.usersSessions.ensureIndex({sessionId:1, destructionDate:1, status:1});
+}

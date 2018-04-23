@@ -1,0 +1,58 @@
+.audioPlayer{
+	width: 294px;
+	height: 140px;
+	background-image: url('../media/icons_sprite.png');
+	background-position: -992px -700px;
+}
+.audioPlayer.small{
+	width: 206px;
+	height: 99px;
+	background-position: -992px -979px;
+	max-width: 100%;
+}
+.audioPlayer.disabled{
+	background-position: -0px -700px;
+}
+.audioPlayer.small.disabled{
+	background-position: -770px -700px;
+}
+.audioPlayer.ordered{
+	background-position: -313px -700px;
+}
+.audioPlayer.small.ordered{
+	background-position: -992px -863px;
+}
+
+.AudioPlayer_editor.props_editor input[type="checkbox"]{
+	margin: 0;
+}
+.audioHeader.displayHeader{
+	background-color: #0b2337;
+	opacity: 0.8;
+	width: 274px;
+	height: 50px;
+	margin: 2px;
+	padding: 13px 0 0 17px;
+}
+.small .audioHeader.displayHeader{
+	width: 136px;
+	height: 23px;
+	padding: 6px 0 0 8px;	
+}
+.title{
+	font-family: "T2k-Ayala";
+	font-size: 22px;
+	color: #ffffff;
+}
+.small .title{
+	font-size: 11px;
+	line-height: 6px;
+}
+.copyrights{
+	font-family: "T2k-Ayala";
+	font-size: 12px;
+	color: #ffffff;
+}
+.small .copyrights{
+	font-size: 6px;
+}

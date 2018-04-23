@@ -1,0 +1,5 @@
+<answer {{#hasCheckingMode}} checkingMode="{{checkingMode}}" {{/hasCheckingMode}} type="{{answerMode}}" >
+    <options{{#random}} random="{{random}}"{{/random}}>
+        {{{content}}}
+    </options>
+</answer>

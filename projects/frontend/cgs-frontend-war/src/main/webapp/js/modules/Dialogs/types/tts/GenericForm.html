@@ -1,0 +1,31 @@
+<!--Generic Form Template!-->
+{{#properties}}
+	<div class="form-group">
+		{{#is_input}}
+			<label>((tts_{{key}}))</label>
+			<input data-type="{{type}}" data-key="{{key}}" type="{{type}}" {{attributes_str}} />
+		{{/is_input}}
+		{{#is_select}}
+			<label>((tts_{{key}}))</label>
+			<select data-type="{{type}}" data-key="{{key}}">
+				{{#options}}
+					<option>{{.}}</option>
+				{{/options}}
+			</select>
+		{{/is_select}}
+		{{#is_multiselection}}
+			<label data-key="{{key}}" data-type="{{type}}">
+				{{#filterOptionsByLocale}}
+					<span>((tts_Locale)):&nbsp;</span>
+				{{/filterOptionsByLocale}}
+				<span>{{#keys}}{{.}}{{/keys}}</span>
+			</label>
+			<label>((tts_{{key}})):</label>
+			<select data-type="sub_{{type}}" data-key="{{key}}">
+				{{#sub_options}}
+					<option value="{{.}}">{{.}}</option>
+				{{/sub_options}}
+			</select>
+		{{/is_multiselection}}
+	</div>
+{{/properties}}

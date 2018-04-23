@@ -1,0 +1,14 @@
+<!-- {{constructor.type}} -->
+<div class="{{elementType}}_content">
+	
+	<div class="videoPlayer small {{record.data.videoImgClass}} {{#isOrdered}} ordered {{/isOrdered}}">
+		<div class="videoHeader {{record.data.displayVideoHeader}}">
+			{{#record.data.showTitle}}
+				<div class="title"> {{record.data.videoDispalyTitle}}</div>
+			{{/record.data.showTitle}}
+			{{#record.data.showCopyrights}}
+				<div class="copyrights" > {{record.data.copyrights}}</div>
+			{{/record.data.showCopyrights}}
+		</div>
+	</div>
+</div>

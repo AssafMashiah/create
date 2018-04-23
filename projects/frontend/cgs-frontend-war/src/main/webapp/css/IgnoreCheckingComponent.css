@@ -1,0 +1,27 @@
+.component_view[component-name=ignore_checking] .ignore-checking-list ul {
+	list-style-type: none;
+
+	margin-left: 15px;
+	margin-top: 3px;
+
+	margin-right: 0;
+	margin-bottom: 0;
+
+	padding: 0;
+}
+
+.component_view[component-name=ignore_checking] .ignore-checking-list ul li {
+	height: 30px;
+
+	line-height: 30px;
+}
+
+.component_view[component-name=ignore_checking] .ignore-checking-list ul li input[type=checkbox] {
+	float: left;
+
+	margin-right: 12px;
+}
+
+.component_view[component-name=ignore_checking] .enable-ignore-checking .control-group {
+	margin-bottom: 0px;
+}

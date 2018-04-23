@@ -1,0 +1,25 @@
+<td class="assetId">
+	<div class="assetId_wrapper">{{obj.assetId}}</div>
+</td>
+<td data='narrationType'>
+	<a href="#load/{{obj.location.link}}" class='location-link'>{{{obj.narrationType}}}</a>
+</td>
+<td class='original-text'></td>
+<td class="narration-text {{#obj.locale}}{{direction}}{{/obj.locale}}">
+	{{#obj.locale}}
+	<div class="locale">
+		{{obj.locale.language}}-{{obj.locale.country}} ({{obj.locale.locale}})
+	</div>
+	{{/obj.locale}}
+	{{obj.narrationText}}
+</td>
+<td class='notes'>{{{obj.notes}}}</td>
+<td data='status'>
+	<select class='state-list' {{#obj.readonly}}disabled {{/obj.readonly}}>
+		<option value="done"  {{#obj.status}}selected{{/obj.status}}>((Done))</option>
+		<option value="not-done" {{^obj.status}}selected{{/obj.status}}>((Not Done))</option>
+	</select>
+</td>
+<td>
+	<button class='upload-btn btn btn-small btn-position' {{#obj.readonly}}disabled{{/obj.readonly}}>...</button>
+</td>

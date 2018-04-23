@@ -1,0 +1,11 @@
+<div class="commentsArea"></div>
+<div class="page {{controller.elementType}}_content" id="pdf_page">
+	<div class="flow_container">
+		<div id="imgWrapper">
+			<img class="default_scale" src="{{#server-path}}{{controller.record.data.image}}{{/server-path}}" />
+		</div>
+		<div class="html_layer_wrapper">
+			<div class="html_layer default_scale">{{{controller.record.data.html}}}</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+/* the tree node's style */
+.tree-view {
+    overflow-y: hidden;
+    font-size: 17px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.tree-view.opened {
+    background-color: #d8e8fc;
+}
+
+.tree-view_parent {
+    font-weight: 700;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tree-view_item {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* style for the children nodes container */
+.tree-view_children {
+  margin-left: 21px;
+}
+
+.tree-view_children-collapsed {
+  height: 0px;
+}
+
+.tree-view_arrow {
+  cursor: pointer;
+  margin-right: 6px;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tree-view_arrow:after {
+    content: '\0000a0';
+    width: 15px;
+    height: 15px;
+    background: url(../../media/CGS_icons.png?ver=35) -46px -7px no-repeat;
+    display: inline-block;
+}
+
+/* rotate the triangle to close it */
+.tree-view_arrow.collapsed:after {
+    background: url(../../media/CGS_icons.png?ver=35) -46px -37px no-repeat;
+}

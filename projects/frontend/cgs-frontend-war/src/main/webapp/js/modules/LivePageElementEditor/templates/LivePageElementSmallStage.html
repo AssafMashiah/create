@@ -1,0 +1,17 @@
+<!-- {{constructor.type}} -->
+<div class="data-container">
+	<div class="style-icon {{record.data.icon.size}}">
+		<img src="{{#server-path}}{{record.data.iconPath}}{{/server-path}}">
+	</div>
+	<div class="style-text">
+		<span>{{record.data.labelText}}</span>
+	</div>
+</div>
+<div class="controls {{#isReadOnly}}disabled{{/isReadOnly}}">
+	{{#showEdit}}
+		<div class="edit"><span class='icon-cog base-icon'></div>
+	{{/showEdit}}
+	{{#showRemove}}
+		<div class="remove"><span class='icon-trash base-icon'></div>
+	{{/showRemove}}
+</div>

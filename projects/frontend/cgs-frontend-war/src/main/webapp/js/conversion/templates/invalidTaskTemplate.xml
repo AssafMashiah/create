@@ -1,0 +1,11 @@
+<task exposureId="{{exposureId}}" type="questionOnly" id="{{id}}" check_type="none" >
+    <question>
+        <textViewer id="{{id}}" >
+            <p>
+            	<span class="invalid" style="color:red;font-size:16px;">
+            		<!-- {{{invalidTaskMessage}}} -->
+				</span>
+            </p>
+        </textViewer>  
+    </question>
+</task>

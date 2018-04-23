@@ -1,0 +1,67 @@
+#dialog {
+  border: 1px solid rgba(0, 0, 0, 0.12); }
+  #dialog .dialog-button {
+    background: #4391f7;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 18px; }
+    #dialog .dialog-button:hover {
+      opacity: 0.7; }
+    #dialog .dialog-button:disabled {
+      opacity: 0.4; }
+  #dialog .publish-url-dialog {
+    display: flex;
+    color: #2d3033;
+    border: none;
+    flex-direction: column;
+    height: 100%; }
+    #dialog .publish-url-dialog .dialog-title {
+      flex-grow: 0;
+      padding: 15px 20px;
+      color: #2d3033;
+      font-weight: bold;
+      background: #f4f8fa; }
+      #dialog .publish-url-dialog .dialog-title .close-dialog {
+        width: 28px;
+        height: 26px;
+        background-image: url("../media/landingPopup/close button_normal.png");
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer; }
+        #dialog .publish-url-dialog .dialog-title .close-dialog:hover {
+          opacity: 0.7; }
+    #dialog .publish-url-dialog .url-input-area {
+      flex-grow: 130;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #dialog .publish-url-dialog .url-input-area .url-input-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        #dialog .publish-url-dialog .url-input-area .url-input-group input {
+          flex-grow: 9;
+          margin: 0 10px 0 0;
+          border: 1px #dddddd solid;
+          padding: 6px; }
+          #dialog .publish-url-dialog .url-input-area .url-input-group input:read-only {
+            color: #2d3033;
+            cursor: pointer; }
+    #dialog .publish-url-dialog .dialog-footer {
+      display: flex;
+      border-top: 1px solid #dddddd;
+      flex-grow: 9;
+      padding: 15px 20px;
+      flex-direction: row;
+      align-items: center; }
+      #dialog .publish-url-dialog .dialog-footer .publish-open-link {
+        flex-grow: 1; }
+        #dialog .publish-url-dialog .dialog-footer .publish-open-link a {
+          color: #2c7be1; }
+          #dialog .publish-url-dialog .dialog-footer .publish-open-link a:hover, #dialog .publish-url-dialog .dialog-footer .publish-open-link a:focus, #dialog .publish-url-dialog .dialog-footer .publish-open-link a:active, #dialog .publish-url-dialog .dialog-footer .publish-open-link a:visited {
+            text-decoration: none;
+            color: #85b3ee; }

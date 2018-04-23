@@ -1,0 +1,32 @@
+//##################################################################################
+//#  updating publishers to new publish settings fields under customization        #
+//##################################################################################
+function f(dbName) {
+db=db.getSiblingDB(dbName);
+db.publishers.find().forEach(function(doc){
+    var defaultPublishSettings =  {
+          "courses": {
+            "enablePublishToFile" : true,
+            "enablePublishToCatalog" : true
+          },
+          "lessons": {
+            "enablePublishToFile" : false,
+            "enablePublishToCatalog" : false,
+            "enableCourseLevelsCustomizationForScorm" : false
+          }
+        }
+
+    if (doc.customization.publishSelectedLesson){ // add the current value for publishing of lessons
+       defaultPublishSettings.lessons.enablePublishToFile = true;
+    }
+    delete doc.customization.publishSelectedLesson;
+
+    if (doc.customization.enableCourseLevelsCustomizationForScorm){    // add the current value for indexing standards levels sof lessons
+        defaultPublishSettings.lessons.enableCourseLevelsCustomizationForScorm = true;
+    }
+    delete doc.customization.enableCourseLevelsCustomizationForScorm;
+
+    doc.customization.publishSettings = defaultPublishSettings;
+    db.publishers.save(doc); // re-saving the publisher document
+   });
+}

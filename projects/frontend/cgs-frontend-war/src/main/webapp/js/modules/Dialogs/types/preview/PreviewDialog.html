@@ -1,0 +1,53 @@
+<!-- inner (custom) layer of {{constructor.type}} -->
+<div id="toolbar">
+    <div id="tools">
+        <div class="dropdown platform-dropdown">
+            <button class="platform-button dropdown-toggle {{id}}-icon" data-toggle="dropdown">
+                <span class="caret platform-caret"></span>
+            </button>
+            <ul class="dropdown-menu platform-selection" role="menu">
+                {{#availablePlatforms}}
+                    <li menu-data="{{title}}"><span class="{{id}}-icon-dark platform-icons"></span>(({{title}}))</li>
+                {{/availablePlatforms}}
+            </ul>
+        </div>
+        {{#availablePlatforms}}
+            {{#hasResolutions}}
+            <select id="PlatformSelection_{{id}}" class="select-resolution">
+                {{#resolutions}}
+                    <option value="{{name}}">
+                        {{name}} ({{description}})
+                    </option>
+                {{/resolutions}}
+            </select>
+            {{/hasResolutions}}
+            {{#isMode}}
+            <select id="PreviewMode_{{id}}" class="select-resolution">
+                {{#modes}}
+                <option value="{{type}}">(({{title}}))</option>
+                {{/modes}}
+            </select>
+            {{/isMode}}
+            {{^hasResolutions}}
+            <div id="SetCustomDims">
+                <label for="PreviewWidthValue" class="previewCustomDimsLabel">((preview.device.custom.width.label))</label>
+                <input type="number" min="800" id="PreviewWidthValue" class="previewCustomDimsInput" />
+                <label for="PreviewHeightValue" class="previewCustomDimsLabel">((preview.device.custom.height.label))</label>
+                <input type="number" min="600" id="PreviewHeightValue" class="previewCustomDimsInput" />
+                <button id="ApplyCustomDims" class="btn">((preview.device.custom.button))</button>
+            </div>
+            {{/hasResolutions}}
+        {{/availablePlatforms}}
+        <div class="vertical-divider"></div>
+        {{#has_multilanguage}}
+        <span class="multilanguage_text">((Student Language)):</span>
+        <select id="locales">
+            <option value="None">((None))</option>
+            {{#locales}}
+                <option value="{{locale}}" {{#selected}}selected{{/selected}}>{{language}}-{{country}}</option>
+            {{/locales}}
+        </select>
+        {{/has_multilanguage}}
+    </div>
+</div>
+<div id="frame"></div>

@@ -1,0 +1,22 @@
+<fieldset class="{{elementType}}_content ConvertEditor ConvertMultipleChoice">
+	<legend>((Multiple Choice))</legend>
+	<div class="control-group instruction">
+		<div id="instruction_icon" class="instruction_icon">/</div>
+		<span class="placeholder">{{record.data.question_instruction}}</span>
+	</div>
+	<div class="control-group">
+		<div class="content-area question_content">
+			<span class="placeholder">((Enter Question Content))</span>
+			<div dropable-content="text,image" 
+			dropable-content-id="question_content" dropable-event-id="{{elementId}}" class="drop-zone">{{{record.data.question_content}}}</div>
+		</div>
+	</div>
+	<div class="props">
+		<div class="convert_props_{{elementId}}">
+					
+		</div>
+	</div>
+	<div class="answers_container_{{elementId}}">
+	</div>
+	<button class="create_mc_answer btn btn-small base-icon icon-plus"></button>
+</fieldset>

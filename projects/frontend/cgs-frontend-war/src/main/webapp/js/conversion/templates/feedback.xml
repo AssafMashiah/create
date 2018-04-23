@@ -1,0 +1,35 @@
+<feedback>
+	{{#genericFeedbacks}}
+		{{{mustached}}}
+	{{/genericFeedbacks}}
+</feedback>
+<specificFeedback>
+	{{#specificFeedbacks}}
+	<checkableElement id="{{id}}">
+		<correct>
+			{{#correct}}
+			<feedbackItem>
+				<checkableElementValue type="{{type}}">{{{value}}}</checkableElementValue>
+				<feedbackData>{{{mustached}}}</feedbackData>
+			</feedbackItem>
+			{{/correct}}
+		</correct>
+		<partially>
+			{{#partially}}
+			<feedbackItem>
+				<checkableElementValue type="{{type}}">{{{value}}}</checkableElementValue>
+				<feedbackData>{{{mustached}}}</feedbackData>
+			</feedbackItem>
+			{{/partially}}
+		</partially>
+		<wrong>
+			{{#wrong}}
+			<feedbackItem>
+				<checkableElementValue type="{{type}}">{{{value}}}</checkableElementValue>
+				<feedbackData>{{{mustached}}}</feedbackData>
+			</feedbackItem>
+			{{/wrong}}
+		</wrong>
+	</checkableElement>
+	{{/specificFeedbacks}}
+</specificFeedback>

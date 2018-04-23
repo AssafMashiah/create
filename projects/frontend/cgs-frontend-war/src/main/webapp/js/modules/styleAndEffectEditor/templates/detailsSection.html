@@ -1,0 +1,24 @@
+<div class="detailArea">
+	<div class="caret"></div>
+	<span>((course.props_area.tab_design.style_editor.details)):</span>
+</div>
+<div class="cssDetails">
+	{{#isProps}}
+		{{#controller.data.currentItem.cssArray}}
+			{{#controller.displayProperty}}
+				<div class="cssItem" property="{{name}}">{{name}} : {{value}}
+					{{^controller.data.isStyle}}
+						<button class="removeCssProperty btn btn-small" >
+							<span class="icon-trash base-icon"></span>
+						</button>
+					{{/controller.data.isStyle}}
+				</div>
+			{{/controller.displayProperty}}
+		{{/controller.data.currentItem.cssArray}}
+	{{/isProps}}
+	{{^isProps}}
+		{{#controller.data.currentReferance.cssArray}}
+				<div>{{name}} : {{value}}</div>
+		{{/controller.data.currentReferance.cssArray}}
+	{{/isProps}}
+</div>

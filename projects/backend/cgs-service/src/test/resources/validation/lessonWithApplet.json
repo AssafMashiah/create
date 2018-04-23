@@ -1,0 +1,103 @@
+{
+   "cid":"94e9e965-e9f6-4135-8483-42eeca9a08ab",
+   "header":{
+      "last-modified":{
+         "$date":"2013-11-17T06:51:15.522Z"
+      }
+   },
+   "schema":"course_v4",
+   "isHidden":true,
+   "pedagogicalLessonType":"Custom",
+   "standards":[
+
+   ],
+   "standardPackages":[
+
+   ],
+   "resources":[
+      {
+         "baseDir":"applets/43a85a09-812e-488e-9adf-43eb92c8b4b9/1.25",
+         "hrefs":[
+            "data/templates/pc.css",
+            "data/libs/require/text.js",
+            "data/templates/fonts/calculator.svg",
+            "data/templates/fonts/calculator.woff",
+            "data/i18n/general.js",
+            "data/libs/mustache/mustache.js",
+            "data/libs/jquery/jquery-ui.js",
+            "data/libs/jquery/rf.Highlight.js",
+            "data/libs/underscore/underscore.js",
+            "data/templates/fonts/calculator.eot",
+            "data/views/baseView.js",
+            "data/libs/lodash/lodash.js",
+            "data/libs/jquery/jquery.js",
+            "data/views/calculatorView.js",
+            "data/libs/backbone/backbone.js",
+            "data/libs/require-css/css.js",
+            "data/models/baseModel.js",
+            "data/templates/main.css",
+            "data/media/icon.png",
+            "data/libs/require/require.js",
+            "data/templates/images/Thumbs.db",
+            "data/templates/view.html",
+            "data/appletMain.js",
+            "data/libs/require-css/css-builder.js",
+            "data/libs/t2k/PostMessageManager.js",
+            "data/templates/fonts/calculator.ttf",
+            "images/icon.png",
+            "manifest.json",
+            "data/index.html",
+            "data/main.js",
+            "data/templates/images/01.png",
+            "data/libs/jquery/jquery.cookie.js",
+            "data/libs/require-css/normalize.js"
+         ],
+         "type":"lib",
+         "resId":"resource_1"
+      },
+      {
+         "type":"sequence",
+         "href":"sequences/7e819f9a-4ddc-40c1-b1fb-6de1c99f64d8",
+         "resId":"resource_2"
+      }
+   ],
+   "overview":" ",
+   "title":"PAL",
+   "type":"lesson",
+   "learningObjects":[
+      {
+         "cid":"49c2c1e8-fd1c-4929-91ed-dbea81d98d71",
+         "title":"PAL",
+         "type":"lo",
+         "pedagogicalLoType":"Warm Up",
+         "sequences":[
+            {
+               "cid":"7e819f9a-4ddc-40c1-b1fb-6de1c99f64d8",
+               "mimeType":"DL",
+               "tasks":[
+                  {
+                     "cid":"e4a8d031-0a0b-4b6a-a8bd-7e60a68a9d13",
+                     "type":"task",
+                     "title":"New applet task",
+                     "allowedAttempts":0,
+                     "checkingType":"manual",
+                     "standards":[
+
+                     ]
+                  }
+               ],
+               "contentRef":"resource_2",
+               "resourceRefId":[
+                  "resource_1",
+                  "resource_2"
+               ],
+               "standards":[
+
+               ],
+               "title":"Pal applet",
+               "type":"sequence"
+            }
+         ]
+      }
+   ]
+}

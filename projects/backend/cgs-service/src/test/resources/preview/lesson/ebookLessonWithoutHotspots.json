@@ -1,0 +1,90 @@
+{
+  "cid": "305c734f-12b0-421c-9cec-2b3a63329242",
+  "header": {
+    "last-modified": {
+      "$date": "2015-11-30T10:09:45.368Z"
+    }
+  },
+  "schema": "course_v5",
+  "pedagogicalLessonType": "Custom",
+  "contentLocales": [
+    "en_US"
+  ],
+  "standards": [],
+  "standardPackages": [],
+  "resources": [],
+  "title": "New Lesson",
+  "type": "lesson",
+  "customFields": [],
+  "format": "EBOOK",
+  "eBooks": {
+    "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c": {
+      "name": "moby-dick.epub"
+    }
+  },
+  "learningObjects": [
+    {
+      "cid": "f2ebc5b3-80d3-4b3e-b430-87969f2f5147",
+      "title": "New Learning Object ",
+      "type": "lo",
+      "standards": [],
+      "pages": [
+        {
+          "cid": "e8721d2a-0b15-4c8a-a5f3-3bc89ce22364",
+          "eBookId": "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c",
+          "id": "cover",
+          "href": "ebooks/8307149f-3cc1-44d8-86f9-d8a98b9e9d5c/OPS/cover.xhtml",
+          "title": "Page 1",
+          "type": "page",
+          "originalIndex": 1,
+          "resourceRefId": [],
+          "standards": []
+        },
+        {
+          "cid": "1528aeab-ddeb-4f3a-b6f5-11fedb23548c",
+          "eBookId": "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c",
+          "id": "titlepage",
+          "href": "ebooks/8307149f-3cc1-44d8-86f9-d8a98b9e9d5c/OPS/titlepage.xhtml",
+          "title": "Page 2",
+          "type": "page",
+          "originalIndex": 2,
+          "resourceRefId": [],
+          "standards": []
+        },
+        {
+          "cid": "fbfe6a3e-e2c1-42f2-8724-d3b32bea6546",
+          "eBookId": "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c",
+          "id": "brief-toc",
+          "href": "ebooks/8307149f-3cc1-44d8-86f9-d8a98b9e9d5c/OPS/toc-short.xhtml",
+          "title": "Page 3",
+          "type": "page",
+          "originalIndex": 3,
+          "resourceRefId": [],
+          "standards": []
+        },
+        {
+          "cid": "3c6cc768-adb2-43f8-8952-f5e9a76c2e17",
+          "eBookId": "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c",
+          "id": "xpreface_001",
+          "href": "ebooks/8307149f-3cc1-44d8-86f9-d8a98b9e9d5c/OPS/preface_001.xhtml",
+          "title": "Page 4",
+          "type": "page",
+          "originalIndex": 4,
+          "resourceRefId": [],
+          "standards": []
+        },
+        {
+          "cid": "2f5f240b-9314-463c-832c-1e4cf7eeb893",
+          "eBookId": "8307149f-3cc1-44d8-86f9-d8a98b9e9d5c",
+          "id": "xintroduction_001",
+          "href": "ebooks/8307149f-3cc1-44d8-86f9-d8a98b9e9d5c/OPS/introduction_001.xhtml",
+          "title": "Page 5",
+          "type": "page",
+          "originalIndex": 5,
+          "resourceRefId": [],
+          "standards": []
+        }
+      ]
+    }
+  ]
+}

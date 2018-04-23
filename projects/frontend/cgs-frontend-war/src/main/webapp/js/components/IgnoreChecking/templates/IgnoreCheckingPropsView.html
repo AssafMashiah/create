@@ -1,0 +1,19 @@
+<div>
+	<h5>((Ignore Checking Properties))</h5>
+</div>
+<div class="enable-ignore-checking">
+	<div class="control-group">
+		<input type="checkbox" id="ignore_checking_enabled" name="ignore_checking_enabled" data-checked="obj.ignore_checking_enabled" />
+		<label class="control-label" for="ignore_checking_enabled">((Enable Ignore Checking))</label>
+	</div>
+</div>
+<div class="ignore-checking-list {{^model.attributes.ignore_checking_enabled}}hidden{{/model.attributes.ignore_checking_enabled}}">
+	<ul>
+	{{#model.attributes.ignore_checking_list}}
+		<li>
+			<input class="ignore-list-item" type="checkbox" id="{{id}}" name="{{id}}" {{#checked}}checked{{/checked}} />
+			<label for="{{id}}">(({{display}}))</label>
+		</li>
+	{{/model.attributes.ignore_checking_list}}
+	</ul>
+</div>

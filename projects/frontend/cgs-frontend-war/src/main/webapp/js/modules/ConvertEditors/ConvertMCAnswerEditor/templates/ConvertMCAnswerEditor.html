@@ -1,0 +1,8 @@
+<div class="{{elementType}}_content ConvertMCAnswerEditor">
+	<input type="{{record.data.input_type}}" name="mc_answers_{{record.parent}}" class="mc_answer_check" parent-id="{{record.parent}}" id="correct_answer_{{elementId}}" value="{{elementId}}" />
+	<div class="content-area">
+		<div helper="removePlaceHolder" onRemoveHelper="addPlaceHolder" resize-width="126" resize-height="126" dropable-content="text" dropable-limit="1" dropable-content-id="answer_content" dropable-event-id="{{elementId}}" class="drop-zone">
+			{{{record.data.answer_content}}}
+		</div>
+	</div>
+</div>

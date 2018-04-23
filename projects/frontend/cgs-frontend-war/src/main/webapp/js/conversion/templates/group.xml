@@ -1,0 +1,3 @@
+<group{{#type}} type="{{type}}"{{/type}}>
+{{{content}}}
+</group>

@@ -1,0 +1,14 @@
+<progress id="{{id}}">
+	<ignoreChecking>
+		{{#ignoreCheckingItems}}
+			<item type="{{id}}"></item>
+		{{/ignoreCheckingItems}}
+	</ignoreChecking>
+	{{#score}}<points>{{score}}</points>{{/score}}
+	<attempts>{{num_of_attempts}}</attempts>
+	{{#showProgressType}}
+		<type>{{progressType}}</type>
+	{{/showProgressType}}
+	<checkable>{{checkable}}</checkable>
+    {{{content}}}
+</progress>

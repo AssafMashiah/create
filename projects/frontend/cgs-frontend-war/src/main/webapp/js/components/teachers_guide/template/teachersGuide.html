@@ -1,0 +1,31 @@
+<div class="teachersGuide">
+    <div class="inputControls">
+        <button id="control_img" class="menu_button btn btn-small base-icon icon-picture" title="((Insert Picture))"></button>
+        <button id="control_pdf" class="menu_button btn btn-small base-icon icon-comment-alt" title="((Upload PDF))"></button>
+        <button id="control_bold" class="menu_button font-13 btn btn-small" title="((Bold))" value="bold"><b>((B))</b></button>
+        <button id="control_italic" class="menu_button font-13 btn btn-small" title="((Italics))" value="italic"><i>((I))</i></button>
+        <button id="control_superscript" class="menu_button btn btn-small base-icon icon-arrow-up" title="((Superscript))" value="superscript"></button>
+        <button id="control_subscript" class="menu_button btn btn-small base-icon icon-arrow-down" title="((Subscript))" value="subscript"></button>
+    </div>
+    <div class="inputField" {{^isReadOnly}}contenteditable="true"{{/isReadOnly}} unselectable="off">
+    </div>
+    <br><br>
+    <div class="control-group">
+        <label title="((Teacher's Guide references))">((Teacher's Guide references)):</label>
+
+        <div class="tg_references">
+            <ul id="references_list" class="nav" style="position:relative">
+            	{{#data.files}}
+                <li file="{{path}}">
+                    <i class="base-icon icon-briefcase"/>
+                    <a target="_blank" href="{{#server-path}}{{path}}{{/server-path}}">{{name}}</a>
+                    <button class="btn btn-link delete_reference">
+                        <span class="base-icon icon-remove"></span>
+                    </button>
+                </li>
+                {{/data.files}}
+            </ul>
+            <button id="button_upload_reference" class="btn btn-small base-icon icon-plus"></button>
+        </div>
+    </div>
+</div>

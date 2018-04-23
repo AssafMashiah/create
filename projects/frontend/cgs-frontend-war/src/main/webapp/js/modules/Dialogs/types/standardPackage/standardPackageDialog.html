@@ -1,0 +1,33 @@
+<div id="standardsListTitle">((Select the standard package you want to tag the content with.))</div>
+<div id="standards_packages" class="package-standards">
+    <table class="standards_package_list">
+        <tbody>
+        
+        <tr>
+            <th>((Package Name))</th>
+            <th>((Acronym))</th>
+        </tr>
+        
+        {{#options.config.standardPackages}}
+        <tr {{#disable}} class="disabled" {{/disable}} {{^disable}} class="enabled" {{/disable}}>
+            <td>
+            {{#description}}
+                {{description}}
+            {{/description}}
+            {{^description}}
+	            {{#name}}
+	                {{name}}
+	            {{/name}}
+            {{/description}}
+            </td>
+
+            <td class="last">
+            {{#name}}
+                {{name}}
+            {{/name}}
+            </td>
+        </tr>
+        {{/options.config.standardPackages}}
+        </tbody>
+    </table>
+</div>

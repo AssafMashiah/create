@@ -1,0 +1,1 @@
+XCOPY C:\xampp\htdocs\cgs-trial-branch C:\t2k\tomcat\webapps\cgs-trial-branch\WEB-INF\client /s /d /i /Y

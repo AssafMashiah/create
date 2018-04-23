@@ -1,0 +1,4 @@
+###################################################
+#  add account mode PRODUCTION to all publishers  #
+###################################################
+publishers.update({},{$set:{"accountMode": "PRODUCTION"}},{upsert: true, multi: true});

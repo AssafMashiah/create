@@ -1,0 +1,56 @@
+<!-- {{constructor.type}} (id={{controller.config.id}}) -->
+<div class="editor-wrapper toc-editor props_editor">
+    <ul class="nav nav-tabs" id="CourseEditorTabs">
+        <li class="active"><a href="#properties" data-toggle="tab">((Properties))</a></li>
+        {{#controller.enableStandards}}
+        <li><a href="#standards" data-toggle="tab">((Standards))</a></li>
+        {{/controller.enableStandards}}
+    </ul>
+    <div class="tab-content">
+        <!-- properties tab -->
+        <div class="tab-pane active " id="properties">
+            <div class="row-fluid">
+                <input id="toc_editor_title" type="text" maxlength="250" data-value="obj.title" id="title" class="input-large">
+                <span class="help-inline error" id="field_name_err" style="display:none">((This field is required))</span>
+            </div>
+            <div class="row-fluid">
+                <label for="overview">((Description:))</label><textarea rows="2" data-value="obj.overview" id="overview" class="input-large"></textarea>
+            </div>
+            <div class="control-group">
+                <div class="div4 toc_img">
+                    <img class="thumbnail" id="toc_image"
+                         {{! if there is no image, dont add data-src }}
+                         {{ #controller.record.data.image }}
+                         data-src="obj.imageUrl"
+                         {{ /controller.record.data.image }}
+                    src="media/insert_image.png" width="150" height="200">
+                    <button id="image_cropper_button"
+                            class="image-cropper-edit-button btn btn-small edit_element"
+                            {{ ^controller.record.data.image }}
+                            style="display: none;"
+                            {{ /controller.record.data.image }}
+                    ><span class="base-icon icon-cog"></span></button>
+                    <button id="button_upload_image" class="btn btn-small">((...))</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.hideTitle" id="field_hideTitle" />
+                <span class="control-label" for="field_hideTitle">((Hide title))</span>
+            </div>
+            <div class="control-group">
+                <input type="checkbox" data-checked="obj.hideOverview" id="field_hideOverview" />
+                <span class="control-label" for="field_hideOverview">((Hide description))</span>
+            </div>
+            <div class="row-fluid">
+                <label for="keywords">((Keywords:))</label><input type="text" data-value="obj.keywords" id="keywords" class="input-large">
+            </div>
+        </div>
+        {{#controller.enableStandards}}
+        <!-- standards tab -->
+        <div class="tab-pane" id="standards">
+            <h5>((standards.toc_editor.props.title))</h5>
+            <div id="standards_list"></div>
+        </div>
+        {{/controller.enableStandards}}
+    </div>
+</div>

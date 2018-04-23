@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="t2k_scorm" version="1.0"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 4th Edition</schemaversion>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+            <general>
+                <title>
+                    <string>Main Lesson Name</string>
+                </title>
+                <language>en-US</language>
+                <description>
+                    <string>description in english</string>
+                </description>
+                <structure>
+                    <source>LOMv1.0</source>
+                    <value>atomic</value>
+                </structure>
+                <aggregationLevel>
+                    <source>LOMv1.0</source>
+                    <value>2</value>
+                </aggregationLevel>
+            </general>
+            <lifeCycle>
+                <version>
+                    <string>1.0.1</string>
+                </version>
+                <status>
+                    <source>LOMv1.0</source>
+                    <value>final</value>
+                </status>
+                <contribute>
+                    <role>
+                        <source>LOMv1.0</source>
+                        <value>publisher</value>
+                    </role>
+                    <entity>BEGIN:VCARD&amp;#13;&amp;#10;VERSION:2.1&amp;#13;&amp;#10;N:publisher name&amp;#13;&amp;#10;END:VCARD</entity>
+                    <date>
+                        <dateTime>2014-01-01T00:00:00</dateTime>
+                        <description>
+                            <string>This date represents the date the author finished authoring the component</string>
+                        </description>
+                    </date>
+                </contribute>
+            </lifeCycle>
+            <metaMetadata>
+                <metadataSchema>LOMv1.0</metadataSchema>
+            </metaMetadata>
+            <technical>
+                <format>text/html</format>
+                <size>28567</size>
+                <requirement>
+                    <orComposite>
+                        <type>
+                            <source>LOMv1.0</source>
+                            <value>browser</value>
+                        </type>
+                        <name>
+                            <source>LOMv1.0</source>
+                            <value>ms-internet explorer</value>
+                        </name>
+                        <minimumVersion>10.0</minimumVersion>
+                        <maximumVersion>11.0</maximumVersion>
+                    </orComposite>
+                </requirement>
+                <otherPlatformRequirements>
+                    <string>display: at least 800 X 600 pixels x 256 colors</string>
+                </otherPlatformRequirements>
+            </technical>
+            <educational>
+                <interactivityType>
+                    <source>LOMv1.0</source>
+                    <value>mixed</value>
+                </interactivityType>
+                <language>en-US</language>
+                <typicalLearningTime>
+                    <duration>PT0H33M0S</duration>
+                </typicalLearningTime>
+            </educational>
+            <classification>
+                <description>
+                    <string>Common Core State Standards for Mathematics</string>
+                </description>
+                <taxonPath>
+                    <source>
+                        <string>ccss</string>
+                    </source>
+                    <taxon>
+                        <id>7.RP.A.1</id>
+                        <entry>
+                            <string>Compute unit rates associated with ratios of fractions, including ratios of lengths, areas and other quantities measured in like or different units.</string>
+                        </entry>
+                    </taxon>
+                    <taxon>
+                        <id>6.G.A.2</id>
+                        <entry>
+                            <string>Find the volume of a right rectangular prism with fractional edge lengths by packing it with unit cubes of the appropriate unit fraction edge lengths, and show that the volume is the same as would be found by multiplying the edge lengths of the prism. Apply the formulas V = l w h and V = b h to find volumes of right rectangular prisms with fractional edge lengths in the context of solving real-world and mathematical problems.</string>
+                        </entry>
+                    </taxon>
+                </taxonPath>
+            </classification>
+        </lom>
+    </metadata>
+    <organizations default="t2k_main">
+        <organization identifier="t2k_main">
+            <title>someFieldsExistOnCourseLevelAndOnManifest</title>
+            <item identifier="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb" identifierref="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb_resource">
+                <title>Main Lesson Name</title>
+            </item>
+            <imsss:sequencing>
+                <imsss:controlMode choiceExit="true" flow="true"/>
+                <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
+            </imsss:sequencing>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="t2k_1720d87c-2543-4e2f-8248-44ca8646a5eb_resource" adlcp:scormType="sco"
+                  href="scp/index.html?locale=en_US&amp;vmode=l&amp;contentPath=../&amp;scorm=t#lessonView/11188902-10e6-4453-a799-2c3b4bf08788/courseVersion/1.0.1/lesson/1720d87c-2543-4e2f-8248-44ca8646a5eb/lessonVersion/1.0.1"
+                  type="webcontent">
+            <file href="scp/index.html"/>
+        </resource>
+    </resources>
+</manifest>

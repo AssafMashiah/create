@@ -1,0 +1,2 @@
+thumbnails.ensureIndex({"lessonCId":1, "courseId":1});;
+sequences.ensureIndex({"lessonCId":1, "courseId":1});;

@@ -1,0 +1,4 @@
+# creating and indexing the externalPartners collection #
+createCollection("externalPartners");;
+externalPartners.ensureIndex({"publisherId":1} , {name : "externalPartners_publisherIdx"});;
+externalPartners.ensureIndex({"externalAccountId":1} , {name : "externalPartners_externalAccountIdx"});;

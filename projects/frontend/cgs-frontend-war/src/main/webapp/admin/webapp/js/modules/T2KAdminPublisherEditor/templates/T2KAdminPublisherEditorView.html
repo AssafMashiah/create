@@ -1,0 +1,373 @@
+<ul id="tabs" class="nav nav-tabs">
+    <li><a href="#T2KPublisherEditor" data-toggle="tab">((Properties))</a></li>
+    <li><a href="#T2KPublisherFeatures" data-toggle="tab">((Configurations))</a></li>
+    <li><a href="#T2KPublisherMediaUploads" data-toggle="tab">((Limitations))</a></li>
+    <li><a href="#customPropertiesComponent" data-toggle="tab">((Custom Metadata))</a></li>
+    <li><a href="#T2KPublisherAccounts" data-toggle="tab">((Account Administrators))</a></li>
+</ul>
+
+<div id="T2KPublisherEditor">
+    <div><h4>General settings</h4></div>
+    <div class="control-group">
+        <label class="control-label" for="publisher_name">((Name:))</label>
+
+        <div class="controls">
+            <input type="text" id="publisher_name" value="{{item.data.name}}">
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="accountMode">((Account Mode))</label>
+        <div class="controls">
+            <select class="language-select" id="accountMode" name="accountMode">
+                {{#accountModes}}
+                <option model-value="{{.}}">{{.}}</option>
+                {{/accountModes}}
+            </select>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label language-label" for="interfaceLocales">Interface language: used in Create's menus, tooltips and labels</label>
+        <select class="language-select" id="interfaceLocales" name="interfaceLocales">
+            {{#controller.model.data.interfaceLocales.options}}
+            <option model-value="{{.}}">{{.}}</option>
+            {{/controller.model.data.interfaceLocales.options}}
+        </select>
+    </div>
+    <div class="control-group">
+        <label class="control-label language-label" for="contentLocales">Default content language</label>
+        <select class="language-select" id="contentLocales" name="contentLocales">
+            <option value="">No default</option>
+            {{#item.data.contentLocales.options}}
+            <option value="{{.}}">{{.}}</option>
+            {{/item.data.contentLocales.options}}
+        </select>
+    </div>
+
+    <div><h4>Support</h4></div>
+    <div class="control-group">
+        <label class="control-label" for="logLevel">((Log Level:))</label>
+
+        <div class="controls">
+            <select id="logLevel">
+                {{#logLevels}}
+                <option value="{{.}}">{{.}}</option>
+                {{/logLevels}}
+            </select>
+        </div>
+    </div>
+
+    <div class="externalAccounts">Fetching external accounts data...</div>
+
+</div>
+
+<div id="T2KPublisherMediaUploads" class="unactive">
+    <div><h4>File Size</h4></div>
+    <div class="control-group">
+        <label class="control-label" for="logLevel">((Limit media size uploads:))</label>
+        <table class="sizes-table">
+            {{#fileSizeLimits}}
+            <tr>
+                <td class="size-name">{{name}}</td>
+                <td class="size-value"><input type="number" class="size-input" size-key="{{key}}" value="{{size}}"
+                                              min="1" max="{{maxFileSize}}" maxlength="3" size="3"/></td>
+                <td>((MB))</td>
+            </tr>
+            {{/fileSizeLimits}}
+        </table>
+        <b>** Please note:</b>
+        <ul>
+            <li>EPUB size limitation refers also to BookAlive PDF upload</li>
+            <li>PDF size limitation affects only PDFs uploaded to teacher guide</li>
+        </ul>
+    </div>
+    <div><h4>((BookAlive))</h4></div>
+    <div class="control-group">
+        <label class="control-label language-label" for="pdfConversionLibrary">((Pdf Conversion Library:))</label>
+        <select class="language-select" name="pdfConversionLibrary" id="pdfConversionLibrary">
+            {{#pdfConversionLibreries}}
+            <option value="{{key}}">{{value}}</option>
+            {{/pdfConversionLibreries}}
+        </select>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="">((Limit T2K Embedded hot spots per page:))</label>
+        <table class="sizes-table">
+            {{#elementsLimit}}
+            <tr>
+                <td class="size-name">{{name}}</td>
+                <td class="size-value">
+                    <input type="number" class="element-limit-input" value="{{value}}" min="1" limit-key="{{key}}"/>
+                </td>
+            </tr>
+            {{/elementsLimit}}
+        </table>
+    </div>
+</div>
+
+<div id="T2KPublisherAccounts" class="unactive">
+    <div id="account-adminstration-table">
+        <table id="accounts-table" cellpadding="0" cellspacing="0" border="0"
+               class="table table-striped table-bordered content-table">
+            <thead>
+            <th>((Username))</th>
+            <th>((Email))</th>
+            <th>((Password))</th>
+            <th class="actions_header">((Actions))</th>
+            </thead>
+            <tbody>
+            {{#item.data.users}}
+            <tr model-id="{{userId}}">
+                <td>
+                    {{username}}
+                </td>
+                <td>
+                    {{email}}
+                </td>
+                <td>
+                    {{password}}
+                </td>
+                <td class="actions">
+
+                    <button class="edit-user btn">
+                        <a href="#" class="icon-cog"></a>
+                    </button>
+                    <button class="remove_user btn">
+                        <a href="#" class="icon-trash"></a>
+                    </button>
+                </td>
+            </tr>
+            {{/item.data.users}}
+            </tbody>
+            <tfoot id="form-add-user">
+            <tr>
+                <th>
+                    <input type="text" id="account_username" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="text" id="account_email" class="input-medium" value=""/>
+                </th>
+                <th>
+                    <input type="password" id="account_password" class="input-medium" value=""/>
+                </th>
+                <th class="actions">
+                    <button id="save-user" class="btn focus">
+                        <a href="#" class="icon-folder-close"></a>
+                    </button>
+                    <button class="remove_user btn">
+                        <a href="#" class="icon-trash"></a>
+                    </button>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+        <button class="btn add-new-user" id="add-new-user">
+            <a class="icon-plus"></a>
+        </button>
+    </div>
+</div>
+
+<div id="T2KPublisherFeatures" class="unactive">
+    <div><h4>General</h4></div>
+    <div class="checkbox">
+        <input  id="enableAssetOrdering" type="checkbox" name="enableAssetOrdering"
+                {{#item.data.customization.enableAssetOrdering}}checked{{/item.data.customization.enableAssetOrdering}} />
+        <label class="control-label" for="enableAssetOrdering">Enable asset ordering</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableReferences" type="checkbox" name="enableReferences"
+                {{#item.data.customization.enableReferences}}checked{{/item.data.customization.enableReferences}}/>
+        <label class="control-label" for="enableReferences">Enable references</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableReviewTab" type="checkbox" name="enableReviewTab"
+                {{#item.data.customization.enableReviewTab}}checked{{/item.data.customization.enableReviewTab}}/>
+        <label class="control-label" for="enableReviewTab">Enable review tab</label>
+    </div>
+    <div class="checkbox">
+        <input id="enableStandards" type="checkbox" name="enableStandards"
+               {{#item.data.customization.enableStandards}} checked {{/item.data.customization.enableStandards}}/>
+        <label class="control-label" for="enableStandards">Enable standards</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableCourseMiscSettings" type="checkbox" name="enableCourseMiscSettings"
+                {{#item.data.customization.enableCourseMiscSettings}}checked{{/item.data.customization.enableCourseMiscSettings}}/>
+        <label class="control-label" for="enableCourseMiscSettings">Enable course miscellaneous settings</label>
+    </div>
+    <div class="checkbox">
+        <input id="enableMediaEncoding" type="checkbox" name="enableMediaEncoding"
+               {{#item.data.customization.enableMediaEncoding}}checked{{/item.data.customization.enableMediaEncoding}}/>
+        <label class="control-label disabled" for="enableMediaEncoding">Enable media encoding on upload - requires professional services support</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableCoachMarks" type="checkbox" name="enableCoachMarks"
+                {{#item.data.customization.enableCoachMarks}} checked {{/item.data.customization.enableCoachMarks}}/>
+        <label class="control-label" for="enableCoachMarks">Enable coachmarks: guiding graphics and tooltips for new users</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableHints" type="checkbox" name="enableHints"
+                {{#item.data.customization.enableHints}} checked {{/item.data.customization.enableHints}}/>
+        <label class="control-label" for="enableHints">Enable tooltips for menus</label>
+    </div>
+    <div><h4>Content Options</h4></div>
+    <div class="checkbox">
+        <input  id="enableBookAlive" type="checkbox" name="enableBookAlive"
+                {{#item.data.customization.enableBookAlive}}checked{{/item.data.customization.enableBookAlive}} />
+        <label class="control-label" for="enableBookAlive">Enable BookAlive Lesson</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableBornDigital" type="checkbox" name="enableBornDigital"
+                {{#item.data.customization.enableBornDigital}}checked{{/item.data.customization.enableBornDigital}} />
+        <label class="control-label" for="enableBornDigital">Enable Born Digital Lesson</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableAssessment" type="checkbox" name="enableAssessment"
+                {{#item.data.customization.enableAssessment}}checked{{/item.data.customization.enableAssessment}} />
+        <label class="control-label" for="enableAssessment">Enable assessment</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableHiddenLessons" type="checkbox" name="enableHiddenLessons"
+                {{#item.data.customization.enableHiddenLessons}} checked {{/item.data.customization.enableHiddenLessons}}/>
+        <label class="control-label" for="enableHiddenLessons">Enable hidden lessons</label>
+    </div>
+    <div class="checkbox">
+        <input id="enableFullSpellChecker" type="checkbox" name="enableFullSpellChecker"
+               {{#item.data.customization.enableFullSpellChecker}}checked{{/item.data.customization.enableFullSpellChecker}}/>
+        <label class="control-label" for="enableFullSpellChecker">Enable usage of the browser's native spellchecker while entering text into Create</label>
+    </div>
+
+    <div><h4>Learning Object</h4></div>
+    <div class="checkbox">
+        <input  id="enableLearningObjects" type="checkbox" name="enableLearningObjects"
+                {{#item.data.customization.enableLearningObjects}} checked {{/item.data.customization.enableLearningObjects}}/>
+        <label class="control-label" for="enableLearningObjects">Enable Learning Object level in new courses by default</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableQuiz" type="checkbox" name="enableQuiz"
+                {{#item.data.customization.enableQuiz}} checked {{/item.data.customization.enableQuiz}}/>
+        <label class="control-label" for="enableQuiz">Enable adding a quiz</label>
+    </div>
+
+    <div><h4>Narration</h4></div>
+    <div class="checkbox">
+        <input  id="enableTextToSpeach" type="checkbox" name="enableTextToSpeach"
+                {{#item.data.customization.enableTextToSpeach}}checked{{/item.data.customization.enableTextToSpeach}} />
+        <label class="control-label" for="enableTextToSpeach">Enable Text To Speech</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enableNarrationAdditionalLanguages" type="checkbox" name="enableNarrationAdditionalLanguages"
+                {{#item.data.customization.enableNarrationAdditionalLanguages}}checked{{/item.data.customization.enableNarrationAdditionalLanguages}} />
+        <label class="control-label" for="enableNarrationAdditionalLanguages">Enable narration additional languages</label>
+    </div>
+
+    <div><h4>Born Digital</h4></div>
+    <div class="checkbox">
+        <input  id="enableDiffLevels" type="checkbox" name="enableDiffLevels"
+                {{#item.data.customization.enableDiffLevels}}checked{{/item.data.customization.enableDiffLevels}} />
+        <label class="control-label" for="enableDiffLevels">Enable differential levels</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enablePdf2t2k" type="checkbox" name="enablePdf2t2k"
+                {{#item.data.customization.enablePdf2t2k}} checked {{/item.data.customization.enablePdf2t2k}}/>
+        <label class="control-label" for="enablePdf2t2k">Enable adding PDF file to born digital courses using PDF sequence (old feature)</label>
+    </div>
+    <div class="checkbox" style="display: none">
+        <input  id="enableLivePage" type="checkbox" name="enableLivePage"
+                {{#item.data.customization.enableLivePage}} checked {{/item.data.customization.enableLivePage}}
+        />
+        <label class="control-label" for="enableLivePage">Enable live page (deprecated)</label>
+    </div>
+
+    <div id="T2KePubAutoConversion">
+        <div><h4>ePub3 Auto Conversion</h4></div>
+        <div class="checkbox">
+            <input  id="enableEpubConversion" type="checkbox" name="enableEpubConversion"
+                    {{#item.data.customization.enableEpubConversion}}checked{{/item.data.customization.enableEpubConversion}} />
+            <label class="control-label" for="enableEpubConversion">Enable automatic ePub3 conversion</label>
+        </div>
+        <div class="control-group">
+            <label>Step 2 checkpoint confirmation delay:</label>
+            <input type="number" min="1" id="ePubConversionConfDelay" value="{{item.data.customization.ePubConversionConfDelay}}">
+            <span>sec.</span>
+        </div>
+    </div>
+
+    <div><h4>Assessment</h4></div>
+    <div class="checkbox">
+        <input  id="enableIndependentAssessment" type="checkbox" name="enableIndependentAssessment"
+                {{#item.data.customization.enableIndependentAssessment}}checked{{/item.data.customization.enableIndependentAssessment}} />
+        <label class="control-label" for="enableIndependentAssessment">Enable independent assessment</label>
+    </div>
+    <div class="checkbox">
+        <input  id="enablePlacementAssessment" type="checkbox" name="enablePlacementAssessment"
+                {{#item.data.customization.enablePlacementAssessment}}checked{{/item.data.customization.enablePlacementAssessment}} />
+        <label class="control-label" for="enablePlacementAssessment">Enable placement assessment</label>
+    </div>
+    <div id="T2KPublisherPublish">
+        <div><h4>Publish</h4></div>
+        <div class="checkbox">
+            <input id="publishCourseToFile" type="checkbox" name="publishCourseToFile"
+                   model="customization" model-key="publishSettings.courses.enablePublishToFile" />
+            <label class="control-label" for="publishCourseToFile">Enable publishing course as SCORM (2004) zip file</label>
+        </div>
+        <div class="checkbox">
+            <input  id="publishCourseToCatalog" type="checkbox" name="publishCourseToCatalog"
+                    model="customization" model-key="publishSettings.courses.enablePublishToCatalog" />
+            <label class="control-label" for="publishCourseToCatalog">Enable publishing course to catalog</label>
+        </div>
+        <div class="checkbox">
+            <input id="publishLessonToFile" type="checkbox" name="publishLessonToFile"
+                   model="customization" model-key="publishSettings.lessons.enablePublishToFile" />
+            <label class="control-label" for="publishLessonToFile">Enable publishing lessons as SCORM (2004) zip file</label>
+        </div>
+        <div class="checkbox">
+            <input id="publishLessonToCatalog" type="checkbox" name="publishLessonToCatalog"
+                   model="customization" model-key="publishSettings.lessons.enablePublishToCatalog" />
+            <label class="control-label" for="publishLessonToCatalog">Enable publishing lessons to catalog</label>
+        </div>
+        <div class="checkbox">
+            <input id="enableCourseLevelsCustomizationForScorm" type="checkbox" name="enableCourseLevelsCustomizationForScorm"
+                   model="customization" model-key="publishSettings.lessons.enableCourseLevelsCustomizationForScorm" />
+            <label class="control-label" for="enableCourseLevelsCustomizationForScorm">Enable SCORM publishing indexation of all course levels</label>
+        </div>
+        <div class="checkbox">
+            <input id="enableDemoPublishView" type="checkbox" name="enableDemoPublishView"
+                   model="customization" model-key="enableDemoPublishView"/>
+            <label class="control-label" for="enableDemoPublishView">Enable publish in Demo mode view</label>
+        </div>
+        <div class="checkbox">
+            <input id="enableSampleCourse" type="checkbox" name="enableSampleCourse"
+                   model="customization" model-key="enableSampleCourse"/>
+            <label class="control-label" for="enableSampleCourse">Enable sample course</label>
+        </div>
+
+        {{#showPublishToUrlConfigurationsInAdmin}}
+            <h4>Publish to URL</h4>
+
+            <div class="checkbox">
+                <input id="publishCourseToUrl" type="checkbox" name="publishCourseToUrl"
+                       model="customization" model-key="publishSettings.courses.enablePublishToUrl"/>
+                <label class="control-label" for="publishCourseToUrl">Enable publishing course to Url</label>
+            </div>
+            <div class="checkbox">
+                <input id="publishLessonToUrl" type="checkbox" name="publishLessonToUrl"
+                       model="customization" model-key="publishSettings.lessons.enablePublishToUrl"/>
+                <label class="control-label" for="publishLessonToUrl">Enable publishing lesson to Url</label>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="publishPlayServer">Publish play server host</label>
+                <input class="control-group" type="text" id="publishPlayServer" name="publishPlayServerUrl"
+                       model="customization" model-key="publishSettings.publishPlayServerUrl">
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="publishUploadServer">Publish upload server host</label>
+                <input class="control-group" type="text" id="publishUploadServer" name="publishUploadServerUrl"
+                       model="customization" model-key="publishSettings.publishUploadServerUrl">
+            </div>
+        {{/showPublishToUrlConfigurationsInAdmin}}
+    </div>
+</div>
+
+<div id="customPropertiesComponent" class="unactive"></div>

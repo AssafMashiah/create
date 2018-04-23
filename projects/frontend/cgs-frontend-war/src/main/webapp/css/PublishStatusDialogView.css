@@ -1,0 +1,56 @@
+#dialog.publishStatus label {
+	display: inline-block;
+	margin-left: 20px;
+	color: rgb(78, 78, 78);
+	line-height: 30px;
+    cursor: default;
+}
+
+#dialog.publishStatus .currentPhase {
+	background-color: rgba(120, 198, 237, 0.3);
+}
+
+#dialog.publishStatus  i {
+	margin: 5px 10px 0 0;
+    font-size: 16px;
+    color: #e1e1e1;
+}
+#dialog.publishStatus  i.done{
+	color: #66CC33;
+}
+
+#dialog.publishStatus i.fail {
+    color: red !important;
+}
+
+#dialog.publishStatus .icon-ok-publish:before {
+    font-family: 'FontAwesomeOld';
+	content: "\f00c";
+}
+
+
+#dialog.publishStatus .icon-remove-publish:before {
+    content: "\f00d";
+    font-family: 'FontAwesomeOld';
+}
+
+#dialog.publishStatus .progress-area{
+	float: right;
+}
+#dialog.publishStatus .percents-area {
+    background-color: #e1e1e1;
+	display: inline-block;
+	width: 160px;
+	height: 5px;
+	line-height: 30px;
+	margin-top: 14px;
+	margin-right: 10px;
+}
+#dialog.publishStatus .percents-area.hide-progress{
+	visibility: hidden;
+}
+#dialog.publishStatus .percents-progress{
+	width: 0%;
+	height: 100%;
+	background-color: #0099e5;
+}

@@ -1,0 +1,30 @@
+<!-- {{constructor.type}} -->
+<div class="editor-wrapper tableCell_editor props_editor">
+    <ul class="nav nav-tabs" id="tableCellEditorTabs">
+        <li class="active" >
+        	<a href="#properties" data-toggle="tab">(({{controller.elementRenderName}} Properties))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div class="control-group">
+                <label class="control-label" for="cell_childType">((Component:))</label>
+                <div class="controls">
+                    <select id="cell_childType" data-value="obj.childType">
+                        <option value='None'>((None))</option>
+                        <option value='Image'>((Image))</option>
+                        <option value='Text'>((Text))</option>
+                        {{#controller.config.clozeTable}}
+                        <option value='MathField'>((Math Field))</option>
+                        {{/controller.config.clozeTable}}
+                    </select>
+                </div>
+                {{#controller.showAnswerFieldCheckbox}}
+                <input id="cell_answerField" type="checkbox" data-checked="obj.isAnswerField"
+                {{#controller.disableAnswerField}}disabled cantBeEnabled="true"{{/controller.disableAnswerField}}/>
+                <label class="control-label inline-block" for="cell_answerField">((Answer field))</label>
+                {{/controller.showAnswerFieldCheckbox}}
+            </div>
+        </div>
+    </div>
+</div>

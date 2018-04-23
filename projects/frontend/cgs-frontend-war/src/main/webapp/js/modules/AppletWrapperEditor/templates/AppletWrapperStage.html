@@ -1,0 +1,7 @@
+<!-- {{constructor.type}} -->
+<div class="AppletWrapperEditor">	
+	<div class="{{elementType}}_content"></div>
+	<a href="#load/{{appletRepoId}}"  {{#isEditable}}onClick="javascript:require('events').fire('setActiveEditorEndEditing');"{{/isEditable}} {{^isEditable}} onclick="return false;" {{/isEditable}}>
+		<img src="{{#thumbnail}}{{#server-path}}{{{thumbnail}}}{{/server-path}}{{/thumbnail}}{{^thumbnail}}{{#server-path}}{{{record.data.thumbnail}}}{{/server-path}}{{/thumbnail}}"/>
+	</a>
+</div>

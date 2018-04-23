@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>test local storage</title>
+	<script src="js/libs/jquery/jquery.js"></script>
+	<script src="js/libs/lodash/lodash.js"></script>
+	<script src="js/libs/cryptojs/core.js"></script>
+	<script src="js/libs/cryptojs/sha1.js"></script>
+	<script>
+		window.define = function(foo, bar) {
+			window.files = bar(_, CryptoJS)
+		}
+	</script>
+	<script src="js/common/files.js"></script>
+</head>
+<body>
+	<!--
+	<button id="prepare-dirs">prepareDirs</button><br>
+	-->
+	<button id="dl-asset">downloadAsset</button><br>
+	<button id="dl-file">downloadFile</button><br>
+	<button id="save-obj">saveObject</button><br>
+	<button id="load-obj">loadObject</button><br>
+	<button id="load-obj-true">loadObject/true</button><br>
+	<button id="file-exist">fileExists</button><br>
+	<button id="del-file">deleteFile</button><br>
+	<input type="file" name="upload" id="upload"><br>
+	<br>
+	<button id="server-upload">Test upload</button><br>
+
+	<script>
+		function log(arg) {
+			console.log(arg)
+			alert(arg)
+		}
+
+		files.allocate()
+
+		// There is little to no value in checking `prepareDirs` separately.
+
+	//	$("#prepare-dirs").click(function() {
+	//		files.prepareDirs("publisher99", "course99", function() { log("Done") })
+	//	})
+
+		$("#dl-asset").click(function() {
+			files.prepareDirs("publisher99", "course99", function() {
+				files.downloadAsset("data/", "publisher99", "course99",
+					"d925762fa2329eb3054604c290782e0fbf648563.png",
+					function(f) { open(f.toURL()) })
+			})
+		})
+
+		$("#dl-file").click(function() {
+			files.prepareDirs("publisher99", "course99", function() {
+				files.downloadFile("test_local_storage.html",
+					"publisher99", "course99", "test.html",
+					function(f) { open(f.toURL()) })
+			})
+		})
+
+		$('#upload').change(function(event) {
+			files.prepareDirs("publisher99", "course99", function() {
+				files.saveAsset({
+					event_files: event.target.files,
+					publisherId: "publisher99",
+					courseId: "course99",
+					callback: function(f) { open(f.toURL()) }
+				});
+			})
+		})
+
+		$("#save-obj").click(function() {
+			files.saveObject({foo: "bar"}, "test.json", "publishers",
+				function(f) { open(f.toURL()) })
+		})
+
+		$("#load-obj").click(function() {
+			files.loadObject("publishers/test.json", log)
+		})
+
+		$("#load-obj-true").click(function() {
+			files.loadObject("publishers/test.json", true, log)
+		})
+
+		$("#file-exist").click(function() {
+			files.fileExists(files.coursePath("publisher99", "course99",
+				"test.html"), alert)
+		})
+
+		$("#del-file").click(function() {
+			files.deleteFile(files.coursePath("publisher99", "course99",
+				"test.html"), alert)
+		})
+
+		$("#server-upload").click(function() {
+			var url = "http://localhost/cgs/rest/publishers/1/courses/79bc9408-a2a5-4932-82d0-0bc34f273f8e/media/test.png"
+
+			files.getFile("publisher99", "course99", "media/d9/25/762fa2329eb3054604c290782e0fbf648563.png",
+				function(f) {
+					var fd = new FormData()
+					fd.append("file", f)
+
+					var req = new XMLHttpRequest()
+
+					req.onload = function() { open(url) }
+
+					req.open("POST", url)
+					req.send(fd)
+				})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+{
+    "_class" : "com.mongodb.BasicDBObject",
+    "name" : "Test LTD",
+    "locales" : [
+        "en_US",
+        "fr_FR",
+        "iw_IL",
+        "nl_NL"
+    ],
+    "interfaceLocales" : {
+        "options" : [
+            "en_US",
+            "fr_FR"
+        ],
+        "selected" : "en_US"
+    },
+    "enableHiddenLessons" : true,
+    "enableLivePage": true,
+    "gradeLevels" : [
+        {
+            "id" : "first",
+            "translationKey" : "common.ageGroup.1.display"
+        },
+        {
+            "id" : "second",
+            "translationKey" : "common.ageGroup.2.display"
+        },
+        {
+            "id" : "third",
+            "translationKey" : "common.ageGroup.3.display"
+        },
+        {
+            "id" : "fourth",
+            "translationKey" : "common.ageGroup.4.display"
+        },
+        {
+            "id" : "fifth",
+            "translationKey" : "common.ageGroup.5.display"
+        },
+        {
+            "id" : "sixth",
+            "translationKey" : "common.ageGroup.6.display"
+        },
+        {
+            "id" : "seventh",
+            "translationKey" : "common.ageGroup.7.display"
+        },
+        {
+            "id" : "eighth",
+            "translationKey" : "common.ageGroup.8.display"
+        },
+        {
+            "id" : "ninth",
+            "translationKey" : "common.ageGroup.9.display"
+        },
+        {
+            "id" : "tenth",
+            "translationKey" : "common.ageGroup.10.display"
+        },
+        {
+            "id" : "eleventh",
+            "translationKey" : "common.ageGroup.11.display"
+        }
+    ],
+    "subjectAreas" : [
+        {
+            "id" : "math",
+            "translationKey" : "discipline.math.display"
+        },
+        {
+            "id" : "hebrew",
+            "translationKey" : "discipline.hebrew.display"
+        },
+        {
+            "id" : "english",
+            "translationKey" : "discipline.english.display"
+        },
+        {
+            "id" : "languageArts",
+            "translationKey" : "discipline.language.art.display"
+        },
+        {
+            "id" : "esl",
+            "translationKey" : "discipline.ESL.display"
+        },
+        {
+            "id" : "science",
+            "translationKey" : "discipline.science.display"
+        },
+        {
+            "id" : "roadSafety",
+            "translationKey" : "discipline.road_safety.display"
+        },
+        {
+            "id" : "reading",
+            "translationKey" : "discipline.reading.display"
+        },
+        {
+            "id" : "theology",
+            "translationKey" : "discipline.theology.display"
+        }
+    ],
+    "loTypes" : [
+        {
+            "id" : "warmUp",
+            "display" : "Warm up"
+        },
+        {
+            "id" : "engage",
+            "display" : "Engage"
+        },
+        {
+            "id" : "explore",
+            "display" : "Explore"
+        },
+        {
+            "id" : "summary",
+            "display" : "Summarize"
+        },
+        {
+            "id" : "practice",
+            "display" : "Practice"
+        },
+        {
+            "id" : "reconnect",
+            "display" : "Reconnect"
+        },
+        {
+            "id" : "reflect",
+            "display" : "Reflect"
+        },
+        {
+            "id" : "homework",
+            "display" : "Homework"
+        }
+    ],
+    "fileSizeLimits" : [
+        {
+            "mimeType" : "image/jpeg",
+            "size" : 1000000
+        },
+        {
+            "mimeType" : "image/png",
+            "size" : 1000000
+        },
+        {
+            "mimeType" : "image/gif",
+            "size" : 1000000
+        },
+        {
+            "mimeType" : "image/bmp'",
+            "size" : 1000000
+        },
+        {
+            "mimeType" : "audio/wav",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "audio/x-wav",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "audio/mpeg3",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "audio/x-mpeg-3",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "video/mpeg",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "video/x-mpeg",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "video/mp4",
+            "size" : 30000000
+        },
+        {
+            "mimeType" : "text/plain",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "text/html",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "application/x-pointplus",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "text/css",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "application/x-javascript",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "application/json",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "application/xml",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "application/pdf",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "attachment",
+            "size" : 15000000
+        },
+        {
+            "mimeType" : "default",
+            "size" : 15000000
+        }
+    ],
+    "skills" : {
+        "ref" : "/publishers/1/skills/skills_us"
+    },
+    "relatesTo" : {
+        "_id" : -1,
+        "type" : "SUPER_USER"
+    }
+}

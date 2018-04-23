@@ -1,0 +1,3 @@
+define({
+    "Course" : "Course Title"
+});

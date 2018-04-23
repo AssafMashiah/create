@@ -1,0 +1,63 @@
+<div class="editor-wrapper props_editor">
+    <ul class="nav nav-tabs" id="TableEditorTabs">
+        <li class="active" >
+            <a href="#properties" data-toggle="tab">(({{controller.elementRenderName}} Properties))</a>
+            <a href="#selected_properties" style="display: none" data-toggle="tab">((Selected Cells Properties))</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="properties">
+            <div id="TablePropsWrapper">
+                <div>
+                    <input id="showTitle"  type="checkbox" value="title" data-checked="obj.showTitle">
+                    <label class="control-label inline-block" >((Table Title))</label>
+                    <div class="controls" style="display: none">
+                        <input id="table_title" data-value="obj.table_title" type="text" placeholder="((Table Title))" />
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" id="row_header" data-checked="obj.row_header" cantBeEnabled="true">
+                    <label class="control-label inline-block">((Row Header))</label>
+                </div>
+                <div>
+                    
+                    <input type="checkbox" id="column_header" data-checked="obj.column_header" cantBeEnabled="true">
+                    <label class="control-label inline-block">((Column Header))</label>
+                </div>
+                <div>
+                    
+                    <input type="checkbox" id="summary_row" data-checked="obj.summary_row" cantBeEnabled="true">
+                    <label class="control-label inline-block">((Summary Row))</label>
+                </div>
+                <div>
+                    
+                    <input type="checkbox" id="summary_column" data-checked="obj.summary_column" cantBeEnabled="true">
+                    <label class="control-label inline-block">((Summary Column))</label>
+                </div>
+                <div>
+                    <input id="showCopyrights" type="checkbox" value="copyrights" data-checked="obj.showCopyrights">
+                    <label class="control-label inline-block" >((Copyrights))</label>
+                    <div class="controls" style="display: none">
+                        <input id="txtTableCopyrights" data-value="obj.txtTableCopyrights" type="text" placeholder="((Copyrights))" />
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div id="CellsSelectionProps">
+                <h5>((component.table.props.table_cell_property_name))</h5>
+                <label for="ChangeMultiplePropsType">((Component))</label>
+                <select id="ChangeMultiplePropsType">
+                    <option value="none">((None))</option>
+                    <option value="image">((Image))</option>
+                    <option value="text">((Text))</option>
+                    <option id="ChangeMathFieldOption" value="mathField" style="display: none">((Math Field))</option>
+                    <option value="mixed">((component.table.props.table_cell.comp_opt4))</option>
+                </select>
+                <div id="tableCellsAnswerFieldWrapper" style="display: none">
+                    <input id="tableCellsAnswerField" type="checkbox" />
+                    <label class="control-label inline-block" for="tableCellsAnswerField">((Answer field))</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

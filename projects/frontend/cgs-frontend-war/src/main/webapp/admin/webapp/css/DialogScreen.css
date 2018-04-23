@@ -1,0 +1,40 @@
+.dialog_screen #menu_base, .dialog_screen #sub_menu_base {
+    margin: 0;
+    min-height: 54px;
+}
+
+.dialog_screen #menu_base #menu_right_panel {
+    display: none;
+}
+
+.dialog_screen #sub_menu_base {
+    width: auto;
+}
+
+
+.screen-content.dialog_screen div.help_content:empty:before,
+.screen-content.dialog_screen div.help_content div.br:first-child:before,
+.screen-content.dialog_screen div.assessment_question_content:empty:before,
+.screen-content.dialog_screen div.assessment_question_content div.br:first-child:before{
+	font-family: 'CGS-icons';
+	font-size: 22px;
+	color: #0099E5;
+	content: '\0077';
+	display: inline-block;
+	line-height: 0.7em;
+	margin-right: 5px;
+}
+.screen-content.dialog_screen div.help_content:empty:after,
+.screen-content.dialog_screen div.help_content div.br:first-child:after,
+.screen-content.dialog_screen div.assessment_question_content:empty:after,
+.screen-content.dialog_screen div.assessment_question_content div.br:first-child:after{
+	font-style: italic;
+	font-family: 'T2K-Ayala';
+	font-size: 14px;
+	color: #0099e5;
+	content: attr(data-placeholder);
+}
+
+.screen-content.dialog_screen div[data-placeholder]:after > div:not(.br) {
+
+}

@@ -1,0 +1,30 @@
+<div class="editor-wrapper convert_mc_editor props_editor">
+	<div class="control-group">
+		<div class="state_line">
+			<div class="col">
+				<label for="field_mode_{{controller.record.id}}">
+					((Mode:))&nbsp;
+				</label>
+				<select id="field_mode_{{controller.record.id}}" data-value="obj.mode_{{controller.record.id}}">
+					<option value="single_answer">((Single Answer))</option>
+					<option value="multiple_answers">((Multiple-Answers))</option>
+				</select>
+			</div>
+			<div class="col">
+				<label for="field_type_{{controller.record.id}}">
+					((Type:))&nbsp;
+				</label>
+				<select id="field_type_{{controller.record.id}}" data-value="obj.type_{{controller.record.id}}">
+					<option value="text">((Text))</option>
+					<option value="image">((Image))</option>
+				</select>
+			</div>
+			<div>
+				<div class="col">
+					<input type="checkbox" data-checked="obj.randomize_{{controller.record.id}}" id="field_randomize_{{controller.record.id}}" />
+					<label for="field_randomize_{{controller.record.id}}">((Randomize))</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

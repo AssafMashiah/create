@@ -1,0 +1,171 @@
+createCollection("roles");;
+
+roles.insert({
+    "name": "AUTHOR",
+    "relatesTo": {
+        '_id': -1,
+        'type': 'SUPER_USER'
+    },
+    "permissions": {
+        "create_course": false,
+        "save_as_course": false,
+        "new_edition": false,
+        "edit_course": false,
+        "delete_course": false,
+        "publish_course": false,
+        "create_lesson": false,
+        "import_lesson": false,
+        "edit_lesson": true,
+        "delete_lesson": false,
+        "accounts_admin": false,
+        "users_admin": false,
+        "roles_admin": false,
+        "release_locks": false
+    }
+});;
+
+roles.insert({
+    "name": "EDITOR",
+    "relatesTo": {
+        '_id': -1,
+        'type': 'SUPER_USER'
+    },
+    "permissions": {
+        "create_course": true,
+        "save_as_course": true,
+        "new_edition": true,
+        "edit_course": true,
+        "delete_course": true,
+        "publish_course": true,
+        "create_lesson": true,
+        "import_lesson": true,
+        "edit_lesson": true,
+        "delete_lesson": true,
+        "accounts_admin": false,
+        "users_admin": false,
+        "roles_admin": false,
+        "release_locks": false
+    }
+  });;
+
+roles.insert({
+      "name": "GROUP_ADMIN",
+      "relatesTo": {
+          '_id': -1,
+          'type': 'SUPER_USER'
+      },
+      "permissions": {
+          "create_course": true,
+          "save_as_course": true,
+          "new_edition": true,
+          "edit_course": true,
+          "delete_course": true,
+          "publish_course": true,
+          "create_lesson": true,
+          "import_lesson": true,
+          "edit_lesson": true,
+          "delete_lesson": true,
+          "accounts_admin": false,
+          "users_admin": true,
+          "roles_admin": true,
+          "release_locks": true
+      }
+    });;
+
+roles.insert({
+      "name": "ACCOUNT_ADMIN",
+      "relatesTo": {
+          '_id': -1,
+          'type': 'SUPER_USER'
+      },
+      "permissions": {
+          "create_course": true,
+          "save_as_course": true,
+          "new_edition": true,
+          "edit_course": true,
+          "delete_course": true,
+          "publish_course": true,
+          "create_lesson": true,
+          "import_lesson": true,
+          "edit_lesson": true,
+          "delete_lesson": true,
+          "accounts_admin": false,
+          "users_admin": true,
+          "roles_admin": true,
+          "release_locks": true
+      }
+    });;
+
+roles.insert({
+      "name": "SYSTEM_ADMIN",
+      "relatesTo": {
+          '_id': -1,
+          'type': 'SUPER_USER'
+      },
+      "permissions": {
+          "create_course": false,
+          "save_as_course": false,
+          "new_edition": false,
+          "edit_course": false,
+          "delete_course": false,
+          "publish_course": false,
+          "create_lesson": false,
+          "import_lesson": false,
+          "edit_lesson": false,
+          "delete_lesson": false,
+          "accounts_admin": true,
+          "users_admin": true,
+          "roles_admin": true,
+          "release_locks": true
+      }
+});;
+
+roles.insert({
+      "name": "T2K_ADMIN",
+      "relatesTo": {
+          '_id': -1,
+          'type': 'SUPER_USER'
+      },
+      "permissions": {
+          "create_course": false,
+          "save_as_course": false,
+          "new_edition": false,
+          "edit_course": false,
+          "delete_course": false,
+          "publish_course": false,
+          "create_lesson": false,
+          "import_lesson": false,
+          "edit_lesson": false,
+          "delete_lesson": false,
+          "accounts_admin": true,
+          "users_admin": true,
+          "roles_admin": true,
+          "release_locks": true
+      }
+});;
+
+users.insert({
+   "userId": -1,
+   "firstName": "admin",
+   "lastName": "admin",
+   "email": "admin@t2k.com",
+   "username": "admin",
+   "password": "123456",
+   "relatesTo": {
+    "type": "SUPER_USER",
+    "_id": -1
+   }
+});;
+
+users.insert({
+   "userId": -2,
+   "firstName": "admin2",
+   "lastName": "admin2",
+   "email": "admin2@t2k.com",
+   "username": "time.to.know",
+   "password": "654321",
+   "relatesTo": {
+    "type": "SUPER_USER",
+    "_id": -1
+   }
+});;

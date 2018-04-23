@@ -1,0 +1,17 @@
+<layout  task_ratio="100" tasks_reading_direction="false" type="vertical" sharedBefore="{{sharedBefore}}"> </layout>
+
+<shared id="{{id}}" >
+
+    <label icon="book"></label>
+    <sharedArea type="text">
+        {{#invalidMessage.report}}
+        <textViewer id="{{id}}" >
+            <p>
+            	<span class="invalid" style="color:red;font-size:16px;">
+            	<!-- 	{{{msg}}} -->
+				</span>
+            </p>
+        </textViewer>
+        {{/invalidMessage.report}}
+    </sharedArea>
+</shared>

@@ -1,0 +1,144 @@
+.hasTaskBar .task_screen #stage_base{
+    padding-top: 42px;
+}
+.screen-content.task_screen #stage_base > div.element_preview_wrapper:not(.plugin-content) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div > .element_preview_wrapper> .element_preview_wrapper {
+    margin-top: 10px;
+    position: relative;
+}
+
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div >
+.element_preview_wrapper .question_content > .element_preview_wrapper {
+    display: inline-block;
+}
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div >
+.element_preview_wrapper .appletAnswer_content .element_preview_wrapper {
+    padding-right: 70px;
+    display: inline-block;
+}
+
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div > .element_preview_wrapper .ShortAnswerAnswer_content .element_preview_wrapper {
+    display: inline-block;
+}
+
+.ShortAnswerAnswer_content {
+    overflow: hidden;
+}
+
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div > .element_preview_wrapper {
+    margin-top: 20px ;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #C1C2C3;
+}
+
+.screen-content.task_screen #stage_base > .element_preview_wrapper > div.sharedContent_content > .element_preview_wrapper {
+    padding-right: 70px;
+    display: inline-block;
+    width: auto;
+    overflow: visible;
+}
+
+.stage-answer > .element_preview_wrapper {
+    padding-right: 70px !important;
+    max-width: 90% !important;
+}
+.stage-answer {
+    background-color: #FAFAFA;
+    padding-bottom:10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.stage-answer-top {
+    border-top: 1px solid #fff;
+}
+.screen-content.task_screen .element_preview_wrapper .questionEditorWrapper {
+    background-color: #FAFAFA;
+}
+
+.screen-content.task_screen .element_preview_wrapper #previewImage {
+    margin: 0;
+}
+
+.deleteBtn, .screen-content.task_screen .instruction_content .element_preview_wrapper .deleteBtn, 
+.instruction_content .deleteBtn,
+.deleteBtn, .screen-content.task_screen .title_content .element_preview_wrapper .deleteBtn, 
+.title_content .deleteBtn {
+    display: none;
+}
+
+.element_preview_wrapper .selected > .deleteBtn .btn.btn-small.delete_element {
+    background: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #0099e5 !important;
+    padding: 0;
+}
+
+.element_preview_wrapper .over > .deleteBtn .btn.btn-small.delete_element {
+    background: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #FF9900;
+    padding: 0;
+}
+
+/* text view in sequence */
+.task_screen .span6 .textViewer_content{
+    width: 660px;
+}
+.task_screen .span9 > .element_preview_wrapper{
+    width:96%;
+}
+.element_preview_wrapper.view_mode_normal > .textViewer_content{
+ width:682px;
+}
+
+.task_screen .linking-header{
+    width: 90%;
+}
+
+.view_mode_normal.element_preview_wrapper.over > .deleteBtn,
+.view_mode_normal.element_preview_wrapper.selected > .deleteBtn {
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -30px;
+
+}
+
+.view_mode_normal.element_preview_wrapper.over  {
+    outline: dashed 1px #FF9900;
+    cursor: pointer;
+}
+.view_mode_normal.element_preview_wrapper.selected  {
+    outline: dashed 1px #0099e5;
+}
+#dialog_bottom_row{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.screen-footer .done-button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.screen-footer .preview-button{
+    margin-left: 10px;
+}
+.screen-footer .cancel-button{
+    margin-right: 10px;
+}
+

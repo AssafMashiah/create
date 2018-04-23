@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/data/mongo
+       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd"
+       default-init-method="init">
+
+    <import resource="applicationContext-shared.xml"/>
+
+    <bean name="standardsSourceDao" class="com.t2k.cgs.utils.standards.dao.FileStandardsSourceDao">
+        <property name="sourceDirectoryPath" value="${standards.data.dir}"/>
+    </bean>
+
+
+    <mongo:mongo id="mongo" host="#{t2kConfig.getProperty('common.mongo.host')}" port="#{t2kConfig.getIntProperty('common.mongo.port')}">
+        <mongo:options
+                connections-per-host="#{t2kConfig.getIntProperty('common.mongo.connectionsPerHost')}"
+                threads-allowed-to-block-for-connection-multiplier="#{t2kConfig.getIntProperty('common.mongo.threadsAllowedToBlockForConnectionMultiplier')}"
+                connect-timeout="#{t2kConfig.getIntProperty('common.mongo.connectTimeout')}"
+                max-wait-time="#{t2kConfig.getIntProperty('common.mongo.maxWaitTime')}"
+                auto-connect-retry="#{t2kConfig.getBooleanProperty('common.mongo.autoConnectRetry')}"
+                socket-keep-alive="#{t2kConfig.getBooleanProperty('common.mongo.socketKeepAlive')}"
+                socket-timeout="#{t2kConfig.getIntProperty('common.mongo.socketTimeout')}"
+                slave-ok="#{t2kConfig.getBooleanProperty('common.mongo.slaveOk')}"
+                write-timeout="#{t2kConfig.getIntProperty('common.mongo.writeTimeout')}"
+        />
+    </mongo:mongo>
+
+    <mongo:db-factory id="cgsMongoDbFactory" dbname="cgs" mongo-ref="mongo" username="#{t2kConfig.getProperty('common.mongo.user')}"
+                      password="#{t2kConfig.getProperty('common.mongo.password')}"/>
+
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="cgsMongoDbFactory"/>
+        <property name="writeConcern" value="ACKNOWLEDGED"/>
+    </bean>
+
+    <bean name="standardsTargetDao" class="com.t2k.cgs.utils.standards.dao.MongoStandardsTargetDao">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+
+</beans>

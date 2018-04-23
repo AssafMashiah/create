@@ -1,0 +1,161 @@
+{
+    "cid": "97d0109b-4464-42ea-97ca-b4663beafe3c",
+    "type": "lesson",
+    "title": "l2",
+    "pedagogicalLessonType": "Core",
+    "header": {
+        "last-modified": {
+            "$date": "2013-01-21T12:33:38.796Z"
+        }
+    },
+    "resources": [
+        {
+            "baseDir": "someRefs/sss/1.0350",
+            "hrefs": [
+                "data/templates/fonts/icomoon73672/lte-ie7.js",
+                "data/templates/icons/percentBar.css",
+                "data/templates/icons/fonts/percentbar.eot",
+                "data/libs/jquery/jquery-ui.js",
+                "data/templates/editvalue_fraction.html",
+                "data/templates/fonts/icomoon73672/index.html",
+                "data/templates/icons/fonts/percentbar.dev.svg",
+                "data/libs/jquery/rf.Highlight.js",
+                "data/templates/math_meaning.html",
+                "data/templates/fonts/icomoon73672/fonts/desktop.ini",
+                "data/templates/fonts/icomoon73672/fonts/ui-icons.ttf",
+                "data/templates/math_meaning_error.html",
+                "data/templates/fonts/icomoon73672/style.css",
+                "data/templates/icons/fonts/general.svg",
+                "data/libs/backbone/backbone.js",
+                "data/models/baseModel.js",
+                "data/templates/main.css",
+                "data/templates/fonts/ui-icons.svg",
+                "data/js/libs/t2k/PostMessageManager.js",
+                "data/templates/fonts/ui-icons.eot",
+                "data/media/icon.png",
+                "data/templates/fonts/icomoon73672/fonts/ui-icons.eot",
+                "data/libs/require/require.js",
+                "data/templates/fonts/ui-icons.dev.svg",
+                "data/templates/view.html",
+                "data/templates/icons/fonts/general.dev.svg",
+                "data/libs/t2k/PostMessageManager.js.svntmp",
+                "data/templates/icons/fonts/percentbar.woff",
+                "data/models/boilerplate.js",
+                "images/icon.png",
+                "data/main.js",
+                "data/templates/icons/fonts/general.ttf",
+                "data/js/PercentBar.js",
+                "data/libs/require-css/normalize.js",
+                "data/libs/jquery/jquery.cookie.js",
+                "data/templates/icons/fonts/general.woff",
+                "data/models/segmentHandler.js",
+                "data/libs/require/text.js",
+                "data/templates/fonts/ui-icons.woff",
+                "data/templates/tooltip.html",
+                "data/templates/fonts/icomoon73672/fonts/ui-icons.dev.svg",
+                "data/templates/icons/fonts/percentbar.ttf",
+                "data/templates/fonts/icomoon73672/fonts/ui-icons.svg",
+                "data/i18n/general.js",
+                "data/libs/mustache/mustache.js",
+                "data/templates/fonts/icomoon73672/desktop.ini",
+                "data/templates/value_fraction.html",
+                "data/percentBarMain.js",
+                "data/templates/user.css",
+                "data/models/utilities.js",
+                "data/views/baseView.js",
+                "data/libs/jquery/jquery.js",
+                "data/libs/lodash/lodash.js",
+                "data/templates/editvalue.html",
+                "data/templates/images/pattern.png",
+                "data/libs/require-css/css.js",
+                "data/views/percentBarView.js",
+                "data/models/toolHandler.js",
+                "data/models/labelHandler.js",
+                "data/models/settingsManager.js",
+                "data/templates/icons/general.css",
+                "data/templates/hint.html",
+                "data/templates/segment.html",
+                "data/templates/icons/fonts/percentbar.svg",
+                "data/models/navigationHandler.js",
+                "data/templates/label.html",
+                "data/libs/t2k/PostMessageManager.js",
+                "data/libs/require-css/css-builder.js",
+                "data/templates/alert.mp3",
+                "data/templates/fonts/icomoon73672/fonts/ui-icons.woff",
+                "data/templates/fonts/ui-icons.ttf",
+                "manifest.json",
+                "data/index.html",
+                "data/templates/icons/fonts/general.eot",
+                "data/models/eventManager.js"
+            ],
+            "type": "lib",
+            "resId": "resource_1"
+        },
+        {
+            "baseDir": "dddd/appssssletId2/1.330350",
+            "hrefs": [
+                "data/templates/fonts/icomoon73672/lte-ie7.js",
+                "data/templates/icons/percentBar.css"],
+            "type": "lib",
+            "resId": "resource_1"
+        },
+        {
+            "type": "sequence",
+            "href": "sequences/3d35e3c7-c6ca-434d-8958-5a682bc22334",
+            "resId": "resource_2"
+        },
+        {
+            "type": "sequence",
+            "href": "sequences/7079a83a-4528-4d2f-a985-d9756ca7ade8",
+            "resId": "resource_4"
+        }
+    ],
+    "learningObjects": [
+        {
+            "cid": "0fb42261-d7b3-45bd-8bad-59daa04fcabe",
+            "type": "lo",
+            "pedagogicalLoType": "introduction",
+            "sequences": [
+                {
+                    "cid": "b7fb2f5d-43f9-4cc9-b075-af100ae5cdf5",
+                    "type": "simple",
+                    "mimeType": "DL",
+                    "contentRef": "resource_1",
+                    "resourceRefId": [
+                        "resource_1"
+                    ],
+                    "title": "New sequence 1"
+                },
+                {
+                    "cid": "46b72377-efa3-4271-a71a-0162c0ec68ba",
+                    "type": "simple",
+                    "mimeType": "DL",
+                    "contentRef": "resource_2",
+                    "resourceRefId": [
+                        "resource_2"
+                    ],
+                    "title": "New sequence 2"
+                }
+            ],
+            "title": "New lo"
+        },
+        {
+            "cid": "093bb63c-f0a8-43a0-a674-60eda6952267",
+            "type": "lo",
+            "pedagogicalLoType": "introduction",
+            "sequences": [
+                {
+                    "cid": "6da73243-c10c-4ac6-ab3d-f3e740d246be",
+                    "type": "simple",
+                    "mimeType": "DL",
+                    "contentRef": "resource_4",
+                    "resourceRefId": [
+                        "resource_4"
+                    ],
+                    "title": "New sequence 4"
+                }
+            ],
+            "title": "New lo"
+        }
+    ]
+}

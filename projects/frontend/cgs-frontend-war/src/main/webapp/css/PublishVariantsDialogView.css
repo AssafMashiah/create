@@ -1,0 +1,35 @@
+.css-dialog-prepublish #dialogContent label {
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.css-dialog-scorm #dialogContent label , .css-dialog-scorm #dialogContent span,
+.css-dialog-tree #dialogContent label , .css-dialog-tree #dialogContent span
+{
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.css-dialog-distribute #dialogContent span.nav-arrow{
+    position: absolute;
+    top: 10px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.css-dialog-distribute #dialogContent .right span.nav-arrow {
+    border-left: 10px solid #e4e4e4;
+    right: 14px;
+}
+.css-dialog-distribute #dialogContent .left span.nav-arrow {
+    border-right:10px solid #e4e4e4;
+    left: 14px;
+}

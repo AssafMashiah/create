@@ -1,0 +1,54 @@
+<div id="distribute-form">
+    <div class="tab-navigation">
+	    {{#publishTypes}}
+	        <div class="tab-item {{#isActive}} active {{/isActive}}" content="{{id}}">{{name}}</div>
+	    {{/publishTypes}}
+    </div>
+    <div class="tab-content-area">
+    	{{#publishTypes}}
+    	<div class="tab-content {{#isActive}} active {{/isActive}}" id="{{id}}">
+            <div class="inner-tab-navigation">
+            {{#innerListItems}}
+            <div class="inner-tab-item {{#isActive}} active {{/isActive}}" content="{{id}}">
+                    <div class="tab-icon"></div>
+                    <div class="tab-description">{{name}}</div>
+                </div>
+            {{/innerListItems}}
+            </div>
+        </div>
+	    {{/publishTypes}}
+    </div>
+    <div class="inner-tab-content-area">
+    {{#publishTypes}}
+    	{{#innerListItems}}
+    	<div class="inner-tab-content {{#isActive}} active {{/isActive}}" id="{{id}}">
+
+        <div id="carousel-{{id}}" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {{#imagesSrc}}
+                    <li data-target="#carousel-{{id}}" data-slide-to="{{index}}" class="{{#isActive}} active {{/isActive}}"></li>
+                {{/imagesSrc}}
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                {{#imagesSrc}}
+                    <div class="item {{#isActive}} active {{/isActive}}">
+                      <img src="{{src}}">
+                    </div>
+                {{/imagesSrc}}
+            </div>
+            <a class="left carousel-control" href="#carousel-{{id}}" role="button" data-slide="prev">
+                <span class="nav-arrow" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-{{id}}" role="button" data-slide="next">
+                <span class="nav-arrow" aria-hidden="true"></span>
+            </a>
+        </div>
+            <div class="inner-tab-text">
+                <div class="text-title">{{descriptionTitle}}</div>
+                <div class="text-description">{{descriptionText}}</div>
+            </div>
+        </div>
+		{{/innerListItems}}
+	{{/publishTypes}}
+    </div>
+</div>

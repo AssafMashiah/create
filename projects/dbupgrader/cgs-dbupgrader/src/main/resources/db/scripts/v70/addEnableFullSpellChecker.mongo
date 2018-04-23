@@ -1,0 +1,4 @@
+######################################
+#  add Enable Live Page To Publisher #
+######################################
+publishers.update({"enableFullSpellChecker":{$exists : false}},{$set:{enableFullSpellChecker: false}},{upsert: false, multi: true});

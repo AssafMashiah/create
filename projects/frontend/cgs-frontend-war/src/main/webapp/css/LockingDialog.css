@@ -1,0 +1,46 @@
+
+#dialog.locking table {
+    border: 0.5px solid gray;
+    table-layout: fixed;
+}
+
+#dialog.locking table th{
+    text-align: left;
+}
+
+#dialog.locking table th, #dialog.locking table td { 
+    /*overflow: hidden; */
+    padding: 5px;
+}
+
+#dialog.locking table tbody{ 
+    overflow-y: auto;
+    height: 170px;
+}
+
+#dialog.locking table :-webkit-scrollbar {
+    position: fixed;
+    margin-right: -10px;
+}
+
+#dialog.locking table thead,
+#dialog.locking table tbody {
+    display: block;
+}
+/*
+#dialog.locking table .ui-state-highlight {
+    height: 1.5em;
+    line-height: 1.2em;
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+    background-image: none;
+}*/
+
+#dialog.locking table thead {
+    background-color: #EEE;
+}
+/*
+#dialog.locking table thead th {
+    margin: 1px;
+}
+*/

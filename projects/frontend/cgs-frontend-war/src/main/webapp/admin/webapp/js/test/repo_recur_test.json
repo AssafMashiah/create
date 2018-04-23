@@ -1,0 +1,22 @@
+{
+	"item_1": {
+		"children": ["item_2", "item_3"],
+		"ns": "#1"
+	},
+	"item_2": {
+		"children": [],
+		"ns": "#2"
+	},
+	"item_3": {
+		"children": ["item_8", "item_9"],
+		"ns": "#3"
+	},
+	"item_8": {
+		"children": [],
+		"ns": "#8"
+	},
+	"item_9": {
+		"children": [],
+		"ns": "#9"
+	}
+}

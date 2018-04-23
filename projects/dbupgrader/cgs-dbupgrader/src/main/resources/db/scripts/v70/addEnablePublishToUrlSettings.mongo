@@ -1,0 +1,12 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+
+    db.publishers.update({},{$set:{
+                                   "customization.publishSettings.courses.enablePublishToUrl": false,
+                                   "customization.publishSettings.lessons.enablePublishToUrl": false,
+                                   "customization.enableCourseMiscSettings": true,
+                                   "customization.publishSettings.publishPlayServerUrl": "http://play.timetoknow.com/share/play/",
+                                   "customization.publishSettings.publishUploadServerUrl": "http://play.timetoknow.com/share/upload/"
+                                   }},
+                                   {upsert: false, multi:true});
+}

@@ -1,0 +1,82 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+
+    // Ver 3.0 with Report
+    var isTestMode = false;
+    var totalLessonsFixed = 0;
+    var totalStandardsFixed = 0;
+
+    var lessonColl = db.getCollection('lessons')
+                    .find( {$and:[
+                            {'contentData.learningObjects.standards.0':{$exists:true}},
+                            {'contentData.header.deletionDate':{$exists:false}}
+                            ]}
+                          );
+
+    var isSaveRequired = null;
+    var lessonStandardPackagesIds = [];
+
+    // Each Lesson
+    lessonColl.forEach( function(lesson) {
+
+        isSaveRequired = false;
+        lessonStandardPackagesIds=[];
+
+        // Lesson's Standard Package IDs
+        var lessonPacks = lesson.contentData.standardPackages;
+        if (lessonPacks != null && lessonPacks.length > 0) {
+            lessonPacks.forEach( function(pack) {
+                lessonStandardPackagesIds.push(pack.stdPackageId);
+            });
+        }
+
+
+        // Each LearningObject
+        lesson.contentData.learningObjects.forEach(function(learningObject) {
+            if (learningObject.standards != null) {
+                learningObject.standards.forEach(function(standard) {
+
+                    if ( lessonStandardPackagesIds.indexOf(standard.stdPackageId) < 0 ) {
+
+                        print('Missing Std Packages for Lesson: ' + lesson.contentData.cid + ' LO.StdPackId: '+standard.stdPackageId+',  Course ID: '+lesson.cgsData.courseId );
+
+                        //if (lesson.contentData.cid == 'nnn') {
+                        print('---[ Updating Lesson: ' + lesson.contentData.cid + ' ]---');
+                        var standardPackage = { "name" : " ", "subjectArea" : " ", "version" : " ", "stdPackageId" : " " };
+                        var stdSplit = standard.stdPackageId.split('_');
+                        standardPackage.name = stdSplit[0];
+                        standardPackage.subjectArea = stdSplit[1];
+                        standardPackage.version = stdSplit[2];
+                        standardPackage.stdPackageId = standard.stdPackageId;
+                        lesson.contentData.standardPackages.push(standardPackage);
+                        // Add it to the exceptionals array so we will not add it to the lesson again.
+                        lessonStandardPackagesIds.push(standard.stdPackageId);
+
+                        lesson.contentData.header['last-modified'] = new Date();
+
+                        isSaveRequired = true;
+                        totalStandardsFixed += 1;
+                        //}
+                    }
+                });
+            }
+        });
+
+        // Save Per Lesson.
+        if (isSaveRequired) {
+            if (isTestMode) {
+                print('Test Mode.  Not Saving.')
+            }
+            else {
+                db.lessons.save(lesson);
+            }
+
+            totalLessonsFixed += 1;
+            print('Lesson [' + lesson.contentData.cid + '] Saved.');
+        }
+    });
+
+    print('[  REPORT  ]\r\n Run Mode: ' + (isTestMode?'Test Only':'Production')  + '\r\n' + ' Total Lessons Fixed .......: ' + totalLessonsFixed + '\r\n Total Standards Fixed .....: ' + totalStandardsFixed);
+
+
+}

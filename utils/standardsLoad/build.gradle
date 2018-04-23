@@ -1,0 +1,113 @@
+defaultTasks 'assebmble'
+
+apply from: '../../cgs-common.gradle'
+
+String rootTargetDir = project.buildDir.name + '/standardsLoad'
+
+allprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+    group = 'com.t2k.cgs.utils'
+}
+
+//Do not pack resources into the jar
+//We will copy relevant resources later during the assembly stage
+processResources {
+    enabled = false
+}
+
+
+dependencies {
+    compile libraries.log4j
+    compile libraries.jsonTagLib
+    compile libraries.jacksonMapper
+    compile spring
+    compile database.mongodb
+    compile apacheCommons
+    compile t2klibraries.t2kconfig
+
+    testCompile testing
+}
+
+test {
+    useTestNG() {
+        excludeGroups 'ignore'
+    }
+}
+
+clean.doFirst {
+    println ""
+    def proc = "java -version".execute()
+    proc.waitFor()
+
+    println "${proc.err.text}"
+    println ""
+}
+
+build.doLast {
+    configurations.compile.each {
+        File file ->
+            copy {
+                from file
+                into "$buildDir/dependencies-libs"
+            }
+    }
+}
+
+task cleanOldAssemble(type: Delete) {
+    delete rootTargetDir
+}
+
+task assambleStaticFiles(type: Copy) {
+    from project.projectDir.canonicalPath + '/src/main/assembly/files'
+    into rootTargetDir
+}
+assambleStaticFiles.dependsOn cleanOldAssemble
+
+assambleStaticFiles.doLast {
+    ant.chmod(file: rootTargetDir + '/bin/*.sh', perm: 'a+x')
+}
+
+task assambleSpringContextFiles(type: Copy) {
+    from project.projectDir.canonicalPath + '/src/main/resources'
+    into rootTargetDir + '/conf'
+    include 'applicationContext*'
+}
+assambleSpringContextFiles.dependsOn cleanOldAssemble
+
+task assambleLibs(type: Copy) {
+    from project.buildDir.name + '/libs'
+    from project.buildDir.name + '/dependencies-libs'
+    into rootTargetDir + '/lib'
+}
+assambleLibs.dependsOn cleanOldAssemble
+
+
+task assebmble() {
+    dependsOn build, assambleStaticFiles, assambleSpringContextFiles, assambleLibs
+}
+
+
+task createDevEnv() {
+    println ''
+    println 'Create properties for standardsLoad'
+    println ''
+
+    try {
+        File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../projects/backend/cgs-web/src/main/resources/config/t2k.properties')
+        if (t2kPropFile.exists()) {
+            ant.property(file: t2kPropFile.getAbsolutePath())
+            println "Copying " + t2kPropFile.getAbsolutePath() + " into " + "src/test/resources"
+            project.copy() {
+                from(t2kPropFile.getAbsolutePath())
+                into 'src/test/resources'
+            }
+        }
+    }
+    catch (Exception e) {
+        e.printStackTrace()
+    }
+}
+

@@ -1,0 +1,5 @@
+<sequence type="{{sequenceType}}" id="{{id}}">
+	
+	<iframe {{#url}}src="{{url}}"{{/url}}></iframe>
+	
+</sequence>

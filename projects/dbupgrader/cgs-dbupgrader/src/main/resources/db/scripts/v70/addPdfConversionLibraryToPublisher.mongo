@@ -1,0 +1,10 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.publishers.find().forEach(function addPdfConversionLibrary(doc) {
+    	if(!doc.customization.pdfConversionLibrary){
+    		doc.customization.pdfConversionLibrary = "IDR";
+    	}
+
+		db.publishers.save(doc); // re-saving the publisher
+    });
+}

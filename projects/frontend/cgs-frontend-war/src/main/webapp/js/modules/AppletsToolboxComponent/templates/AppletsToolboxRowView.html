@@ -1,0 +1,21 @@
+{{#obj.name}}
+  <td>
+    {{#obj.thumbnailData}}
+      <img src="data:{{ obj.thumbnailMimeType }};base64,{{{ obj.thumbnailData }}}"/>
+    {{/obj.thumbnailData}}
+  </td>
+
+  <td>{{obj.name}}</td>
+
+  <td class="toolbox-delete-cell">
+    <button type="button" class="btn toolbox-row__delete">
+      <i class="icon-trash"></i>
+    </button>
+  </td>
+{{/obj.name}}
+
+{{#obj.emptyRow}}
+  <td colspan="3">
+    <div class="alert alert-info">((This list is empty.))</div>
+  </td>
+{{/obj.emptyRow}}

@@ -1,0 +1,23 @@
+<div class="warningMessage">
+    <div class="base-icon icon-info"></div>
+    <span>
+        ((Changes affect new content only))
+    </span>
+</div>
+<table id="instructions_table" class="table table-bordered" style="width: 99%">
+    <thead>
+    <tr>
+        <th class="th_task">((course.props_area.tab_design.instruction_table.title.task))</th>
+        <th class="th_instruction" >((course.props_area.tab_design.instruction_table.title.instructions))</th>
+    </tr>
+    </thead>
+    <tbody id="instructions_table_body">
+        {{#instructionMarkup}}
+            <tr id='row_{{index}}'>
+                <td style="width: 25%">(({{instructionKey}}))</td>
+                <td id="props_text_viewer_{{index}}" style="width: 75%" class="propsTextContainer"></td>
+            </tr>
+        {{/instructionMarkup}}
+    
+    </tbody>
+</table>

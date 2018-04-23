@@ -1,0 +1,19 @@
+{{#show_hint}}
+<hint>
+    {{#first}}
+    <message attempt='first' attempt-num='{{attemptNum}}' max-attempts='{{maxAttempts}}'>
+        {{{content}}}
+    </message>
+    {{/first}}
+    {{#mid}}
+    <message attempt='mid' attempt-num='{{attemptNum}}' max-attempts='{{maxAttempts}}'>
+        {{{content}}}
+    </message>
+    {{/mid}}
+    {{#last}}
+    <message attempt='last' attempt-num='{{attemptNum}}' max-attempts='{{maxAttempts}}'>
+        {{{content}}}
+    </message>
+    {{/last}}
+</hint>
+{{/show_hint}}

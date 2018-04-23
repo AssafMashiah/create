@@ -1,0 +1,31 @@
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.assessments.find({"contentData.learningObjects": {$elemMatch: {"sequences": { $elemMatch: {"type": "differentiatedSequenceParent", "standards": {$exists: 1}}}}}}).forEach(
+        function (doc) {
+            doc.contentData.learningObjects.forEach(
+                function (lo) {
+                    if (lo.sequences) {
+                        lo.sequences.forEach(function (seq) {
+                            if (seq.type == "differentiatedSequenceParent") {
+                                delete seq.standards;
+                            }
+                        })
+                    }
+                })
+            db.assessments.save(doc);
+        });
+
+    db.lessons.find({"contentData.learningObjects": {$elemMatch: {"sequences": { $elemMatch: {"type": "differentiatedSequenceParent", "standards": {$exists: 1}}}}}}).forEach(
+        function (doc) {
+            doc.contentData.learningObjects.forEach(function (lo) {
+                if (lo.sequences) {
+                    lo.sequences.forEach(function (seq) {
+                        if (seq.type == "differentiatedSequenceParent") {
+                            delete seq.standards;
+                        }
+                    })
+                }
+            })
+            db.lessons.save(doc);
+        });
+}

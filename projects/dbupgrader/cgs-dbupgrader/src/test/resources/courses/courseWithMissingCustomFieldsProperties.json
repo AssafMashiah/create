@@ -1,0 +1,365 @@
+{
+    "_id": "b5429d79-2208-46b6-a3e5-7da867c6358c",
+    "_class": "com.mongodb.BasicDBObject",
+    "cgsData": {
+        "publisherId": 6
+    },
+    "contentData": {
+        "author": "bmasrour",
+        "cgsVersion": "7.0.511",
+        "cid": "22639eee-2238-4a63-ba8c-9293813f0c59",
+        "courseId": "422bbb1e-0e9e-4f98-aeab-38976a4c2c2c",
+        "themingLastModified": {
+            "interactive_sequence": "Fri Sep 05 2014"
+        },
+        "header": {
+            "last-modified": {
+                "$date": "2014-11-05T16:02:10.379Z"
+            },
+            "publishedToProduction": {
+                "$date": "2014-09-22T08:01:14.471Z"
+            },
+            "tocIdsPublishedToProduction": [
+                "e57efbd9-b7df-4296-99e6-928f165ddba9",
+                "e028d574-fb3c-4534-ad34-13dc67c28ba6",
+                "183f3b5e-8ad5-472d-9612-473c15649a8e",
+                "61087881-1929-454c-a077-4c0183753b47",
+                "fcb65e0e-a4ce-4ce3-8c1f-296fad530e59",
+                "2639b05a-817f-4f5c-b142-f12dcc0db4c8",
+                "ea27ca4e-1236-4d5b-9486-77026ce21277",
+                "7af91a5c-14f0-40c4-89e3-09ee3cac887d",
+                "db822954-94fc-483c-b1b2-a5aaa0fd1529",
+                "9ced9d6d-b226-4560-9be7-b85506f180fe",
+                "690baa28-62b4-4f09-b1ef-5ac20f67e1a0",
+                "3a97974b-5339-45d9-823f-30db0c710032",
+                "319a7b01-df6b-49a4-9dfa-65d3d6b4cbb3",
+                "d1a1eebb-9015-41c6-821f-c21f7200335f",
+                "92668d5c-abb7-4376-8a09-d4fcecec6b6b",
+                "bfe8ece4-e805-49b3-bba2-07452c3b6101",
+                "a9dcedbc-3227-41fb-a11c-9747723a9def"
+            ]
+        },
+        "includeLo": true,
+        "maxDepth": 3,
+        "publisher": "T2K",
+        "customizationPack": {
+            "name": "fr_FR_French",
+            "version": "3.1015",
+            "language": "french",
+            "date": "03/03/2014",
+            "author": "Itai Ben-Naftali",
+            "resourceId": "resource_2"
+        },
+        "coverRefId": "resource_1",
+        "resources": [
+            {
+                "href": "media/5b/ff/5bffad9636a1c98826a2f0c4b0e2068e300890f2.png",
+                "type": "media",
+                "resId": "resource_1"
+            },
+            {
+                "resId": "resource_2",
+                "baseDir": "customizationPack/fr_FR_French/3.1015",
+                "hrefs": [
+                    "manifest.json",
+                    "cgs/config.json",
+                    "cgs/system-font.css",
+                    "cgs/systemFonts/DL-Iconfont_normal.eot",
+                    "cgs/systemFonts/DL-Iconfont_normal.svg",
+                    "cgs/systemFonts/DL-Iconfont_normal.ttf",
+                    "cgs/systemFonts/DL-Iconfont_normal.woff",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.eot",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.svg",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.ttf",
+                    "cgs/systemFonts/Text-Editor-Iconfont_normal.woff",
+                    "dl/systemFonts/DL-Iconfont_normal.eot",
+                    "dl/systemFonts/DL-Iconfont_normal.svg",
+                    "dl/systemFonts/DL-Iconfont_normal.ttf",
+                    "dl/systemFonts/DL-Iconfont_normal.woff",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.eot",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.svg",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.ttf",
+                    "dl/systemFonts/Text-Editor-Iconfont_normal.woff",
+                    "dl/config.json",
+                    "dl/strings.js",
+                    "dl/style.css",
+                    "dl/system-font.css",
+                    "dl/mathfield/mathField.css",
+                    "dl/mathfield/fonts/MF_T2K_FR-Bold-Italic.ttf",
+                    "dl/mathfield/fonts/MF_T2K_FR-Bold.ttf",
+                    "dl/mathfield/fonts/MF_T2K_FR-Italic.ttf",
+                    "dl/mathfield/fonts/MF_T2K_FR-Regular.ttf",
+                    "dl/styles.json",
+                    "cgs/fonts.css",
+                    "cgs/effects.css",
+                    "cgs/styles.css",
+                    "cgs/cgsStyles.css",
+                    "cgs/fonts/t2k-ayala-bold-webfont.eot",
+                    "cgs/fonts/t2k-ayala-bold-webfont.svg",
+                    "cgs/fonts/t2k-ayala-bold-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-bold-webfont.woff",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.eot",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.svg",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-bolditalic-webfont.woff",
+                    "cgs/fonts/t2k-ayala-italic-webfont.eot",
+                    "cgs/fonts/t2k-ayala-italic-webfont.svg",
+                    "cgs/fonts/t2k-ayala-italic-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-italic-webfont.woff",
+                    "cgs/fonts/t2k-ayala-regular-webfont.eot",
+                    "cgs/fonts/t2k-ayala-regular-webfont.svg",
+                    "cgs/fonts/t2k-ayala-regular-webfont.ttf",
+                    "cgs/fonts/t2k-ayala-regular-webfont.woff",
+                    "cgs/fonts/t2k-icons.eot",
+                    "cgs/fonts/t2k-icons.svg",
+                    "cgs/fonts/t2k-icons.ttf",
+                    "cgs/fonts/t2k-icons.woff",
+                    "cgs/fonts/verdana.ttf",
+                    "cgs/fonts/verdanab.ttf",
+                    "cgs/fonts/verdanai.ttf",
+                    "cgs/fonts/verdanaz.ttf",
+                    "cgs/fonts/verdana_bold.ttf",
+                    "cgs/fonts/verdana_bold+italic.ttf",
+                    "cgs/fonts/verdana_italic.ttf",
+                    "cgs/fonts/verdana_normal.ttf",
+                    "cgs/fonts/MyriadWebPro_reg.ttf",
+                    "cgs/fonts/Ubuntu_reg.ttf",
+                    "dl/fonts/t2k-ayala-bold-webfont.eot",
+                    "dl/fonts/t2k-ayala-bold-webfont.svg",
+                    "dl/fonts/t2k-ayala-bold-webfont.ttf",
+                    "dl/fonts/t2k-ayala-bold-webfont.woff",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.eot",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.svg",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.ttf",
+                    "dl/fonts/t2k-ayala-bolditalic-webfont.woff",
+                    "dl/fonts/t2k-ayala-italic-webfont.eot",
+                    "dl/fonts/t2k-ayala-italic-webfont.svg",
+                    "dl/fonts/t2k-ayala-italic-webfont.ttf",
+                    "dl/fonts/t2k-ayala-italic-webfont.woff",
+                    "dl/fonts/t2k-ayala-regular-webfont.eot",
+                    "dl/fonts/t2k-ayala-regular-webfont.svg",
+                    "dl/fonts/t2k-ayala-regular-webfont.ttf",
+                    "dl/fonts/t2k-ayala-regular-webfont.woff",
+                    "dl/fonts/t2k-icons.eot",
+                    "dl/fonts/t2k-icons.svg",
+                    "dl/fonts/t2k-icons.ttf",
+                    "dl/fonts/t2k-icons.woff",
+                    "dl/fonts/verdana.ttf",
+                    "dl/fonts/verdanab.ttf",
+                    "dl/fonts/verdanai.ttf",
+                    "dl/fonts/verdanaz.ttf",
+                    "dl/fonts/verdana_bold.ttf",
+                    "dl/fonts/verdana_bold+italic.ttf",
+                    "dl/fonts/verdana_italic.ttf",
+                    "dl/fonts/verdana_normal.ttf",
+                    "dl/fonts/MyriadWebPro_reg.ttf",
+                    "dl/fonts/Ubuntu_reg.ttf"
+                ],
+                "type": "lib"
+            }
+        ],
+        "schema": "course_v4",
+        "standards": [],
+        "standardPackages": [],
+        "title": "Français 5ème",
+        "contentLocales": [
+            "fr_FR"
+        ],
+        "subjectArea": [
+            "Français"
+        ],
+        "gradeLevel": [
+            "5ème"
+        ],
+        "isbn": "ISBN 313 309 736 023 2",
+        "toc": {
+            "cid": "22e2dc4d-f604-4152-9bee-2a163a79f5cb",
+            "title": "Français 5ème",
+            "overview": "",
+            "keywords": [],
+            "type": "tocItem",
+            "tocItemRefs": [],
+            "tocItems": [
+                {
+                    "cid": "e028d574-fb3c-4534-ad34-13dc67c28ba6",
+                    "title": "Etude de la langue : grammaire et orthographe",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "standards": [],
+                    "tocItemRefs": [
+                        {
+                            "cid": "183f3b5e-8ad5-472d-9612-473c15649a8e",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "61087881-1929-454c-a077-4c0183753b47",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "fcb65e0e-a4ce-4ce3-8c1f-296fad530e59",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "2639b05a-817f-4f5c-b142-f12dcc0db4c8",
+                            "type": "lesson"
+                        }
+                    ],
+                    "tocItems": []
+                },
+                {
+                    "cid": "ea27ca4e-1236-4d5b-9486-77026ce21277",
+                    "title": "Expression écrite",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "standards": [],
+                    "tocItemRefs": [
+                        {
+                            "cid": "7af91a5c-14f0-40c4-89e3-09ee3cac887d",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "db822954-94fc-483c-b1b2-a5aaa0fd1529",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "9ced9d6d-b226-4560-9be7-b85506f180fe",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "690baa28-62b4-4f09-b1ef-5ac20f67e1a0",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "3a97974b-5339-45d9-823f-30db0c710032",
+                            "type": "lesson"
+                        }
+                    ],
+                    "tocItems": []
+                },
+                {
+                    "cid": "319a7b01-df6b-49a4-9dfa-65d3d6b4cbb3",
+                    "title": "Ce que tu dois savoir",
+                    "overview": "",
+                    "keywords": [],
+                    "type": "tocItem",
+                    "standards": [],
+                    "tocItemRefs": [
+                        {
+                            "cid": "d1a1eebb-9015-41c6-821f-c21f7200335f",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "92668d5c-abb7-4376-8a09-d4fcecec6b6b",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "bfe8ece4-e805-49b3-bba2-07452c3b6101",
+                            "type": "lesson"
+                        },
+                        {
+                            "cid": "a9dcedbc-3227-41fb-a11c-9747723a9def",
+                            "type": "lesson"
+                        }
+                    ],
+                    "tocItems": []
+                }
+            ]
+        },
+        "type": "course",
+        "version": "1.0.0",
+        "differentiation": {
+            "defaultLevelId": 2,
+            "levels": [
+                {
+                    "id": 1,
+                    "name": "Débutant",
+                    "acronym": "deb"
+                },
+                {
+                    "id": 2,
+                    "name": "Intermédiaire",
+                    "acronym": "int"
+                },
+                {
+                    "id": 3,
+                    "name": "Expert",
+                    "acronym": "exp"
+                }
+            ]
+        },
+        "customFields": [
+            {
+                "cid": "8acde065-b25e-4248-aacb-5d2b54657b9c",
+                "type": "date",
+                "name": "date with no format",
+                "required": false
+            },
+            {
+                "cid": "13fb337d-7836-469e-9793-def487a992f8",
+                "type": "date",
+                "name": "date with missing \"dd/mm/yy\" format",
+                "required": false
+            },
+            {
+                "cid": "aea1cd87-c61d-447d-bb40-87c652e7e48c",
+                "type": "date",
+                "name": "date with missing \"mm/dd/yyyy\" format",
+                "required": false
+            },
+            {
+                "cid": "de407e0f-861c-43b5-b3ae-ee6a84475060",
+                "type": "date",
+                "name": "date with \"Mon. DD, YYYY\"  format",
+                "required": false,
+                "format": "Mon. DD, YYYY"
+            },
+            {
+                "cid": "4ea0d3fd-5ac5-4cbb-aa05-9c150adb1489",
+                "type": "tags",
+                "name": "tags with no separator",
+                "required": false
+            },
+            {
+                "cid": "60772790-933a-4683-8574-259605fc7ff5",
+                "type": "tags",
+                "name": "tags with missing \"space\" separator",
+                "required": false
+            },
+            {
+                "cid": "5c357097-5bd7-4bcd-a261-10b0521c4136",
+                "type": "tags",
+                "name": "tags with missing \"comma\" separator",
+                "required": false
+            },
+            {
+                "cid": "5e11c1ca-2f86-44da-9a7c-b6bb20ad19b8",
+                "type": "tags",
+                "name": "tags with \"semicolon\" separator",
+                "required": false,
+                "separator": "semicolon"
+            },
+            {
+                "cid": "642a4cad-2fed-4cf6-8752-249a5c44d918",
+                "type": "boolean",
+                "name": "boolean with no value",
+                "required": false
+            },
+            {
+                "cid": "be3dee67-91d5-4f9b-ad8c-f83642715a2b",
+                "type": "boolean",
+                "name": "boolean with true value",
+                "required": false,
+                "value": true
+            },
+            {
+                "cid": "b628bc42-cf2c-424f-93f7-fff062c9a891",
+                "type": "boolean",
+                "name": "boolean with false value",
+                "required": false,
+                "value": false
+            }
+        ]
+    }
+}

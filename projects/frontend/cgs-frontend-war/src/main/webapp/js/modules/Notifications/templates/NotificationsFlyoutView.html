@@ -1,0 +1,44 @@
+<div class="notification" rv-each-notification="model.notifications" rv-id="notification.id">
+	<div class="notificationProgress" rv-addclass="notification.status">
+		<div class="notificationStatusPercentContainer" rv-show="notification.status | equals inProgress">
+			<div class="notificationStatusPercent" >{ notification.statusPercent | percent }</div>
+			<div class="arrow-down"></div>
+		</div>
+		<div class="notificationImageWrapper">
+			<div class="notificationImage" rv-addclass="notification.status">
+	            <i></i>
+	            <i></i>
+	            <i></i>
+			</div>
+		</div>
+	</div>
+	<div class="notificationDetails">
+		<div class="notificationHide" rv-show="notification.status | equalsOne success error cancelled">((publish.indication.hide))</div>
+		<div class="notificationName" rv-title="notification.name">
+			{ notification.name } 
+		</div>
+		<div rv-hide="notification.isPublishToUrl" class="notificationVersion">((publish.indication.courseVersion)) {notification.courseVersion}</div>
+		<div rv-show="notification.isPublishToUrl" style="height: 16px;"></div>
+		<div class="notificationStatus">
+			<div class="notificationStatusText">{ notification.statusText }</div>
+			
+		</div>
+		<div class="notificationActions" rv-show="notification.status | equalsOne inProgress pending">
+			<div class="notificationAction cancelPublish" rv-addclass="notification.isCancelDisabled">((publish.indication.cancelPublish))</div>
+		</div>
+		<div class="notificationActions" rv-show="notification.status | equals success">
+			<div class="notificationAction download" rv-show="notification.download">((publish.indication.download))</div>
+		</div>
+		<div class="notificationActions" rv-show="notification.status | equals success">
+			<div class="notificationAction tinyUrl" rv-show="notification.tinyKey"
+				 rv-data-url="notification.tinyKey" rv-data-course-name="notification.courseName" rv-data-lesson-name="notification.lessonName">
+				((publish.notification.message))
+			</div>
+		</div>
+		<div class="notificationActions" rv-show="notification.status | equals error">
+			<div class="notificationAction">
+	            <span class="showDetails">((publish.indication.details))</span>
+            </div>
+		</div>
+	</div>
+</div>

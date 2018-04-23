@@ -1,0 +1,90 @@
+#menu-button-text-effects,
+#menu-button-text-effects ul{
+	width: 292px;}
+#menu-button-text-style,
+#menu-button-text-style ul{
+	width: 220px;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll,
+#sub_menu_base .btn-group.btn-group-scroll * {
+	overflow: hidden;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll {	
+	height: 55px;
+	position: relative;
+	cursor: pointer;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll ul {
+	height: 42px;
+	background-color: #fff;
+	overflow-y: scroll;
+	margin: 0px;
+	outline: solid 1px #C1C2C3;
+	outline-offset: -1px;
+	position: fixed;
+	margin-top: 14px;
+}
+#sub_menu_base .btn-group.btn-group-scroll ul li{
+	padding: 0 8px 8px 8px;
+}
+#sub_menu_base .btn-group.btn-group-scroll ul li:hover{
+	background: #F5F6F7;
+	outline: 1px solid #276CC7;
+}
+#sub_menu_base .btn-group.btn-group-scroll ul li i{
+	font-size: 32px;
+	display: block;
+	line-height: 25px;
+}
+#sub_menu_base .btn-group.btn-group-scroll ul.scroll-opened {
+	height:initial;
+	max-height:177px;
+	z-index: 2;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll ul li,
+#sub_menu_base .btn-group.btn-group-scroll .btn-link-title {
+	width: 54px;
+	float: left;
+	height: 44px;
+	text-align: center;
+}
+#sub_menu_base .btn-group.btn-group-scroll .btn-link-title {
+	margin-top: 1px;
+	font-size: 12px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: normal;
+}
+
+
+#sub_menu_base .btn-group.btn-group-scroll .btn:not([disabled]):hover {
+	border-color: #33CCFF;
+	background: linear-gradient(to bottom, #ffffff 0% ,#e7e7e7 100%);
+}
+#sub_menu_base .btn-group-scroll p.divider-horizontal:hover{
+	background-color: rgb(217, 220, 223);
+}
+#sub_menu_base .btn-group-scroll p.divider-horizontal{
+color: #276CC7;
+}
+#sub_menu_base .btn-group.btn-group-scroll .divider-horizontal {
+	cursor: pointer;
+}
+#sub_menu_base .btn-group.btn-group-scroll .divider-horizontal:hover {
+	color: #3C90FF;
+}
+
+p.divider-horizontal {}
+#sub_menu_base .btn-group.btn-group-scroll .divider-horizontal:hover .white-caret {
+	border-top-color: #3C90FF;
+}
+
+#sub_menu_base .btn-group.btn-group-scroll .btn-group-scroll-open {
+	position: relative;
+	top: 10px;
+	right: -5px;
+}

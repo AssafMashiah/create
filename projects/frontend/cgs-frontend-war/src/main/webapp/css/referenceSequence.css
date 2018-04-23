@@ -1,0 +1,54 @@
+#reference-to-sequence ul {
+	list-style: none;
+}
+
+#reference-to-sequence .items-list {
+	cursor: pointer;
+}
+
+#reference-to-sequence div.hasChildren:before{
+	content: '\006b';
+	display: inline-block;
+	font-size: 32px;
+	margin: 0 -8px 0 -12px;
+	padding: 0;
+	line-height: 0.3;
+	vertical-align: middle;
+
+	font-family: 'CGS-icons';
+
+
+}
+
+#reference-to-sequence div.hasChildren.opened:before{
+	/*content: '\0024';*/
+	color: #0099e5;
+}
+
+#reference-to-sequence {
+    width: 95%;
+}
+
+#reference-to-sequence li.item {
+	display: none;
+}
+
+#reference-to-sequence a.sequence-link {
+	cursor: pointer;
+	color: #333;
+}
+
+#reference-to-sequence a.sequence-link:hover,
+#reference-to-sequence a.sequence-link.selected {
+	color: #0099e5;
+	text-decoration: none;
+}
+
+.referenceSequence #dialogContent {
+	padding-top: 20px;
+	overflow:auto;
+}
+
+.referenceSequence  ::-webkit-scrollbar {
+    width: 6px;
+}

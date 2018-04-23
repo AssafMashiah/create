@@ -1,0 +1,3 @@
+<cell id="{{id}}" {{#type}}type="{{type}}"{{/type}}>
+	{{{content}}}
+</cell>

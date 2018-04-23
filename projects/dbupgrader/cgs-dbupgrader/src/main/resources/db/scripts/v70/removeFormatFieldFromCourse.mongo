@@ -1,0 +1,9 @@
+// remove format field from course.contentData as courses can now hold both NATIVE and EBOOK lessons
+function f(dbName) {
+    db = db.getSiblingDB(dbName);
+    db.getCollection('courses').update({},{$unset:{"contentData.format": 1}},{upsert: false, multi: true});
+    db.getCollection('courses').update({"contentData.header.last-modified": {"$gt": new Date("1970-01-01T00:00:00.000Z")}},
+                                       {$set:{"contentData.header.last-modified": new Date()}},
+                                       {upsert: false, multi: true}
+                                      );
+}

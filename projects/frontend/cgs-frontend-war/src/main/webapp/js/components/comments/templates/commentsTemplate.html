@@ -1,0 +1,10 @@
+<div class="commentContainer {{#isMinimized}}minimized-comment{{/isMinimized}}{{^isMinimized}}maximized-comment{{/isMinimized}}">
+	<div id="minimizedComment" class="base-icon icon-th-large"></div>
+{{^isMinimized}}
+	<div id="closeComment" class="base-icon icon-th"></div>
+	<div id="addStamp" class="base-icon icon-stamp {{^commentEditble}}disable{{/commentEditble}}"></div>
+	<div class="commentArea" contenteditable="{{commentEditble}}">{{{comment}}}</div>
+	<hr>
+	<div id="icon-remove-comment" class="base-icon icon-trash {{^commentEditble}}disable{{/commentEditble}}"></div>
+{{/isMinimized}}
+</div>

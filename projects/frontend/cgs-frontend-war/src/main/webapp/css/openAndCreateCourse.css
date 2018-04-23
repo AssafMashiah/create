@@ -1,0 +1,162 @@
+#dialog.openAndNewCourse {
+  width: 70%;
+  height: 70%;
+  max-height: 70%;
+  min-height: 70%;
+  left: 15%;
+  top: 15%;
+  margin: 0;
+  overflow-y: hidden;
+  background-color: #f4f8fa;
+  border-color: #DDD; }
+  #dialog.openAndNewCourse .landing-popoup {
+    display: flex;
+    padding: 30px 40px;
+    height: 100%; }
+    #dialog.openAndNewCourse .landing-popoup .section-title-container .section-title {
+      color: #000;
+      font-size: 16px;
+      font-weight: bold; }
+    #dialog.openAndNewCourse .landing-popoup .section-title-container .underline-seperator {
+      height: 2px;
+      border-bottom: 2px solid #E9EEF0;
+      margin: 6px 0 20px 0; }
+    #dialog.openAndNewCourse .landing-popoup .action-button {
+      width: 120px;
+      display: inline-block;
+      cursor: pointer; }
+      #dialog.openAndNewCourse .landing-popoup .action-button:hover {
+        background-color: #e9f0f3; }
+      #dialog.openAndNewCourse .landing-popoup .action-button .image-button {
+        width: 75px;
+        height: 75px;
+        margin: 10px 20px;
+        background-color: transparent; }
+      #dialog.openAndNewCourse .landing-popoup .action-button .bornDigital {
+        background-image: url("../media/landingPopup/bornDigital.png"); }
+      #dialog.openAndNewCourse .landing-popoup .action-button .dynamicBook {
+        background-image: url("../media/landingPopup/epub_pdf.png"); }
+      #dialog.openAndNewCourse .landing-popoup .action-button .button-description {
+        color: #000;
+        font-size: 13px;
+        text-align: center;
+        padding-bottom: 10px; }
+    #dialog.openAndNewCourse .landing-popoup .new-course-container {
+      flex: 1;
+      margin-right: 70px;
+      overflow-y: auto; }
+      #dialog.openAndNewCourse .landing-popoup .new-course-container .create-new-course {
+        margin-bottom: 50%; }
+    #dialog.openAndNewCourse .landing-popoup .open-course-container {
+      flex: 3;
+      height: 100%; }
+      #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template {
+        position: relative;
+        height: 100%; }
+        #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container {
+          height: calc(100% - 90px);
+          overflow-y: auto; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            direction: ltr;
+            margin-top: 15px; }
+            #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container .course-thumbnail {
+              margin: 0 22px 22px 0;
+              cursor: pointer; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container .course-thumbnail:hover {
+                opacity: 0.7; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container .course-thumbnail .course-thumbnail-image {
+                width: 148px;
+                height: 148px;
+                background-color: #d9effd;
+                border: 1px solid #d4d7db; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container .course-thumbnail .course-name,
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .courses-container .courses-thumbnails-container .course-thumbnail .course-version {
+                max-width: 150px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 5px 0; }
+        #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .course-loader-container {
+          margin-top: 95px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .course-loader-container .course-loader {
+            background-image: url("images/balls.gif");
+            width: 180px;
+            height: 180px; }
+        #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .empty-courses-container {
+          margin-top: 95px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .empty-courses-container .empty-courses-image {
+            background-image: url("../media/landingPopup/empty folder.png");
+            width: 104px;
+            height: 101px;
+            margin-bottom: 15px; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .empty-courses-container .empty-courses-text {
+            color: #b0b0b0;
+            font-style: italic;
+            font-size: 16px; }
+        #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .filter-buttons-container {
+            display: flex; }
+            #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .filter-buttons-container .course-filter-button {
+              background-color: #d9e9fd;
+              margin: 0 5px;
+              padding: 3px 12px;
+              font-size: 13px;
+              line-height: 21px;
+              height: 26px;
+              cursor: pointer; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .filter-buttons-container .course-filter-button.selected {
+                background-color: #2477e6;
+                color: #fff; }
+                #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .filter-buttons-container .course-filter-button.selected:hover {
+                  opacity: 0.7; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .filter-buttons-container .course-filter-button:hover {
+                opacity: 0.7; }
+          #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .search-container {
+            position: relative; }
+            #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .search-container .course-search-bar {
+              background-color: #fff;
+              padding: 3px 22px 3px 10px;
+              border: 1px solid #d9e9fd;
+              width: 290px;
+              font-size: 14px;
+              color: #000; }
+              #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .search-container .course-search-bar:focus {
+                border-color: #4391f7; }
+            #dialog.openAndNewCourse .landing-popoup .open-course-container .open-course-template .search-filter-container .search-container .magnifying-glass {
+              background-image: url("../media/landingPopup/search icon.png");
+              width: 17px;
+              height: 14px;
+              position: absolute;
+              right: 5px;
+              top: 6px; }
+    #dialog.openAndNewCourse .landing-popoup .import-course-container .icon-real-download-alt {
+      color: #4391F7;
+      font-size: 50px;
+      line-height: 50px;
+      height: 50px;
+      width: 50px;
+      margin: 10px 35px; }
+    #dialog.openAndNewCourse .landing-popoup .import-course-container .icon-import-epub {
+      color: #4391F7;
+      font-size: 50px;
+      line-height: 50px;
+      height: 50px;
+      width: 50px;
+      margin: 10px 35px; }

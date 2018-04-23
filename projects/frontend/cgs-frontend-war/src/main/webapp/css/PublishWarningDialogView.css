@@ -1,0 +1,63 @@
+.css-dialog-publish-warning #dialog{
+    width: 870px;
+    height: 512px;
+    min-height: 512px;
+}
+
+.css-dialog-publish-warning #dialogContent{
+    padding: 28px 20px 0 20px;
+    height: 381px;
+    min-height: 381px;
+}
+
+.css-dialog-publish-warning #publishWarningWrapper{
+    font-family: Arial, serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.css-dialog-publish-warning #publishWarningDesc{
+    height: 30px;
+    line-height: 30px;
+}
+
+.css-dialog-publish-warning #tableWrapper{
+    max-height: 273px;
+    overflow: auto;
+}
+
+.css-dialog-publish-warning #publishWarningTable{
+    border: 1px solid #ccc;
+    font-family: Arial, serif;
+    font-size: 12px;
+}
+
+.css-dialog-publish-warning #publishWarningTable tr{
+    height: 30px;
+    line-height: 30px;
+}
+
+.css-dialog-publish-warning #publishWarningTable tr th{
+    background: #f8f8f8;
+}
+
+.css-dialog-publish-warning #publishWarningTable tr td,
+.css-dialog-publish-warning #publishWarningTable tr th{
+    width: 560px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.css-dialog-publish-warning #publishWarningTable tr td:first-of-type,
+.css-dialog-publish-warning #publishWarningTable tr th:first-of-type{
+    width: 270px;
+}
+
+.css-dialog-publish-warning #publishWarningProceed{
+    height: 50px;
+    line-height: 50px;
+}
+
+.css-dialog-publish-warning #dialogControls{
+    padding: 15px;
+}
