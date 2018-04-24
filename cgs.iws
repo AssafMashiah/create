@@ -2,7 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="c765d277-bb48-419c-b5f7-f22cf0117e5b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cgs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/install.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/backend_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/backend_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-shared-test/cgs-backend-shared-test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-shared-test/cgs-backend-shared-test_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-shared-test/cgs-backend-shared-test_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-war/cgs-backend-war.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-war/cgs-backend-war_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-backend-war/cgs-backend-war_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-domain-model/cgs-domain-model.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-domain-model/cgs-domain-model_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-domain-model/cgs-domain-model_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-persistence/cgs-persistence.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-persistence/cgs-persistence_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-persistence/cgs-persistence_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-service/cgs-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-service/cgs-service_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-service/cgs-service_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-shared/cgs-shared.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-shared/cgs-shared_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-shared/cgs-shared_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-web/cgs-web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-web/cgs-web_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/backend/cgs-web/cgs-web_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/cgs-dbupgrader/cgs-dbupgrader.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/cgs-dbupgrader/cgs-dbupgrader_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/cgs-dbupgrader/cgs-dbupgrader_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/dbupgrader.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/dbupgrader_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/dbupgrader/dbupgrader_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/frontend/cgs-frontend-war/cgs-frontend-war.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/frontend/cgs-frontend-war/cgs-frontend-war_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/frontend/cgs-frontend-war/cgs-frontend-war_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/frontend/frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/projects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/standardsLoad/standardsLoad.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/standardsLoad/standardsLoad_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/standardsLoad/standardsLoad_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/install/.gradle/" />
     <ignored path="$PROJECT_DIR$/install/build/" />
@@ -123,12 +163,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="70">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -3555,8 +3595,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -3568,7 +3606,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3755,39 +3795,45 @@
       <option name="project" value="LOCAL" />
       <updated>1524564821036</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Remove idea files from repository">
+      <created>1524566049080</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1524566049080</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.2693133" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="right" id="Designer" order="6" />
+      <window_info anchor="bottom" id="Docker" order="12" weight="0.3290461" />
+      <window_info id="Colour Chooser" order="5" />
+      <window_info id="Structure" order="3" sideWeight="0.30638298" side_tool="true" visible="true" weight="0.23667377" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30439442" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3290461" />
       <window_info id="Palette&#9;" order="0" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" weight="0.2693133" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4978678" visible="true" weight="0.4967811" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.3108253" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Designer" order="6" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.4978678" visible="true" weight="0.49570817" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.31008583" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.69509596" visible="true" weight="0.23400854" />
-      <window_info anchor="bottom" id="Docker" order="12" weight="0.3290461" />
-      <window_info id="Colour Chooser" order="5" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.69361705" visible="true" weight="0.23667377" />
       <window_info anchor="right" id="Gradle" order="7" weight="0.32995737" />
-      <window_info id="Structure" order="3" sideWeight="0.30490404" side_tool="true" visible="true" weight="0.23400854" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30439442" />
       <window_info id="Favorites" order="4" side_tool="true" weight="0.32960597" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="12" />
       <window_info anchor="bottom" id="Build" order="13" sideWeight="0.49946696" visible="true" weight="0.3290461" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Changes" order="7" />
@@ -3832,6 +3878,7 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/projects" />
@@ -3842,7 +3889,8 @@
     <MESSAGE value="removed" />
     <MESSAGE value="tmp" />
     <MESSAGE value="Add missing files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add missing files" />
+    <MESSAGE value="Remove idea files from repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove idea files from repository" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -4204,8 +4252,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="70">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
