@@ -10,7 +10,7 @@ node_modules
 /projects/frontend/cgs-frontend-war/src/main/webapp/locales/
 epubCheckJar
 scorm2004Schemas
-#*.iml
+*.iml
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
