@@ -33,7 +33,7 @@ subprojects {
         compile libraries.gjson
         compile libraries.jgrapht
         compile libraries.xmlUnit
-        compile libraries.monocle
+//        compile libraries.monocle
         compile libraries.thumbnailator
         compile libraries.jpegcmyk
         compile libraries.jsoup
