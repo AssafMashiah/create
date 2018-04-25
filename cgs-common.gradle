@@ -1,6 +1,8 @@
-apply plugin: "idea"
-
-version = "8.16.0-SNAPSHOT"
+/**
+ * Shared file between modules so that they can all use the same dependencies and maven repositories.
+ **/
+group = "org.t2k"
+version = "8.16.0-SNAPSHOT" //fixme move to gradle.properties
 
 def groovyVersion = "2.3.2"
 

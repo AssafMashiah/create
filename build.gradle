@@ -10,17 +10,15 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 allprojects {
-    apply plugin: 'maven'
-    idea {
-        project {
-            languageLevel = '1.8'
-
-            //you can configure the VCS used by the project
-            vcs = 'svn'
-        }
-    }
-
     repositories {
         mavenLocal()
         maven {
@@ -57,21 +55,6 @@ allprojects {
             }
             mavenCentral()
         }
-    }
-
-    try {
-        idea.module.iml {
-            beforeMerged { module ->
-                module.dependencies.clear()
-            }
-        }
-        idea.project.ipr {
-            beforeMerged { project ->
-                project.modulePaths.clear()
-            }
-        }
-    } catch (Exception e) {
-        e.printStackTrace()
     }
 
     configurations.all {

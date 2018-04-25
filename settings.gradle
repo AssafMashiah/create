@@ -1,3 +1,5 @@
+rootProject.name = 'cgs'
+
 include "projects:backend:cgs-domain-model", "projects:backend:cgs-persistence",
 "projects:backend:cgs-service", "projects:backend:cgs-web", "projects:backend:cgs-backend-war", 
 "projects:frontend:cgs-frontend-war","projects:backend:cgs-shared","projects:backend:cgs-backend-shared-test",
