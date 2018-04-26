@@ -1,86 +1,128 @@
 defaultTasks 'clean', 'build'
 
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
 apply from: '../../cgs-common.gradle'
 
-allprojects  {
-	apply plugin: 'java'
-	
-	sourceCompatibility = 1.8
-	
-	group = 'com.t2k.cgs'
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.8.RELEASE") // fixme - version should be taken from cgs-common.gradle
+    }
 }
 
-subprojects {
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-	dependencies {
-		compile aspectj.rt
-        compile aspectj.weaver
-        compile libraries.javaxInject
-		compile libraries.log4j
-        compile libraries.log4jExtras
-        compile libraries.http
-        compile libraries.httpMime
-        compile libraries.jsonTagLib
-        compile libraries.jacksonMapper
-        compile libraries.jsonValidator
-        compile libraries.cssparser
-        compile libraries.javaMelody
-        compile libraries.jpdf2html
-        compile libraries.jPdfWeb
-        compile libraries.pdfBox
-        compile libraries.bouncyCastle // required for pdfBox package
-        compile libraries.epubLib
-        compile libraries.gjson
-        compile libraries.jgrapht
-        compile libraries.xmlUnit
+def mainClassName = "org.t2k.cgs.Application" // because we have other classes with main method
+
+apply plugin: 'spring-boot'
+
+bootRepackage {
+    enabled = false
+    mainClass = "$mainClassName"
+}
+
+bootRun {
+    doFirst() {
+        systemProperty 'spring.profiles.active', System.properties['spring.profiles.active']
+    }
+}
+
+task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask, dependsOn: 'build') {
+    group = 'Application'
+    doFirst() {
+        main = "$mainClassName"
+        classpath = sourceSets.main.runtimeClasspath
+        systemProperty 'spring.profiles.active', 'dev'
+    }
+}
+
+dependencies {
+    compile t2klibraries.t2kconfig
+    compile t2klibraries.commonUtils
+    compile t2klibraries.commonMongoFactory
+    compile t2klibraries.gcrCommonModel
+    compile t2klibraries.gcrCommonClient
+    compile t2klibraries.commonCourseutils
+
+    compile aspectj.rt
+    compile aspectj.weaver
+    compile libraries.javaxInject
+    compile libraries.log4j
+    compile libraries.log4jExtras
+    compile libraries.http
+    compile libraries.httpMime
+    compile libraries.jsonTagLib
+    compile libraries.jacksonMapper
+    compile libraries.jsonValidator
+    compile libraries.cssparser
+    compile libraries.javaMelody
+    compile libraries.jpdf2html
+    compile libraries.jPdfWeb
+    compile libraries.pdfBox
+    compile libraries.bouncyCastle // required for pdfBox package
+    compile libraries.epubLib
+    compile libraries.gjson
+    compile libraries.jgrapht
+    compile libraries.xmlUnit
 //        compile libraries.monocle
-        compile libraries.thumbnailator
-        compile libraries.jpegcmyk
-        compile libraries.jsoup
-        compile libraries.jna
-        compile libraries.groovy
-        compile libraries.luceneExpressions
+    compile libraries.thumbnailator
+    compile libraries.jpegcmyk
+    compile libraries.jsoup
+    compile libraries.jna
+    compile libraries.groovy
+    compile libraries.luceneExpressions
 //        compile (libraries.epubcheck) { // causes tests to fail
 //            exclude group : 'com.google.guava' // guava version conflict with json schema validator causes tests to fail
 //            exclude group : 'org.codehaus.jackson' // jackson version conflict causes tests to fail
 //            exclude group : 'org.apache.commons'
 //        }
 
-		compile spring
-		compile springBoot.gradlePlugin
-		compile springBoot.starterWeb
-		compile springBoot.tomcatJSP
-		compile springBoot.jstlServlet
-		compile springBoot.elasticSearch
-        compile security
-		compile database.mongodb
-        compile apacheCommons
-        compile servlet
-        compile xml.dom4j
-        compile xml.jaxen
-        compile xml.pull
-        compile html
-        compile t2klibraries.t2kconfig
-		compile t2klibraries.commonUtils
-        compile t2klibraries.commonMongoFactory
-		compile t2klibraries.gcrCommonModel 
-		compile t2klibraries.commonCourseutils
-		
-		testCompile testing
-	}
-	
-    test {
-        useTestNG() {
-            excludeGroups 'ignore'
-         }
+
+    compile spring
+    compile springBoot.gradlePlugin
+    compile(springBoot.starterWeb) {
+        exclude module: "spring-boot-starter-logging"
+//                exclude module: "com.google.guava:guava"
+//                exclude module: "spring-boot-starter-tomcat" //causes version conflict when deploying war to tomcat - may not war with spring boot Application start
     }
-}	
+    compile springBoot.tomcatJSP
+    compile springBoot.jstlServlet
+    compile(springBoot.elasticSearch) {
+        exclude module: "spring-data-commons"
+        exclude module: "joda-time"
+        exclude module: "spring-boot-starter-logging"
+//                exclude group: "org.slf4j"
+    }
+    compile security
+    compile database.mongodb
+    compile apacheCommons
+    compile servlet
+    compile xml.dom4j
+    compile xml.jaxen
+    compile xml.pull
+    compile html
+
+    testCompile testing
+}
+
+test {
+    useTestNG() {
+        excludeGroups 'ignore'
+    }
+}
 
 clean.doFirst {
-	println ""
-	def proc = "java -version".execute()
+    println ""
+    def proc = "java -version".execute()
     proc.waitFor()
 
     println "${proc.err.text}"
-	println ""
+    println ""
 }

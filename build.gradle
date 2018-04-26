@@ -1,8 +1,8 @@
-defaultTasks 'clean', 'build', 'assebmble', 'install:createInstall'
-
-apply from: 'cgs-common.gradle'
+defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
 buildscript {
+    apply from: 'cgs-common.gradle'
+
     repositories {
         maven {
             url "https://plugins.gradle.org/m2/"
@@ -10,15 +10,9 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'idea'
-apply plugin: 'maven'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 allprojects {
+    apply plugin: 'maven'
+
     repositories {
         mavenLocal()
         maven {

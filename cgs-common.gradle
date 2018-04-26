@@ -38,6 +38,7 @@ def javaxActivationVersion = "1.1.1"
 def aspectjVersion = "1.8.7"
 
 // Spring Framework
+def springBootGradlePluginVersion = "1.2.8.RELEASE"
 def springFrameworkVersion = "4.2.6.RELEASE"
 def springBootVersion = "1.3.5.RELEASE"
 def springSecurityVersion = "4.1.0.RELEASE"
@@ -129,33 +130,36 @@ ext {
     ]
 
     libraries = [
-            javaxInject      : "javax.inject:javax.inject:$javaxInjectVersion",
-            cssparser        : "net.sourceforge.cssparser:cssparser:$cssparserVersion",
-            log4j            : "log4j:log4j:$log4jVersion",
-            log4jExtras      : "log4j:apache-log4j-extras:$log4jExtrasVersion",
-            jsonTagLib       : "json-taglib:json-taglib:$jsonTagLibVersion",
-            jacksonMapper    : "org.codehaus.jackson:jackson-mapper-asl:$codehausJacksonMapperVersion",
-            jsonValidator    : "org.kitchen-eel:json-schema-validator:$fgeJsonSchemaValidatorVersion",
-            http             : "org.apache.httpcomponents:httpclient:$apacheHttpcomponentsVersion",
-            httpMime         : "org.apache.httpcomponents:httpmime:$apacheHttpcomponentsVersion",
-            javaMelody       : "net.bull.javamelody:javamelody-core:$javaMelodyVersion",
-            gjson            : "com.google.code.gson:gson:$gsonVersion",
-            jgrapht          : "jgrapht:jgrapht:$jgraphtVersion",
-            xmlUnit          : "xmlunit:xmlunit:$xmlUnitVersion",
-            jpdf2html        : "idr:jpdf2html:$jpdf2htmlVersion",
-            jPdfWeb          : "qoppa:jpdfweb:$jPdfWebVersion",
-            epubLib          : "nl.siegmann.epublib:epublib-core:$epubLibVersion",
+            javaxInject         : "javax.inject:javax.inject:$javaxInjectVersion",
+            cssparser           : "net.sourceforge.cssparser:cssparser:$cssparserVersion",
+            log4j               : "log4j:log4j:$log4jVersion",
+            log4jExtras         : "log4j:apache-log4j-extras:$log4jExtrasVersion",
+            jsonTagLib          : "json-taglib:json-taglib:$jsonTagLibVersion",
+            jacksonMapper       : "org.codehaus.jackson:jackson-mapper-asl:$codehausJacksonMapperVersion",
+            jsonValidator       : "org.kitchen-eel:json-schema-validator:$fgeJsonSchemaValidatorVersion",
+            http                : "org.apache.httpcomponents:httpclient:$apacheHttpcomponentsVersion",
+            httpMime            : "org.apache.httpcomponents:httpmime:$apacheHttpcomponentsVersion",
+            javaMelody          : "net.bull.javamelody:javamelody-core:$javaMelodyVersion",
+            gjson               : "com.google.code.gson:gson:$gsonVersion",
+            jgrapht             : "jgrapht:jgrapht:$jgraphtVersion",
+            xmlUnit             : "xmlunit:xmlunit:$xmlUnitVersion",
+            jpdf2html           : "idr:jpdf2html:$jpdf2htmlVersion",
+            jPdfWeb             : "qoppa:jpdfweb:$jPdfWebVersion",
+            epubLib             : "nl.siegmann.epublib:epublib-core:$epubLibVersion",
 //            monocle          : "org.jfxtras:openjfx-monocle:1.8.0_20",
-            thumbnailator    : "net.coobird:thumbnailator:$thumbnailatorVersion",
-            jpegcmyk         : "fr.sertelon.media:jpeg-cmyk:$jpegcmykVersion",
-            pdfBox           : "org.apache.pdfbox:pdfbox:$pdfBoxVersion",
-            bouncyCastle     : "org.bouncycastle:bcprov-jdk15on:$bouncyCastleVersion", // required for pdfBox package
-            jsoup            : "org.jsoup:jsoup:$jsoupVersion",
+            thumbnailator       : "net.coobird:thumbnailator:$thumbnailatorVersion",
+            jpegcmyk            : "fr.sertelon.media:jpeg-cmyk:$jpegcmykVersion",
+            pdfBox              : "org.apache.pdfbox:pdfbox:$pdfBoxVersion",
+            bouncyCastle        : "org.bouncycastle:bcprov-jdk15on:$bouncyCastleVersion", // required for pdfBox package
+            jsoup               : "org.jsoup:jsoup:$jsoupVersion",
+            fasterxmlCore       : "com.fasterxml.jackson.core:jackson-core:$fasterxmlJacksonVersion",
+            fasterxmlDatabind   : "com.fasterxml.jackson.core:jackson-databind:$fasterxmlJacksonVersion",
+            fasterxmlAnnotations: "com.fasterxml.jackson.core:jackson-annotations:$fasterxmlJacksonVersion",
             // needed to get around elasticsearch stacktrace about jna not found
             // https://github.com/elastic/elasticsearch/issues/13245
-            jna              : "net.java.dev.jna:jna:$jnaVersion",
-            groovy           : "org.codehaus.groovy:groovy-all:$groovyVersion",
-            luceneExpressions: "org.apache.lucene:lucene-expressions:$luceneExpressionsVersion"
+            jna                 : "net.java.dev.jna:jna:$jnaVersion",
+            groovy              : "org.codehaus.groovy:groovy-all:$groovyVersion",
+            luceneExpressions   : "org.apache.lucene:lucene-expressions:$luceneExpressionsVersion"
 //            epubcheck : "org.idpf:epubcheck:$epubCheckVersion // http://mvnrepository.com/artifact/org.idpf/epubcheck
     ]
 
@@ -182,22 +186,13 @@ ext {
             "javax.persistence:persistence-api:$javaxPersistenceApiVersion"
     ]
 
-    springBoot = [
-            gradlePlugin : dependencies.create("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"),
-            starterWeb   : dependencies.create("org.springframework.boot:spring-boot-starter-web:$springBootVersion") {
-                exclude module: "spring-boot-starter-logging"
-//                exclude module: "com.google.guava:guava"
-//                exclude module: "spring-boot-starter-tomcat" //causes version conflict when deploying war to tomcat - may not war with spring boot Application start
-            },
-            tomcatJSP    : dependencies.create("org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion"), //fixme change to provided
-            jstlServlet  : dependencies.create("javax.servlet:jstl:$javaxJstlVersion"),
-            elasticSearch: dependencies.create("org.springframework.boot:spring-boot-starter-data-elasticsearch:$springBootVersion") {
-                exclude module: "spring-data-commons"
-                exclude module: "joda-time"
-                exclude module: "spring-boot-starter-logging"
-//                exclude group: "org.slf4j"
-            },
-    ]
+    springBoot = [:]
+    springBoot.gradlePlugin = "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    springBoot.starterWeb = "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    springBoot.tomcatJSP = "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion" //fixme change to provided
+    springBoot.jstlServlet = "javax.servlet:jstl:$javaxJstlVersion"
+    springBoot.elasticSearch = "org.springframework.boot:spring-boot-starter-data-elasticsearch:$springBootVersion"
+
 
     web = [
             mvc: dependencies.create("org.springframework:spring-webmvc:$springFrameworkVersion") {
