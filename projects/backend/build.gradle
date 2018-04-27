@@ -169,3 +169,45 @@ clean.doFirst {
     println "${proc.err.text}"
     println ""
 }
+
+configurations.all {
+    resolutionStrategy {
+        cacheChangingModulesFor 3, 'minutes'
+
+        // fail eagerly on version conflict (includes transitive dependencies)
+        // e.g. multiple different versions of the same dependency (group and name are equal)
+        failOnVersionConflict()
+
+        eachDependency {
+            if (it.requested.group == "org.apache.tomcat.embed") {
+                it.useVersion tomcatVersion
+            }
+        }
+
+        exclude group: "ch.qos.logback"
+
+        force t2klibraries.commonUtils
+
+        force javax.activation
+
+        force aspectj.rt
+        force aspectj.weaver
+
+        force spring
+        force snakeYamlForSpringBoot
+        force database.mongodb
+
+        force apacheCommons.io
+        force apacheCommons.codec
+        force apacheCommons.logging
+
+        force json.jacksonMapper
+        force json.fasterxmlCore
+        force json.fasterxmlDatabind
+        force json.fasterxmlAnnotations
+
+        force loggers.log4j
+        force loggers.slf4jApi
+        force loggers.slf4jJcl
+    }
+}

@@ -2,7 +2,7 @@
  * Shared file between modules so that they can all use the same dependencies and maven repositories.
  **/
 group = "org.t2k"
-version = "8.16.0-SNAPSHOT" //fixme move to gradle.properties
+version = "8.16.0-SNAPSHOT"
 
 def groovyVersion = "2.3.2"
 
@@ -43,9 +43,9 @@ def springBootVersion = "1.3.5.RELEASE"
 def springSecurityVersion = "4.1.0.RELEASE"
 def springDataMongoVersion = "1.8.1.RELEASE"
 def mongoDBDriverVersion = "2.13.3" //springMongo-1.8.0.RELEASE uses 2.13.0 release: https://github.com/mongodb/mongo-java-driver/releases
-def tomcatVersion = "7.0.54"
+ext.tomcatVersion = "7.0.54" // we need ext to access it from backend build.gradle
 //def tomcatVersion = "7.0.68" // version added reading ssh key from jar
-def snakeYamlForSpringBoot = "1.16"
+def snakeYamlForSpringBootVersion = "1.16"
 def cglibVersion = "2.2"
 
 def luceneExpressionsVersion = "4.10.4"
@@ -109,22 +109,23 @@ ext {
     groovy = "org.codehaus.groovy:groovy-all:$groovyVersion"
 
     t2klibraries = [
+            scplayer          : "com.t2k.dtp.scplayer:scplayer:$scpPlayerVersion@zip",
 //            dl                : "com.t2k.player.dl:dl:$playerDlVersion",
-scplayer          : "com.t2k.dtp.scplayer:scplayer:$scpPlayerVersion@zip",
-commonUtils       : "com.t2k.common.utils:common-utils:$commonUtilsVersion",
-t2kconfig         : "org.t2k.common:t2kconf:$t2kConfVersion",
-commonUpgrader    : "com.t2k.common.dbupgrader:dbupgrader:$commonUpgraderVersion",
-gcrCommonModel    : "org.t2k.gcr.common:gcr-common-model:$gcrCommonVersion",
-gcrCommonClient   : "org.t2k.gcr.common:gcr-common-client:$gcrCommonVersion",
-commonMongoFactory: "org.t2k.common:t2k-mongo-factory:$commonMongoFactoryVersion",
-commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVersion"
+            commonUtils       : "com.t2k.common.utils:common-utils:$commonUtilsVersion",
+            t2kconfig         : "org.t2k.common:t2kconf:$t2kConfVersion",
+            commonUpgrader    : "com.t2k.common.dbupgrader:dbupgrader:$commonUpgraderVersion",
+            gcrCommonModel    : "org.t2k.gcr.common:gcr-common-model:$gcrCommonVersion",
+            gcrCommonClient   : "org.t2k.gcr.common:gcr-common-client:$gcrCommonVersion",
+            commonMongoFactory: "org.t2k.common:t2k-mongo-factory:$commonMongoFactoryVersion",
+            commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVersion"
     ]
 
     javax = [
             inject        : "javax.inject:javax.inject:$javaxInjectVersion",
             persistenceApi: "javax.persistence:persistence-api:$javaxPersistenceApiVersion",
             servlet       : "javax.servlet:javax.servlet-api:$javaxServletVersion",
-            jstlServlet   : "javax.servlet:jstl:$jstlVersion"
+            jstlServlet   : "javax.servlet:jstl:$jstlVersion",
+            activation    : "javax.activation:activation:$javaxActivationVersion"
     ]
 
     aspectj = [
@@ -164,6 +165,7 @@ commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVe
             starterWeb   : "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
             elasticSearch: "org.springframework.boot:spring-boot-starter-data-elasticsearch:$springBootVersion"
     ]
+    snakeYamlForSpringBoot = "org.yaml:snakeyaml:$snakeYamlForSpringBootVersion"
 
     apacheLuceneExpressions = "org.apache.lucene:lucene-expressions:$luceneExpressionsVersion"
 
@@ -175,8 +177,10 @@ commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVe
     ]
 
     apacheCommons = [
+            io         : "commons-io:commons-io:$apacheCommonsIOVersion",
             fileupload : "commons-fileupload:commons-fileupload:$apacheCommonsUploadVersion",
             codec      : "commons-codec:commons-codec:$apacheCommonsCodecVersion",
+            logging    : "commons-logging:commons-logging:$apacheCommonsLoggingVersion",
             httpclient : "commons-httpclient:commons-httpclient:$apacheCommonsHttpClientVersion",
             collections: "commons-collections:commons-collections:$apacheCommonsCollectionsVersion",
             lang       : "commons-lang:commons-lang:$apacheCommonsLangVersion",
@@ -219,6 +223,8 @@ commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVe
     loggers = [
             log4j      : "log4j:log4j:$log4jVersion",
             log4jExtras: "log4j:apache-log4j-extras:$log4jExtrasVersion",
+            slf4jApi   : "org.slf4j:slf4j-api:$slf4jVersion",
+            slf4jJcl   : "org.slf4j:jcl-over-slf4j:$slf4jVersion",
     ]
 
 
@@ -240,64 +246,4 @@ commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVe
             springTest: "org.springframework:spring-test:$springFrameworkVersion",
             xmlUnit   : "xmlunit:xmlunit:$xmlUnitVersion",
     ]
-}
-
-configurations.all {
-    resolutionStrategy {
-        cacheChangingModulesFor 3, 'minutes'
-
-        // fail eagerly on version conflict (includes transitive dependencies)
-        // e.g. multiple different versions of the same dependency (group and name are equal)
-        failOnVersionConflict()
-
-        eachDependency {
-            if (it.requested.group == "org.apache.tomcat.embed") {
-                it.useVersion tomcatVersion
-            }
-        }
-
-        exclude group: "ch.qos.logback"
-
-        force "log4j:log4j:$log4jVersion"
-
-//        force "com.google.guava:guava:$googleGuavaVersion
-//        force "org.codehaus.jackson:jackson-core-asl:$jacksonCoreAslVersion
-//        force "org.apache.commons:commons-compress:$apacheCommonsCompressVersion
-
-        force "org.springframework:spring-tx:$springFrameworkVersion"
-        force "org.springframework:spring-core:$springFrameworkVersion"
-        force "org.springframework:spring-beans:$springFrameworkVersion"
-        force "org.springframework:spring-context:$springFrameworkVersion"
-        force "org.springframework:spring-context-support:$springFrameworkVersion"
-        force "org.springframework:spring-jdbc:$springFrameworkVersion"
-        force "org.springframework:spring-orm:$springFrameworkVersion"
-        force "org.springframework:spring-aop:$springFrameworkVersion"
-        force "org.springframework:spring-aspects:$springFrameworkVersion"
-        force "org.springframework:spring-web:$springFrameworkVersion"
-        force "org.springframework:spring-expression:$springFrameworkVersion"
-        force "org.springframework.data:spring-data-mongodb:$springDataMongoVersion"
-        force "org.yaml:snakeyaml:$snakeYamlForSpringBoot"
-
-        force "com.t2k.common.utils:common-utils:$commonUtilsVersion"
-        force "org.slf4j:slf4j-api:$slf4jVersion"
-        force "org.slf4j:jcl-over-slf4j:$slf4jVersion"
-        force "javax.activation:activation:$javaxActivationVersion"
-        force "commons-logging:commons-logging:$apacheCommonsLoggingVersion"
-        force "commons-codec:commons-codec:$apacheCommonsCodecVersion"
-        force "commons-lang:commons-lang:$apacheCommonsLangVersion"
-        force "commons-io:commons-io:$apacheCommonsIOVersion"
-        force "commons-beanutils:commons-beanutils:$apacheCommonsBeanUtilsVersion"
-
-        // surprisingly required by com.fasterxml.jackson.core:jackson-databind"
-        force "com.fasterxml.jackson.core:jackson-databind:$fasterxmlJacksonVersion"
-        force "com.fasterxml.jackson.core:jackson-core:$fasterxmlJacksonVersion"
-        force "com.fasterxml.jackson.core:jackson-annotations:$fasterxmlJacksonVersion"
-        force "org.codehaus.jackson:jackson-mapper-asl:$codehausJacksonMapperVersion"
-        // required for Spring 4:"
-        force "org.aspectj:aspectjrt:$aspectjVersion"
-        force "org.aspectj:aspectjweaver:$aspectjVersion"
-
-        // see comment on mongoDBDriverVersion"
-        force "org.mongodb:mongo-java-driver:$mongoDBDriverVersion"
-    }
 }
