@@ -10,7 +10,11 @@ import org.springframework.stereotype.Service;
 import org.t2k.cgs.config.SpringProfiles;
 
 import javax.annotation.PostConstruct;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,7 +58,7 @@ public class VersionServiceImpl implements VersionService {
     private Version getVersionFromGradle() {
         String pathToGradleFile = VersionServiceImpl.class.getProtectionDomain().getCodeSource().getLocation().toString()
                 .replaceAll("file:", "")
-                .split("/projects/backend/cgs-service/")[0]
+                .split("/projects/backend/")[0]
 //                .replaceAll("/projects/backend/cgs-service/build/classes/main", "")
                 + "/cgs-common.gradle";
 
@@ -71,6 +75,7 @@ public class VersionServiceImpl implements VersionService {
                             .replaceAll("version", "")
                             .replaceAll("=", "")
                             .replaceAll("'", "")
+                            .replaceAll("\"", "")
                             .replaceAll("-SNAPSHOT", "")
                             .trim();
                     String[] versionArray = versionString.split("\\.");
