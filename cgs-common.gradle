@@ -30,10 +30,9 @@ def gcrCommonVersion = "7.0.27-SNAPSHOT"
 def jnaVersion = "4.2.2"
 def javaxInjectVersion = "1"
 def javaxServletVersion = "3.0.1"
-def javaxJstlVersion = "1.2"
 def javaxPersistenceApiVersion = "1.0.2"
-def jettyVersion = "8.1.7.v20120910" // required for servlet3.0 support
 def javaxActivationVersion = "1.1.1"
+def jstlVersion = "1.2"
 
 def aspectjVersion = "1.8.7"
 
@@ -107,60 +106,25 @@ def bouncyCastleVersion = "1.54"
 def jpegcmykVersion = "1.1.0"
 
 ext {
-    player = [
-//		dl: "com.t2k.player.dl:dl:$playerDlVersion
-    ]
-
-    scplayer = [
-            scplayer: "com.t2k.dtp.scplayer:scplayer:$scpPlayerVersion@zip"
-    ]
+    groovy = "org.codehaus.groovy:groovy-all:$groovyVersion"
 
     t2klibraries = [
-            commonUtils       : "com.t2k.common.utils:common-utils:$commonUtilsVersion",
-            t2kconfig         : "org.t2k.common:t2kconf:$t2kConfVersion",
-            commonUpgrader    : "com.t2k.common.dbupgrader:dbupgrader:$commonUpgraderVersion",
-            gcrCommonModel    : "org.t2k.gcr.common:gcr-common-model:$gcrCommonVersion",
-            gcrCommonClient   : dependencies.create("org.t2k.gcr.common:gcr-common-client:$gcrCommonVersion") {
-                exclude group: "org.springframework"
-            },
-            commonMongoFactory: dependencies.create("org.t2k.common:t2k-mongo-factory:$commonMongoFactoryVersion") {
-                exclude group: "org.springframework"
-            },
-            commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVersion"
+//            dl                : "com.t2k.player.dl:dl:$playerDlVersion",
+scplayer          : "com.t2k.dtp.scplayer:scplayer:$scpPlayerVersion@zip",
+commonUtils       : "com.t2k.common.utils:common-utils:$commonUtilsVersion",
+t2kconfig         : "org.t2k.common:t2kconf:$t2kConfVersion",
+commonUpgrader    : "com.t2k.common.dbupgrader:dbupgrader:$commonUpgraderVersion",
+gcrCommonModel    : "org.t2k.gcr.common:gcr-common-model:$gcrCommonVersion",
+gcrCommonClient   : "org.t2k.gcr.common:gcr-common-client:$gcrCommonVersion",
+commonMongoFactory: "org.t2k.common:t2k-mongo-factory:$commonMongoFactoryVersion",
+commonCourseutils : "com.t2k.common.courseutils:courseutils:$commonCourseUtilsVersion"
     ]
 
-    libraries = [
-            javaxInject         : "javax.inject:javax.inject:$javaxInjectVersion",
-            cssparser           : "net.sourceforge.cssparser:cssparser:$cssparserVersion",
-            log4j               : "log4j:log4j:$log4jVersion",
-            log4jExtras         : "log4j:apache-log4j-extras:$log4jExtrasVersion",
-            jsonTagLib          : "json-taglib:json-taglib:$jsonTagLibVersion",
-            jacksonMapper       : "org.codehaus.jackson:jackson-mapper-asl:$codehausJacksonMapperVersion",
-            jsonValidator       : "org.kitchen-eel:json-schema-validator:$fgeJsonSchemaValidatorVersion",
-            http                : "org.apache.httpcomponents:httpclient:$apacheHttpcomponentsVersion",
-            httpMime            : "org.apache.httpcomponents:httpmime:$apacheHttpcomponentsVersion",
-            javaMelody          : "net.bull.javamelody:javamelody-core:$javaMelodyVersion",
-            gjson               : "com.google.code.gson:gson:$gsonVersion",
-            jgrapht             : "jgrapht:jgrapht:$jgraphtVersion",
-            xmlUnit             : "xmlunit:xmlunit:$xmlUnitVersion",
-            jpdf2html           : "idr:jpdf2html:$jpdf2htmlVersion",
-            jPdfWeb             : "qoppa:jpdfweb:$jPdfWebVersion",
-            epubLib             : "nl.siegmann.epublib:epublib-core:$epubLibVersion",
-//            monocle          : "org.jfxtras:openjfx-monocle:1.8.0_20",
-            thumbnailator       : "net.coobird:thumbnailator:$thumbnailatorVersion",
-            jpegcmyk            : "fr.sertelon.media:jpeg-cmyk:$jpegcmykVersion",
-            pdfBox              : "org.apache.pdfbox:pdfbox:$pdfBoxVersion",
-            bouncyCastle        : "org.bouncycastle:bcprov-jdk15on:$bouncyCastleVersion", // required for pdfBox package
-            jsoup               : "org.jsoup:jsoup:$jsoupVersion",
-            fasterxmlCore       : "com.fasterxml.jackson.core:jackson-core:$fasterxmlJacksonVersion",
-            fasterxmlDatabind   : "com.fasterxml.jackson.core:jackson-databind:$fasterxmlJacksonVersion",
-            fasterxmlAnnotations: "com.fasterxml.jackson.core:jackson-annotations:$fasterxmlJacksonVersion",
-            // needed to get around elasticsearch stacktrace about jna not found
-            // https://github.com/elastic/elasticsearch/issues/13245
-            jna                 : "net.java.dev.jna:jna:$jnaVersion",
-            groovy              : "org.codehaus.groovy:groovy-all:$groovyVersion",
-            luceneExpressions   : "org.apache.lucene:lucene-expressions:$luceneExpressionsVersion"
-//            epubcheck : "org.idpf:epubcheck:$epubCheckVersion // http://mvnrepository.com/artifact/org.idpf/epubcheck
+    javax = [
+            inject        : "javax.inject:javax.inject:$javaxInjectVersion",
+            persistenceApi: "javax.persistence:persistence-api:$javaxPersistenceApiVersion",
+            servlet       : "javax.servlet:javax.servlet-api:$javaxServletVersion",
+            jstlServlet   : "javax.servlet:jstl:$jstlVersion"
     ]
 
     aspectj = [
@@ -183,72 +147,98 @@ ext {
             "org.springframework:spring-websocket:$springFrameworkVersion",
             "org.springframework:spring-tx:$springFrameworkVersion",
             "org.springframework.data:spring-data-mongodb:$springDataMongoVersion",
-            "javax.persistence:persistence-api:$javaxPersistenceApiVersion"
     ]
 
-    springBoot = [:]
-    springBoot.gradlePlugin = "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
-    springBoot.starterWeb = "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
-    springBoot.tomcatJSP = "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion" //fixme change to provided
-    springBoot.jstlServlet = "javax.servlet:jstl:$javaxJstlVersion"
-    springBoot.elasticSearch = "org.springframework.boot:spring-boot-starter-data-elasticsearch:$springBootVersion"
+    springWebMvc = "org.springframework:spring-webmvc:$springFrameworkVersion"
 
-
-    web = [
-            mvc: dependencies.create("org.springframework:spring-webmvc:$springFrameworkVersion") {
-                exclude group: "org.springframework", module: "spring-asm"
-                force = true
-            }
+    springSecurity = [
+            core     : "org.springframework.security:spring-security-core:$springSecurityVersion",
+            config   : "org.springframework.security:spring-security-config:$springSecurityVersion",
+            web      : "org.springframework.security:spring-security-web:$springSecurityVersion",
+            ldap     : "org.springframework.security:spring-security-ldap:$springSecurityVersion",
+            messaging: "org.springframework.security:spring-security-messaging:$springSecurityVersion",
     ]
 
-    xml = [
-            dom4j: "dom4j:dom4j:$dom4jVersion",
-            jaxen: "jaxen:jaxen:$jaxenVersion",
-            pull : "xmlpull:xmlpull:$xmlpullVersion"
+    springBoot = [
+            gradlePlugin : "org.springframework.boot:spring-boot-gradle-plugin:$springBootGradlePluginVersion",
+            starterWeb   : "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
+            elasticSearch: "org.springframework.boot:spring-boot-starter-data-elasticsearch:$springBootVersion"
     ]
 
-    security = [
-            "org.springframework.security:spring-security-core:$springSecurityVersion",
-            "org.springframework.security:spring-security-config:$springSecurityVersion",
-            "org.springframework.security:spring-security-web:$springSecurityVersion",
-            "org.springframework.security:spring-security-ldap:$springSecurityVersion",
-            "org.springframework.security:spring-security-messaging:$springSecurityVersion",
-            "jstl:jstl:$javaxJstlVersion",
-            "cglib:cglib:$cglibVersion"    //spring security is using this lib
-    ]
+    apacheLuceneExpressions = "org.apache.lucene:lucene-expressions:$luceneExpressionsVersion"
 
-    testing = [
-            "org.testng:testng:$testNGVersion",
-            "org.springframework:spring-test:$springFrameworkVersion",
-            "org.mockito:mockito-all:$mockitoVersion"
-    ]
-
-    jetty = [
-            "org.mortbay.jetty:jetty:$jettyVersion",
-            "org.mortbay.jetty:jetty-util:$jettyVersion"
-    ]
-
-    servlet = [
-            "javax.servlet:javax.servlet-api:$javaxServletVersion"
-    ]
+    apacheEmbeddedTomcat = "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion"
+    javaMelody = "net.bull.javamelody:javamelody-core:$javaMelodyVersion"
 
     database = [
             mongodb: "org.mongodb:mongo-java-driver:$mongoDBDriverVersion"
     ]
 
     apacheCommons = [
-            "commons-fileupload:commons-fileupload:$apacheCommonsUploadVersion",
-            "commons-codec:commons-codec:$apacheCommonsCodecVersion",
-            "commons-httpclient:commons-httpclient:$apacheCommonsHttpClientVersion",
-            "commons-collections:commons-collections:$apacheCommonsCollectionsVersion",
-            "commons-lang:commons-lang:$apacheCommonsLangVersion",
-            "org.apache.commons:commons-email:$apacheCommonsEmailVersion",
-            "commons-beanutils:commons-beanutils:$apacheCommonsBeanUtilsVersion"
+            fileupload : "commons-fileupload:commons-fileupload:$apacheCommonsUploadVersion",
+            codec      : "commons-codec:commons-codec:$apacheCommonsCodecVersion",
+            httpclient : "commons-httpclient:commons-httpclient:$apacheCommonsHttpClientVersion",
+            collections: "commons-collections:commons-collections:$apacheCommonsCollectionsVersion",
+            lang       : "commons-lang:commons-lang:$apacheCommonsLangVersion",
+            email      : "org.apache.commons:commons-email:$apacheCommonsEmailVersion",
+            beanutils  : "commons-beanutils:commons-beanutils:$apacheCommonsBeanUtilsVersion"
+    ]
+
+    xml = [
+            jsoup: "org.jsoup:jsoup:$jsoupVersion",
+            dom4j: "dom4j:dom4j:$dom4jVersion",
+            jaxen: "jaxen:jaxen:$jaxenVersion",
+            pull : "xmlpull:xmlpull:$xmlpullVersion",
     ]
 
     html = [
-            "org.jsoup:jsoup:$jsoupVersion",
-            "net.sourceforge.htmlcleaner:htmlcleaner:$htmlcleanerVersion"
+            apacheHttpComponentsClient  : "org.apache.httpcomponents:httpclient:$apacheHttpcomponentsVersion",
+            apacheHttpComponentsHttpMime: "org.apache.httpcomponents:httpmime:$apacheHttpcomponentsVersion",
+            htmlcleaner                 : "net.sourceforge.htmlcleaner:htmlcleaner:$htmlcleanerVersion",
+            cssparser                   : "net.sourceforge.cssparser:cssparser:$cssparserVersion",
+    ]
+
+    json = [
+            gjson               : "com.google.code.gson:gson:$gsonVersion",
+            jsonTagLib          : "json-taglib:json-taglib:$jsonTagLibVersion",
+            jacksonMapper       : "org.codehaus.jackson:jackson-mapper-asl:$codehausJacksonMapperVersion",
+            jsonValidator       : "org.kitchen-eel:json-schema-validator:$fgeJsonSchemaValidatorVersion",
+            fasterxmlCore       : "com.fasterxml.jackson.core:jackson-core:$fasterxmlJacksonVersion",
+            fasterxmlDatabind   : "com.fasterxml.jackson.core:jackson-databind:$fasterxmlJacksonVersion",
+            fasterxmlAnnotations: "com.fasterxml.jackson.core:jackson-annotations:$fasterxmlJacksonVersion",
+    ]
+
+    ebooks = [
+            pdfBox   : "org.apache.pdfbox:pdfbox:$pdfBoxVersion",
+            jpdf2html: "idr:jpdf2html:$jpdf2htmlVersion",
+            jPdfWeb  : "qoppa:jpdfweb:$jPdfWebVersion",
+            epubLib  : "nl.siegmann.epublib:epublib-core:$epubLibVersion",
+//            epubcheck: "org.idpf:epubcheck:$epubCheckVersion" // http://mvnrepository.com/artifact/org.idpf/epubcheck
+    ]
+
+    loggers = [
+            log4j      : "log4j:log4j:$log4jVersion",
+            log4jExtras: "log4j:apache-log4j-extras:$log4jExtrasVersion",
+    ]
+
+
+    libraries = [
+            // needed to get around elasticsearch stacktrace about jna not found https://github.com/elastic/elasticsearch/issues/13245
+            jna          : "net.java.dev.jna:jna:$jnaVersion",
+            jstl         : "jstl:jstl:$jstlVersion",
+            cglib        : "cglib:cglib:$cglibVersion",    //spring security is using this lib
+            jgrapht      : "jgrapht:jgrapht:$jgraphtVersion",
+            bouncyCastle : "org.bouncycastle:bcprov-jdk15on:$bouncyCastleVersion", // required for pdfBox package
+//            monocle          : "org.jfxtras:openjfx-monocle:1.8.0_20",
+            thumbnailator: "net.coobird:thumbnailator:$thumbnailatorVersion",
+            jpegcmyk     : "fr.sertelon.media:jpeg-cmyk:$jpegcmykVersion",
+    ]
+
+    testing = [
+            testNG    : "org.testng:testng:$testNGVersion",
+            mockito   : "org.mockito:mockito-all:$mockitoVersion",
+            springTest: "org.springframework:spring-test:$springFrameworkVersion",
+            xmlUnit   : "xmlunit:xmlunit:$xmlUnitVersion",
     ]
 }
 
@@ -273,16 +263,6 @@ configurations.all {
 //        force "com.google.guava:guava:$googleGuavaVersion
 //        force "org.codehaus.jackson:jackson-core-asl:$jacksonCoreAslVersion
 //        force "org.apache.commons:commons-compress:$apacheCommonsCompressVersion
-
-        force "org.eclipse.jetty:jetty-server:$jettyVersion"
-        force "org.eclipse.jetty:jetty-webapp:$jettyVersion"
-        force "org.eclipse.jetty:jetty-servlet:$jettyVersion"
-        force "org.eclipse.jetty:jetty-util:$jettyVersion"
-        force "org.eclipse.jetty:jetty-client:$jettyVersion"
-        force "org.eclipse.jetty:jetty-servlets:$jettyVersion"
-        force "org.eclipse.jetty:jetty-http:$jettyVersion"
-        force "org.eclipse.jetty:jetty-io:$jettyVersion"
-        force "org.eclipse.jetty:jetty-continuation:$jettyVersion"
 
         force "org.springframework:spring-tx:$springFrameworkVersion"
         force "org.springframework:spring-core:$springFrameworkVersion"
