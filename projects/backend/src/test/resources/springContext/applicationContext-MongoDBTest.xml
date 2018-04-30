@@ -35,7 +35,7 @@
          <property name="writeConcern" value="ACKNOWLEDGED"/>
      </bean>
 
-     <bean name="mongoDao" class="org.t2k.cgs.dao.MongoDao">
+     <bean name="mongoDao" class="org.t2k.cgs.persistence.dao.MongoDao">
          <property name="mongoTemplate" ref="cgsMongoTemplate"/>
      </bean>
 

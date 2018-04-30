@@ -4,23 +4,24 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.t2k.cgs.domain.model.user.CGSUserDetails;
+import org.t2k.cgs.domain.model.user.CGSUserDetailsImpl;
 
 /**
  * Created by IntelliJ IDEA.
  * User: micha.shlain
  * Date: 10/29/12
  * Time: 8:29 AM
- *
+ * <p>
  * Factory for current user details. It's purpose is to hide from the other parts of the code
  * the static access to SecurityContextHolder.
- *
+ * <p>
  * This will be used in conjunction with springs
  * <aop:scoped-proxy/> to allow injection of current userDetails to interested classes.
  * The scoped proxy will delegate to this factory to get the current user when the scope changes.
- *
+ * <p>
  * This approach is cleaner than accessing the static method in every interested class and will allow
  * to easily mock the user details to unit test them.
- *
  */
 public final class AuthenticationHolder {
 
@@ -46,7 +47,7 @@ public final class AuthenticationHolder {
         UserDetails springSecurityUser;
         String userName = null;
 
-        if(authentication != null) {
+        if (authentication != null) {
             if (authentication.getPrincipal() instanceof UserDetails) {
                 springSecurityUser = (UserDetails) authentication.getPrincipal();
                 userName = springSecurityUser.getUsername();

@@ -5,7 +5,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.dao.courses.CoursesDao;
+import org.t2k.cgs.domain.model.course.CoursesDao;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

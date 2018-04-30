@@ -4,12 +4,10 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import org.t2k.cgs.model.job.Job;
-import org.t2k.cgs.model.job.JobService;
+import org.t2k.cgs.domain.model.job.Job;
+import org.t2k.cgs.domain.usecases.JobService;
 
-import javax.inject.Inject;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -25,7 +23,6 @@ import java.util.stream.Collectors;
  * Date: 14/08/13
  * Time: 11:47
  */
-@Service
 public class FilesUtils {
 
     public static final int UPDATE_JOB_PROGRESS_PER_X_FILES = 100;
@@ -36,7 +33,6 @@ public class FilesUtils {
     // for progress tracking monitoring
     private JobService jobService = null;
 
-    @Inject
     public FilesUtils(JobService jobService) {
         this.jobService = jobService;
         this.filesCounter = 0;

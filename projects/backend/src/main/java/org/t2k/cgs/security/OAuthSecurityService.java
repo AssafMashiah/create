@@ -1,6 +1,6 @@
 package org.t2k.cgs.security;
 
-import org.t2k.cgs.dataServices.exceptions.DsException;
+import org.t2k.cgs.domain.model.exceptions.DsException;
 
 import javax.servlet.http.HttpServletRequest;
 

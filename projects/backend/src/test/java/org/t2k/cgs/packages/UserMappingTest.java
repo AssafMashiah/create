@@ -2,7 +2,7 @@ package org.t2k.cgs.packages;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
-import org.t2k.cgs.security.CGSUserDetailsImpl;
+import org.t2k.cgs.domain.model.user.CGSUserDetailsImpl;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

@@ -6,8 +6,8 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.ebooks.epub.EpubValidator;
-import org.t2k.cgs.model.ebooks.EpubValidationResult;
+import org.t2k.cgs.service.ebooks.epub.EpubValidator;
+import org.t2k.cgs.domain.usecases.ebooks.EpubValidationResult;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

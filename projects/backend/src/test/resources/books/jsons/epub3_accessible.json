@@ -1,6 +1,6 @@
 {
   "_id" : "57d7f59448a42e075d4ca5f5",
-  "_class" : "org.t2k.cgs.model.ebooks.EBook",
+  "_class" : "org.t2k.cgs.domain.model.ebooks.EBook",
   "eBookId" : "f11e6f8b-f4be-4dba-a83c-a66c0e5b603f",
   "originalFileName" : "epub3_accessible.epub",
   "username" : "alex",

@@ -10,7 +10,7 @@
     <!--context:spring-configured/ -->
     <import resource="classpath*:springContext/applicationContext-MongoDaosTest.xml"/>
 
-    <bean name="lockDaoTest" class="org.t2k.cgs.locks.LocksDaoDummy" />
-    <bean name="usersDao" class="org.t2k.cgs.dao.user.UsersMongoDao" parent="mongoDao"/>
+    <bean name="lockDaoTest" class="org.t2k.cgs.domain.model.lock.LocksDaoDummy" />
+    <bean name="usersDao" class="org.t2k.cgs.persistence.dao.UsersMongoDao" parent="mongoDao"/>
 
 </beans>

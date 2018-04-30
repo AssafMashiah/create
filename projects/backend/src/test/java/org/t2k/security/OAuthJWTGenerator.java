@@ -4,7 +4,7 @@ import atg.taglib.json.util.JSONException;
 import atg.taglib.json.util.JSONObject;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
-import org.t2k.cgs.dataServices.exceptions.DsException;
+import org.t2k.cgs.domain.model.exceptions.DsException;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

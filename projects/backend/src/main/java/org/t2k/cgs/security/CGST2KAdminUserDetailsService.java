@@ -6,6 +6,9 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.t2k.cgs.domain.model.user.CGSUserDetailsImpl;
+import org.t2k.cgs.domain.model.user.RelatesTo;
+import org.t2k.cgs.domain.model.user.SimpleCgsUserRole;
 
 import java.util.Collections;
 
@@ -15,34 +18,26 @@ import java.util.Collections;
  * Date: 10/30/12
  * Time: 10:21 AM
  */
-public class CGST2KAdminUserDetailsService implements UserDetailsService{
-
+public class CGST2KAdminUserDetailsService implements UserDetailsService {
 
     private String userName;
     private String password;
     private SimpleCgsUserRole role;
     private RelatesTo relatesTo;
 
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        if(this.userName.equals(username)){
-
-            CGSUserDetailsImpl userDetails = new CGSUserDetailsImpl(new User(this.userName,this.password, Collections.<GrantedAuthority>emptyList()));
-
+        if (this.userName.equals(username)) {
+            CGSUserDetailsImpl userDetails = new CGSUserDetailsImpl(new User(this.userName, this.password, Collections.<GrantedAuthority>emptyList()));
             userDetails.setFirstName("T2K-admin");
             userDetails.setLastName("T2K-admin");
             userDetails.setEmail("");
-            userDetails.setRelatesTo(new RelatesTo(-1,"SUPER_USER"));
+            userDetails.setRelatesTo(new RelatesTo(-1, "SUPER_USER"));
             userDetails.setUserId(-1);
-
             return userDetails;
         }
-
         throw new UsernameNotFoundException("Not an admin user");
     }
-
 
     ///////////////////////
     // Injection Setters //

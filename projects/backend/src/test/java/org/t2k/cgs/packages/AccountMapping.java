@@ -2,9 +2,9 @@ package org.t2k.cgs.packages;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
-import org.t2k.cgs.security.AccountCustomization;
-import org.t2k.cgs.security.CGSAccount;
-import org.t2k.cgs.security.ExternalPartnerSettings;
+import org.t2k.cgs.domain.model.user.AccountCustomization;
+import org.t2k.cgs.domain.model.user.CGSAccount;
+import org.t2k.cgs.domain.usecases.publisher.ExternalPartnerSettings;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

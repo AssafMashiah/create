@@ -10,12 +10,16 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Service;
-import org.t2k.cgs.dataServices.exceptions.DsException;
-import org.t2k.cgs.model.security.OAuthDetails;
-import org.t2k.cgs.model.user.SimpleCgsUserDetails;
-import org.t2k.cgs.publisher.ExternalPartnersService;
-import org.t2k.cgs.publisher.PublisherService;
-import org.t2k.cgs.user.UserService;
+import org.t2k.cgs.domain.model.Customization;
+import org.t2k.cgs.domain.model.ExternalSetting;
+import org.t2k.cgs.domain.model.exceptions.DsException;
+import org.t2k.cgs.domain.model.user.CGSAccount;
+import org.t2k.cgs.domain.model.user.RelatesTo;
+import org.t2k.cgs.domain.model.user.SimpleCgsUserDetails;
+import org.t2k.cgs.domain.usecases.publisher.ExternalPartnerSettings;
+import org.t2k.cgs.domain.usecases.publisher.ExternalPartnersService;
+import org.t2k.cgs.domain.usecases.publisher.PublisherService;
+import org.t2k.cgs.domain.usecases.user.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -79,7 +83,7 @@ public class OAuthSecurityServiceImpl implements OAuthSecurityService {
             //used example from http://token-spring-security.blogspot.co.il/
             Authentication user = new UsernamePasswordAuthenticationToken(userDetails.getUsername(), userDetails.getPassword());
             request.getSession(true); // creates jsession id if neccesary. We need this because the request is not generated from CGS, so it doesn't already have a session id
-            ((AbstractAuthenticationToken)user).setDetails(new WebAuthenticationDetails(request));
+            ((AbstractAuthenticationToken) user).setDetails(new WebAuthenticationDetails(request));
             Authentication result = authenticationManager.authenticate(user);
             SecurityContextHolder.getContext().setAuthentication(result); // TODO: make sure this is thread locale
             return true;
@@ -100,7 +104,7 @@ public class OAuthSecurityServiceImpl implements OAuthSecurityService {
         SimpleCgsUserDetails userDetails = convert(oauthUserDetails);
         SimpleCgsUserDetails userDetailsFromDb = userService.getByAccountAndExternalId(userDetails.getRelatesTo().getId(), userDetails.getExternalId());
         String roleId = extractRoleIdRef(oauthUserDetails.getScope());
-         // TODO: replace with use of usersService
+        // TODO: replace with use of usersService
         if (userDetailsFromDb == null) {
             userDetails.setPassword(generateRandomPassword());
             userService.add(userDetails, roleId, false);  // add a new user with role - @roleId
@@ -121,7 +125,7 @@ public class OAuthSecurityServiceImpl implements OAuthSecurityService {
             if (userDetailsFromDb.getCustomization() != null && userDetailsFromDb.getCustomization().getExternalSettings() != null) {
                 List<ExternalSetting> userExternalSettings = userDetailsFromDb.getCustomization().getExternalSettings(); // get existing settings
                 for (ExternalSetting setting : userExternalSettings) {      // override blossom url if exists
-                    if (setting.getType() !=null && setting.getType().equals(BLOSSOM)) {
+                    if (setting.getType() != null && setting.getType().equals(BLOSSOM)) {
                         if (!setting.getUrl().equals(oauthUserDetails.getCatalogUrl())) { //update to the url from jwt token
                             setting.setUrl(oauthUserDetails.getCatalogUrl());
                             userNeedsToBeResaved = true;
@@ -129,11 +133,11 @@ public class OAuthSecurityServiceImpl implements OAuthSecurityService {
                         break;
                     }
                 }
-            } else if (userDetailsFromDb.getCustomization() == null){ // if there is no customization - set the one created by the "convert" method
+            } else if (userDetailsFromDb.getCustomization() == null) { // if there is no customization - set the one created by the "convert" method
                 userDetailsFromDb.setCustomization(userDetails.getCustomization());
                 userNeedsToBeResaved = true;
-            } else if (userDetailsFromDb.getCustomization().getExternalSettings() == null){ // if customization exists but has no elements
-                userDetailsFromDb.getCustomization().setExternalSettings(Arrays.asList(new ExternalSetting(oauthUserDetails.getCatalogType(),oauthUserDetails.getCatalogUrl())));
+            } else if (userDetailsFromDb.getCustomization().getExternalSettings() == null) { // if customization exists but has no elements
+                userDetailsFromDb.getCustomization().setExternalSettings(Arrays.asList(new ExternalSetting(oauthUserDetails.getCatalogType(), oauthUserDetails.getCatalogUrl())));
                 userNeedsToBeResaved = true;
             }
 
@@ -172,7 +176,7 @@ public class OAuthSecurityServiceImpl implements OAuthSecurityService {
         }
 
         String username = String.format("%s_%s_%d", oAuthDetails.getUsername(), oAuthDetails.getSub(), accountId); // formatting the new username
-        String prefixForEmail =  username.contains("@") ? username.replace("@",".") : username;
+        String prefixForEmail = username.contains("@") ? username.replace("@", ".") : username;
         String email = String.format("%s@NotARealEmail.ext", prefixForEmail);
         return new SimpleCgsUserDetails(oAuthDetails.getFirstName(), oAuthDetails.getLastName(), username, new RelatesTo(accountId, "PUBLISHER"), email, oAuthDetails.getSub(), userCustomization);
     }

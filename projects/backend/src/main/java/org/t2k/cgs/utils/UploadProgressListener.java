@@ -1,8 +1,8 @@
 package org.t2k.cgs.utils;
 
 import org.apache.log4j.Logger;
-import org.t2k.cgs.packaging.PackageHandlerImpl;
-import org.t2k.cgs.packaging.PackageStepsUpdater;
+import org.t2k.cgs.service.packaging.PackageHandlerImpl;
+import org.t2k.cgs.domain.usecases.packaging.PackageStepsUpdater;
 
 /**
  * Created with IntelliJ IDEA.

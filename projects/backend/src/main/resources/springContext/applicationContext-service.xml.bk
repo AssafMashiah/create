@@ -21,7 +21,7 @@
     <bean name="generalUtils" class="org.t2k.cgs.utils.GeneralUtils"/>
     <bean name="systemUtils" class="org.t2k.cgs.utils.SystemUtils"/>
 
-    <bean name="contentValidatorBean" class="org.t2k.cgs.model.utils.ContentValidator" init-method="initValidators">
+    <bean name="contentValidatorBean" class="org.t2k.cgs.domain.model.utils.ContentValidator" init-method="initValidators">
         <property name="active" value="true"/>
         <property name="courseJsonSchemaResource" value="classpath:schema/course_v7.json"/>
     </bean>
@@ -291,7 +291,7 @@
     <bean name="packageExecutorsFactory" class="org.t2k.cgs.packaging.executors.PackageExecutorsFactory"/>
     <bean name="schemaHandler" class="org.t2k.cgs.packaging.SchemaHandlerImpl"/>
     <bean name="packageHandler" class="org.t2k.cgs.packaging.PackageHandlerImpl" scope="prototype"/>
-    <bean name="loggingFormatter" class="org.t2k.cgs.model.logging.LoggingFormatter"/>
+    <bean name="loggingFormatter" class="org.t2k.cgs.domain.model.logging.LoggingFormatter"/>
     <bean name="loggingService" class="org.t2k.cgs.logging.LoggingServiceImpl"/>
     <bean name="standardsHelper" class="org.t2k.cgs.standards.parser.StandardsHelper"/>
     <bean name="externalPartnersService" class="org.t2k.cgs.publisher.ExternalPartnersServiceImpl"/>
@@ -304,7 +304,7 @@
 
     <!-- EBOOK  CONVERSION  -->
 
-    <!-- bean name="eBookFormatEnum" class="org.t2k.cgs.model.ebooks.EBookFormatEnum" -->
+    <!-- bean name="eBookFormatEnum" class="org.t2k.cgs.domain.model.ebooks.EBookFormatEnum" -->
     <bean name="eBookConversionServiceFactory" class="org.t2k.cgs.ebooks.EBookConversionServiceFactory"/>
     <bean name="epubToEBookConversionService" class="org.t2k.cgs.ebooks.epub.EPubToEBookConversionServiceImpl"/>
     <bean name="pdfToEBookIDRConversionService" class="org.t2k.cgs.ebooks.pdf.PdfToEBookIDRConversionServiceImpl"/>

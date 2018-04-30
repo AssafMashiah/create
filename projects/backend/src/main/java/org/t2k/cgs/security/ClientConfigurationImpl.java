@@ -1,5 +1,8 @@
 package org.t2k.cgs.security;
 
+import org.t2k.cgs.domain.usecases.ClientConfiguration;
+import org.t2k.cgs.domain.usecases.PollingIntervals;
+
 import java.io.Serializable;
 
 /**

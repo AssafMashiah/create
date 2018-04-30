@@ -7,7 +7,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.ebooks.epub.JouveEpubReader;
+import org.t2k.cgs.service.ebooks.epub.JouveEpubReader;
 import org.t2k.testUtils.TestUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -5,9 +5,9 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.dataServices.EntityType;
-import org.t2k.cgs.model.tocItem.TocItemCGSObject;
-import org.t2k.cgs.tocItem.TocItemsManager;
+import org.t2k.cgs.persistence.dao.EntityType;
+import org.t2k.cgs.domain.model.tocItem.TocItemCGSObject;
+import org.t2k.cgs.domain.usecases.tocitem.TocItemsManager;
 import org.testng.annotations.Test;
 
 /**

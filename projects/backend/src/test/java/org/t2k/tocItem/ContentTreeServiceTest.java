@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.t2k.cgs.dataServices.exceptions.DsException;
-import org.t2k.cgs.model.tocItem.ContentTree;
-import org.t2k.cgs.tocItem.ContentTreeService;
+import org.t2k.cgs.domain.model.exceptions.DsException;
+import org.t2k.cgs.domain.model.tocItem.ContentTree;
+import org.t2k.cgs.domain.usecases.tocitem.ContentTreeService;
 import org.testng.annotations.Test;
 
 /**

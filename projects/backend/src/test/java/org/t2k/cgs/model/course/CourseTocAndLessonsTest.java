@@ -1,11 +1,11 @@
-package org.t2k.cgs.model.course;
+package org.t2k.cgs.domain.model.course;
 
 import org.springframework.test.util.ReflectionTestUtils;
-import org.t2k.cgs.model.ebooks.EBook;
-import org.t2k.cgs.model.ebooks.conversion.EBookToCourseTOC;
-import org.t2k.cgs.model.ebooks.conversion.EBookToCourseTOCItemRef;
-import org.t2k.cgs.model.tocItem.CourseTocAndLessons;
-import org.t2k.cgs.model.tocItem.Lesson;
+import org.t2k.cgs.domain.model.ebooks.EBook;
+import org.t2k.cgs.domain.usecases.ebooks.conversion.EBookToCourseTOC;
+import org.t2k.cgs.domain.usecases.ebooks.conversion.EBookToCourseTOCItemRef;
+import org.t2k.cgs.domain.usecases.ebooks.CourseTocAndLessons;
+import org.t2k.cgs.domain.model.tocItem.Lesson;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

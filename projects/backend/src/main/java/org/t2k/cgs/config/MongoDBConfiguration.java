@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.convert.CustomConversions;
 import org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper;
 import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import org.t2k.cgs.model.tocItem.TocItemSequenceReadConverter;
+import org.t2k.cgs.domain.model.tocItem.TocItemSequenceReadConverter;
 
 import javax.inject.Inject;
 import java.net.UnknownHostException;

@@ -1,7 +1,7 @@
 <suite name="Service Module Test Suite">
     <test name="Account Service">
         <classes>
-            <class name="org.t2k.cgs.publisher.AccountServiceTest" />
+            <class name="org.t2k.cgs.domain.usecases.publisher.AccountServiceTest" />
         </classes>
     </test>
 

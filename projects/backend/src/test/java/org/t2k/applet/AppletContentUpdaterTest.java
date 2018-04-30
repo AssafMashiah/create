@@ -1,10 +1,10 @@
 package org.t2k.applet;
 
-import org.t2k.cgs.applet.AppletContentUpdater;
-import org.t2k.cgs.model.applet.AppletData;
-import org.t2k.cgs.model.applet.AppletManifest;
-import org.t2k.cgs.model.applet.AppletResources;
-import org.t2k.cgs.model.sequence.Sequence;
+import org.t2k.cgs.domain.usecases.AppletContentUpdater;
+import org.t2k.cgs.domain.model.applet.AppletData;
+import org.t2k.cgs.domain.model.applet.AppletManifest;
+import org.t2k.cgs.domain.model.applet.AppletResources;
+import org.t2k.cgs.domain.model.sequence.Sequence;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;

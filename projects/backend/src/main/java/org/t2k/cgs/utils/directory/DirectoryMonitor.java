@@ -4,9 +4,9 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
-import org.t2k.cgs.ebooks.EbookJobComponent;
-import org.t2k.cgs.model.job.Job;
-import org.t2k.cgs.model.job.JobService;
+import org.t2k.cgs.domain.usecases.ebooks.EbookJobComponent;
+import org.t2k.cgs.domain.model.job.Job;
+import org.t2k.cgs.domain.usecases.JobService;
 import org.t2k.cgs.utils.SystemUtils;
 
 import java.io.File;

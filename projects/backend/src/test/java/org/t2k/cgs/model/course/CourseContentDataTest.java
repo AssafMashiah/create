@@ -1,7 +1,7 @@
-package org.t2k.cgs.model.course;
+package org.t2k.cgs.domain.model.course;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.t2k.utils.ISO8601DateFormatter;
+import org.t2k.cgs.utils.ISO8601DateFormatter;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -20,7 +20,7 @@
 
     </bean>
 
-    <bean name="cmsServiceBean" class="org.t2k.cgs.cms.CmsServiceImpl" init-method="init">
+    <bean name="cmsServiceBean" class="org.t2k.cgs.service.CmsServiceImpl" init-method="init">
         <property name="fileDao" ref="fileDaoTest"/>
         <property name="configuration" ref="t2kConfig"/>
     </bean>

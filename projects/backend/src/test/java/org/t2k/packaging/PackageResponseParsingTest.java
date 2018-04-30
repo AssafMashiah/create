@@ -6,12 +6,12 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.model.packaging.CGSPackage;
-import org.t2k.cgs.model.packaging.PackagePhase;
-import org.t2k.cgs.model.packaging.PackageStep;
-import org.t2k.cgs.model.packaging.PublishTarget;
-import org.t2k.cgs.model.packaging.packageResponses.PackageResponseWithZip;
-import org.t2k.cgs.model.publishing.PublishError;
+import org.t2k.cgs.domain.usecases.packaging.CGSPackage;
+import org.t2k.cgs.domain.usecases.packaging.PackagePhase;
+import org.t2k.cgs.domain.usecases.packaging.PackageStep;
+import org.t2k.cgs.domain.usecases.packaging.PublishTarget;
+import org.t2k.cgs.domain.usecases.packaging.packageResponses.PackageResponseWithZip;
+import org.t2k.cgs.domain.usecases.publisher.PublishError;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,7 +1,7 @@
 package org.t2k.packaging;
 
 import org.apache.commons.io.IOUtils;
-import org.t2k.cgs.packaging.ContentParseUtil;
+import org.t2k.cgs.domain.usecases.packaging.ContentParseUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

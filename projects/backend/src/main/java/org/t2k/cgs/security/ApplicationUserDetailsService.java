@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.t2k.cgs.dao.user.UsersDao;
-import org.t2k.cgs.model.user.SimpleCgsUserDetails;
+import org.t2k.cgs.domain.model.user.UsersDao;
+import org.t2k.cgs.domain.model.user.SimpleCgsUserDetails;
 
 /**
  * Created with IntelliJ IDEA.

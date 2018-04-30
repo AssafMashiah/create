@@ -1,6 +1,6 @@
 package org.t2k.packaging;
 
-import org.t2k.cgs.model.packaging.ExtraDataAboutPackageForScorm;
+import org.t2k.cgs.domain.usecases.packaging.ExtraDataAboutPackageForScorm;
 
 /**
  * Created with IntelliJ IDEA.

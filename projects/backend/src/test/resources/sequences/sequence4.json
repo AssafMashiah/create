@@ -1,6 +1,6 @@
 {
     "_id": "65ea0bca22d7c2ccb4c4353f",
-    "_class": "org.t2k.cgs.model.tocItem.Sequence",
+    "_class": "org.t2k.cgs.domain.model.tocItem.Sequence",
     "seqId": "80322a66-393d-43a6-8106-4c24fd052586",
     "lessonCId": "ab56c004-5308-401d-9888-545282b103ca",
     "courseId": "e1ff172f-20d1-4d16-a6dd-3bb75f10c152",

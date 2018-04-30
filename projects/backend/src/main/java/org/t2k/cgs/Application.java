@@ -30,9 +30,9 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.t2k.cgs.config.SpringProfiles;
-import org.t2k.cgs.course.CourseDataService;
-import org.t2k.cgs.filters.EtagHeaderFilter;
-import org.t2k.cgs.filters.HeadersConfigFilter;
+import org.t2k.cgs.domain.usecases.course.CourseDataService;
+import org.t2k.cgs.web.filters.EtagHeaderFilter;
+import org.t2k.cgs.web.filters.HeadersConfigFilter;
 
 import javax.servlet.ServletException;
 import java.io.File;

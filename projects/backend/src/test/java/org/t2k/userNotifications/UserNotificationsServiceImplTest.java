@@ -6,9 +6,9 @@
 //import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 //import org.t2k.cgs.dao.userNotifications.NotificationsDao;
 //import org.t2k.cgs.dataServices.exceptions.DsException;
-//import org.t2k.cgs.model.userNotifications.NotificationType;
-//import org.t2k.cgs.model.userNotifications.UserNotification;
-//import org.t2k.cgs.model.userNotifications.UserNotifications;
+//import org.t2k.cgs.domain.model.userNotifications.NotificationType;
+//import org.t2k.cgs.domain.model.userNotifications.UserNotification;
+//import org.t2k.cgs.domain.model.userNotifications.UserNotifications;
 //import org.t2k.cgs.userNotifications.UserNotificationsService;
 //import org.t2k.sample.dao.exceptions.DaoException;
 //import org.testng.annotations.Test;

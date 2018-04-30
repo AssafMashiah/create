@@ -1,6 +1,6 @@
 {
   "_id" : "57d7f6b348a42e075d4ca65d",
-  "_class" : "org.t2k.cgs.model.ebooks.EBook",
+  "_class" : "org.t2k.cgs.domain.model.ebooks.EBook",
   "eBookId" : "0fd0e5ee-c1a3-4278-ab05-71b61dc9de0c",
   "originalFileName" : "epub3_accessible_modified_preface_2.epub",
   "username" : "alex",

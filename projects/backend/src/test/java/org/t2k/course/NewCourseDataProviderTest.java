@@ -1,6 +1,6 @@
 package org.t2k.course;
 
-import org.t2k.cgs.model.locales.ContentLocalesTypes;
+import org.t2k.cgs.domain.model.ContentLocalesTypes;
 
 /**
  * Created by thalie.mukhtar on 4/1/2016.

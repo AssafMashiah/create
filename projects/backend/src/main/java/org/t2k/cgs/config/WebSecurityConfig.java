@@ -21,7 +21,8 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.web.context.WebApplicationContext;
-import org.t2k.cgs.dao.user.UsersDao;
+import org.t2k.cgs.domain.model.user.CGSUserDetails;
+import org.t2k.cgs.domain.model.user.UsersDao;
 import org.t2k.cgs.security.*;
 
 import java.util.Arrays;

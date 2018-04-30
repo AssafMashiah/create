@@ -3,7 +3,8 @@ package org.t2k.cgs.tts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.t2k.cgs.dataServices.exceptions.DsException;
+import org.t2k.cgs.domain.model.exceptions.DsException;
+import org.t2k.cgs.domain.usecases.TextToSpeechProviderService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

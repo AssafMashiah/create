@@ -8,6 +8,6 @@
     <!--context:spring-configured/ -->
     <import resource="classpath*:springContext/applicationContext-MongoDaosTest.xml"/>
 
-    <bean name="lockDaoTest" class="org.t2k.cgs.locks.LocksDaoDummy"></bean>
+    <bean name="lockDaoTest" class="org.t2k.cgs.domain.model.lock.LocksDaoDummy"></bean>
 
 </beans>

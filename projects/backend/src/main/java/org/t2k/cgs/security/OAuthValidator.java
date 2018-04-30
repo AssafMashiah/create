@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.t2k.cgs.model.security.OAuthDetails;
 
 import javax.annotation.PostConstruct;
 import javax.crypto.Mac;
@@ -52,12 +51,12 @@ public class OAuthValidator {
 
     public boolean validateSignature(OAuthDetails oAuthDetails, String secretKey) {
 
-        if (!areAuthenticationDetailsValid(oAuthDetails)){
+        if (!areAuthenticationDetailsValid(oAuthDetails)) {
             logger.error(String.format("validateSignature - some of the oAuthDetails passed in JWT are not valid. Details: %s", oAuthDetails));
             return false;
         }
 
-        if (!areSignaturesIdentical(oAuthDetails, secretKey)){
+        if (!areSignaturesIdentical(oAuthDetails, secretKey)) {
             logger.error("validateSignature - authentication with secret key failed. Check secret key used");
             return false;
         }
@@ -121,12 +120,12 @@ public class OAuthValidator {
             logger.error(String.format("userDataIsValid: jwt has expired. json's exp property: %d is not in the defined range.", oAuthDetails.getIat()));
         }
 
-        if (oAuthDetails.getUsername() == null){
+        if (oAuthDetails.getUsername() == null) {
             allConstraintsAreValid = false;
             logger.error("userDataIsValid: username cannot be null");
 
         }
-        if (oAuthDetails.getUsername().contains(" ")){
+        if (oAuthDetails.getUsername().contains(" ")) {
             allConstraintsAreValid = false;
             logger.error("userDataIsValid: a username cannot contain white-spaces");
         }
@@ -138,7 +137,7 @@ public class OAuthValidator {
         try {
             String calculatedSignature = calculateSignature(oAuthDetails.getJwsHeader(), oAuthDetails.getUserData(), oAuthDetails.getAlg(), secretKey);
             boolean isMatch = calculatedSignature.equals(oAuthDetails.getSignature());
-            if (isMatch){
+            if (isMatch) {
                 logger.debug("Signatures match");
                 return true;
             } else {
@@ -147,7 +146,7 @@ public class OAuthValidator {
             }
 
         } catch (Exception e) {
-            logger.error("Error calculating the signature",e);
+            logger.error("Error calculating the signature", e);
             return false;
         }
     }

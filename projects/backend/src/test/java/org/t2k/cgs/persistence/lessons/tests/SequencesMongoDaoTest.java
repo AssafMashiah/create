@@ -2,8 +2,8 @@ package org.t2k.cgs.persistence.lessons.tests;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.mongodb.core.query.Query;
-import org.t2k.cgs.dao.sequences.SequencesMongoDao;
-import org.t2k.cgs.dao.util.GenericDaoOperations;
+import org.t2k.cgs.persistence.dao.SequencesMongoDao;
+import org.t2k.cgs.domain.model.utils.GenericDaoOperations;
 
 /**
  * Created by IntelliJ IDEA.

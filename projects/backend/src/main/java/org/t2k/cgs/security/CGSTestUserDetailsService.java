@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.t2k.cgs.domain.model.user.CGSUserDetailsImpl;
 
 import java.util.Collections;
 
@@ -22,18 +23,13 @@ public class CGSTestUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        if(username.matches(userNameRegex)){
-
-            CGSUserDetailsImpl userDetails = new CGSUserDetailsImpl(new User(username,this.password, Collections.<GrantedAuthority>emptyList()));
-
+        if (username.matches(userNameRegex)) {
+            CGSUserDetailsImpl userDetails = new CGSUserDetailsImpl(new User(username, this.password, Collections.<GrantedAuthority>emptyList()));
             userDetails.setFirstName(username);
             userDetails.setLastName(username);
             userDetails.setEmail(username + "@t2kqa.com");
-
             return userDetails;
         }
-
         throw new UsernameNotFoundException("Not a test user");
     }
 

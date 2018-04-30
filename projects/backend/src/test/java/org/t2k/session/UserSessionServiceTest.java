@@ -5,11 +5,11 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.dao.sessions.UserSessionsDao;
-import org.t2k.cgs.dataServices.exceptions.DsException;
-import org.t2k.cgs.model.session.SessionStatus;
-import org.t2k.cgs.model.session.UserSession;
-import org.t2k.cgs.session.UserSessionService;
+import org.t2k.cgs.domain.usecases.user.UserSessionsDao;
+import org.t2k.cgs.domain.model.exceptions.DsException;
+import org.t2k.cgs.domain.model.user.UserSessionStatus;
+import org.t2k.cgs.domain.model.user.UserSession;
+import org.t2k.cgs.domain.usecases.UserSessionService;
 import org.t2k.sample.dao.exceptions.DaoException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -48,7 +48,7 @@ public class UserSessionServiceTest extends AbstractTestNGSpringContextTests {
             userSessionService.addSession(userSession);
             UserSession activeSession = userSessionService.getActiveSessionBySessionId(sessionId);
             Assert.assertEquals(activeSession.getSessionId(), sessionId);
-            Assert.assertEquals(activeSession.getStatus(), SessionStatus.Authenticated);
+            Assert.assertEquals(activeSession.getStatus(), UserSessionStatus.Authenticated);
             Assert.assertEquals(activeSession.getUserId(), userId);
             Assert.assertEquals(activeSession.getUsername(), username);
             Assert.assertTrue(now.before(activeSession.getCreationDate()));
@@ -62,7 +62,7 @@ public class UserSessionServiceTest extends AbstractTestNGSpringContextTests {
             Assert.assertEquals(activeSession, null);
 
             UserSession destroyedSession = sessionsDao.getSessionById(sessionId);
-            Assert.assertEquals(destroyedSession.getStatus(), SessionStatus.DestroyedSuccessfully);
+            Assert.assertEquals(destroyedSession.getStatus(), UserSessionStatus.DestroyedSuccessfully);
             Assert.assertEquals(destroyedSession.getUserId(), userId);
             Assert.assertEquals(destroyedSession.getUsername(), username);
             Assert.assertTrue(now.before(destroyedSession.getCreationDate()));

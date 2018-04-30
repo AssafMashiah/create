@@ -14,12 +14,12 @@ import org.springframework.core.io.Resource;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.t2k.cgs.cms.CmsService;
-import org.t2k.cgs.model.utils.ContentValidator;
-import org.t2k.cgs.security.ClientConfiguration;
+import org.t2k.cgs.domain.usecases.CmsService;
+import org.t2k.cgs.domain.usecases.packaging.ContentValidator;
+import org.t2k.cgs.domain.usecases.ClientConfiguration;
 import org.t2k.cgs.security.ClientConfigurationImpl;
-import org.t2k.cgs.security.PollingIntervals;
-import org.t2k.cgs.version.VersionService;
+import org.t2k.cgs.domain.usecases.PollingIntervals;
+import org.t2k.cgs.domain.usecases.VersionService;
 import org.t2k.gcr.common.client.GCRClient;
 import org.t2k.gcr.common.client.GCRClientImpl;
 
@@ -112,8 +112,10 @@ public class ApplicationConfiguration {
         String logoutPath = cgsPath + "/auth/logout";
         String externalLogoutPath = cgsPath + "/auth/external-logout";
         String schemaName = contentValidator.getSchemaName();
-        PollingIntervals pollingIntervals = new PollingIntervals(configuration.getIntProperty("idlePublishPollingInterval"),
-                configuration.getIntProperty("activePublishPollingInterval"));
+        PollingIntervals pollingIntervals =
+                new PollingIntervals(
+                        configuration.getIntProperty("idlePublishPollingInterval"),
+                        configuration.getIntProperty("activePublishPollingInterval"));
         return new ClientConfigurationImpl(restPath, cmsBasePath, logoutPath, versionService.getFullVersion(), schemaName,
                 pollingIntervals, externalLogoutPath);
     }
