@@ -3,7 +3,7 @@
 	"lastName": "Darwish",
 	"email": "fsd",
 	"username": "rd1",
-	"password": "fdsa",
+	"password": "fdsa1234",
 	"relatesTo": {"id":1,"type":"PUBLISHER"},
     "customization" : {"cgsHintsShowMode":"showAll"}
 }
