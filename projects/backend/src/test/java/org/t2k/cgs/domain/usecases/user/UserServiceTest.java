@@ -8,19 +8,25 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.domain.model.exceptions.DsException;
-import org.t2k.cgs.domain.model.exceptions.ValidationException;
-import org.t2k.cgs.domain.model.user.SimpleCgsUserDetails;
 import org.t2k.cgs.domain.model.Customization;
 import org.t2k.cgs.domain.model.ExternalSetting;
+import org.t2k.cgs.domain.model.exceptions.DsException;
+import org.t2k.cgs.domain.model.exceptions.ValidationException;
 import org.t2k.cgs.domain.model.user.RelatesTo;
+import org.t2k.cgs.domain.model.user.SimpleCgsUserDetails;
 import org.t2k.cgs.service.UserServiceImpl;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,10 +39,8 @@ import java.util.List;
  * Date: 7/3/13
  * Time: 3:44 PM
  */
-//@ContextConfiguration("/springContext/applicationContext-allServices.xml")
-//@Test
-@ActiveProfiles("test")
 @SpringApplicationConfiguration(classes = Application.class)
+@ActiveProfiles("test")
 public class UserServiceTest extends AbstractTestNGSpringContextTests {
 
     private static final String PACKAGE_PATH = "jsons/users";
@@ -45,6 +49,8 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
 
     private List<SimpleCgsUserDetails> usersAddedByTests = new ArrayList<>();
 
+    private static final int publisherId = 10000;
+
     @Autowired
     private UserServiceImpl userService;
 
@@ -52,22 +58,18 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
 
     @BeforeMethod
     public void reset() throws Exception {
-
         defaultUser = new SimpleCgsUserDetails();
         defaultUser.setEmail("work@timetoknow.com");
         defaultUser.setFirstName("Time");
         defaultUser.setLastName("Know");
         defaultUser.setPassword("password");
         defaultUser.setUsername("time.to.know100");
-        defaultUser.setUserId(1000);
-        defaultUser.setRelatesTo(new RelatesTo(1,"PUBLISHER"));
+        defaultUser.setRelatesTo(new RelatesTo(publisherId, "PUBLISHER"));
     }
 
     @AfterClass
     public void deleteUsersAddedByTests() throws DsException {
-        for (SimpleCgsUserDetails user : usersAddedByTests){
-            userService.delete(user.getUserId());
-        }
+        userService.removeUsersByPublisherAccountId(publisherId);
     }
 
     public SimpleCgsUserDetails getDefaultUser() throws IOException, URISyntaxException, JSONException {
@@ -80,19 +82,17 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
     public void testAddUserSuccessfully() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         String name = RandomStringUtils.randomAlphabetic(20);
-        String email = name+"@dummy.com";
+        String email = name + "@dummy.com";
         user.setFirstName(name);
         user.setEmail(email);
-        try{
-        userService.add(user,"EDITOR", true);
-        usersAddedByTests.add(user);
-        }
-        catch (Exception e)
-        {
+        try {
+            userService.add(user, "EDITOR", true);
+            usersAddedByTests.add(user);
+        } catch (Exception e) {
             logger.error(e.getMessage());
             throw e;
         }
-        SimpleCgsUserDetails fetchedUser = userService.getById(user.getUserId(),true);
+        SimpleCgsUserDetails fetchedUser = userService.getById(user.getUserId(), true);
         Assert.assertEquals(user.getFirstName(), fetchedUser.getFirstName());
         userService.delete(user.getUserId());
 
@@ -101,7 +101,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithoutShowHintsModeCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
         usersAddedByTests.add(user);
 
     }
@@ -128,34 +128,35 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
     public void UserInsertWithoutEmailCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setEmail("");
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
-@Test(expectedExceptions = ValidationException.class)
+    @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithNullEmailCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setEmail(null);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithoutRelatesToCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setRelatesTo(new RelatesTo());
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithNullRelatesToCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setRelatesTo(null);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
+
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithNullUserIdCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setUserId(null);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
     @Test(expectedExceptions = ValidationException.class)
@@ -169,14 +170,14 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
     public void UserInsertWithNullCustomizationCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setCustomization(null);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
 
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithNoneExistingRoleCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
-        userService.add(user,"NON_EXISTING", true);
+        userService.add(user, "NON_EXISTING", true);
     }
 
     @Test(expectedExceptions = ValidationException.class)
@@ -185,15 +186,16 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
         Customization cust = new Customization();
         cust.setCgsHintsShowMode(null);
         user.setCustomization(cust);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
 
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithNullCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
         user.setFirstName(null);
-        userService.add(user,"EDITOR", true);
+        userService.add(user, "EDITOR", true);
     }
+
     @Test(expectedExceptions = ValidationException.class)
     public void UserInsertWithoutCannotBeAdded() throws Exception {
         SimpleCgsUserDetails user = getDefaultUser();
@@ -203,7 +205,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
 
     @Test(expectedExceptions = ValidationException.class)
     public void duplicateUserIdInsertTest() throws Exception {
-        userService.add(defaultUser,"EDITOR",true);
+        userService.add(defaultUser, "EDITOR", true);
 
         defaultUser.setEmail("something@else.com");
         defaultUser.setUsername("some.other.name");
@@ -233,7 +235,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
         String blossomURL = "http://www.blossom-kc.com/demo/WebServices/content?Upload_ExtID/";
         customizationWithBlossom.setExternalSettings(Arrays.asList(new ExternalSetting(BLOSSOM, blossomURL)));
         defaultUser.setCustomization(customizationWithBlossom);
-        Assert.assertEquals(userService.getBlossomUrl(defaultUser),blossomURL,"Blossom url should be the same as the one exists for this user");
+        Assert.assertEquals(userService.getBlossomUrl(defaultUser), blossomURL, "Blossom url should be the same as the one exists for this user");
     }
 
     @Test
@@ -261,7 +263,7 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
         String blossomURL = "http://www.blossom-kc.com/demo/WebServices/content?Upload_ExtID/";
         customizationWithBlossom.setExternalSettings(Arrays.asList(new ExternalSetting(BLOSSOM, blossomURL)));
         defaultUser.setCustomization(customizationWithBlossom);
-        Assert.assertTrue(userService.isUserRelatedToBlossom(defaultUser),"Blossom url should indicate that the url is related to blossombe the same as the one exists for this user");
+        Assert.assertTrue(userService.isUserRelatedToBlossom(defaultUser), "Blossom url should indicate that the url is related to blossombe the same as the one exists for this user");
     }
 
     private FileInputStream getFileInputStream(String path) throws URISyntaxException, FileNotFoundException {
@@ -283,7 +285,4 @@ public class UserServiceTest extends AbstractTestNGSpringContextTests {
         inputStream.close();
         return res;
     }
-
-
-
 }

@@ -171,7 +171,7 @@
         "fr_FR",
         "en_SG"
     ],
-    "name" : "T2K2",
+    "name" : "mock_up_publisher",
     "accountId" : 8,
     "relatesTo":{"id":-1,"type":"ADMIN"},
     "skills" : {

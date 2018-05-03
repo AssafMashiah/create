@@ -3,17 +3,16 @@ package org.t2k.cgs.persistence.dao;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
 import org.apache.log4j.Logger;
-import org.joda.time.DateTime;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
-import org.t2k.cgs.domain.model.cleanup.CleanupsDao;
 import org.t2k.cgs.domain.model.cleanup.CleanupJob;
 import org.t2k.cgs.domain.model.cleanup.CleanupStatus;
 import org.t2k.cgs.domain.model.cleanup.CleanupType;
+import org.t2k.cgs.domain.model.cleanup.CleanupsDao;
 import org.t2k.sample.dao.exceptions.DaoException;
 
 import java.util.Date;
@@ -30,6 +29,7 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
     //Course collection name in mongoDb
     private static final String CLEANUPS_COLLECTION = "cleanups";
     private Logger logger = Logger.getLogger(CleanupsMongoDao.class);
+
     @Override
     public void insertOrUpdateCleanup(CleanupJob cleanupJob) throws DaoException {
         try {
@@ -37,14 +37,13 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
             if (existingCleanup == null) {
                 cleanupJob.setLastModified(cleanupJob.getCreated());   // for a new object lastmodified = created
                 getMongoTemplate().insert(cleanupJob, CLEANUPS_COLLECTION);
-            }
-            else {
+            } else {
                 existingCleanup.setStatus(CleanupStatus.Created);
                 existingCleanup.setLastModified(new Date());    // for an existing object - lastModified = current date
                 saveCleanup(existingCleanup);
             }
         } catch (DataAccessException e) {
-            logger.error(String.format("Error inserting job into DB. job details: %s",cleanupJob.toString()));
+            logger.error(String.format("Error inserting job into DB. job details: %s", cleanupJob.toString()));
             throw new DaoException(e);
         }
     }
@@ -52,7 +51,7 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
     @Override
     public void saveCleanup(CleanupJob cleanupJob) throws DaoException {
         try {
-              getMongoTemplate().save(cleanupJob, CLEANUPS_COLLECTION);
+            getMongoTemplate().save(cleanupJob, CLEANUPS_COLLECTION);
         } catch (DataAccessException e) {
             throw new DaoException(e);
         }
@@ -61,16 +60,17 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
     @Override
     public List<CleanupJob> getWaitingCleanupJobs(int numberOfCleanupsToReturn, CleanupType type) throws DaoException {
         try {
-            Query query = new Query(Criteria.where(CleanupJob.STATUS).is(CleanupStatus.Created.name())
-                    .and(CleanupJob.CLEANUP_TYPE).is(type.name())
-                    .and(CleanupJob.LAST_MODIFIED).lt(new DateTime().minusHours(1).toDate()));    // use .name() because java json converter doesn't handle enums
+            Query query = new Query(
+                    Criteria.where(CleanupJob.STATUS).is(CleanupStatus.Created.name())
+                            .and(CleanupJob.CLEANUP_TYPE).is(type.name())
+//                            .and(CleanupJob.LAST_MODIFIED).lt(new DateTime().minusHours(1).toDate())
+            );    // use .name() because java json converter doesn't handle enums
             query.with(new Sort(Sort.Direction.ASC, CleanupJob.LAST_MODIFIED));
             return getMongoTemplate().find(query.limit(numberOfCleanupsToReturn), CleanupJob.class, CLEANUPS_COLLECTION);
         } catch (DataAccessException e) {
             throw new DaoException(e);
         }
     }
-
 
     @Override
     public void removeRelatedCleanups(int publisherId, String courseId) throws DaoException {
@@ -85,11 +85,11 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
         }
     }
 
-    private DBCursor getWaitingCleanups(BasicDBObject query) throws DaoException     {
+    private DBCursor getWaitingCleanups(BasicDBObject query) throws DaoException {
         try {
             query.put(CleanupJob.STATUS, CleanupStatus.Created.name());     // use .name() because java json converter doesn't handle enums
             BasicDBObject orderBy = new BasicDBObject();
-            orderBy.put(CleanupJob.LAST_MODIFIED,1); //sort ascending
+            orderBy.put(CleanupJob.LAST_MODIFIED, 1); //sort ascending
             return getMongoTemplate().getCollection(CLEANUPS_COLLECTION).find(query).sort(orderBy);
         } catch (DataAccessException e) {
             throw new DaoException(e);
@@ -98,7 +98,7 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
 
     @Override
     public DBCursor getWaitingCleanups() throws DaoException {
-          return getWaitingCleanups(new BasicDBObject());
+        return getWaitingCleanups(new BasicDBObject());
     }
 
     @Override
@@ -129,12 +129,12 @@ public class CleanupsMongoDao extends MongoDao implements CleanupsDao {
     }
 
     @Override
-    public CleanupJob getCourseCleanupJob(int publisherId, String courseId, CleanupStatus cleanupStatus){
-        return getCleanup(publisherId, courseId,null,CleanupType.COURSE,cleanupStatus);
+    public CleanupJob getCourseCleanupJob(int publisherId, String courseId, CleanupStatus cleanupStatus) {
+        return getCleanup(publisherId, courseId, null, CleanupType.COURSE, cleanupStatus);
     }
 
     @Override
-    public CleanupJob getTocItemCleanupJob(int publisherId, String courseId, String tocItemId, CleanupStatus cleanupStatus, CleanupType type){
+    public CleanupJob getTocItemCleanupJob(int publisherId, String courseId, String tocItemId, CleanupStatus cleanupStatus, CleanupType type) {
         return getCleanup(publisherId, courseId, tocItemId, type, cleanupStatus);
     }
 

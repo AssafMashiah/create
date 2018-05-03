@@ -1,8 +1,9 @@
 package org.t2k.cgs.persistence.dao.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.t2k.cgs.Application;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,15 +15,14 @@ import static org.testng.Assert.assertEquals;
  * Date: 7/3/13
  * Time: 2:40 PM
  */
-@ContextConfiguration("/springContext/applicationContext-MongoDaosTest.xml")
-@Test(groups = "ignore")
+@SpringApplicationConfiguration(classes = Application.class)
 public class UniqueIdDaoTest extends AbstractTestNGSpringContextTests {
 
     @Autowired
     UniqueIdMongoDao uniqueIdDao;
 
     @BeforeMethod
-    private void reset() throws Exception{
+    private void reset() throws Exception {
         uniqueIdDao.reset();
     }
 

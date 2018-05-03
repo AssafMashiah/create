@@ -11,7 +11,7 @@ import org.t2k.cgs.domain.usecases.course.CourseCleanupService;
 import org.t2k.cgs.domain.model.cleanup.CleanupsDao;
 import org.t2k.cgs.domain.model.exceptions.DsException;
 import org.t2k.cgs.domain.model.exceptions.ResourceNotFoundException;
-import org.t2k.cgs.domain.usecases.exportImport.ExportImportService;
+import org.t2k.cgs.domain.usecases.exportimport.ExportImportService;
 import org.t2k.cgs.domain.usecases.lock.LockService;
 import org.t2k.cgs.domain.model.lock.Lock;
 import org.t2k.cgs.domain.model.lock.Transaction;

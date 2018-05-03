@@ -4,11 +4,11 @@
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.*;
-//import org.t2k.cgs.domain.model.userNotifications.UserNotification;
-//import org.t2k.cgs.domain.model.userNotifications.UserNotifications;
+//import org.t2k.cgs.domain.model.usernotifications.UserNotification;
+//import org.t2k.cgs.domain.model.usernotifications.UserNotifications;
 //import org.t2k.cgs.security.CGSUserDetails;
 //import org.t2k.cgs.security.annotations.AllowedForAll;
-//import org.t2k.cgs.userNotifications.UserNotificationsService;
+//import org.t2k.cgs.usernotifications.UserNotificationsService;
 //
 //import java.util.List;
 //

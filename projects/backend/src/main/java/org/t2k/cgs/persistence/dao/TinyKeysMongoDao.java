@@ -5,10 +5,9 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
-import org.t2k.cgs.domain.usecases.packaging.TinyKeysDao;
-import org.t2k.cgs.persistence.dao.MongoDao;
 import org.t2k.cgs.domain.usecases.packaging.PublishTarget;
 import org.t2k.cgs.domain.usecases.packaging.TinyKey;
+import org.t2k.cgs.domain.usecases.packaging.TinyKeysDao;
 import org.t2k.sample.dao.exceptions.DaoException;
 
 /**
@@ -59,5 +58,6 @@ public class TinyKeysMongoDao extends MongoDao implements TinyKeysDao {
 
     @Override
     public void removeAllItems(String collectionName) throws DataAccessException {
+        throw new IllegalAccessError();
     }
 }

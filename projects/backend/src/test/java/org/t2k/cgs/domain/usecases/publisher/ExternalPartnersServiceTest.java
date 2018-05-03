@@ -6,7 +6,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
 import org.t2k.cgs.domain.model.exceptions.DsException;
-import org.t2k.testUtils.TestUtils;
+import org.t2k.cgs.domain.usecases.TestUtils;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,9 +21,8 @@ import java.util.List;
  * Date: 1/6/15
  * Time: 10:52 PM
  */
-//@ContextConfiguration("/springContext/applicationContext-allServices.xml")
-@ActiveProfiles("test")
 @SpringApplicationConfiguration(classes = Application.class)
+@ActiveProfiles("test")
 public class ExternalPartnersServiceTest extends AbstractTestNGSpringContextTests {
 
     @Autowired

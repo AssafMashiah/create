@@ -5,13 +5,21 @@ import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.t2k.cgs.Application;
 import org.t2k.cgs.domain.model.exceptions.ValidationException;
 import org.t2k.cgs.domain.model.user.CGSAccount;
 import org.testng.annotations.Test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -23,9 +31,9 @@ import static org.testng.Assert.assertEquals;
  * Date: 03/12/13
  * Time: 11:45
  */
-
+@SpringApplicationConfiguration(classes = Application.class)
+@ActiveProfiles("test")
 @Test(groups = "ignore")
-@ContextConfiguration("/springContext/applicationContext-service.xml")
 public class AccountServiceTest extends AbstractTestNGSpringContextTests {
     @Autowired
     PublisherService accountService;
@@ -61,10 +69,11 @@ public class AccountServiceTest extends AbstractTestNGSpringContextTests {
     public void accountObjectMapping() throws IOException, URISyntaxException {
         String validAccount = resourceFileAsString("publisher/validAccount.json");
         ObjectMapper objectMapper = new ObjectMapper();
-        CGSAccount cgsAccount = objectMapper.readValue(validAccount,CGSAccount.class);
+        CGSAccount cgsAccount = objectMapper.readValue(validAccount, CGSAccount.class);
 
     }
-          public static FileInputStream getFileInputStream(String path) throws URISyntaxException, FileNotFoundException {
+
+    public static FileInputStream getFileInputStream(String path) throws URISyntaxException, FileNotFoundException {
         URL url = ClassLoader.getSystemResource(path);
         File file = new File(url.toURI());
         FileInputStream is = new FileInputStream(file);

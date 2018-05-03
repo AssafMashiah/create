@@ -1,6 +1,6 @@
 {
 	"_class": "com.mongodb.BasicDBObject",
-	"name": "test",
+	"name": "mock_up_publisher",
 	"locales": ["en_US",
 	"en_UK",
 	"fr_FR",

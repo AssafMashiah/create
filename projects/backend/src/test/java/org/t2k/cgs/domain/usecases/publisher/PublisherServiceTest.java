@@ -32,7 +32,7 @@ public class PublisherServiceTest {
     private ExternalPartnersService externalPartnersService;
 
     private String defaultPublisher;
-    private static final Integer DEFAULT_PUBLISHER_ID = 6;
+    private static final Integer DEFAULT_PUBLISHER_ID = 10000;
 
     @BeforeMethod
     private void beforeTest() throws Exception {

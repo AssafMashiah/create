@@ -1,15 +1,15 @@
 package org.t2k.cgs.persistence.dao;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
-import org.t2k.cgs.domain.usecases.packaging.PackagingDao;
-import org.t2k.cgs.persistence.dao.MongoDao;
 import org.t2k.cgs.domain.usecases.packaging.CGSPackage;
 import org.t2k.cgs.domain.usecases.packaging.PackagePhase;
+import org.t2k.cgs.domain.usecases.packaging.PackagingDao;
 import org.t2k.sample.dao.exceptions.DaoException;
 
 import java.util.Date;
@@ -181,6 +181,7 @@ public class PackagesMongoDao extends MongoDao implements PackagingDao {
     }
 
     @Override
+    @VisibleForTesting
     public void removeAllItems(String collectionName) throws DataAccessException {
         throw new IllegalAccessError();
     }
