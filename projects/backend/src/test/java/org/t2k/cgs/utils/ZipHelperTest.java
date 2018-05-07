@@ -213,7 +213,6 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
         Assert.assertNotEquals(zipValidationReport.getError(), "");
     }
 
-
     @Test
     public void zipWithEmptyFolderValidationSuccessTest() throws Exception {
         String path = testUtils.getResourcePath("zipFiles/zipWithEmptyFolder.zip");

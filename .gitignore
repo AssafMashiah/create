@@ -4,6 +4,7 @@
 .shelf
 build
 out
+*.log*
 
 player
 node_modules

@@ -26,7 +26,7 @@ public class EpubValidator {
 
     @Value("classpath:epubCheck/epubcheck-4.0.1.zip")
     private Resource epubValidatorZip;
-    private String tempEpubCheckJarPath = "epubCheckJar/";
+    private String tempEpubCheckJarPath = "out/epubCheckJar/";
     private File epubCheckTempExtractionFolder = new File(tempEpubCheckJarPath);
 
     // initialization - use this to unzip the jar, called from spring bean init
