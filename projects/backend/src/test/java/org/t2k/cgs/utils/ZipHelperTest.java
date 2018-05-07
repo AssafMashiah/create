@@ -52,7 +52,6 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
 
     @Test
     public void ZipANestedFolder() throws IOException {
-
         List<String> foldersToBeZipped = new ArrayList<>();
         foldersToBeZipped.add(tempFolder.getPath() + "/" + zippedFolderName1);
         foldersToBeZipped.add(tempFolder.getPath() + "/" + zippedFolderName2);
@@ -90,12 +89,10 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
 
         Assert.assertTrue(zipped.exists()); // file is created
         Assert.assertTrue(firstCompressedFound && secondCompressedFound && nestedFound); //zipped file is found in decompressed folder
-
     }
 
     @Test
     public void ZipAFolderAnAddAnotherFolder() throws IOException {
-
         List<String> foldersToBeZipped = new ArrayList<>();
         foldersToBeZipped.add(tempFolder.getPath() + "/" + zippedFolderName1);
         foldersToBeZipped.add(tempFolder.getPath() + "/" + zippedFolderName2);
@@ -125,7 +122,6 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
 
         Assert.assertTrue(zipped.exists()); // file is created
         Assert.assertTrue(firstCompressedFound && secondCompressedFound); //zipped file is found in decompressed folder
-
     }
 
     @Test
@@ -141,9 +137,7 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
         ZipHelper.decompressZipFile(zipFile, folderForDecompressedZip);
         Assert.assertTrue(new File(zipFile).exists()); // file is created
         Assert.assertTrue(FolderExistsInDirectory(folderForDecompressedZip, zippedFolderName) == true); //zipped file is found in decompressed folder
-
     }
-
 
     @Test
     public void ZipAFile() throws IOException {
@@ -167,7 +161,6 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
         }
         Assert.assertTrue(zipped.exists()); // file is created
         Assert.assertTrue(firstCompressedFound); //zipped file is found in decompressed folder
-
     }
 
     @Test
@@ -200,7 +193,6 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
         Assert.assertTrue(zipped.exists()); // file is created
         Assert.assertTrue(firstCompressedFound && secondCompressedFound); //zipped file is found in decompressed folder
     }
-
 
     @Autowired
     private TestUtils testUtils;
@@ -236,9 +228,7 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
                 return true;
 
         return false;
-
     }
-
 
     private void CreateNewFolderWithRandomFiles(String folderName, int numberOfFiles) throws IOException {
         File p = new File(folderName);
@@ -255,5 +245,4 @@ public class ZipHelperTest extends AbstractTestNGSpringContextTests {
         file1.createNewFile();
         Files.append(fileContent1, file1, Charset.defaultCharset());
     }
-
 }

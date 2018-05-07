@@ -123,7 +123,7 @@ public class CmsServiceImpl implements CmsService {
      */
     @Override
     public byte[] getZippedFiles(List<String> filenames) throws IOException, DsException {
-        String tempZipFile = "tempZip.zip";
+        String tempZipFile = "out/empZip.zip";
         List<String> fullFileNames = getFullFilesPath(filenames);
         ZipHelper.zipDir(fullFileNames, tempZipFile);
 

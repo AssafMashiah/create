@@ -37,7 +37,7 @@ public class PublishedScormZipValidator {
     private final String SCORM_MANIFEST = "imsmanifest.xml";
     private final String SCP_FOLDER = "scp";
     private Validator scormXSDValidator;
-    private String tempScormSchemaPath = "scorm2004Schemas/";
+    private String tempScormSchemaPath = "out/scorm2004Schemas/";
     private File scormXSDsTempExtractionFolder = new File(tempScormSchemaPath);
     private Resource scormSchemasZip;
     private PublishedStandAloneZipValidator publishedStandAloneZipValidator;
