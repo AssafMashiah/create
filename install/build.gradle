@@ -3,8 +3,8 @@ defaultTasks 'createInstall'
 apply from: '../cgs-common.gradle'
 
 //define the full version
-project.ext.versionPrefix = version.replace('-SNAPSHOT','')
-ant.property(file: "../projects/backend/cgs-web/src/main/resources/config/version.properties")
+project.ext.versionPrefix = version.replace('-SNAPSHOT', '')
+ant.property(file: "../projects/backend/src/main/resources/config/version.properties")
 project.ext.versionPostfix = ant['versionBuild']
 project.ext.fullVersion = project.ext.versionPrefix + "." + project.ext.versionPostfix
 
@@ -16,33 +16,33 @@ configurations {
 }
 
 dependencies {
-	players scplayer.scplayer
+    players t2klibraries.scplayer
 }
- 
+
 task cleanPreviosBuild(type: Delete) {
-	delete project.buildDir
+    delete project.buildDir
 }
 
 task copyGradle(dependsOn: cleanPreviosBuild, type: Copy) {
-	from gradle.gradleHomeDir
-	into project.ext.rootTargetDir + '/gradle'
-	exclude '**/.svn'
-	exclude 'docs'
-	exclude 'samples'
-	exclude 'src'
-	exclude 'media'
-	exclude 'changelog.txt'
-	exclude 'getting-started.html'
+    from gradle.gradleHomeDir
+    into project.ext.rootTargetDir + '/gradle'
+    exclude '**/.svn'
+    exclude 'docs'
+    exclude 'samples'
+    exclude 'src'
+    exclude 'media'
+    exclude 'changelog.txt'
+    exclude 'getting-started.html'
 }
 
 task copyFiles(dependsOn: cleanPreviosBuild, type: Copy) {
-	from 'src/main/assembly/files'
-	into project.ext.rootTargetDir
-	exclude 'version.properties.tmpl'
+    from 'src/main/assembly/files'
+    into project.ext.rootTargetDir
+    exclude 'version.properties.tmpl'
 }
 task copySCPlayer(dependsOn: cleanPreviosBuild, type: Copy) {
-	from configurations.players
-	into project.ext.rootTargetDir + '/scplayer'
+    from configurations.players
+    into project.ext.rootTargetDir + '/scplayer'
 }
 
 def copyVersionPropertiesImpl = { targetDir ->
@@ -69,31 +69,31 @@ task copyVersionPropertiesCI(dependsOn: cleanPreviosBuild) << {
 }
 
 task copyT2KProperties(dependsOn: cleanPreviosBuild, type: Copy) {
-	from (project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main/config')
-	into project.ext.rootTargetDir
+    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main/config')
+    into project.ext.rootTargetDir
     include 't2k*.properties'
 }
 
 task copyLog4JProperties(dependsOn: cleanPreviosBuild, type: Copy) {
-	from (project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main')
-	into project.ext.rootTargetDir + '/backend/cgs-backend-war/WEB-INF/classes'
+    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main')
+    into project.ext.rootTargetDir + '/backend/cgs-backend-war/WEB-INF/classes'
     include 'log4j.properties'
 }
 
 task copyBackendWar(dependsOn: cleanPreviosBuild, type: Copy) {
-	from (project.projectDir.canonicalPath + '/../projects/backend/cgs-backend-war/build/exploded') {
+    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-backend-war/build/exploded') {
 //        rename 'cgsConfig.properties.tmpl', 'cgsConfig.properties'
 //        rename 'cms.properties.tmpl', 'cms.properties'
 //        rename 'mongo.properties.tmpl', 'mongo.properties'
 //        rename 'users.properties.tmpl', 'users.properties'
     }
-	into project.ext.rootTargetDir + '/backend'
+    into project.ext.rootTargetDir + '/backend'
 }
 
 task copyFrontendWar(dependsOn: cleanPreviosBuild, type: Copy) {
     println 'copyFrontendWar start';
-	from project.projectDir.canonicalPath + '/../projects/frontend/cgs-frontend-war/build/exploded'
-	into project.ext.rootTargetDir + '/frontend'
+    from project.projectDir.canonicalPath + '/../projects/frontend/cgs-frontend-war/build/exploded'
+    into project.ext.rootTargetDir + '/frontend'
     println 'copyFrontendWar end';
 }
 
@@ -102,22 +102,22 @@ task copyDbUpgrader(dependsOn: cleanPreviosBuild, type: Copy) {
     println 'copyDbUpgrader start';
     from project.projectDir.canonicalPath + '/../projects/dbupgrader/cgs-dbupgrader/build/dependencies-libs'
     from project.projectDir.canonicalPath + '/../projects/dbupgrader/cgs-dbupgrader/build/libs'
-	into project.ext.rootTargetDir + '/dbupgrader'
+    into project.ext.rootTargetDir + '/dbupgrader'
     println 'copyDbUpgrader end';
 }
 
 task copyStandardsUtil(dependsOn: cleanPreviosBuild, type: Copy) {
-    println 'copying standardsLoad utils from '+project.projectDir.canonicalPath + '/../utils/standardsLoad/build/standardsLoad  --> \n to -->' + project.ext.rootTargetDir + '/utils/standardsLoad'
-	from project.projectDir.canonicalPath + '/../utils/standardsLoad/build/standardsLoad'
-	into project.ext.rootTargetDir + '/utils/standardsLoad'
-	println 'done copying standardsLoad utils'
+    println 'copying standardsLoad utils from ' + project.projectDir.canonicalPath + '/../utils/standardsLoad/build/standardsLoad  --> \n to -->' + project.ext.rootTargetDir + '/utils/standardsLoad'
+    from project.projectDir.canonicalPath + '/../utils/standardsLoad/build/standardsLoad'
+    into project.ext.rootTargetDir + '/utils/standardsLoad'
+    println 'done copying standardsLoad utils'
 
 }
 
 task copyDocs(dependsOn: cleanPreviosBuild, type: Copy) {
     println 'copyDocs start';
     from project.projectDir.canonicalPath + '/../doc/installation'
-	into project.buildDir.name + '/docs'
+    into project.buildDir.name + '/docs'
     println 'copyDocs end';
 }
 
@@ -132,16 +132,16 @@ task copyDocs(dependsOn: cleanPreviosBuild, type: Copy) {
 //}
 
 task createInstall() {
-	dependsOn copyGradle, copyFiles, copyT2KProperties, copyLog4JProperties, copyVersionProperties, copyBackendWar,
-              copyFrontendWar, copyDbUpgrader, copyStandardsUtil, copyDocs, copySCPlayer
+    dependsOn copyGradle, copyFiles, copyT2KProperties, copyLog4JProperties, copyVersionProperties, copyBackendWar,
+            copyFrontendWar, copyDbUpgrader, copyStandardsUtil, copyDocs, copySCPlayer
 }
 createInstall.doLast {
     ant.chmod(file: project.ext.rootTargetDir
-   + '/*.sh', perm: 'a+x')
+            + '/*.sh', perm: 'a+x')
 }
 
 task createInstallationTar(type: Tar) {
-	//create tar
+    //create tar
     from project.buildDir
     exclude 'docs'
     exclude '*.tar.gz'

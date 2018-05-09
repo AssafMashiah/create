@@ -2,6 +2,9 @@ defaultTasks 'clean', 'build'
 
 apply from: '../../../cgs-common.gradle'
 
+apply plugin: 'java'
+group = 'com.t2k.cgs.dbmanager'
+
 if (hasProperty('findBugs')) {
     apply plugin: 'findbugs'
 
@@ -11,49 +14,73 @@ if (hasProperty('findBugs')) {
 }
 
 dependencies {
-	compile database.mongodb
-    compile html
-    compile apacheCommons
+    compile spring
 
-    compile libraries.log4j
-    compile libraries.log4jExtras
-    compile libraries.http
-    compile libraries.jsonTagLib
-    compile libraries.jacksonMapper
-    compile libraries.jsonValidator
-    compile xml.dom4j
-    compile xml.jaxen
-
-
+    compile t2klibraries.commonUpgrader
+    compile t2klibraries.t2kconfig
     compile t2klibraries.t2kconfig
     compile t2klibraries.commonUtils
     compile t2klibraries.commonMongoFactory
     compile t2klibraries.gcrCommonModel
+
+    compile database.mongodb
+    compile html.apacheHttpComponentsClient
+    compile html.apacheHttpComponentsHttpMime
+    compile html.htmlcleaner
+    compile html.cssparser
+
+    compile loggers.log4j
+    compile loggers.log4jExtras
+    compile json.jsonTagLib
+    compile json.jacksonMapper
+    compile json.jsonValidator
+    compile xml.dom4j
+    compile xml.jaxen
+    compile html.cssparser
+
+    testCompile testing.testNG
+    testCompile testing.mockito
+    testCompile testing.springTest
+    testCompile testing.xmlUnit
+}
+
+test {
+    useTestNG() {
+        excludeGroups 'ignore'
+    }
+}
+
+clean.doFirst {
+    println ""
+    def proc = "java -version".execute()
+    proc.waitFor()
+
+    println "${proc.err.text}"
+    println ""
 }
 
 build.doLast {
     configurations.compile.each {
         File file ->
-        copy {
-            from file
-            into "$buildDir/dependencies-libs"
-        }
+            copy {
+                from file
+                into "$buildDir/dependencies-libs"
+            }
     }
 }
 
 task createDevEnv() << {
     try {
         File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../../t2k.properties')
-        String resourceDir =  'src/test/resources'
+        String resourceDir = 'src/test/resources'
         if (t2kPropFile.exists()) {
             project.copy {
                 from t2kPropFile.getAbsolutePath()
-                into  resourceDir
+                into resourceDir
             }
-        }
-        else {
+        } else {
             project.copy {
-                from (t2kPropFile.getAbsolutePath() + ".tmpl") {
+                from(t2kPropFile.getAbsolutePath() + ".tmpl") {
                     rename '(.*).tmpl', '$1'
                 }
                 into resourceDir
