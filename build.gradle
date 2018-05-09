@@ -16,26 +16,25 @@ allprojects {
     repositories {
         mavenLocal()
         maven {
-            url "http://maven:8081/nexus/content/groups/public"
+            url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
+            credentials {
+                username = t2kMavenUsername
+                password = t2kMavenPassword
+            }
         }
-        maven {
-            url "http://maven:8081/nexus/content/repositories/repo.pentaho.org"
-        }
-//		maven {
-//			url "http://repository.pentaho.org/artifactory/pentaho"
-//		}
-
         mavenCentral()
-        maven {
-            url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/"
-        }
+//        maven {
+//            url "http://repository.pentaho.org/artifactory/pentaho"
+//        }
+        maven { url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/" }
+        maven { url "http://repo1.maven.org/maven2/" }
     }
 
     uploadArchives {
         repositories {
             mavenDeployer {
-                repository(url: "http://maven:8081/nexus/content/repositories/snapshots") {
-                    authentication(userName: "build-manager", password: "123456")
+                repository(url: "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1") {
+                    authentication(userName: t2kMavenUsername, password: t2kMavenPassword)
                 }
             }
         }
@@ -45,7 +44,11 @@ allprojects {
         repositories {
             mavenLocal()
             maven {
-                url "http://maven:8081/nexus/content/groups/public"
+                url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
+                credentials {
+                    username = t2kMavenUsername
+                    password = t2kMavenPassword
+                }
             }
             mavenCentral()
         }
