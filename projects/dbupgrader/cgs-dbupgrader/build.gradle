@@ -36,6 +36,7 @@ dependencies {
     compile json.jsonValidator
     compile xml.dom4j
     compile xml.jaxen
+    compile xml.jsoup
     compile html.cssparser
 
     testCompile testing.testNG
