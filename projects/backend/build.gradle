@@ -42,10 +42,12 @@ bootRun {
 
 task bootRunDev(type: BootRunTask, dependsOn: 'build') {
     group = 'Application'
+    main = "$mainClassName"
     doFirst() {
         classpath = sourceSets.main.runtimeClasspath
         systemProperty 'spring.profiles.active', 'dev'
     }
+    test.enabled = false
 }
 
 dependencies {
