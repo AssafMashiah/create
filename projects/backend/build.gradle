@@ -1,86 +1,215 @@
+import org.springframework.boot.gradle.run.BootRunTask
+
 defaultTasks 'clean', 'build'
 
-apply from: '../../cgs-common.gradle'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
 
-allprojects  {
-	apply plugin: 'java'
-	
-	sourceCompatibility = 1.8
-	
-	group = 'com.t2k.cgs'
+buildscript {
+    apply from: '../../cgs-common.gradle'
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath springBoot.gradlePlugin
+    }
 }
 
-subprojects {
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-	dependencies {
-		compile aspectj.rt
-        compile aspectj.weaver
-        compile libraries.javaxInject
-		compile libraries.log4j
-        compile libraries.log4jExtras
-        compile libraries.http
-        compile libraries.httpMime
-        compile libraries.jsonTagLib
-        compile libraries.jacksonMapper
-        compile libraries.jsonValidator
-        compile libraries.cssparser
-        compile libraries.javaMelody
-        compile libraries.jpdf2html
-        compile libraries.jPdfWeb
-        compile libraries.pdfBox
-        compile libraries.bouncyCastle // required for pdfBox package
-        compile libraries.epubLib
-        compile libraries.gjson
-        compile libraries.jgrapht
-        compile libraries.xmlUnit
-        compile libraries.monocle
-        compile libraries.thumbnailator
-        compile libraries.jpegcmyk
-        compile libraries.jsoup
-        compile libraries.jna
-        compile libraries.groovy
-        compile libraries.luceneExpressions
-//        compile (libraries.epubcheck) { // causes tests to fail
-//            exclude group : 'com.google.guava' // guava version conflict with json schema validator causes tests to fail
-//            exclude group : 'org.codehaus.jackson' // jackson version conflict causes tests to fail
-//            exclude group : 'org.apache.commons'
-//        }
+def mainClassName = "org.t2k.cgs.Application" // because we have other classes with main method
 
-		compile spring
-		compile springBoot.gradlePlugin
-		compile springBoot.starterWeb
-		compile springBoot.tomcatJSP
-		compile springBoot.jstlServlet
-		compile springBoot.elasticSearch
-        compile security
-		compile database.mongodb
-        compile apacheCommons
-        compile servlet
-        compile xml.dom4j
-        compile xml.jaxen
-        compile xml.pull
-        compile html
-        compile t2klibraries.t2kconfig
-		compile t2klibraries.commonUtils
-        compile t2klibraries.commonMongoFactory
-		compile t2klibraries.gcrCommonModel 
-		compile t2klibraries.commonCourseutils
-		
-		testCompile testing
-	}
-	
-    test {
-        useTestNG() {
-            excludeGroups 'ignore'
-         }
+apply plugin: 'spring-boot'
+
+bootRepackage {
+    enabled = false
+    mainClass = "$mainClassName"
+}
+
+springBoot {
+    mainClass = "$mainClassName"
+}
+
+bootRun {
+    doFirst() {
+        systemProperty 'spring.profiles.active', System.properties['spring.profiles.active']
     }
-}	
+}
+
+task bootRunDev(type: BootRunTask, dependsOn: 'build') {
+    group = 'Application'
+    main = "$mainClassName"
+    doFirst() {
+        classpath = sourceSets.main.runtimeClasspath
+        systemProperty 'spring.profiles.active', 'dev'
+    }
+    test.enabled = false
+}
+
+dependencies {
+    compile groovy
+
+//    compile t2klibraries.dl
+    compile t2klibraries.scplayer
+    compile t2klibraries.commonUtils
+    compile t2klibraries.t2kconfig
+    compile t2klibraries.commonUpgrader
+    compile t2klibraries.gcrCommonModel
+    compile(t2klibraries.gcrCommonClient) {
+        exclude group: "org.springframework"
+    }
+    compile(t2klibraries.commonMongoFactory) {
+        exclude group: "org.springframework"
+    }
+    compile t2klibraries.commonCourseutils
+
+    compile javax.inject
+    compile javax.persistenceApi
+    compile javax.servlet
+    compile javax.jstlServlet
+
+    compile aspectj.rt
+    compile aspectj.tools
+    compile aspectj.weaver
+
+    compile spring
+//    compile(springWebMvc) {
+//        exclude group: "org.springframework", module: "spring-asm"
+//        force = true
+//    }
+
+    compile springSecurity.core
+    compile springSecurity.config
+    compile springSecurity.web
+    compile springSecurity.ldap
+    compile springSecurity.messaging
+    compile springBoot.gradlePlugin
+    compile(springBoot.starterWeb) {
+        exclude module: "spring-boot-starter-logging"
+//        exclude module: "com.google.guava:guava"
+//        exclude module: "spring-boot-starter-tomcat" //causes version conflict when deploying war to tomcat - may not war with spring boot Application start
+    }
+    compile(springBoot.elasticSearch) {
+        exclude module: "spring-data-commons"
+        exclude module: "joda-time"
+        exclude module: "spring-boot-starter-logging"
+//        exclude group: "org.slf4j"
+    }
+    compile apacheLuceneExpressions
+
+    compile apacheEmbeddedTomcat
+    compile javaMelody
+
+    compile database.mongodb
+
+    compile apacheCommons.fileupload
+    compile apacheCommons.codec
+    compile apacheCommons.httpclient
+    compile apacheCommons.collections
+    compile apacheCommons.lang
+    compile apacheCommons.email
+    compile apacheCommons.beanutils
+
+    compile xml.jsoup
+    compile xml.dom4j
+    compile xml.jaxen
+    compile xml.pull
+
+    compile html.apacheHttpComponentsClient
+    compile html.apacheHttpComponentsHttpMime
+    compile html.htmlcleaner
+    compile html.cssparser
+
+    compile json.gjson
+    compile json.jsonTagLib
+    compile json.jacksonMapper
+    compile json.jsonValidator
+    compile json.fasterxmlCore
+    compile json.fasterxmlDatabind
+    compile json.fasterxmlAnnotations
+
+    compile ebooks.pdfBox
+    compile ebooks.jpdf2html
+    compile ebooks.jPdfWeb
+    compile ebooks.epubLib
+//    compile ebooks.epubcheck// http://mvnrepository.com/artifact/org.idpf/epubcheck
+
+    compile loggers.log4j
+    compile loggers.log4jExtras
+
+    // needed to get around elasticsearch stacktrace about jna not found https://github.com/elastic/elasticsearch/issues/13245
+    compile libraries.jna
+    compile libraries.jstl
+    compile libraries.cglib        //spring security is using this lib
+    compile libraries.jgrapht
+    compile libraries.bouncyCastle // required for pdfBox package
+//    compile libraries.monocle
+    compile libraries.thumbnailator
+    compile libraries.jpegcmyk
+
+    testCompile testing.testNG
+    testCompile testing.mockito
+    testCompile testing.springTest
+    testCompile testing.xmlUnit
+}
+
+test {
+    useTestNG() {
+        excludeGroups 'ignore'
+    }
+}
 
 clean.doFirst {
-	println ""
-	def proc = "java -version".execute()
+    println ""
+    def proc = "java -version".execute()
     proc.waitFor()
 
     println "${proc.err.text}"
-	println ""
+    println ""
+}
+
+configurations.all {
+    resolutionStrategy {
+        cacheChangingModulesFor 3, 'minutes'
+
+        // fail eagerly on version conflict (includes transitive dependencies)
+        // e.g. multiple different versions of the same dependency (group and name are equal)
+        failOnVersionConflict()
+
+        eachDependency {
+            if (it.requested.group == "org.apache.tomcat.embed") {
+                it.useVersion tomcatVersion
+            }
+        }
+
+        exclude group: "ch.qos.logback"
+
+        force t2klibraries.commonUtils
+
+        force javax.activation
+
+        force aspectj.rt
+        force aspectj.weaver
+
+        force spring
+        force snakeYamlForSpringBoot
+        force database.mongodb
+
+        force apacheCommons.io
+        force apacheCommons.codec
+        force apacheCommons.logging
+
+        force json.jacksonMapper
+        force json.fasterxmlCore
+        force json.fasterxmlDatabind
+        force json.fasterxmlAnnotations
+
+        force loggers.log4j
+        force loggers.slf4jApi
+        force loggers.slf4jJcl
+    }
 }

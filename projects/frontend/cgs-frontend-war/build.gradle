@@ -9,8 +9,8 @@ configurations {
 }
 
 dependencies {
-    players player.dl
-    players scplayer.scplayer
+    players t2klibraries.dl
+    players t2klibraries.scplayer
 }
 
 war {
@@ -30,7 +30,7 @@ war.doFirst {
 }
 
 task updateLocales() {
-    String localesPath = "../../backend/cgs-service/src/main/resources/locales"
+    String localesPath = "../../backend/src/main/resources/locales"
     if (new File("${projectDir}/src/main/webapp/locales/versions.json").exists()) {
         ant.checksum(file: localesPath + "/versions.json", property: "newLocalesVersionChecksum")
         ant.checksum(file: "${projectDir}/src/main/webapp/locales/versions.json", property: "existingLocalesVersionChecksum")
