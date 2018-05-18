@@ -43,6 +43,7 @@ bootRun {
 task bootRunDev(type: BootRunTask, dependsOn: 'build') {
     group = 'Application'
     main = "$mainClassName"
+    jvmArgs = ["-Dspring.output.ansi.enabled=ALWAYS"]
     doFirst() {
         classpath = sourceSets.main.runtimeClasspath
         systemProperty 'spring.profiles.active', 'dev'
