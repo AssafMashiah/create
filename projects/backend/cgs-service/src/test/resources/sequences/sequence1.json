@@ -1,9 +1,0 @@
-{
-    "_id": "53ea0bca22d7c2ccb4c4352d",
-    "_class": "org.t2k.cgs.model.tocItem.Sequence",
-    "seqId": "aa06af26-dbb0-48c2-bdff-2359a5980b09",
-    "lessonCId": "90fb38a9-a8c2-4c5a-849e-fc15792dd2b4",
-    "courseId": "e1ff172f-20d1-4d16-a6dd-3bb75f10c152",
-    "content": "{\"aa06af26-dbb0-48c2-bdff-2359a5980b09\":{\"type\":\"sequence\",\"parent\":\"e74f9435-4680-4438-966d-dcbbc1fd370d\",\"children\":[],\"data\":{\"title\":\"Sequence 1\",\"type\":\"simple\",\"exposure\":\"one_by_one\",\"isThumbnailUpdated\":false,\"sharedBefore\":false,\"isValid\":false,\"invalidMessage\":{\"valid\":false,\"report\":[{\"editorId\":\"aa06af26-dbb0-48c2-bdff-2359a5980b09\",\"editorType\":\"sequence\",\"editorGroup\":\"sequence\",\"msg\":\"There must be at least one task in the sequence\"}],\"upperComponentMessage\":[{\"editorId\":\"aa06af26-dbb0-48c2-bdff-2359a5980b09\",\"editorType\":\"sequence\",\"editorGroup\":\"sequence\",\"msg\":\"There must be at least one task in the sequence\"}]}},\"id\":\"aa06af26-dbb0-48c2-bdff-2359a5980b09\",\"is_modified\":false}}",
-    "lastModified": {"$date": "2014-08-12T12:42:50.248Z"}
-}

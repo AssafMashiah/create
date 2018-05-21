@@ -1,8 +1,8 @@
-defaultTasks 'clean', 'build', 'assebmble', 'install:createInstall'
-
-apply from: 'cgs-common.gradle'
+defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
 buildscript {
+    apply from: 'cgs-common.gradle'
+
     repositories {
         maven {
             url "https://plugins.gradle.org/m2/"
@@ -12,38 +12,29 @@ buildscript {
 
 allprojects {
     apply plugin: 'maven'
-    idea {
-        project {
-            languageLevel = '1.8'
-
-            //you can configure the VCS used by the project
-            vcs = 'svn'
-        }
-    }
 
     repositories {
         mavenLocal()
         maven {
-            url "http://maven:8081/nexus/content/groups/public"
+            url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
+            credentials {
+                username = t2kMavenUsername
+                password = t2kMavenPassword
+            }
         }
-        maven {
-            url "http://maven:8081/nexus/content/repositories/repo.pentaho.org"
-        }
-//		maven {
-//			url "http://repository.pentaho.org/artifactory/pentaho"
-//		}
-
         mavenCentral()
-        maven {
-            url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/"
-        }
+//        maven {
+//            url "http://repository.pentaho.org/artifactory/pentaho"
+//        }
+        maven { url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/" }
+        maven { url "http://repo1.maven.org/maven2/" }
     }
 
     uploadArchives {
         repositories {
             mavenDeployer {
-                repository(url: "http://maven:8081/nexus/content/repositories/snapshots") {
-                    authentication(userName: "build-manager", password: "123456")
+                repository(url: "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1") {
+                    authentication(userName: t2kMavenUsername, password: t2kMavenPassword)
                 }
             }
         }
@@ -53,25 +44,14 @@ allprojects {
         repositories {
             mavenLocal()
             maven {
-                url "http://maven:8081/nexus/content/groups/public"
+                url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
+                credentials {
+                    username = t2kMavenUsername
+                    password = t2kMavenPassword
+                }
             }
             mavenCentral()
         }
-    }
-
-    try {
-        idea.module.iml {
-            beforeMerged { module ->
-                module.dependencies.clear()
-            }
-        }
-        idea.project.ipr {
-            beforeMerged { project ->
-                project.modulePaths.clear()
-            }
-        }
-    } catch (Exception e) {
-        e.printStackTrace()
     }
 
     configurations.all {

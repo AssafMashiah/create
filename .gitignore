@@ -4,12 +4,11 @@
 .shelf
 build
 out
+*.log*
 
 player
 node_modules
 /projects/frontend/cgs-frontend-war/src/main/webapp/locales/
-epubCheckJar
-scorm2004Schemas
 *.iml
 *.iws
 *.ipr
