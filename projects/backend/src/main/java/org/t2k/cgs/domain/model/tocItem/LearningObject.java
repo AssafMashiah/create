@@ -3,12 +3,12 @@ package org.t2k.cgs.domain.model.tocItem;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.log4j.Logger;
-import org.t2k.cgs.domain.usecases.ebooks.conversion.EBookToCourseLearningObject;
-import org.t2k.cgs.domain.model.ebooks.EBookHolder;
 import org.t2k.cgs.domain.model.classification.TaggedStandards;
 import org.t2k.cgs.domain.model.ebooks.EBook;
+import org.t2k.cgs.domain.model.ebooks.EBookHolder;
 import org.t2k.cgs.domain.model.ebooks.EBookStructure;
 import org.t2k.cgs.domain.model.ebooks.Page;
+import org.t2k.cgs.domain.usecases.ebooks.conversion.EBookToCourseLearningObject;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Pattern;

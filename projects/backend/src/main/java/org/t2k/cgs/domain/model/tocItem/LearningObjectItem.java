@@ -1,7 +1,7 @@
-package org.t2k.cgs.model.tocItem;
+package org.t2k.cgs.domain.model.tocItem;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import org.t2k.cgs.model.classification.TaggedStandards;
+import org.t2k.cgs.domain.model.classification.TaggedStandards;
 
 import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
