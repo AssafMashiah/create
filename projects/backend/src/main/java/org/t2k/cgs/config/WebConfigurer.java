@@ -65,6 +65,8 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         String rootPath = Paths.get(".").toUri().normalize().getPath();
         if (rootPath.endsWith("projects/backend/cgs-web/")) { //when starting using gradle
             rootPath = rootPath.replace("projects/backend/cgs-web/", "");
+        } else if (rootPath.endsWith("projects/backend/")) {
+            rootPath = rootPath.replace("projects/backend/", "");
         }
         return rootPath + "projects/frontend/cgs-frontend-war/src/main/webapp";
 //        return rootPath + "projects/backend/cgs-web/src/main/webapp/";
