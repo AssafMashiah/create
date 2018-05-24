@@ -1,6 +1,5 @@
 package org.t2k.cgs.domain.usecases.ebooks;
 
-import javafx.util.Pair;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.jsoup.Jsoup;
@@ -10,10 +9,11 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.t2k.cgs.Application;
-import org.t2k.cgs.service.ebooks.pdf.PdfToEBookIDRConversionServiceImpl;
 import org.t2k.cgs.domain.model.ebooks.EBookStructure;
 import org.t2k.cgs.domain.model.ebooks.Page;
+import org.t2k.cgs.domain.model.utils.Pair;
 import org.t2k.cgs.domain.usecases.TestUtils;
+import org.t2k.cgs.service.ebooks.pdf.PdfToEBookIDRConversionServiceImpl;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;

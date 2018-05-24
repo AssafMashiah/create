@@ -1,6 +1,6 @@
 package org.t2k.cgs.domain.model.ebooks;
 
-import javafx.util.Pair;
+import org.t2k.cgs.domain.model.utils.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
