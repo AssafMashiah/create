@@ -1,14 +1,12 @@
 defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
 ext {
-//    if (!(project.hasProperty('t2kMavenUsername'))) {
-//        t2kMavenUsername = "$System.env.t2kMavenUsername"
-        t2kMavenUsername = "VSTS"
-//    }
-//    if (!(project.hasProperty('t2kMavenPassword'))) {
-//        t2kMavenPassword = "$System.env.t2kMavenPassword"
-        t2kMavenPassword = "ib4mp2du4qzxksxqeygzeeamy6f3ncieu56vmxzmwjmnff4iijbq"
-//    }
+    if (!(project.hasProperty('t2kMavenUsername'))) {
+        t2kMavenUsername = System.getProperty("username")
+    }
+    if (!(project.hasProperty('t2kMavenPassword'))) {
+        t2kMavenPassword = System.getProperty("password")
+    }
 }
 
 buildscript {
