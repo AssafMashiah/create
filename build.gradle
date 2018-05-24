@@ -1,5 +1,14 @@
 defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
+ext {
+    if (!(project.hasProperty('t2kMavenUsername'))) {
+        t2kMavenUsername = "$System.env.t2kMavenUsername"
+    }
+    if (!(project.hasProperty('t2kMavenPassword'))) {
+        t2kMavenPassword = "$System.env.t2kMavenPassword"
+    }
+}
+
 buildscript {
     apply from: 'cgs-common.gradle'
 
@@ -9,18 +18,6 @@ buildscript {
         }
     }
 }
-
-println 't2kMavenUsername *********************************************************'
-println t2kMavenUsername
-
-if (t2kMavenUsername == null) {
-    t2kMavenUsername = "$System.env.t2kMavenUsername"
-}
-if (t2kMavenPassword == null) {
-    t2kMavenPassword = "$System.env.t2kMavenPassword"
-}
-println 'after *********************************************************'
-println t2kMavenUsername
 
 allprojects {
     apply plugin: 'maven'
