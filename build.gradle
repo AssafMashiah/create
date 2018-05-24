@@ -1,5 +1,13 @@
 defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
+ext {
+    if (!(project.hasProperty('t2kMavenUsername'))) {
+        t2kMavenUsername = "$System.env.t2kMavenUsername"
+    }
+    if (!(project.hasProperty('t2kMavenPassword'))) {
+        t2kMavenPassword = "$System.env.t2kMavenPassword"
+    }
+}
 
 buildscript {
     apply from: 'cgs-common.gradle'
@@ -19,8 +27,8 @@ allprojects {
         maven {
             url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
             credentials {
-                username = VSTS
-                password = ib4mp2du4qzxksxqeygzeeamy6f3ncieu56vmxzmwjmnff4iijbq
+                username = t2kMavenUsername
+                password = t2kMavenPassword
             }
         }
         mavenCentral()
@@ -35,7 +43,7 @@ allprojects {
         repositories {
             mavenDeployer {
                 repository(url: "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1") {
-                    authentication(userName: VSTS, password: ib4mp2du4qzxksxqeygzeeamy6f3ncieu56vmxzmwjmnff4iijbq)
+                    authentication(userName: t2kMavenUsername, password: t2kMavenPassword)
                 }
             }
         }
@@ -47,8 +55,8 @@ allprojects {
             maven {
                 url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
                 credentials {
-                    username = VSTS
-                    password = ib4mp2du4qzxksxqeygzeeamy6f3ncieu56vmxzmwjmnff4iijbq
+                    username = t2kMavenUsername
+                    password = t2kMavenPassword
                 }
             }
             mavenCentral()
