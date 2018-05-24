@@ -14,17 +14,15 @@ your .gradle home directory (e.g.: `~/.gradle/gradle.properties` on Linux OS)
 
 Example:
 
-```
-t2kMavenUsername=VSTS
-t2kMavenPassword=your_authorization_token
-```
+    t2kMavenUsername=VSTS
+    t2kMavenPassword=your_authorization_token
 
 ## Development
 
 To start MongoDB Docker container, run the following:
 
-`docker-compose -f projects/backend/src/main/docker/mongo-dev.yml up -d`
+    docker-compose -f projects/backend/src/main/docker/mongo-dev.yml up -d
 
 To stop it:
 
-`docker-compose -f projects/backend/src/main/docker/mongo-dev.yml down`
+    docker-compose -f projects/backend/src/main/docker/mongo-dev.yml down
