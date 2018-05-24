@@ -1,5 +1,6 @@
 defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
 
+
 buildscript {
     apply from: 'cgs-common.gradle'
 
@@ -18,8 +19,8 @@ allprojects {
         maven {
             url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
             credentials {
-                username = t2kMavenUsername
-                password = t2kMavenPassword
+                username = VSTS
+                password = ib4mp2du4qzxksxqeygzeeamy6f3ncieu56vmxzmwjmnff4iijbq
             }
         }
         mavenCentral()
