@@ -10,12 +10,17 @@ buildscript {
     }
 }
 
+println 't2kMavenUsername *********************************************************'
+println t2kMavenUsername
+
 if (t2kMavenUsername == null) {
     t2kMavenUsername = "$System.env.t2kMavenUsername"
 }
 if (t2kMavenPassword == null) {
     t2kMavenPassword = "$System.env.t2kMavenPassword"
 }
+println 'after *********************************************************'
+println t2kMavenUsername
 
 allprojects {
     apply plugin: 'maven'
