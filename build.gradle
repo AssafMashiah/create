@@ -1,4 +1,4 @@
-defaultTasks 'clean', 'build'//, 'assebmble', 'install:createInstall'
+defaultTasks 'clean', 'build', 'test'//, 'assebmble', 'install:createInstall'
 
 ext {
     if (!(project.hasProperty('t2kMavenUsername'))) {

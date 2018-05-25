@@ -1,6 +1,6 @@
 import org.springframework.boot.gradle.run.BootRunTask
 
-defaultTasks 'clean', 'build'
+defaultTasks 'clean', 'build', 'test'
 
 apply plugin: 'java'
 apply plugin: 'war'
@@ -48,7 +48,7 @@ task bootRunDev(type: BootRunTask, dependsOn: 'build') {
         classpath = sourceSets.main.runtimeClasspath
         systemProperty 'spring.profiles.active', 'dev'
     }
-    test.enabled = false
+    check.dependsOn.remove(test)
 }
 
 dependencies {
