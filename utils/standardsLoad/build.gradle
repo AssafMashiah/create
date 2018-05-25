@@ -85,7 +85,7 @@ task assambleLibs(type: Copy) {
 assambleLibs.dependsOn cleanOldAssemble
 
 
-task assebmble() {
+task assemble() {
     dependsOn build, assambleStaticFiles, assambleSpringContextFiles, assambleLibs
 }
 

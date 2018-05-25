@@ -51,7 +51,7 @@ def copyVersionPropertiesImpl = { targetDir ->
     String minor = version.substring(index + 1, version.lastIndexOf('.'))
     String milestone = version.substring(version.lastIndexOf('.') + 1, version.lastIndexOf('-'))
 
-    ant.copy(toFile: "${targetDir}/version.properties", file: "../projects/backend/cgs-web/src/main/resources/config/version.properties", overwrite: "true") {
+    ant.copy(toFile: "${targetDir}/version.properties", file: "../projects/backend/src/main/resources/config/version.properties", overwrite: "true") {
         ant.filterset(begintoken: "@", endtoken: "@") {
             ant.filter(token: "versionMajor", value: major)
             ant.filter(token: "versionMinor", value: minor)
