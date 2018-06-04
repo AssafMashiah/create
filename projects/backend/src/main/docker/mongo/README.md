@@ -11,6 +11,10 @@ The image runs the scripts that create the detault users needed by Create
 Build it using docker-compose so that we can tag it
 
     docker-compose build
+    
+or 
+
+    docker-compose -f docker-compose.yml build
 
 ## Run the image
 
