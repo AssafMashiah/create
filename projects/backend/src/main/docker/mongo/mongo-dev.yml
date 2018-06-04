@@ -4,8 +4,8 @@ services:
 #        image: mongo:3.0
         image: t2k/mongodb-create
         container_name: mongo-create
-#        volumes:
-#            - ~/TimeToKnow/mongo:/data/db
+        volumes:
+            - ~/TimeToKnow/mongo:/data/db
         environment:
             - MONGODB_DATABASE=cgs
         ports:
