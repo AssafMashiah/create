@@ -10,5 +10,3 @@ services:
         ports:
             - 27017:27017
 #        command: mongod --auth
-# connect to mongo and run the user creation scripts manually
-# docker exec -it cgs_mongo_1 mongo admin
