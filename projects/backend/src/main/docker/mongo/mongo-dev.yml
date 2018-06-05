@@ -3,7 +3,7 @@ services:
     mongo:
 #        image: mongo:3.0
         image: t2k/mongodb-create
-        container_name: mongo-create
+        container_name: mongo-create-dev
         volumes:
             - ~/TimeToKnow/mongo:/data/db
         environment:
