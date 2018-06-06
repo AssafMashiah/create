@@ -24,6 +24,9 @@ allprojects {
 
     repositories {
         mavenLocal()
+        mavenCentral()
+        maven { url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/" }
+        maven { url "http://repo1.maven.org/maven2/" }
         maven {
             url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
             credentials {
@@ -31,12 +34,10 @@ allprojects {
                 password = t2kMavenPassword
             }
         }
-        mavenCentral()
+
 //        maven {
 //            url "http://repository.pentaho.org/artifactory/pentaho"
 //        }
-        maven { url "http://xuggle.googlecode.com/svn/trunk/repo/share/java/" }
-        maven { url "http://repo1.maven.org/maven2/" }
     }
 
     uploadArchives {
@@ -52,6 +53,7 @@ allprojects {
     buildscript {
         repositories {
             mavenLocal()
+            mavenCentral()
             maven {
                 url "https://timetoknow.pkgs.visualstudio.com/_packaging/Maven/maven/v1"
                 credentials {
@@ -59,7 +61,6 @@ allprojects {
                     password = t2kMavenPassword
                 }
             }
-            mavenCentral()
         }
     }
 
