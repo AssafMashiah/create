@@ -69,19 +69,19 @@ task copyVersionPropertiesCI(dependsOn: cleanPreviosBuild) << {
 }
 
 task copyT2KProperties(dependsOn: cleanPreviosBuild, type: Copy) {
-    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main/config')
+    from(project.projectDir.canonicalPath + '/../projects/backend/build/resources/main/config')
     into project.ext.rootTargetDir
     include 't2k*.properties'
 }
 
 task copyLog4JProperties(dependsOn: cleanPreviosBuild, type: Copy) {
-    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-web/build/resources/main')
+    from(project.projectDir.canonicalPath + '/../projects/backend/build/resources/main')
     into project.ext.rootTargetDir + '/backend/cgs-backend-war/WEB-INF/classes'
     include 'log4j.properties'
 }
 
 task copyBackendWar(dependsOn: cleanPreviosBuild, type: Copy) {
-    from(project.projectDir.canonicalPath + '/../projects/backend/cgs-backend-war/build/exploded') {
+    from(project.projectDir.canonicalPath + '/../projects/backend/build/exploded') {
 //        rename 'cgsConfig.properties.tmpl', 'cgsConfig.properties'
 //        rename 'cms.properties.tmpl', 'cms.properties'
 //        rename 'mongo.properties.tmpl', 'mongo.properties'
