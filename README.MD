@@ -42,3 +42,19 @@ container, run the following:
 To stop it:
 
     docker-compose -f projects/backend/src/main/docker/mongo/mongo-dev.yml down
+    
+# DB Upgrader
+
+DB Upgrader can be run in multiple ways:
+- By running the gradle tasks `upgradeDb` or `upgradeDbClean` (Recommended)
+    - For clean db configuration:
+
+            ./gradlew clean build upgradeDbClean test
+    
+    - For an already configured db 
+    
+            ./gradlew clean build upgradeDb test
+        
+- By running the gradle task from install project after executing 'clean', 'build', 'test', 'assemble', 'install:createInstall'
+gradle tasks
+- By running the java test class `com.t2k.common.dbupgrader.LaunchFlow`
