@@ -57,13 +57,13 @@ public class CleanupsDaoTest extends AbstractTestNGSpringContextTests {
         CleanupJob c2 = createNewCleanupJob();
         CleanupJob c3 = createNewCleanupJob();
         c1.setCourseId("a");
-        c1.setLastModified(new Date(-2));
+        c1.setLastModified(new Date(-2000));
 
         c2.setCourseId("b");
-        c2.setLastModified(new Date(-1));
+        c2.setLastModified(new Date(-1000));
 
         c3.setCourseId("c");
-        c3.setLastModified(new Date(-0));
+        c3.setLastModified(new Date(0));
         cleanupsDao.insertOrUpdateCleanup(c1);
         cleanupsDao.insertOrUpdateCleanup(c2);
         cleanupsDao.insertOrUpdateCleanup(c3);
