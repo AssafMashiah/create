@@ -13,6 +13,6 @@ RUN touch /scripts/first-run.sh
 # Command to run
 ENTRYPOINT ["/scripts/setup.sh"]
 #CMD [""]
-CMD ["mongod"]
+CMD ["mongod --bind_ip_all"]
 
 EXPOSE 27017
