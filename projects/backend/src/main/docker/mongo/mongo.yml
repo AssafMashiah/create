@@ -3,7 +3,7 @@ services:
     mongo:
         image: t2k/mongodb-create
         container_name: mongo-create
-        network_mode: host
+#        network_mode: host
 #        volumes:
 #            - ~/TimeToKnow/mongo:/data/db
         environment:
