@@ -222,4 +222,8 @@ div.mask-overlay {
     background-color: #DFE8E5;
 }
 
+.notvisibile{
+    visibility: hidden;
+}
+
 
