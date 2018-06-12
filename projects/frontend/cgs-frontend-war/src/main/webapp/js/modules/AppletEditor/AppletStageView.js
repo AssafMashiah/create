@@ -20,7 +20,7 @@ function($, BaseStageContentView, assets, template) {
 		loadApplet: function(){
 			this.$frame = this.$('#appletFrame');
 			this.$frame.attr("src", assets.serverPath(this.controller.record.data.appletPath+"/data/index.html"))
-				.addClass('hidden');
+				.addClass('notvisible');
 		},
 
 		dispose: function() {

@@ -16,7 +16,7 @@ function(repo, appletFilesManager, PostMessageManager, localeModel, validate, Ba
 		
 		rendered: function( config ) {
 			if(config){
-				$(document).find('iframe').width(config.width).height(config.height).removeClass('hidden');
+				$(document).find('iframe').width(config.width).height(config.height).removeClass('notvisible');
 			}
 		},
 
