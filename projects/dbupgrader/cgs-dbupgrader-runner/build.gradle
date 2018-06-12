@@ -1,0 +1,86 @@
+defaultTasks 'clean', 'build'
+
+apply plugin: "java"
+
+buildscript {
+    dependencies {
+        classpath project(":projects:backend")
+        classpath project(":projects:dbupgrader:cgs-dbupgrader")
+        classpath files("../../backend/src/main/resources/config") // Needed to load t2k.properties
+    }
+}
+
+dependencies {
+    compile project(":projects:backend")
+    compile project(":projects:dbupgrader:cgs-dbupgrader")
+}
+
+ant.property(file: "t2k.properties")
+
+import com.t2k.common.dbupgrader.flow.FlowManager
+
+task upgradeDb(dependsOn: [clean, build]) {
+    doLast {
+        FlowManager flowManager = new FlowManager()
+        flowManager.execute(false, false, false)
+    }
+}
+
+task upgradeDbClean(dependsOn: [clean, build]) {
+    doLast {
+        FlowManager flowManager = new FlowManager()
+        flowManager.execute(true, false, false)
+    }
+}
+
+
+// Attempt to retrieve t2k.properties from backend jar
+//configurations {
+//    t2kConfig
+//}
+//
+//dependencies {
+//    compile project(":projects:backend")
+//    compile project(":projects:dbupgrader:cgs-dbupgrader")
+//    t2kConfig project(":projects:backend")
+////    t2kConfig ("backend-8.16.0-SNAPSHOT@jar")
+//}
+//
+////ant.property(file: "t2k.properties")
+//
+//ant.property("config/t2k.properties")
+////ext.t2k = new Properties()
+////t2k.load(file("config/t2k.properties"))
+//
+//task extractProperties(type: Copy) {
+//    println configurations.t2kConfig.files
+//    from zipTree(configurations.t2kConfig[0]).matching {
+//        include "config/t2k.properties"
+//    }
+//    into "$buildDir"
+//}
+//
+//task loadProperties(dependsOn: extractProperties) {
+//    doLast {
+//        ant.property(file: "build/config/t2k.properties")
+//        println project.properties
+//    }
+//}
+//
+//import com.t2k.common.dbupgrader.flow.FlowManager
+//
+//task upgradeDb(dependsOn: [clean, build, loadProperties]) {
+////task upgradeDb(dependsOn: [clean, build]) {
+//    doLast {
+//        FlowManager flowManager = new FlowManager()
+//        flowManager.execute(false, false, false)
+//    }
+//}
+//
+//task upgradeDbClean(dependsOn: [clean, build, loadProperties]) {
+////task upgradeDbClean(dependsOn: [clean, build]) {
+//    doLast {
+//        FlowManager flowManager = new FlowManager()
+//        flowManager.execute(true, false, false)
+//    }
+//}

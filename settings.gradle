@@ -2,6 +2,7 @@ rootProject.name = 'cgs'
 
 include "projects:backend",
         "projects:frontend:cgs-frontend-war",
-        "projects:dbupgrader:cgs-dbupgrader",
         "install"
 //        "utils:standardsLoad"
+include "projects:dbupgrader:cgs-dbupgrader"
+include "projects:dbupgrader:cgs-dbupgrader-runner"

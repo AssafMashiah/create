@@ -1,4 +1,4 @@
-defaultTasks 'assebmble'
+defaultTasks 'assemble'
 
 apply from: '../../cgs-common.gradle'
 
@@ -85,7 +85,7 @@ task assambleLibs(type: Copy) {
 assambleLibs.dependsOn cleanOldAssemble
 
 
-task assebmble() {
+task assemble() {
     dependsOn build, assambleStaticFiles, assambleSpringContextFiles, assambleLibs
 }
 
@@ -96,7 +96,7 @@ task createDevEnv() {
     println ''
 
     try {
-        File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../projects/backend/cgs-web/src/main/resources/config/t2k.properties')
+        File t2kPropFile = new File(project.projectDir.canonicalPath + '/../../projects/backend/src/main/resources/config/t2k.properties')
         if (t2kPropFile.exists()) {
             ant.property(file: t2kPropFile.getAbsolutePath())
             println "Copying " + t2kPropFile.getAbsolutePath() + " into " + "src/test/resources"
