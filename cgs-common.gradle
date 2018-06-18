@@ -2,7 +2,7 @@
  * Shared file between modules so that they can all use the same dependencies and maven repositories.
  **/
 group = "org.t2k"
-version = "8.18.0-SNAPSHOT"
+version = "8.18.1-SNAPSHOT"
 
 def groovyVersion = "2.3.2"
 
