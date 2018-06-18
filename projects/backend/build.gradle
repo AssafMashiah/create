@@ -158,6 +158,16 @@ dependencies {
     testCompile testing.xmlUnit
 }
 
+war {
+    manifest {
+        attributes 'Implementation-Title': 'Time To Know CGS Server', 'Implementation-Version': version
+    }
+}
+
+war.doLast {
+    ant.unzip(src: war.archivePath, dest: "$buildDir/exploded/")
+}
+
 test {
     useTestNG() {
         excludeGroups 'ignore'
