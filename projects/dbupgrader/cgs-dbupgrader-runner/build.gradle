@@ -1,6 +1,8 @@
 defaultTasks 'clean', 'build'
 
-apply plugin: "java"
+apply from: '../../../cgs-common.gradle'
+apply plugin: 'java'
+
 
 buildscript {
     dependencies {
