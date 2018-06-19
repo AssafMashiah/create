@@ -9,7 +9,7 @@ configurations {
 }
 
 dependencies {
-    players t2klibraries.dl
+//    players t2klibraries.dl
     players t2klibraries.scplayer
 }
 

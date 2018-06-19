@@ -16,7 +16,7 @@ project.ext.cobertura =
  */
 // Self Content Player
 def scpPlayerVersion = "8.17.1-SNAPSHOT"
-def playerDlVersion = "8.18.6-SNAPSHOT"
+//def playerDlVersion = "8.18.6-SNAPSHOT"
 // Common projects
 def commonUtilsVersion = "8.16.0-SNAPSHOT"
 def commonUpgraderVersion = "8.16.0-SNAPSHOT"
@@ -111,7 +111,7 @@ ext {
 
     t2klibraries = [
             scplayer          : "com.t2k.dtp.scplayer:scplayer:$scpPlayerVersion@zip",
-            dl                : "com.t2k.player.dl:dl:$playerDlVersion",
+//            dl                : "com.t2k.player.dl:dl:$playerDlVersion",
             commonUtils       : "com.t2k.common.utils:common-utils:$commonUtilsVersion",
             t2kconfig         : "org.t2k.common:t2kconf:$t2kConfVersion",
             commonUpgrader    : "com.t2k.common.dbupgrader:dbupgrader:$commonUpgraderVersion",
