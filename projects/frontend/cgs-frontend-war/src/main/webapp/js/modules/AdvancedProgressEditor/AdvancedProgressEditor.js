@@ -1,18 +1,18 @@
 define(['modules/ProgressEditor/ProgressEditor', 'repo', 'events', 'dialogs', './config',
 	'./AdvancedProgressEditorView', './AdvancedProgressStageView', './AdvancedProgressSmallStageView',
 	'mustache','translate'],
-function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorView, AdvancedProgressStageView, 
+function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorView, AdvancedProgressStageView,
 	AdvancedProgressSmallStageView, Mustache, i18n) {
 
 	var AdvancedProgressEditor = ProgressEditor.extend({
 
 		initialize: function(configOverrides) {
-			
+
 			this.setStageViews({
 				small: AdvancedProgressSmallStageView,
 				normal: AdvancedProgressStageView
 			});
-			
+
 			this._super(configOverrides, true);
 		},
 
@@ -23,7 +23,7 @@ function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorVi
 		registerEvents: function() {
 			//init the feedback types drop down (before the register events)
 			this.view.initProgressTypes();
-			
+
 			var changes = {
 				checking_enabled:this.propagateChanges(this.record, 'checking_enabled', true),
 				num_of_attempts:this.propagateChanges(this.record, 'num_of_attempts', true),
@@ -31,8 +31,12 @@ function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorVi
 				hint_timing:this.propagateChanges(this.record, 'hint_timing', true),
 				on_attempt:this.propagateChanges(this.record, 'on_attempt', true),
 				feedback_type:this.propagateChanges(this.record, 'feedback_type', true),
-				score:this.propagateChanges(this.record, 'score', true)
+				score:this.propagateChanges(this.record, 'score', true),
+				timer_enabled:this.propagateChanges(this.record, 'timer_enabled', true),
+				timer_minutes:this.propagateChanges(this.record, 'timer_minutes', true),
+				timer_seconds:this.propagateChanges(this.record, 'timer_seconds', true)
 			};
+
 			this.model = this.screen.components.props.startEditing(this.record, changes, $(".advancedProgress_editor"));
 
 			if (!!this.feedback_rec.type) {
@@ -48,8 +52,11 @@ function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorVi
 			this.model.on('change:feedback_type', function(child, val) { this.changeType(val); }, this);
 			this.model.on('change:num_of_attempts', this.changeNumOfAttempts, this);
 			this.model.on('change:score', this.updateTaskScore, this);
+			this.model.on('change:timer_enabled', this.updateShowTimer, this);
+			this.model.on('change:timer_minutes', this.updateTimerMinutes, this);
+			this.model.on('change:timer_seconds', this.updateTimerSeconds, this);
 		},
-		
+
 		onCheckingEnableChange: function(item, value) {
 			if (this.dontTrigger) return;
 
@@ -65,30 +72,30 @@ function(ProgressEditor, repo, events, dialogs, config, AdvancedProgressEditorVi
 			var cloze = repo.getAncestorRecordByType(this.record.id, 'cloze');
 			if (cloze) {
 				var dialogConfig = {
-                    title: "Are You Sure?",
-                    content: {
-                        text: "task.advanced_progress.props.checking_enabled_change.msg_text", //Text
-                        icon: 'warn'
-                    },
-                    buttons: {
-                        ok: { label: 'OK' },
-                        cancel: { label: 'Cancel' }
-                    }
-                };
-                events.once('openDialogChangeCheckingEnabled', function(response) {
-                    if (response == 'ok') {
-                    	commitChange();
-                    }
-                    else {
-                    	this.dontTrigger = true;
-                    	repo.revert();
-                    	repo.startTransaction({ ignore: true });
-                    	this.model.set('checking_enabled', !value);
-                    	repo.endTransaction();
-                    	this.dontTrigger = false;
-                    }
-                }, this);
-                dialogs.create('simple', dialogConfig, 'openDialogChangeCheckingEnabled', this).show();
+										title: "Are You Sure?",
+										content: {
+												text: "task.advanced_progress.props.checking_enabled_change.msg_text", //Text
+												icon: 'warn'
+										},
+										buttons: {
+												ok: { label: 'OK' },
+												cancel: { label: 'Cancel' }
+										}
+								};
+								events.once('openDialogChangeCheckingEnabled', function(response) {
+										if (response == 'ok') {
+											commitChange();
+										}
+										else {
+											this.dontTrigger = true;
+											repo.revert();
+											repo.startTransaction({ ignore: true });
+											this.model.set('checking_enabled', !value);
+											repo.endTransaction();
+											this.dontTrigger = false;
+										}
+								}, this);
+								dialogs.create('simple', dialogConfig, 'openDialogChangeCheckingEnabled', this).show();
 			}
 			else {
 				commitChange();

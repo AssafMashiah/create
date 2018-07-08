@@ -83,6 +83,7 @@ var editorCssSources = [
 	"css/pdf_html_view.css",
 	"css/ProgressEditor.css",
 	"css/AdvancedProgressEditor.css",
+	"css/scss-progress-editor.css",
 	"css/props.css",
 	"css/PublishDialogView.css",
 	"css/PublishStatusDialogView.css",
