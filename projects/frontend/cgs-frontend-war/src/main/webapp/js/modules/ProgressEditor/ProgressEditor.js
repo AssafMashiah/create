@@ -151,8 +151,10 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 				needToReload = true;
 			}
 
+			// update the repo with integer value
+			repo.updateProperty(this.record.id, "timer_minutes", minutes, false, true);
+
 			if (needToReload) {
-				repo.updateProperty(this.record.id, "timer_minutes", minutes, false, true);
 				this.reload();
 			}
 
@@ -186,8 +188,10 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 				needToReload = true;
 			}
 
+			// update repo with integer value
+			repo.updateProperty(this.record.id, "timer_seconds", seconds, false, true);
+
 			if (needToReload) {
-				repo.updateProperty(this.record.id, "timer_seconds", seconds, false, true);
 				this.reload();
 			}
 
