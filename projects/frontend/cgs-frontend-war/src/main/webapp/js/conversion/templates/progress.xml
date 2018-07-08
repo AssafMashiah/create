@@ -10,5 +10,11 @@
 		<type>{{progressType}}</type>
 	{{/showProgressType}}
 	<checkable>{{checkable}}</checkable>
+	<timer>
+		<enabled>{{timer_enabled}}</enabled>
+		<minutes>{{timer_minutes}}</minutes>
+		<seconds>{{timer_seconds}}</seconds>
+		<totalSeconds>{{timer_total_seconds}}</totalSeconds>
+	</timer>
     {{{content}}}
 </progress>
