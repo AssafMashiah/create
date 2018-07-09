@@ -9,6 +9,15 @@ ext {
     }
 }
 
+ext {
+    if (!(project.hasProperty('t2kMavenUsername'))) {
+        t2kMavenUsername = "$System.env.t2kMavenUsername"
+    }
+    if (!(project.hasProperty('t2kMavenPassword'))) {
+        t2kMavenPassword = "$System.env.t2kMavenPassword"
+    }
+}
+
 buildscript {
     apply from: 'cgs-common.gradle'
 
