@@ -1,0 +1,46 @@
+.editor-wrapper.props_editor {
+  .progress_editor,
+  .advancedProgress_editor {
+    .control-group--timer-enabled {
+
+      & + .control-group--timer-fields {
+        margin-top: -25px;
+      }
+    }
+
+    .control-group--timer-fields {
+      padding-left: 25px;
+
+      label {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      .timer-fields {
+        display: inline-block;
+
+        input {
+          width: 27px;
+          text-align: center;
+          padding: 4px;
+          margin: 0;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+              /* display: none; <- Crashes Chrome on hover */
+              -webkit-appearance: none;
+              margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+          }
+        }
+
+        &__separator {
+          &::before {
+            position: relative;
+            content: ':';
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+}

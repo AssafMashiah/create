@@ -35,6 +35,7 @@ function($, _, Mustache, BasePropertiesView, lessonModel, repo, normalPropsTempl
 		show_feedback_prop: function(){
 			return this.controller.show_feedback_prop();
 		},
+
 		show_feedback_stage: function() {
 			return this.controller.show_feedback_stage();
 		},
@@ -46,6 +47,11 @@ function($, _, Mustache, BasePropertiesView, lessonModel, repo, normalPropsTempl
 		show_timing: function() {
 			return this.controller.show_timing();
 		},
+
+		show_timer_fields: function () {
+			return this.controller.show_timer_fields();
+		},
+
 		isQuizMode: function () {
 			return !!repo.getAncestorRecordByType(this.controller.record.id, 'quiz')
 		},

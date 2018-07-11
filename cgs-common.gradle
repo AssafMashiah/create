@@ -15,7 +15,7 @@ project.ext.cobertura =
  * T2K Projects
  */
 // Self Content Player
-def scpPlayerVersion = "8.17.1-SNAPSHOT"
+def scpPlayerVersion = "8.17.2-SNAPSHOT"
 //def playerDlVersion = "8.18.6-SNAPSHOT"
 // Common projects
 def commonUtilsVersion = "8.16.0-SNAPSHOT"

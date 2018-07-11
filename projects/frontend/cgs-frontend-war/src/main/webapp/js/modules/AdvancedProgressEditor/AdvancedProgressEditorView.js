@@ -26,7 +26,7 @@ function($, _, Mustache, repo, BasePropertiesView, lessonModel, normalPropsTempl
 
 			this._super(options);
 		},
-		
+
 		initProgressTypes: function(){
 			var types= this.controller.record.data.availbleProgressTypes;
 
@@ -39,11 +39,11 @@ function($, _, Mustache, repo, BasePropertiesView, lessonModel, normalPropsTempl
 		show_num_of_attempts: function() {
 			return this.controller.show_num_of_attempts();
 		},
-		
+
 		show_feedback_prop: function(){
 			return this.controller.show_feedback_prop();
 		},
-		
+
 		show_feedback_stage: function() {
 			return this.controller.show_feedback_stage();
 		},
@@ -55,6 +55,11 @@ function($, _, Mustache, repo, BasePropertiesView, lessonModel, normalPropsTempl
 		show_timing: function() {
 			return this.controller.show_timing();
 		},
+
+		show_timer_fields: function () {
+			return this.controller.show_timer_fields();
+		},
+
 		isQuizMode: function () {
 			return !!repo.getAncestorRecordByType(this.controller.record.id, 'quiz')
 		},
@@ -84,7 +89,7 @@ function($, _, Mustache, repo, BasePropertiesView, lessonModel, normalPropsTempl
 					this.isQuizEqualMode = true;
 				}
 			}
-			
+
 			this._super(this.template);
 
 		},
@@ -97,7 +102,7 @@ function($, _, Mustache, repo, BasePropertiesView, lessonModel, normalPropsTempl
 			this.controller.getNumOfAttempts();
 			$('#field_on_attempt').attr('disabled', isReadOnly || this.controller.disable_on_attempt);
 		},
-		
+
 		isLessonModeAssessment: function(){
 			return lessonModel.isLessonModeAssessment() || this.isQuizMode();
 		}

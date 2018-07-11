@@ -24,7 +24,7 @@
                 </div>
                 {{/show_num_of_attempts}}
             {{/controller.record.data.checking_enabled}}
-            
+
             {{#show_hint}}
                 <!-- <div>
                     <h5>((Hint))</h5>
@@ -33,9 +33,9 @@
                     <input type="checkbox" data-checked="obj.show_hint" id="field_show_hint">
                     <label class="control-label inline-block" for="field_show_hint">((Show Hint button))</label>
                 </div>
-                
+
                 {{#controller.record.data.checking_enabled}}
-                    
+
                     {{#show_timing}}
                     <div class="control-group">
                         <label class="control-label" for="field_hint_timing">((Timing:))</label>
@@ -55,13 +55,13 @@
                             {{#on_attempt}}
                             <option value="{{value}}">{{value}}</option>
                             {{/on_attempt}}
-                            
+
                         </select>
                     </div>
                     {{/options.controller.record.data.show_on_attempt}}
-                    
+
                 {{/controller.record.data.checking_enabled}}
-            
+
             {{/show_hint}}
 
             {{#controller.record.data.checking_enabled}}
@@ -71,13 +71,31 @@
                 </div> -->
                 <div class="control-group">
                     <label class="control-label" for="field_feedback_type">((Feedback type:))</label>
-                    <select id="field_feedback_type" data-value="obj.feedback_type">                
+                    <select id="field_feedback_type" data-value="obj.feedback_type">
                     </select>
-                </div>          
+                </div>
                 {{/show_feedback_prop}}
             {{/controller.record.data.checking_enabled}}
 
-        </div>    
+            <div class="control-group control-group--timer-enabled">
+                <input type="checkbox" data-checked="obj.timer_enabled" id="timer_enabled">
+                <label class="control-label inline-block" for="timer_enabled">((Enable timer))</label>
+            </div>
+
+            {{#show_timer_fields}}
+                <div class="control-group control-group--timer-fields">
+                    <label class="control-label" for="timer_field_minutes">((Task Timer (mm: ss) ))</label>
+
+                    <div class="timer-fields">
+                        <input type="number" id="timer_field_minutes" placeholder="mm" data-value="obj.timer_minutes" min="0" max="60">
+
+                        <span class="timer-fields__separator"></span>
+
+                        <input type="number" id="timer_field_seconds" placeholder="ss" data-value="obj.timer_seconds" min="0" max="59">
+                    </div>
+                </div>
+            {{/show_timer_fields}}
+        </div>
     </div>
 </div>
 

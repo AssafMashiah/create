@@ -1,0 +1,32 @@
+.editor-wrapper.props_editor .progress_editor .control-group--timer-enabled + .control-group--timer-fields,
+.editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-enabled + .control-group--timer-fields {
+  margin-top: -25px; }
+
+.editor-wrapper.props_editor .progress_editor .control-group--timer-fields,
+.editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields {
+  padding-left: 25px; }
+  .editor-wrapper.props_editor .progress_editor .control-group--timer-fields label,
+  .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields label {
+    display: inline-block;
+    margin-right: 5px; }
+  .editor-wrapper.props_editor .progress_editor .control-group--timer-fields .timer-fields,
+  .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields .timer-fields {
+    display: inline-block; }
+    .editor-wrapper.props_editor .progress_editor .control-group--timer-fields .timer-fields input,
+    .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields .timer-fields input {
+      width: 27px;
+      text-align: center;
+      padding: 4px;
+      margin: 0; }
+      .editor-wrapper.props_editor .progress_editor .control-group--timer-fields .timer-fields input::-webkit-outer-spin-button, .editor-wrapper.props_editor .progress_editor .control-group--timer-fields .timer-fields input::-webkit-inner-spin-button,
+      .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields .timer-fields input::-webkit-outer-spin-button,
+      .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields .timer-fields input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */ }
+    .editor-wrapper.props_editor .progress_editor .control-group--timer-fields .timer-fields__separator::before,
+    .editor-wrapper.props_editor .advancedProgress_editor .control-group--timer-fields .timer-fields__separator::before {
+      position: relative;
+      content: ':';
+      color: #888; }

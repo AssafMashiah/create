@@ -49,6 +49,10 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 			return (this.show_hint() && this.record.data.show_hint && (this.record.data.num_of_attempts > 1));
 		},
 
+		show_timer_fields: function() {
+			return this.record.data.timer_enabled === true;
+		},
+
 		startPropsEditing: function(cfg, view) {
 			this._super(cfg);
 			var config = _.extend({controller: this}, cfg || null);
@@ -62,15 +66,16 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 		registerEvents: function() {
 			//init the feedback types dropdown (before the register events)
 			this.view.initProgressTypes();
-			
+
 			var changes = {
 				num_of_attempts:this.propagateChanges(this.record, 'num_of_attempts', true),
 				show_hint:this.propagateChanges(this.record, 'show_hint', true),
 				hint_timing:this.propagateChanges(this.record, 'hint_timing', true),
 				on_attempt:this.propagateChanges(this.record, 'on_attempt', true),
 				feedback_type:this.propagateChanges(this.record, 'feedback_type', true),
-				score:this.propagateChanges(this.record, 'score', true)
-				
+				timer_enabled:this.propagateChanges(this.record, 'timer_enabled', true),
+				timer_minutes:this.propagateChanges(this.record, 'timer_minutes', true),
+				timer_seconds:this.propagateChanges(this.record, 'timer_seconds', true)
 			};
 			this.model = this.screen.components.props.startEditing(this.record, changes, $(".progress_editor"));
 
@@ -86,6 +91,9 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 			this.model.on('change:feedback_type', this.beforeChangeType, this);
 			this.model.on('change:num_of_attempts', this.changeNumOfAttempts, this);
 			this.model.on('change:score', this.updateTaskScore, this);
+			this.model.on('change:timer_enabled', this.updateShowTimer, this);
+			this.model.on('change:timer_minutes', this.updateTimerMinutes, this);
+			this.model.on('change:timer_seconds', this.updateTimerSeconds, this);
 		},
 
 		updateTaskScore: function(event, value){
@@ -97,6 +105,104 @@ function(BaseContentEditor, repo, validate, events, config, ProgressEditorView, 
 			repo.endTransaction();
 
 			this.reload();
+		},
+
+		updateShowTimer: function (event, value) {
+			repo.startTransaction({ appendToPrevious: true });
+
+			if (this.record.data.timer_enabled === true) {
+				// set default value of timer minutes
+				if (!Number.isInteger(this.record.data.timer_total_seconds) || this.record.data.timer_total_seconds === 0) {
+					repo.updateProperty(this.record.id, "timer_minutes", 2, false, true);
+					repo.updateProperty(this.record.id, "timer_seconds", 0, false, true);
+					this.updateTimerTotalSeconds();
+				}
+			} else {
+				repo.updateProperty(this.record.id, "timer_minutes", 0, false, true);
+				repo.updateProperty(this.record.id, "timer_seconds", 0, false, true);
+				this.updateTimerTotalSeconds();
+			}
+
+			repo.updateProperty(this.record.id, "timer_enabled", value);
+			repo.endTransaction();
+
+			this.reload();
+		},
+
+		updateTimerMinutes: function (event, value) {
+			var minutes = this.record.data.timer_minutes || "";
+			var needToReload = false;
+
+			if (typeof minutes === 'string' && minutes[0] === "0") {
+				minutes = minutes.replace(/^0+/, "");
+				needToReload = true;
+			}
+
+			minutes = parseInt(minutes, 10) || 0;
+
+			if (minutes < 0) {
+				minutes = 0;
+				needToReload = true;
+			}
+
+			if (minutes > 60) {
+				minutes = 60;
+				repo.updateProperty(this.record.id, "timer_seconds", 0, false, true);
+				needToReload = true;
+			}
+
+			// update the repo with integer value
+			repo.updateProperty(this.record.id, "timer_minutes", minutes, false, true);
+
+			if (needToReload) {
+				this.reload();
+			}
+
+			this.updateTimerTotalSeconds();
+		},
+
+		updateTimerSeconds: function (event, value) {
+			var seconds = this.record.data.timer_seconds || "";
+			var minutes = parseInt(this.record.data.timer_minutes, 10) || 0;
+			var needToReload = false;
+
+			if (typeof seconds === 'string' && seconds[0] === "0") {
+				seconds = seconds.replace(/^0+/, "");
+				needToReload = true;
+			}
+
+			seconds = parseInt(seconds, 10) || 0;
+
+			if (minutes == 60) {
+				seconds = 0;
+				needToReload = true;
+			}
+
+			if (seconds < 0) {
+				seconds = 0;
+				needToReload = true;
+			}
+
+			if (seconds > 59) {
+				seconds = 59;
+				needToReload = true;
+			}
+
+			// update repo with integer value
+			repo.updateProperty(this.record.id, "timer_seconds", seconds, false, true);
+
+			if (needToReload) {
+				this.reload();
+			}
+
+			this.updateTimerTotalSeconds();
+		},
+
+		updateTimerTotalSeconds: function () {
+			var minutes = parseInt(this.record.data.timer_minutes, 10) || 0;
+			var seconds = parseInt(this.record.data.timer_seconds, 10) || 0;
+
+			repo.updateProperty(this.record.id, "timer_total_seconds", minutes * 60 + seconds, false, true);
 		},
 
 		showHint : function(){
