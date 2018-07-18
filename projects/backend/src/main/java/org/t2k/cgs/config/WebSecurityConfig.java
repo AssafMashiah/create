@@ -109,7 +109,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.requiresChannel()
 //                .antMatchers("/auth/**").requiresSecure()
 //                .anyRequest().requiresInsecure();
-                .anyRequest().requiresSecure();
+                .anyRequest();
+        //.requiresSecure();
     }
 
     @Bean(name = "delegatingAuthenticationEntryPoint")
