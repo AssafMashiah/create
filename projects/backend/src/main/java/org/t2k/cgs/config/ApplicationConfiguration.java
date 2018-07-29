@@ -105,7 +105,7 @@ public class ApplicationConfiguration {
                                                 VersionService versionService,
                                                 ContentValidator contentValidator) {
         HttpServletRequest hsrq = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        String basePath = String.format("//%s:%d", hsrq.getServerName(), hsrq.getServerPort());
+        String basePath = String.format("//%s", hsrq.getServerName());
         String cgsPath = basePath + hsrq.getContextPath();
         String restPath = cgsPath + "/rest";
         String cmsBasePath = basePath + "/cms";
