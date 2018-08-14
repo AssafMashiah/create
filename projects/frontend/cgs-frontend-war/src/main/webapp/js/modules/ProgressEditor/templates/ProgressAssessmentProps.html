@@ -14,6 +14,26 @@
                 <label class="control-label" for="field_score">((out of )){{totalSum}}</label>
                 {{/isQuizEqualMode}}
             </div>
-        </div>    
+
+            <div class="control-group control-group--timer-enabled">
+                <input type="checkbox" data-checked="obj.timer_enabled" id="timer_enabled">
+                <label class="control-label inline-block" for="timer_enabled">((Enable timer))</label>
+            </div>
+
+            {{#show_timer_fields}}
+                <div class="control-group control-group--timer-fields">
+                    <label class="control-label" for="timer_field_minutes">((Task Timer (mm: ss) ))</label>
+
+                    <div class="timer-fields">
+                        <input type="number" id="timer_field_minutes" placeholder="mm" data-value="obj.timer_minutes" min="0" max="60">
+
+                        <span class="timer-fields__separator"></span>
+
+                        <input type="number" id="timer_field_seconds" placeholder="ss" data-value="obj.timer_seconds" min="0" max="59">
+                    </div>
+                </div>
+            {{/show_timer_fields}}
+
+        </div>
     </div>
 </div>
