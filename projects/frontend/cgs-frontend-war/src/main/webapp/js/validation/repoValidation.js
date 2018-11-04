@@ -72,15 +72,15 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 				}
 			},
 
-			
+
 			makeValidation : function(id, validationObject){
 
 				var	that = this, thisRepo = repo.get(id);
 
-				
+
 				// general validation
 				this.generalValidation(thisRepo, validationObject);
-				
+
 
 				// type validation- validate by repo type
 				if (typeof this.typeValidation[thisRepo.type] == 'function') {
@@ -94,12 +94,12 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 
 			},
 
-			// check children existance in repo 
+			// check children existance in repo
 			generalValidation : function(thisRepo, validateObj){
 
 				_.each(thisRepo.children, function(childId){
 					if (!repo.get(childId)){
-						//element dont exists in repo 
+						//element dont exists in repo
 						validateObj.isValid = false;
 						validateObj.validationLog.push(mustache.render('parent with id: {{repoPaent}} has child with id: {{childId}} ,that don\'t exists in repo',
 							{	repoPaent:thisRepo.id,
@@ -114,9 +114,9 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 
 				if(string){
 					string = string.replace(/\v/g, '\n').replace(/\t/g,'');
-					string = _.map(_.compact(_.invoke(string.split('\n'), 'trim')), function(par) { 
-						return '<div class=\\"cgs ' + style + '\\" style=\\"'+defaultStyle+'\\" contenteditable=\\"false\\" >' + 
-								par.replace(new RegExp('"', 'g'), '\\"') + '</div>'; 
+					string = _.map(_.compact(_.invoke(string.split('\n'), 'trim')), function(par) {
+						return '<div class=\\"cgs ' + style + '\\" style=\\"'+defaultStyle+'\\" contenteditable=\\"false\\" >' +
+								par.replace(new RegExp('"', 'g'), '\\"') + '</div>';
 					}).join('');
 				}else{
 					string = "";
@@ -140,7 +140,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 
 					// validate all help items in repo are linked to the sequence.
 					// if there are items that are not linked, we remove them from repo.
-					var helpItemsIndexesToRemove = []; 
+					var helpItemsIndexesToRemove = [];
 					_.each(thisRepo.children, function(childId){
 						if (repo.get(childId).type === 'help' && _.where(thisRepo.data.help,{id: childId}).length === 0){
 							var childIndexToRemove = thisRepo.children.indexOf(childId);
@@ -152,7 +152,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 					// if there are indices to remove - go over the thisRepo.children and remove the unused help items
 					if (helpItemsIndexesToRemove.length > 0){
 						helpItemsIndexesToRemove.reverse().forEach(function(itemIndex){
-							thisRepo.children.splice(itemIndex,1);	
+							thisRepo.children.splice(itemIndex,1);
 						});
 					}
 				},
@@ -200,7 +200,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 									assetData[locale] = inlineNarrationItem.data.component_src;
 									narrationItem.locale = locale;
 								})
-								
+
 								inlineNarrationItem.data.narrations = assetData;
 							}
 						}
@@ -208,13 +208,13 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 						delete inlineNarrationItem.data.component_src;
 					});
 
-					
+
 					var title = thisRepo.data.title;
 					title = textViewerUtil.setParagraphsStyle(title, thisRepo.data.styleOverride);
 					title = textViewerUtil.setNarrationEditable(title);
 					title = textViewerUtil.fixDivStructure(title);
 					title = textViewerUtil.addIdToAnswerFieldTypeMathfied(title);
-					
+
 					thisRepo.data.title = title;
 
 
@@ -233,7 +233,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 						repo.getAncestorRecordByType(thisRepo.id, 'separator')
 						){
 							thisRepo.data.mode = "singleStylePlainText";
-				
+
 					}
 				},
 				advancedProgress: function(thisRepo, validateObj) {
@@ -266,7 +266,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 
 				cloze_text_viewer: function(thisRepo, validateObj) {
 					this.textViewer.call(this, thisRepo, validateObj);
-					
+
 					_.each(thisRepo.data.answerFields, function(af) {
 						if (af.type == 'mathfield' && !af.completionType) {
 							af.completionType = 'A';
@@ -279,7 +279,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 
 					answer_fields.each(function () {
 						var type = $(this).attr('type');
-						
+
 						if (type == 'text') {
 							var contents = $(this).contents(),
 								hasSpan = false,
@@ -349,16 +349,18 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 	                    }
 	                }
 
-					var tempEl = $("<temp></temp>").append($(thisRepo.data.title));
-					var mathfieldTags = tempEl.find('mathfieldtag');
+	                try {
+						var tempEl = $("<temp></temp>").append($(thisRepo.data.title));
+						var mathfieldTags = tempEl.find('mathfieldtag');
 
+						mathfieldTags.each(function () {
+							setMathfieldMarkup($(this));
+						});
 
-					mathfieldTags.each(function () {
-						setMathfieldMarkup($(this));
-					});
-
-					thisRepo.data.title = tempEl.html();
-
+						thisRepo.data.title = tempEl.html();
+	                } catch (error) {
+						thisRepo.data.title = '';
+	                }
 				},
 
 				answerFieldTypeMathfield: function(thisRepo, validateObj) {
@@ -378,10 +380,10 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 						if (sequenceAnswer.data.useBank) {
 							var _instruction = repo.getChildrenRecordsByType(thisRepo.id, "instruction"),
 								_text_viewer =  _instruction && _instruction.length ? repo.getChildrenRecordsByType(_instruction[0].id, 'textViewer') : false;
-							
+
 							if (_text_viewer && _text_viewer.length) {
 								_text_viewer = _text_viewer[0];
-								
+
 								if (!_text_viewer.data.title) {
 									var configuration = require("./modules/SequencingAnswerEditor/config");
 
@@ -415,10 +417,10 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 					if(thisRepo.data.headerTitle || thisRepo.data.headerSubTitle || thisRepo.children.length === 0){
 						var genericTitleValue = thisRepo.data.headerTitle,
 							genericSubTitleValue = thisRepo.data.headerSubTitle;
-						
+
 						delete thisRepo.data.headerTitle;
 						delete thisRepo.data.headerSubTitle;
-						
+
 						template = '[{  "id":"{{id1}}",\
 										"type": "{{TitleType}}",\
 										"parent": "{{parentId}}",\
@@ -433,7 +435,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 									}]';
 
 						logger.debug(logger.category.EDITOR, 'Convert old header (id: ' + thisRepo.id + ') to new format');
-						
+
 						var genericTitleId =  repo.addTemplate({
 								template: template,
 								style: 'sequenceTitle',
@@ -473,9 +475,9 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 				separator: function(thisRepo, validateObj){
 					//need to set the separator in the new format
 
-					if(thisRepo.data.separatorImage || 
-						thisRepo.data.separatorTitle || 
-						thisRepo.data.separatorSubTitle || 
+					if(thisRepo.data.separatorImage ||
+						thisRepo.data.separatorTitle ||
+						thisRepo.data.separatorSubTitle ||
 						thisRepo.children.length === 0){
 
 
@@ -489,7 +491,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 							imgMinimumReadble = thisRepo.data.minimumReadable * 100;
 
 						logger.debug(logger.category.EDITOR, 'Convert old separator (id: ' + thisRepo.id + ') to new format');
-						
+
 						delete thisRepo.data.separatorTitle;
 						delete thisRepo.data.separatorSubTitle;
 						delete thisRepo.data.separatorImage;
@@ -510,14 +512,14 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 				            type: "imageViewer",
 		                    parentId: thisRepo.id,
 		                    data: _.extend(imgData, {
-		                    	"dontInputCaption" : true, 
-		                    	"dontInputSound": true, 
+		                    	"dontInputCaption" : true,
+		                    	"dontInputSound": true,
 		                    	"hide": !imgData,
 		                    	"disableDelete":true,
-		                    	
+
 		                    })
 		                });
-						
+
 						template = '[{  "id":"{{id1}}",\
 										"type": "{{TitleType}}",\
 										"parent": "{{parentId}}",\
@@ -565,7 +567,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 						if(separatorSubTitleNarration){
 							var genericSubTitle = repo.getChildrenRecordsByTypeRecursieve(thisRepo.id , 'genericSubTitle'),
 								genericSubTitleTextId = genericSubTitle[0].children[0];
-								
+
 								repo.updateProperty(genericSubTitleTextId,'generalNarration', true);
 								repo.updateProperty(genericSubTitleTextId,'narration', separatorSubTitleNarration);
 								repo.updateProperty(genericSubTitleTextId,'narrationType', "1");
@@ -583,7 +585,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 										orderedAssetData.srcAttr = "image";
 										repo.updateProperty(newAssetParent.id, 'assetManager', [orderedAssetData]);
 									break;
-									case "separatorTitleNarration": 
+									case "separatorTitleNarration":
 										newAssetParent = repo.getChildrenRecordsByTypeRecursieve(thisRepo.id , 'genericTitle')[0].children[0];
 										orderedAssetData.srcAttr = "narration";
 										orderedAssetData.isNarration = true;
@@ -631,7 +633,7 @@ define(['repo', 'mustache', 'dialogs', 'events', 'validation/textViewerUtil'], f
 				// 	}
 				// }
 			}
-			
+
 	};
 	return new repoValidation();
 });
