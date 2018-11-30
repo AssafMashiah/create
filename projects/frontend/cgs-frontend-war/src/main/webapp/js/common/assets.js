@@ -82,9 +82,25 @@ define(["events", "files", "configModel", "restDictionary"], function(events, fi
 		blobData - image blob to upload
 		successCallbackAfterSave - a call back to execute after the upload and local save is complete
 		the callback is called with parameters: filePathInsideMediaFolder - the path to the image in local filesystem
+
+		fileExtension - The file's extension
+		fileName - optional, overwrite the new Date().getTime() fileName
+		isSha1 - true || false, flag that tells the back-end to not hash this blob and just save it using the filename provided
+
+		NB:
+		`fileExtension`, `fileName` and `isSha1` were added in order
+			to fix BUG: 1443 (https://timetoknow.visualstudio.com/dtp/_workitems/edit/1433)
 	*/
-	function uploadBlobAndSaveItLocally(blobData, successCallbackAfterSave, fileExtension) {
+	function uploadBlobAndSaveItLocally(blobData, successCallbackAfterSave, fileExtension, fileName, isSha1) {
 		var self = this;
+
+		// set default sha1 to true
+		if (isSha1 === undefined) {
+			isSha1 = true;
+		}
+
+		// force conversion to boolean just to be safe
+		isSha1 = !!isSha1;
 
 		if(!fileExtension && blobData.type) {
 			fileExtension = blobData.type.split('/')[1];
@@ -95,11 +111,15 @@ define(["events", "files", "configModel", "restDictionary"], function(events, fi
 			return;
 		}
 
-		var modifiedUploadPath = "media/" + (new Date().getTime()) + "." + fileExtension;
+		if (!fileName) {
+			fileName = new Date().getTime();
+		}
+
+		var modifiedUploadPath = "media/" + fileName + "." + fileExtension;
 		var url = this.uploadAbsPath(modifiedUploadPath);
 
-		url += "?isSha1=true";
-		blobData.name = "foooo";
+		url += "?isSha1=" + isSha1;
+		blobData.name = fileName;
 
 		// todo: activate busy indicator
 		this.uploadAssetToServer({
@@ -406,7 +426,7 @@ define(["events", "files", "configModel", "restDictionary"], function(events, fi
 			if (typeof callback === "function") callback();
 			return;
 		}
-		
+
 		var nothing = function() {};
 
 		function downloadCustomizationPack() {
@@ -414,7 +434,7 @@ define(["events", "files", "configModel", "restDictionary"], function(events, fi
 				var repo = require("repo");
 				var locales = repo.get(repo._courseId).data.contentLocales;
 				require("localeModel").setLocale(locales && locales.length && locales[0], function() {
-					
+
 					window.customizationPackLoading = false;
 					if (events.exists('customizationPack-done-loading')) {
 						events.fire('customizationPack-done-loading');
