@@ -1,7 +1,7 @@
 define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'translate', 'editMode', 'repo_controllers', 'dialogs', 'localeModel',
         'assets', 'files', 'keyboard', 'components/mathfield/MathField', 'text!modules/TextViewerEditor/templates/TextViewerStagePreview.html', 'FileUpload',
         'mathjax', 'libs/html2Canvas/html2canvas'
-    
+
     ],
     function f1152($, BaseNormalStageContentView, rivets, events, repo, i18n, editMode, repo_controllers, dialogs, localeModel, assets, files, keyboard, MathFieldView, previewTemplate, FileUpload, mathjax) {
 
@@ -74,7 +74,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
 
                 this.iframeWidth = this.iframe.width();
                 if(this.iframe.length){
-                    
+
                     $(this.iframe[0].contentWindow).resize(function(ev) {
                         if (this.iframe.width() != this.iframeWidth) {
                             this.setIframeHeight();
@@ -243,25 +243,26 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
 
                 // config of the dialog to be created
                 var dialogConfig = {
-                        closeOutside: false,
-                        title: "Edit MathML",
-                        content: {
-                            text: ""
-                        },
-                        data: {
-                            markup: el.attr('markup')
-                        },
-                        buttons: {
-                            save: {
-                                label: 'Save'
-                            },
-                            cancel: {
-                                label: 'Cancel'
-                            }
-                        }
+                    closeOutside: false,
+                    title: "Edit MathML",
+                    content: {
+                        text: ""
                     },
-                    // settings type of the dialog
-                    dialog_type = "mathMLDialog";
+                    data: {
+                        markup: el.attr('markup')
+                    },
+                    buttons: {
+                        save: {
+                            label: 'Save'
+                        },
+                        cancel: {
+                            label: 'Cancel'
+                        }
+                    }
+                };
+
+                // settings type of the dialog
+                var dialog_type = "mathMLDialog";
 
                 // binding listener for dialog response
                 events.register('onDialogResponse', function f1170(response) {
@@ -528,15 +529,27 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                         this.saveAndValidate();
                 }.bind(this);
 
-                var onImageDownloadedFromWiris = function(blobbedIimage){
-                    assets.uploadBlobAndSaveItLocally(blobbedIimage, onImageUploadedToServer);
+                var onImageDownloadedFromWiris = function(hash, blobbedImage) {
+                    var isSha1, fileName;
+
+                    if (hash !== undefined) {
+                        isSha1 = false;
+                        fileName = 'math-ml_' + hash;
+                    }
+
+                    assets.uploadBlobAndSaveItLocally(blobbedImage, onImageUploadedToServer, null, fileName, isSha1);
                 };
 
                 logger.debug(logger.category.EDITOR, {message: 'Downloading MathML Png using /WIRISeditor/render', markup: markup});
 
+                // Send hash of the mathml markup to the callback function
+                // so that this hash will be used as the file's name in the back-end
+                // solving BUG: 1433 (https://timetoknow.visualstudio.com/dtp/_workitems/edit/1433)
+                // In order to use the back-end hashing, just remove the `getStringHash(markup)`
+                // from the callback method
                 files.downloadFileToMemory({
                     url: '/WIRISeditor/render?centerBaseline=false&mml={0}'.format(encodeURIComponent(markup)),
-                    callback: onImageDownloadedFromWiris
+                    callback: onImageDownloadedFromWiris.bind(this, getStringHash(markup))
                 });
             },
             methods: {
@@ -650,7 +663,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
 
                             files.downloadFileToMemory({
                                 url: ph,
-                                
+
                                 callback: function f1182(blob) {
                                     assets.uploadBlobAndSaveItLocally(blob, function(placeholderPath){
 
@@ -1370,9 +1383,9 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                     handleOrderedList.call(this, "unOrderedList");
                     this.saveData(true);
                     break;
-                case "insertAnswerField": // use this when inserting an answer field                    
+                case "insertAnswerField": // use this when inserting an answer field
                     this.methods["insertAnswerField"].callback.call(this, param);
-                    break;    
+                    break;
                 default:
                     if (this.methods[command]) {
                         var method_item = this.methods[command];
@@ -1814,7 +1827,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                 } catch (exception) {
                    if (e.which === 8) return e.preventDefault();
                 }
-               
+
                 if (!selection || !selection.anchorNode) {
                     return; // in case we dont have an anchore node- currentlly happening inside mathfield
                 }
@@ -1835,7 +1848,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                     }
 
                     if (e.keyCode == 32 && e.ctrlKey && e.shiftKey && eventType === 'keydown') {
-                        helpers[e.keyCode].call(this, e, selector.parentNode, selection, range);     
+                        helpers[e.keyCode].call(this, e, selector.parentNode, selection, range);
                     } else if (selector.nodeName === 'LI' && eventType === 'keydown') {
                         //same as div type just with LI
                         helpers[e.keyCode].call(this, e, selector.parentNode, selection, "list-item", "<li></li>", {}, {
@@ -1869,7 +1882,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                             }
 
                         }
-                    } 
+                    }
                 }
 
                 //fix chrome bug- after removig info baloon and writing in the same place the text get wrapped
@@ -4211,7 +4224,7 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
                     }
 
                     isDblClick = false;
-                    
+
                     _.delay(function () {
                         if (!isDblClick && !isMousedown) {
                             var selection = this.document.getSelection();
@@ -5334,13 +5347,13 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
             },
             insertAtCursor: function (node, selection, range) {
                 if (!selection) selection = this.document.getSelection();
-                
+
                 var length = node.innerText.length
                 if (!range) range = selection.getRangeAt(0);
                 range.deleteContents();
                 range.insertNode(node);
                 range.setStartAfter(node);
-                range.setEndAfter(node); 
+                range.setEndAfter(node);
                 selection.removeAllRanges();
                 selection.addRange(range);
             },
@@ -5441,6 +5454,27 @@ define(['jquery', 'BaseNormalStageContentView', 'rivets', 'events', 'repo', 'tra
         }, {
             type: 'TextViewerStageView'
         });
+
+
+        function getStringHash(stringToHash) {
+            var hash = 0, i, chr;
+
+            if (typeof stringToHash !== 'string') {
+                return hash;
+            }
+
+            if (stringToHash.length === 0) {
+                return hash
+            };
+
+            for (i = 0; i < stringToHash.length; i++) {
+                chr = stringToHash.charCodeAt(i);
+                hash = ((hash << 5) - hash) + chr;
+                hash |= 0; // Convert to 32bit integer
+            }
+
+            return hash;
+        }
 
         return TextViewerStageView;
 
