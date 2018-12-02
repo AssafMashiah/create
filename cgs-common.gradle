@@ -18,11 +18,11 @@ project.ext.cobertura =
 def scpPlayerVersion = "8.17.2-SNAPSHOT"
 //def playerDlVersion = "8.18.6-SNAPSHOT"
 // Common projects
-def commonUtilsVersion = "8.16.0-SNAPSHOT"
-def commonUpgraderVersion = "8.16.0-SNAPSHOT"
-def commonCourseUtilsVersion = "8.16.0-SNAPSHOT"
-def t2kConfVersion = "8.16.0-SNAPSHOT"
-def commonMongoFactoryVersion = "8.16.0-SNAPSHOT"
+def commonUtilsVersion = "8.17.0-SNAPSHOT"
+def commonUpgraderVersion = "8.17.0-SNAPSHOT"
+def commonCourseUtilsVersion = "8.17.0-SNAPSHOT"
+def t2kConfVersion = "8.17.0-SNAPSHOT"
+def commonMongoFactoryVersion = "8.17.0-SNAPSHOT"
 def gcrCommonVersion = "7.0.27-SNAPSHOT"
 
 /**
