@@ -3,59 +3,16 @@
 
 ## Setup Environment
 
-### Maven Dependencies
-
-In order to access the Visual Studio Maven repository, authentication is required. 
-The build.gradle file accesses it by using the following credentials:
-- t2kMavenUsername
-- t2kMavenPassword
-
-These are taken from gradle.properties file. Since we cannot commit credentials into
-the git repo, the best approach is to add them to the gradle.properties file inside 
-your .gradle home directory (e.g.: `~/.gradle/gradle.properties` on Linux OS)
-
-Example:
-
-    t2kMavenUsername=VSTS
-    t2kMavenPassword=your_authorization_token
-
-### MongoDB
-
-The Docker Image for MongoDB can be built by following the instructions 
-[projects/backend/src/main/docker/README.md](projects/backend/src/main/docker/README.md)
-
-Afterwards, the database can be easily started by running
-
-    docker-compose -f projects/backend/src/main/docker/mongo/mongo.yml up -d
-
-To stop it run
-
-    docker-compose -f projects/backend/src/main/docker/mongo/mongo.yml down
-
-
-#### Development
-
-For development there is a customized docker-compose yml fille . To start the MongoDB Docker 
-container, run the following:
-
-    docker-compose -f projects/backend/src/main/docker/mongo/mongo-dev.yml up -d
-
-To stop it:
-
-    docker-compose -f projects/backend/src/main/docker/mongo/mongo-dev.yml down
-    
-# DB Upgrader
-
-DB Upgrader can be run in multiple ways:
-- By running the gradle tasks `upgradeDb` or `upgradeDbClean` (Recommended)
-    - For clean db configuration:
-
-            ./gradlew clean build upgradeDbClean test
-    
-    - For an already configured db 
-    
-            ./gradlew clean build upgradeDb test
-        
-- By running the gradle task from install project after executing 'clean', 'build', 'test', 'assemble', 'install:createInstall'
-gradle tasks
-- By running the java test class `com.t2k.common.dbupgrader.LaunchFlow`
+Go to google cloud platform
+go to VM
+Start new VM from snapshoot
+After VM is working:
+ - go to: https://<VM_IP>/cgs/client/home
+ - user: nimrod.new
+ - pass: 123456
+ - get a content from the bucket (cgscrs)
+ - import the content
+ - edit
+ 
+## publishing a new content:
+?????
